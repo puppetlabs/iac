@@ -1,0 +1,11 @@
+- name: Litmus
+  github: puppetlabs/puppet_litmus
+  description: Litmus provides a simple command line tool for Puppet content creators, to enable both simple and complex test deployments against specifically configured target systems.
+
+- name: PDK Sync
+  github: puppetlabs/pdksync
+  description: Pdksync is an efficient way to run a command against the various Puppet module repositories that you manage — keeping them up-to-date with the changes made to PDK.
+
+- name: PowerShell Gem (ruby-pwsh)
+  github: puppetlabs/ruby-pwsh
+  description: This gem enables you to execute PowerShell from within ruby without having to instantiate and tear down a PowerShell process for each command called.

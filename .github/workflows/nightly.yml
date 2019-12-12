@@ -1,0 +1,34 @@
+name: "Refresh docs"
+
+on: [ push ]
+
+jobs:
+  generate:
+    name: "Update docs"
+    runs-on: ubuntu-18.04
+    env:
+      token: '${{ secrets.token }}'
+    steps:
+      - uses: actions/checkout@master
+      - name: Setup ruby
+        uses: actions/setup-ruby@v1
+        with:
+          ruby-version: '2.5' 
+      - name: Generate docs
+        run: |
+          gem install bundler
+          bundle install
+          jekyll build
+      - name: List generated files
+        run: |
+          ls -la docs/
+      - name: Commit files
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update docs"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.token }}
