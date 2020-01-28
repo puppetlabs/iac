@@ -13,22 +13,21 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: IAC Tools
+title: Puppet IAC Team
 email: ia-content@puppet.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Infrastructure Automation Content Team 
-  This is a collection of tools used by the team to enhance experience
-  when working with Puppet modules.  
+  Team blog and list of maintained tools by and for the Puppet Infrastructure
+  Automation Content Team.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+# twitter_username: jekyllrb
+# github_username:  jekyll
 repository: puppetlabs/iac-tools
+baseurl: /iac-tools
 
 # Build settings
 markdown: kramdown
 theme: minima
-destination: docs
 plugins:
   - jekyll-feed
 
