@@ -4,4 +4,6 @@ title: About
 permalink: /about/
 ---
 
-The IAC Team
+The IAC Team is...
+
+<!-- Blurb about what our purpose is, responsibilities, team members, etc -->
