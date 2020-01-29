@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/hendrikschneider/jekyll-analytics.git
+  revision: 8b57cd569b4fddfbcc3b0b0c816c1fa31383a288
+  branch: master
+  specs:
+    jekyll-analytics (0.1.12)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -246,6 +253,7 @@ PLATFORMS
 
 DEPENDENCIES
   github-pages
+  jekyll-analytics!
   jekyll-feed (~> 0.6)
   minima (~> 2.0)
   tzinfo-data
