@@ -103,7 +103,7 @@ For the IAC team, we have access to vmpooler, a proprietary tool/API that spins 
 In as little as a few seconds, I can have an environment ready to run acceptance tests on all compatible OSs for a given module, or I can have an environment to replicate a specific customer environment (e.g. on Windows Server 2012 R2, with the Scheduled Task module, I was seeing an issue with...).
  
 ##### RSpec and Puppet RSpec
-RSpec is the test framework we use to write and execute our unit and acceptance tests.
+[RSpec](https://relishapp.com/rspec) is the test framework we use to write and execute our unit and acceptance tests.
 However, we also have the [RSpec-Puppet gem](https://rspec-puppet.com/) which provides a lot of helper methods to make life easier when testing modules.
 
 ##### CI Tools
