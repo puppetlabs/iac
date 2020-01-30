@@ -2,26 +2,26 @@
 layout: post
 title: "Introduction to the IAC Team"
 date: 2020-01-29 14:00:00
-author: sanfrancrisko
+author: criskoduck
 ---
 # Workflow of the Puppet IAC Team
-During a recent Office Hours event (more about that later!) a question was asked by one of the Puppet Community's many talented and inquisitive folk.
-Usually in Office Hours, we are used to fielding questions from folks who are trying to enhance functionality in a module, determine the best way to test or maybe they want to know how to get started to write a new module from scratch.
-This one was a little bit different: 'Who are the IAC Team?' This was followed up with some more questions: 'What is your development process? What are the tools you use day-to-day?', and my favourite, 'Who comes up with those awesome meeting room names?'.
-I hope I answered that particular community member's questions, but it prompted a discussion amongst the team about whether the people within the Puppet Community know who we are, what we do, how we can help you and how to reach us if you need that help.
+During a recent [Office Hours](https://puppet.com/community/office-hours/) event (more about that later!) a question was asked by one of the Puppet Community's many talented and inquisitive folk.
+Usually, in [Office Hours](https://puppet.com/community/office-hours/), we are used to fielding questions from folks who are trying to enhance functionality in a module, determine the best way to test or maybe they want to know how to get started to write a new module from scratch.
+This one was a little bit different, ragnarkon asked, "What is the module development lifecycle like in Puppet?", along with other questions about our tech stack, work priorization processes and my favourite, "Who names the conference rooms @ Puppet?  ’cause they’re awesome".
+I hope I answered that particular community member's questions, but it prompted a discussion amongst the team about whether the people within the Puppet Community know who we are, what we do, how we can help you, and how to reach us if you need that help.
  
 ## Who are we?
-Firstly, an introduction - the Infrastructure Automation Content (IAC) team spans across 3 time zones, from East to West we have three members in Timișoara, Romania, six members in Belfast, Northern Ireland (including our Engineering Manager) and finally, one man and his dog holding the fort in St. Louis, Missouri, USA.
+Firstly, an introduction - the Infrastructure Automation Content (IAC) team spans across 3 time zones: from East to West we have three members in Timișoara, Romania, six members in Belfast, Northern Ireland (including our Engineering Manager) and finally, one man and his dog holding the fort in St. Louis, Missouri, USA.
 We also work closely with Product Management teams both in our Portland, Oregon HQ and Belfast.
  
 ## What do we do?
-The IAC team are responsible for developing and maintaining tooling that contributors to Puppet can use to enhance existing or add new modules to Puppet.
+The IAC team is responsible for developing and maintaining tooling that contributors to Puppet can use to enhance existing or add new modules to Puppet.
 We are also responsible for reviewing the submissions from the community, assisting in development and testing efforts, if required and releasing new versions of modules to the Forge.
  
  
 ## Workflow and Processes
-### Work Prioritisation, Ticketing and Development
-We follow the KanBan model of work prioritisation and categorisation.
+### Work Prioritization, Ticketing and Development
+We follow the KanBan model of work prioritization and categorisation.
 We have chosen JIRA as our ticketing system. Within JIRA, the IAC Content team has a number of Epics which we categorise work under.
 A few examples of day-to-day Epics we interact with a lot:
 - Customer Escalations
@@ -50,10 +50,10 @@ For testing effort, we like to have as much automated coverage as possible and h
 Sometimes, as part of the planning documentation we may need to outline a test plan more formally, but this should ultimately be translated in to RSpec unit and acceptance tests.
 This means that on every code change and PR, we can quickly be alerted to breaking changes.
  
-### Prioritisation of Work
+### Prioritization of Work
 Work is prioritised by a number of factors.
 Product Management will have an influence over a lot of the work we undertake and they have many factors to consider.
-One key component that drives work prioritisation is feedback from the IAC team itself.
+One key component that drives work prioritization is feedback from the IAC team itself.
 We like to be very interactive with the Puppet Community contributors and understand what they require.
 We will often bring feedback from the community to our stand-ups and more global meetings with Engineering and Product Management.
 Through this feedback we're trying to ensure that the user experience is as close to the requirements of the people using and contributing to the product.
@@ -61,7 +61,7 @@ Through this feedback we're trying to ensure that the user experience is as clos
 One valuable feedback vector is through the weekly [Office Hours](https://puppet.com/community/office-hours/) sessions.
 Once a week, members from the IAC team will down tools and be available to any queries coming in via Slack or the video conferencing session from Puppet Community contributors.
 If you need help with module development or testing, or you want to determine the best way to do something with a module on the Forge, then this is the place to get that help and send that feedback.
-Quite often, if a limitation or issue in a module has been highlighted here, we will bring this up in our next stand-up meeting, raise a JIRA ticket and ensure that it gets prioritisation for resources.
+Quite often, if a limitation or issue in a module has been highlighted here, we will bring this up in our next stand-up meeting, raise a JIRA ticket and ensure that it gets prioritization for resources.
 There's no better feedback than the people using actively using the module ecosystem and we like to make the most of this valuable resource.
  
  
@@ -98,24 +98,20 @@ You can provision your test environment using Docker or Vagrant.
 For the IAC team, we have access to vmpooler, a proprietary tool/API that spins up and tears down virtual machines in our vSphere infrastructure.
 Within as little as seconds, I can have an environment ready to run acceptance tests on all compatible OSs for a given module, or I can have an environment to replicate a specific customer environment (e.g. on Windows Server 2012 R2, with the Scheduled Task module, I was seeing an issue with...).
  
- 
 #### RSpec and Puppet RSpec
 RSpec is the test framework we use to write and execute our unit and acceptance tests.
 However, we also have the [RSpec-Puppet gem](https://rspec-puppet.com/) which provides a lot of helper methods to make life easier when testing modules.
- 
- 
+
 #### CI Tools
-We use a number of CI automation servers: Jenkins, Travis, AppVeyor and most recently Github Actions.
-There are different requirements for the variety of modules we have either authored, support or both, but we are constantly evaluating the best tools / platform for our use cases and those of the Puppet Community.
+We use a number of CI automation servers: Jenkins, Travis, AppVeyor, and most recently Github Actions.
+There are different requirements for the variety of modules we have either authored, support, or both, and we are constantly evaluating the best tools / platform for our use cases and those of the Puppet Community.
 CI executed test runs from PRs are available from the PR itself - this allows us to quickly determine if there is an issue and drill down in to more specific test log output if we need to, regardless of the platform.
- 
- 
+
 #### PDK
 Some of you in the Puppet Community will be aware of the Puppet Development Kit (PDK) already.
 From the IAC team's use cases it is a very useful tool that allows us to keep modules on the Forge up-to-date with the necessary configuration / metadata changes.
 It also allows us to rapidly prototype or develop new modules should someone from the Puppet Community require help.
- 
- 
+
 #### PDKSync
 PDKSync is an excellent tool we use to perform and test bulk changes to many modules.
 It also allows us to push PRs to Github so we can quickly deploy these changes.
