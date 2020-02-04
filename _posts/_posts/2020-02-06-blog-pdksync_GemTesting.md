@@ -14,7 +14,7 @@ tags:
 ---
 > Introduction:
 >
-pdksync is a tool that enables you to run a pdk update against a set of defined modules. The tool checks out a module, runs the most recent version of pdk update then proceeds to create the PR for you with the changes. This is the automated tool for ensuring modules can quickly adopt changes introduced by updates to the PDK and PDK template.
+pdksync enables you to do a lot more than just pdk update against a set of defined modules. In this blog post we will be going through single or multi gem testing features of pdksync.
 
 > Setup:
 > 
