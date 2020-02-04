@@ -12,8 +12,19 @@ tags:
   - modules
   - gem testing
 ---
+> Introduction:
+>
+pdksync is a tool that enables you to run a pdk update against a set of defined modules. The tool checks out a module, runs the most recent version of pdk update then proceeds to create the PR for you with the changes. This is the automated tool for ensuring modules can quickly adopt changes introduced by updates to the PDK and PDK template.
 
-> Part One: Functionality
+> Setup:
+> 
+Download a fork of the repo, which can be found here [pdksync](https://github.com/puppetlabs/pdksync). Or you can install via Rubygems, it can be found here [pdksync](https://rubygems.org/gems/pdksync).
+Install gems by using `bundle install`. 
+Ensure you have a GITHUB_TOKEN set in your env, if you don't add it by running `export GITHUB_TOKEN=<your github token>`, this is required for authentication.
+Important - Manually edit the list contained in 'managed_modules.yml' to ensure it is correct with the modules you wish to update. Please note this is critical as this tool will create PRs against the repos included in this list - you don't want to run this against a module you aren't familiar with. Do not proceed to the next step without doing this.
+Run the rake task by using `bundle exec rake pdksync`.
+
+> Part One: Functionality Single Gem Testing
 > 
 pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot of useful gems to access and manage their functionality between modules. This functionality will help user to perform gem testing prior to release. User is given new rake tasks to update SHA/Version/Branch/line in the Gemfile. Then the changes can be committed, PR can be created which will run the acceptance tests in the PR. If all the tests are executing successfully then the user can close the PRS and release the gem. 
 
@@ -65,6 +76,8 @@ bundle exec rake 'gem_testing[]'
 
 Once the verified gem is released we can use pdksync to update the the new version of gem released in the  .sync.yaml file.
 
+> Part Two: Functionality Multi Gem Testing
+> 
 pdksync tool is extended with the feature to perform multi gem testing (`puppet-module-gems`). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.
 
  ```shell
