@@ -3,19 +3,28 @@ name: Jekyll Deploy
 on:
   push:
     branches:
-    - master
+      - master
   # redeploy once a day to update unpublished pages
   schedule:
-  - cron: "0 2 * * *"
+    - cron: "0 2 * * *"
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-    - name: Build and deploy to GitHub Pages
-      uses: EdricChan03/action-build-deploy-ghpages@v2.2.1
-      with:
-        GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
+      - uses: actions/checkout@v2
+
+      - name: Cache gems
+        uses: actions/cache@v1
+        with:
+          path: vendor/gems
+          key: ${{ runner.os }}-build-${{ hashFiles('**/Gemfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
+
+      - name: Build & Deploy to GitHub Pages
+        uses: DavidS/jekyll-deploy@master
+        env:
+          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
