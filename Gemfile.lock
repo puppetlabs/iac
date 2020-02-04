@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/hendrikschneider/jekyll-analytics.git
+  remote: https://github.com/hendrikschneider/jekyll-analytics.git
   revision: 8b57cd569b4fddfbcc3b0b0c816c1fa31383a288
   branch: master
   specs:
@@ -256,4 +256,4 @@ DEPENDENCIES
   tzinfo-data
 
 BUNDLED WITH
-   1.17.3
+   2.1.4
