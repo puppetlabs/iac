@@ -27,19 +27,19 @@ We are also responsible for reviewing the submissions from the community, assist
 ### Work Prioritization, Ticketing and Development
 
 We follow the KanBan model of work prioritization and categorisation.
-We have chosen [JIRA](https://tickets.puppetlabs.com/projects/MODULES/) as our ticketing system. Within JIRA, the IAC  team has a number of epics which we categorise work under.
+We have chosen [JIRA](https://tickets.puppetlabs.com/projects/IAC/summary) as our ticketing system. Within JIRA, the IAC team has a number of epics which we categorise work under.
 A few examples of day-to-day epics we interact with a lot:
 
 - Customer Escalations
-- Triage Tasks (more about Triage later!)
+- [Triage](https://tickets.puppetlabs.com/browse/IAC-5) Tasks (more about Triage later!)
 
 We also have Epics for larger pieces of work, for example:
 
-- [Cloud Platform Provisioning in Litmus](https://tickets.puppetlabs.com/browse/MODULES-10421)
-- [Automated Gem & Testing Release](https://tickets.puppetlabs.com/browse/MODULES-9757)
+- [Cloud Platform Provisioning in Litmus](https://tickets.puppetlabs.com/browse/IAC-42)
+- [Automated Gem & Testing Release](https://tickets.puppetlabs.com/browse/IAC-158)
 
 We also follow the AGILE methodology of having a stand-up meeting daily, where all members describe what they have been working on since the last meeting, and what they will work on until the next meeting.
-Its also during this meeting that we can attempt to unblock individuals who are stuck - either during the stand-up or by assigning time at some stage after. We're in constant communication throughout the day, either face-to-face or over Slack.
+It's also during this meeting that we can attempt to unblock individuals who are stuck - either during the stand-up or by assigning time at some stage after. We're in constant communication throughout the day, either face-to-face or over Slack.
 We can also jump into meeting rooms / booths and chat to our colleagues in other time zones and screen share.
 So it's never the case that we're stuck for very long - we all like to have each other's backs and help at short notice.
 
@@ -87,13 +87,14 @@ The goal is to ensure that the quality of the Puppet modules remains high, whils
 Some folks may be curious as to what we use day-to-day to get the job done.
 There is quite a large amount of software, platforms and tools we use, some you'll likely have heard of and some internal proprietary tools.
 For internal tooling, we're in a constant effort to evolve them and make them available for use by the Puppet Community.
+We have started a collection on the [tools](/tools/index.html) page.
 
 #### Development and Debugging
 
 ##### IDEs
 
 For the most part, the IDE of choice for us is VSCode.
-It has support for Puppet manifests and more via [this extension](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode).
+It has support for Puppet manifests and more via [the puppet extension](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode).
 Some of the team also use RubyMine and Sublime Text can also be found on a lot of laptops.
 The [Ruby gem pry](https://rubygems.org/gems/pry/) is a heavily utilised one.
 This has proven an invaluable tool for debugging during development or investigation when reproducing issues reported to us.
