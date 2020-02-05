@@ -12,36 +12,37 @@ tags:
   - modules
   - gem testing
 ---
-> Introduction:
->
+
+# Introduction
+
 pdksync enables you to do a lot more than just pdk update against a set of defined modules. In this blog post we will be going through single or multi gem testing features of pdksync.
 
-> Setup:
-> 
+## Setup
+
 Download a fork of the repo, which can be found here [pdksync](https://github.com/puppetlabs/pdksync). Or you can install via Rubygems, it can be found here [pdksync](https://rubygems.org/gems/pdksync).
-Install gems by using `bundle install`. 
+Install gems by using `bundle install`.
 Ensure you have a GITHUB_TOKEN set in your env, if you don't add it by running `export GITHUB_TOKEN=<your github token>`, this is required for authentication.
 Important - Manually edit the list contained in 'managed_modules.yml' to ensure it is correct with the modules you wish to update. Please note this is critical as this tool will create PRs against the repos included in this list - you don't want to run this against a module you aren't familiar with. Do not proceed to the next step without doing this.
 Run the rake task by using `bundle exec rake pdksync`.
 
-> Part One: Functionality Single Gem Testing
-> 
-pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot of useful gems to access and manage their functionality between modules. This functionality will help user to perform gem testing prior to release. User is given new rake tasks to update SHA/Version/Branch/line in the Gemfile. Then the changes can be committed, PR can be created which will run the acceptance tests in the PR. If all the tests are executing successfully then the user can close the PRS and release the gem. 
+## Part One: Functionality Single Gem Testing
+
+pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot of useful gems to access and manage their functionality between modules. This functionality will help user to perform gem testing prior to release. User is given new rake tasks to update SHA/Version/Branch/line in the Gemfile. Then the changes can be committed, PR can be created which will run the acceptance tests in the PR. If all the tests are executing successfully then the user can close the PRS and release the gem.
 
 > #### Note:
 >
 > It assumes very limited familiarity with the [pdksync](https://github.com/puppetlabs/pdksync) and [pdk](https://puppet.com/blog/keep-your-puppet-modules-up-to-date-pdk/)
-> 
+>
 
 Run gem_file_update against modules
 ```shell
-pdksync:gem_file_update[[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]] 
+pdksync:gem_file_update[[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]]
 ```
-eg rake to update gem line 
+eg rake to update gem line
 ```shell
 pdksync:gem_file_update['puppet_litmus', "gem 'puppet_litmus'\, git: 'https://github.com/test/puppet_litmus.git'\, branch: 'testbranch'"]'
 ```
-eg rake to update sha 
+eg rake to update sha
 ```shell
 pdksync:gem_file_update['puppet_litmus', '', '20ee04ba1234e9e83eb2ffb5056e23d641c7a018', '20ee04ba1234e9e83eb2ffb5056e23d641c7a31']
 ```
@@ -55,7 +56,6 @@ pdksync:gem_file_update['puppet_litmus', '', '', '', '', '', 'testbranch', 'test
 ```
 
 Below given are the workflows for doing single gem testing with pdksync.
-
 
 In Workflow 1 we can clone modules, update the gem file, create the commit, push the changes and create the PR using separate rake tasks.
 ```shell
@@ -76,8 +76,8 @@ bundle exec rake 'gem_testing[]'
 
 Once the verified gem is released we can use pdksync to update the the new version of gem released in the  .sync.yaml file.
 
-> Part Two: Functionality Multi Gem Testing
-> 
+## Part Two: Functionality Multi Gem Testing
+
 pdksync tool is extended with the feature to perform multi gem testing (`puppet-module-gems`). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.
 
  ```shell
