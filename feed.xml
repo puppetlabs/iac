@@ -1,2 +1,696 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.5">Jekyll</generator><link href="/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="/iac/" rel="alternate" type="text/html" /><updated>2020-02-05T02:04:25+00:00</updated><id>/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">IAC Team Blog and Tools</title><link href="/iac/meta/2020/01/28/blog-init.html" rel="alternate" type="text/html" title="IAC Team Blog and Tools" /><published>2020-01-28T19:57:04+00:00</published><updated>2020-01-28T19:57:04+00:00</updated><id>/iac/meta/2020/01/28/blog-init</id><content type="html" xml:base="/iac/meta/2020/01/28/blog-init.html">&lt;p&gt;On this site you’ll find blog posts written by the members of the Puppet Infrastructure Automation team as well as an overview of the tools which we develop and maintain.
-This site serves as a less formal line of communication from the team to the community and an aggregator of useful tips, news, and tools.&lt;/p&gt;</content><author><name></name></author><summary type="html">On this site you’ll find blog posts written by the members of the Puppet Infrastructure Automation team as well as an overview of the tools which we develop and maintain. This site serves as a less formal line of communication from the team to the community and an aggregator of useful tips, news, and tools.</summary></entry></feed>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-05T13:34:51+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Developing a PowerShell-Dependent Puppet Type &amp;amp; Provider</title><link href="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html" rel="alternate" type="text/html" title="Developing a PowerShell-Dependent Puppet Type &amp; Provider" /><published>2020-02-05T00:00:00+00:00</published><updated>2020-02-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i</id><content type="html" xml:base="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html">&lt;blockquote&gt;
+  &lt;p&gt;Part One: Basic Functionality&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Sometimes when managing resources with Puppet you come across a use case that you might initially solve via a few custom &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; resources–
+but though this solves your problem in the short run, it doesn’t scale well and leaves a lot of problems around managing reporting and idempotency.
+At a certain point, it becomes advisable to write a type and provider–for more information, check out our &lt;a href=&quot;https://learn.puppet.com/course/getting-started-with-the-puppet-resource-api&quot;&gt;hands on lab&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;For the purposes of this walkthrough, we’re going to create a resource API compliant type and provider to manage SMB shares on Windows.
+What we want to be able to do is put something like this into a manifest, thereby creating a share on the machine:&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;smb_share&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'basic_example'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;ensure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'C:\Path\To\A\Share'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Before we can dig into the meat of writing the type and provider though, we’ve got some standardized setup to do.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
+
+  &lt;p&gt;This walkthrough assumes you have the  following software installed:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;The &lt;a href=&quot;https://puppet.com/docs/pdk/1.x/pdk_install.html&quot;&gt;Puppet Development Kit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;https://code.visualstudio.com/download&quot;&gt;Visual Studio Code&lt;/a&gt; with the &lt;a href=&quot;https://lingua-pupuli.github.io/&quot;&gt;Puppet extension&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+
+  &lt;p&gt;It also assumes very limited familiarity with the &lt;a href=&quot;https://puppet.com/blog/introducing-puppet-resource-api/&quot;&gt;Resource API Walkthrough&lt;/a&gt;.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Open a PowerShell console, perform the rest of these actions from there.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pdk new module smb&lt;/code&gt;
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): PDK collects anonymous usage information to help us understand how
+         it is being used and make decisions on how to improve it. You can
+         find out more about what data we collect and how it is used in the
+         PDK documentation at
+         https://puppet.com/docs/pdk/latest/pdk_install.html.
+
+[Q 1/1] Do you consent to the collection of anonymous PDK usage information?
+--&amp;gt; Yes
+
+pdk (INFO): You can opt in or out of the usage data collection at any time by
+            editing the analytics configuration file at
+            C:\Users\vagrant\AppData\Local/puppet/analytics.yml and changing
+            the 'disabled' value.
+
+pdk (INFO): Creating new module: smb
+
+We need to create the metadata.json file for this module, so we're going to ask you 4 questions.
+If the question is not applicable to this module, accept the default option shown after each question. You can modify any answers at any time by manually updating the  metadata.json file.
+
+[Q 1/4] If you have a Puppet Forge username, add it here.
+We can use this to upload your module to the Forge when it's complete.
+--&amp;gt; michaeltlombardi
+
+[Q 2/4] Who wrote this module?
+This is used to credit the module's author.
+--&amp;gt; michaeltlombardi
+
+[Q 3/4] What license does this module code fall under?
+This should be an identifier from https://spdx.org/licenses/. Common values are &quot;Apache-2.0&quot;, &quot;MIT&quot;, or &quot;proprietary&quot;.
+--&amp;gt; Apache-2.0
+
+[Q 4/4] What operating systems does this module support?
+Use the up and down keys to move between the choices, space to select and enter to continue.
+--&amp;gt; Windows
+
+Metadata will be generated based on this information, continue? Yes
+pdk (INFO): Module 'smb' generated at path 'C:/Users/vagrant/smb', from template 'file:///C:/Program Files/Puppet Labs/DevelopmentKit/share/cache/pdk-templates.git'.
+pdk (INFO): In your module directory, add classes with the 'pdk new class' command.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cd smb ; code .&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;Update dependencies by editing the following files in VSCode:
+    &lt;ul&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.fixtures.yml&lt;/code&gt;:
+        &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;fixtures&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;forge_modules&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;pwshlib&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;puppetlabs/pwshlib&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;.sync.yml&lt;/code&gt; (you’ll need to create this file):
+        &lt;div class=&quot;language-yaml highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;na&quot;&gt;Gemfile&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;optional&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:development'&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;ruby-pwsh'&lt;/span&gt;
+      &lt;span class=&quot;pi&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;puppet-resource_api'&lt;/span&gt;
+
+&lt;span class=&quot;s&quot;&gt;spec/spec_helper.rb&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;na&quot;&gt;mock_with&lt;/span&gt;&lt;span class=&quot;pi&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;:rspec'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;metadata.json&lt;/code&gt;:
+        &lt;div class=&quot;language-json highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nl&quot;&gt;&quot;dependencies&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;name&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;puppetlabs/pwshlib&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+    &lt;/span&gt;&lt;span class=&quot;nl&quot;&gt;&quot;version_requirement&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&amp;gt;= 0.4.0 &amp;lt; 2.0.0&quot;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pdk update&lt;/code&gt;
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; pdk (INFO): Updating michaeltlombardi-smb using the default template, from tags/1.15.0 to 1.15.0
+
+ ----------Files to be modified----------
+ Gemfile
+ spec/spec_helper.rb
+
+ ----------------------------------------
+
+ You can find a report of differences in update_report.txt.
+
+ Do you want to continue and make these changes to your module? Yes
+ [*] Installing missing Gemfile dependencies.
+
+ ------------Update completed------------
+
+ 2 files modified.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pdk new provider smb_share&lt;/code&gt;
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Creating 'C:/Users/vagrant/smb/lib/puppet/provider/smb_share/smb_share.rb' from template.
+pdk (INFO): Creating 'C:/Users/vagrant/smb/lib/puppet/type/smb_share.rb' from template.
+pdk (INFO): Creating 'C:/Users/vagrant/smb/spec/unit/puppet/provider/smb_share/smb_share_spec.rb' from template.
+pdk (INFO): Creating 'C:/Users/vagrant/smb/spec/unit/puppet/type/smb_share_spec.rb' from template.
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;pdk bundle exec rake spec_prep&lt;/code&gt;
+    &lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+I, [2020-01-17T13:18:26.702383 #1696]  INFO -- : Creating symlink from spec/fixtures/modules/smb to C:\Users\vagrant\smb
+Notice: Preparing to install into C:/Users/vagrant/smb/spec/fixtures/modules ...
+Notice: Downloading from https://forgeapi.puppet.com ...
+Notice: Installing -- do not interrupt ...
+C:/Users/vagrant/smb/spec/fixtures/modules
+└── puppetlabs-pwshlib (v0.4.0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Now we’re ready to really dig into writing our type and provider.&lt;/p&gt;
+
+&lt;h2 id=&quot;defining-the-initial-type&quot;&gt;Defining the Initial Type&lt;/h2&gt;
+
+&lt;p&gt;The type file, &lt;code class=&quot;highlighter-rouge&quot;&gt;lib/puppet/type/smb_share.rb&lt;/code&gt;, requires a little editing.
+We’ll be adding some documentation and filling out the different properties of the SMB share we want to manage.&lt;/p&gt;
+
+&lt;p&gt;Two properties are already provided for us in the &lt;code class=&quot;highlighter-rouge&quot;&gt;attributes&lt;/code&gt; key: &lt;code class=&quot;highlighter-rouge&quot;&gt;ensure&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt;.
+In order to get a minimum viable implementation for our share, we’ll need to implement &lt;code class=&quot;highlighter-rouge&quot;&gt;path&lt;/code&gt; as well.
+Add the following hash to the list of attributes in the type file:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;ss&quot;&gt;path: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;type: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'String'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;desc: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'The path of the SMB share.'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This property is fairly simple to define - the path to the SMB share will always be a string.
+For now, this is all we need to add to be able to implement the basic provider functionality.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;note-1&quot;&gt;Note:&lt;/h4&gt;
+
+  &lt;p&gt;We did not update the rest of the docs here - we will return to the documentation aspect in a future blog post when we expand the properties this type manages.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;writing-the-prototype-provider&quot;&gt;Writing the Prototype Provider&lt;/h2&gt;
+
+&lt;p&gt;The next file we need to look at is the provider, &lt;code class=&quot;highlighter-rouge&quot;&gt;lib/puppet/provider/smb_share.rb&lt;/code&gt;, which is where most of the heavy lifting will happen.&lt;/p&gt;
+
+&lt;!-- First, at the top of the file _just_ inside the provider class definition (after line 4), we need to confine this provider to only run on Windows machines when the ruby-pwsh library is available:
+
+```ruby
+class Puppet::Provider::SmbShare::SmbShare &lt; Puppet::ResourceApi::SimpleProvider
+  confine :operatingsystem =&gt; :windows
+  confine :feature =&gt; :pwshlib
+``` --&gt;
+
+&lt;p&gt;First, add a requires statement to the top of the file to ensure we have access to the PowerShell gem:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ruby-pwsh'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Next, inside the provider class definition, we need to add two new methods which make using the PowerShell gem’s manager easier:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Returns a new instance of the PowerShell manager if one does not exist or is dead,&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;# otherwise returns the existing usable instance for performance reasons.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;ps_manager&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;debug_output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Puppet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;level&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:debug&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;instance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;powershell_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;powershell_args&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;debug: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;debug_output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# Wraps executions for the PowerShell Manager to do some basic error raising in Puppet.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps_manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;raise&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:errormessage&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;unless&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:exitcode&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;zero?&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Now, we’re ready to start implementing some functionality.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-the-shares&quot;&gt;Getting the Shares&lt;/h3&gt;
+
+&lt;p&gt;The information we need to retrieve about our shares was defined in our type file; right now, we need the name of the share, the path to the share, and whether or not it exists. To find out this information though, we’re going to need to do a little PowerShell:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Get-SMBShare&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ErrorAction&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Stop&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+  &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Select-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which in Ruby, using the PowerShell manager, would be:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'Get-SMBShare -ErrorAction Stop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'Select-Object -Property Name, Path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' | '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here, we declare the commands in a Ruby array and join them with a &lt;code class=&quot;highlighter-rouge&quot;&gt;|&lt;/code&gt;.
+This makes it easier for us to modify the commands we need to run without having to manage a huge string that’s hard to read.
+This will return all of the SMB shares on the machine, but there’s a couple problems:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;We need to return JSON for easy translation to usable objects in ruby&lt;/li&gt;
+  &lt;li&gt;We need to add a property for Ensure - right now, we’re missing that third property.
+We could add it either to the &lt;code class=&quot;highlighter-rouge&quot;&gt;Select-Object statement&lt;/code&gt; (as a name-expression hash with a static expression of &lt;code class=&quot;highlighter-rouge&quot;&gt;'present'&lt;/code&gt;) or to ruby afterwards.
+For the purpose of this example, we’ll just add it to the Select-Object statement.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'Name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'Path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;custom_powershell_property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ensure'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;present&quot;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'Get-SMBShare -ErrorAction Stop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s2&quot;&gt;&quot;Select-Object -Property &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;s1&quot;&gt;'ConvertTo-Json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' | '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;symbolize_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;snake_case_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Notice we added a new &lt;code class=&quot;highlighter-rouge&quot;&gt;properties&lt;/code&gt; variable, in which we declare the properties we want to return on the SMB share and join them with a comma, which is how they’ll need to be passed to &lt;code class=&quot;highlighter-rouge&quot;&gt;Select-Object&lt;/code&gt;.
+This lets us decouple the properties to select from the command itself and will make things more readable as we add more properties to manage.&lt;/p&gt;
+
+&lt;p&gt;We’re also using a helper method (&lt;code class=&quot;highlighter-rouge&quot;&gt;custom_powershell_property&lt;/code&gt;) from the PowerShell gem to create a PowerShell hash representing a custom object property.
+In this case, it will be:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ensure'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Expression&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;present&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;It’s important to note that the string passed as the expression is &lt;em&gt;exactly&lt;/em&gt; what will be placed in the expression script block;
+without the internal quotes, PowerShell would try to run a command called &lt;code class=&quot;highlighter-rouge&quot;&gt;present&lt;/code&gt; in the scriptlock and fail.&lt;/p&gt;
+
+&lt;p&gt;For our command, the major changes are that we interpolate the properties list for Select-Object and ensure we convert our output to JSON before passing it back to Ruby.&lt;/p&gt;
+
+&lt;p&gt;Finally, we want to capture the output of our command invocation so we can return the results.
+The last line of this command is doing a &lt;em&gt;bunch&lt;/em&gt; of heavy lifting, so let’s break it down:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;result[:stdout]&lt;/code&gt; - this is what we returned from our command pipeline - in this case, we told PowerShell to return us the SMB object with the properties we specified as a JSON string.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;JSON.parse()&lt;/code&gt; - this is the Ruby method for converting from a JSON string to a Ruby hash, loosely analogous to &lt;code class=&quot;highlighter-rouge&quot;&gt;ConvertFrom-Json&lt;/code&gt; in PowerShell.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Pwsh::Util.symbolize_hash_keys()&lt;/code&gt; - this is a helper method for converting a Ruby hash’s keys from strings &lt;code class=&quot;highlighter-rouge&quot;&gt;&quot;key_name&quot;&lt;/code&gt; to symbols &lt;code class=&quot;highlighter-rouge&quot;&gt;:key_name&lt;/code&gt; which is necessary for returning values in a way that will neatly compare with what our type and provider are expecting.&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Pwsh::Util.snake_case_hash_keys()&lt;/code&gt; - this is another helper method, this one converting a Ruby hash’s keys to a &lt;code class=&quot;highlighter-rouge&quot;&gt;snake_case&lt;/code&gt; from &lt;code class=&quot;highlighter-rouge&quot;&gt;PascalCase&lt;/code&gt;, &lt;code class=&quot;highlighter-rouge&quot;&gt;camelCase&lt;/code&gt;, or &lt;code class=&quot;highlighter-rouge&quot;&gt;kebab-case&lt;/code&gt;.
+As with &lt;code class=&quot;highlighter-rouge&quot;&gt;symbolize_hash_keys()&lt;/code&gt;, this method helps ensure we’re returning a hash that our type/provider can neatly compare to.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, if we put this all together for a ruby method to use in our provider, we’ll have:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get_smb_share&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# rubocop:disable Style/AccessorMethodName&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'Name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'Path'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;custom_powershell_property&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'ensure'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&quot;present&quot;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;', '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'Get-SMBShare -ErrorAction Stop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;Select-Object -Property &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;properties&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'ConvertTo-Json'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' | '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+  &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;symbolize_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;snake_case_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;JSON&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;parse&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])))&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note: We added a comment to tell rubocop, a tool for enforcing ruby style guidelines, to ignore this method’s name.
+In Ruby, methods like &lt;code class=&quot;highlighter-rouge&quot;&gt;get_smb_share&lt;/code&gt; are normally just &lt;code class=&quot;highlighter-rouge&quot;&gt;smb_share&lt;/code&gt; - in this case, it will help PowerShell folx better understand what’s happening, so it makes sense to ignore the rule.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;For now, this is good enough, so we’ll update the &lt;code class=&quot;highlighter-rouge&quot;&gt;get&lt;/code&gt; method in our provider to just call &lt;code class=&quot;highlighter-rouge&quot;&gt;get_smb_share&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;get&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Returning discovered SMB shares'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get_smb_share&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can test that our code is working by running &lt;a href=&quot;https://puppet.com/docs/puppet/latest/man/resource.html&quot;&gt;puppet resource&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note that we’re using the PDK bundle for development purposes;
+We’re also specifying the modulepath to a special folder in our repository;
+This was created in the set up stage when you ran &lt;code class=&quot;highlighter-rouge&quot;&gt;pdk bundle exec rake spec_prep&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smb_share&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;That should give you back information that looks like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+smb_share { 'ADMIN$':
+  path =&amp;gt; 'C:\Windows',
+  ensure =&amp;gt; 'present',
+}
+smb_share { 'C$':
+  path =&amp;gt; 'C:\',
+  ensure =&amp;gt; 'present',
+}
+smb_share { 'IPC$':
+  path =&amp;gt; '',
+  ensure =&amp;gt; 'present',
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Later, when we start adding to our use case (managing, say, permissions) we will expand on this method.&lt;/p&gt;
+
+&lt;h3 id=&quot;creating-a-share&quot;&gt;Creating a Share&lt;/h3&gt;
+
+&lt;p&gt;Retrieving resources from a machine is useful, but not as useful as creating them, so let’s enable that functionality next.&lt;/p&gt;
+
+&lt;p&gt;We’ll create a &lt;code class=&quot;highlighter-rouge&quot;&gt;new_smb_share()&lt;/code&gt; method that passes along the arguments we specified to the &lt;code class=&quot;highlighter-rouge&quot;&gt;New-SmbShare&lt;/code&gt; cmdlet:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;new_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Ensure'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;$Arguments = &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format_powershell_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'New-SmbShare @Arguments -ErrorAction Stop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' ; '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The first thing we do is remove &lt;code class=&quot;highlighter-rouge&quot;&gt;Ensure&lt;/code&gt; from the hash of arguments passed to this method if it exists – since we’re sending that hash to PowerShell for splatting and &lt;code class=&quot;highlighter-rouge&quot;&gt;New-SmbShare&lt;/code&gt; will have &lt;strong&gt;no&lt;/strong&gt; idea what to do with an &lt;code class=&quot;highlighter-rouge&quot;&gt;Ensure&lt;/code&gt; parameter, we need to make sure it gets removed.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;reject&lt;/code&gt; method used here iterates over the &lt;code class=&quot;highlighter-rouge&quot;&gt;arguments&lt;/code&gt; hash for each key-value pair and filters out any pairs which match the condition; in this case, if the key is &lt;code class=&quot;highlighter-rouge&quot;&gt;Ensure&lt;/code&gt;.
+In PowerShell, this is loosely analogous to doing something like:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$Arguments&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Should&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$Arguments&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Ensure'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In the command array we can rely on another utility from the PowerShell gem: &lt;code class=&quot;highlighter-rouge&quot;&gt;format_powershell_value&lt;/code&gt; will convert a Ruby object into an appropriate PowerShell representation.
+In this case, arguments is a hash and so will be represented as something like:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;KeyName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;NextKey&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We then rely on the hash table we stored in &lt;code class=&quot;highlighter-rouge&quot;&gt;$Arguments&lt;/code&gt; to enable us to do some &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7&quot;&gt;splatting&lt;/a&gt;.
+Finally, we join these commands with a semi-colon–remember, each invocation against the Manager does &lt;em&gt;not&lt;/em&gt; share state with prior ones!&lt;/p&gt;
+
+&lt;p&gt;Okay, great, but how do we pass the correct arguments to &lt;code class=&quot;highlighter-rouge&quot;&gt;new_smb_share&lt;/code&gt;?
+We can do that with a little munging in the &lt;code class=&quot;highlighter-rouge&quot;&gt;create&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;notice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Creating '&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' with &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pascal_case_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;new_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;reject!&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;_v&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_s&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Ensure'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+    &lt;span class=&quot;s2&quot;&gt;&quot;$Arguments = &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;format_powershell_value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'New-SmbShare @Arguments -ErrorAction Stop'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;' ; '&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Note that the create and update methods both specify the &lt;code class=&quot;highlighter-rouge&quot;&gt;name&lt;/code&gt; and something called &lt;code class=&quot;highlighter-rouge&quot;&gt;should&lt;/code&gt;; these are automatically handled and passed by Puppet during a run.
+The &lt;code class=&quot;highlighter-rouge&quot;&gt;should&lt;/code&gt; variable is a Ruby hash representing the parameters specified for a given resource.
+So if someone defined a manifest, it would include all of the properties and parameters for the specified SMB share included in that resource declaration.&lt;/p&gt;
+
+&lt;p&gt;The notice will show up in the logs of a run, explaining what share is being created and specifying the parameters.&lt;/p&gt;
+
+&lt;p&gt;We then pass the arguments hash to a utility function, &lt;code class=&quot;highlighter-rouge&quot;&gt;pascal_case_hash_keys&lt;/code&gt; converts them from the snake_case Ruby prefers to the PascalCase that PowerShell normally prefers;
+though our current parameters are all single words, this will help us in the future should we want to specify something like the concurrent user limit on the SMB share.&lt;/p&gt;
+
+&lt;p&gt;Once we’ve munged our arguments to be what we need we can pass them to our helper function, &lt;code class=&quot;highlighter-rouge&quot;&gt;new_smb_share&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can test this code by adding a manifest to our examples folder.
+Create a new file, &lt;code class=&quot;highlighter-rouge&quot;&gt;examples/basic.pp&lt;/code&gt;, and paste the following into it:&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;smb_share_folder_example_a&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;ensure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'directory'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;smb_share&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'basic_example'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;ensure&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;path&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note that we have to ensure that the directory we will use as the path for the SMB share–if it doesn’t exist, the command will fail.&lt;/p&gt;
+
+  &lt;p&gt;Also note that VSCode will present you with a pop up in the bottom right corner asking if you want to add an extension for &lt;code class=&quot;highlighter-rouge&quot;&gt;.pp&lt;/code&gt; files - you &lt;em&gt;absolutely&lt;/em&gt; do want to add the &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;Puppet Extension for VSCode&lt;/a&gt; if you’re not already using it; it includes dozens of helpful features to make writing and maintaining Puppet code easier!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;And then we’ll run a command &lt;em&gt;with administrative privileges&lt;/em&gt; (needed to create the SMB share) to execute this manifest:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/examples/basic.pp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Which should produce output like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+Notice: Compiled catalog for .mshome.net in environment production in 0.21 seconds
+Notice: /Stage[main]/Main/File[C:\smb_share_folder_example_a]/ensure: created
+Notice: /Stage[main]/Main/Smb_share[basic_example]/ensure: defined 'ensure' as 'present'
+Notice: smb_share[basic_example]: Creating: Creating 'basic_example' with {:name=&amp;gt;&quot;basic_example&quot;, :ensure=&amp;gt;&quot;present&quot;, :path=&amp;gt;&quot;C:\\smb_share_folder_example_a&quot;}
+Notice: smb_share[basic_example]: Creating: Finished in 1.23 seconds
+Notice: Applied catalog in 9.22 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Awesome! We’ve created an SMB share!
+We can even verify this by rerunning the &lt;code class=&quot;highlighter-rouge&quot;&gt;puppet resource&lt;/code&gt; command from earlier:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smb_share&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+smb_share { 'ADMIN$':
+  path =&amp;gt; 'C:\Windows',
+  ensure =&amp;gt; 'present',
+}
+smb_share { 'C$':
+  path =&amp;gt; 'C:\',
+  ensure =&amp;gt; 'present',
+}
+smb_share { 'IPC$':
+  path =&amp;gt; '',
+  ensure =&amp;gt; 'present',
+}
+smb_share { 'basic_example':
+  path =&amp;gt; 'C:\smb_share_folder_example_a',
+  ensure =&amp;gt; 'present',
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;removing-a-share&quot;&gt;Removing a Share&lt;/h3&gt;
+
+&lt;p&gt;Now, let’s figure out how to remove an SMB share.
+Luckily, removing a share in PowerShell is straightforward:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Remove-SmbShare&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name of the share'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;So we can write this in ruby leveraging the PowerShell manager:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;remove_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Remove-SmbShare -Name '&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' -Force -ErrorAction Stop&quot;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;invoke_command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;command&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And call it from the &lt;code class=&quot;highlighter-rouge&quot;&gt;delete()&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;delete&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;notice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Deleting '&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;'&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;remove_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s test our newly updated provider!
+We can use &lt;code class=&quot;highlighter-rouge&quot;&gt;puppet resource&lt;/code&gt; to change the property of a managed resource–in this case, we want to use &lt;code class=&quot;highlighter-rouge&quot;&gt;ensure=absent&lt;/code&gt; to remove the SMB share.
+Remember, this needs to be run &lt;em&gt;with&lt;/em&gt; administrative privileges.&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;resource&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smb_share&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;basic_example&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ensure&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;absent&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+Notice: /Smb_share[basic_example]/ensure: undefined 'ensure' from 'present'
+Notice: smb_share[basic_example]: Deleting: Deleting 'basic_example'
+Notice: smb_share[basic_example]: Deleting: Finished in 0.804902 seconds
+smb_share { 'basic_example':
+  ensure =&amp;gt; 'absent',
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should see a notification that the share has been removed.
+Go ahead and rerun the manifest to recreate the share and prepare for our next step:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/examples/basic.pp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;updating-a-share&quot;&gt;Updating a Share&lt;/h3&gt;
+
+&lt;p&gt;While there are &lt;em&gt;better&lt;/em&gt; ways to manage updating SMB shares, the &lt;em&gt;easiest&lt;/em&gt; is to delete it and recreate it with the appropriate parameters passed through–in fact, this is &lt;em&gt;necessary&lt;/em&gt; if you need to change the path of an SMB share.&lt;/p&gt;
+
+&lt;p&gt;Luckily, we’ve already written the methods for creating and deleting the share so all we need to do is fill in the &lt;code class=&quot;highlighter-rouge&quot;&gt;update&lt;/code&gt; method:&lt;/p&gt;
+
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;update&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;notice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Updating '&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;' with &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;inspect&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Pwsh&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Util&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pascal_case_hash_keys&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;should&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;remove_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;new_smb_share&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;arguments&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Let’s modify the share path variable to end in &lt;code class=&quot;highlighter-rouge&quot;&gt;b&lt;/code&gt; instead of &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;; this will cause Puppet to create a new folder, remove the original SMB share, and create a new one that uses the correct folder.&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;C:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\\&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;smb_share_folder_example_b&quot;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;file&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;ensure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'directory'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;smb_share&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'basic_example'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;ensure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;path&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;kp&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$share_path&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And then rerun the manifest:&lt;/p&gt;
+
+&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;pdk&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/examples/basic.pp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules/&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;You should see a line like this in your Puppet output:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdk (INFO): Using Ruby 2.5.7
+pdk (INFO): Using Puppet 6.11.1
+Notice: Compiled catalog for .mshome.net in environment production in 0.21 seconds
+Notice: /Stage[main]/Main/File[C:\smb_share_folder_example_b]/ensure: created
+Notice: /Stage[main]/Main/Smb_share[basic_example]/path: path changed 'C:\smb_share_folder_example_a' to 'C:\smb_share_folder_example_b'
+Notice: smb_share[basic_example]: Updating: Updating 'basic_example' with {:name=&amp;gt;&quot;basic_example&quot;, :ensure=&amp;gt;&quot;present&quot;, :path=&amp;gt;&quot;C:\\smb_share_folder_example_b&quot;}
+Notice: smb_share[basic_example]: Updating: Finished in 1.67 seconds
+Notice: Applied catalog in 9.23 seconds
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
+
+&lt;p&gt;Hooray! We’ve written a functional implementation of a type and provider for an SMB Share using the PowerShell gem and manager!
+Next time, we’re going to expand on our start here to make sure we are able to fully manage the properties and access of an SMB share, so stay tuned!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="walkthrough" /><category term="PowerShell" /><category term="modules" /><category term="Windows" /><category term="types and providers" /><summary type="html">Part One: Basic Functionality</summary></entry><entry><title type="html">Introduction to the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team.html" rel="alternate" type="text/html" title="Introduction to the IAC Team" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team.html">&lt;h2 id=&quot;workflow-of-the-puppet-iac-team&quot;&gt;Workflow of the Puppet IAC Team&lt;/h2&gt;
+
+&lt;p&gt;During a recent &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; event (more about that later!) a question was asked by one of the Puppet Community’s many talented and inquisitive folk.
+Usually, in &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt;, we are used to fielding questions from folks who are trying to enhance functionality in a module, determine the best way to test or maybe they want to know how to get started to write a new module from scratch.
+This one was a little bit different, ragnarkon asked, “What is the module development lifecycle like in Puppet?”, along with other questions about our tech stack, work priorization processes and my favourite, “Who names the conference rooms @ Puppet?  ’cause they’re awesome”.
+I hope I answered that particular community member’s questions, but it prompted a discussion amongst the team about whether the people within the Puppet Community know who we are, what we do, how we can help you, and how to reach us if you need that help.&lt;/p&gt;
+
+&lt;h2 id=&quot;who-are-we&quot;&gt;Who are we?&lt;/h2&gt;
+
+&lt;p&gt;Firstly, an introduction - the Infrastructure Automation Content (IAC) team spans across 3 time zones: from East to West we have three members in Timișoara, Romania, six members in Belfast, Northern Ireland (including our Engineering Manager) and finally, one man and his dog holding the fort in St. Louis, Missouri, USA.
+We also work closely with Product Management teams both in our Portland, Oregon HQ and Belfast.&lt;/p&gt;
+
+&lt;h2 id=&quot;what-do-we-do&quot;&gt;What do we do?&lt;/h2&gt;
+
+&lt;p&gt;The IAC team is responsible for developing and maintaining tooling that contributors to Puppet can use to enhance existing or add new modules to Puppet.
+We are also responsible for reviewing the submissions from the community, assisting in development and testing efforts (if required), and releasing new versions of modules to the Forge.&lt;/p&gt;
+
+&lt;h2 id=&quot;workflow-and-processes&quot;&gt;Workflow and Processes&lt;/h2&gt;
+
+&lt;h3 id=&quot;work-prioritization-ticketing-and-development&quot;&gt;Work Prioritization, Ticketing and Development&lt;/h3&gt;
+
+&lt;p&gt;We follow the KanBan model of work prioritization and categorisation.
+We have chosen &lt;a href=&quot;https://tickets.puppetlabs.com/projects/IAC/summary&quot;&gt;JIRA&lt;/a&gt; as our ticketing system. Within JIRA, the IAC team has a number of epics which we categorise work under.
+A few examples of day-to-day epics we interact with a lot:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Customer Escalations&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-5&quot;&gt;Triage&lt;/a&gt; Tasks (more about Triage later!)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also have Epics for larger pieces of work, for example:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-42&quot;&gt;Cloud Platform Provisioning in Litmus&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-158&quot;&gt;Automated Gem &amp;amp; Testing Release&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;We also follow the AGILE methodology of having a stand-up meeting daily, where all members describe what they have been working on since the last meeting, and what they will work on until the next meeting.
+It’s also during this meeting that we can attempt to unblock individuals who are stuck - either during the stand-up or by assigning time at some stage after. We’re in constant communication throughout the day, either face-to-face or over Slack.
+We can also jump into meeting rooms / booths and chat to our colleagues in other time zones and screen share.
+So it’s never the case that we’re stuck for very long - we all like to have each other’s backs and help at short notice.&lt;/p&gt;
+
+&lt;p&gt;As mentioned above, there is constant interaction with our fellow team members throughout the process.
+We’re constantly asking for or providing feedback, assisting in testing efforts, or pairing up for more tricky issues.
+We tend to use Confluence as a first port of call for our documentation.
+If the note or document is to become public facing, it will be ported somewhere visible by all.
+Github PRs are where we do most of our code reviews from other team members or Puppet Community contributors.&lt;/p&gt;
+
+&lt;h3 id=&quot;testing-and-ci-process&quot;&gt;Testing and CI Process&lt;/h3&gt;
+
+&lt;p&gt;For testing effort, we like to have as much automated coverage as possible and have mechanisms in place to display the CI test results for each PR.
+Sometimes, as part of the planning documentation we may need to outline a test plan more formally; but this should ultimately be translated in to &lt;a href=&quot;https://relishapp.com/rspec&quot;&gt;RSpec&lt;/a&gt; unit and acceptance tests.
+This means that on every code change and PR, we are quickly be alerted to breaking changes.&lt;/p&gt;
+
+&lt;h3 id=&quot;prioritization-of-work&quot;&gt;Prioritization of Work&lt;/h3&gt;
+
+&lt;p&gt;Work is prioritised by a number of factors.
+Product Management will have an influence over a lot of the work we undertake and they have many factors to consider.
+One key component that drives work prioritization is feedback from the IAC team itself.
+We like to be very interactive with the Puppet Community contributors and understand what they require.
+We will often bring feedback from the community to our stand-ups and more global meetings with Engineering and Product Management.
+Through this feedback we’re trying to ensure that the user experience is as close to the requirements of the people using and contributing to the product.&lt;/p&gt;
+
+&lt;p&gt;One valuable feedback vector is through the weekly &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; sessions.
+Once a week, members from the IAC team will down tools and be available to any queries coming in via Slack or the video conferencing session from Puppet Community contributors.
+If you need help with module development or testing, or you want to determine the best way to do something with a module on the Forge, then this is the place to get that help and send that feedback.
+Quite often, if a limitation or issue in a module has been highlighted here, we will bring this up in our next stand-up meeting, raise a JIRA ticket and ensure that it gets prioritization for resources.
+There’s no better feedback than the people using actively participating in the module ecosystem and we like to make the most of this valuable resource.&lt;/p&gt;
+
+&lt;h3 id=&quot;types-of-work&quot;&gt;Types of Work&lt;/h3&gt;
+
+&lt;p&gt;Our number one remit and focus is to ensure that those who want to contribute to the Forge have as frictionless an experience as possible.
+That spans everything from a module’s lifespan, through initial design / prototyping, to version 1.0.0, right up to the point where it’s a veteran module with 100,000s of downloads and a wide and active contributor base.
+Our goal is to develop the tools and processes to ensure that is possible.&lt;/p&gt;
+
+&lt;p&gt;One very important aspect of our job is the Content Triage rotation.
+Two members of the IAC team will take it in turns to review community contributors to Puppet Forge modules.
+We’re there to ensure that the change meets the quality standard required but more important, we’re there to help contributors understand how to do that.
+We’re very fortunate to receive lots of high quality contributions or those willing to act upon feedback.
+The goal is to ensure that the quality of the Puppet modules remains high, whilst constantly being enhanced and reactive to the needs of the community.&lt;/p&gt;
+
+&lt;h3 id=&quot;tech-stack&quot;&gt;Tech Stack&lt;/h3&gt;
+
+&lt;p&gt;Some folks may be curious as to what we use day-to-day to get the job done.
+There is quite a large amount of software, platforms and tools we use, some you’ll likely have heard of and some internal proprietary tools.
+For internal tooling, we’re in a constant effort to evolve them and make them available for use by the Puppet Community.
+We have started a collection on the &lt;a href=&quot;/tools/index.html&quot;&gt;tools&lt;/a&gt; page.&lt;/p&gt;
+
+&lt;h4 id=&quot;development-and-debugging&quot;&gt;Development and Debugging&lt;/h4&gt;
+
+&lt;h5 id=&quot;ides&quot;&gt;IDEs&lt;/h5&gt;
+
+&lt;p&gt;For the most part, the IDE of choice for us is VSCode.
+It has support for Puppet manifests and more via &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode&quot;&gt;the puppet extension&lt;/a&gt;.
+Some of the team also use RubyMine and Sublime Text can also be found on a lot of laptops.
+The &lt;a href=&quot;https://rubygems.org/gems/pry/&quot;&gt;Ruby gem pry&lt;/a&gt; is a heavily utilised one.
+This has proven an invaluable tool for debugging during development or investigation when reproducing issues reported to us.&lt;/p&gt;
+
+&lt;h5 id=&quot;pdk&quot;&gt;PDK&lt;/h5&gt;
+
+&lt;p&gt;Some of you in the Puppet Community will be aware of the Puppet Development Kit (PDK) already.
+From the IAC team’s use cases it is a very useful tool that allows us to keep modules on the Forge up-to-date with the necessary configuration / metadata changes.
+It also allows us to rapidly prototype or develop new modules should someone from the Puppet Community require help.&lt;/p&gt;
+
+&lt;h5 id=&quot;pdksync&quot;&gt;PDKSync&lt;/h5&gt;
+
+&lt;p&gt;PDKSync is an excellent tool we use to perform and test bulk changes to many modules.
+It also allows us to push PRs to Github so we can quickly deploy these changes.&lt;/p&gt;
+
+&lt;h4 id=&quot;testing-and-ci-tools&quot;&gt;Testing and CI Tools&lt;/h4&gt;
+
+&lt;h5 id=&quot;litmus&quot;&gt;Litmus&lt;/h5&gt;
+
+&lt;p&gt;Litmus! Litmus is a fantastic resource and probably the most valuable productivity tools that we use day-to-day.
+I encourage you to check out the &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Wiki for Litmus&lt;/a&gt; if you’re thinking of becoming a module contributor.
+Litmus is a tool that allows us to quickly set up, execute and tear down a test environment for our modules.
+You can provision your test environment using Docker or Vagrant.
+For the IAC team, we have access to vmpooler, a proprietary tool/API that spins up and tears down virtual machines in our vSphere infrastructure.
+In as little as a few seconds, I can have an environment ready to run acceptance tests on all compatible OSs for a given module, or I can have an environment to replicate a specific customer environment (e.g. on Windows Server 2012 R2, with the Scheduled Task module, I was seeing an issue with…).&lt;/p&gt;
+
+&lt;h5 id=&quot;rspec-and-puppet-rspec&quot;&gt;RSpec and Puppet RSpec&lt;/h5&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://relishapp.com/rspec&quot;&gt;RSpec&lt;/a&gt; is the test framework we use to write and execute our unit and acceptance tests.
+However, we also have the &lt;a href=&quot;https://rspec-puppet.com/&quot;&gt;RSpec-Puppet gem&lt;/a&gt; which provides a lot of helper methods to make life easier when testing modules.&lt;/p&gt;
+
+&lt;h5 id=&quot;ci-tools&quot;&gt;CI Tools&lt;/h5&gt;
+
+&lt;p&gt;We use a number of CI automation servers: Jenkins, Travis, AppVeyor, and most recently Github Actions.
+There are different requirements for the variety of modules we have either authored, support, or both, and we are constantly evaluating the best tools / platform for our use cases and those of the Puppet Community.
+CI executed test runs from PRs are available from the PR itself - this allows us to quickly determine if there is an issue and drill down in to more specific test log output if we need to, regardless of the platform.&lt;/p&gt;</content><author><name>criskoduck</name></author><category term="process" /><category term="tooling" /><category term="personal" /><summary type="html">Workflow of the Puppet IAC Team</summary></entry></feed>
