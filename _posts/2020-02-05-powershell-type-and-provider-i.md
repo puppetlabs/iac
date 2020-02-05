@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "Developing a PowerShell-Dependent Puppet Type & Provider"
-published: false
+title: "Developing a PowerShell-Dependent Puppet Type & Provider"
+author: michaeltlombardi
 categories:
+  - powershell
   - development
-  - walkthrough
 tags:
+  - walkthrough
   - PowerShell
   - modules
   - Windows
@@ -88,7 +89,6 @@ Before we can dig into the meat of writing the type and provider though, we've g
       fixtures:
         forge_modules:
           pwshlib: "puppetlabs/pwshlib"
-
       ```
     - `.sync.yml` (you'll need to create this file):
       ```yaml
@@ -100,7 +100,6 @@ Before we can dig into the meat of writing the type and provider though, we've g
 
       spec/spec_helper.rb:
         mock_with: ':rspec'
-
       ```
     - `metadata.json`:
       ```json

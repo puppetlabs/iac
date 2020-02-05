@@ -1,11 +1,17 @@
 ---
 layout: post
 title: "Introduction to the IAC Team"
-date: 2020-01-29 14:00:00
 author: criskoduck
+categories:
+  - team
+  - basics
+tags:
+  - process
+  - tooling
+  - personal
 ---
 
-# Workflow of the Puppet IAC Team
+## Workflow of the Puppet IAC Team
 
 During a recent [Office Hours](https://puppet.com/community/office-hours/) event (more about that later!) a question was asked by one of the Puppet Community's many talented and inquisitive folk.
 Usually, in [Office Hours](https://puppet.com/community/office-hours/), we are used to fielding questions from folks who are trying to enhance functionality in a module, determine the best way to test or maybe they want to know how to get started to write a new module from scratch.

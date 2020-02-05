@@ -1,19 +1,17 @@
 ---
 layout: post
 title: "Gem Testing with pdksync"
-date: 2020-02-03 14:00:00
 author: sheenaajay
-published: false
 categories:
-  - testing
-  - walkthrough
-tags:
   - pdksync
+  - testing
+tags:
+  - walkthrough
   - modules
-  - gem testing
+  - gems
 ---
 
-# Introduction
+## Introduction
 
 pdksync enables you to do a lot more than just pdk update against a set of defined modules. In this blog post we will be going through single or multi gem testing features of pdksync.
 
