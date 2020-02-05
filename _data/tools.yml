@@ -22,6 +22,10 @@
   github: puppetlabs/ruby-pwsh
   description: This gem enables you to execute PowerShell from within ruby without having to instantiate and tear down a PowerShell process for each command called.
 
+- name: Community reports
+  github: underscorgan/community_management
+  description: This set of scripts collates daily reports on our responsibilities as the stewards of supported modules. You can have a look at <a href="https://puppetlabs.github.io/community_management/">the reports</a>.
+
 - name: dependency-checker
   github: puppetlabs/dependency_checker
   description: The dependency-checker tool validates dependencies in metadata.json files in Puppet modules or YAML files containing arrays of Puppet modules against the latest published versions on the Puppet Forge.
