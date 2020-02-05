@@ -372,7 +372,7 @@ $Arguments = $Should
 $Arguments.Remove('Ensure')
 ```
 
-In the command array we can rely on another utility from the PowerShell gem: `format_powershell_vallue` will convert a Ruby object into an appropriate PowerShell representation.
+In the command array we can rely on another utility from the PowerShell gem: `format_powershell_value` will convert a Ruby object into an appropriate PowerShell representation.
 In this case, arguments is a hash and so will be represented as something like:
 
 ```powershell
@@ -435,7 +435,7 @@ smb_share { 'basic_example':
 >
 > Also note that VSCode will present you with a pop up in the bottom right corner asking if you want to add an extension for `.pp` files - you _absolutely_ do want to add the [Puppet Extension for VSCode](https://puppet-vscode.github.io/) if you're not already using it; it includes dozens of helpful features to make writing and maintaining Puppet code easier!
 
-And then we'll run a command _with administrative priveleges_ (needed to create the SMB share) to execute this manifest:
+And then we'll run a command _with administrative privileges_ (needed to create the SMB share) to execute this manifest:
 
 ```powershell
 pdk bundle exec puppet apply ./examples/basic.pp --modulepath ./spec/fixtures/modules/
@@ -511,7 +511,7 @@ end
 
 Let's test our newly updated provider!
 We can use `puppet resource` to change the property of a managed resource--in this case, we want to use `ensure=absent` to remove the SMB share.
-Remember, this needs to be run _with_ administrative priveleges.
+Remember, this needs to be run _with_ administrative privileges.
 
 ```powershell
 pdk bundle exec puppet resource smb_share basic_example ensure=absent --modulepath ./spec/fixtures/modules
