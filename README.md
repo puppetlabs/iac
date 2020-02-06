@@ -1,6 +1,6 @@
 # the public Infrastructure Automation Content Team page
 
-This repo hosts the source foe the [Infrastructure Automation Content Team's page](https://puppetlabs.github.io/iac/).
+This repo hosts the source for the [Infrastructure Automation Content Team's page](https://puppetlabs.github.io/iac/).
 
 ## Writing a blog post
 
