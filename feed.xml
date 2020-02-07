@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-07T02:05:12+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Developing a PowerShell-Dependent Puppet Type &amp;amp; Provider</title><link href="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html" rel="alternate" type="text/html" title="Developing a PowerShell-Dependent Puppet Type &amp; Provider" /><published>2020-02-05T00:00:00+00:00</published><updated>2020-02-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i</id><content type="html" xml:base="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html">&lt;blockquote&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-07T12:12:00+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">7th Feb 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html" rel="alternate" type="text/html" title="7th Feb 2020: IAC Team Status Update" /><published>2020-02-07T00:00:00+00:00</published><updated>2020-02-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html">&lt;p&gt;The IAC team have been working on a lot of interesting things these past two weeks. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;team-blog&quot;&gt;Team Blog&lt;/h2&gt;
+&lt;p&gt;If you’re here, you’re already aware of it - the IAC team will now be giving status updates as to what we’ve been working on, any insights we’ve made and cool new tech we’ve been playing with. We’re also hoping to share more of the tools that we use internally with the community.&lt;/p&gt;
+
+&lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
+&lt;p&gt;We’ve released a number of new modules as part of our Content Triage Process.
+Check out the CHANGELOG in each of the modules for more details as to what has been added:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/accounts&quot;&gt;puppetlabs/accounts&lt;/a&gt; (v6.1.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache&quot;&gt;puppetlabs/apache&lt;/a&gt; (v5.4.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/java&quot;&gt;puppetlabs/java&lt;/a&gt; (v6.1.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/kubernetes&quot;&gt;puppetlabs/kubernetes&lt;/a&gt; (v5.1.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/puppet_agent&quot;&gt;puppetlabs/puppet_agent&lt;/a&gt; (v3.0.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/puppet_agent&quot;&gt;puppetlabs/puppet_agent&lt;/a&gt; (v3.0.1)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/reboot&quot;&gt;puppetlabs/reboot&lt;/a&gt; (v2.4.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/websphere_application_server&quot;&gt;puppetlabs/websphere_application_server&lt;/a&gt; (v2.0.1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;kubernetes-v510&quot;&gt;Kubernetes v5.1.0&lt;/h2&gt;
+&lt;p&gt;The &lt;a href=&quot;https://www.cncf.io/&quot;&gt;CNCF&lt;/a&gt; have certified the latest version (v5.1.0) of the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/kubernetes&quot;&gt;puppetlabs/kubernetes&lt;/a&gt; module with &lt;a href=&quot;https://kubernetes.io/&quot;&gt;Kubernetes&lt;/a&gt; v1.16.6.
+Check out the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/kubernetes&quot;&gt;module on The Forge&lt;/a&gt; to see how to bootstrap K8 clusters and save yourself time and effort.
+You may also be interested in Kubetool (bundled with the module and as a &lt;a href=&quot;https://hub.docker.com/r/puppet/kubetool&quot;&gt;Docker image&lt;/a&gt;) which auto-generates the Hiera security parameters, the discovery token hash, and other configurations for your Kubernetes cluster.&lt;/p&gt;
+
+&lt;h2 id=&quot;theres-a-buzz-about-honeycombio&quot;&gt;There’s a buzz about Honeycomb.io&lt;/h2&gt;
+&lt;p&gt;We’re very excited to be in the POC stage rolling out &lt;a href=&quot;https://www.honeycomb.io/&quot;&gt;Honeycomb&lt;/a&gt; to collect data from our CI / Test infrastructure.
+This is going to give us much more visibility in to a number of important metrics and allow us to make the test process for modules a lot slicker.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-02-07-status-update/honeycomb_travis_appveyor.png&quot; alt=&quot;Execution time of pdksync run on AppVeyor &amp;amp; Travis&quot; /&gt;
+&lt;strong&gt;Execution Time of PDK Sync run on Travis and AppVeyor CI platforms&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We were very excited to be working with this very cool solution and we’re already starting to get some interesting insights.
+A more in depth blog post about this in the near future - don’t fly too far away!&lt;/p&gt;
+
+&lt;h2 id=&quot;module-statistics-dashboards&quot;&gt;Module Statistics Dashboards&lt;/h2&gt;
+&lt;p&gt;A vital part of the Content Triage Process is visibility in to the status of the modules:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;How many PRs are open?&lt;/li&gt;
+  &lt;li&gt;What is the status of the last &lt;code class=&quot;highlighter-rouge&quot;&gt;N&lt;/code&gt; test results?&lt;/li&gt;
+  &lt;li&gt;When was the last comment from a contributor?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are a lot of modules on &lt;a href=&quot;https://forge.puppet.com/supported/&quot;&gt;The Forge&lt;/a&gt;, so we need a way to quickly view all this data.
+We have made some great improvements to our &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;Community Management&lt;/a&gt; dashboards recently:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;More accurate reporting on module metrics&lt;/li&gt;
+  &lt;li&gt;Integration with &lt;a href=&quot;https://github.com/features/actions&quot;&gt;Github Actions&lt;/a&gt; reports / artifact to provide quicker feedback of the results from our release checks and our future nightly CI runs&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>criskoduck</name></author><category term="module updates" /><category term="kubernetes" /><category term="tooling" /><category term="personal" /><category term="github" /><category term="dashboards" /><category term="honeycomb" /><category term="metrics" /><summary type="html">The IAC team have been working on a lot of interesting things these past two weeks. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">Developing a PowerShell-Dependent Puppet Type &amp;amp; Provider</title><link href="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html" rel="alternate" type="text/html" title="Developing a PowerShell-Dependent Puppet Type &amp; Provider" /><published>2020-02-05T00:00:00+00:00</published><updated>2020-02-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i</id><content type="html" xml:base="https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html">&lt;blockquote&gt;
   &lt;p&gt;Part One: Basic Functionality&lt;/p&gt;
 &lt;/blockquote&gt;
 
