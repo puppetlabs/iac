@@ -1,20 +1,43 @@
 ---
-layout: page
+layout: tool
 title: Tools
 permalink: /tools/
 ---
 
 <p>A list of the tools developed and maintained by the IA Content Team.</p>
 
-{% for tool in site.data.tools %}
+{% assign tools_by_category = site.tools | group_by: "category" %}
 
+{% for category in tools_by_category %}
 <div class="row">
   <div class="col">
-    <h2><a href="https://github.com/{{ tool.github }}">{{ tool.name }}</a></h2>
-  </div>
-  <div class="col">
-    {{ tool.description }}
+    <h2>{{ category.name }}</h2>
   </div>
 </div>
-<hr/>
+
+{% for tool in category.items %}
+<div class="row">
+  <div class="col">
+    <h3><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></h3>
+  </div>
+  <div class="col">
+    {{ tool.description }}<br/>
+    {% if tool.gem %}<img alt="Gem downloads" src="https://img.shields.io/gem/dt/{{ tool.gem }}?logo=rubygems">{% endif %}
+    {% if tool.puppet_module %}
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/{{ tool.puppet_module }}">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/{{ tool.puppet_module }}">
+    {% endif %}
+    {% if tool.github %}
+    {% if tool.travis_org %}<img alt="Travis" src="https://img.shields.io/travis/{{ tool.github }}?logo=travis">{% endif %}
+    {% if tool.travis_com %}<img alt="Travis" src="https://img.shields.io/travis/com/{{ tool.github }}?logo=travis">{% endif %}
+    {% if tool.appveyor %}<img alt="Appveyor" src="https://img.shields.io/appveyor/build/{{ tool.github }}?logo=appveyor" />{% endif %}
+    {% if tool.workflow %}<img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/{{ tool.github }}/{{ tool.workflow }}?logo=github" />{% endif %}
+    {% if tool.codecov_token %}<img alt="Codecov" src="https://img.shields.io/codecov/c/gh/{{ tool.github }}?logo=codecov&token={{ tool.codecov_token }}">{% endif %}
+    {% endif %}
+  </div>
+</div>
+<br/>
+{% endfor %}
+<hr />
+<br />
 {% endfor %}
