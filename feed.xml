@@ -1,4 +1,104 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-11T02:07:27+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">7th Feb 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html" rel="alternate" type="text/html" title="7th Feb 2020: IAC Team Status Update" /><published>2020-02-07T00:00:00+00:00</published><updated>2020-02-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html">&lt;p&gt;The IAC team have been working on a lot of interesting things these past two weeks. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-12T02:07:50+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Gem Testing with pdksync</title><link href="https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync.html" rel="alternate" type="text/html" title="Gem Testing with pdksync" /><published>2020-02-12T00:00:00+00:00</published><updated>2020-02-12T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync</id><content type="html" xml:base="https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+
+&lt;p&gt;pdksync enables you to do a lot more than just pdk update against a set of defined modules. In this blog post we will be going through single or multi gem testing features of pdksync.&lt;/p&gt;
+
+&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
+
+&lt;p&gt;Download a fork of the repo, which can be found here &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt;. Or you can install via Rubygems, it can be found here &lt;a href=&quot;https://rubygems.org/gems/pdksync&quot;&gt;pdksync&lt;/a&gt;.
+Install gems by using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;.
+Ensure you have a GITHUB_TOKEN set in your env, if you don’t add it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;export GITHUB_TOKEN=&amp;lt;your github token&amp;gt;&lt;/code&gt;, this is required for authentication.
+Important - Manually edit the list contained in ‘managed_modules.yml’ to ensure it is correct with the modules you wish to update. Please note this is critical as this tool will create PRs against the repos included in this list - you don’t want to run this against a module you aren’t familiar with. Do not proceed to the next step without doing this.
+Run the rake task by using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake pdksync&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-one-functionality-single-gem-testing&quot;&gt;Part One: Functionality Single Gem Testing&lt;/h2&gt;
+
+&lt;p&gt;pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot of useful gems to access and manage their functionality between modules. This functionality will help user to perform gem testing prior to release. User is given new rake tasks to update SHA/Version/Branch/line in the Gemfile. Then the changes can be committed, PR can be created which will run the acceptance tests in the PR. If all the tests are executing successfully then the user can close the PRS and release the gem.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
+
+  &lt;p&gt;It assumes very limited familiarity with the &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt; and &lt;a href=&quot;https://puppet.com/blog/keep-your-puppet-modules-up-to-date-pdk/&quot;&gt;pdk&lt;/a&gt;&lt;/p&gt;
+
+&lt;/blockquote&gt;
+
+&lt;p&gt;Run gem_file_update against modules&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;eg rake to update gem line&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;gem 'puppet_litmus'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; git: 'https://github.com/test/puppet_litmus.git'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; branch: 'testbranch'&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;eg rake to update sha&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'20ee04ba1234e9e83eb2ffb5056e23d641c7a018'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'20ee04ba1234e9e83eb2ffb5056e23d641c7a31'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;eg rake to update version&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;= 0.9.0&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;= 0.10.0&quot;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;eg rake to update branch&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'testbranch'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'testbranches'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Below given are the workflows for doing single gem testing with pdksync.&lt;/p&gt;
+
+&lt;p&gt;In Workflow 1 we can clone modules, update the gem file, create the commit, push the changes and create the PR using separate rake tasks.&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; .bundle/gems/
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake git:clone_managed_modules
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'pdksync:gem_file_update[]'&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:create_commit[]'&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:push'&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:create_pr[]'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;In Workflow 2 we can clone modules, update the gem file, create the commit, push the changes and create the PR using single rake task&lt;/p&gt;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Using single rake job
+bundle install --path .bundle/gems/
+bundle exec rake 'gem_testing[]'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Once the verified gem is released we can use pdksync to update the the new version of gem released in the  .sync.yaml file.&lt;/p&gt;
+
+&lt;h2 id=&quot;part-two-functionality-multi-gem-testing&quot;&gt;Part Two: Functionality Multi Gem Testing&lt;/h2&gt;
+
+&lt;p&gt;pdksync tool is extended with the feature to perform multi gem testing (&lt;code class=&quot;highlighter-rouge&quot;&gt;puppet-module-gems&lt;/code&gt;). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;   &lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GEMFURY_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;access_token&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run the following commands to check that everything is working as expected:&lt;/p&gt;
+
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; .bundle/gems/
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;nt&quot;&gt;-T&lt;/span&gt;
+bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:clone_gem['&lt;/span&gt;puppet-module-gems&lt;span class=&quot;s1&quot;&gt;']'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Run multigem_file_update against modules
+Clone gem
+git:clone_gem[:gem_name]&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:clone_gem['&lt;/span&gt;puppet-module-gems&lt;span class=&quot;s1&quot;&gt;']'&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Build and Push new gems built to the gemfury account for testing
+pdksync:multi_gem_testing[:gem_name, :version_file, :build_gem, :gem_path, :gemfury_user_name]&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:multi_gem_testing[&lt;span class=&quot;s1&quot;&gt;'puppet-module-gems'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'config/info.yml'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'exe/build-gems.rb'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'pkg'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'gem_tester'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Update Gemfile of the modules with the new gem should be pushed to Gemfury.
+pdksync:multigem_file_update[:gem_name, :gemfury_username]&lt;/p&gt;
+&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:multigem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet-module'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'tester'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Below given is the workflows for doing multi gem testing with pdksync.&lt;/p&gt;
+
+&lt;p&gt;In this workflow we can clone gems, update the version, build the gem, push the changes to gemfury and update the gem file of the required modules with the latest gem updated in the fury. Then we can create PR or run tests locally or run tests through jenkins to verify the module test results.&lt;/p&gt;
+
+&lt;p&gt;```shell
+bundle install –path .bundle/gems/
+bundle exec rake ‘git:clone_gem[‘puppet-module-gems’]’
+bundle exec rake ‘pdksync:multi_gem_testing[]’
+bundle exec rake ‘pdksync:multigem_file_update[]’&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
+
+&lt;p&gt;These are the steps that we can follow to perform single or multi gem testing using pdksync.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="walkthrough" /><category term="modules" /><category term="gems" /><summary type="html">Introduction</summary></entry><entry><title type="html">7th Feb 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html" rel="alternate" type="text/html" title="7th Feb 2020: IAC Team Status Update" /><published>2020-02-07T00:00:00+00:00</published><updated>2020-02-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/02/07/status-update.html">&lt;p&gt;The IAC team have been working on a lot of interesting things these past two weeks. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;team-blog&quot;&gt;Team Blog&lt;/h2&gt;
 &lt;p&gt;If you’re here, you’re already aware of it - the IAC team will now be giving status updates as to what we’ve been working on, any insights we’ve made and cool new tech we’ve been playing with. We’re also hoping to share more of the tools that we use internally with the community.&lt;/p&gt;
