@@ -25,6 +25,7 @@ We've released an update to two modules since last week:
 - [puppetlabs/scheduled_task](https://forge.puppet.com/puppetlabs/scheduled_task) (v2.0.1)
 
 This update to [puppetlabs/scheduled_task](https://forge.puppet.com/puppetlabs/scheduled_task) resolves an issue reported in [MODULES-10101](https://tickets.puppetlabs.com/browse/MODULES-10101).
+
 A fix went in to [puppetlabs/pwshlib](https://forge.puppet.com/puppetlabs/pwshlib) to resolve a bug that was causing runtime errors on older versions of Ruby. See [here](https://github.com/puppetlabs/ruby-pwsh/pull/30) for more details. 
 
 We'll have more module releases next week, but a few interesting updates to come:
