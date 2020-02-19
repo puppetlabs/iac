@@ -13,7 +13,8 @@ tags:
 
 ## Introduction
 
-Here we will be going through the steps and best practices for setting up basic infrastructure for your gem. The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.
+Here we will be going through the steps and best practices for setting up basic infrastructure for your gem.
+The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.
   - creates the basic file structure for the gem.
   - adds the rubocop which validates the guidelines outlined in the community Ruby Style Guide.
   - adds the travis or appveyor testing to the repo which validates the changes to the repo.
@@ -32,7 +33,8 @@ Here we will be going through the steps and best practices for setting up basic 
 
 We're going through the steps and best practices for setting up basic infrastructure for your gem.
 
-For any repo created for developing a Gem we add owner, access and license to the repo. Follow the steps below to add them.
+For any repo created for developing a Gem we add owner, access and license to the repo.
+Follow the steps below to add them.
 
 1. Open a [git hub](https://github.com) page, perform the rest of these actions from there.
    1. Click on + to create a new repo.
@@ -46,7 +48,7 @@ For any repo created for developing a Gem we add owner, access and license to th
 
    4. Open the new repo created and navigate to settings tab to update the access.
 
-   5. Provide the modules team as admin on github.
+   5. Provide your team as admin on github. (This example shows Puppet's modules team)
       ![admin]({% link /assets/2020-02-19-infrastructure-for-the-gem/githubowner.png %})
 
 Follow the steps below for creating the gem structure, add the rubocop validation, add the travis or appveyor testing to the repo.
@@ -89,7 +91,8 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
     git add -A
     git commit -m "Add instruction files for travis-ci and appveyor"
     ```
-    7.  Add modules team to CODEOWNERS. Create the CODEOWNERS file in .github/CODEOWNERS
+    7.  Add modules team to CODEOWNERS.
+      Create the CODEOWNERS file in .github/CODEOWNERS
     ```shell
     git add -A
     git commit -m "Add modules team to CODEOWNERS"
