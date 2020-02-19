@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Setting up basic infrastructure for your gem | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Setting up basic infrastructure for your gem" />
+<meta name="author" content="sheenaajay" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Introduction" />
+<meta property="og:description" content="Introduction" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-19T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"Setting up basic infrastructure for your gem","dateModified":"2020-02-19T00:00:00+00:00","datePublished":"2020-02-19T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html"},"author":{"@type":"Person","name":"sheenaajay"},"description":"Introduction","url":"https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Setting up basic infrastructure for your gem</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-02-19T00:00:00+00:00" itemprop="datePublished">Feb 19, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">sheenaajay</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="introduction">Introduction</h2>
+
+<p>Here we will be going through the steps and best practices for setting up basic infrastructure for your gem.
+The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.</p>
+<ul>
+  <li>creates the basic file structure for the gem.</li>
+  <li>adds the rubocop which validates the guidelines outlined in the community Ruby Style Guide.</li>
+  <li>adds the travis or appveyor testing to the repo which validates the changes to the repo.</li>
+  <li>adds the dependendabot to the repo which creates pull requests to keep dependencies up to date.</li>
+</ul>
+
+<blockquote>
+  <h4 id="note">Note:</h4>
+
+  <p>This walkthrough assumes you have the following software installed:</p>
+
+  <ul>
+    <li><a href="https://www.ruby-lang.org/en/downloads/">Ruby</a></li>
+  </ul>
+
+  <p>It also assumes familiarity with the <a href="https://rubygems.org/">Ruby gems</a>.</p>
+
+</blockquote>
+
+<h2 id="infrastructure-for-your-gem">Infrastructure for your gem</h2>
+
+<p>We’re going through the steps and best practices for setting up basic infrastructure for your gem.</p>
+
+<p>For any repo created for developing a Gem we add owner, access and license to the repo.
+Follow the steps below to add them.</p>
+
+<ol>
+  <li>Open a <a href="https://github.com">git hub</a> page, perform the rest of these actions from there.
+    <ol>
+      <li>
+        <p>Click on + to create a new repo.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/newrepo.png" alt="+" /></p>
+      </li>
+      <li>
+        <p>Provider the owner information, repo name and license.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/owner.png" alt="owner information and repo name" />
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/license.png" alt="license" /></p>
+      </li>
+      <li>
+        <p>Click on Create repository button.</p>
+      </li>
+      <li>
+        <p>Open the new repo created and navigate to settings tab to update the access.</p>
+      </li>
+      <li>
+        <p>Provide your team as admin on github. (This example shows Puppet’s modules team)
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/githubowner.png" alt="admin" /></p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<p>Follow the steps below for creating the gem structure, add the rubocop validation, add the travis or appveyor testing to the repo.</p>
+
+<ol>
+  <li>Open the command line and perform the rest of these actions from there.
+    <ol>
+      <li>Clone the new repo created. Add the upstream project and checkout the branch.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/sheenaajay/puppet-modulebuilder.git
+git remote add puppetlabs https://github.com/puppetlabs/puppet-modulebuilder.git
+git checkout <span class="nt">-b</span> blogpost
+</code></pre></div>        </div>
+      </li>
+      <li>Create a ruby gem with bundler and perform the commit.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle gem puppet-modulebuilder
+git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Initial commit of puppet-modulebuilder gem scaffolding"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Remove unused default gem development scripts if any and perform the commit.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-r</span> bin/console
+<span class="nb">rm</span> <span class="nt">-r</span> bin/setup
+git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Remove unused default gem development scripts"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Update gemspec with actual values for spec.authors, spec.email, spec.summary, spec.description, spec.homepage, spec.metadata.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/gemspec.png" alt="gemspec" />
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Update gemspec with actual values"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Copy puppet-style rubocop rules(Example from <a href="https://github.com/puppetlabs/pdk/blob/master/.rubocop.yml">pdk repo</a>), activate and apply default fixes.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle <span class="nb">install</span> <span class="nt">--path</span> .bundle/gems/
+bundle <span class="nb">exec </span>rubocop
+git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Include, activate rubocop, apply default fixes"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Add instruction files for travis-ci and appveyor. Sample <a href="https://github.com/puppetlabs/puppet-modulebuilder/pull/1">PR</a> contains travis.yml and appveyor.yml.
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add instruction files for travis-ci and appveyor"</span>
+</code></pre></div>        </div>
+      </li>
+      <li>Add modules team to CODEOWNERS.
+  Create the CODEOWNERS file in .github/CODEOWNERS
+        <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git add <span class="nt">-A</span>
+git commit <span class="nt">-m</span> <span class="s2">"Add modules team to CODEOWNERS"</span>
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+  <li>
+    <p>Finally push your changes to the branch and create the PR “Basic infrastructure”
+Sample <a href="https://github.com/puppetlabs/puppet-modulebuilder/pull/1">PR</a> for reference</p>
+  </li>
+  <li>Follow the steps below for enabling CI jobs and dependabot for the repo.
+    <ol>
+      <li>Set up travs-ci.org for simple rubocop and spec testing. Open a <a href="https://travis-ci.org/account/repositories">travis-ci-org</a> page. Click on      Sync account.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/syncaccount.png" alt="Sync account" /></li>
+      <li>Set up appveyor for simple rubocop and spec testing. Open a <a href="https://ci.appveyor.com/account/puppetlabs/projects/new">ci-appveyor</a> page.        Click on Add.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/add.png" alt="Add" /></li>
+      <li>
+        <p>Enable dependabot for the new repo created. Open a <a href="https://app.dependabot.com/accounts/puppetlabs/">dependabot</a> page.
+Click on + , select the repo and provide access.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png" alt="+" /></p>
+
+        <p><img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabot.png" alt="repo created" /></p>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="wrapping-up">Wrapping Up</h2>
+
+<p>Hooray! We’ve created the infrastructure for our gem !</p>
+
+  </div><a class="u-url" href="/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia-content@puppet.com">ia-content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
