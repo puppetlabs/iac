@@ -13,12 +13,12 @@ tags:
 
 ## Introduction
 
-Here we will be going through the steps and best practices for setting up basic infrastructure for your gem. The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following. 
+Here we will be going through the steps and best practices for setting up basic infrastructure for your gem. The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.
   - creates the basic file structure for the gem.
   - adds the rubocop which validates the guidelines outlined in the community Ruby Style Guide.
   - adds the travis or appveyor testing to the repo which validates the changes to the repo.
   - adds the dependendabot to the repo which creates pull requests to keep dependencies up to date.
-  
+
 > #### Note:
 >
 > This walkthrough assumes you have the following software installed:
@@ -26,7 +26,7 @@ Here we will be going through the steps and best practices for setting up basic 
 > - [Ruby](https://www.ruby-lang.org/en/downloads/)
 >
 > It also assumes familiarity with the [Ruby gems](https://rubygems.org/).
-> 
+>
 
 ## Infrastructure for your gem
 
@@ -36,18 +36,18 @@ For any repo created for developing a Gem we add owner, access and license to th
 
 1. Open a [git hub](https://github.com) page, perform the rest of these actions from there.
    1. Click on + to create a new repo.
-      ![+](/assets/2020-02-19-infrastructure-for-the-gem/newrepo.png)
+      ![+]({% link /assets/2020-02-19-infrastructure-for-the-gem/newrepo.png %})
 
-   2. Provider the owner information, repo name and license. 
-      ![owner information and repo name](/assets/2020-02-19-infrastructure-for-the-gem/owner.png)
-      ![license](/assets/2020-02-19-infrastructure-for-the-gem/license.png)
-    
+   2. Provider the owner information, repo name and license.
+      ![owner information and repo name]({% link /assets/2020-02-19-infrastructure-for-the-gem/owner.png %})
+      ![license]({% link /assets/2020-02-19-infrastructure-for-the-gem/license.png %})
+
    3. Click on Create repository button.
 
    4. Open the new repo created and navigate to settings tab to update the access.
 
    5. Provide the modules team as admin on github.
-      ![admin](/assets/2020-02-19-infrastructure-for-the-gem/githubowner.png)
+      ![admin]({% link /assets/2020-02-19-infrastructure-for-the-gem/githubowner.png %})
 
 Follow the steps below for creating the gem structure, add the rubocop validation, add the travis or appveyor testing to the repo.
 
@@ -66,13 +66,13 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
     ```
     3.  Remove unused default gem development scripts if any and perform the commit.
     ```shell
-    rm -r bin/console 
+    rm -r bin/console
     rm -r bin/setup
     git add -A
     git commit -m "Remove unused default gem development scripts"
     ```
     4.  Update gemspec with actual values for spec.authors, spec.email, spec.summary, spec.description, spec.homepage, spec.metadata.
-        ![gemspec](/assets/2020-02-19-infrastructure-for-the-gem/gemspec.png)
+        ![gemspec]({% link /assets/2020-02-19-infrastructure-for-the-gem/gemspec.png %})
     ```shell
     git add -A
     git commit -m "Update gemspec with actual values"
@@ -100,14 +100,14 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
 
 3. Follow the steps below for enabling CI jobs and dependabot for the repo.
    1. Set up travs-ci.org for simple rubocop and spec testing. Open a [travis-ci-org](https://travis-ci.org/account/repositories) page. Click on      Sync account.
-      ![Sync account](/assets/2020-02-19-infrastructure-for-the-gem/syncaccount.png)
+      ![Sync account]({% link /assets/2020-02-19-infrastructure-for-the-gem/syncaccount.png %})
    2. Set up appveyor for simple rubocop and spec testing. Open a [ci-appveyor](https://ci.appveyor.com/account/puppetlabs/projects/new) page.        Click on Add.
-      ![Add](/assets/2020-02-19-infrastructure-for-the-gem/add.png)
-   3. Enable dependabot for the new repo created. Open a [dependabot](https://app.dependabot.com/accounts/puppetlabs/) page. 
+      ![Add]({% link /assets/2020-02-19-infrastructure-for-the-gem/add.png %})
+   3. Enable dependabot for the new repo created. Open a [dependabot](https://app.dependabot.com/accounts/puppetlabs/) page.
       Click on + , select the repo and provide access.
-      ![+](/assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png)
+      ![+]({% link /assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png %})
 
-      ![repo created](/assets/2020-02-19-infrastructure-for-the-gem/dependabot.png)
+      ![repo created]({% link /assets/2020-02-19-infrastructure-for-the-gem/dependabot.png %})
 
 
 ## Wrapping Up
