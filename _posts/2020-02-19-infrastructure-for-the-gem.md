@@ -66,6 +66,7 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
     git add -A
     git commit -m "Initial commit of puppet-modulebuilder gem scaffolding"
     ```
+        See [Clarifying the Roles of the .gemspec and Gemfile](https://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/) on whether you want to commit the `Gemfile.lock` or not.
     3.  Remove unused default gem development scripts if any and perform the commit.
     ```shell
     rm -r bin/console
