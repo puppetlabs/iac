@@ -66,6 +66,7 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
     git add -A
     git commit -m "Initial commit of puppet-modulebuilder gem scaffolding"
     ```
+        See [Clarifying the Roles of the .gemspec and Gemfile](https://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/) on whether you want to commit the `Gemfile.lock` or not.
     3.  Remove unused default gem development scripts if any and perform the commit.
     ```shell
     rm -r bin/console
@@ -106,11 +107,13 @@ Follow the steps below for creating the gem structure, add the rubocop validatio
       ![Sync account]({% link /assets/2020-02-19-infrastructure-for-the-gem/syncaccount.png %})
    2. Set up appveyor for simple rubocop and spec testing. Open a [ci-appveyor](https://ci.appveyor.com/account/puppetlabs/projects/new) page.        Click on Add.
       ![Add]({% link /assets/2020-02-19-infrastructure-for-the-gem/add.png %})
-   3. Enable dependabot for the new repo created. Open a [dependabot](https://app.dependabot.com/accounts/puppetlabs/) page.
+   3. Allow dependabot access the new repo created. Open a [dependabot](https://app.dependabot.com/accounts/puppetlabs/) page.
       Click on + , select the repo and provide access.
       ![+]({% link /assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png %})
 
       ![repo created]({% link /assets/2020-02-19-infrastructure-for-the-gem/dependabot.png %})
+   4. Enable dependabot for the repo.
+      ![+]({% link /assets/2020-02-19-infrastructure-for-the-gem/dependabotenable.png %})
 
 
 ## Wrapping Up
