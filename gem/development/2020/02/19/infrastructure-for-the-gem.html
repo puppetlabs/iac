@@ -132,6 +132,7 @@ git checkout <span class="nt">-b</span> blogpost
 git add <span class="nt">-A</span>
 git commit <span class="nt">-m</span> <span class="s2">"Initial commit of puppet-modulebuilder gem scaffolding"</span>
 </code></pre></div>        </div>
+        <p>See <a href="https://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/">Clarifying the Roles of the .gemspec and Gemfile</a> on whether you want to commit the <code class="highlighter-rouge">Gemfile.lock</code> or not.</p>
       </li>
       <li>Remove unused default gem development scripts if any and perform the commit.
         <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">rm</span> <span class="nt">-r</span> bin/console
@@ -177,12 +178,14 @@ Sample <a href="https://github.com/puppetlabs/puppet-modulebuilder/pull/1">PR</a
       <li>Set up appveyor for simple rubocop and spec testing. Open a <a href="https://ci.appveyor.com/account/puppetlabs/projects/new">ci-appveyor</a> page.        Click on Add.
 <img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/add.png" alt="Add" /></li>
       <li>
-        <p>Enable dependabot for the new repo created. Open a <a href="https://app.dependabot.com/accounts/puppetlabs/">dependabot</a> page.
+        <p>Allow dependabot access the new repo created. Open a <a href="https://app.dependabot.com/accounts/puppetlabs/">dependabot</a> page.
 Click on + , select the repo and provide access.
 <img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png" alt="+" /></p>
 
         <p><img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabot.png" alt="repo created" /></p>
       </li>
+      <li>Enable dependabot for the repo.
+<img src="/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabotenable.png" alt="+" /></li>
     </ol>
   </li>
 </ol>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-20T02:07:27+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Setting up basic infrastructure for your gem</title><link href="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" rel="alternate" type="text/html" title="Setting up basic infrastructure for your gem" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem</id><content type="html" xml:base="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-20T15:14:34+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Setting up basic infrastructure for your gem</title><link href="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" rel="alternate" type="text/html" title="Setting up basic infrastructure for your gem" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem</id><content type="html" xml:base="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Here we will be going through the steps and best practices for setting up basic infrastructure for your gem.
 The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.&lt;/p&gt;
@@ -71,6 +71,7 @@ git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; blogpost
 git add &lt;span class=&quot;nt&quot;&gt;-A&lt;/span&gt;
 git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Initial commit of puppet-modulebuilder gem scaffolding&quot;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+        &lt;p&gt;See &lt;a href=&quot;https://yehudakatz.com/2010/12/16/clarifying-the-roles-of-the-gemspec-and-gemfile/&quot;&gt;Clarifying the Roles of the .gemspec and Gemfile&lt;/a&gt; on whether you want to commit the &lt;code class=&quot;highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt; or not.&lt;/p&gt;
       &lt;/li&gt;
       &lt;li&gt;Remove unused default gem development scripts if any and perform the commit.
         &lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt; bin/console
@@ -116,12 +117,14 @@ Sample &lt;a href=&quot;https://github.com/puppetlabs/puppet-modulebuilder/pull/
       &lt;li&gt;Set up appveyor for simple rubocop and spec testing. Open a &lt;a href=&quot;https://ci.appveyor.com/account/puppetlabs/projects/new&quot;&gt;ci-appveyor&lt;/a&gt; page.        Click on Add.
 &lt;img src=&quot;/iac/assets/2020-02-19-infrastructure-for-the-gem/add.png&quot; alt=&quot;Add&quot; /&gt;&lt;/li&gt;
       &lt;li&gt;
-        &lt;p&gt;Enable dependabot for the new repo created. Open a &lt;a href=&quot;https://app.dependabot.com/accounts/puppetlabs/&quot;&gt;dependabot&lt;/a&gt; page.
+        &lt;p&gt;Allow dependabot access the new repo created. Open a &lt;a href=&quot;https://app.dependabot.com/accounts/puppetlabs/&quot;&gt;dependabot&lt;/a&gt; page.
 Click on + , select the repo and provide access.
 &lt;img src=&quot;/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabotadd.png&quot; alt=&quot;+&quot; /&gt;&lt;/p&gt;
 
         &lt;p&gt;&lt;img src=&quot;/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabot.png&quot; alt=&quot;repo created&quot; /&gt;&lt;/p&gt;
       &lt;/li&gt;
+      &lt;li&gt;Enable dependabot for the repo.
+&lt;img src=&quot;/iac/assets/2020-02-19-infrastructure-for-the-gem/dependabotenable.png&quot; alt=&quot;+&quot; /&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
