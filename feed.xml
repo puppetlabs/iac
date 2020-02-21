@@ -1,4 +1,105 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-21T02:07:46+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Setting up basic infrastructure for your gem</title><link href="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" rel="alternate" type="text/html" title="Setting up basic infrastructure for your gem" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem</id><content type="html" xml:base="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-02-21T13:57:37+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">21st Feb 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update.html" rel="alternate" type="text/html" title="21st Feb 2020: IAC Team Status Update" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
+Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
+
+&lt;p&gt;We’ve released only one module since last week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/java&quot;&gt;puppetlabs/java&lt;/a&gt; (v6.2.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/baurmatt&quot;&gt;@baurmatt&lt;/a&gt; for his change to the concat module,
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/627&quot;&gt;adding support for Deferred function in concat fragment&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;approved-modules&quot;&gt;Approved Modules&lt;/h2&gt;
+
+&lt;p&gt;This week we happily approved two new modules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/fervid/secure_linux_cis&quot;&gt;fervid/secure_linux_cis&lt;/a&gt; is a CIS hardening module for Linux servers by &lt;a href=&quot;https://www.fervid.us/&quot;&gt;fervid.us&lt;/a&gt;.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/stackstorm/st2&quot;&gt;stackstorm/st2&lt;/a&gt; installs, configures and manages the eponymous &lt;a href=&quot;https://stackstorm.com&quot;&gt;StackStorm&lt;/a&gt; platform for event-driven runbook automation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/approved&quot;&gt;Puppet Approved&lt;/a&gt; modules are recommended by us for use with Puppet Open Source and Puppet Enterprise and meet our expectations for quality and usability.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-puppet-modulebuilder-gem&quot;&gt;New puppet-modulebuilder Gem&lt;/h2&gt;
+
+&lt;p&gt;Work &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-532&quot;&gt;has started&lt;/a&gt; on creating a &lt;a href=&quot;https://github.com/puppetlabs/puppet-modulebuilder&quot;&gt;puppet-modulebuilder&lt;/a&gt; gem.
+This will carry the actual functionality for &lt;code class=&quot;highlighter-rouge&quot;&gt;pdk build&lt;/code&gt; and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
+We expect a first release early next week.
+Follow &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-552&quot;&gt;IAC-552&lt;/a&gt; to get a notification when that happens.&lt;/p&gt;
+
+&lt;p&gt;Thanks a lot to &lt;a href=&quot;https://github.com/glennsarti&quot;&gt;Glenn&lt;/a&gt; for helping out with the actual porting of the code.&lt;/p&gt;
+
+&lt;h2 id=&quot;ongoing-litmus-conversions&quot;&gt;Ongoing Litmus Conversions&lt;/h2&gt;
+
+&lt;p&gt;This week saw a flurry of PRs (through &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt;) to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-215&quot;&gt;update all our modules&lt;/a&gt; to use the new &lt;code class=&quot;highlighter-rouge&quot;&gt;use_litmus&lt;/code&gt; support in &lt;a href=&quot;https://github.com/puppetlabs/pdk-templates&quot;&gt;pdk-templates&lt;/a&gt;.
+This reduces the amount of configuration we need to carry in each module and validates the pdk-templates feature.&lt;/p&gt;
+
+&lt;p&gt;As expected, the last remaining modules to convert to &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Litmus&lt;/a&gt; were the ones we didn’t want to touch earlier for good reasons.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-powershell/pull/283&quot;&gt;powershell&lt;/a&gt; has been merged and is now running acceptance tests on Windows (appveyor), Linux and OS X (travis) in public.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-sqlserver/pull/345&quot;&gt;sqlserver&lt;/a&gt; is still resisting,
+not the least because we found several areas where the previous test suite was ignoring warnings that we now want to address.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vsphere/pull/172&quot;&gt;vsphere&lt;/a&gt; is progressing.
+We don’t expect to enable PR-level testing on this one,
+since it does require access to our internal VCenter.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;If you’re interested in porting a module to Litmus,
+feel free to reach out to us during &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; - we’ll be glad to help!&lt;/p&gt;
+
+&lt;p&gt;We’re also looking into updating litmus to make use of &lt;a href=&quot;https://github.com/puppetlabs/bolt/blob/master/CHANGELOG.md#bolt-200&quot;&gt;Bolt v2&lt;/a&gt;.
+See &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/254&quot;&gt;puppetlabs/puppet_litmus#254&lt;/a&gt; if you want to follow along.&lt;/p&gt;
+
+&lt;p&gt;This week also saw a number of ruby &lt;a href=&quot;https://travis-ci.org/puppetlabs/puppetlabs-mysql/jobs/653408974&quot;&gt;segfaults&lt;/a&gt; and &lt;a href=&quot;https://travis-ci.org/puppetlabs/puppetlabs-mysql/jobs/652904009&quot;&gt;deadlocks&lt;/a&gt; during acceptance testing:&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;448.03s$ bundle exec rake litmus:acceptance:parallel
+Running against 3 targets.
+./home/travis/build/puppetlabs/puppetlabs-mysql/vendor/bundle/ruby/2.5.0/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/atomic/ruby_thread_local_var.rb:113: [BUG] Segmentation fault at 0x000000000b4d76d5
+ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;or&lt;/p&gt;
+
+&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec rake litmus:acceptance:parallel
+Running against 2 targets.
+.
+No output has been received in the last 10m0s, this potentially indicates a stalled build or something wrong with the build itself.
+Check the details on how to adjust your build configuration on: https://docs.travis-ci.com/user/common-build-problems/#build-times-out-because-no-output-was-received
+The build has been terminated
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We’re still working on figuring out what changed recently to trigger these.&lt;/p&gt;
+
+&lt;h2 id=&quot;refactoring-stdlib-to-puppet4-function-api&quot;&gt;Refactoring stdlib to Puppet4 function API&lt;/h2&gt;
+
+&lt;p&gt;Off the back of Ben’s &lt;a href=&quot;https://binford2k.com/2019/11/27/automagic-function-port/&quot;&gt;blog on the Puppet4 function API&lt;/a&gt;,
+work has started to move all functions in the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/stdlib&quot;&gt;stdlib module&lt;/a&gt; to the “new” API.
+To quote Ben:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Each modern Puppet 4.x function is just a little faster and just a little safer
+to use, meaning that as we all port our functions over, compilation times across
+the ecosystem will get more and more performant. Modern Puppet 4.x functions
+have improved thread safety, memory management, and load time. Even more
+importantly, they’re isolated to the environment they’re loaded from.&lt;/p&gt;
+
+  &lt;p&gt;And as a developer, you’ll see benefits like namespaced function signatures,
+automatic data type checking, multiple dispatches allowing you to easily handle
+different kinds of function invocations, and vastly improved code reuse.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;If you want to follow along or provide feedback,
+please avail yourself of &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-114&quot;&gt;IAC-114&lt;/a&gt;.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="module updates" /><category term="community" /><category term="approved" /><category term="litmus" /><category term="powershell" /><category term="sqlserver" /><category term="vsphere" /><category term="modulebuilder" /><category term="stdlib" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">Setting up basic infrastructure for your gem</title><link href="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html" rel="alternate" type="text/html" title="Setting up basic infrastructure for your gem" /><published>2020-02-19T00:00:00+00:00</published><updated>2020-02-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem</id><content type="html" xml:base="https://puppetlabs.github.io/iac/gem/development/2020/02/19/infrastructure-for-the-gem.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
 
 &lt;p&gt;Here we will be going through the steps and best practices for setting up basic infrastructure for your gem.
 The steps given can be followed by anyone to setup the basic infrastructure for gem development which does the following.&lt;/p&gt;
