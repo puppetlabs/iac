@@ -34,7 +34,7 @@ pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot
 
 Run gem_file_update against modules
 ```shell
-pdksync:gem_file_update[[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]]
+pdksync:gem_file_update[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]
 ```
 eg rake to update gem line
 ```shell
@@ -72,39 +72,37 @@ bundle install --path .bundle/gems/
 bundle exec rake 'gem_testing[]'
 ```
 
-Once the verified gem is released we can use pdksync to update the the new version of gem released in the  .sync.yaml file.
+Once the verified gem is released we can use pdksync to update the the new version of gem released in the `.sync.yaml` file.
 
 ## Part Two: Functionality Multi Gem Testing
 
 pdksync tool is extended with the feature to perform multi gem testing (`puppet-module-gems`). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.
 
- ```shell
-   export GEMFURY_TOKEN=<access_token>
-   ```
+```shell
+export GEMFURY_TOKEN=<access_token>
+```
 
 Run the following commands to check that everything is working as expected:
 
 ```shell
 bundle install --path .bundle/gems/
 bundle exec rake -T
-bundle exec rake 'git:clone_gem['puppet-module-gems']'
+bundle exec rake 'git:clone_gem[puppet-module-gems]'
 ```
 
-Run multigem_file_update against modules
+Run multigem_file_update against modules:
+
 Clone gem
-git:clone_gem[:gem_name]
 ```shell
-rake 'git:clone_gem['puppet-module-gems']'
+git:clone_gem['puppet-module-gems']
 ```
 
 Build and Push new gems built to the gemfury account for testing
-pdksync:multi_gem_testing[:gem_name, :version_file, :build_gem, :gem_path, :gemfury_user_name]
 ```shell
 pdksync:multi_gem_testing['puppet-module-gems','config/info.yml','exe/build-gems.rb','pkg','gem_tester']
 ```
 
 Update Gemfile of the modules with the new gem should be pushed to Gemfury.
-pdksync:multigem_file_update[:gem_name, :gemfury_username]
 ```shell
 pdksync:multigem_file_update['puppet-module','tester']
 ```
@@ -115,9 +113,10 @@ In this workflow we can clone gems, update the version, build the gem, push the 
 
 ```shell
 bundle install --path .bundle/gems/
-bundle exec rake 'git:clone_gem['puppet-module-gems']'
+bundle exec rake 'git:clone_gem[puppet-module-gems]'
 bundle exec rake 'pdksync:multi_gem_testing[]'
 bundle exec rake 'pdksync:multigem_file_update[]'
+```
 
 ## Wrapping Up
 
