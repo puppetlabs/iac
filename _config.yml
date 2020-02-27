@@ -45,3 +45,7 @@ jekyll_analytics:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+collections:
+  tools:
+    output: true

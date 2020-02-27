@@ -1,0 +1,48 @@
+---
+layout: page
+---
+
+<h1>{{ name }}</h1>
+<h2>Summary</h2>
+
+<p>{{ page.description }}</p>
+
+<ul>
+  {% if page.github %}
+  <li>
+    <a href="https://github.com/{{ page.github }}">Github Repo</a>
+    <img alt="License" src="https://img.shields.io/github/license/{{ page.github }}">
+    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/{{ page.github }}?logo=github"/>
+    <a href="https://github.com/{{ page.github }}/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/{{ page.github }}?logo=github">
+    <img alt="GitHub issues closed" src="https://img.shields.io/github/issues-closed/{{ page.github }}?logo=github"></a>
+    <a href="https://github.com/{{ page.github }}/pulls"><img alt="GitHub PRs" src="https://img.shields.io/github/issues-pr/{{ page.github }}?logo=github">
+    <img alt="GitHub PRs closed" src="https://img.shields.io/github/issues-pr-closed/{{ page.github }}?logo=github"></a>
+    {% if page.travis_org %}<img alt="Travis" src="https://img.shields.io/travis/{{ page.github }}?logo=travis">{% endif %}
+    {% if page.travis_com %}<img alt="Travis" src="https://img.shields.io/travis/com/{{ page.github }}?logo=travis">{% endif %}
+    {% if page.appveyor %}<img alt="Appveyor" src="https://img.shields.io/appveyor/build/{{ page.github }}?logo=appveyor" />{% endif %}
+    {% if page.workflow %}<img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/{{ page.github }}/{{ page.workflow }}?logo=github"/>{% endif %}
+    {% if page.codecov_token %}<img alt="Codecov" src="https://img.shields.io/codecov/c/gh/{{ page.github }}?logo=codecov&token={{ page.codecov_token }}">{% endif %}
+    {% if page.dependabot %}<img alt="Dependabot SemVer Compatibility" src="https://img.shields.io/dependabot/semver/{{ page.github }}?logo=dependabot">{% endif %}
+  </li>
+  {% endif %}
+  {% if page.gem %}
+  <li>
+    <a href="https://rubygems.org/gems/{{ page.gem }}">RubyGems</a>
+    <img alt="Gem downloads" src="https://img.shields.io/gem/dt/{{ page.gem }}?logo=rubygems">
+  </li>
+  {% endif %}
+  {% if page.puppet_module %}
+  <li>
+    <a href="https://forge.puppet.com//{{ page.puppet_module }}">Puppet Forge</a>
+    <img alt="Puppet Forge version" src="https://img.shields.io/puppetforge/v/{{ page.puppet_module }}">
+    <img alt="PDK version" src="https://img.shields.io/puppetforge/pdk-version/{{ page.puppet_module }}">
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/{{ page.puppet_module }}">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/{{ page.puppet_module }}">
+  </li>
+  {% endif %}
+  {% for link in page.links %}
+  <li><a href="{{ link.link }}">{{ link.name }}</a></li>
+  {% endfor %}
+</ul>
+
+{{ content }}
