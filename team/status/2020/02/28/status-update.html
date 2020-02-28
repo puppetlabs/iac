@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>28th Feb 2020: IAC Team Status Update | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="28th Feb 2020: IAC Team Status Update" />
+<meta name="author" content="michaeltlombardi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:" />
+<meta property="og:description" content="The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/team/status/2020/02/28/status-update.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/team/status/2020/02/28/status-update.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-02-28T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"28th Feb 2020: IAC Team Status Update","dateModified":"2020-02-28T00:00:00+00:00","datePublished":"2020-02-28T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/team/status/2020/02/28/status-update.html"},"author":{"@type":"Person","name":"michaeltlombardi"},"description":"The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:","url":"https://puppetlabs.github.io/iac/team/status/2020/02/28/status-update.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">28th Feb 2020: IAC Team Status Update</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-02-28T00:00:00+00:00" itemprop="datePublished">Feb 28, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">michaeltlombardi</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The IAC team has been working on a lot of interesting things over the past week.
+Here’s a brief overview of what we’ve been up to:</p>
+
+<h2 id="updates-to-puppet-modules">Updates to Puppet Modules</h2>
+
+<p>No modules were released since last week.</p>
+
+<h2 id="community-contributions">Community Contributions</h2>
+
+<p>Thanks to <a href="https://github.com/jmangt">@jmangt</a> for their improvements to the provision module,
+<a href="https://github.com/puppetlabs/provision/pull/103">adding support for sssh’ing to vagrant boxes where root is not allowed to ssh</a> and <a href="https://github.com/puppetlabs/provision/pull/101">ensuring the vagrant provision task works against paths with spaces in them</a>.</p>
+
+<h2 id="concurrent-ruby-issues--patch">Concurrent Ruby Issues &amp; Patch</h2>
+
+<p>The <a href="https://tickets.puppetlabs.com/browse/IAC-556">ruby segfault problems in Travis discovered last week</a> now have a <a href="https://github.com/puppetlabs/puppet-module-gems/pull/124/files">bandaid</a>, released in <a href="https://github.com/puppetlabs/puppet-module-gems/blob/master/CHANGELOG.md#044">puppet-module-gems <code class="highlighter-rouge">0.4.4</code></a> - this patch ensures that concurrent-ruby <code class="highlighter-rouge">1.1.6</code> is not installed. This has restored CI functionality for us.</p>
+
+<h2 id="weekly-test-runs">Weekly Test Runs</h2>
+
+<p>Numerous PRs went through this week to ensure 44 modules (all those supported modules which have been converted to Litmus so far) run weekly tests via GitHub Actions.
+These tests run against the master branch executing the full test suite - all of the spec tests and then all of the acceptance tests against the full matrix of operating systems for that module (defined in the <code class="highlighter-rouge">release_checks</code> section of the <code class="highlighter-rouge">provision.yaml</code> for that module).</p>
+
+<p>These results are recorded to the <a href="https://puppetlabs.github.io/community_management/">Community Dashboard</a> in the <code class="highlighter-rouge">Github Actions Report</code> tab, which shows the test results for the last five runs for each workflow and module.
+Right now, these results are recorded fairly simply, listing the run number, the branch the tests ran against, and whether they passed or failed.
+In the future, we will be improving the usefulness of this dashboard in numerous ways, but for now we just wanted a way to get some quick visualization for triage.</p>
+
+<h2 id="updated-tools-pages">Updated Tools Page(s)</h2>
+
+<p>This week we also updated the page on this site for the tools we maintain - each project header now also leads to a page for that tool with additional information.
+We’ve collected some at-a-glance badges for each of the projects too.
+We hope this will make keeping up with the available tooling a little easier!</p>
+
+<h2 id="puppet-modulebuilder-gem-010-release">puppet-modulebuilder Gem 0.1.0 Release</h2>
+
+<p>As we mentioned last week, we’ve <a href="https://tickets.puppetlabs.com/browse/IAC-532">been working</a> with the PDE and Night Watch teams at Puppet on the <a href="https://github.com/puppetlabs/puppet-modulebuilder">puppet-modulebuilder</a> gem, which has now <a href="https://rubygems.org/gems/puppet-modulebuilder/versions/0.1.0">been released</a>!
+This will carry the actual functionality for <code class="highlighter-rouge">pdk build</code> and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
+A new Litmus release is ongoing to take advantage of this new development!</p>
+
+<p>Thanks a lot to <a href="https://github.com/glennsarti">Glenn Sarti</a> and <a href="https://github.com/florindragos">Florin Dragos</a> for helping out with everything!</p>
+
+<h2 id="facter-4-incoming">Facter 4 Incoming</h2>
+
+<p>We started doing some prep work this week as <a href="https://github.com/puppetlabs/facter-ng">Facter</a>’s next major update has <a href="https://rubygems.org/gems/facter/versions/4.0.8.pre">become available as prerelease</a>.
+Facter 4 is a return to Ruby from C++ which allows deeper integration with the rest of our modules and test-tooling, and easier hacking on the core facts.
+First we’ve got some checking and verifying to do as this major version rolls out to ensure a smooth experience for everyone.
+If you want to try it out in your module’s unit tests, specify <code class="highlighter-rouge">FACTER_GEM_VERSION='4.0.8.pre'</code> in your environment before any bundle or PDK commands.
+Let us know in the <a href="https://puppetcommunity.slack.com/archives/C0W1X7ZAL">#puppet-dev</a> channel on the <a href="http://slack.puppet.com/">community slack</a> how it goes.</p>
+
+<p>We should have more on this in the near future, particularly any advice and guidance around what it will mean for you as module developers and consumers - the expected release date is March 11th, 2020!</p>
+
+<h2 id="pdk-1170-release">PDK 1.17.0 Release</h2>
+
+<p>A <a href="https://github.com/puppetlabs/pdk/blob/master/CHANGELOG.md#v1170-2020-02-27">new release of the PDK</a> is here with initial support for control repos, system-level settings, and <a href="https://github.com/puppetlabs/pdk-templates/compare/1.16.0...1.17.0">numerous template updates</a>!</p>
+
+<h2 id="new-puppet-blog-on-de-forking-a-module">New Puppet Blog on De-Forking a Module</h2>
+
+<p><a href="https://github.com/genebean">Gene Liverman</a>, a senior SRE at Puppet, <a href="https://puppet.com/blog/de-forking-a-puppet-module/">wrote a blog post on the main Puppet blog this week for de-forking a Puppet module</a> - essentially, what to do when you want to incorporate upstream changes back into a project you’ve forked.
+Great work on a topic that comes up fairly often in the open source world!</p>
+
+<h2 id="puppetcamp-berlin-2020">PuppetCamp Berlin 2020</h2>
+
+<p>In two weeks the sold out <a href="https://www.eventbrite.com/e/puppet-camp-berlin-tickets-84908295999">PuppetCamp Berlin</a> will happen at the AWS OpsWorks offices, with a great showing of folks from the community and Puppet.
+If you’re one of the lucky ones with a ticket, come and say hi to Melissa Casburn, our UX architect, <a href="https://github.com/binford2k">@binford2k</a>, community shepherd, and <a href="https://github.com/DavidS">@DavidS</a>, tech lead of IAC.</p>
+
+  </div><a class="u-url" href="/iac/team/status/2020/02/28/status-update.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia-content@puppet.com">ia-content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
