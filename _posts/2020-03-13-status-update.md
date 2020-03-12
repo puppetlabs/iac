@@ -40,4 +40,6 @@ We have release [Litmus version 0.16.0](https://github.com/puppetlabs/puppet_lit
 
 On [puppetlabs-vsphere](https://github.com/puppetlabs/puppetlabs-vsphere) we have finished the conversion to allow users to run acceptance tests using Litmus in [PR](https://github.com/puppetlabs/puppetlabs-vsphere/pull/172). 
 
-Finally the conversion for using Litmus for [puppetlabs-docker](https://github.com/puppetlabs/puppetlabs-docker) acceptance testing is ready to be merged in [PR](https://github.com/puppetlabs/puppetlabs-docker/pull/585). As a result any future pull request to the docker module will also run the acceptance tests using Github Actions hosted runners on Ubuntu 16.04 and Ubuntu 18.04. For running acceptance tests on Windows, the provision file of the module contains a item that uses a Windows Vagrant box for testing.
+Finally the conversion for using Litmus for [puppetlabs-docker](https://github.com/puppetlabs/puppetlabs-docker) acceptance testing is ready to be merged in [puppetlabs-docker#585](https://github.com/puppetlabs/puppetlabs-docker/pull/585).
+As a result any future pull request to the docker module will also run the acceptance tests using Github Actions hosted runners on Ubuntu 16.04 and Ubuntu 18.04.
+For running acceptance tests on Windows, the provision file of the module contains a item that uses a Windows Vagrant box for testing.
