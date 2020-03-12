@@ -25,7 +25,8 @@ Over the last week we have released:
 
 ## Community
 
-A big thank you goes out to Glen Sarti for the work he has done in removing the PDK dependecy from Litmus. Also we would like to thank [Antoine](https://github.com/anarcat) and [Dirk Heinrichs]() for their help in resolving the file permission issues on the [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt) module.
+A big thank you goes out to [Glenn Sarti](https://github.com/glennsarti) for the work he has done in removing the PDK dependency from Litmus.
+Also we would like to thank [Antoine](https://github.com/anarcat) and [Dirk Heinrichs](https://tickets.puppetlabs.com/secure/ViewProfile.jspa?name=dhs%40recommind.com&selectedTab=com.atlassian.streams.streams-jira-plugin:user-profile-stream-panel) for their help in resolving the file permission issues on the [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt) module.
 
 ## Customer Escalations
 
