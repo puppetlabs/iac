@@ -36,7 +36,7 @@ We have also merged a PR that will remove the strftime function from the [puppet
 
 ## Litmus Progress
 
-We have release [Litmus version 0.16.0](https://github.com/puppetlabs/puppet_litmus/releases/tag/0.16.0) that contains a couple of nice fixes and removes dependency on PDK - [CHANGELOG](https://github.com/puppetlabs/puppet_litmus/blob/master/CHANGELOG.md)
+We have released [Litmus version 0.16.0](https://github.com/puppetlabs/puppet_litmus/releases/tag/0.16.0) that contains a couple of nice fixes and removes dependency on PDK - [CHANGELOG](https://github.com/puppetlabs/puppet_litmus/blob/master/CHANGELOG.md)
 
 On [puppetlabs-vsphere](https://github.com/puppetlabs/puppetlabs-vsphere) we have finished the conversion to allow users to run acceptance tests using Litmus in [puppetlabs-vsphere#172](https://github.com/puppetlabs/puppetlabs-vsphere/pull/172). 
 
