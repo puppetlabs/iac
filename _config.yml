@@ -48,5 +48,17 @@ jekyll_analytics:
 #   - vendor/ruby/
 
 collections:
+  # Use this to sort categories in modules.
+  # needs to have a file for every category.
+  module_categories:
+    output: false
+    order:
+      - windows.md
+      - linux.md
+      - crossplatform.md
+      - networking.md
+      - other.md
+  modules:
+    output: true
   tools:
     output: true
