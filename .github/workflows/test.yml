@@ -24,4 +24,3 @@ jobs:
           build-only: true
         env:
           JEKYLL_ENV: production
-          GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
