@@ -1,12 +1,6 @@
-name: Jekyll Deploy
+name: Jekyll Test
 
-on:
-  push:
-    branches:
-      - master
-  # redeploy once a day to update unpublished pages
-  schedule:
-    - cron: "0 2 * * *"
+on: [ pull_request ]
 
 jobs:
   build:
@@ -24,8 +18,10 @@ jobs:
             ${{ runner.os }}-build-
             ${{ runner.os }}-
 
-      - name: Build & Deploy to GitHub Pages
+      - name: Test
         uses: DavidS/jekyll-deploy@1.1.0
+        with:
+          build-only: true
         env:
           JEKYLL_ENV: production
           GH_PAGES_TOKEN: ${{ secrets.GH_PAGES_TOKEN }}
