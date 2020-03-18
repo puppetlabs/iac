@@ -17,7 +17,7 @@ This question was posted on the [Puppet Community Slack](https://slack.puppet.co
 
 > Is there any way like the below in puppet code we can use:
 > ```
-> $var=‘run comman locally on agent, if $?=0 echo “present”, else echo “absent”’
+> $var=‘run command locally on agent, if $?=0 echo “present”, else echo “absent”’
 > if $var == present {
 >   # my code
 > } else {
@@ -26,15 +26,46 @@ This question was posted on the [Puppet Community Slack](https://slack.puppet.co
 > ```
 (by user [IlovPuppet](https://app.slack.com/team/URGFPBS0N), edited for presentation)
 
+There are a number of reasons why this question comes up.
+First is likely that folks are not aware of the options available at all.
+Then, sometimes, the common options (like custom facts) just don't cut it for security or performance reasons.
+Last but not least, organisational and technical circumstances can make one option more appealing than others.
+
 From my answer there, I wrote up a more detailed exposition here.
 Based on the specifics of your situation,
 there are several different options to solve this,
 described in detail below:
 
+* make the decision explicit
 * a `Deferred` function call
 * using `onlyif` or `unless` on an `exec` resource
 * a custom fact
 * a custom resource
+
+## Explicit Decisions
+
+**What is it?**
+
+Puppet shines when we can make our configuration decisions explicit.
+Make the dynamic decision a static configuration and ensure that whatever is producing the different states is also managed by puppet.
+Having a hard look at what the command is trying to decide and whether this couldn't be enforced instead of queried can save complexity.
+
+**Example**
+
+A simple example from my past as a technical consultant is a client who wanted to base a configuration decision off whether or not a particular package was installed on a workstation. In this particular case it turned out that installing that additional package was not very expensive (compared to coding up a dynamic solution), so we just rolled out the package to everyone and removed another thing that was different across the fleet.
+
+**Use it ...**
+
+* if you can take control of the source of your question.
+* if you can key off another configuration instead of querying active system state.
+* if you can make your general configuration easier by removing a source of variation.
+* if the query code is difficult and/or unreliable.
+
+**Don't use it if ...**
+
+* the input is truly dynamic.
+* the configuration is outside of your organisational scope (but try talking to the other team first!).
+* the computed value is sensitive and should not be transmitted or stored outside the node.
 
 ## `Deferred`
 
@@ -59,7 +90,7 @@ node default {
 
 **Use it ...**
 
-* for values only needed locally on a few agents.
+* for values specific to one or a few agents, for which managing via Hiera would be cumbersome.
 * for sensitive values that should not be exposed outside the individual agent.
 * for setting properties on resources.
 
@@ -68,6 +99,7 @@ node default {
 * you need to change **which** resources are managed.
 * you need the value in PE Console for classification or reporting.
 * the computed value depends on resources managed earlier in the catalog.
+* a simpler solution (see above) works.
 
 **Further Reading**
 
@@ -149,6 +181,8 @@ With a native ruby plugin you can fully take control of how puppet manages a res
 
 The [mysql module](https://forge.puppet.com/puppetlabs/mysql) contains custom types and providers to control databases, users and grants.
 
+> Note that the mysql module is still using the low-level API. Using the PDK and the Resource API, programming types and providers has become a lot easier as of late. Check out the "Further Reading" section below.
+
 **Use it for ...**
 
 * things that can be modeled as a puppet resource.
@@ -164,3 +198,9 @@ The [mysql module](https://forge.puppet.com/puppetlabs/mysql) contains custom ty
 
 * [Custom Resources](https://puppet.com/docs/puppet/latest/custom_resources.html): main documentation on writing custom resources.
 * [HUE hands on lab](https://github.com/puppetlabs/puppet-resource_api/tree/master/docs): hands-on lab for a custom remote resource interacting with a API.
+
+
+## Final Words
+
+To summarize, Puppet provides you with a number of alternatives to make your configuration smarter.
+Thanks to IluvPuppet for the great question, and [Paul Anderson](https://github.com/hpcprofessional) and Paul Reed for reviewing and feedback.
