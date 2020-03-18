@@ -1,4 +1,224 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-03-18T02:07:34+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">13th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update.html" rel="alternate" type="text/html" title="13th March 2020: IAC Team Status Update" /><published>2020-03-13T00:00:00+00:00</published><updated>2020-03-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-03-18T19:41:15+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">How to use agent-side information on the puppetserver</title><link href="https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html" rel="alternate" type="text/html" title="How to use agent-side information on the puppetserver" /><published>2020-03-18T00:00:00+00:00</published><updated>2020-03-18T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver</id><content type="html" xml:base="https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html">&lt;p&gt;This question was posted on the &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;Puppet Community Slack&lt;/a&gt; yesterday:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Is there any way like the below in puppet code we can use:&lt;/p&gt;
+  &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$var=‘run command locally on agent, if $?=0 echo “present”, else echo “absent”’
+if $var == present {
+  # my code
+} else {
+  # something else
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+  &lt;p&gt;(by user &lt;a href=&quot;https://app.slack.com/team/URGFPBS0N&quot;&gt;IlovPuppet&lt;/a&gt;, edited for presentation)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;There are a number of reasons why this question comes up.
+First is likely that folks are not aware of the options available at all.
+Then, sometimes, the common options (like custom facts) just don’t cut it for security or performance reasons.
+Last but not least, organisational and technical circumstances can make one option more appealing than others.&lt;/p&gt;
+
+&lt;p&gt;From my answer there, I wrote up a more detailed exposition here.
+Based on the specifics of your situation,
+there are several different options to solve this,
+described in detail below:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;make the decision explicit&lt;/li&gt;
+  &lt;li&gt;a &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt; function call&lt;/li&gt;
+  &lt;li&gt;using &lt;code class=&quot;highlighter-rouge&quot;&gt;onlyif&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt; on an &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; resource&lt;/li&gt;
+  &lt;li&gt;a custom fact&lt;/li&gt;
+  &lt;li&gt;a custom resource&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;explicit-decisions&quot;&gt;Explicit Decisions&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Puppet shines when we can make our configuration decisions explicit.
+Make the dynamic decision a static configuration and ensure that whatever is producing the different states is also managed by puppet.
+Having a hard look at what the command is trying to decide and whether this couldn’t be enforced instead of queried can save complexity.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;A simple example from my past as a technical consultant is a client who wanted to base a configuration decision off whether or not a particular package was installed on a workstation. In this particular case it turned out that installing that additional package was not very expensive (compared to coding up a dynamic solution), so we just rolled out the package to everyone and removed another thing that was different across the fleet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use it …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;if you can take control of the source of your question.&lt;/li&gt;
+  &lt;li&gt;if you can key off another configuration instead of querying active system state.&lt;/li&gt;
+  &lt;li&gt;if you can make your general configuration easier by removing a source of variation.&lt;/li&gt;
+  &lt;li&gt;if the query code is difficult and/or unreliable.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t use it if …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the input is truly dynamic.&lt;/li&gt;
+  &lt;li&gt;the configuration is outside of your organisational scope (but try talking to the other team first!).&lt;/li&gt;
+  &lt;li&gt;the computed value is sensitive and should not be transmitted or stored outside the node.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;deferred&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt; function computes a value on the agent everytime the catalog is executed and uses the value immediately in the catalog.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://forge.puppet.com/puppet/vault_lookup&quot;&gt;puppet/vault_lookup&lt;/a&gt; module shows how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt; with its &lt;code class=&quot;highlighter-rouge&quot;&gt;vault_lookup::lookup&lt;/code&gt; function:&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;Deferred&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'vault_lookup::lookup'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;secret/test&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'https://vault.hostname:8200'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;notify&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;example&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;message&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$d&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(from &lt;a href=&quot;https://github.com/voxpupuli/puppet-vault_lookup#usage&quot;&gt;voxpupuli/puppet-vault_lookup&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use it …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;for values specific to one or a few agents, for which managing via Hiera would be cumbersome.&lt;/li&gt;
+  &lt;li&gt;for sensitive values that should not be exposed outside the individual agent.&lt;/li&gt;
+  &lt;li&gt;for setting properties on resources.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t use it if …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you need to change &lt;strong&gt;which&lt;/strong&gt; resources are managed.&lt;/li&gt;
+  &lt;li&gt;you need the value in PE Console for classification or reporting.&lt;/li&gt;
+  &lt;li&gt;the computed value depends on resources managed earlier in the catalog.&lt;/li&gt;
+  &lt;li&gt;a simpler solution (see above) works.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://puppet.com/docs/puppet/latest/write_a_puppet_function_to_store_secrets.html&quot;&gt;Write a Puppet function to store secrets&lt;/a&gt;: the original use-case for &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://puppet-on-the-edge.blogspot.com/2018/10/the-topic-is-deferred.html&quot;&gt;The Topic is Deferred&lt;/a&gt;: blogpost with hints and tricks how to use &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://binford2k.com/2019/11/12/deferred-functions/&quot;&gt;Agent Side Functions in Puppet 6&lt;/a&gt;: technical deep-dive on how &lt;code class=&quot;highlighter-rouge&quot;&gt;Deferred&lt;/code&gt; works&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.hashicorp.com/resources/agent-side-lookups-with-hashicorp-vault-puppet-6&quot;&gt;HashiCorp Vault 🧡 Puppet6 webinar&lt;/a&gt;: deferred functions in Puppet 6, which unlocks new authentication methods and workflows for HashiCorp Vault + Puppet setups.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;exec-resources&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; resource has attributes to dynamically decide to run the managed command or not.
+By passing a command to &lt;code class=&quot;highlighter-rouge&quot;&gt;onlyif&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;unless&lt;/code&gt; the command is executed &lt;em&gt;only if&lt;/em&gt; or &lt;em&gt;unless&lt;/em&gt; the condition successfully executes.
+Use &lt;code class=&quot;highlighter-rouge&quot;&gt;refreshonly&lt;/code&gt; to react to another resource being changed.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;mysql module&lt;/a&gt; has this &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt; resource to clean up after installation. This should never run after &lt;code class=&quot;highlighter-rouge&quot;&gt;${secret_file}&lt;/code&gt; has been dealt with.&lt;/p&gt;
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;exec&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'remove install pass'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;command&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$rm_pass_cmd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;onlyif&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;test -f &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;${secret_file}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;path&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;(from &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/blob/312aca80ba7699ab37f9051d871aac2e05b217b3/manifests/server/root_password.pp#L20-L24&quot;&gt;root_password.pp&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use it for …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;running one-off commands on a condition.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t use it if …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;an exec is not a good fit for your problem.&lt;/li&gt;
+  &lt;li&gt;the condition is very complex or timeconsuming.&lt;/li&gt;
+  &lt;li&gt;the condition has to be repeated often.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://puppet.com/docs/puppet/latest/types/exec.html&quot;&gt;Resource Type: &lt;code class=&quot;highlighter-rouge&quot;&gt;exec&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;custom-facts&quot;&gt;Custom Facts&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Custom facts are distributed to Puppet clients and are available for use in manifests and templates,
+just like any other fact is.
+They can be used to write conditional expressions based on site-specific data that isn’t available via Facter.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The apt module has a few &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt#facts&quot;&gt;custom facts&lt;/a&gt;. The &lt;code class=&quot;highlighter-rouge&quot;&gt;apt_update_last_success&lt;/code&gt; fact is used in &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/blob/master/manifests/update.pp&quot;&gt;update.pp&lt;/a&gt; to decide whether or not it is necessary to update apt caches depending on the various configurations specified.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use it …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;when you need to centrally collect and evaluate the values.&lt;/li&gt;
+  &lt;li&gt;when you want to get the value from all your nodes.&lt;/li&gt;
+  &lt;li&gt;to change the set of resources and classes included for each node.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t use it if …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;the computed value is sensitive and should not be transmitted or stored outside the node.&lt;/li&gt;
+  &lt;li&gt;a simpler solution (see above) works.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://puppet.com/docs/puppet/latest/fact_overview.html&quot;&gt;Custom facts&lt;/a&gt;: the current puppet documentation&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://puppet.com/docs/puppet/latest/custom_facts.html&quot;&gt;Custom facts walkthrough&lt;/a&gt;: how to write your own facts&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://glennsarti.github.io/blog/puppet-ruby-facts/&quot;&gt;Starting out with Puppet custom facts&lt;/a&gt;: a quick start to converting external facts to ruby custom facts on Windows&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;custom-resources&quot;&gt;Custom Resources&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;What is it?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;With a native ruby plugin you can fully take control of how puppet manages a resource. Through this you get fine-grained control over reporting and enforcing system state through puppet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Example&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;mysql module&lt;/a&gt; contains custom types and providers to control databases, users and grants.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Note that the mysql module is still using the low-level API. Using the PDK and the Resource API, programming types and providers has become a lot easier as of late. Check out the “Further Reading” section below.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;Use it for …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;things that can be modeled as a puppet resource.&lt;/li&gt;
+  &lt;li&gt;fine-grained control.&lt;/li&gt;
+  &lt;li&gt;full integration into the puppet tooling.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Don’t use it if …&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you do not want to code ruby.&lt;/li&gt;
+  &lt;li&gt;a simpler solution (see above) works.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Further Reading&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://puppet.com/docs/puppet/latest/custom_resources.html&quot;&gt;Custom Resources&lt;/a&gt;: main documentation on writing custom resources.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-resource_api/tree/master/docs&quot;&gt;HUE hands on lab&lt;/a&gt;: hands-on lab for a custom remote resource interacting with a API.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;final-words&quot;&gt;Final Words&lt;/h2&gt;
+
+&lt;p&gt;To summarize, Puppet provides you with a number of alternatives to make your configuration smarter.
+Thanks to IluvPuppet for the great question, and &lt;a href=&quot;https://github.com/hpcprofessional&quot;&gt;Paul Anderson&lt;/a&gt; and Paul Reed for reviewing and feedback.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="modules" /><category term="puppetserver" /><category term="custom facts" /><category term="custom resources" /><category term="deferred" /><summary type="html">This question was posted on the Puppet Community Slack yesterday:</summary></entry><entry><title type="html">13th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update.html" rel="alternate" type="text/html" title="13th March 2020: IAC Team Status Update" /><published>2020-03-13T00:00:00+00:00</published><updated>2020-03-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/13/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
@@ -1088,133 +1308,4 @@ Notice: Applied catalog in 9.23 seconds
 &lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
 
 &lt;p&gt;Hooray! We’ve written a functional implementation of a type and provider for an SMB Share using the PowerShell gem and manager!
-Next time, we’re going to expand on our start here to make sure we are able to fully manage the properties and access of an SMB share, so stay tuned!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="walkthrough" /><category term="PowerShell" /><category term="modules" /><category term="Windows" /><category term="types and providers" /><summary type="html">Part One: Basic Functionality</summary></entry><entry><title type="html">Introduction to the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team.html" rel="alternate" type="text/html" title="Introduction to the IAC Team" /><published>2020-01-29T00:00:00+00:00</published><updated>2020-01-29T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/basics/2020/01/29/infrastructure-automation-content-team.html">&lt;h2 id=&quot;workflow-of-the-puppet-iac-team&quot;&gt;Workflow of the Puppet IAC Team&lt;/h2&gt;
-
-&lt;p&gt;During a recent &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; event (more about that later!) a question was asked by one of the Puppet Community’s many talented and inquisitive folk.
-Usually, in &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt;, we are used to fielding questions from folks who are trying to enhance functionality in a module, determine the best way to test or maybe they want to know how to get started to write a new module from scratch.
-This one was a little bit different, ragnarkon asked, “What is the module development lifecycle like in Puppet?”, along with other questions about our tech stack, work priorization processes and my favourite, “Who names the conference rooms @ Puppet?  ’cause they’re awesome”.
-I hope I answered that particular community member’s questions, but it prompted a discussion amongst the team about whether the people within the Puppet Community know who we are, what we do, how we can help you, and how to reach us if you need that help.&lt;/p&gt;
-
-&lt;h2 id=&quot;who-are-we&quot;&gt;Who are we?&lt;/h2&gt;
-
-&lt;p&gt;Firstly, an introduction - the Infrastructure Automation Content (IAC) team spans across 3 time zones: from East to West we have three members in Timișoara, Romania, six members in Belfast, Northern Ireland (including our Engineering Manager) and finally, one man and his dog holding the fort in St. Louis, Missouri, USA.
-We also work closely with Product Management teams both in our Portland, Oregon HQ and Belfast.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-do-we-do&quot;&gt;What do we do?&lt;/h2&gt;
-
-&lt;p&gt;The IAC team is responsible for developing and maintaining tooling that contributors to Puppet can use to enhance existing or add new modules to Puppet.
-We are also responsible for reviewing the submissions from the community, assisting in development and testing efforts (if required), and releasing new versions of modules to the Forge.&lt;/p&gt;
-
-&lt;h2 id=&quot;workflow-and-processes&quot;&gt;Workflow and Processes&lt;/h2&gt;
-
-&lt;h3 id=&quot;work-prioritization-ticketing-and-development&quot;&gt;Work Prioritization, Ticketing and Development&lt;/h3&gt;
-
-&lt;p&gt;We follow the KanBan model of work prioritization and categorisation.
-We have chosen &lt;a href=&quot;https://tickets.puppetlabs.com/projects/IAC/summary&quot;&gt;JIRA&lt;/a&gt; as our ticketing system. Within JIRA, the IAC team has a number of epics which we categorise work under.
-A few examples of day-to-day epics we interact with a lot:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Customer Escalations&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-5&quot;&gt;Triage&lt;/a&gt; Tasks (more about Triage later!)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We also have Epics for larger pieces of work, for example:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-42&quot;&gt;Cloud Platform Provisioning in Litmus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-158&quot;&gt;Automated Gem &amp;amp; Testing Release&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We also follow the AGILE methodology of having a stand-up meeting daily, where all members describe what they have been working on since the last meeting, and what they will work on until the next meeting.
-It’s also during this meeting that we can attempt to unblock individuals who are stuck - either during the stand-up or by assigning time at some stage after. We’re in constant communication throughout the day, either face-to-face or over Slack.
-We can also jump into meeting rooms / booths and chat to our colleagues in other time zones and screen share.
-So it’s never the case that we’re stuck for very long - we all like to have each other’s backs and help at short notice.&lt;/p&gt;
-
-&lt;p&gt;As mentioned above, there is constant interaction with our fellow team members throughout the process.
-We’re constantly asking for or providing feedback, assisting in testing efforts, or pairing up for more tricky issues.
-We tend to use Confluence as a first port of call for our documentation.
-If the note or document is to become public facing, it will be ported somewhere visible by all.
-Github PRs are where we do most of our code reviews from other team members or Puppet Community contributors.&lt;/p&gt;
-
-&lt;h3 id=&quot;testing-and-ci-process&quot;&gt;Testing and CI Process&lt;/h3&gt;
-
-&lt;p&gt;For testing effort, we like to have as much automated coverage as possible and have mechanisms in place to display the CI test results for each PR.
-Sometimes, as part of the planning documentation we may need to outline a test plan more formally; but this should ultimately be translated in to &lt;a href=&quot;https://relishapp.com/rspec&quot;&gt;RSpec&lt;/a&gt; unit and acceptance tests.
-This means that on every code change and PR, we are quickly be alerted to breaking changes.&lt;/p&gt;
-
-&lt;h3 id=&quot;prioritization-of-work&quot;&gt;Prioritization of Work&lt;/h3&gt;
-
-&lt;p&gt;Work is prioritised by a number of factors.
-Product Management will have an influence over a lot of the work we undertake and they have many factors to consider.
-One key component that drives work prioritization is feedback from the IAC team itself.
-We like to be very interactive with the Puppet Community contributors and understand what they require.
-We will often bring feedback from the community to our stand-ups and more global meetings with Engineering and Product Management.
-Through this feedback we’re trying to ensure that the user experience is as close to the requirements of the people using and contributing to the product.&lt;/p&gt;
-
-&lt;p&gt;One valuable feedback vector is through the weekly &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; sessions.
-Once a week, members from the IAC team will down tools and be available to any queries coming in via Slack or the video conferencing session from Puppet Community contributors.
-If you need help with module development or testing, or you want to determine the best way to do something with a module on the Forge, then this is the place to get that help and send that feedback.
-Quite often, if a limitation or issue in a module has been highlighted here, we will bring this up in our next stand-up meeting, raise a JIRA ticket and ensure that it gets prioritization for resources.
-There’s no better feedback than the people using actively participating in the module ecosystem and we like to make the most of this valuable resource.&lt;/p&gt;
-
-&lt;h3 id=&quot;types-of-work&quot;&gt;Types of Work&lt;/h3&gt;
-
-&lt;p&gt;Our number one remit and focus is to ensure that those who want to contribute to the Forge have as frictionless an experience as possible.
-That spans everything from a module’s lifespan, through initial design / prototyping, to version 1.0.0, right up to the point where it’s a veteran module with 100,000s of downloads and a wide and active contributor base.
-Our goal is to develop the tools and processes to ensure that is possible.&lt;/p&gt;
-
-&lt;p&gt;One very important aspect of our job is the Content Triage rotation.
-Two members of the IAC team will take it in turns to review community contributors to Puppet Forge modules.
-We’re there to ensure that the change meets the quality standard required but more important, we’re there to help contributors understand how to do that.
-We’re very fortunate to receive lots of high quality contributions or those willing to act upon feedback.
-The goal is to ensure that the quality of the Puppet modules remains high, whilst constantly being enhanced and reactive to the needs of the community.&lt;/p&gt;
-
-&lt;h3 id=&quot;tech-stack&quot;&gt;Tech Stack&lt;/h3&gt;
-
-&lt;p&gt;Some folks may be curious as to what we use day-to-day to get the job done.
-There is quite a large amount of software, platforms and tools we use, some you’ll likely have heard of and some internal proprietary tools.
-For internal tooling, we’re in a constant effort to evolve them and make them available for use by the Puppet Community.
-We have started a collection on the &lt;a href=&quot;/tools/index.html&quot;&gt;tools&lt;/a&gt; page.&lt;/p&gt;
-
-&lt;h4 id=&quot;development-and-debugging&quot;&gt;Development and Debugging&lt;/h4&gt;
-
-&lt;h5 id=&quot;ides&quot;&gt;IDEs&lt;/h5&gt;
-
-&lt;p&gt;For the most part, the IDE of choice for us is VSCode.
-It has support for Puppet manifests and more via &lt;a href=&quot;https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode&quot;&gt;the puppet extension&lt;/a&gt;.
-Some of the team also use RubyMine and Sublime Text can also be found on a lot of laptops.
-The &lt;a href=&quot;https://rubygems.org/gems/pry/&quot;&gt;Ruby gem pry&lt;/a&gt; is a heavily utilised one.
-This has proven an invaluable tool for debugging during development or investigation when reproducing issues reported to us.&lt;/p&gt;
-
-&lt;h5 id=&quot;pdk&quot;&gt;PDK&lt;/h5&gt;
-
-&lt;p&gt;Some of you in the Puppet Community will be aware of the Puppet Development Kit (PDK) already.
-From the IAC team’s use cases it is a very useful tool that allows us to keep modules on the Forge up-to-date with the necessary configuration / metadata changes.
-It also allows us to rapidly prototype or develop new modules should someone from the Puppet Community require help.&lt;/p&gt;
-
-&lt;h5 id=&quot;pdksync&quot;&gt;PDKSync&lt;/h5&gt;
-
-&lt;p&gt;PDKSync is an excellent tool we use to perform and test bulk changes to many modules.
-It also allows us to push PRs to Github so we can quickly deploy these changes.&lt;/p&gt;
-
-&lt;h4 id=&quot;testing-and-ci-tools&quot;&gt;Testing and CI Tools&lt;/h4&gt;
-
-&lt;h5 id=&quot;litmus&quot;&gt;Litmus&lt;/h5&gt;
-
-&lt;p&gt;Litmus! Litmus is a fantastic resource and probably the most valuable productivity tools that we use day-to-day.
-I encourage you to check out the &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Wiki for Litmus&lt;/a&gt; if you’re thinking of becoming a module contributor.
-Litmus is a tool that allows us to quickly set up, execute and tear down a test environment for our modules.
-You can provision your test environment using Docker or Vagrant.
-For the IAC team, we have access to vmpooler, a proprietary tool/API that spins up and tears down virtual machines in our vSphere infrastructure.
-In as little as a few seconds, I can have an environment ready to run acceptance tests on all compatible OSs for a given module, or I can have an environment to replicate a specific customer environment (e.g. on Windows Server 2012 R2, with the Scheduled Task module, I was seeing an issue with…).&lt;/p&gt;
-
-&lt;h5 id=&quot;rspec-and-puppet-rspec&quot;&gt;RSpec and Puppet RSpec&lt;/h5&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://relishapp.com/rspec&quot;&gt;RSpec&lt;/a&gt; is the test framework we use to write and execute our unit and acceptance tests.
-However, we also have the &lt;a href=&quot;https://rspec-puppet.com/&quot;&gt;RSpec-Puppet gem&lt;/a&gt; which provides a lot of helper methods to make life easier when testing modules.&lt;/p&gt;
-
-&lt;h5 id=&quot;ci-tools&quot;&gt;CI Tools&lt;/h5&gt;
-
-&lt;p&gt;We use a number of CI automation servers: Jenkins, Travis, AppVeyor, and most recently Github Actions.
-There are different requirements for the variety of modules we have either authored, support, or both, and we are constantly evaluating the best tools / platform for our use cases and those of the Puppet Community.
-CI executed test runs from PRs are available from the PR itself - this allows us to quickly determine if there is an issue and drill down in to more specific test log output if we need to, regardless of the platform.&lt;/p&gt;</content><author><name>criskoduck</name></author><category term="process" /><category term="tooling" /><category term="personal" /><summary type="html">Workflow of the Puppet IAC Team</summary></entry></feed>
+Next time, we’re going to expand on our start here to make sure we are able to fully manage the properties and access of an SMB share, so stay tuned!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="walkthrough" /><category term="PowerShell" /><category term="modules" /><category term="Windows" /><category term="types and providers" /><summary type="html">Part One: Basic Functionality</summary></entry></feed>

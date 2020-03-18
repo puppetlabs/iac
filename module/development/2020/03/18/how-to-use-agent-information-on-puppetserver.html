@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>How to use agent-side information on the puppetserver | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="How to use agent-side information on the puppetserver" />
+<meta name="author" content="dev_el_ops" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This question was posted on the Puppet Community Slack yesterday:" />
+<meta property="og:description" content="This question was posted on the Puppet Community Slack yesterday:" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-18T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"How to use agent-side information on the puppetserver","dateModified":"2020-03-18T00:00:00+00:00","datePublished":"2020-03-18T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html"},"author":{"@type":"Person","name":"dev_el_ops"},"description":"This question was posted on the Puppet Community Slack yesterday:","url":"https://puppetlabs.github.io/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">How to use agent-side information on the puppetserver</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-03-18T00:00:00+00:00" itemprop="datePublished">Mar 18, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">dev_el_ops</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This question was posted on the <a href="https://slack.puppet.com/">Puppet Community Slack</a> yesterday:</p>
+
+<blockquote>
+  <p>Is there any way like the below in puppet code we can use:</p>
+  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$var=‘run command locally on agent, if $?=0 echo “present”, else echo “absent”’
+if $var == present {
+  # my code
+} else {
+  # something else
+}
+</code></pre></div>  </div>
+  <p>(by user <a href="https://app.slack.com/team/URGFPBS0N">IlovPuppet</a>, edited for presentation)</p>
+</blockquote>
+
+<p>There are a number of reasons why this question comes up.
+First is likely that folks are not aware of the options available at all.
+Then, sometimes, the common options (like custom facts) just don’t cut it for security or performance reasons.
+Last but not least, organisational and technical circumstances can make one option more appealing than others.</p>
+
+<p>From my answer there, I wrote up a more detailed exposition here.
+Based on the specifics of your situation,
+there are several different options to solve this,
+described in detail below:</p>
+
+<ul>
+  <li>make the decision explicit</li>
+  <li>a <code class="highlighter-rouge">Deferred</code> function call</li>
+  <li>using <code class="highlighter-rouge">onlyif</code> or <code class="highlighter-rouge">unless</code> on an <code class="highlighter-rouge">exec</code> resource</li>
+  <li>a custom fact</li>
+  <li>a custom resource</li>
+</ul>
+
+<h2 id="explicit-decisions">Explicit Decisions</h2>
+
+<p><strong>What is it?</strong></p>
+
+<p>Puppet shines when we can make our configuration decisions explicit.
+Make the dynamic decision a static configuration and ensure that whatever is producing the different states is also managed by puppet.
+Having a hard look at what the command is trying to decide and whether this couldn’t be enforced instead of queried can save complexity.</p>
+
+<p><strong>Example</strong></p>
+
+<p>A simple example from my past as a technical consultant is a client who wanted to base a configuration decision off whether or not a particular package was installed on a workstation. In this particular case it turned out that installing that additional package was not very expensive (compared to coding up a dynamic solution), so we just rolled out the package to everyone and removed another thing that was different across the fleet.</p>
+
+<p><strong>Use it …</strong></p>
+
+<ul>
+  <li>if you can take control of the source of your question.</li>
+  <li>if you can key off another configuration instead of querying active system state.</li>
+  <li>if you can make your general configuration easier by removing a source of variation.</li>
+  <li>if the query code is difficult and/or unreliable.</li>
+</ul>
+
+<p><strong>Don’t use it if …</strong></p>
+
+<ul>
+  <li>the input is truly dynamic.</li>
+  <li>the configuration is outside of your organisational scope (but try talking to the other team first!).</li>
+  <li>the computed value is sensitive and should not be transmitted or stored outside the node.</li>
+</ul>
+
+<h2 id="deferred"><code class="highlighter-rouge">Deferred</code></h2>
+
+<p><strong>What is it?</strong></p>
+
+<p>The <code class="highlighter-rouge">Deferred</code> function computes a value on the agent everytime the catalog is executed and uses the value immediately in the catalog.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The <a href="https://forge.puppet.com/puppet/vault_lookup">puppet/vault_lookup</a> module shows how to use <code class="highlighter-rouge">Deferred</code> with its <code class="highlighter-rouge">vault_lookup::lookup</code> function:</p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$d</span> <span class="o">=</span> <span class="nf">Deferred</span><span class="p">(</span><span class="s1">'vault_lookup::lookup'</span><span class="p">,</span> <span class="p">[</span><span class="s2">"secret/test"</span><span class="p">,</span> <span class="s1">'https://vault.hostname:8200'</span><span class="p">])</span>
+
+<span class="k">node</span> <span class="k">default</span> <span class="p">{</span>
+  <span class="n">notify</span> <span class="p">{</span> <span class="n">example</span> <span class="p">:</span>
+    <span class="py">message</span> <span class="p">=&gt;</span> <span class="nv">$d</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>(from <a href="https://github.com/voxpupuli/puppet-vault_lookup#usage">voxpupuli/puppet-vault_lookup</a>)</p>
+
+<p><strong>Use it …</strong></p>
+
+<ul>
+  <li>for values specific to one or a few agents, for which managing via Hiera would be cumbersome.</li>
+  <li>for sensitive values that should not be exposed outside the individual agent.</li>
+  <li>for setting properties on resources.</li>
+</ul>
+
+<p><strong>Don’t use it if …</strong></p>
+
+<ul>
+  <li>you need to change <strong>which</strong> resources are managed.</li>
+  <li>you need the value in PE Console for classification or reporting.</li>
+  <li>the computed value depends on resources managed earlier in the catalog.</li>
+  <li>a simpler solution (see above) works.</li>
+</ul>
+
+<p><strong>Further Reading</strong></p>
+
+<ul>
+  <li><a href="https://puppet.com/docs/puppet/latest/write_a_puppet_function_to_store_secrets.html">Write a Puppet function to store secrets</a>: the original use-case for <code class="highlighter-rouge">Deferred</code></li>
+  <li><a href="http://puppet-on-the-edge.blogspot.com/2018/10/the-topic-is-deferred.html">The Topic is Deferred</a>: blogpost with hints and tricks how to use <code class="highlighter-rouge">Deferred</code></li>
+  <li><a href="https://binford2k.com/2019/11/12/deferred-functions/">Agent Side Functions in Puppet 6</a>: technical deep-dive on how <code class="highlighter-rouge">Deferred</code> works</li>
+  <li><a href="https://www.hashicorp.com/resources/agent-side-lookups-with-hashicorp-vault-puppet-6">HashiCorp Vault 🧡 Puppet6 webinar</a>: deferred functions in Puppet 6, which unlocks new authentication methods and workflows for HashiCorp Vault + Puppet setups.</li>
+</ul>
+
+<h2 id="exec-resources"><code class="highlighter-rouge">exec</code> resources</h2>
+
+<p><strong>What is it?</strong></p>
+
+<p>The <code class="highlighter-rouge">exec</code> resource has attributes to dynamically decide to run the managed command or not.
+By passing a command to <code class="highlighter-rouge">onlyif</code> or <code class="highlighter-rouge">unless</code> the command is executed <em>only if</em> or <em>unless</em> the condition successfully executes.
+Use <code class="highlighter-rouge">refreshonly</code> to react to another resource being changed.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The <a href="https://forge.puppet.com/puppetlabs/mysql">mysql module</a> has this <code class="highlighter-rouge">exec</code> resource to clean up after installation. This should never run after <code class="highlighter-rouge">${secret_file}</code> has been dealt with.</p>
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">exec</span> <span class="p">{</span> <span class="s1">'remove install pass'</span><span class="p">:</span>
+  <span class="py">command</span> <span class="p">=&gt;</span> <span class="nv">$rm_pass_cmd</span><span class="p">,</span>
+  <span class="py">onlyif</span>  <span class="p">=&gt;</span> <span class="s2">"test -f </span><span class="nv">${secret_file}</span><span class="s2">"</span><span class="p">,</span>
+  <span class="py">path</span>    <span class="p">=&gt;</span> <span class="s1">'/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin'</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>(from <a href="https://github.com/puppetlabs/puppetlabs-mysql/blob/312aca80ba7699ab37f9051d871aac2e05b217b3/manifests/server/root_password.pp#L20-L24">root_password.pp</a>)</p>
+
+<p><strong>Use it for …</strong></p>
+
+<ul>
+  <li>running one-off commands on a condition.</li>
+</ul>
+
+<p><strong>Don’t use it if …</strong></p>
+
+<ul>
+  <li>an exec is not a good fit for your problem.</li>
+  <li>the condition is very complex or timeconsuming.</li>
+  <li>the condition has to be repeated often.</li>
+</ul>
+
+<p><strong>Further Reading</strong></p>
+
+<ul>
+  <li><a href="https://puppet.com/docs/puppet/latest/types/exec.html">Resource Type: <code class="highlighter-rouge">exec</code></a></li>
+</ul>
+
+<h2 id="custom-facts">Custom Facts</h2>
+
+<p><strong>What is it?</strong></p>
+
+<p>Custom facts are distributed to Puppet clients and are available for use in manifests and templates,
+just like any other fact is.
+They can be used to write conditional expressions based on site-specific data that isn’t available via Facter.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The apt module has a few <a href="https://github.com/puppetlabs/puppetlabs-apt#facts">custom facts</a>. The <code class="highlighter-rouge">apt_update_last_success</code> fact is used in <a href="https://github.com/puppetlabs/puppetlabs-apt/blob/master/manifests/update.pp">update.pp</a> to decide whether or not it is necessary to update apt caches depending on the various configurations specified.</p>
+
+<p><strong>Use it …</strong></p>
+
+<ul>
+  <li>when you need to centrally collect and evaluate the values.</li>
+  <li>when you want to get the value from all your nodes.</li>
+  <li>to change the set of resources and classes included for each node.</li>
+</ul>
+
+<p><strong>Don’t use it if …</strong></p>
+
+<ul>
+  <li>the computed value is sensitive and should not be transmitted or stored outside the node.</li>
+  <li>a simpler solution (see above) works.</li>
+</ul>
+
+<p><strong>Further Reading</strong></p>
+
+<ul>
+  <li><a href="https://puppet.com/docs/puppet/latest/fact_overview.html">Custom facts</a>: the current puppet documentation</li>
+  <li><a href="https://puppet.com/docs/puppet/latest/custom_facts.html">Custom facts walkthrough</a>: how to write your own facts</li>
+  <li><a href="https://glennsarti.github.io/blog/puppet-ruby-facts/">Starting out with Puppet custom facts</a>: a quick start to converting external facts to ruby custom facts on Windows</li>
+</ul>
+
+<h2 id="custom-resources">Custom Resources</h2>
+
+<p><strong>What is it?</strong></p>
+
+<p>With a native ruby plugin you can fully take control of how puppet manages a resource. Through this you get fine-grained control over reporting and enforcing system state through puppet.</p>
+
+<p><strong>Example</strong></p>
+
+<p>The <a href="https://forge.puppet.com/puppetlabs/mysql">mysql module</a> contains custom types and providers to control databases, users and grants.</p>
+
+<blockquote>
+  <p>Note that the mysql module is still using the low-level API. Using the PDK and the Resource API, programming types and providers has become a lot easier as of late. Check out the “Further Reading” section below.</p>
+</blockquote>
+
+<p><strong>Use it for …</strong></p>
+
+<ul>
+  <li>things that can be modeled as a puppet resource.</li>
+  <li>fine-grained control.</li>
+  <li>full integration into the puppet tooling.</li>
+</ul>
+
+<p><strong>Don’t use it if …</strong></p>
+
+<ul>
+  <li>you do not want to code ruby.</li>
+  <li>a simpler solution (see above) works.</li>
+</ul>
+
+<p><strong>Further Reading</strong></p>
+
+<ul>
+  <li><a href="https://puppet.com/docs/puppet/latest/custom_resources.html">Custom Resources</a>: main documentation on writing custom resources.</li>
+  <li><a href="https://github.com/puppetlabs/puppet-resource_api/tree/master/docs">HUE hands on lab</a>: hands-on lab for a custom remote resource interacting with a API.</li>
+</ul>
+
+<h2 id="final-words">Final Words</h2>
+
+<p>To summarize, Puppet provides you with a number of alternatives to make your configuration smarter.
+Thanks to IluvPuppet for the great question, and <a href="https://github.com/hpcprofessional">Paul Anderson</a> and Paul Reed for reviewing and feedback.</p>
+
+  </div><a class="u-url" href="/iac/module/development/2020/03/18/how-to-use-agent-information-on-puppetserver.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia-content@puppet.com">ia-content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
