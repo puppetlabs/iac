@@ -40,7 +40,7 @@ Over the last week we have released:
 ## Facter 4 Testing
 
 Tested our modules with Facter 4 using pdksync.
-Execept apache module all modules passed Facter 4 testing.
+Except for the Apache module, all modules passed Facter 4 testing.
 (apache failed because of a custom fact in https://github.com/gentoo/puppet-portage.git).
 Thanks alot to [Florin Dragos](https://github.com/florindragos), [Bogdan Irimie](https://github.com/IrimieBogdan), [Oana Tanasoiu](https://github.com/oanatmaria), [Sebastian Miclea](https://github.com/sebastian-miclea), [Gheorghe Popescu](https://github.com/gimmyxd), [Andrei Filipovici](https://github.com/Filipovici-Andrei) for all the help on module testing and the fixes.
 
