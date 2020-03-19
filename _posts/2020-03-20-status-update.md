@@ -72,7 +72,7 @@ Check out [the ticket](https://tickets.puppetlabs.com/browse/IAC-615) if you’r
 ## Customer Escalations
 
 Over the past week we have closed out an issue on the [puppetlabs-stdlib](https://github.com/puppetlabs/puppetlabs-stdlib) module.
-As a result of this ticket [IAC-547](https://tickets.puppetlabs.com/browse/IAC-547) we have decided to remove strftime from stdlib as it has already been deprecated and superseded by a function within the Puppet agent.
+As a result of [this ticket](https://tickets.puppetlabs.com/browse/IAC-547) we have decided to remove strftime from stdlib as it has already been deprecated and superseded by a function within the Puppet agent.
 
 ## PowerShell podcast
 
