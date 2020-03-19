@@ -27,7 +27,7 @@ It may not be smooth for everyone, but the company is doing its best to support 
 
 So far, everyone is well equipped to work remotely to their best.
 
-[Remote Working](/iac/assets/2020-03-20-status-update/remote_working.jpg)
+![Remote Working](/iac/assets/2020-03-20-status-update/remote_working.jpg)
 
 ## Updates to Puppet Modules
 
