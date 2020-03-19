@@ -54,15 +54,19 @@ Kudos on the first RSpec test!
 - [puppetlabs-inifile#387](https://github.com/puppetlabs/puppetlabs-inifile/pull/387): [alexjfisher](https://github.com/alexjfisher) continues his never ending streak of great contributions!
 - [puppetlabs-chocolatey#206](https://github.com/puppetlabs/puppetlabs-chocolatey/pull/206) is a WIP PR put up by [nmaludy](https://github.com/nmaludy) doing the hard and valuable work of adding Bolt tasks to the Chocolatey module!
 
-We’d like to thank the Agent team for their responsiveness in addressing issues that were causing CI test run failures.
-With so many products spanning so many repositories, even with the best foresight from all parties, there can be unforseen knock on effects from a code change.
+There's been plenty keeping us busy in our CI infrastructure this week: 
+* the Puppet repositories removed unencrypted HTTP access before all tooling upgrades were in place, breaking puppet 5 agent installs in our pipelines.
+
+It was a good lesson how with so many products spanning so many repositories, even with the best foresight from all parties, there can be unforeseen knock on effects from a code change.
 When we discovered the root cause of the issues preventing the Puppet 5 agent installing on some older Linux systems, the Agent team were quick off the mark to address our issues.
+We’d like to thank the Agent team for their responsiveness in addressing issues that were causing CI test run failures.
 Thanks [ciprianbadescu](https://github.com/ciprianbadescu), [lucywyman](https://github.com/lucywyman), beechtom](https://github.com/beechtom), [underscorgan](https://github.com/underscorgan), [e-gris](https://github.com/e-gris), [GabrielNagy](https://github.com/GabrielNagy) and [sarameisburger](https://github.com/sarameisburger)!
-There's been plenty keeping us busy in our CI infrastructure this week: [puppetlabs-ntp#566](https://github.com/puppetlabs/puppetlabs-ntp/pull/566).
 This has been an interesting issue.
-Thanks to [DavidS](https://github.com/DavidS) and [carabasdaniel](https://github.com/carabasdaniel) for their help with [IAC-615](https://tickets.puppetlabs.com/browse/IAC-615).
+
+* the NTP module started failing in travis: [puppetlabs-ntp#566](https://github.com/puppetlabs/puppetlabs-ntp/pull/566).
+[DavidS](https://github.com/DavidS) and [carabasdaniel](https://github.com/carabasdaniel) worked on [IAC-615](https://tickets.puppetlabs.com/browse/IAC-615) and tried to analyse it,
+but the only thing that helped was bumping the build runner to bionic.
 Curiosity will likely get the better of us and we’ll want to know why these failures occurred on xenial.
-For now, we’ve bumped the build runner to bionic.
 Check out [the ticket](https://tickets.puppetlabs.com/browse/IAC-615) if you’re interested or have any ideas.
 
 ## Customer Escalations
