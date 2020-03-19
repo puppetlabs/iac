@@ -18,6 +18,7 @@ The IAC team has been working on a lot of interesting things over the past week.
 Here's a brief overview of what we've been up to:
 
 ## COVID-19
+Read [Puppet's blog: COVID-19](https://puppet.com/blog/covid-19-a-note-for-our-community/) for the official statement.
 Puppet provided remote working for all employees to support COVID-19.
 This precautionary measure has been taken in order to keep everyone healthy and limit the spread of the virus.
 
@@ -25,8 +26,6 @@ The company supports employees by giving them all the essentials to work remotel
 It may not be smooth for everyone, but the company is doing its best to support all the employees during this challenging time.
 
 So far, everyone is well equipped to work remotely to their best.
-
-[COVID-19](https://puppet.com/blog/covid-19-a-note-for-our-community/)
 
 [Remote Working](/iac/assets/2020-03-20-status-update/remote_working.jpg)
 
