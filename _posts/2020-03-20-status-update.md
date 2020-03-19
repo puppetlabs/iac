@@ -38,7 +38,7 @@ Over the last week we have released:
 
 ## Facter 4 Testing
 
-Tested our modules with Facter 4 using pdksync.
+The Ghost team tested our modules with Facter 4 using pdksync.
 Except for the Apache module, all modules passed Facter 4 testing.
 (apache failed because of a custom fact in https://github.com/gentoo/puppet-portage.git).
 Thanks alot to [Florin Dragos](https://github.com/florindragos), [Bogdan Irimie](https://github.com/IrimieBogdan), [Oana Tanasoiu](https://github.com/oanatmaria), [Sebastian Miclea](https://github.com/sebastian-miclea), [Gheorghe Popescu](https://github.com/gimmyxd), [Andrei Filipovici](https://github.com/Filipovici-Andrei) for all the help on module testing and the fixes.
@@ -76,15 +76,13 @@ As a result of [this ticket](https://tickets.puppetlabs.com/browse/IAC-547) we h
 
 ## PowerShell podcast
 
-Many thanks to [Glenn Sarti](https://github.com/glennsarti) and [Michael T Lombardi](https://github.com/michaeltlombardi) for the contribution to PowerShell podcast about puppet.
-
-[PowerScripting Podcast](https://www.youtube.com/watch?v=Xirv6WQFmSs&feature=emb_logo)
+[Glenn Sarti](https://github.com/glennsarti) and [Michael T Lombardi](https://github.com/michaeltlombardi) appeared on the [PowerScripting Podcast](https://www.youtube.com/watch?v=Xirv6WQFmSs&feature=emb_logo) to talk about puppet and PowerShell.
+Check it out!
 
 ## Community Reports Tool 
 
-Community reports tool is enhanced with an additional feature to report the PRs from tools maintaned by the IAC team.
-
-[Tools PR](https://puppetlabs.github.io/community_management/)
+Community reports tool is enhanced with an additional feature to report the PRs from tools maintained by the IAC team.
+See the [Tools Report](https://puppetlabs.github.io/community_management/).
 
 ## Litmus Progress
 
