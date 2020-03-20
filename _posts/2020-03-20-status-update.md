@@ -27,7 +27,7 @@ It may not be smooth for everyone, but the company is doing its best to support 
 
 So far, everyone is well equipped to work remotely to their best.
 
-![Remote Working](/iac/assets/2020-03-20-status-update/remote_working.jpg)
+![Remote Working]({% link /assets/2020-03-20-status-update/remote_working.jpg %})
 
 ## Updates to Puppet Modules
 
@@ -53,6 +53,8 @@ Kudos on the first RSpec test!
 - [puppetlabs-docker#586](https://github.com/puppetlabs/puppetlabs-docker/pull/586): Many thanks to [fe80](https://github.com/fe80) for this fix!
 - [puppetlabs-inifile#387](https://github.com/puppetlabs/puppetlabs-inifile/pull/387): [alexjfisher](https://github.com/alexjfisher) continues his never ending streak of great contributions!
 - [puppetlabs-chocolatey#206](https://github.com/puppetlabs/puppetlabs-chocolatey/pull/206) is a WIP PR put up by [nmaludy](https://github.com/nmaludy) doing the hard and valuable work of adding Bolt tasks to the Chocolatey module!
+
+## Development Infrastructure
 
 There's been plenty keeping us busy in our CI infrastructure this week: 
 * the Puppet repositories removed unencrypted HTTP access before all tooling upgrades were in place, breaking puppet 5 agent installs in our pipelines.
@@ -92,4 +94,5 @@ On [puppetlabs-docker](https://github.com/puppetlabs/puppetlabs-docker) we have 
 
 We are continously improving the Triage process - one change made recently has proven to be very beneficial. At the end of our rotation, we will hand off to our colleagues who are next up on Triage.
 Historically, this was done using a JIRA ticket, but now we have a living document on [Confluence](https://www.atlassian.com/software/confluence).
+
 We’re also keeping more tightly in sync over video calls - historically, if you were parterned with someone in a different timezone, this was normal - now it’s the case for all of us, whether you’re 5 or 5000 miles apart.
