@@ -34,7 +34,7 @@ So far, everyone is well equipped to work remotely to their best.
 Over the last week we have released:
 
 - [puppetlabs/postgresql](https://forge.puppet.com/puppetlabs/postgresql) (v6.4.0)
-- [puppetlabs/rook](https://forge.puppet.com/puppetlabs/postgresql) (v0.4.0)
+- [puppetlabs/rook](https://forge.puppet.com/puppetlabs/rook) (v0.4.0)
 
 ## Facter 4 Testing
 
