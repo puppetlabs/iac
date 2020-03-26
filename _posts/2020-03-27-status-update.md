@@ -55,13 +55,9 @@ We're working hard right now to pull the prototype across the last couple of mil
 
 On [Litmus](https://github.com/puppetlabs/puppet_litmus), the team had a productive week. We managed to fix some bugs that you can check out [here](https://github.com/puppetlabs/puppet_litmus/pull/271) and [here](https://github.com/puppetlabs/puppet_litmus/pull/272). Also, now we are able to capture more information for 
 [honeycomb](https://github.com/puppetlabs/puppet_litmus/pull/264). 
-<<<<<<< HEAD
 
 For the other modules left to convert to Litmus, work has begun on: [puppetlabs/websphere_application_server](https://forge.puppet.com/puppetlabs/websphere_application_server), [puppetlabs/satellite_pe_tools](https://forge.puppet.com/puppetlabs/satellite_pe_tools) and [puppetlabs-reboot](https://forge.puppet.com/puppetlabs/reboot), with [puppetlabs-ibm_installation_manager](https://forge.puppet.com/puppetlabs/ibm_installation_manager)being the last module on the list! If you’re interested in converting a module to Litmus, feel free to get in touch with us during [Office Hours](https://puppet.com/community/office-hours/).
 
-=======
-We only have two of our core modules left to convert to Litmus. Work has begun on [puppetlabs-reboot](https://forge.puppet.com/puppetlabs/reboot), with [puppetlabs-ibm_installation_manager](https://forge.puppet.com/puppetlabs/ibm_installation_manager) being the last module on the list! If you’re interesting in converting a module to Litmus, feel free to get in touch with us during [Office Hours](https://puppet.com/community/office-hours/)
->>>>>>> 30a9208cfe8872fbcabe5ede359bd91cfe1a2f48
 If you want to learn new things or just improve your skills, our team member, [David Schmitt](https://github.com/DavidS) has a lot of cookies [here](https://www.twitch.tv/dev_el_ops).
 
 ## Welcome to the team !
