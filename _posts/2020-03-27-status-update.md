@@ -42,7 +42,7 @@ We look forward to see your new contributions to Puppet modules.
 
 ## Customer Escalations
 
-This week, the team worked at Panos module. (check out this [PR](https://github.com/puppetlabs/puppetlabs-panos/pull/119) for more details). Our purpose is to unblock testing and progress development.
+This week, the team worked on the Panos module. (check out this [PR](https://github.com/puppetlabs/puppetlabs-panos/pull/119) for more details). Our purpose is to unblock testing and progress development.
 
 ## DSC Rework
 
@@ -60,6 +60,5 @@ If you want to learn new things or just improve your skills, our team member, [D
 ## Welcome to the team !
 
 We started the week with a new team member. His name is Adrian Iurca and ... (error -> no idea yet)
-
 
 
