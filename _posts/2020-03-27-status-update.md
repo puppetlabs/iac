@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "27th March 2020: IAC Team Status Update"
-author: sheenaajay
+author: daianamezdrea
 categories:
   - team
   - status
