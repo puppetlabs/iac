@@ -77,7 +77,7 @@ We started the week with a new team member. His name is Adrian Iurca and he also
 
 ## Happy 5 years work anniversary, David Schmitt !
 
-He has been an essential part of our team's journey and success. We are grateful for the dedication and passion you have shown.Thank you for being with us. Happy Work Anniversary! 
+He has been an essential part of our team's journey and success. We are grateful for the dedication and passion you have shown. Thank you for being with us. Happy Work Anniversary! 
 
 ## Other things
 
