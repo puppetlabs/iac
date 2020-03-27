@@ -74,7 +74,7 @@ The last few of modules where the acceptance tests need converting to Litmus are
 
 If you want to learn new things or just improve your skills, our team member, [David Schmitt](https://github.com/DavidS) has a lot of cookies [here](https://www.twitch.tv/dev_el_ops).
 
-## Welcome to the team !
+## Welcome to the team!
 
 We started the week with a new team member. His name is Adrian Iurca and he also loves pets. We are so excited about having you on our team! Good luck and welcome aboard !
 
