@@ -50,7 +50,7 @@ By popular request, the team started work on the [Palo Alto Networks module](htt
 
 We've started work on re-architecting and revitalizing our DSC builder (check out [IAC-41](https://tickets.puppetlabs.com/browse/IAC-41) for some details!) based on prototype work by [James Pogran](https://github.com/jpogran). In short, this project is aiming to provide a PowerShell module for Puppetizing DSC resources, complete with intellisense, help, and guardrails.
 A bit further out and we'll have a new namespace on the forge - dsc - where we'll publish these automatically generated modules as 1:1 matches for the PowerShell modules with DSC resources on the [PowerShellGallery](https://www.powershellgallery.com/packages)!
-We're working hard right now to pull the prototype across the last couple of miles to get an MVP for testing - if you're interested in beta testing this project with us, please reach out on [slack in #windows](https://slack.puppet.com/) or via [email](ia-content@puppet.com)
+We're working hard right now to pull the prototype across the last couple of miles to get an MVP for testing - if you're interested in beta testing this project with us, please reach out on [slack in #windows](https://slack.puppet.com/).
 
 ## Litmus Progress
 
