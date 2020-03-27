@@ -56,7 +56,7 @@ We're working hard right now to pull the prototype across the last couple of mil
 
 On [Litmus](https://github.com/puppetlabs/puppet_litmus), the team had a productive week. We managed to fix some bugs that you can check out [here](https://github.com/puppetlabs/puppet_litmus/pull/271) and [here](https://github.com/puppetlabs/puppet_litmus/pull/272). Also, now we are able to capture more information for [honeycomb](https://github.com/puppetlabs/puppet_litmus/pull/264). 
 
-For now there are still a couple of modules where the acceptance tests are currently converting to Litmus:
+The last few of modules where the acceptance tests need converting to Litmus are now in progress:
 
 -  [puppetlabs/websphere_application_server](https://forge.puppet.com/puppetlabs/websphere_application_server)
 
