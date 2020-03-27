@@ -78,7 +78,7 @@ If you want to learn new things or just improve your skills, our team member, [D
 
 We started the week with a new team member. His name is Adrian Iurca and he also loves pets. We are so excited about having you on our team! Good luck and welcome aboard !
 
-## Happy 5 years work anniversary, David Schmitt !
+## Happy 5 years work anniversary, David Schmitt!
 
 He has been an essential part of our team's journey and success. We are grateful for the dedication and passion you have shown. Thank you for being with us. Happy Work Anniversary! 
 
