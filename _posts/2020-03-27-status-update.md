@@ -54,7 +54,10 @@ We're working hard right now to pull the prototype across the last couple of mil
 
 ## Litmus Progress
 
-On [Litmus](https://github.com/puppetlabs/puppet_litmus), the team had a productive week. We managed to fix some bugs that you can check out [here](https://github.com/puppetlabs/puppet_litmus/pull/271) and [here](https://github.com/puppetlabs/puppet_litmus/pull/272). Also, now we are able to capture more information for [honeycomb](https://github.com/puppetlabs/puppet_litmus/pull/264). 
+On [Litmus](https://github.com/puppetlabs/puppet_litmus), the team had a productive week.
+We managed to fix some bugs that you can check out [here](https://github.com/puppetlabs/puppet_litmus/pull/271) and [here](https://github.com/puppetlabs/puppet_litmus/pull/272).
+Also, now we are able to capture more information for [honeycomb](https://github.com/puppetlabs/puppet_litmus/pull/264).
+Part of that is due to the new [rspec_honeycomb_formatter](https://github.com/puppetlabs/rspec_honeycomb_formatter) that let's you post all your examples and results to honeycomb.
 
 The last few of modules where the acceptance tests need converting to Litmus are now in progress:
 
