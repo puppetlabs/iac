@@ -44,7 +44,7 @@ We look forward to see your new contributions to Puppet modules.
 
 ## Customer Escalations
 
-This week, the team worked on the Panos module. (check out this [PR](https://github.com/puppetlabs/puppetlabs-panos/pull/119) for more details). Our purpose is to unblock testing and progress development.
+By popular request, the team started work on the [Palo Alto Networks module](https://github.com/puppetlabs/puppetlabs-panos) to add support for virtual systems (check out [the PR](https://github.com/puppetlabs/puppetlabs-panos/pull/119) for more details).
 
 ## DSC Rework
 
