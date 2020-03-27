@@ -33,7 +33,7 @@ Over the last week we have released:
 
 ## Community
 
-Puppet Community was always a part of our team and we always find new interesting things to add in our modules. Thank you, guys ! Here are a few highlights of this week :
+Puppet Community was always a part of our team and we always appreciate the contributions you bring. Thank you, guys ! Here are a few highlights of this week :
 
 - [puppetlabs-postgresql#1156](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1156) by [veninga](https://github.com/veninga)
 - [puppetlabs-firewall#908](https://github.com/puppetlabs/puppetlabs-firewall/pull/908) by [jbro](https://github.com/jbro)
