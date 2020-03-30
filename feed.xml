@@ -1,4 +1,128 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-03-30T02:07:21+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">27th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html" rel="alternate" type="text/html" title="27th March 2020: IAC Team Status Update" /><published>2020-03-27T00:00:00+00:00</published><updated>2020-03-27T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-03-30T20:40:52+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">DSC + Puppet: Incoming!</title><link href="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html" rel="alternate" type="text/html" title="DSC + Puppet: Incoming!" /><published>2020-03-30T00:00:00+00:00</published><updated>2020-03-30T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement</id><content type="html" xml:base="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html">&lt;p&gt;As &lt;a href=&quot;https://github.com/glennsarti&quot;&gt;Glenn&lt;/a&gt; and I alluded to on the &lt;a href=&quot;https://player.fm/series/powerscripting-podcast/episode-334-powerscripting-podcast-glenn-sarti-michael-lombardi&quot;&gt;PowerScripting Podcast&lt;/a&gt;, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;Long story short&lt;/a&gt;, for lots of reasons, our &lt;a href=&quot;https://forge.puppet.com/puppetlabs/dsc&quot;&gt;original implementation&lt;/a&gt; for calling DSC resources from inside Puppet was getting fragile, stale, and maintenance costs kept rising.&lt;/p&gt;
+
+&lt;p&gt;As a stop gap, we put together the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/dsc_lite&quot;&gt;dsc_lite&lt;/a&gt; module for people to use which dropped the guardrails and help in exchange for letting you just get to work if you needed to use it.
+Essentially the thinnest of wrappers over &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;&lt;/a&gt;, requiring you to get those resources onto the target and to pass an arbitrary hash of &lt;em&gt;hopefully&lt;/em&gt; correct properties to the DSC resource;
+no way to tell if you goofed til run time.&lt;/p&gt;
+
+&lt;p&gt;We made &lt;a href=&quot;https://forge.puppet.com/puppetlabs/dsc_lite&quot;&gt;dsc_lite&lt;/a&gt; for the DSC expert, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-dsc_lite/blob/master/README_Tradeoffs.md&quot;&gt;basically&lt;/a&gt;.
+But as time went on and we could no longer use our old builder to update our original module…
+we were leaving a &lt;strong&gt;lot&lt;/strong&gt; of people in the cold with a less than stellar UX.&lt;/p&gt;
+
+&lt;p&gt;So my team decided to change that story.&lt;/p&gt;
+
+&lt;p&gt;We talked it out, &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;planned some stuff&lt;/a&gt; and adopted &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James Pogran&lt;/a&gt;’s INCREDIBLE &lt;a href=&quot;https://github.com/jpogran/PuppetDscBuilder&quot;&gt;prototype work&lt;/a&gt;—he did 80% of the initial work for this, basically all the hardest bits. 💜&lt;/p&gt;
+
+&lt;h2 id=&quot;so-about-this-builder&quot;&gt;So, About This Builder&lt;/h2&gt;
+
+&lt;p&gt;The &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder&quot;&gt;whole thing&lt;/a&gt; is written in and relies on PowerShell, not Ruby.
+The only non-PowerShell dependency is the &lt;a href=&quot;https://puppet.com/docs/pdk/1.x/pdk.html&quot;&gt;Puppet Development Kit&lt;/a&gt; for scaffolding the Puppet module out (no reason to re-implement that!)&lt;/p&gt;
+
+&lt;p&gt;It builds on two important technologies:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://puppet.com/docs/puppet/latest/about_the_resource_api.html&quot;&gt;resource_api&lt;/a&gt; (largely developed by &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David Schmitt&lt;/a&gt;), makes writing Puppet types and providers &lt;em&gt;actually&lt;/em&gt; doable for people like me—the type file is just data, the provider adheres to a simple schema.&lt;/li&gt;
+  &lt;li&gt;The &lt;a href=&quot;https://github.com/puppetlabs/ruby-pwsh/&quot;&gt;ruby-pwsh&lt;/a&gt; gem, based on work by numerous members of the former Windows team at Puppet:
+&lt;a href=&quot;https://github.com/glennsarti&quot;&gt;Glenn Sarti&lt;/a&gt;, &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James Pogran&lt;/a&gt;, &lt;a href=&quot;https://github.com/Iristyle&quot;&gt;Ethan Brown&lt;/a&gt;, &lt;a href=&quot;https://github.com/RandomNoun7&quot;&gt;Bill Hurt&lt;/a&gt;, &lt;a href=&quot;https://github.com/ThoughtCrhyme&quot;&gt;Erick Banks&lt;/a&gt;, &lt;a href=&quot;https://github.com/ferventcoder&quot;&gt;Rob Reynolds&lt;/a&gt;, and me.
+This gem is a library that gives you a &lt;a href=&quot;https://github.com/puppetlabs/ruby-pwsh/blob/master/DESIGN.md&quot;&gt;PowerShell manager&lt;/a&gt;, enabling you to interop between PowerShell &amp;amp; Ruby.
+That lets us take advantage of having a PowerShell host process and not shell out for every command.
+It’s &lt;em&gt;much&lt;/em&gt; faster and paves the way for some really cool improvements.
+It’s also what powers all of our Puppet modules which rely heavily on PowerShell calls!&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;This builder scaffolds a new Puppet module, vendors a PowerShell module from the Gallery (&lt;em&gt;with&lt;/em&gt; dependencies), introspects that module for DSC resources, then generates a Puppet resource_api type and provider for each DSC resource.&lt;/p&gt;
+
+&lt;p&gt;It has a &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/blob/c5d349f51883abcca926a0dc6be465a037dfe957/Get-DscResourceTypeInformation.ps1&quot;&gt;helper function&lt;/a&gt; which desperately needs refactoring but which parses the &lt;a href=&quot;https://mikefrobbins.com/2018/09/28/learning-about-the-powershell-abstract-syntax-tree-ast/&quot;&gt;AST&lt;/a&gt; for the DSC resource’s source file (if it can) to retrieve the reference docs, default values, and whether the parameter is mandatory for get/set operations.
+If it &lt;em&gt;can’t&lt;/em&gt; parse the AST (as with binary/class-based DSC resources in this iteration) it still works–
+it just won’t have the reference docs and will rely on the best info it can find in the output from &lt;a href=&quot;https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/get-dscresource?view=powershell-7&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Get-DscResource&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Okay, &lt;em&gt;fine&lt;/em&gt;, &lt;em&gt;&lt;strong&gt;weeeee&lt;/strong&gt;&lt;/em&gt;, it &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz&quot;&gt;builds a module&lt;/a&gt;, great.
+But what does using it look like?
+I’m glad you asked.
+First of all, here’s what a very basic manifest using a &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz&quot;&gt;puppetized module&lt;/a&gt; looks like–in this case, &lt;a href=&quot;https://www.powershellgallery.com/packages/PowerShellGet/2.2.3&quot;&gt;PowerShellGet&lt;/a&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dsc_psrepository&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Add team shared module folder as a repository'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_name&lt;/span&gt;               &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'foo'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_ensure&lt;/span&gt;             &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;c&quot;&gt;# This location is nonsense, can be any valid folder on your
+&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# machine or in a share, any location the SourceLocation param
+&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# for the DSC resource will accept.
+&lt;/span&gt;    &lt;span class=&quot;py&quot;&gt;dsc_sourcelocation&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'C:\Program Files'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_installationpolicy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;untrusted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dsc_psrepository&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Trust the PowerShell Gallery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_name&lt;/span&gt;               &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'PSGallery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_ensure&lt;/span&gt;             &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;present&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_installationpolicy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;trusted&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;dsc_psmodule&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Ensure Ruby is Manageable via uru'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;dsc_name&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'RubyInstaller'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;dsc_ensure&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;absent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;And, well? It works! It’s idempotent! And, much more interestingly from my perspective, it gives you property-by-property reporting for your DSC resources–it knows what the state of the resource is on your node before it calls the Set method for Invoke-DscResource…&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-03-30-dsc-announcement/property-rep.png&quot; alt=&quot;Puppet run output reading &amp;quot;dsc_sourcelocation changed 'C:\code\temp' to 'C:\Program Files'&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So it can actually tell you &lt;em&gt;what changed&lt;/em&gt; during the run and when.
+In other words, DSC resources in this implementation now report &lt;strong&gt;just&lt;/strong&gt; like any other Puppet resource.&lt;/p&gt;
+
+&lt;p&gt;That’s pretty neat!!&lt;/p&gt;
+
+&lt;p&gt;What else do you get?
+Intellisense and some other awesome magic!
+Thanks to the &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;VSCode extension&lt;/a&gt; maintained by &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James Pogran&lt;/a&gt; and &lt;a href=&quot;https://github.com/glennsarti&quot;&gt;Glenn Sarti&lt;/a&gt;—in this screenshot, the editor is aware of all the parameters you might select, what their type is, and the valid values!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-03-30-dsc-announcement/intellisense.jfif&quot; alt=&quot;Image displaying intellisense capabilities of the VSCode extension where it is predicting which parameters to use and displaying their help information inline in the editor.&quot; /&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;&lt;strong&gt;Aside:&lt;/strong&gt;
+You &lt;em&gt;are&lt;/em&gt; writing your Puppet code in VSCode with the &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;Puppet extension&lt;/a&gt; installed, aren’t you?
+You’re taking advantage of the &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/intellisense&quot;&gt;intellisense&lt;/a&gt;, &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/code-navigation&quot;&gt;code navigation&lt;/a&gt;, &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/linting&quot;&gt;auto linting&lt;/a&gt;, &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/debugging-puppet-code&quot;&gt;debugging&lt;/a&gt;, and the &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/puppet-development-kit&quot;&gt;PDK&lt;/a&gt;, &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/puppet-bolt&quot;&gt;Bolt&lt;/a&gt;, &amp;amp; &lt;a href=&quot;https://puppet-vscode.github.io/docs/features/control-repository&quot;&gt;Control Repo&lt;/a&gt; integrations… right??&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;so-it-works-what-next&quot;&gt;So It Works. What Next?&lt;/h2&gt;
+
+&lt;p&gt;We still have some testing and a host of improvements to make (including probably swapping our template engine out, shout out to &lt;a href=&quot;https://github.com/FriedrichWeinmann&quot;&gt;Fred Weinmann&lt;/a&gt; for the &lt;a href=&quot;https://psframework.org/documentation/documents/psmoduledevelopment/templates.html&quot;&gt;templating engine&lt;/a&gt; in the &lt;a href=&quot;https://github.com/PowershellFrameworkCollective/PSModuleDevelopment&quot;&gt;PSModuleDevelopment&lt;/a&gt; module), but the next big step—and likely the last I’ll be involved with before my paternity leave hits—is &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-648&quot;&gt;turning this build script into a PowerShell module and adding testing to it&lt;/a&gt;.
+It &lt;em&gt;works&lt;/em&gt; as a build script, but it can definitely be improved.
+And, okay, a module on the Gallery is great and all…&lt;/p&gt;
+
+&lt;p&gt;But the &lt;strong&gt;really cool&lt;/strong&gt; end-user magic will arrive in the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-649&quot;&gt;third phase&lt;/a&gt;, where we hope to be able to automatically build and publish Puppet modules that 1:1 wrap PowerShell modules with DSC resources and expose them as Puppet types and providers!&lt;/p&gt;
+
+&lt;p&gt;We’re envisioning a future where not only can you Puppetize any DSC-Resource-having-module you want for yourself, but you can just find all of the modules publicly available on the Gallery already wrapped up and ready for you on the Puppet Forge!&lt;/p&gt;
+
+&lt;h2 id=&quot;caveats-and-warnings&quot;&gt;Caveats and Warnings&lt;/h2&gt;
+
+&lt;p&gt;We’re &lt;em&gt;just&lt;/em&gt; wrapping the underlying DSC resources and making them available to you.
+If there’s a problem &lt;em&gt;calling&lt;/em&gt; the DSC resources from Puppet, we’ll work on it, but if there’s a problem with &lt;em&gt;how&lt;/em&gt; those resources behave, that’s upstream.&lt;/p&gt;
+
+&lt;p&gt;Our team is full of lovely humans who do incredible amounts of work (seven people for &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;&amp;gt;250 PRs/month, ~50 supported modules&lt;/a&gt;, &lt;a href=&quot;https://puppetlabs.github.io/iac/tools/&quot;&gt;over a dozen open source tools&lt;/a&gt;, contributing to dozens more) but we can’t adopt &amp;gt; 300 DSC modules too. 💔&lt;/p&gt;
+
+&lt;p&gt;We’ll also continue to improve the underlying provider and build system, of course, and are excited to get the output modules fully functional for PowerShell 7+ - meaning they’ll be cross-platform compatible if the underlying resources are!
+This first prototype is just 5.1 though.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrapping-up-call-to-action&quot;&gt;Wrapping Up, Call to Action&lt;/h2&gt;
+
+&lt;p&gt;So! If you’re interested in the work so far, you can &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder&quot;&gt;check it out on GitHub&lt;/a&gt;–
+the &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/1&quot;&gt;latest PR&lt;/a&gt; includes functional instructions for testing the new builder or just &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz&quot;&gt;grabbing the test module&lt;/a&gt; and playing with it in your own lab!&lt;/p&gt;
+
+&lt;p&gt;We wanna tighten the loop and ensure we’re solving your problems with this rework because the &lt;em&gt;whole point&lt;/em&gt; is to make your lives easier if you’re using Puppet and DSC.
+We’re here to help you get your configuration under control and free you up to do all the other hard work you have on your backlog.&lt;/p&gt;
+
+&lt;p&gt;With that in mind, we would love your feedback, so if this tickles your interest at all, please &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;email us&lt;/a&gt; (&lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt;) or comment below and let us know:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What are the top three PowerShell modules with DSC resources you’d like to see Puppetized?&lt;/li&gt;
+  &lt;li&gt;Are you interested in joining our beta test group for this ongoing project?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you just wanna keep an eye on things, you can follow the repository on GitHub and the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;parent epic in JIRA&lt;/a&gt;!&lt;/p&gt;
+
+&lt;p&gt;Thanks, folx!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="powershell" /><category term="dsc" /><category term="windows" /><summary type="html">As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.</summary></entry><entry><title type="html">27th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html" rel="alternate" type="text/html" title="27th March 2020: IAC Team Status Update" /><published>2020-03-27T00:00:00+00:00</published><updated>2020-03-27T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;covid-19&quot;&gt;COVID-19&lt;/h2&gt;
@@ -773,102 +897,4 @@ When you add this gem to a project’s Gemfile, it will create a &lt;a href=&quo
 &lt;h2 id=&quot;supported-modules-litmus-conversion&quot;&gt;Supported Modules Litmus Conversion&lt;/h2&gt;
 &lt;p&gt;We’re starting to get to the bottom of the list of modules still to be converted to &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Litmus&lt;/a&gt;. We’re wrapping up on &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-powershell/&quot;&gt;puppetlabs-powershell&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-sqlserver/&quot;&gt;puppetlabs-sqlserver&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vsphere/&quot;&gt;puppetlabs-vsphere&lt;/a&gt;.
 Converting to Litmus makes testing of the modules for both ourselves at Puppet and contributors from the Community, a much easier experience.
-If you’re interested in porting a module to Litmus, feel free to reach out to us during &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; - we’ll be glad to help!&lt;/p&gt;</content><author><name>criskoduck</name></author><category term="module updates" /><category term="tooling" /><category term="personal" /><category term="honeycomb" /><category term="metrics" /><category term="litmus" /><category term="windows" /><category term="powershell" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">Gem Testing with pdksync</title><link href="https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync.html" rel="alternate" type="text/html" title="Gem Testing with pdksync" /><published>2020-02-12T00:00:00+00:00</published><updated>2020-02-12T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync</id><content type="html" xml:base="https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync.html">&lt;h2 id=&quot;introduction&quot;&gt;Introduction&lt;/h2&gt;
-
-&lt;p&gt;pdksync enables you to do a lot more than just pdk update against a set of defined modules. In this blog post we will be going through single or multi gem testing features of pdksync.&lt;/p&gt;
-
-&lt;h2 id=&quot;setup&quot;&gt;Setup&lt;/h2&gt;
-
-&lt;p&gt;Download a fork of the repo, which can be found here &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt;. Or you can install via Rubygems, it can be found here &lt;a href=&quot;https://rubygems.org/gems/pdksync&quot;&gt;pdksync&lt;/a&gt;.
-Install gems by using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;.
-Ensure you have a GITHUB_TOKEN set in your env, if you don’t add it by running &lt;code class=&quot;highlighter-rouge&quot;&gt;export GITHUB_TOKEN=&amp;lt;your github token&amp;gt;&lt;/code&gt;, this is required for authentication.
-Important - Manually edit the list contained in ‘managed_modules.yml’ to ensure it is correct with the modules you wish to update. Please note this is critical as this tool will create PRs against the repos included in this list - you don’t want to run this against a module you aren’t familiar with. Do not proceed to the next step without doing this.
-Run the rake task by using &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle exec rake pdksync&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;part-one-functionality-single-gem-testing&quot;&gt;Part One: Functionality Single Gem Testing&lt;/h2&gt;
-
-&lt;p&gt;pdksync tool comes with the feature to update the Gemfile. Puppet provides a lot of useful gems to access and manage their functionality between modules. This functionality will help user to perform gem testing prior to release. User is given new rake tasks to update SHA/Version/Branch/line in the Gemfile. Then the changes can be committed, PR can be created which will run the acceptance tests in the PR. If all the tests are executing successfully then the user can close the PRS and release the gem.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;h4 id=&quot;note&quot;&gt;Note:&lt;/h4&gt;
-
-  &lt;p&gt;It assumes very limited familiarity with the &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt; and &lt;a href=&quot;https://puppet.com/blog/keep-your-puppet-modules-up-to-date-pdk/&quot;&gt;pdk&lt;/a&gt;&lt;/p&gt;
-
-&lt;/blockquote&gt;
-
-&lt;p&gt;Run gem_file_update against modules&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[:gem_to_test, :gem_line, :gem_sha_finder, :gem_sha_replacer, :gem_version_finder, :gem_version_replacer, :gem_branch_finder, :gem_branch_replacer]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;eg rake to update gem line&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;gem 'puppet_litmus'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; git: 'https://github.com/test/puppet_litmus.git'&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\,&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; branch: 'testbranch'&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;eg rake to update sha&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'20ee04ba1234e9e83eb2ffb5056e23d641c7a018'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'20ee04ba1234e9e83eb2ffb5056e23d641c7a31'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;eg rake to update version&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;= 0.9.0&quot;&lt;/span&gt;, &lt;span class=&quot;s2&quot;&gt;&quot;&amp;lt;= 0.10.0&quot;&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;eg rake to update branch&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:gem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet_litmus'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;''&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'testbranch'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'testbranches'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Below given are the workflows for doing single gem testing with pdksync.&lt;/p&gt;
-
-&lt;p&gt;In Workflow 1 we can clone modules, update the gem file, create the commit, push the changes and create the PR using separate rake tasks.&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; .bundle/gems/
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake git:clone_managed_modules
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'pdksync:gem_file_update[]'&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:create_commit[]'&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:push'&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:create_pr[]'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In Workflow 2 we can clone modules, update the gem file, create the commit, push the changes and create the PR using single rake task&lt;/p&gt;
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Using single rake job
-bundle install --path .bundle/gems/
-bundle exec rake 'gem_testing[]'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Once the verified gem is released we can use pdksync to update the the new version of gem released in the &lt;code class=&quot;highlighter-rouge&quot;&gt;.sync.yaml&lt;/code&gt; file.&lt;/p&gt;
-
-&lt;h2 id=&quot;part-two-functionality-multi-gem-testing&quot;&gt;Part Two: Functionality Multi Gem Testing&lt;/h2&gt;
-
-&lt;p&gt;pdksync tool is extended with the feature to perform multi gem testing (&lt;code class=&quot;highlighter-rouge&quot;&gt;puppet-module-gems&lt;/code&gt;). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nb&quot;&gt;export &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;GEMFURY_TOKEN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&amp;lt;access_token&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Run the following commands to check that everything is working as expected:&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; .bundle/gems/
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;nt&quot;&gt;-T&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:clone_gem[puppet-module-gems]'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Run multigem_file_update against modules:&lt;/p&gt;
-
-&lt;p&gt;Clone gem&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;git:clone_gem[&lt;span class=&quot;s1&quot;&gt;'puppet-module-gems'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Build and Push new gems built to the gemfury account for testing&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:multi_gem_testing[&lt;span class=&quot;s1&quot;&gt;'puppet-module-gems'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'config/info.yml'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'exe/build-gems.rb'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'pkg'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'gem_tester'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Update Gemfile of the modules with the new gem should be pushed to Gemfury.&lt;/p&gt;
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;pdksync:multigem_file_update[&lt;span class=&quot;s1&quot;&gt;'puppet-module'&lt;/span&gt;,&lt;span class=&quot;s1&quot;&gt;'tester'&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Below given is the workflows for doing multi gem testing with pdksync.&lt;/p&gt;
-
-&lt;p&gt;In this workflow we can clone gems, update the version, build the gem, push the changes to gemfury and update the gem file of the required modules with the latest gem updated in the fury. Then we can create PR or run tests locally or run tests through jenkins to verify the module test results.&lt;/p&gt;
-
-&lt;div class=&quot;language-shell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle &lt;span class=&quot;nb&quot;&gt;install&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--path&lt;/span&gt; .bundle/gems/
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'git:clone_gem[puppet-module-gems]'&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'pdksync:multi_gem_testing[]'&lt;/span&gt;
-bundle &lt;span class=&quot;nb&quot;&gt;exec &lt;/span&gt;rake &lt;span class=&quot;s1&quot;&gt;'pdksync:multigem_file_update[]'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
-
-&lt;p&gt;These are the steps that we can follow to perform single or multi gem testing using pdksync.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="walkthrough" /><category term="modules" /><category term="gems" /><summary type="html">Introduction</summary></entry></feed>
+If you’re interested in porting a module to Litmus, feel free to reach out to us during &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; - we’ll be glad to help!&lt;/p&gt;</content><author><name>criskoduck</name></author><category term="module updates" /><category term="tooling" /><category term="personal" /><category term="honeycomb" /><category term="metrics" /><category term="litmus" /><category term="windows" /><category term="powershell" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>

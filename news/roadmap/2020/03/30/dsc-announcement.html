@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>DSC + Puppet: Incoming! | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="DSC + Puppet: Incoming!" />
+<meta name="author" content="michaeltlombardi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users." />
+<meta property="og:description" content="As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users." />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-03-30T00:00:00+00:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","headline":"DSC + Puppet: Incoming!","dateModified":"2020-03-30T00:00:00+00:00","datePublished":"2020-03-30T00:00:00+00:00","author":{"@type":"Person","name":"michaeltlombardi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html"},"description":"As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.","url":"https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">DSC + Puppet: Incoming!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-03-30T00:00:00+00:00" itemprop="datePublished">Mar 30, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">michaeltlombardi</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>As <a href="https://github.com/glennsarti">Glenn</a> and I alluded to on the <a href="https://player.fm/series/powerscripting-podcast/episode-334-powerscripting-podcast-glenn-sarti-michael-lombardi">PowerScripting Podcast</a>, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.</p>
+
+<p><a href="https://tickets.puppetlabs.com/browse/IAC-41">Long story short</a>, for lots of reasons, our <a href="https://forge.puppet.com/puppetlabs/dsc">original implementation</a> for calling DSC resources from inside Puppet was getting fragile, stale, and maintenance costs kept rising.</p>
+
+<p>As a stop gap, we put together the <a href="https://forge.puppet.com/puppetlabs/dsc_lite">dsc_lite</a> module for people to use which dropped the guardrails and help in exchange for letting you just get to work if you needed to use it.
+Essentially the thinnest of wrappers over <a href="https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7"><code class="highlighter-rouge">Invoke-DscResource</code></a>, requiring you to get those resources onto the target and to pass an arbitrary hash of <em>hopefully</em> correct properties to the DSC resource;
+no way to tell if you goofed til run time.</p>
+
+<p>We made <a href="https://forge.puppet.com/puppetlabs/dsc_lite">dsc_lite</a> for the DSC expert, <a href="https://github.com/puppetlabs/puppetlabs-dsc_lite/blob/master/README_Tradeoffs.md">basically</a>.
+But as time went on and we could no longer use our old builder to update our original module…
+we were leaving a <strong>lot</strong> of people in the cold with a less than stellar UX.</p>
+
+<p>So my team decided to change that story.</p>
+
+<p>We talked it out, <a href="https://tickets.puppetlabs.com/browse/IAC-41">planned some stuff</a> and adopted <a href="https://github.com/jpogran">James Pogran</a>’s INCREDIBLE <a href="https://github.com/jpogran/PuppetDscBuilder">prototype work</a>—he did 80% of the initial work for this, basically all the hardest bits. 💜</p>
+
+<h2 id="so-about-this-builder">So, About This Builder</h2>
+
+<p>The <a href="https://github.com/puppetlabs/PuppetDscBuilder">whole thing</a> is written in and relies on PowerShell, not Ruby.
+The only non-PowerShell dependency is the <a href="https://puppet.com/docs/pdk/1.x/pdk.html">Puppet Development Kit</a> for scaffolding the Puppet module out (no reason to re-implement that!)</p>
+
+<p>It builds on two important technologies:</p>
+
+<ol>
+  <li>The <a href="https://puppet.com/docs/puppet/latest/about_the_resource_api.html">resource_api</a> (largely developed by <a href="https://github.com/DavidS">David Schmitt</a>), makes writing Puppet types and providers <em>actually</em> doable for people like me—the type file is just data, the provider adheres to a simple schema.</li>
+  <li>The <a href="https://github.com/puppetlabs/ruby-pwsh/">ruby-pwsh</a> gem, based on work by numerous members of the former Windows team at Puppet:
+<a href="https://github.com/glennsarti">Glenn Sarti</a>, <a href="https://github.com/jpogran">James Pogran</a>, <a href="https://github.com/Iristyle">Ethan Brown</a>, <a href="https://github.com/RandomNoun7">Bill Hurt</a>, <a href="https://github.com/ThoughtCrhyme">Erick Banks</a>, <a href="https://github.com/ferventcoder">Rob Reynolds</a>, and me.
+This gem is a library that gives you a <a href="https://github.com/puppetlabs/ruby-pwsh/blob/master/DESIGN.md">PowerShell manager</a>, enabling you to interop between PowerShell &amp; Ruby.
+That lets us take advantage of having a PowerShell host process and not shell out for every command.
+It’s <em>much</em> faster and paves the way for some really cool improvements.
+It’s also what powers all of our Puppet modules which rely heavily on PowerShell calls!</li>
+</ol>
+
+<p>This builder scaffolds a new Puppet module, vendors a PowerShell module from the Gallery (<em>with</em> dependencies), introspects that module for DSC resources, then generates a Puppet resource_api type and provider for each DSC resource.</p>
+
+<p>It has a <a href="https://github.com/puppetlabs/PuppetDscBuilder/blob/c5d349f51883abcca926a0dc6be465a037dfe957/Get-DscResourceTypeInformation.ps1">helper function</a> which desperately needs refactoring but which parses the <a href="https://mikefrobbins.com/2018/09/28/learning-about-the-powershell-abstract-syntax-tree-ast/">AST</a> for the DSC resource’s source file (if it can) to retrieve the reference docs, default values, and whether the parameter is mandatory for get/set operations.
+If it <em>can’t</em> parse the AST (as with binary/class-based DSC resources in this iteration) it still works–
+it just won’t have the reference docs and will rely on the best info it can find in the output from <a href="https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/get-dscresource?view=powershell-7"><code class="highlighter-rouge">Get-DscResource</code></a>.</p>
+
+<p>Okay, <em>fine</em>, <em><strong>weeeee</strong></em>, it <a href="https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz">builds a module</a>, great.
+But what does using it look like?
+I’m glad you asked.
+First of all, here’s what a very basic manifest using a <a href="https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz">puppetized module</a> looks like–in this case, <a href="https://www.powershellgallery.com/packages/PowerShellGet/2.2.3">PowerShellGet</a>.</p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dsc_psrepository</span> <span class="p">{</span><span class="s1">'Add team shared module folder as a repository'</span><span class="p">:</span>
+    <span class="py">dsc_name</span>               <span class="p">=&gt;</span> <span class="s1">'foo'</span><span class="p">,</span>
+    <span class="py">dsc_ensure</span>             <span class="p">=&gt;</span> <span class="n">present</span><span class="p">,</span>
+    <span class="c"># This location is nonsense, can be any valid folder on your
+</span>    <span class="c"># machine or in a share, any location the SourceLocation param
+</span>    <span class="c"># for the DSC resource will accept.
+</span>    <span class="py">dsc_sourcelocation</span>     <span class="p">=&gt;</span> <span class="s1">'C:\Program Files'</span><span class="p">,</span>
+    <span class="py">dsc_installationpolicy</span> <span class="p">=&gt;</span> <span class="n">untrusted</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">dsc_psrepository</span> <span class="p">{</span><span class="s1">'Trust the PowerShell Gallery'</span><span class="p">:</span>
+    <span class="py">dsc_name</span>               <span class="p">=&gt;</span> <span class="s1">'PSGallery'</span><span class="p">,</span>
+    <span class="py">dsc_ensure</span>             <span class="p">=&gt;</span> <span class="n">present</span><span class="p">,</span>
+    <span class="py">dsc_installationpolicy</span> <span class="p">=&gt;</span> <span class="n">trusted</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="n">dsc_psmodule</span> <span class="p">{</span><span class="s1">'Ensure Ruby is Manageable via uru'</span><span class="p">:</span>
+  <span class="py">dsc_name</span>   <span class="p">=&gt;</span> <span class="s1">'RubyInstaller'</span><span class="p">,</span>
+  <span class="py">dsc_ensure</span> <span class="p">=&gt;</span> <span class="n">absent</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And, well? It works! It’s idempotent! And, much more interestingly from my perspective, it gives you property-by-property reporting for your DSC resources–it knows what the state of the resource is on your node before it calls the Set method for Invoke-DscResource…</p>
+
+<p><img src="/iac/assets/2020-03-30-dsc-announcement/property-rep.png" alt="Puppet run output reading &quot;dsc_sourcelocation changed 'C:\code\temp' to 'C:\Program Files'&quot;" /></p>
+
+<p>So it can actually tell you <em>what changed</em> during the run and when.
+In other words, DSC resources in this implementation now report <strong>just</strong> like any other Puppet resource.</p>
+
+<p>That’s pretty neat!!</p>
+
+<p>What else do you get?
+Intellisense and some other awesome magic!
+Thanks to the <a href="https://puppet-vscode.github.io/">VSCode extension</a> maintained by <a href="https://github.com/jpogran">James Pogran</a> and <a href="https://github.com/glennsarti">Glenn Sarti</a>—in this screenshot, the editor is aware of all the parameters you might select, what their type is, and the valid values!</p>
+
+<p><img src="/iac/assets/2020-03-30-dsc-announcement/intellisense.jfif" alt="Image displaying intellisense capabilities of the VSCode extension where it is predicting which parameters to use and displaying their help information inline in the editor." /></p>
+
+<blockquote>
+  <p><strong>Aside:</strong>
+You <em>are</em> writing your Puppet code in VSCode with the <a href="https://puppet-vscode.github.io/">Puppet extension</a> installed, aren’t you?
+You’re taking advantage of the <a href="https://puppet-vscode.github.io/docs/features/intellisense">intellisense</a>, <a href="https://puppet-vscode.github.io/docs/features/code-navigation">code navigation</a>, <a href="https://puppet-vscode.github.io/docs/features/linting">auto linting</a>, <a href="https://puppet-vscode.github.io/docs/features/debugging-puppet-code">debugging</a>, and the <a href="https://puppet-vscode.github.io/docs/features/puppet-development-kit">PDK</a>, <a href="https://puppet-vscode.github.io/docs/features/puppet-bolt">Bolt</a>, &amp; <a href="https://puppet-vscode.github.io/docs/features/control-repository">Control Repo</a> integrations… right??</p>
+</blockquote>
+
+<h2 id="so-it-works-what-next">So It Works. What Next?</h2>
+
+<p>We still have some testing and a host of improvements to make (including probably swapping our template engine out, shout out to <a href="https://github.com/FriedrichWeinmann">Fred Weinmann</a> for the <a href="https://psframework.org/documentation/documents/psmoduledevelopment/templates.html">templating engine</a> in the <a href="https://github.com/PowershellFrameworkCollective/PSModuleDevelopment">PSModuleDevelopment</a> module), but the next big step—and likely the last I’ll be involved with before my paternity leave hits—is <a href="https://tickets.puppetlabs.com/browse/IAC-648">turning this build script into a PowerShell module and adding testing to it</a>.
+It <em>works</em> as a build script, but it can definitely be improved.
+And, okay, a module on the Gallery is great and all…</p>
+
+<p>But the <strong>really cool</strong> end-user magic will arrive in the <a href="https://tickets.puppetlabs.com/browse/IAC-649">third phase</a>, where we hope to be able to automatically build and publish Puppet modules that 1:1 wrap PowerShell modules with DSC resources and expose them as Puppet types and providers!</p>
+
+<p>We’re envisioning a future where not only can you Puppetize any DSC-Resource-having-module you want for yourself, but you can just find all of the modules publicly available on the Gallery already wrapped up and ready for you on the Puppet Forge!</p>
+
+<h2 id="caveats-and-warnings">Caveats and Warnings</h2>
+
+<p>We’re <em>just</em> wrapping the underlying DSC resources and making them available to you.
+If there’s a problem <em>calling</em> the DSC resources from Puppet, we’ll work on it, but if there’s a problem with <em>how</em> those resources behave, that’s upstream.</p>
+
+<p>Our team is full of lovely humans who do incredible amounts of work (seven people for <a href="https://puppetlabs.github.io/community_management/">&gt;250 PRs/month, ~50 supported modules</a>, <a href="https://puppetlabs.github.io/iac/tools/">over a dozen open source tools</a>, contributing to dozens more) but we can’t adopt &gt; 300 DSC modules too. 💔</p>
+
+<p>We’ll also continue to improve the underlying provider and build system, of course, and are excited to get the output modules fully functional for PowerShell 7+ - meaning they’ll be cross-platform compatible if the underlying resources are!
+This first prototype is just 5.1 though.</p>
+
+<h2 id="wrapping-up-call-to-action">Wrapping Up, Call to Action</h2>
+
+<p>So! If you’re interested in the work so far, you can <a href="https://github.com/puppetlabs/PuppetDscBuilder">check it out on GitHub</a>–
+the <a href="https://github.com/puppetlabs/PuppetDscBuilder/pull/1">latest PR</a> includes functional instructions for testing the new builder or just <a href="https://github.com/puppetlabs/PuppetDscBuilder/files/4395886/michaeltlombardi-powershellget-0.1.0.tar.gz">grabbing the test module</a> and playing with it in your own lab!</p>
+
+<p>We wanna tighten the loop and ensure we’re solving your problems with this rework because the <em>whole point</em> is to make your lives easier if you’re using Puppet and DSC.
+We’re here to help you get your configuration under control and free you up to do all the other hard work you have on your backlog.</p>
+
+<p>With that in mind, we would love your feedback, so if this tickles your interest at all, please <a href="mailto:dsc@puppet.com">email us</a> (<a href="mailto:dsc@puppet.com">dsc@puppet.com</a>) or comment below and let us know:</p>
+
+<ol>
+  <li>What are the top three PowerShell modules with DSC resources you’d like to see Puppetized?</li>
+  <li>Are you interested in joining our beta test group for this ongoing project?</li>
+</ol>
+
+<p>If you just wanna keep an eye on things, you can follow the repository on GitHub and the <a href="https://tickets.puppetlabs.com/browse/IAC-41">parent epic in JIRA</a>!</p>
+
+<p>Thanks, folx!</p>
+
+
+  </div><a class="u-url" href="/iac/news/roadmap/2020/03/30/dsc-announcement.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia-content@puppet.com">ia-content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
