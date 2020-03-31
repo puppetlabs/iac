@@ -44,7 +44,7 @@ From: /home/david/git/rspec_honeycomb_formatter/lib/rspec_honeycomb_formatter.rb
 The class here is not the same as the initial report is complaining about.
 And this does not fail.
 `PendingExampleFailedAsExpectedNotification` does have `message_lines`.
-Since the original report didn't any more information attached (and for the sake of the pacing of this blog post) I went to honeycomb to see if other modules were exhibiting the same problem.
+Since the original report didn't have any more information attached (and for the sake of the pacing of this blog post) I went to honeycomb to see if other modules were exhibiting the same problem.
 After a couple of clicks this was what I had:
 
 ![honeycomb heatmap screenshot]({% link assets/2020-03-30-debugging-with-honeycomb/honeycomb-heatmap.png %})
