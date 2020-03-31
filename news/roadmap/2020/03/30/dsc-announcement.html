@@ -61,7 +61,7 @@
   <div class="post-content e-content" itemprop="articleBody">
     <p>As <a href="https://github.com/glennsarti">Glenn</a> and I alluded to on the <a href="https://player.fm/series/powerscripting-podcast/episode-334-powerscripting-podcast-glenn-sarti-michael-lombardi">PowerScripting Podcast</a>, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.</p>
 
-<p><a href="https://tickets.puppetlabs.com/browse/IAC-41">Long story short</a>, for lots of reasons, our <a href="https://forge.puppet.com/puppetlabs/dsc">original implementation</a> for calling DSC resources from inside Puppet was getting fragile, stale, and maintenance costs kept rising.</p>
+<p><a href="https://tickets.puppetlabs.com/browse/IAC-41">Long story short</a>, for lots of reasons, our <a href="https://forge.puppet.com/puppetlabs/dsc">original implementation</a> for calling DSC resources from inside Puppet (shoutout to <a href="https://github.com/msutter">Marc Sutter</a>, the initial implementer!) was getting fragile, stale, and maintenance costs kept rising.</p>
 
 <p>As a stop gap, we put together the <a href="https://forge.puppet.com/puppetlabs/dsc_lite">dsc_lite</a> module for people to use which dropped the guardrails and help in exchange for letting you just get to work if you needed to use it.
 Essentially the thinnest of wrappers over <a href="https://docs.microsoft.com/en-us/powershell/module/psdesiredstateconfiguration/invoke-dscresource?view=powershell-7"><code class="highlighter-rouge">Invoke-DscResource</code></a>, requiring you to get those resources onto the target and to pass an arbitrary hash of <em>hopefully</em> correct properties to the DSC resource;
