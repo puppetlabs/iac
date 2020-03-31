@@ -13,7 +13,7 @@ tags:
 
 As [Glenn][glenn] and I alluded to on the [PowerScripting Podcast][podcast], our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.
 
-[Long story short][iac-41], for lots of reasons, our [original implementation][dsc-module] for calling DSC resources from inside Puppet was getting fragile, stale, and maintenance costs kept rising.
+[Long story short][iac-41], for lots of reasons, our [original implementation][dsc-module] for calling DSC resources from inside Puppet (shoutout to [Marc Sutter][msutter], the initial implementer!) was getting fragile, stale, and maintenance costs kept rising.
 
 As a stop gap, we put together the [dsc_lite][dsc_lite] module for people to use which dropped the guardrails and help in exchange for letting you just get to work if you needed to use it.
 Essentially the thinnest of wrappers over [`Invoke-DscResource`][invoke-docs], requiring you to get those resources onto the target and to pass an arbitrary hash of _hopefully_ correct properties to the DSC resource;
@@ -156,6 +156,7 @@ Thanks, folx!
 [james]:        https://github.com/jpogran
 [linting]:      https://puppet-vscode.github.io/docs/features/linting
 [manager]:      https://github.com/puppetlabs/ruby-pwsh/blob/master/DESIGN.md
+[msutter]:      https://github.com/msutter
 [pdk-vscode]:   https://puppet-vscode.github.io/docs/features/puppet-development-kit
 [pdk]:          https://puppet.com/docs/pdk/1.x/pdk.html
 [phase2]:       https://tickets.puppetlabs.com/browse/IAC-648
