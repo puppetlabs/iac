@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "7th Feb 2020: IAC Team Status Update"
-author: criskoduck
+author: sanfrancrisko
 categories:
   - team
   - status

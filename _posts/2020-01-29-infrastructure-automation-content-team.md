@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Introduction to the IAC Team"
-author: criskoduck
+author: sanfrancrisko
 categories:
   - team
   - basics
