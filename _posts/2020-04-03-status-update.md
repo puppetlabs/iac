@@ -62,11 +62,11 @@ After that, we'll be moving on to [puppetlabs/ibm_installation_manager][puppetla
 
 ## Puppet + DSC
 [michaeltlombardi][michael] has continued to make excellent progress on our [refactor of DSC support][iac-41] in Puppet.
-To find out what we're doing, the reasoning behind it and why we're *SUPER EXCITED* about this, check out [Michael's][michael] [earlier blog post]({% link _posts/2020-03-30-dsc-announcement.md %})
+To find out what we're doing, the reasoning behind it and why we're **SUPER EXCITED** about this, check out [Michael's][michael] [earlier blog post]({% link _posts/2020-03-30-dsc-announcement.md %})
 
 ## Debugging with Honeycomb
 [Honeycomb][honeycomb] continues to provide us interesting insights that guide us to problems lurking in our test infrastructure.
-[dev_el_ops][david] used the reported data/metrics to investigate an issue pointed out by [carabasdaniel][daniel].
+[dev_el_ops][david] used the reported data/metrics to investigate an issue pointed out by [carabasdaniel][danny].
 Check out [dev_el_ops's][david] [earlier blog post]({% link _posts/2020-03-30-debugging-unit-tests-with-honeycomb.md %}) about it.
 
 [ciprianbadescu]:												https://github.com/ciprianbadescu
