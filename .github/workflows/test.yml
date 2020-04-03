@@ -19,7 +19,7 @@ jobs:
             ${{ runner.os }}-
 
       - name: Test
-        uses: DavidS/jekyll-deploy@1.1.0
+        uses: DavidS/jekyll-deploy@1.1.1
         with:
           build-only: true
         env:
