@@ -1,4 +1,140 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-09T02:06:13+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">3rd April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update.html" rel="alternate" type="text/html" title="3rd April 2020: IAC Team Status Update" /><published>2020-04-03T00:00:00+00:00</published><updated>2020-04-03T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-09T15:38:30+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">8th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/09/status-update.html" rel="alternate" type="text/html" title="8th April 2020: IAC Team Status Update" /><published>2020-04-09T00:00:00+00:00</published><updated>2020-04-09T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/09/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/09/status-update.html">&lt;p&gt;The IAC team has been hard at work over the past week.
+Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module-releases-iac-team&quot;&gt;New Module Releases (IAC Team)&lt;/h2&gt;
+
+&lt;p&gt;Let’s kick things off by highlighting a new module release:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/acl&quot;&gt;puppetlabs/acl&lt;/a&gt; (v3.1.1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;As always, we work hand-in-hand with the broader Puppet community to get work done.
+This week, we want to take a moment to highlight a few PRs and the people behind them!&lt;/p&gt;
+
+&lt;p&gt;First up, a &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/562&quot;&gt;pull request to the puppetlabs/docker module&lt;/a&gt; by &lt;a href=&quot;https://github.com/seriv&quot;&gt;Sergey Ivanov&lt;/a&gt;.
+Sergey’s work enabled the module to function transparently on RedHat systems utilizing the &lt;a href=&quot;https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;podman-docker&lt;/code&gt; package!&lt;/a&gt;.
+Thank you, Sergey!&lt;/p&gt;
+
+&lt;p&gt;We’d like to thank &lt;a href=&quot;https://github.com/amorphina&quot;&gt;Atanas Stoyanov&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2017&quot;&gt;his fix to the Apache module&lt;/a&gt;.
+This PR ensures that the custom ldap options in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/apache2/mods&lt;/code&gt; can actually be applied and loaded, fixing a previously unknown bug!
+Thank you, Atanas!&lt;/p&gt;
+
+&lt;p&gt;Finally, big Thanks to &lt;a href=&quot;https://github.com/fraenki&quot;&gt;Frank Wall&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1245&quot;&gt;his PR&lt;/a&gt; that will fix &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-10023&quot;&gt;MODULES-10023&lt;/a&gt;, ensuring that the xtrabackup functionality in &lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;puppetlabs/mysql&lt;/a&gt; actually works as intended!
+Thank you, Frank!&lt;/p&gt;
+
+&lt;h2 id=&quot;supported-module-litmus-conversion&quot;&gt;Supported Module Litmus Conversion&lt;/h2&gt;
+
+&lt;p&gt;On the topic of &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Litmus&lt;/a&gt;, we’re continuing to make progress on the conversion of all supported modules to the framework:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/reboot&quot;&gt;puppetlabs/reboot&lt;/a&gt; is &lt;em&gt;very nearly&lt;/em&gt; completed, running against all 33 of the supported platforms!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/websphere_application_server&quot;&gt;puppetlabs/websphere_application_server&lt;/a&gt; is wrapped!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/satellite_pe_tools&quot;&gt;puppetlabs/satellite_pe_tools&lt;/a&gt; is still progressing nicely!&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/ibm_installation_manager&quot;&gt;puppetlabs/ibm_installation_manager&lt;/a&gt; is in progress now!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;puppet--dsc-phase-ii-begins&quot;&gt;Puppet + DSC: Phase II Begins!&lt;/h2&gt;
+
+&lt;p&gt;We have continued to make excellent progress on our &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;refactor of DSC support&lt;/a&gt; in Puppet as we step in &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-685&quot;&gt;Phase II&lt;/a&gt;!
+To find out what we’re doing, the reasoning behind it and why we’re &lt;strong&gt;SUPER EXCITED&lt;/strong&gt; about this, check out my &lt;a href=&quot;/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;earlier blog post&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;The technical work this week has largely been in the de-prototyping details as we work to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-650&quot;&gt;convert the prototype build script into a supportable PowerShell module&lt;/a&gt;.
+We &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/2&quot;&gt;scaffolded the module&lt;/a&gt; out using &lt;a href=&quot;https://github.com/FriedrichWeinmann&quot;&gt;Fred Weinmann’s&lt;/a&gt; &lt;a href=&quot;https://psframework.org/&quot;&gt;PSFramework module&lt;/a&gt;, giving us some nice automatic testing and a bunch of options to improve UX down the road (including layered configurations and tab completion).
+We &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/3&quot;&gt;added our first sets of test code&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/4&quot;&gt;added a Vagrantfile&lt;/a&gt; to the repository to make the development process easier on our team, and &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/6&quot;&gt;enabled on-PR testing in Appveyor&lt;/a&gt; to ensure we don’t introduce regressions.&lt;/p&gt;
+
+&lt;p&gt;Work is currently underway to &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/7/files&quot;&gt;decompose the module vendoring code&lt;/a&gt; from the build script into a function in the module for ease of maintenance and testability.
+Additionally, the &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/5&quot;&gt;replacement of the extant templating engine is also underway&lt;/a&gt; to reduce complexity and dependencies for the module.&lt;/p&gt;
+
+&lt;p&gt;But the biggest milestone this week has been bringing on board Puppet’s own &lt;a href=&quot;https://github.com/genebean&quot;&gt;Gene Liverman&lt;/a&gt;, &lt;a href=&quot;https://github.com/jcoconnor&quot;&gt;John O’Connor&lt;/a&gt;, and the rest of our Developer Infrastructre &amp;amp; Operations Team as Customer 0 for this work, ensuring that we get live feedback as early as possible for our updated methodology.
+We sent them beta versions of both the &lt;a href=&quot;https://www.powershellgallery.com/packages/NetworkingDsc/7.4.0.0&quot;&gt;NetworkingDsc&lt;/a&gt; and &lt;a href=&quot;https://www.powershellgallery.com/packages/UpdateServicesDsc/1.1.0.0&quot;&gt;UpdateServicesDsc&lt;/a&gt; PowerShell modules, puppetized!&lt;/p&gt;
+
+&lt;p&gt;That will let them test out replacing profiles like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;profile::network::windows_interface&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Stdlib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;$ipaddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                     &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Enum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'IPv4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'IPv6'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;           &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'IPv4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Stdlib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;include&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;profile::network::windows_install_dsc_modules&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;dsc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;${name}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-ip-address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;resource_name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'IPAddress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;module&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'NetworkingDsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;properties&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;ipaddress&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ipaddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;interfacealias&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;addressfamily&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+    &lt;span class=&quot;kp&quot;&gt;require&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'profile::network::windows_install_dsc_modules'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dsc&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;${name}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-default-gw&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;resource_name&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'DefaultGatewayAddress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;module&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'NetworkingDsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;properties&lt;/span&gt;    &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;py&quot;&gt;address&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;py&quot;&gt;interfacealias&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;py&quot;&gt;addressfamily&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+      &lt;span class=&quot;kp&quot;&gt;require&lt;/span&gt;       &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Class&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'profile::network::windows_install_dsc_modules'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;With one using the beta modules, like this!&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;define&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;profile::network::windows_interface&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Stdlib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;    &lt;span class=&quot;nv&quot;&gt;$ipaddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;String&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;m&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;                     &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Enum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'IPv4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'IPv6'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;           &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'IPv4'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;nc&quot;&gt;Optional&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Stdlib&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;IP&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;Address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;undef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;dsc_ipaddress&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;${name}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-ip-address&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_ipaddress&lt;/span&gt;      &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$ipaddress&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_interfacealias&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;dsc_addressfamily&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;dsc_defaultgatewayaddress&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;${name}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;-default-gw&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;dsc_address&lt;/span&gt;        &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$gw_address&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;dsc_interfacealias&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$interfacealias&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+      &lt;span class=&quot;py&quot;&gt;dsc_addressfamily&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$addressfamily&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;If you’re interested in joining our beta program, which we will be launching in earnest after Easter, please &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;email us&lt;/a&gt; (&lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt;) and let us know:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;What are the top three PowerShell modules with DSC resources you’d like to see Puppetized?&lt;/li&gt;
+  &lt;li&gt;Are you interested in joining our beta test group for this ongoing project?&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you just wanna keep an eye on things, you can follow the repository on GitHub and the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;parent epic in JIRA&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;powershell-101-training&quot;&gt;PowerShell 101 Training&lt;/h2&gt;
+
+&lt;p&gt;In addition to helping oversee the DSC work, &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt; just wrapped up running the team through his [PowerShell 101 Course][pwshop], which focuses on helping with the “blinking cursor” problem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Help! I’m in a PowerShell prompt and have &lt;em&gt;no idea&lt;/em&gt; what to do from here!&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;It’s meant not to turn you into a comprehensive PowerShell scripter but to get you up, running, and reasonably effective in a few hours.
+It includes 12 lessons and 20 sets of exercises and is available right now, and for the duration of the impacts from COVID-19, for free.
+If you’ve been thinking about learning about this (more than decade old, now!) young shell that the Windowsy devops crowd has been talking about, this is a good way to get started.&lt;/p&gt;
+
+&lt;p&gt;I’ve been helping to level up the team on PowerShell over the past several weeks as the DSC work becomes a serious focus and to generally help the team improve our Windows support skills.&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="testing" /><category term="dsc" /><category term="powershell" /><category term="windows" /><summary type="html">The IAC team has been hard at work over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">3rd April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update.html" rel="alternate" type="text/html" title="3rd April 2020: IAC Team Status Update" /><published>2020-04-03T00:00:00+00:00</published><updated>2020-04-03T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/03/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;covid-19&quot;&gt;COVID-19&lt;/h2&gt;
@@ -763,105 +899,4 @@ Great work on a topic that comes up fairly often in the open source world!&lt;/p
 &lt;h2 id=&quot;puppetcamp-berlin-2020&quot;&gt;PuppetCamp Berlin 2020&lt;/h2&gt;
 
 &lt;p&gt;In two weeks the sold out &lt;a href=&quot;https://www.eventbrite.com/e/puppet-camp-berlin-tickets-84908295999&quot;&gt;PuppetCamp Berlin&lt;/a&gt; will happen at the AWS OpsWorks offices, with a great showing of folks from the community and Puppet.
-If you’re one of the lucky ones with a ticket, come and say hi to Melissa Casburn, our UX architect, &lt;a href=&quot;https://github.com/binford2k&quot;&gt;@binford2k&lt;/a&gt;, community shepherd, and &lt;a href=&quot;https://github.com/DavidS&quot;&gt;@DavidS&lt;/a&gt;, tech lead of IAC.&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">21st Feb 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update.html" rel="alternate" type="text/html" title="21st Feb 2020: IAC Team Status Update" /><published>2020-02-21T00:00:00+00:00</published><updated>2020-02-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/02/21/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
-Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
-
-&lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
-
-&lt;p&gt;We’ve released only one module since last week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/java&quot;&gt;puppetlabs/java&lt;/a&gt; (v6.2.0)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/baurmatt&quot;&gt;@baurmatt&lt;/a&gt; for his change to the concat module,
-&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/627&quot;&gt;adding support for Deferred function in concat fragment&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;approved-modules&quot;&gt;Approved Modules&lt;/h2&gt;
-
-&lt;p&gt;This week we happily approved two new modules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/fervid/secure_linux_cis&quot;&gt;fervid/secure_linux_cis&lt;/a&gt; is a CIS hardening module for Linux servers by &lt;a href=&quot;https://www.fervid.us/&quot;&gt;fervid.us&lt;/a&gt;.&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/stackstorm/st2&quot;&gt;stackstorm/st2&lt;/a&gt; installs, configures and manages the eponymous &lt;a href=&quot;https://stackstorm.com&quot;&gt;StackStorm&lt;/a&gt; platform for event-driven runbook automation.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/approved&quot;&gt;Puppet Approved&lt;/a&gt; modules are recommended by us for use with Puppet Open Source and Puppet Enterprise and meet our expectations for quality and usability.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-puppet-modulebuilder-gem&quot;&gt;New puppet-modulebuilder Gem&lt;/h2&gt;
-
-&lt;p&gt;Work &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-532&quot;&gt;has started&lt;/a&gt; on creating a &lt;a href=&quot;https://github.com/puppetlabs/puppet-modulebuilder&quot;&gt;puppet-modulebuilder&lt;/a&gt; gem.
-This will carry the actual functionality for &lt;code class=&quot;highlighter-rouge&quot;&gt;pdk build&lt;/code&gt; and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
-We expect a first release early next week.
-Follow &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-552&quot;&gt;IAC-552&lt;/a&gt; to get a notification when that happens.&lt;/p&gt;
-
-&lt;p&gt;Thanks a lot to &lt;a href=&quot;https://github.com/glennsarti&quot;&gt;Glenn&lt;/a&gt; for helping out with the actual porting of the code.&lt;/p&gt;
-
-&lt;h2 id=&quot;ongoing-litmus-conversions&quot;&gt;Ongoing Litmus Conversions&lt;/h2&gt;
-
-&lt;p&gt;This week saw a flurry of PRs (through &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt;) to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-215&quot;&gt;update all our modules&lt;/a&gt; to use the new &lt;code class=&quot;highlighter-rouge&quot;&gt;use_litmus&lt;/code&gt; support in &lt;a href=&quot;https://github.com/puppetlabs/pdk-templates&quot;&gt;pdk-templates&lt;/a&gt;.
-This reduces the amount of configuration we need to carry in each module and validates the pdk-templates feature.&lt;/p&gt;
-
-&lt;p&gt;As expected, the last remaining modules to convert to &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Litmus&lt;/a&gt; were the ones we didn’t want to touch earlier for good reasons.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-powershell/pull/283&quot;&gt;powershell&lt;/a&gt; has been merged and is now running acceptance tests on Windows (appveyor), Linux and OS X (travis) in public.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-sqlserver/pull/345&quot;&gt;sqlserver&lt;/a&gt; is still resisting,
-not the least because we found several areas where the previous test suite was ignoring warnings that we now want to address.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vsphere/pull/172&quot;&gt;vsphere&lt;/a&gt; is progressing.
-We don’t expect to enable PR-level testing on this one,
-since it does require access to our internal VCenter.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you’re interested in porting a module to Litmus,
-feel free to reach out to us during &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; - we’ll be glad to help!&lt;/p&gt;
-
-&lt;p&gt;We’re also looking into updating litmus to make use of &lt;a href=&quot;https://github.com/puppetlabs/bolt/blob/master/CHANGELOG.md#bolt-200&quot;&gt;Bolt v2&lt;/a&gt;.
-See &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/254&quot;&gt;puppetlabs/puppet_litmus#254&lt;/a&gt; if you want to follow along.&lt;/p&gt;
-
-&lt;p&gt;This week also saw a number of ruby &lt;a href=&quot;https://travis-ci.org/puppetlabs/puppetlabs-mysql/jobs/653408974&quot;&gt;segfaults&lt;/a&gt; and &lt;a href=&quot;https://travis-ci.org/puppetlabs/puppetlabs-mysql/jobs/652904009&quot;&gt;deadlocks&lt;/a&gt; during acceptance testing:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;448.03s$ bundle exec rake litmus:acceptance:parallel
-Running against 3 targets.
-./home/travis/build/puppetlabs/puppetlabs-mysql/vendor/bundle/ruby/2.5.0/gems/concurrent-ruby-1.1.6/lib/concurrent-ruby/concurrent/atomic/ruby_thread_local_var.rb:113: [BUG] Segmentation fault at 0x000000000b4d76d5
-ruby 2.5.3p105 (2018-10-18 revision 65156) [x86_64-linux]
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$ bundle exec rake litmus:acceptance:parallel
-Running against 2 targets.
-.
-No output has been received in the last 10m0s, this potentially indicates a stalled build or something wrong with the build itself.
-Check the details on how to adjust your build configuration on: https://docs.travis-ci.com/user/common-build-problems/#build-times-out-because-no-output-was-received
-The build has been terminated
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We’re still working on figuring out what changed recently to trigger these.&lt;/p&gt;
-
-&lt;h2 id=&quot;refactoring-stdlib-to-puppet4-function-api&quot;&gt;Refactoring stdlib to Puppet4 function API&lt;/h2&gt;
-
-&lt;p&gt;Off the back of Ben’s &lt;a href=&quot;https://binford2k.com/2019/11/27/automagic-function-port/&quot;&gt;blog on the Puppet4 function API&lt;/a&gt;,
-work has started to move all functions in the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/stdlib&quot;&gt;stdlib module&lt;/a&gt; to the “new” API.
-To quote Ben:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Each modern Puppet 4.x function is just a little faster and just a little safer
-to use, meaning that as we all port our functions over, compilation times across
-the ecosystem will get more and more performant. Modern Puppet 4.x functions
-have improved thread safety, memory management, and load time. Even more
-importantly, they’re isolated to the environment they’re loaded from.&lt;/p&gt;
-
-  &lt;p&gt;And as a developer, you’ll see benefits like namespaced function signatures,
-automatic data type checking, multiple dispatches allowing you to easily handle
-different kinds of function invocations, and vastly improved code reuse.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;If you want to follow along or provide feedback,
-please avail yourself of &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-114&quot;&gt;IAC-114&lt;/a&gt;.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="module updates" /><category term="community" /><category term="approved" /><category term="litmus" /><category term="powershell" /><category term="sqlserver" /><category term="vsphere" /><category term="modulebuilder" /><category term="stdlib" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
+If you’re one of the lucky ones with a ticket, come and say hi to Melissa Casburn, our UX architect, &lt;a href=&quot;https://github.com/binford2k&quot;&gt;@binford2k&lt;/a&gt;, community shepherd, and &lt;a href=&quot;https://github.com/DavidS&quot;&gt;@DavidS&lt;/a&gt;, tech lead of IAC.&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
