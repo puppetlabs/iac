@@ -137,7 +137,7 @@ If you just wanna keep an eye on things, you can follow the repository on GitHub
 
 ## PowerShell 101 Training
 
-In addition to helping oversee the DSC work, I just wrapped up running the team through his [PowerShell 101 Course][pwshop], which focuses on helping with the "blinking cursor" problem:
+In addition to helping oversee the DSC work, [Michael](https://github.com/michaeltlombardi) just wrapped up running the team through his [PowerShell 101 Course][pwshop], which focuses on helping with the "blinking cursor" problem:
 
 > Help! I'm in a PowerShell prompt and have _no idea_ what to do from here!
 
