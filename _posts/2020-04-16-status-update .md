@@ -27,7 +27,7 @@ Paula had spent the last several months of on maternity leave but has returned t
 ```
 I have finally returned from maternity leave and instantly I can see major changes within the team. This includes the content we now own to the members on the team.
 It is clear the team has everything under control and I am really looking forward to getting up to speed again.
-Im sure before I know it, it will be just like I was never away.
+I'm sure before I know it, it will be just like I was never away.
 ```
 
 ## The Continuing Success of honeycomb
@@ -46,14 +46,14 @@ One thing we are always happy to talk about is the release of a module, in this 
 
 ## Continued Work on Puppet DSC
 
-The work done by the team to [refactor DSC support](iac-41) in Puppet has continued with strides being made every day and the first of the beta trial packets being sent out. To any community members that have not received one of these packets but would like to, we encourage you to reach out to dsc@puppet.com with answers to the following questions:
+The work done by the team to [refactor DSC support](iac-41) in Puppet has continued with strides being made every day and the first of the beta trial packets being sent out. To any community members that have not received one of these packets but would like to, we encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
 
 - What are the top three PowerShell modules with DSC resources you use/depend on the most?
 - Are you interested in participating in our beta testing program?
 
-## Community Issues
+## Support Issues
 
-Speaking of community I would like to take a moment to mention the community issues that have been raised over the last week and that are helping us to continually improve upon our modules and ensure that they run just as they should:
+I would like to take a moment to thank the support team (Elaine, go!) for the issues that have been raised over the last week and that are helping us to continually improve upon our modules and ensure that they run just as they should:
 
 - [MODULES-10628](https://tickets.puppetlabs.com/browse/MODULES-10628) - Docker volumes expects array rather than hash
 - [MODULES-10629](https://tickets.puppetlabs.com/browse/MODULES-10629) - Registry_auth results in changes every catalog run
@@ -69,7 +69,7 @@ We would like to thank both [jplindquist](jplindquist) and [tkishel](tkishel) fo
 
 ## Community Management
 
-In order to help us better work with the community our very own [Daiana](daiana) has continued to work on a management tool to help us keep track of the various PRs opened by the community. A new improvement was added just this week, allowing us to fnd when Prs where last given a response, either by ourselves or by the community member that opened it.
+In order to help us better work with the community our very own [Daiana](daiana) has continued to work on a management tool to help us keep track of the various PRs opened by the community. A new improvement was added just this week, allowing us to find when PRs where last given a response, either by ourselves or by the community member that opened it.
 
 ## Litmus
 
