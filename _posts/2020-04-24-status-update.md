@@ -39,7 +39,7 @@ One thing we are always happy to talk about is the release of a module, in this 
 
 ## Continued Work on Puppet DSC
 
-The work done by the team to [refactor DSC support][iac-41] in Puppet has continued with strides being made every day. To any community members that have not received one of these packets but would like to, we encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
+The work done by the team to [refactor DSC support][iac-41] in Puppet has continued with strides being made every day. To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
 
 - What are the top three PowerShell modules with DSC resources you use/depend on the most?
 - Are you interested in participating in our beta testing program?
