@@ -35,7 +35,7 @@ Also the [puppet-keepalived](https://github.com/voxpupuli/puppet-keepalived) mod
 
 One thing we are always happy to talk about is the release of a module, in this case:
 
-
+- [pupptelabs/docker](https://forge.puppet.com/puppetlabs/docker) (v3.10.0)
 
 ## Continued Work on Puppet DSC
 
