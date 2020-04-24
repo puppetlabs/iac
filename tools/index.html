@@ -41,7 +41,7 @@
           </span>
         </label>
 
-        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
       </nav></div>
 </header>
 <main class="page-content" aria-label="Content">
@@ -53,28 +53,111 @@
   </header>
 
   <div class="post-content">
-    <h1></h1>
-<h2>Summary</h2>
+    <p>A list of the tools developed and maintained by the IA Content Team.</p>
 
-<p></p>
+
 
 <ul>
-  
-  
-  
-  
+
+<li><a href="#puppet-litmus">Puppet Litmus</a></li>
+
+<li><a href="#resource-api">Resource API</a></li>
+
+<li><a href="#misc-module-tools">Misc Module tools</a></li>
+
+<li><a href="#i18n">i18n</a></li>
+
 </ul>
 
-<p>A list of the tools developed and maintained by the IA Content Team.</p>
 
+<div class="row">
+  <div class="col">
+    <h2>Puppet Litmus<a id="puppet-litmus"></a></h2>
+  </div>
+</div>
 
 
 
 <div class="row">
   <div class="col">
-    <h2>Misc Module tools</h2>
+    <h3><a href="/iac/tools/litmus.html">Litmus</a></h3>
+  </div>
+  <div class="col">
+    Litmus provides a simple command line tool for Puppet content creators, to enable both simple and complex test deployments against specifically configured target systems.<br/>
+    <img alt="Gem downloads" src="https://img.shields.io/gem/dt/puppet_litmus?logo=rubygems">
+    
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/com/puppetlabs/puppet_litmus?logo=travis">
+    
+    
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppet_litmus?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
   </div>
 </div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/tools/litmusimage.html">Litmus Images</a></h3>
+  </div>
+  <div class="col">
+    This repository creates docker image files, for testing puppet modules with services with Puppet Litmus.<br/>
+    
+    
+    
+    
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/litmusimage/Nightly build?logo=github" />
+    
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Resource API<a id="resource-api"></a></h2>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/tools/resource-api.html">Resource API</a></h3>
+  </div>
+  <div class="col">
+    This library provides a simple way to write new native resources.<br/>
+    <img alt="Gem downloads" src="https://img.shields.io/gem/dt/puppet-resource_api?logo=rubygems">
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/resource_api">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/resource_api">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppet-resource_api?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppet-resource_api?logo=appveyor" />
+    
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppet-resource_api?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Misc Module tools<a id="misc-module-tools"></a></h2>
+  </div>
+</div>
+
 
 
 <div class="row">
@@ -199,57 +282,10 @@
 
 <div class="row">
   <div class="col">
-    <h2>Puppet Litmus</h2>
+    <h2>i18n<a id="i18n"></a></h2>
   </div>
 </div>
 
-
-<div class="row">
-  <div class="col">
-    <h3><a href="/iac/tools/litmus.html">Litmus</a></h3>
-  </div>
-  <div class="col">
-    Litmus provides a simple command line tool for Puppet content creators, to enable both simple and complex test deployments against specifically configured target systems.<br/>
-    <img alt="Gem downloads" src="https://img.shields.io/gem/dt/puppet_litmus?logo=rubygems">
-    
-    
-    
-    <img alt="Travis" src="https://img.shields.io/travis/com/puppetlabs/puppet_litmus?logo=travis">
-    
-    
-    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppet_litmus?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
-    
-  </div>
-</div>
-<br/>
-
-<div class="row">
-  <div class="col">
-    <h3><a href="/iac/tools/litmusimage.html">Litmus Images</a></h3>
-  </div>
-  <div class="col">
-    This repository creates docker image files, for testing puppet modules with services with Puppet Litmus.<br/>
-    
-    
-    
-    
-    
-    
-    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/litmusimage/Nightly build?logo=github" />
-    
-    
-  </div>
-</div>
-<br/>
-
-<hr />
-<br />
-
-<div class="row">
-  <div class="col">
-    <h2>i18n</h2>
-  </div>
-</div>
 
 
 <div class="row">
@@ -311,39 +347,6 @@
 
 <hr />
 <br />
-
-<div class="row">
-  <div class="col">
-    <h2>Resource API</h2>
-  </div>
-</div>
-
-
-<div class="row">
-  <div class="col">
-    <h3><a href="/iac/tools/resource-api.html">Resource API</a></h3>
-  </div>
-  <div class="col">
-    This library provides a simple way to write new native resources.<br/>
-    <img alt="Gem downloads" src="https://img.shields.io/gem/dt/puppet-resource_api?logo=rubygems">
-    
-    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/resource_api">
-    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/resource_api">
-    
-    
-    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppet-resource_api?logo=travis">
-    
-    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppet-resource_api?logo=appveyor" />
-    
-    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppet-resource_api?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
-    
-  </div>
-</div>
-<br/>
-
-<hr />
-<br />
-
 
 
   </div>

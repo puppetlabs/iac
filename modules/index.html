@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Modules | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.0.0" />
+<meta property="og:title" content="Modules" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team." />
+<meta property="og:description" content="Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team." />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/modules/" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/modules/" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<script type="application/ld+json">
+{"description":"Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.","headline":"Modules","@type":"WebPage","url":"https://puppetlabs.github.io/iac/modules/","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/about/">About</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Modules</h1>
+  </header>
+
+  <div class="post-content">
+    <p>A list of the modules developed and maintained by the IA Content Team.</p>
+
+
+
+<ul>
+
+<li><a href="#windows" />Windows</li>
+
+<li><a href="#linux" />Linux</li>
+
+<li><a href="#crossplatform" />Crossplatform</li>
+
+<li><a href="#networking" />Networking</li>
+
+<li><a href="#other" />Other</li>
+
+</ul>
+
+
+<div class="row">
+  <div class="col">
+    <h2>Windows<a id="windows"></a></h2>
+  </div>
+</div>
+
+<div class="row">
+  See also the <a href="#crossplatform">crossplatform modules</a>.
+</div>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-acl.html">puppetlabs-acl</a></h3>
+  </div>
+  <div class="col">
+    This module provides the ability to manage ACLs on nodes<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/acl">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/acl">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-acl?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-acl?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-acl/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-acl?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-chocolatey.html">puppetlabs-chocolatey</a></h3>
+  </div>
+  <div class="col">
+    Chocolatey package provider for Puppet<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/chocolatey">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/chocolatey">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-chocolatey?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-chocolatey?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-chocolatey/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-chocolatey?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-dsc.html">puppetlabs-dsc</a></h3>
+  </div>
+  <div class="col">
+    PowerShell Desired State Configuration (DSC)<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/dsc">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/dsc">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-dsc?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-dsc?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-dsc/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-dsc?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-dsc_lite.html">puppetlabs-dsc_lite</a></h3>
+  </div>
+  <div class="col">
+    PowerShell Desired State Configuration (DSC) Lite<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/dsc_lite">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/dsc_lite">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-dsc_lite?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-dsc_lite?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-dsc_lite/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-dsc_lite?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-iis.html">puppetlabs-iis</a></h3>
+  </div>
+  <div class="col">
+    Manage IIS for Windows Server 2008R2, 2012, 2012R2 and 2016. Maintain application sites, pools, installation, and many other IIS settings.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/iis">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/iis">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-iis?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-iis?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-iis/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-iis?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-registry.html">puppetlabs-registry</a></h3>
+  </div>
+  <div class="col">
+    This module provides a native type and provider to manage keys and values in the Windows Registry<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/registry">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/registry">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-registry?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-registry?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-registry/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-registry?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-scheduled_task.html">puppetlabs-scheduled_task</a></h3>
+  </div>
+  <div class="col">
+    Manage scheduled tasks for Windows Server 2008 and newer operating systems.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/scheduled_task">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/scheduled_task">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-scheduled_task?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-scheduled_task?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-scheduled_task/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-scheduled_task?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-sqlserver.html">puppetlabs-sqlserver</a></h3>
+  </div>
+  <div class="col">
+    The `sqlserver` module installs and manages MS SQL Server 2012, 2014, 2016, 2017, and 2019 on Windows systems.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/sqlserver">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/sqlserver">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-sqlserver?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-sqlserver?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-sqlserver/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-sqlserver?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-wsus_client.html">puppetlabs-wsus_client</a></h3>
+  </div>
+  <div class="col">
+    Manage WSUS (Windows Server Update Service) settings for client nodes<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/wsus_client">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/wsus_client">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-wsus_client?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-wsus_client?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-wsus_client/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-wsus_client?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Linux<a id="linux"></a></h2>
+  </div>
+</div>
+
+<div class="row">
+  See also the <a href="#crossplatform">crossplatform modules</a>.
+</div>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-accounts.html">puppetlabs-accounts</a></h3>
+  </div>
+  <div class="col">
+    Account management module.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/accounts">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/accounts">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-accounts?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-accounts/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-accounts?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-apache.html">puppetlabs-apache</a></h3>
+  </div>
+  <div class="col">
+    Installs, configures, and manages Apache virtual hosts, web services, and modules.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/apache">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/apache">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-apache?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-apache/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-apache?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-apt.html">puppetlabs-apt</a></h3>
+  </div>
+  <div class="col">
+    Provides an interface for managing Apt source, key, and definitions with Puppet<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/apt">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/apt">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-apt?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-apt/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-apt?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-firewall.html">puppetlabs-firewall</a></h3>
+  </div>
+  <div class="col">
+    Manages Firewalls such as iptables<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/firewall">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/firewall">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-firewall?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-firewall/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-firewall?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-haproxy.html">puppetlabs-haproxy</a></h3>
+  </div>
+  <div class="col">
+    Configures HAProxy servers and manages the configuration of backend member servers.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/haproxy">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/haproxy">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-haproxy?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-haproxy/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-haproxy?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-helm.html">puppetlabs-helm</a></h3>
+  </div>
+  <div class="col">
+    A module to install Helm, a kubernetes package manager<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/helm">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/helm">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-helm?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-helm/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-helm?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-ibm_installation_manager.html">puppetlabs-ibm_installation_manager</a></h3>
+  </div>
+  <div class="col">
+    Manages IBM Installation Manager and IBM packages<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/ibm_installation_manager">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/ibm_installation_manager">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-ibm_installation_manager?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-ibm_installation_manager/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-ibm_installation_manager?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-kubernetes.html">puppetlabs-kubernetes</a></h3>
+  </div>
+  <div class="col">
+    The module installs and configures a Kubernetes cluster<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/kubernetes">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/kubernetes">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-kubernetes?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-kubernetes/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-kubernetes?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-mysql.html">puppetlabs-mysql</a></h3>
+  </div>
+  <div class="col">
+    Installs, configures, and manages the MySQL service.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/mysql">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/mysql">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-mysql?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-mysql/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-mysql?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-ntp.html">puppetlabs-ntp</a></h3>
+  </div>
+  <div class="col">
+    Installs, configures, and manages the NTP service.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/ntp">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/ntp">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-ntp?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-ntp/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-ntp?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-postgresql.html">puppetlabs-postgresql</a></h3>
+  </div>
+  <div class="col">
+    Offers support for basic management of PostgreSQL databases.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/postgresql">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/postgresql">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-postgresql?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-postgresql/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-postgresql?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-rook.html">puppetlabs-rook</a></h3>
+  </div>
+  <div class="col">
+    A module for installing and configuring rook https://rook.io<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/rook">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/rook">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-rook?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-rook/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-rook?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-satellite_pe_tools.html">puppetlabs-satellite_pe_tools</a></h3>
+  </div>
+  <div class="col">
+    Configures reports and inventory data to be sent to Satellite 6<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/satellite_pe_tools">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/satellite_pe_tools">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-satellite_pe_tools?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-satellite_pe_tools/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-satellite_pe_tools?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-tomcat.html">puppetlabs-tomcat</a></h3>
+  </div>
+  <div class="col">
+    Installs, deploys, and configures Apache Tomcat web services.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/tomcat">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/tomcat">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-tomcat?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-tomcat/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-tomcat?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-vcsrepo.html">puppetlabs-vcsrepo</a></h3>
+  </div>
+  <div class="col">
+    Puppet module providing a type to manage repositories from various version control systems<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/vcsrepo">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/vcsrepo">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-vcsrepo?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-vcsrepo/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-vcsrepo?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-websphere_application_server.html">puppetlabs-websphere_application_server</a></h3>
+  </div>
+  <div class="col">
+    Manages IBM WebSphere Application Server<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/websphere_application_server">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/websphere_application_server">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-websphere_application_server?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-websphere_application_server/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-websphere_application_server?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Crossplatform<a id="crossplatform"></a></h2>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-concat.html">puppetlabs-concat</a></h3>
+  </div>
+  <div class="col">
+    Construct files from multiple fragments.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/concat">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/concat">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-concat?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-concat?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-concat/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-concat?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-docker.html">puppetlabs-docker</a></h3>
+  </div>
+  <div class="col">
+    Module for installing and managing docker<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/docker">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/docker">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-docker?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-docker?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-docker/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-docker?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-exec.html">puppetlabs-exec</a></h3>
+  </div>
+  <div class="col">
+    Tasks that allows the execution of a command and parameters<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/exec">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/exec">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-exec?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-exec?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-exec/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-exec?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-facter_task.html">puppetlabs-facter_task</a></h3>
+  </div>
+  <div class="col">
+    Tasks that inspect the value of system facts<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/facter_task">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/facter_task">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-facter_task?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-facter_task?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-facter_task/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-facter_task?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-inifile.html">puppetlabs-inifile</a></h3>
+  </div>
+  <div class="col">
+    Resource types for managing settings in INI files<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/inifile">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/inifile">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-inifile?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-inifile?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-inifile/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-inifile?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-java.html">puppetlabs-java</a></h3>
+  </div>
+  <div class="col">
+    Installs the correct Java package on various platforms.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/java">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/java">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-java?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-java?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-java/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-java?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-java_ks.html">puppetlabs-java_ks</a></h3>
+  </div>
+  <div class="col">
+    Manage arbitrary Java keystore files<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/java_ks">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/java_ks">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-java_ks?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-java_ks?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-java_ks/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-java_ks?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-motd.html">puppetlabs-motd</a></h3>
+  </div>
+  <div class="col">
+    A simple module to demonstrate managing /etc/motd or Windows Logon Message as a template<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/motd">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/motd">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-motd?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-motd?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-motd/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-motd?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-package.html">puppetlabs-package</a></h3>
+  </div>
+  <div class="col">
+    Tasks that manipulate a package<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/package">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/package">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-package?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-package?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-package/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-package?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-powershell.html">puppetlabs-powershell</a></h3>
+  </div>
+  <div class="col">
+    Adds a new exec provider for executing PowerShell commands.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/powershell">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/powershell">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-powershell?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-powershell?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-powershell/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-powershell?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-puppet_conf.html">puppetlabs-puppet_conf</a></h3>
+  </div>
+  <div class="col">
+    Tasks that manipulates a puppet configuration file<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/puppet_conf">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/puppet_conf">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-puppet_conf?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-puppet_conf?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-puppet_conf/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-puppet_conf?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-reboot.html">puppetlabs-reboot</a></h3>
+  </div>
+  <div class="col">
+    Adds a type and provider for managing system reboots.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/reboot">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/reboot">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-reboot?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-reboot?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-reboot/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-reboot?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-resource.html">puppetlabs-resource</a></h3>
+  </div>
+  <div class="col">
+    Tasks that lets you inspect resources on a system<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/resource">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/resource">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-resource?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-resource?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-resource/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-resource?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-service.html">puppetlabs-service</a></h3>
+  </div>
+  <div class="col">
+    Tasks that manipulate a service<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/service">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/service">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-service?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-service?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-service/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-service?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Networking<a id="networking"></a></h2>
+  </div>
+</div>
+
+
+
+
+<hr />
+<br />
+
+<div class="row">
+  <div class="col">
+    <h2>Other<a id="other"></a></h2>
+  </div>
+</div>
+
+
+
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/provision.html">provision</a></h3>
+  </div>
+  <div class="col">
+    Provisions and tears down containers / vms / machines through tasks.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/provision">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/provision">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/provision?logo=travis">
+    
+    
+    
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/provision?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-resource_api.html">puppetlabs-resource_api</a></h3>
+  </div>
+  <div class="col">
+    deploy the puppet-resource_api gem across your infrastructure<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/resource_api">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/resource_api">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-resource_api?logo=travis">
+    
+    
+    
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-resource_api?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-stdlib.html">puppetlabs-stdlib</a></h3>
+  </div>
+  <div class="col">
+    Standard library of resources for Puppet modules.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/stdlib">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/stdlib">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-stdlib?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-stdlib?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-stdlib/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-stdlib?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-tagmail.html">puppetlabs-tagmail</a></h3>
+  </div>
+  <div class="col">
+    This module provides a report processor that sends events to email addresses based on tagging of resources<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/tagmail">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/tagmail">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-tagmail?logo=travis">
+    
+    
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-tagmail/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-tagmail?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-translate.html">puppetlabs-translate</a></h3>
+  </div>
+  <div class="col">
+    Puppet module that provides the translate() function for internationalization.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/translate">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/translate">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-translate?logo=travis">
+    
+    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-translate?logo=appveyor" />
+    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-translate/weekly?logo=github" />
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-translate?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-vsphere.html">puppetlabs-vsphere</a></h3>
+  </div>
+  <div class="col">
+    Create and manage machines running on VMWare vSphere with Puppet<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/vsphere">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/vsphere">
+    
+    
+    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-vsphere?logo=travis">
+    
+    
+    
+    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-vsphere?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
+    
+  </div>
+</div>
+<br/>
+
+<div class="row">
+  <div class="col">
+    <h3><a href="/iac/modules/puppetlabs-windows.html">puppetlabs-windows</a></h3>
+  </div>
+  <div class="col">
+    Deprecated collection of Puppet modules for managing Microsoft Windows.<br/>
+    
+    
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/windows">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/windows">
+    
+    
+    
+    
+    
+    
+    
+    
+  </div>
+</div>
+<br/>
+
+<hr />
+<br />
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia-content@puppet.com">ia-content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
