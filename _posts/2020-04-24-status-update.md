@@ -23,7 +23,7 @@ Here's a brief overview of what we've been up to:
 
 [Adrian Iurca][adrian] has joined the IA Content Team recently and this has been the first pass through the Module Triage process. Here's a short description of how this played out in his own words:
 
-* This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community. *
+> This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community.
 
 ## Module approvals and deprecations
 
@@ -35,11 +35,20 @@ Also the [puppet-keepalived](https://github.com/voxpupuli/puppet-keepalived) mod
 
 One thing we are always happy to talk about is the release of a module, in this case:
 
-- [pupptelabs/docker](https://forge.puppet.com/puppetlabs/docker) (v3.10.0)
+- [puppetlabs/docker](https://forge.puppet.com/puppetlabs/docker) (v3.10.0)
 
 ## Continued Work on Puppet DSC
 
-The work done by the team to [refactor DSC support][iac-41] in Puppet has continued with strides being made every day. To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
+The work done by the team to [refactor DSC support][iac-41] in Puppet has continued with strides being made every day.
+
+* Conversion of the build script to a function [almost finished](https://github.com/puppetlabs/PuppetDscBuilder/pull/20).
+* Internal testing found an issue when DSC PowerShell modules would have versions that were not legal Puppet Module versions.
+  [Michael](https://github.com/michaeltlombardi) [fixed it](https://github.com/puppetlabs/PuppetDscBuilder/pull/19).
+  Thanks to [Gene](https://github.com/genebean) for bringing that up.
+  That PR also adds protection for passwords being passed through Puppet.
+* Code cleanup and test coverage is continuing.
+
+To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
 
 - What are the top three PowerShell modules with DSC resources you use/depend on the most?
 - Are you interested in participating in our beta testing program?
@@ -48,16 +57,16 @@ The work done by the team to [refactor DSC support][iac-41] in Puppet has contin
 
 When we talk of community it's not just the issues that they have raised, but also the contributions that they have made, so here's a few of the excellent PRs opened by community members that have been merged in over the last week:
 
-[Finish conversion of `postgresql_password` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161)
-[Finish conversion of `postgresql_escape` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162)
-[Finish conversion of `postgresql_acls_to_resources_hash` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163)
-[(MODULES-8543) Remove nftables' backend warning from iptables_save output](https://github.com/puppetlabs/puppetlabs-firewall/pull/911)
+* [Finish conversion of `postgresql_password` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161)
+* [Finish conversion of `postgresql_escape` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162)
+* [Finish conversion of `postgresql_acls_to_resources_hash` function](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163)
+* [(MODULES-8543) Remove nftables' backend warning from iptables_save output](https://github.com/puppetlabs/puppetlabs-firewall/pull/911)
 
 We would like to thank both [alexjfisher][alexjfisher] and [NITEMAN][NITEMAN] for these contributions and hope to see more from them both in the future.
 
 ## PDK
 
-Currently [PDK][PDK] has shifted sterwardship towards the IA Content Team. More information about this will be comming in the following weeks.
+Currently [PDK][PDK] has shifted sterwardship towards the IA Content Team. More information about this will be coming in the following weeks.
 
 ## Litmus
 
@@ -71,8 +80,6 @@ The final thing that I wish to talk about today is the work finalising our adopt
 
 That's it for this weeks update, a big THANK YOU for all your contributions and support.
 
-[honeycomb]:														https://honeycomb.io/
-[david]:																https://github.com/DavidS
 [daiana]:       												https://github.com/daianamezdrea
 [ciaran]:       												https://github.com/sanfrancrisko
 [iac-41]:       												https://tickets.puppetlabs.com/browse/IAC-41
