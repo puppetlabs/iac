@@ -15,4 +15,4 @@ category: PDK
 ---
 
 This repo has some automation enabled to pull various ticket systems together onto a single board.
-Have a look at the [projects](https://github.com/puppetlabs/pdk-planning/projects) on github to see hwere everything's at.
+Have a look at the [projects](https://github.com/puppetlabs/pdk-planning/projects) on Github to see where everything's at.
