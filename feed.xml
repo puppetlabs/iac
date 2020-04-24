@@ -1,4 +1,65 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-24T02:06:38+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">17th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update.html" rel="alternate" type="text/html" title="17th April 2020: IAC Team Status Update" /><published>2020-04-17T00:00:00+00:00</published><updated>2020-04-17T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update.html">&lt;p&gt;The IAC team has been hard at work over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-24T08:11:38+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">24th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html" rel="alternate" type="text/html" title="24th April 2020: IAC Team Status Update" /><published>2020-04-24T00:00:00+00:00</published><updated>2020-04-24T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html">&lt;p&gt;The IAC team has been working on a couple of interesting things in the past week.
+Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;adrians-first-week-of-triage&quot;&gt;Adrian’s first week of triage&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian Iurca&lt;/a&gt; has joined the IA Content Team recently and this has been the first pass through the Module Triage process. Here’s a short description of how this played out in his own words:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community. *&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;module-approvals-and-deprecations&quot;&gt;Module approvals and deprecations&lt;/h2&gt;
+
+&lt;p&gt;In the past week both the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-azure&quot;&gt;puppetlabs-azure&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-azure_arm&quot;&gt;puppetlabs-azure_arm&lt;/a&gt; have been deprecated.&lt;/p&gt;
+
+&lt;p&gt;Also the &lt;a href=&quot;https://github.com/voxpupuli/puppet-keepalived&quot;&gt;puppet-keepalived&lt;/a&gt; module has been approved.&lt;/p&gt;
+
+&lt;h2 id=&quot;module-releases&quot;&gt;Module Releases&lt;/h2&gt;
+
+&lt;p&gt;One thing we are always happy to talk about is the release of a module, in this case:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/docker&quot;&gt;pupptelabs/docker&lt;/a&gt; (v3.10.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;continued-work-on-puppet-dsc&quot;&gt;Continued Work on Puppet DSC&lt;/h2&gt;
+
+&lt;p&gt;The work done by the team to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;refactor DSC support&lt;/a&gt; in Puppet has continued with strides being made every day. To any community members who would like to be part of our beta testing program, I encourage you to reach out to &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt; with answers to the following questions:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;What are the top three PowerShell modules with DSC resources you use/depend on the most?&lt;/li&gt;
+  &lt;li&gt;Are you interested in participating in our beta testing program?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;When we talk of community it’s not just the issues that they have raised, but also the contributions that they have made, so here’s a few of the excellent PRs opened by community members that have been merged in over the last week:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_password&lt;/code&gt; function&lt;/a&gt;
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_escape&lt;/code&gt; function&lt;/a&gt;
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_acls_to_resources_hash&lt;/code&gt; function&lt;/a&gt;
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/911&quot;&gt;(MODULES-8543) Remove nftables’ backend warning from iptables_save output&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;We would like to thank both &lt;a href=&quot;https://github.com/alexjfisher&quot;&gt;alexjfisher&lt;/a&gt; and &lt;a href=&quot;https://github.com/NITEMAN&quot;&gt;NITEMAN&lt;/a&gt; for these contributions and hope to see more from them both in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;pdk&quot;&gt;PDK&lt;/h2&gt;
+
+&lt;p&gt;Currently &lt;a href=&quot;https://github.com/puppetlabs/pdk&quot;&gt;PDK&lt;/a&gt; has shifted sterwardship towards the IA Content Team. More information about this will be comming in the following weeks.&lt;/p&gt;
+
+&lt;h2 id=&quot;litmus&quot;&gt;Litmus&lt;/h2&gt;
+
+&lt;p&gt;The final thing that I wish to talk about today is the work finalising our adoption of Litmus as a test environment throughout our modules:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot/pull/235&quot;&gt;puppetlabs/reboot&lt;/a&gt; - porting finished, thanks to &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran McCrisken&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-satellite_pe_tools/pull/129&quot;&gt;puppetlabs/satellite_pe_tools&lt;/a&gt; - porting finished, thanks to &lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ibm_installation_manager&quot;&gt;puppetlabs/ibm_installation_manager&lt;/a&gt; - The last module that still needs conversion to use Puppet Litmus.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
+
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="testing" /><category term="dsc" /><category term="pdk" /><category term="powershell" /><category term="windows" /><summary type="html">The IAC team has been working on a couple of interesting things in the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">17th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update.html" rel="alternate" type="text/html" title="17th April 2020: IAC Team Status Update" /><published>2020-04-17T00:00:00+00:00</published><updated>2020-04-17T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/17/status-update.html">&lt;p&gt;The IAC team has been hard at work over the past week.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;the-return-of-paula&quot;&gt;The Return of Paula&lt;/h2&gt;
@@ -891,27 +952,4 @@ Also we would like to thank &lt;a href=&quot;https://github.com/anarcat&quot;&gt
 
 &lt;p&gt;Finally the conversion for using Litmus for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker&quot;&gt;puppetlabs-docker&lt;/a&gt; acceptance testing is ready to be merged in &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/585&quot;&gt;puppetlabs-docker#585&lt;/a&gt;.
 As a result any future pull request to the docker module will also run the acceptance tests using Github Actions hosted runners on Ubuntu 16.04 and Ubuntu 18.04.
-For running acceptance tests on Windows, the provision file of the module contains a item that uses a Windows Vagrant box for testing.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">5th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/05/status-update.html" rel="alternate" type="text/html" title="5th March 2020: IAC Team Status Update" /><published>2020-03-05T00:00:00+00:00</published><updated>2020-03-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/05/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/05/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
-Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
-
-&lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
-
-&lt;p&gt;Over the last week we have released three different modules:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/apt&quot;&gt;puppetlabs/apt&lt;/a&gt; (v7.4.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;puppetlabs/mysql&lt;/a&gt; (v10.4.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/reboot&quot;&gt;puppetlabs/reboot&lt;/a&gt; (v3.0.0)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;customer-escalations&quot;&gt;Customer Escalations&lt;/h2&gt;
-
-&lt;p&gt;Over the past week we have closed out one major piece of customer escalation for the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-350&quot;&gt;mysql&lt;/a&gt; module and we have also begun work on another that has been raised regarding the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-10581&quot;&gt;reboot&lt;/a&gt; module.&lt;/p&gt;
-
-&lt;p&gt;Work has also been started on improvements to the SqlServer module, with multiple issues raised being worked on concurrently, said issues being detailed in the following tickets: &lt;a href=&quot;https://tickets.puppetlabs.com/browse/FM-8879&quot;&gt;FM-8879&lt;/a&gt;, &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-3934&quot;&gt;MODULES-3934&lt;/a&gt; and &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-5071&quot;&gt;MODULES-5071&lt;/a&gt;. Big thanks go out to Bill Hurt for his acceptance in this matter, his advice, guidance and the work he has put in directly have been invaluable.&lt;/p&gt;
-
-&lt;h2 id=&quot;litmus-progress&quot;&gt;Litmus Progress&lt;/h2&gt;
-
-&lt;p&gt;Our work on converting our tests to Litmus has been ongoing with one module, MySQL having been fully converted and another, vSphere being in the process of recieving its final reviews.&lt;/p&gt;
-
-&lt;p&gt;Finally in regards to the progress we made with Docker we are facing some challenges in regards to Windows support but we have made good progress and expect even more in the future, the changes can be seen &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/585&quot;&gt;in this PR&lt;/a&gt;.&lt;/p&gt;</content><author><name>david22swan</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
+For running acceptance tests on Windows, the provision file of the module contains a item that uses a Windows Vagrant box for testing.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
