@@ -8,14 +8,21 @@ permalink: /tools/
 
 {% assign tools_by_category = site.tools | group_by: "category" %}
 
-{% for category in tools_by_category %}
+<ul>
+{% for category in site.tool_categories %}
+<li><a href="#{{ category.name | slugify }}">{{ category.name }}</a></li>
+{% endfor %}
+</ul>
+
+{% for category in site.tool_categories %}
 <div class="row">
   <div class="col">
-    <h2>{{ category.name }}</h2>
+    <h2>{{ category.name }}<a id="{{ category.name | slugify}}"></a></h2>
   </div>
 </div>
 
-{% for tool in category.items %}
+{% assign tools = tools_by_category | where_exp: "entry", "entry.name == category.name" | first %}
+{% for tool in tools.items %}
 <div class="row">
   <div class="col">
     <h3><a href="{{ tool.url | relative_url }}">{{ tool.title }}</a></h3>

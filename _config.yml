@@ -58,6 +58,15 @@ collections:
       - crossplatform.md
       - networking.md
       - other.md
+  # Use this to sort categories in tools.
+  # needs to have a file for every category.
+  tool_categories:
+    output: false
+    order:
+      - litmus.md
+      - resource-api.md
+      - misc-module-tools.md
+      - i18n.md
   modules:
     output: true
   tools:
