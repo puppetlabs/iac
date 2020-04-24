@@ -1,13 +1,13 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-24T08:11:38+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">24th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html" rel="alternate" type="text/html" title="24th April 2020: IAC Team Status Update" /><published>2020-04-24T00:00:00+00:00</published><updated>2020-04-24T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html">&lt;p&gt;The IAC team has been working on a couple of interesting things in the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-04-24T09:24:51+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">24th April 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html" rel="alternate" type="text/html" title="24th April 2020: IAC Team Status Update" /><published>2020-04-24T00:00:00+00:00</published><updated>2020-04-24T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/04/24/status-update.html">&lt;p&gt;The IAC team has been working on a couple of interesting things in the past week.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;adrians-first-week-of-triage&quot;&gt;Adrian’s first week of triage&lt;/h2&gt;
 
 &lt;p&gt;&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian Iurca&lt;/a&gt; has joined the IA Content Team recently and this has been the first pass through the Module Triage process. Here’s a short description of how this played out in his own words:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community. *&lt;/li&gt;
-&lt;/ul&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community.&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;h2 id=&quot;module-approvals-and-deprecations&quot;&gt;Module approvals and deprecations&lt;/h2&gt;
 
@@ -20,12 +20,23 @@ Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 &lt;p&gt;One thing we are always happy to talk about is the release of a module, in this case:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/docker&quot;&gt;pupptelabs/docker&lt;/a&gt; (v3.10.0)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/docker&quot;&gt;puppetlabs/docker&lt;/a&gt; (v3.10.0)&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;continued-work-on-puppet-dsc&quot;&gt;Continued Work on Puppet DSC&lt;/h2&gt;
 
-&lt;p&gt;The work done by the team to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;refactor DSC support&lt;/a&gt; in Puppet has continued with strides being made every day. To any community members who would like to be part of our beta testing program, I encourage you to reach out to &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt; with answers to the following questions:&lt;/p&gt;
+&lt;p&gt;The work done by the team to &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;refactor DSC support&lt;/a&gt; in Puppet has continued with strides being made every day.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Conversion of the build script to a function &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/20&quot;&gt;almost finished&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;Internal testing found an issue when DSC PowerShell modules would have versions that were not legal Puppet Module versions.
+&lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt; &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder/pull/19&quot;&gt;fixed it&lt;/a&gt;.
+Thanks to &lt;a href=&quot;https://github.com/genebean&quot;&gt;Gene&lt;/a&gt; for bringing that up.
+That PR also adds protection for passwords being passed through Puppet.&lt;/li&gt;
+  &lt;li&gt;Code cleanup and test coverage is continuing.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To any community members who would like to be part of our beta testing program, I encourage you to reach out to &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt; with answers to the following questions:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;What are the top three PowerShell modules with DSC resources you use/depend on the most?&lt;/li&gt;
@@ -36,16 +47,18 @@ Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;p&gt;When we talk of community it’s not just the issues that they have raised, but also the contributions that they have made, so here’s a few of the excellent PRs opened by community members that have been merged in over the last week:&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_password&lt;/code&gt; function&lt;/a&gt;
-&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_escape&lt;/code&gt; function&lt;/a&gt;
-&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_acls_to_resources_hash&lt;/code&gt; function&lt;/a&gt;
-&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/911&quot;&gt;(MODULES-8543) Remove nftables’ backend warning from iptables_save output&lt;/a&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_password&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_escape&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_acls_to_resources_hash&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/911&quot;&gt;(MODULES-8543) Remove nftables’ backend warning from iptables_save output&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;We would like to thank both &lt;a href=&quot;https://github.com/alexjfisher&quot;&gt;alexjfisher&lt;/a&gt; and &lt;a href=&quot;https://github.com/NITEMAN&quot;&gt;NITEMAN&lt;/a&gt; for these contributions and hope to see more from them both in the future.&lt;/p&gt;
 
 &lt;h2 id=&quot;pdk&quot;&gt;PDK&lt;/h2&gt;
 
-&lt;p&gt;Currently &lt;a href=&quot;https://github.com/puppetlabs/pdk&quot;&gt;PDK&lt;/a&gt; has shifted sterwardship towards the IA Content Team. More information about this will be comming in the following weeks.&lt;/p&gt;
+&lt;p&gt;Currently &lt;a href=&quot;https://github.com/puppetlabs/pdk&quot;&gt;PDK&lt;/a&gt; has shifted sterwardship towards the IA Content Team. More information about this will be coming in the following weeks.&lt;/p&gt;
 
 &lt;h2 id=&quot;litmus&quot;&gt;Litmus&lt;/h2&gt;
 

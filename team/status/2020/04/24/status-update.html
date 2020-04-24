@@ -66,9 +66,9 @@ Here’s a brief overview of what we’ve been up to:</p>
 
 <p><a href="https://github.com/adrianiurca">Adrian Iurca</a> has joined the IA Content Team recently and this has been the first pass through the Module Triage process. Here’s a short description of how this played out in his own words:</p>
 
-<ul>
-  <li>This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community. *</li>
-</ul>
+<blockquote>
+  <p>This was a good challenge for me and a good opportunity to learn more about Puppet modules. Working with the community is also a cool thing. Looking forward to help people and improve the modules used by community.</p>
+</blockquote>
 
 <h2 id="module-approvals-and-deprecations">Module approvals and deprecations</h2>
 
@@ -81,12 +81,23 @@ Here’s a brief overview of what we’ve been up to:</p>
 <p>One thing we are always happy to talk about is the release of a module, in this case:</p>
 
 <ul>
-  <li><a href="https://forge.puppet.com/puppetlabs/docker">pupptelabs/docker</a> (v3.10.0)</li>
+  <li><a href="https://forge.puppet.com/puppetlabs/docker">puppetlabs/docker</a> (v3.10.0)</li>
 </ul>
 
 <h2 id="continued-work-on-puppet-dsc">Continued Work on Puppet DSC</h2>
 
-<p>The work done by the team to <a href="https://tickets.puppetlabs.com/browse/IAC-41">refactor DSC support</a> in Puppet has continued with strides being made every day. To any community members who would like to be part of our beta testing program, I encourage you to reach out to <a href="mailto:dsc@puppet.com">dsc@puppet.com</a> with answers to the following questions:</p>
+<p>The work done by the team to <a href="https://tickets.puppetlabs.com/browse/IAC-41">refactor DSC support</a> in Puppet has continued with strides being made every day.</p>
+
+<ul>
+  <li>Conversion of the build script to a function <a href="https://github.com/puppetlabs/PuppetDscBuilder/pull/20">almost finished</a>.</li>
+  <li>Internal testing found an issue when DSC PowerShell modules would have versions that were not legal Puppet Module versions.
+<a href="https://github.com/michaeltlombardi">Michael</a> <a href="https://github.com/puppetlabs/PuppetDscBuilder/pull/19">fixed it</a>.
+Thanks to <a href="https://github.com/genebean">Gene</a> for bringing that up.
+That PR also adds protection for passwords being passed through Puppet.</li>
+  <li>Code cleanup and test coverage is continuing.</li>
+</ul>
+
+<p>To any community members who would like to be part of our beta testing program, I encourage you to reach out to <a href="mailto:dsc@puppet.com">dsc@puppet.com</a> with answers to the following questions:</p>
 
 <ul>
   <li>What are the top three PowerShell modules with DSC resources you use/depend on the most?</li>
@@ -97,16 +108,18 @@ Here’s a brief overview of what we’ve been up to:</p>
 
 <p>When we talk of community it’s not just the issues that they have raised, but also the contributions that they have made, so here’s a few of the excellent PRs opened by community members that have been merged in over the last week:</p>
 
-<p><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161">Finish conversion of <code class="highlighter-rouge">postgresql_password</code> function</a>
-<a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162">Finish conversion of <code class="highlighter-rouge">postgresql_escape</code> function</a>
-<a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163">Finish conversion of <code class="highlighter-rouge">postgresql_acls_to_resources_hash</code> function</a>
-<a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/911">(MODULES-8543) Remove nftables’ backend warning from iptables_save output</a></p>
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161">Finish conversion of <code class="highlighter-rouge">postgresql_password</code> function</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162">Finish conversion of <code class="highlighter-rouge">postgresql_escape</code> function</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163">Finish conversion of <code class="highlighter-rouge">postgresql_acls_to_resources_hash</code> function</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/911">(MODULES-8543) Remove nftables’ backend warning from iptables_save output</a></li>
+</ul>
 
 <p>We would like to thank both <a href="https://github.com/alexjfisher">alexjfisher</a> and <a href="https://github.com/NITEMAN">NITEMAN</a> for these contributions and hope to see more from them both in the future.</p>
 
 <h2 id="pdk">PDK</h2>
 
-<p>Currently <a href="https://github.com/puppetlabs/pdk">PDK</a> has shifted sterwardship towards the IA Content Team. More information about this will be comming in the following weeks.</p>
+<p>Currently <a href="https://github.com/puppetlabs/pdk">PDK</a> has shifted sterwardship towards the IA Content Team. More information about this will be coming in the following weeks.</p>
 
 <h2 id="litmus">Litmus</h2>
 
