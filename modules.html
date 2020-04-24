@@ -1,0 +1,55 @@
+---
+layout: page
+title: Modules
+permalink: /modules/
+---
+
+<p>A list of the modules developed and maintained by the IA Content Team.</p>
+
+{% assign modules_by_category = site.modules | group_by: "category" %}
+
+<ul>
+{% for category in site.module_categories %}
+<li><a href="#{{ category.name | slugify}}" />{{ category.name }}</li>
+{% endfor %}
+</ul>
+
+{% for category in site.module_categories %}
+<div class="row">
+  <div class="col">
+    <h2>{{ category.name }}<a id="{{ category.name | slugify}}"></a></h2>
+  </div>
+</div>
+{% if category.name == "Windows" or category.name == "Linux" %}
+<div class="row">
+  See also the <a href="#crossplatform">crossplatform modules</a>.
+</div>
+{% endif %}
+
+{% assign modules = modules_by_category | where_exp: "entry", "entry.name == category.name" | first %}
+{% for module in modules.items %}
+<div class="row">
+  <div class="col">
+    <h3><a href="{{ module.url | relative_url }}">{{ module.title }}</a></h3>
+  </div>
+  <div class="col">
+    {{ module.description }}<br/>
+    {% if module.gem %}<img alt="Gem downloads" src="https://img.shields.io/gem/dt/{{ module.gem }}?logo=rubygems">{% endif %}
+    {% if module.puppet_module %}
+    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/{{ module.puppet_module }}">
+    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/{{ module.puppet_module }}">
+    {% endif %}
+    {% if module.github %}
+    {% if module.travis_org %}<img alt="Travis" src="https://img.shields.io/travis/{{ module.github }}?logo=travis">{% endif %}
+    {% if module.travis_com %}<img alt="Travis" src="https://img.shields.io/travis/com/{{ module.github }}?logo=travis">{% endif %}
+    {% if module.appveyor %}<img alt="Appveyor" src="https://img.shields.io/appveyor/build/{{ module.github }}?logo=appveyor" />{% endif %}
+    {% if module.workflow %}<img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/{{ module.github }}/{{ module.workflow }}?logo=github" />{% endif %}
+    {% if module.codecov_token %}<img alt="Codecov" src="https://img.shields.io/codecov/c/gh/{{ module.github }}?logo=codecov&token={{ module.codecov_token }}">{% endif %}
+    {% endif %}
+  </div>
+</div>
+<br/>
+{% endfor %}
+<hr />
+<br />
+{% endfor %}
