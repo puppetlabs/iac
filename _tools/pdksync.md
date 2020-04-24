@@ -11,5 +11,5 @@ puppet_module: false
 travis_com: false
 travis_org: true
 workflow: false
-category: Misc Module tools
+category: PDK
 ---

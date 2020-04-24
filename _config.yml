@@ -63,6 +63,8 @@ collections:
   tool_categories:
     output: false
     order:
+      - pdk.md
+      - pdk-external.md
       - litmus.md
       - resource-api.md
       - misc-module-tools.md
