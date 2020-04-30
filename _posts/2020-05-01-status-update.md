@@ -40,6 +40,7 @@ Tue, May 5, 2020
 One thing we are always happy to talk about is the release of a module, in this case:
 
 - [puppetlabs/inifile](https://forge.puppet.com/puppetlabs/inifile) (v4.2.0)
+- [puppetlabs/accounts](https://forge.puppet.com/puppetlabs/accounts) (v6.1.1)
 
 ## puppet-modulebuilder Gem 0.2.0 Release
 
@@ -55,7 +56,6 @@ The other big change in the last week was to the underlying provider and type ge
 To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
 
 - What are the top three PowerShell modules with DSC resources you use/depend on the most?
-- Are you interested in participating in our beta testing program?
 
 ## Community Contributions
 
