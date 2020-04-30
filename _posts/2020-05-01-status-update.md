@@ -49,7 +49,7 @@ Thanks a lot to [ekohl](ekohl) for the improvement on puppet-modulebuilder!
 
 ## Continued Work on Puppet DSC
 
-The [Puppet DSC project][iac-41] continues on through phase II, with this week seeing the ability to Puppetize a PowerShell module's DSC resources with a single command (New-PuppetDscModule), as well as improving the output modules themselves, ensuring that their reference documentation and readme are generated.
+The [Puppet DSC project][iac-41] continues on through phase II, with this week seeing the ability to Puppetize a PowerShell module's DSC resources with a single command (`New-PuppetDscModule`), as well as improving the output modules themselves, ensuring that their reference documentation and README are generated.
 The other big change in the last week was to the underlying provider and type generation, improving debuggability and fully mapping embedded CIM instances!
 
 To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
