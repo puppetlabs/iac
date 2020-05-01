@@ -29,9 +29,9 @@ We invite you to join us for an immersive and educational event without the risk
 
 Join us online at [Virtual Puppet Camp Germany][Virtual Puppet Camp Germany] for technical talks from local leaders to level up your Puppet skill.
 
-- Date And Time
-Tue, May 5, 2020
-9:00 AM – 12:30 PM CEST
+- Date And Time:<br/>
+  Tue, May 5, 2020<br/>
+  9:00 AM – 12:30 PM CEST
 
 [Paula Muir][pmcmaw] will be one of the MCs for the Puppet Camp.
 
@@ -46,11 +46,11 @@ One thing we are always happy to talk about is the release of a module, in this 
 
 [puppet-modulebuilder][puppet-modulebuilder] gem, which has now [been released](https://rubygems.org/gems/puppet-modulebuilder/versions/0.2.0)!
 
-Thanks a lot to [ekohl](ekohl) for the improvement on puppet-modulebuilder!
+Thanks a lot to [ekohl][ekohl] for the improvement on puppet-modulebuilder!
 
 ## Continued Work on Puppet DSC
 
-The [Puppet DSC project][iac-41] continues on through phase II, with this week seeing the ability to Puppetize a PowerShell module's DSC resources with a single command (`New-PuppetDscModule`), as well as improving the output modules themselves, ensuring that their reference documentation and README are generated.
+The [Puppet DSC project][iac-41] continues on through phase II, with this week seeing the ability to puppetize a PowerShell module's DSC resources with a single command (`New-PuppetDscModule`), as well as improving the output modules themselves, ensuring that their reference documentation and README are generated.
 The other big change in the last week was to the underlying provider and type generation, improving debuggability and fully mapping embedded CIM instances!
 
 To any community members who would like to be part of our beta testing program, I encourage you to reach out to [dsc@puppet.com](mailto:dsc@puppet.com) with answers to the following questions:
