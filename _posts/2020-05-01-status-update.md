@@ -74,7 +74,7 @@ We would like to thank [Julien Acroute][Vampouille], [Markus Opolka][martialblog
 
 * CampToCamp (now a Service Delivery Partner and always stellar community supporters) have taken over maintenance of [puppet-catalog-diff][puppet-catalog-diff]
 
-* voxpupuli tasks app development - [Tim Meusel][bastelfreak] and team are working on improving the tasks application.
+* voxpupuli tasks app development - [Tim Meusel][bastelfreak] and team are working on improving their [tasks](https://voxpupu.li/) application.
 
   - [Fix broken modulesync detection](https://github.com/voxpupuli/vox-pupuli-tasks/issues/138)
   - [Avoid duplicate comments](https://github.com/voxpupuli/vox-pupuli-tasks/pull/142)
