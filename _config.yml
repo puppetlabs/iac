@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: Puppet IAC Team
-email: ia-content@puppet.com
+email: ia_content@puppet.com
 description: >- # this means to ignore newlines until "baseurl:"
   Team blog and list of maintained tools by and for the Puppet Infrastructure
   Automation Content Team.
