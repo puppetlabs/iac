@@ -45,8 +45,8 @@ A big HORRAY!! and all the best from the team!
 
 Puppet Camp Berlin has come and gone.
 [Paula](https://github.com/pmcmaw) and [Helen](https://github.com/HelenCampbell) did a fantastic job at MC'ing the event.
-Expect the talks to show up on [the YouTube channel](https://www.youtube.com/user/PuppetLabsInc/) in a few days.
-Until then you can pass your time with one of the talks from the Australian or US East camps.
+The talks are available on [the YouTube channel](https://www.youtube.com/user/PuppetLabsInc/).
+You'll also find the talks from the Australian or US East camps there.
 For example, [Automated Testing of your Infracode](https://www.youtube.com/watch?v=iqBzBVTlwWI) by Jesse Reynolds.
 
 Thanks to everyone who contributed, chatted in [Slack](https://slack.puppet.com/), or just was listening in on the talks and learned something!
@@ -63,24 +63,20 @@ To any community members who still would like to be part of our beta testing pro
 
 When we talk of community it's not just the issues that they have raised, but also the contributions that they have made, so here's a few of the excellent PRs opened by community members that have been merged in over the last week:
 
- 
- A clear thank you for [binford2k](https://github.com/binford2k) for these great PRs on the postgresql module:
- - [Mark version param as deprecated in server.pp comments - postgresql](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1168)  
-- [service_ensure => true is now an allowed value (aliased to running) - postgrsql](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1167)  
+A clear thank you for [binford2k](https://github.com/binford2k) for these great PRs on the postgresql module:
+- [Mark version param as deprecated in server.pp comments](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1168)
+- [service_ensure => true is now an allowed value (aliased to running)](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1167)
 
 Another big thank you for [alexjfisher](https://github.com/alexjfisher) on his great contributions to the apache module:
 - [Replace `validate_apache_loglevel` method with data type](https://github.com/puppetlabs/puppetlabs-apache/pull/2023)
-- [Tidy up `pw_hash` function - apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2024)  
-- [Replace legacy `bool2httpd()` function with shim - apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2025)  
+- [Tidy up `pw_hash` function](https://github.com/puppetlabs/puppetlabs-apache/pull/2024)
+- [Replace legacy `bool2httpd()` function with shim](https://github.com/puppetlabs/puppetlabs-apache/pull/2025)
 
 Thank you [zoojar](https://github.com/zoojar) for ensuring consistency on the bootstrap module:
-- [Ensure '$set_noop' is lowercase for consistency - bootstrap](https://github.com/puppetlabs/puppetlabs-bootstrap/pull/141)  
+- [Ensure '$set_noop' is lowercase for consistency](https://github.com/puppetlabs/puppetlabs-bootstrap/pull/141)
 
 Thank you [akerl-unpriv](https://github.com/akerl-unpriv) for this new feature on the firewall module:
 - [Add support for cgroup arg - firewall](https://github.com/puppetlabs/puppetlabs-firewall/pull/916)
-
-
-We would like to thank ... for the contributions and hope to see more from them in the future.
 
 ## Short week
 
