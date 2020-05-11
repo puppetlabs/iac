@@ -63,7 +63,22 @@ To any community members who still would like to be part of our beta testing pro
 
 When we talk of community it's not just the issues that they have raised, but also the contributions that they have made, so here's a few of the excellent PRs opened by community members that have been merged in over the last week:
 
-> TODO
+ 
+ A clear thank you for [binford2k](https://github.com/binford2k) for these great PRs on the postgresql module:
+ - [Mark version param as deprecated in server.pp comments - postgresql](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1168)  
+- [service_ensure => true is now an allowed value (aliased to running) - postgrsql](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1167)  
+
+Another big thank you for [alexjfisher](https://github.com/alexjfisher) on his great contributions to the apache module:
+- [Replace `validate_apache_loglevel` method with data type](https://github.com/puppetlabs/puppetlabs-apache/pull/2023)
+- [Tidy up `pw_hash` function - apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2024)  
+- [Replace legacy `bool2httpd()` function with shim - apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2025)  
+
+Thank you [zoojar](https://github.com/zoojar) for ensuring consistency on the bootstrap module:
+- [Ensure '$set_noop' is lowercase for consistency - bootstrap](https://github.com/puppetlabs/puppetlabs-bootstrap/pull/141)  
+
+Thank you [akerl-unpriv](https://github.com/akerl-unpriv) for this new feature on the firewall module:
+- [Add support for cgroup arg - firewall](https://github.com/puppetlabs/puppetlabs-firewall/pull/916)
+
 
 We would like to thank ... for the contributions and hope to see more from them in the future.
 
