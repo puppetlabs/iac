@@ -1,3 +1,8 @@
+---
+layout: page
+title: Puppet Modules with Github Actions
+---
+
 ## Puppet Modules with Github Actions
  
 ### Current Setup 
