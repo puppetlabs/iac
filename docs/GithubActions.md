@@ -18,6 +18,6 @@ Using a self-hosted runner, in this case, allows Litmus to have access and provi
 
 ![Github Actions - self-hosted runner flowchart with Litmus Actions](Github%20Actions%20Flowchart.jpg)
 
-Each run on the self-hosted runner can be triggered by the team members whenever they do a push to the release branch of a module. Usually it's a fast forward from the master branch before the next release of the module. This definition is controlled by the release workflow you can find in each module repository (.github/workflows/release.yaml). 
+Each run on the self-hosted runner can be triggered by the team members whenever they do a push to the `release` branch of a module. Usually it's a fast forward from the `master` branch before the next release of the module. This definition is controlled by the release workflow you can find in each module repository (`.github/workflows/release.yaml`). 
 
 The weekly workflow (`.github/workflows/weekly.yaml`) has a scheduled trigger that will run the current `master` branch on the self-hosted runner. 
