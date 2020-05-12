@@ -30,6 +30,12 @@ plugins:
   - jekyll-analytics
   - jekyll-sitemap
 
+# settings for minima
+header_pages:
+  - docs.html
+  - modules.html
+  - tools.html
+
 jekyll_analytics:
   GoogleAnalytics:
     id: UA-157301458-1
