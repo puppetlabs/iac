@@ -18,7 +18,7 @@ Here's a brief overview of what we've been up to:
 
 ## COVID-19 
 
-Altough this situation affects all of us, we do our best to continue the good work. We chose to stay home in order to protect the community and stop the spread of the virus. We all miss the office and the chats about the weather next to the coffee machine, but here we have some friends, who are happy that we work remote: 
+Although this situation affects all of us, we do our best to continue the good work. We chose to stay home in order to protect the community and stop the spread of the virus. We all miss the office and the chats about the weather next to the coffee machine, but here we have some friends, who are happy that we work remote:
 
 ![Happy Friends]({% link /assets/2020-03-27-status-update/collage.jpg %})
 
