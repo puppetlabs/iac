@@ -44,7 +44,7 @@ Thanks to [crazymind1337](https://github.com/crazymind1337) for [the great effor
 
 ## New surprises
 
-We added a [docs page](https://github.com/puppetlabs/iac/pull/57), where we will post some of our architecture docs and some “how to” documents that might be helpful in the future.
+We added a [docs page]({% link docs.html %}), where we will post some of our architecture docs and some “how to” documents that might be helpful in the future.
 
 ## Paula continues her way back to Puppet goodies
 
@@ -55,7 +55,7 @@ This is what she said when she was working on puppetlabs-apt release:
 
 Parenting tip
 `#101`:
-*When my kids play up in public I like to yell "Wait untill I tell your mother!" & pretend they are not mine.*
+*When my kids play up in public I like to yell "Wait until I tell your mother!" & pretend they are not mine.*
 Good luck, dear Michael! Enjoy this beautiful time!
 
 
