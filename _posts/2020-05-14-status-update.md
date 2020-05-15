@@ -20,7 +20,7 @@ tags:
 The IAC team has been working on a lot of interesting things over the past week. We want to share with our community some pretty interesting things. Here's a brief overview of what we've been up to:
 
 ## COVID-19 who?
-We don't count anymore the days as a fully remote working team, but we count the days when work hard and with all the energy we have for the best results!
+We don't count anymore the days as a fully remote working team, but we count the days when we work hard and with all the energy we have for the best results!
 `#unstoppableteam #workHard #staysafe #thinkpositive`
 
 ## Module Releases
@@ -44,8 +44,8 @@ Thanks to [crazymind1337](https://github.com/crazymind1337) for [the great effor
 
 ##Paula continues her way back to Puppet goodies
 
-*This is what she said when she was working on puppetlabs-apt release:
-Massive shout out to Danny. I have returned from maternity leave and started working on my first release from I finished up in June 2019 and it is just like magic! The automated generation of the change log, reference documentation and tagging is just brilliant! Has definitely removed one of the biggest pain points when releasing.*
+This is what she said when she was working on puppetlabs-apt release:
+*Massive shout out to Danny. I have returned from maternity leave and started working on my first release from I finished up in June 2019 and it is just like magic! The automated generation of the change log, reference documentation and tagging is just brilliant! Has definitely removed one of the biggest pain points when releasing.*
 
 ##Michael is working hard...with baby Theo
 
@@ -60,15 +60,3 @@ Good luck, dear Michael! Enjoy this beautiful time!
 **Social fridays**
 We all know  that friday is a tough day because the weekend is so close. (The legend says that friday is actually the first day of weekend, but let's keep this secret for us). Social fridays have an incredible success for our team and today we have some special guests.
 The IAC team have inviting our good friends from CIS to join our social hour this weeks.It will be great catching up with old friends. 
-
-
-
-
-
-
-
-
-
-
-
-
