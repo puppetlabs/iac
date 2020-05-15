@@ -1,0 +1,19 @@
+---
+layout: page
+title: Docs
+permalink: /docs/
+---
+
+<p>Here are a couple of interesting and useful documentations.</p>
+
+{% for doc in site.docs %}
+<div class="row">
+  <div class="col">
+      <h3><a href="{{ doc.url | relative_url }}">{{ doc.title }}</a></h3>
+  </div>
+</div>
+<br/>
+{% endfor %}
+<hr />
+<br />
+
