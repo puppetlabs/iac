@@ -59,9 +59,9 @@ The report for our tooling has been using the [same mechanism](https://github.co
 
 ## Making it Possible to Visualize Data
 
-[DavidS](https://github.com/DavidS) has been working hard on making use of [honeycomb](https://honeycomb.io/) to allow us to visualize data on pretty dashboards. Our new dashboard this week will track our migration from VMPooler to ABS. It is super exciting that we can now see dashboards and drill down rather than scrolling through large log files.
+[DavidS](https://github.com/DavidS) has <del>been working hard</del> spent a few more minutes on making use of [honeycomb](https://honeycomb.io/). This week's new query will track our migration from VMPooler to ABS. It is super exciting that we can now see dashboards and drill down rather than scrolling through large log files.
 
-Here you can see when we started rolling out the first changes:
+You can see when we started rolling out the first changes:
 ![A graph comparing 1073 vmpooler calls with 502 ABS calls, which started around the 18th]({% link /assets/2020-05-22-status-update/vmpooler-abs-migration-tracker.png %})
 
 ## Litmus Image Creation
