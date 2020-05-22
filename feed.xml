@@ -1,4 +1,75 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-05-21T17:51:25+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">15st May 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update.html" rel="alternate" type="text/html" title="15st May 2020: IAC Team Status Update" /><published>2020-05-15T00:00:00+00:00</published><updated>2020-05-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update.html">&lt;p&gt;The IAC team has been working on a lot of new things over the past week. We want to share with our community some pretty interesting things. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-05-22T02:07:12+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">22nd May 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/05/22/status-update.html" rel="alternate" type="text/html" title="22nd May 2020: IAC Team Status Update" /><published>2020-05-22T00:00:00+00:00</published><updated>2020-05-22T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/05/22/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/05/22/status-update.html">&lt;p&gt;The IAC team has been working on a lot of new things over the past week. We want to share with our community some pretty interesting things. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;daiana-has-been-made-permanent&quot;&gt;Daiana has been made permanent!&lt;/h2&gt;
+
+&lt;p&gt;We are absolutely delighted to announce our current intern, &lt;a href=&quot;https://github.com/daianamezdrea&quot;&gt;Daiana&lt;/a&gt;, has recently been offered a permanent job role. Daiana has been a major influence on our community reporting tool for when we are triaging PRs and releasing modules. Some of the work Daiana has been carrying out can be viewed &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/22/&quot;&gt;here&lt;/a&gt;. We are so excited that she will be hanging around! We are all looking forward to have a celebratory beverage together at some point in the future.&lt;/p&gt;
+
+&lt;h2 id=&quot;module-releases&quot;&gt;Module Releases&lt;/h2&gt;
+
+&lt;p&gt;Modules released this week:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;puppetlabs/haproxy&lt;/a&gt; (4.2.1)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-motd&quot;&gt;puppetlabs/motd&lt;/a&gt; (4.1.1)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We absolutely love our community contributors, they are always ready to help and they have excellent ideas. Here are some highlights of this week:&lt;/p&gt;
+
+&lt;p&gt;Thank you to Trey Dockendorf for raising an issue on the latest release of the PDK, and to &lt;a href=&quot;https://github.com/scotje&quot;&gt;Jesse Scott&lt;/a&gt; for providing a &lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/883&quot;&gt;fix&lt;/a&gt;. &lt;a href=&quot;https://github.com/DavidS&quot;&gt;DavidS&lt;/a&gt; has now merged this and this fix will make it out in the next release.&lt;/p&gt;
+
+&lt;p&gt;Thank you to &lt;a href=&quot;https://github.com/Wiston999&quot;&gt;Victor Cabezas&lt;/a&gt; for a fantastic PR for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes&quot;&gt;puppetlabs/kubernetes&lt;/a&gt;. Its great to see such attention to detail in a PR from a community member.&lt;/p&gt;
+
+&lt;p&gt;Thank you to &lt;a href=&quot;https://github.com/andeman&quot;&gt;andeman&lt;/a&gt; for contributing to our &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;puppetlabs/mysql&lt;/a&gt; module and providing us with such a great feature.&lt;/p&gt;
+
+&lt;p&gt;Thank you to &lt;a href=&quot;Vadym Chepkov&quot;&gt;https://github.com/vchepkov&lt;/a&gt; for your &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/613&quot;&gt;Docker PR&lt;/a&gt;. Housekeeping on our modules is always beneficial and we really appreciate you taking the time to contribute.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-management-tool&quot;&gt;Community Management Tool&lt;/h2&gt;
+
+&lt;p&gt;We wanted to have all the information about our supported modules in one place. We decided to change the data source of the &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;Community Tool&lt;/a&gt; from a local file called &lt;code class=&quot;highlighter-rouge&quot;&gt;modules.json&lt;/code&gt; to the online available &lt;code class=&quot;highlighter-rouge&quot;&gt;https://puppetlabs.github.io/iac/modules.json&lt;/code&gt; which is generated from the same information that is powering the &lt;a href=&quot;https://puppetlabs.github.io/iac/modules/&quot;&gt;team’s modules page&lt;/a&gt;. You can check the new updates &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/22&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The report for our tooling has been using the &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/12&quot;&gt;same mechanism&lt;/a&gt; since March. We will continue to build all our future automation tooling based on this data set, so that we can update-once-run-everywhere.&lt;/p&gt;
+
+&lt;h2 id=&quot;pdksync-runs&quot;&gt;PDKSync Runs&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; has performed 2 PDKSync runs this week to include generic template updates in our modules and to add Ubuntu 20.04 support. &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny&lt;/a&gt; has been running one to switch our default provisioner from VMPooler to ABS for our weekly and pre-release CI runs. Travis was busy! &lt;code class=&quot;highlighter-rouge&quot;&gt;:D&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;making-it-possible-to-visualize-data&quot;&gt;Making it Possible to Visualize Data&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/DavidS&quot;&gt;DavidS&lt;/a&gt; has &lt;del&gt;been working hard&lt;/del&gt; spent a few more minutes on making use of &lt;a href=&quot;https://honeycomb.io/&quot;&gt;honeycomb&lt;/a&gt;. This week’s new query will track our migration from VMPooler to ABS. It is super exciting that we can now see dashboards and drill down rather than scrolling through large log files.&lt;/p&gt;
+
+&lt;p&gt;You can see when we started rolling out the first changes:
+&lt;img src=&quot;/iac/assets/2020-05-22-status-update/vmpooler-abs-migration-tracker.png&quot; alt=&quot;A graph comparing 1073 vmpooler calls with 502 ABS calls, which started around the 18th&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;litmus-image-creation&quot;&gt;Litmus Image Creation&lt;/h2&gt;
+
+&lt;p&gt;Since the end of 2019 we’re using custom-built &lt;a href=&quot;https://github.com/puppetlabs/litmusimage&quot;&gt;images&lt;/a&gt; to test modules with &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;litmus&lt;/a&gt;. Litmus image creation is now part of the IAC team OS certification process. As part of our work on validating all modules for Ubuntu 20.04, &lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; put in &lt;a href=&quot;https://github.com/puppetlabs/litmusimage/pull/23/files&quot;&gt;a quick PR&lt;/a&gt; to add it to our list of images. Being able to easily create a new Litmus image enables the IAC to team run OS certification test across multiple modules quickly. Great Job &lt;a href=&quot;https://github.com/florindragos&quot;&gt;Florin&lt;/a&gt; on the Litmus image creation scripting.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-iac-team-adapting-to-the-new-norm&quot;&gt;The IAC Team Adapting to the New ‘Norm’&lt;/h2&gt;
+
+&lt;p&gt;Everyone in the team seems to have started adapting to the new ‘norm’ of working from home every day. It seems everyone has started trying out new things. Here are some of the things we have been getting up to:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/DavidS&quot;&gt;DavidS&lt;/a&gt; has been taking Oscar and Miku out walking almost daily, soaking up the lovely views around Belfast and of course playing &lt;a href=&quot;https://factorio.com/&quot;&gt;factorio&lt;/a&gt; for way too long. Can we blame him when confined to the house, lets just refer to it mastering skills online.&lt;/p&gt;
+
+&lt;p&gt;Norman over the past year has had a lot of landscaping carried out in his garden therefore he finds himself spending more time in his garden than before. With the weather we have been having in Belfast recently he would be crazy to miss the opportunity.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; now knows his neighborhood by the back of his hand, has taken up more cooking opportunities at home (he currently has enough Bolognese in his freezer to feed the whole IAC team), is getting a big nostalgia hit playing Streets of Rage 4 online with his mate and has big plans on getting back into playing guitar, it just hasn’t happened yet. Sounds like Ciaran has been doing great at keeping busy!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny&lt;/a&gt; has found himself spending more time chilling out and reading books and when he is not doing that he is ‘fine tuning’ his video gaming skills.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; carries out a vigorous home workout regime on Tuesday, Wednesday and Thursdays. Way to go David, serious commitment there!&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sheenaajay&quot;&gt;Sheena&lt;/a&gt; is currently home schooling 2 lovely girls. Although when they have some down time she is exploring new recipes with them.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/daianamezdrea&quot;&gt;Daiana&lt;/a&gt; has started to do some home workouts and has started eating healthy. I wonder if this is a result of mastering how to bake a perfect lava cake? I also wonder how shipping a lava cake would work!?&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian&lt;/a&gt; has started spending more time soaking up the surrounding views and has taken up some gardening. There is nothing more therapeutic than admiring blooming flowers at this time of the year.&lt;/p&gt;
+
+&lt;p&gt;Finally &lt;a href=&quot;https://github.com/pmcmaw&quot;&gt;me&lt;/a&gt;, In my down time I have been enjoying walks, for a while I collected wild flowers,  pressed them and put them into a frame to remind me of this strange time. I also spend most of my time playing with my 11 month old baby. This ranges from getting paint EVERYWHERE to letting her play in multi colored spaghetti or creating strange toys such as a rain cloud made out of cotton wool, tin foil and plastic bags.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
+
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>pmcmaw</name></author><category term="module updates" /><category term="community" /><category term="testing" /><category term="haproxy" /><category term="motd" /><category term="vmpooler" /><category term="abs" /><category term="pdksync" /><category term="pdk" /><category term="honeycomb" /><category term="kubernetes" /><category term="mysql" /><category term="docker" /><category term="pdksync" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of new things over the past week. We want to share with our community some pretty interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">15st May 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update.html" rel="alternate" type="text/html" title="15st May 2020: IAC Team Status Update" /><published>2020-05-15T00:00:00+00:00</published><updated>2020-05-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/05/15/status-update.html">&lt;p&gt;The IAC team has been working on a lot of new things over the past week. We want to share with our community some pretty interesting things. Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
 &lt;h2 id=&quot;covid-19-who&quot;&gt;COVID-19 who?&lt;/h2&gt;
 &lt;p&gt;We don’t count anymore the days as a fully remote working team, but we count the days when we work hard and with all the energy we have for the best results!
@@ -774,91 +845,4 @@ We’re here to help you get your configuration under control and free you up to
 
 &lt;p&gt;If you just wanna keep an eye on things, you can follow the repository on GitHub and the &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;parent epic in JIRA&lt;/a&gt;!&lt;/p&gt;
 
-&lt;p&gt;Thanks, folx!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="powershell" /><category term="dsc" /><category term="windows" /><summary type="html">As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.</summary></entry><entry><title type="html">27th March 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html" rel="alternate" type="text/html" title="27th March 2020: IAC Team Status Update" /><published>2020-03-27T00:00:00+00:00</published><updated>2020-03-27T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/03/27/status-update.html">&lt;p&gt;The IAC team has been working on a lot of interesting things over the past week.
-Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
-
-&lt;h2 id=&quot;covid-19&quot;&gt;COVID-19&lt;/h2&gt;
-
-&lt;p&gt;Although this situation affects all of us, we do our best to continue the good work. We chose to stay home in order to protect the community and stop the spread of the virus. We all miss the office and the chats about the weather next to the coffee machine, but here we have some friends, who are happy that we work remote:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-03-27-status-update/collage.jpg&quot; alt=&quot;Happy Friends&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Read &lt;a href=&quot;https://puppet.com/blog/covid-19-a-note-for-our-community/&quot;&gt;Puppet’s blog: COVID-19&lt;/a&gt; for the official statement.&lt;/p&gt;
-
-&lt;h2 id=&quot;updates-to-puppet-modules&quot;&gt;Updates to Puppet Modules&lt;/h2&gt;
-
-&lt;p&gt;Over the last week we have released:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/translate&quot;&gt;puppetlabs/translate&lt;/a&gt; (v2.2.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/firewall&quot;&gt;puppetlabs/firewall&lt;/a&gt; (v2.3.0)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;community&quot;&gt;Community&lt;/h2&gt;
-
-&lt;p&gt;Puppet Community was always a part of our team and we always appreciate the contributions you bring.
-Thank you, folks! Here are a few highlights of this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1156&quot;&gt;puppetlabs-postgresql#1156&lt;/a&gt; by &lt;a href=&quot;https://github.com/veninga&quot;&gt;veninga&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/908&quot;&gt;puppetlabs-firewall#908&lt;/a&gt; by &lt;a href=&quot;https://github.com/jbro&quot;&gt;jbro&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1158&quot;&gt;puppetlabs-postgresql#1158&lt;/a&gt; by &lt;a href=&quot;https://github.com/XnS&quot;&gt;XnS&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;We look forward to see your new contributions to Puppet modules.&lt;/p&gt;
-
-&lt;h2 id=&quot;customer-escalations&quot;&gt;Customer Escalations&lt;/h2&gt;
-
-&lt;p&gt;By popular request, the team started work on the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-panos&quot;&gt;Palo Alto Networks module&lt;/a&gt; to add support for virtual systems (check out &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-panos/pull/119&quot;&gt;the PR&lt;/a&gt; for more details).&lt;/p&gt;
-
-&lt;h2 id=&quot;dsc-rework&quot;&gt;DSC Rework&lt;/h2&gt;
-
-&lt;p&gt;We’ve started work on re-architecting and revitalizing our DSC builder (check out &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;IAC-41&lt;/a&gt; for some details!) based on prototype work by &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James Pogran&lt;/a&gt;. In short, this project is aiming to provide a PowerShell module for Puppetizing DSC resources, complete with intellisense, help, and guardrails.
-A bit further out and we’ll have a new namespace on the forge - dsc - where we’ll publish these automatically generated modules as 1:1 matches for the PowerShell modules with DSC resources on the &lt;a href=&quot;https://www.powershellgallery.com/packages&quot;&gt;PowerShellGallery&lt;/a&gt;!
-We’re working hard right now to pull the prototype across the last couple of miles to get an MVP for testing - if you’re interested in beta testing this project with us, please reach out on &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;slack in #windows&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;litmus-progress&quot;&gt;Litmus Progress&lt;/h2&gt;
-
-&lt;p&gt;On &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;Litmus&lt;/a&gt;, the team had a productive week.
-We managed to fix some bugs that you can check out &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/271&quot;&gt;here&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/272&quot;&gt;here&lt;/a&gt;.
-Also, now we are able to capture more information for &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/264&quot;&gt;honeycomb&lt;/a&gt;.
-Part of that is due to the new &lt;a href=&quot;https://github.com/puppetlabs/rspec_honeycomb_formatter&quot;&gt;rspec_honeycomb_formatter&lt;/a&gt; that let’s you post all your examples and results to honeycomb.&lt;/p&gt;
-
-&lt;p&gt;The last few of modules where the acceptance tests need converting to Litmus are now in progress:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/websphere_application_server&quot;&gt;puppetlabs/websphere_application_server&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/satellite_pe_tools&quot;&gt;puppetlabs/satellite_pe_tools&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/reboot&quot;&gt;puppetlabs-reboot&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/ibm_installation_manager&quot;&gt;puppetlabs-ibm_installation_manager&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;If you’re interested in converting a module to Litmus, feel free to get in touch with us during &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;Office Hours&lt;/a&gt; or use the &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/wiki/Converting-a-module-to-use-Litmus&quot;&gt;documentation&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Final litmus note: we did the work already a few weeks ago, but now closed &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-560&quot;&gt;the ticket&lt;/a&gt;: we’re now using the &lt;a href=&quot;https://github.com/puppetlabs/litmusimage&quot;&gt;litmusimage&lt;/a&gt; docker images in all our testing.
-They are regularly autogenerated and accept community contributions.&lt;/p&gt;
-
-&lt;h2 id=&quot;live-from-the-action&quot;&gt;Live from the Action&lt;/h2&gt;
-
-&lt;p&gt;If you want to learn new things or just improve your skills, our team member &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David Schmitt&lt;/a&gt; has a &lt;a href=&quot;https://www.twitch.tv/dev_el_ops&quot;&gt;lot of cookies&lt;/a&gt;.
-You can read about &lt;a href=&quot;https://club.black.co.at/log/posts/2020-03-22-my-new-life-as-streamer/index.html&quot;&gt;his technical setup&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;welcome-to-the-team&quot;&gt;Welcome to the team!&lt;/h2&gt;
-
-&lt;p&gt;We started the week with a new team member. His name is Adrian Iurca and he also loves pets. We are so excited about having you on our team! Good luck and welcome aboard !&lt;/p&gt;
-
-&lt;h2 id=&quot;happy-5-years-work-anniversary-david-schmitt&quot;&gt;Happy 5 years work anniversary, David Schmitt!&lt;/h2&gt;
-
-&lt;p&gt;He has been an essential part of our team’s journey and success. We are grateful for the dedication and passion you have shown. Thank you for being with us. Happy Work Anniversary!&lt;/p&gt;
-
-&lt;h2 id=&quot;other-things&quot;&gt;Other things&lt;/h2&gt;
-
-&lt;p&gt;Today we’ll have our first virtual team lunch.&lt;/p&gt;</content><author><name>daianamezdrea</name></author><category term="module updates" /><category term="community" /><category term="litmus" /><category term="facter" /><category term="testing" /><category term="pdk" /><summary type="html">The IAC team has been working on a lot of interesting things over the past week. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
+&lt;p&gt;Thanks, folx!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="powershell" /><category term="dsc" /><category term="windows" /><summary type="html">As Glenn and I alluded to on the PowerScripting Podcast, our team has been hard at work re-envisioning how we want to present the DSC + Puppet story for our users.</summary></entry></feed>
