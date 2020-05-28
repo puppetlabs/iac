@@ -6,7 +6,7 @@ description: "A set of shared spec helpers specific to Puppetlabs projects."
 appveyor: true
 codecov_token: false
 dependabot: false
-gem: true
+gem: 'puppetlabs_spec_helper'
 puppet_module: false
 travis_com: false
 travis_org: true

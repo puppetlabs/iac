@@ -6,7 +6,7 @@ description: "Syntax checks for Puppet manifests and templates."
 appveyor: false
 codecov_token: false
 dependabot: false
-gem: true
+gem: puppet-syntax
 puppet_module: false
 travis_com: false
 travis_org: true
