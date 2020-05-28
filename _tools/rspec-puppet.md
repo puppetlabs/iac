@@ -6,7 +6,7 @@ description: "RSpec tests for your Puppet manifests."
 appveyor: true
 codecov_token: false
 dependabot: false
-gem: true
+gem: 'rspec-puppet'
 puppet_module: false
 travis_com: false
 travis_org: true

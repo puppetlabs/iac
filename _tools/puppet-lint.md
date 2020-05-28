@@ -6,7 +6,7 @@ description: "Check that your Puppet manifests conform to the style guide."
 appveyor: true
 codecov_token: false
 dependabot: false
-gem: true
+gem: 'puppet-lint'
 puppet_module: false
 travis_com: false
 travis_org: true

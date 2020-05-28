@@ -6,7 +6,7 @@ description: "A Database of OS facts provided by Facter."
 appveyor: false
 codecov_token: false
 dependabot: true
-gem: true
+gem: 'facterdb'
 puppet_module: false
 travis_com: false
 travis_org: true

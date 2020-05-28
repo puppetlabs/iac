@@ -6,7 +6,7 @@ description: "Simplify your unit tests by looping on every supported Operating S
 appveyor: false
 codecov_token: false
 dependabot: true
-gem: true
+gem: 'rspec-puppet-facts'
 puppet_module: false
 travis_com: false
 travis_org: true
