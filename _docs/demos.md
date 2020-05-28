@@ -11,7 +11,7 @@ tags:
   - youtube
 ---
 
-Hello everyone, please take a quick glance at some of recent demos. 
+Hello everyone, please check out some of our recent demos. 
 
 In this demo we take a quick glance at using a custom Terraform provisioner with Puppet Litmus:
 {% youtube 8BMo9DcZ4-Q 800 600 %}
