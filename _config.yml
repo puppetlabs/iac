@@ -20,7 +20,8 @@ description: >- # this means to ignore newlines until "baseurl:"
   Automation Content Team.
 baseurl: "/iac" # the subpath of your site, e.g. /blog
 url: "https://puppetlabs.github.io" # the base hostname & protocol for your site, e.g. http://example.com
-repository: puppetlabs/iac-tools
+repository: puppetlabs/iac
+github_username: puppetlabs
 
 # Build settings
 markdown: kramdown

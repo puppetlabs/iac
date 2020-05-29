@@ -13,11 +13,13 @@ travis_org: false
 workflow: false
 category: Puppet Litmus
 links:
-  - name: Wiki
-    link: https://github.com/puppetlabs/puppet_litmus/wiki
+  - name: Documentation
+    link: https://puppetlabs.github.io/litmus
   - name: docker images
     link: ./litmusimage.html
+  - name: Documentation Repository
+    link: ./litmus-docs.html
 ---
 
-To work with a litmus module, see the [quickstart guide](https://github.com/puppetlabs/puppet_litmus/wiki/Tutorial:-use-Litmus-to-execute-acceptance-tests-with-a-sample-module-(MoTD)).
-To port a beaker test suite to litmus, see the [porting guide](https://github.com/puppetlabs/puppet_litmus/wiki/Converting-a-module-to-use-Litmus).
+To work with a litmus module, see the [quickstart guide](https://puppetlabs.github.io/litmus/Running-acceptance-tests.html).
+To port a beaker test suite to litmus, see the [implementation guide](https://puppetlabs.github.io/litmus/Converting-modules-to-use-Litmus.html).

@@ -121,7 +121,7 @@ It also allows us to push PRs to Github so we can quickly deploy these changes.
 ##### Litmus
 
 Litmus! Litmus is a fantastic resource and probably the most valuable productivity tools that we use day-to-day.
-I encourage you to check out the [Wiki for Litmus](https://github.com/puppetlabs/puppet_litmus) if you're thinking of becoming a module contributor.
+I encourage you to check out the [Docs for Litmus](https://puppetlabs.github.io/litmus/) if you're thinking of becoming a module contributor.
 Litmus is a tool that allows us to quickly set up, execute and tear down a test environment for our modules.
 You can provision your test environment using Docker or Vagrant.
 For the IAC team, we have access to vmpooler, a proprietary tool/API that spins up and tears down virtual machines in our vSphere infrastructure.
