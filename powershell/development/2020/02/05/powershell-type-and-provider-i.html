@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Developing a PowerShell-Dependent Puppet Type &amp; Provider | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="Developing a PowerShell-Dependent Puppet Type &amp; Provider" />
 <meta name="author" content="michaeltlombardi" />
 <meta property="og:locale" content="en_US" />
@@ -63,7 +63,7 @@
   <p>Part One: Basic Functionality</p>
 </blockquote>
 
-<p>Sometimes when managing resources with Puppet you come across a use case that you might initially solve via a few custom <code class="highlighter-rouge">exec</code> resources–
+<p>Sometimes when managing resources with Puppet you come across a use case that you might initially solve via a few custom <code class="language-plaintext highlighter-rouge">exec</code> resources–
 but though this solves your problem in the short run, it doesn’t scale well and leaves a lot of problems around managing reporting and idempotency.
 At a certain point, it becomes advisable to write a type and provider–for more information, check out our <a href="https://learn.puppet.com/course/getting-started-with-the-puppet-resource-api">hands on lab</a>!</p>
 
@@ -93,7 +93,7 @@ What we want to be able to do is put something like this into a manifest, thereb
 
 <ol>
   <li>Open a PowerShell console, perform the rest of these actions from there.</li>
-  <li><code class="highlighter-rouge">pdk new module smb</code>
+  <li><code class="language-plaintext highlighter-rouge">pdk new module smb</code>
     <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdk (INFO): PDK collects anonymous usage information to help us understand how
          it is being used and make decisions on how to improve it. You can
          find out more about what data we collect and how it is used in the
@@ -134,16 +134,16 @@ pdk (INFO): Module 'smb' generated at path 'C:/Users/vagrant/smb', from template
 pdk (INFO): In your module directory, add classes with the 'pdk new class' command.
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">cd smb ; code .</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cd smb ; code .</code></li>
   <li>Update dependencies by editing the following files in VSCode:
     <ul>
-      <li><code class="highlighter-rouge">.fixtures.yml</code>:
+      <li><code class="language-plaintext highlighter-rouge">.fixtures.yml</code>:
         <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">fixtures</span><span class="pi">:</span>
   <span class="na">forge_modules</span><span class="pi">:</span>
     <span class="na">pwshlib</span><span class="pi">:</span> <span class="s2">"</span><span class="s">puppetlabs/pwshlib"</span>
 </code></pre></div>        </div>
       </li>
-      <li><code class="highlighter-rouge">.sync.yml</code> (you’ll need to create this file):
+      <li><code class="language-plaintext highlighter-rouge">.sync.yml</code> (you’ll need to create this file):
         <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">Gemfile</span><span class="pi">:</span>
   <span class="na">optional</span><span class="pi">:</span>
     <span class="s1">'</span><span class="s">:development'</span><span class="pi">:</span>
@@ -154,7 +154,7 @@ pdk (INFO): In your module directory, add classes with the 'pdk new class' comma
   <span class="na">mock_with</span><span class="pi">:</span> <span class="s1">'</span><span class="s">:rspec'</span>
 </code></pre></div>        </div>
       </li>
-      <li><code class="highlighter-rouge">metadata.json</code>:
+      <li><code class="language-plaintext highlighter-rouge">metadata.json</code>:
         <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nl">"dependencies"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
   </span><span class="p">{</span><span class="w">
     </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"puppetlabs/pwshlib"</span><span class="p">,</span><span class="w">
@@ -165,7 +165,7 @@ pdk (INFO): In your module directory, add classes with the 'pdk new class' comma
       </li>
     </ul>
   </li>
-  <li><code class="highlighter-rouge">pdk update</code>
+  <li><code class="language-plaintext highlighter-rouge">pdk update</code>
     <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code> pdk (INFO): Updating michaeltlombardi-smb using the default template, from tags/1.15.0 to 1.15.0
 
  ----------Files to be modified----------
@@ -184,14 +184,14 @@ pdk (INFO): In your module directory, add classes with the 'pdk new class' comma
  2 files modified.
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">pdk new provider smb_share</code>
+  <li><code class="language-plaintext highlighter-rouge">pdk new provider smb_share</code>
     <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdk (INFO): Creating 'C:/Users/vagrant/smb/lib/puppet/provider/smb_share/smb_share.rb' from template.
 pdk (INFO): Creating 'C:/Users/vagrant/smb/lib/puppet/type/smb_share.rb' from template.
 pdk (INFO): Creating 'C:/Users/vagrant/smb/spec/unit/puppet/provider/smb_share/smb_share_spec.rb' from template.
 pdk (INFO): Creating 'C:/Users/vagrant/smb/spec/unit/puppet/type/smb_share_spec.rb' from template.
 </code></pre></div>    </div>
   </li>
-  <li><code class="highlighter-rouge">pdk bundle exec rake spec_prep</code>
+  <li><code class="language-plaintext highlighter-rouge">pdk bundle exec rake spec_prep</code>
     <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdk (INFO): Using Ruby 2.5.7
 pdk (INFO): Using Puppet 6.11.1
 I, [2020-01-17T13:18:26.702383 #1696]  INFO -- : Creating symlink from spec/fixtures/modules/smb to C:\Users\vagrant\smb
@@ -208,11 +208,11 @@ C:/Users/vagrant/smb/spec/fixtures/modules
 
 <h2 id="defining-the-initial-type">Defining the Initial Type</h2>
 
-<p>The type file, <code class="highlighter-rouge">lib/puppet/type/smb_share.rb</code>, requires a little editing.
+<p>The type file, <code class="language-plaintext highlighter-rouge">lib/puppet/type/smb_share.rb</code>, requires a little editing.
 We’ll be adding some documentation and filling out the different properties of the SMB share we want to manage.</p>
 
-<p>Two properties are already provided for us in the <code class="highlighter-rouge">attributes</code> key: <code class="highlighter-rouge">ensure</code> and <code class="highlighter-rouge">name</code>.
-In order to get a minimum viable implementation for our share, we’ll need to implement <code class="highlighter-rouge">path</code> as well.
+<p>Two properties are already provided for us in the <code class="language-plaintext highlighter-rouge">attributes</code> key: <code class="language-plaintext highlighter-rouge">ensure</code> and <code class="language-plaintext highlighter-rouge">name</code>.
+In order to get a minimum viable implementation for our share, we’ll need to implement <code class="language-plaintext highlighter-rouge">path</code> as well.
 Add the following hash to the list of attributes in the type file:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="ss">path: </span><span class="p">{</span>
@@ -232,7 +232,7 @@ For now, this is all we need to add to be able to implement the basic provider f
 
 <h2 id="writing-the-prototype-provider">Writing the Prototype Provider</h2>
 
-<p>The next file we need to look at is the provider, <code class="highlighter-rouge">lib/puppet/provider/smb_share.rb</code>, which is where most of the heavy lifting will happen.</p>
+<p>The next file we need to look at is the provider, <code class="language-plaintext highlighter-rouge">lib/puppet/provider/smb_share.rb</code>, which is where most of the heavy lifting will happen.</p>
 
 <!-- First, at the top of the file _just_ inside the provider class definition (after line 4), we need to confine this provider to only run on Windows machines when the ruby-pwsh library is available:
 
@@ -283,14 +283,14 @@ class Puppet::Provider::SmbShare::SmbShare < Puppet::ResourceApi::SimpleProvider
 <span class="n">invoke_command</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
 </code></pre></div></div>
 
-<p>Here, we declare the commands in a Ruby array and join them with a <code class="highlighter-rouge">|</code>.
+<p>Here, we declare the commands in a Ruby array and join them with a <code class="language-plaintext highlighter-rouge">|</code>.
 This makes it easier for us to modify the commands we need to run without having to manage a huge string that’s hard to read.
 This will return all of the SMB shares on the machine, but there’s a couple problems:</p>
 
 <ol>
   <li>We need to return JSON for easy translation to usable objects in ruby</li>
   <li>We need to add a property for Ensure - right now, we’re missing that third property.
-We could add it either to the <code class="highlighter-rouge">Select-Object statement</code> (as a name-expression hash with a static expression of <code class="highlighter-rouge">'present'</code>) or to ruby afterwards.
+We could add it either to the <code class="language-plaintext highlighter-rouge">Select-Object statement</code> (as a name-expression hash with a static expression of <code class="language-plaintext highlighter-rouge">'present'</code>) or to ruby afterwards.
 For the purpose of this example, we’ll just add it to the Select-Object statement.</li>
 </ol>
 
@@ -310,17 +310,17 @@ For the purpose of this example, we’ll just add it to the Select-Object statem
 <span class="no">Pwsh</span><span class="o">::</span><span class="no">Util</span><span class="p">.</span><span class="nf">symbolize_hash_keys</span><span class="p">(</span><span class="no">Pwsh</span><span class="o">::</span><span class="no">Util</span><span class="p">.</span><span class="nf">snake_case_hash_keys</span><span class="p">(</span><span class="no">JSON</span><span class="p">.</span><span class="nf">parse</span><span class="p">(</span><span class="n">result</span><span class="p">[</span><span class="ss">:stdout</span><span class="p">])))</span>
 </code></pre></div></div>
 
-<p>Notice we added a new <code class="highlighter-rouge">properties</code> variable, in which we declare the properties we want to return on the SMB share and join them with a comma, which is how they’ll need to be passed to <code class="highlighter-rouge">Select-Object</code>.
+<p>Notice we added a new <code class="language-plaintext highlighter-rouge">properties</code> variable, in which we declare the properties we want to return on the SMB share and join them with a comma, which is how they’ll need to be passed to <code class="language-plaintext highlighter-rouge">Select-Object</code>.
 This lets us decouple the properties to select from the command itself and will make things more readable as we add more properties to manage.</p>
 
-<p>We’re also using a helper method (<code class="highlighter-rouge">custom_powershell_property</code>) from the PowerShell gem to create a PowerShell hash representing a custom object property.
+<p>We’re also using a helper method (<code class="language-plaintext highlighter-rouge">custom_powershell_property</code>) from the PowerShell gem to create a PowerShell hash representing a custom object property.
 In this case, it will be:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ensure'</span><span class="err">;</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">"present"</span><span class="p">}}</span><span class="w">
 </span></code></pre></div></div>
 
 <p>It’s important to note that the string passed as the expression is <em>exactly</em> what will be placed in the expression script block;
-without the internal quotes, PowerShell would try to run a command called <code class="highlighter-rouge">present</code> in the scriptlock and fail.</p>
+without the internal quotes, PowerShell would try to run a command called <code class="language-plaintext highlighter-rouge">present</code> in the scriptlock and fail.</p>
 
 <p>For our command, the major changes are that we interpolate the properties list for Select-Object and ensure we convert our output to JSON before passing it back to Ruby.</p>
 
@@ -328,11 +328,11 @@ without the internal quotes, PowerShell would try to run a command called <code 
 The last line of this command is doing a <em>bunch</em> of heavy lifting, so let’s break it down:</p>
 
 <ul>
-  <li><code class="highlighter-rouge">result[:stdout]</code> - this is what we returned from our command pipeline - in this case, we told PowerShell to return us the SMB object with the properties we specified as a JSON string.</li>
-  <li><code class="highlighter-rouge">JSON.parse()</code> - this is the Ruby method for converting from a JSON string to a Ruby hash, loosely analogous to <code class="highlighter-rouge">ConvertFrom-Json</code> in PowerShell.</li>
-  <li><code class="highlighter-rouge">Pwsh::Util.symbolize_hash_keys()</code> - this is a helper method for converting a Ruby hash’s keys from strings <code class="highlighter-rouge">"key_name"</code> to symbols <code class="highlighter-rouge">:key_name</code> which is necessary for returning values in a way that will neatly compare with what our type and provider are expecting.</li>
-  <li><code class="highlighter-rouge">Pwsh::Util.snake_case_hash_keys()</code> - this is another helper method, this one converting a Ruby hash’s keys to a <code class="highlighter-rouge">snake_case</code> from <code class="highlighter-rouge">PascalCase</code>, <code class="highlighter-rouge">camelCase</code>, or <code class="highlighter-rouge">kebab-case</code>.
-As with <code class="highlighter-rouge">symbolize_hash_keys()</code>, this method helps ensure we’re returning a hash that our type/provider can neatly compare to.</li>
+  <li><code class="language-plaintext highlighter-rouge">result[:stdout]</code> - this is what we returned from our command pipeline - in this case, we told PowerShell to return us the SMB object with the properties we specified as a JSON string.</li>
+  <li><code class="language-plaintext highlighter-rouge">JSON.parse()</code> - this is the Ruby method for converting from a JSON string to a Ruby hash, loosely analogous to <code class="language-plaintext highlighter-rouge">ConvertFrom-Json</code> in PowerShell.</li>
+  <li><code class="language-plaintext highlighter-rouge">Pwsh::Util.symbolize_hash_keys()</code> - this is a helper method for converting a Ruby hash’s keys from strings <code class="language-plaintext highlighter-rouge">"key_name"</code> to symbols <code class="language-plaintext highlighter-rouge">:key_name</code> which is necessary for returning values in a way that will neatly compare with what our type and provider are expecting.</li>
+  <li><code class="language-plaintext highlighter-rouge">Pwsh::Util.snake_case_hash_keys()</code> - this is another helper method, this one converting a Ruby hash’s keys to a <code class="language-plaintext highlighter-rouge">snake_case</code> from <code class="language-plaintext highlighter-rouge">PascalCase</code>, <code class="language-plaintext highlighter-rouge">camelCase</code>, or <code class="language-plaintext highlighter-rouge">kebab-case</code>.
+As with <code class="language-plaintext highlighter-rouge">symbolize_hash_keys()</code>, this method helps ensure we’re returning a hash that our type/provider can neatly compare to.</li>
 </ul>
 
 <p>So, if we put this all together for a ruby method to use in our provider, we’ll have:</p>
@@ -358,10 +358,10 @@ As with <code class="highlighter-rouge">symbolize_hash_keys()</code>, this metho
 
 <blockquote>
   <p>Note: We added a comment to tell rubocop, a tool for enforcing ruby style guidelines, to ignore this method’s name.
-In Ruby, methods like <code class="highlighter-rouge">get_smb_share</code> are normally just <code class="highlighter-rouge">smb_share</code> - in this case, it will help PowerShell folx better understand what’s happening, so it makes sense to ignore the rule.</p>
+In Ruby, methods like <code class="language-plaintext highlighter-rouge">get_smb_share</code> are normally just <code class="language-plaintext highlighter-rouge">smb_share</code> - in this case, it will help PowerShell folx better understand what’s happening, so it makes sense to ignore the rule.</p>
 </blockquote>
 
-<p>For now, this is good enough, so we’ll update the <code class="highlighter-rouge">get</code> method in our provider to just call <code class="highlighter-rouge">get_smb_share</code>.</p>
+<p>For now, this is good enough, so we’ll update the <code class="language-plaintext highlighter-rouge">get</code> method in our provider to just call <code class="language-plaintext highlighter-rouge">get_smb_share</code>.</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
   <span class="n">context</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="s1">'Returning discovered SMB shares'</span><span class="p">)</span>
@@ -374,7 +374,7 @@ In Ruby, methods like <code class="highlighter-rouge">get_smb_share</code> are n
 <blockquote>
   <p>Note that we’re using the PDK bundle for development purposes;
 We’re also specifying the modulepath to a special folder in our repository;
-This was created in the set up stage when you ran <code class="highlighter-rouge">pdk bundle exec rake spec_prep</code></p>
+This was created in the set up stage when you ran <code class="language-plaintext highlighter-rouge">pdk bundle exec rake spec_prep</code></p>
 </blockquote>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
@@ -404,7 +404,7 @@ smb_share { 'IPC$':
 
 <p>Retrieving resources from a machine is useful, but not as useful as creating them, so let’s enable that functionality next.</p>
 
-<p>We’ll create a <code class="highlighter-rouge">new_smb_share()</code> method that passes along the arguments we specified to the <code class="highlighter-rouge">New-SmbShare</code> cmdlet:</p>
+<p>We’ll create a <code class="language-plaintext highlighter-rouge">new_smb_share()</code> method that passes along the arguments we specified to the <code class="language-plaintext highlighter-rouge">New-SmbShare</code> cmdlet:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">new_smb_share</span><span class="p">(</span><span class="n">arguments</span><span class="p">)</span>
   <span class="n">arguments</span><span class="p">.</span><span class="nf">reject!</span> <span class="p">{</span> <span class="o">|</span><span class="n">k</span><span class="p">,</span> <span class="n">_v</span><span class="o">|</span> <span class="n">k</span><span class="p">.</span><span class="nf">to_s</span> <span class="o">==</span> <span class="s1">'Ensure'</span> <span class="p">}</span>
@@ -416,25 +416,25 @@ smb_share { 'IPC$':
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>The first thing we do is remove <code class="highlighter-rouge">Ensure</code> from the hash of arguments passed to this method if it exists – since we’re sending that hash to PowerShell for splatting and <code class="highlighter-rouge">New-SmbShare</code> will have <strong>no</strong> idea what to do with an <code class="highlighter-rouge">Ensure</code> parameter, we need to make sure it gets removed.
-The <code class="highlighter-rouge">reject</code> method used here iterates over the <code class="highlighter-rouge">arguments</code> hash for each key-value pair and filters out any pairs which match the condition; in this case, if the key is <code class="highlighter-rouge">Ensure</code>.
+<p>The first thing we do is remove <code class="language-plaintext highlighter-rouge">Ensure</code> from the hash of arguments passed to this method if it exists – since we’re sending that hash to PowerShell for splatting and <code class="language-plaintext highlighter-rouge">New-SmbShare</code> will have <strong>no</strong> idea what to do with an <code class="language-plaintext highlighter-rouge">Ensure</code> parameter, we need to make sure it gets removed.
+The <code class="language-plaintext highlighter-rouge">reject</code> method used here iterates over the <code class="language-plaintext highlighter-rouge">arguments</code> hash for each key-value pair and filters out any pairs which match the condition; in this case, if the key is <code class="language-plaintext highlighter-rouge">Ensure</code>.
 In PowerShell, this is loosely analogous to doing something like:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$Arguments</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$Should</span><span class="w">
 </span><span class="nv">$Arguments</span><span class="o">.</span><span class="nf">Remove</span><span class="p">(</span><span class="s1">'Ensure'</span><span class="p">)</span><span class="w">
 </span></code></pre></div></div>
 
-<p>In the command array we can rely on another utility from the PowerShell gem: <code class="highlighter-rouge">format_powershell_value</code> will convert a Ruby object into an appropriate PowerShell representation.
+<p>In the command array we can rely on another utility from the PowerShell gem: <code class="language-plaintext highlighter-rouge">format_powershell_value</code> will convert a Ruby object into an appropriate PowerShell representation.
 In this case, arguments is a hash and so will be represented as something like:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">KeyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'value'</span><span class="err">;</span><span class="w"> </span><span class="nx">NextKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">1</span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
-<p>We then rely on the hash table we stored in <code class="highlighter-rouge">$Arguments</code> to enable us to do some <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7">splatting</a>.
+<p>We then rely on the hash table we stored in <code class="language-plaintext highlighter-rouge">$Arguments</code> to enable us to do some <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7">splatting</a>.
 Finally, we join these commands with a semi-colon–remember, each invocation against the Manager does <em>not</em> share state with prior ones!</p>
 
-<p>Okay, great, but how do we pass the correct arguments to <code class="highlighter-rouge">new_smb_share</code>?
-We can do that with a little munging in the <code class="highlighter-rouge">create</code> method:</p>
+<p>Okay, great, but how do we pass the correct arguments to <code class="language-plaintext highlighter-rouge">new_smb_share</code>?
+We can do that with a little munging in the <code class="language-plaintext highlighter-rouge">create</code> method:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">create</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">should</span><span class="p">)</span>
   <span class="n">context</span><span class="p">.</span><span class="nf">notice</span><span class="p">(</span><span class="s2">"Creating '</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">' with </span><span class="si">#{</span><span class="n">should</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -452,19 +452,19 @@ We can do that with a little munging in the <code class="highlighter-rouge">crea
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>Note that the create and update methods both specify the <code class="highlighter-rouge">name</code> and something called <code class="highlighter-rouge">should</code>; these are automatically handled and passed by Puppet during a run.
-The <code class="highlighter-rouge">should</code> variable is a Ruby hash representing the parameters specified for a given resource.
+<p>Note that the create and update methods both specify the <code class="language-plaintext highlighter-rouge">name</code> and something called <code class="language-plaintext highlighter-rouge">should</code>; these are automatically handled and passed by Puppet during a run.
+The <code class="language-plaintext highlighter-rouge">should</code> variable is a Ruby hash representing the parameters specified for a given resource.
 So if someone defined a manifest, it would include all of the properties and parameters for the specified SMB share included in that resource declaration.</p>
 
 <p>The notice will show up in the logs of a run, explaining what share is being created and specifying the parameters.</p>
 
-<p>We then pass the arguments hash to a utility function, <code class="highlighter-rouge">pascal_case_hash_keys</code> converts them from the snake_case Ruby prefers to the PascalCase that PowerShell normally prefers;
+<p>We then pass the arguments hash to a utility function, <code class="language-plaintext highlighter-rouge">pascal_case_hash_keys</code> converts them from the snake_case Ruby prefers to the PascalCase that PowerShell normally prefers;
 though our current parameters are all single words, this will help us in the future should we want to specify something like the concurrent user limit on the SMB share.</p>
 
-<p>Once we’ve munged our arguments to be what we need we can pass them to our helper function, <code class="highlighter-rouge">new_smb_share</code>.</p>
+<p>Once we’ve munged our arguments to be what we need we can pass them to our helper function, <code class="language-plaintext highlighter-rouge">new_smb_share</code>.</p>
 
 <p>We can test this code by adding a manifest to our examples folder.
-Create a new file, <code class="highlighter-rouge">examples/basic.pp</code>, and paste the following into it:</p>
+Create a new file, <code class="language-plaintext highlighter-rouge">examples/basic.pp</code>, and paste the following into it:</p>
 
 <div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$share_path</span> <span class="o">=</span> <span class="s2">"C:</span><span class="se">\\</span><span class="s2">smb_share_folder_example_a"</span>
 
@@ -483,7 +483,7 @@ Create a new file, <code class="highlighter-rouge">examples/basic.pp</code>, and
 <blockquote>
   <p>Note that we have to ensure that the directory we will use as the path for the SMB share–if it doesn’t exist, the command will fail.</p>
 
-  <p>Also note that VSCode will present you with a pop up in the bottom right corner asking if you want to add an extension for <code class="highlighter-rouge">.pp</code> files - you <em>absolutely</em> do want to add the <a href="https://puppet-vscode.github.io/">Puppet Extension for VSCode</a> if you’re not already using it; it includes dozens of helpful features to make writing and maintaining Puppet code easier!</p>
+  <p>Also note that VSCode will present you with a pop up in the bottom right corner asking if you want to add an extension for <code class="language-plaintext highlighter-rouge">.pp</code> files - you <em>absolutely</em> do want to add the <a href="https://puppet-vscode.github.io/">Puppet Extension for VSCode</a> if you’re not already using it; it includes dozens of helpful features to make writing and maintaining Puppet code easier!</p>
 </blockquote>
 
 <p>And then we’ll run a command <em>with administrative privileges</em> (needed to create the SMB share) to execute this manifest:</p>
@@ -504,7 +504,7 @@ Notice: Applied catalog in 9.22 seconds
 </code></pre></div></div>
 
 <p>Awesome! We’ve created an SMB share!
-We can even verify this by rerunning the <code class="highlighter-rouge">puppet resource</code> command from earlier:</p>
+We can even verify this by rerunning the <code class="language-plaintext highlighter-rouge">puppet resource</code> command from earlier:</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
@@ -545,7 +545,7 @@ Luckily, removing a share in PowerShell is straightforward:</p>
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>And call it from the <code class="highlighter-rouge">delete()</code> method:</p>
+<p>And call it from the <code class="language-plaintext highlighter-rouge">delete()</code> method:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">delete</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="nb">name</span><span class="p">)</span>
   <span class="n">context</span><span class="p">.</span><span class="nf">notice</span><span class="p">(</span><span class="s2">"Deleting '</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">'"</span><span class="p">)</span>
@@ -554,7 +554,7 @@ Luckily, removing a share in PowerShell is straightforward:</p>
 </code></pre></div></div>
 
 <p>Let’s test our newly updated provider!
-We can use <code class="highlighter-rouge">puppet resource</code> to change the property of a managed resource–in this case, we want to use <code class="highlighter-rouge">ensure=absent</code> to remove the SMB share.
+We can use <code class="language-plaintext highlighter-rouge">puppet resource</code> to change the property of a managed resource–in this case, we want to use <code class="language-plaintext highlighter-rouge">ensure=absent</code> to remove the SMB share.
 Remember, this needs to be run <em>with</em> administrative privileges.</p>
 
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nx">basic_example</span><span class="w"> </span><span class="nx">ensure</span><span class="o">=</span><span class="nf">absent</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules</span><span class="w">
@@ -580,7 +580,7 @@ Go ahead and rerun the manifest to recreate the share and prepare for our next s
 
 <p>While there are <em>better</em> ways to manage updating SMB shares, the <em>easiest</em> is to delete it and recreate it with the appropriate parameters passed through–in fact, this is <em>necessary</em> if you need to change the path of an SMB share.</p>
 
-<p>Luckily, we’ve already written the methods for creating and deleting the share so all we need to do is fill in the <code class="highlighter-rouge">update</code> method:</p>
+<p>Luckily, we’ve already written the methods for creating and deleting the share so all we need to do is fill in the <code class="language-plaintext highlighter-rouge">update</code> method:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="nb">name</span><span class="p">,</span> <span class="n">should</span><span class="p">)</span>
   <span class="n">context</span><span class="p">.</span><span class="nf">notice</span><span class="p">(</span><span class="s2">"Updating '</span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">' with </span><span class="si">#{</span><span class="n">should</span><span class="p">.</span><span class="nf">inspect</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
@@ -590,7 +590,7 @@ Go ahead and rerun the manifest to recreate the share and prepare for our next s
 <span class="k">end</span>
 </code></pre></div></div>
 
-<p>Let’s modify the share path variable to end in <code class="highlighter-rouge">b</code> instead of <code class="highlighter-rouge">a</code>; this will cause Puppet to create a new folder, remove the original SMB share, and create a new one that uses the correct folder.</p>
+<p>Let’s modify the share path variable to end in <code class="language-plaintext highlighter-rouge">b</code> instead of <code class="language-plaintext highlighter-rouge">a</code>; this will cause Puppet to create a new folder, remove the original SMB share, and create a new one that uses the correct folder.</p>
 
 <div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$share_path</span> <span class="o">=</span> <span class="s2">"C:</span><span class="se">\\</span><span class="s2">smb_share_folder_example_b"</span>
 

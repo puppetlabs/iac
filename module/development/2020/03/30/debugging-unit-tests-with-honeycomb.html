@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Debugging unit-tests with Honeycomb | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="Debugging unit-tests with Honeycomb" />
 <meta name="author" content="dev_el_ops" />
 <meta property="og:locale" content="en_US" />
@@ -66,7 +66,7 @@
 # /Users/danielcarabas/.rvm/gems/ruby-2.6.3/gems/rspec_honeycomb_formatter-0.2.0/lib/rspec_honeycomb_formatter.rb:95:in `</span><span class="n">example_pending</span><span class="err">'</span>
 </code></pre></div></div>
 
-<p>That clearly rings a bell, but a trivial try at reproducing this using <code class="highlighter-rouge">pending</code> brought up a weird issue:</p>
+<p>That clearly rings a bell, but a trivial try at reproducing this using <code class="language-plaintext highlighter-rouge">pending</code> brought up a weird issue:</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="no">From</span><span class="p">:</span> <span class="sr">/home/</span><span class="n">david</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">rspec_honeycomb_formatter</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">rspec_honeycomb_formatter</span><span class="p">.</span><span class="nf">rb</span> <span class="err">@</span> <span class="n">line</span> <span class="mi">99</span> <span class="no">RSpecHoneycombFormatter</span><span class="c1">#example_pending:</span>
 
@@ -87,7 +87,7 @@
 
 <p>The class here is not the same as the initial report is complaining about.
 And this does not fail.
-<code class="highlighter-rouge">PendingExampleFailedAsExpectedNotification</code> does have <code class="highlighter-rouge">message_lines</code>.
+<code class="language-plaintext highlighter-rouge">PendingExampleFailedAsExpectedNotification</code> does have <code class="language-plaintext highlighter-rouge">message_lines</code>.
 Since the original report didn’t have any more information attached (and for the sake of the pacing of this blog post) I went to honeycomb to see if other modules were exhibiting the same problem.
 After a couple of clicks this was what I had:</p>
 
@@ -125,10 +125,10 @@ I’m assuming the following clause is the issue:</p>
 
 <p>Putting that into the manual test case quickly confirmed that this was indeed the problem.
 After being able to reproduce this locally, it was a matter of poking pry to figure out what needs to be done about it.
-The <code class="highlighter-rouge">SkippedExampleNotification</code> doesn’t have a <code class="highlighter-rouge">message_lines</code> method, and needs to be handled differently.
+The <code class="language-plaintext highlighter-rouge">SkippedExampleNotification</code> doesn’t have a <code class="language-plaintext highlighter-rouge">message_lines</code> method, and needs to be handled differently.
 The result has been posted in the <a href="https://github.com/puppetlabs/rspec_honeycomb_formatter/pull/10">“Fix missing message_lines method” PR</a> and should be merged and released by the time you read this post.</p>
 
-<p>Finally, to cross-check that this is the only problem we’ve been seeing, I’ve added a <code class="highlighter-rouge">rspec.message does-not-contain SkippedExampleNotification</code> clause to the honeycomb query.
+<p>Finally, to cross-check that this is the only problem we’ve been seeing, I’ve added a <code class="language-plaintext highlighter-rouge">rspec.message does-not-contain SkippedExampleNotification</code> clause to the honeycomb query.
 That new query did not return any results, increasing my confidence in having addressed all currently visible issues with the formatter.</p>
 
   </div><a class="u-url" href="/iac/module/development/2020/03/30/debugging-unit-tests-with-honeycomb.html" hidden></a>

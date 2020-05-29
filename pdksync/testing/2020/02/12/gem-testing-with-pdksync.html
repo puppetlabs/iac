@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Gem Testing with pdksync | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="Gem Testing with pdksync" />
 <meta name="author" content="sheenaajay" />
 <meta property="og:locale" content="en_US" />
@@ -66,10 +66,10 @@
 <h2 id="setup">Setup</h2>
 
 <p>Download a fork of the repo, which can be found here <a href="https://github.com/puppetlabs/pdksync">pdksync</a>. Or you can install via Rubygems, it can be found here <a href="https://rubygems.org/gems/pdksync">pdksync</a>.
-Install gems by using <code class="highlighter-rouge">bundle install</code>.
-Ensure you have a GITHUB_TOKEN set in your env, if you don’t add it by running <code class="highlighter-rouge">export GITHUB_TOKEN=&lt;your github token&gt;</code>, this is required for authentication.
+Install gems by using <code class="language-plaintext highlighter-rouge">bundle install</code>.
+Ensure you have a GITHUB_TOKEN set in your env, if you don’t add it by running <code class="language-plaintext highlighter-rouge">export GITHUB_TOKEN=&lt;your github token&gt;</code>, this is required for authentication.
 Important - Manually edit the list contained in ‘managed_modules.yml’ to ensure it is correct with the modules you wish to update. Please note this is critical as this tool will create PRs against the repos included in this list - you don’t want to run this against a module you aren’t familiar with. Do not proceed to the next step without doing this.
-Run the rake task by using <code class="highlighter-rouge">bundle exec rake pdksync</code>.</p>
+Run the rake task by using <code class="language-plaintext highlighter-rouge">bundle exec rake pdksync</code>.</p>
 
 <h2 id="part-one-functionality-single-gem-testing">Part One: Functionality Single Gem Testing</h2>
 
@@ -110,16 +110,16 @@ bundle <span class="nb">exec </span>rake <span class="s1">'git:create_pr[]'</spa
 </code></pre></div></div>
 
 <p>In Workflow 2 we can clone modules, update the gem file, create the commit, push the changes and create the PR using single rake task</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Using single rake job
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Using single rake job
 bundle install --path .bundle/gems/
 bundle exec rake 'gem_testing[]'
 </code></pre></div></div>
 
-<p>Once the verified gem is released we can use pdksync to update the the new version of gem released in the <code class="highlighter-rouge">.sync.yaml</code> file.</p>
+<p>Once the verified gem is released we can use pdksync to update the the new version of gem released in the <code class="language-plaintext highlighter-rouge">.sync.yaml</code> file.</p>
 
 <h2 id="part-two-functionality-multi-gem-testing">Part Two: Functionality Multi Gem Testing</h2>
 
-<p>pdksync tool is extended with the feature to perform multi gem testing (<code class="highlighter-rouge">puppet-module-gems</code>). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.</p>
+<p>pdksync tool is extended with the feature to perform multi gem testing (<code class="language-plaintext highlighter-rouge">puppet-module-gems</code>). This functionality will identify the current version and bump the version by one. Then it will build and push the gems to gemfury account. Export the GEMFURY_TOKEN to use this rake task.</p>
 
 <div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">export </span><span class="nv">GEMFURY_TOKEN</span><span class="o">=</span>&lt;access_token&gt;
 </code></pre></div></div>

@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>28th Feb 2020: IAC Team Status Update | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="28th Feb 2020: IAC Team Status Update" />
 <meta name="author" content="michaeltlombardi" />
 <meta property="og:locale" content="en_US" />
@@ -73,14 +73,14 @@ Here’s a brief overview of what we’ve been up to:</p>
 
 <h2 id="concurrent-ruby-issues--patch">Concurrent Ruby Issues &amp; Patch</h2>
 
-<p>The <a href="https://tickets.puppetlabs.com/browse/IAC-556">ruby segfault problems in Travis discovered last week</a> now have a <a href="https://github.com/puppetlabs/puppet-module-gems/pull/124/files">bandaid</a>, released in <a href="https://github.com/puppetlabs/puppet-module-gems/blob/master/CHANGELOG.md#044">puppet-module-gems <code class="highlighter-rouge">0.4.4</code></a> - this patch ensures that concurrent-ruby <code class="highlighter-rouge">1.1.6</code> is not installed. This has restored CI functionality for us.</p>
+<p>The <a href="https://tickets.puppetlabs.com/browse/IAC-556">ruby segfault problems in Travis discovered last week</a> now have a <a href="https://github.com/puppetlabs/puppet-module-gems/pull/124/files">bandaid</a>, released in <a href="https://github.com/puppetlabs/puppet-module-gems/blob/master/CHANGELOG.md#044">puppet-module-gems <code class="language-plaintext highlighter-rouge">0.4.4</code></a> - this patch ensures that concurrent-ruby <code class="language-plaintext highlighter-rouge">1.1.6</code> is not installed. This has restored CI functionality for us.</p>
 
 <h2 id="weekly-test-runs">Weekly Test Runs</h2>
 
 <p>Numerous PRs went through this week to ensure 44 modules (all those supported modules which have been converted to Litmus so far) run weekly tests via GitHub Actions.
-These tests run against the master branch executing the full test suite - all of the spec tests and then all of the acceptance tests against the full matrix of operating systems for that module (defined in the <code class="highlighter-rouge">release_checks</code> section of the <code class="highlighter-rouge">provision.yaml</code> for that module).</p>
+These tests run against the master branch executing the full test suite - all of the spec tests and then all of the acceptance tests against the full matrix of operating systems for that module (defined in the <code class="language-plaintext highlighter-rouge">release_checks</code> section of the <code class="language-plaintext highlighter-rouge">provision.yaml</code> for that module).</p>
 
-<p>These results are recorded to the <a href="https://puppetlabs.github.io/community_management/">Community Dashboard</a> in the <code class="highlighter-rouge">Github Actions Report</code> tab, which shows the test results for the last five runs for each workflow and module.
+<p>These results are recorded to the <a href="https://puppetlabs.github.io/community_management/">Community Dashboard</a> in the <code class="language-plaintext highlighter-rouge">Github Actions Report</code> tab, which shows the test results for the last five runs for each workflow and module.
 Right now, these results are recorded fairly simply, listing the run number, the branch the tests ran against, and whether they passed or failed.
 In the future, we will be improving the usefulness of this dashboard in numerous ways, but for now we just wanted a way to get some quick visualization for triage.</p>
 
@@ -93,7 +93,7 @@ We hope this will make keeping up with the available tooling a little easier!</p
 <h2 id="puppet-modulebuilder-gem-010-release">puppet-modulebuilder Gem 0.1.0 Release</h2>
 
 <p>As we mentioned last week, we’ve <a href="https://tickets.puppetlabs.com/browse/IAC-532">been working</a> with the PDE and Night Watch teams at Puppet on the <a href="https://github.com/puppetlabs/puppet-modulebuilder">puppet-modulebuilder</a> gem, which has now <a href="https://rubygems.org/gems/puppet-modulebuilder/versions/0.1.0">been released</a>!
-This will carry the actual functionality for <code class="highlighter-rouge">pdk build</code> and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
+This will carry the actual functionality for <code class="language-plaintext highlighter-rouge">pdk build</code> and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
 A new Litmus release is ongoing to take advantage of this new development!</p>
 
 <p>Thanks a lot to <a href="https://github.com/glennsarti">Glenn Sarti</a> and <a href="https://github.com/florindragos">Florin Dragos</a> for helping out with everything!</p>
@@ -103,7 +103,7 @@ A new Litmus release is ongoing to take advantage of this new development!</p>
 <p>We started doing some prep work this week as <a href="https://github.com/puppetlabs/facter-ng">Facter</a>’s next major update has <a href="https://rubygems.org/gems/facter/versions/4.0.8.pre">become available as prerelease</a>.
 Facter 4 is a return to Ruby from C++ which allows deeper integration with the rest of our modules and test-tooling, and easier hacking on the core facts.
 First we’ve got some checking and verifying to do as this major version rolls out to ensure a smooth experience for everyone.
-If you want to try it out in your module’s unit tests, specify <code class="highlighter-rouge">FACTER_GEM_VERSION='4.0.8.pre'</code> in your environment before any bundle or PDK commands.
+If you want to try it out in your module’s unit tests, specify <code class="language-plaintext highlighter-rouge">FACTER_GEM_VERSION='4.0.8.pre'</code> in your environment before any bundle or PDK commands.
 Let us know in the <a href="https://puppetcommunity.slack.com/archives/C0W1X7ZAL">#puppet-dev</a> channel on the <a href="http://slack.puppet.com/">community slack</a> how it goes.</p>
 
 <p>We should have more on this in the near future, particularly any advice and guidance around what it will mean for you as module developers and consumers - the expected release date is March 11th, 2020!</p>

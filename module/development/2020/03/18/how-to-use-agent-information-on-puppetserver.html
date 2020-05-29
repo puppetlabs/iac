@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>How to use agent-side information on the puppetserver | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="How to use agent-side information on the puppetserver" />
 <meta name="author" content="dev_el_ops" />
 <meta property="og:locale" content="en_US" />
@@ -63,7 +63,7 @@
 
 <blockquote>
   <p>Is there any way like the below in puppet code we can use:</p>
-  <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$var=‘run command locally on agent, if $?=0 echo “present”, else echo “absent”’
+  <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$var=‘run command locally on agent, if $?=0 echo “present”, else echo “absent”’
 if $var == present {
   # my code
 } else {
@@ -85,8 +85,8 @@ described in detail below:</p>
 
 <ul>
   <li>make the decision explicit</li>
-  <li>a <code class="highlighter-rouge">Deferred</code> function call</li>
-  <li>using <code class="highlighter-rouge">onlyif</code> or <code class="highlighter-rouge">unless</code> on an <code class="highlighter-rouge">exec</code> resource</li>
+  <li>a <code class="language-plaintext highlighter-rouge">Deferred</code> function call</li>
+  <li>using <code class="language-plaintext highlighter-rouge">onlyif</code> or <code class="language-plaintext highlighter-rouge">unless</code> on an <code class="language-plaintext highlighter-rouge">exec</code> resource</li>
   <li>a custom fact</li>
   <li>a custom resource</li>
 </ul>
@@ -120,15 +120,15 @@ Having a hard look at what the command is trying to decide and whether this coul
   <li>the computed value is sensitive and should not be transmitted or stored outside the node.</li>
 </ul>
 
-<h2 id="deferred"><code class="highlighter-rouge">Deferred</code></h2>
+<h2 id="deferred"><code class="language-plaintext highlighter-rouge">Deferred</code></h2>
 
 <p><strong>What is it?</strong></p>
 
-<p>The <code class="highlighter-rouge">Deferred</code> function computes a value on the agent everytime the catalog is executed and uses the value immediately in the catalog.</p>
+<p>The <code class="language-plaintext highlighter-rouge">Deferred</code> function computes a value on the agent everytime the catalog is executed and uses the value immediately in the catalog.</p>
 
 <p><strong>Example</strong></p>
 
-<p>The <a href="https://forge.puppet.com/puppet/vault_lookup">puppet/vault_lookup</a> module shows how to use <code class="highlighter-rouge">Deferred</code> with its <code class="highlighter-rouge">vault_lookup::lookup</code> function:</p>
+<p>The <a href="https://forge.puppet.com/puppet/vault_lookup">puppet/vault_lookup</a> module shows how to use <code class="language-plaintext highlighter-rouge">Deferred</code> with its <code class="language-plaintext highlighter-rouge">vault_lookup::lookup</code> function:</p>
 
 <div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$d</span> <span class="o">=</span> <span class="nf">Deferred</span><span class="p">(</span><span class="s1">'vault_lookup::lookup'</span><span class="p">,</span> <span class="p">[</span><span class="s2">"secret/test"</span><span class="p">,</span> <span class="s1">'https://vault.hostname:8200'</span><span class="p">])</span>
 
@@ -160,23 +160,23 @@ Having a hard look at what the command is trying to decide and whether this coul
 <p><strong>Further Reading</strong></p>
 
 <ul>
-  <li><a href="https://puppet.com/docs/puppet/latest/write_a_puppet_function_to_store_secrets.html">Write a Puppet function to store secrets</a>: the original use-case for <code class="highlighter-rouge">Deferred</code></li>
-  <li><a href="http://puppet-on-the-edge.blogspot.com/2018/10/the-topic-is-deferred.html">The Topic is Deferred</a>: blogpost with hints and tricks how to use <code class="highlighter-rouge">Deferred</code></li>
-  <li><a href="https://binford2k.com/2019/11/12/deferred-functions/">Agent Side Functions in Puppet 6</a>: technical deep-dive on how <code class="highlighter-rouge">Deferred</code> works</li>
+  <li><a href="https://puppet.com/docs/puppet/latest/write_a_puppet_function_to_store_secrets.html">Write a Puppet function to store secrets</a>: the original use-case for <code class="language-plaintext highlighter-rouge">Deferred</code></li>
+  <li><a href="http://puppet-on-the-edge.blogspot.com/2018/10/the-topic-is-deferred.html">The Topic is Deferred</a>: blogpost with hints and tricks how to use <code class="language-plaintext highlighter-rouge">Deferred</code></li>
+  <li><a href="https://binford2k.com/2019/11/12/deferred-functions/">Agent Side Functions in Puppet 6</a>: technical deep-dive on how <code class="language-plaintext highlighter-rouge">Deferred</code> works</li>
   <li><a href="https://www.hashicorp.com/resources/agent-side-lookups-with-hashicorp-vault-puppet-6">HashiCorp Vault 🧡 Puppet6 webinar</a>: deferred functions in Puppet 6, which unlocks new authentication methods and workflows for HashiCorp Vault + Puppet setups.</li>
 </ul>
 
-<h2 id="exec-resources"><code class="highlighter-rouge">exec</code> resources</h2>
+<h2 id="exec-resources"><code class="language-plaintext highlighter-rouge">exec</code> resources</h2>
 
 <p><strong>What is it?</strong></p>
 
-<p>The <code class="highlighter-rouge">exec</code> resource has attributes to dynamically decide to run the managed command or not.
-By passing a command to <code class="highlighter-rouge">onlyif</code> or <code class="highlighter-rouge">unless</code> the command is executed <em>only if</em> or <em>unless</em> the condition successfully executes.
-Use <code class="highlighter-rouge">refreshonly</code> to react to another resource being changed.</p>
+<p>The <code class="language-plaintext highlighter-rouge">exec</code> resource has attributes to dynamically decide to run the managed command or not.
+By passing a command to <code class="language-plaintext highlighter-rouge">onlyif</code> or <code class="language-plaintext highlighter-rouge">unless</code> the command is executed <em>only if</em> or <em>unless</em> the condition successfully executes.
+Use <code class="language-plaintext highlighter-rouge">refreshonly</code> to react to another resource being changed.</p>
 
 <p><strong>Example</strong></p>
 
-<p>The <a href="https://forge.puppet.com/puppetlabs/mysql">mysql module</a> has this <code class="highlighter-rouge">exec</code> resource to clean up after installation. This should never run after <code class="highlighter-rouge">${secret_file}</code> has been dealt with.</p>
+<p>The <a href="https://forge.puppet.com/puppetlabs/mysql">mysql module</a> has this <code class="language-plaintext highlighter-rouge">exec</code> resource to clean up after installation. This should never run after <code class="language-plaintext highlighter-rouge">${secret_file}</code> has been dealt with.</p>
 <div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">exec</span> <span class="p">{</span> <span class="s1">'remove install pass'</span><span class="p">:</span>
   <span class="py">command</span> <span class="p">=&gt;</span> <span class="nv">$rm_pass_cmd</span><span class="p">,</span>
   <span class="py">onlyif</span>  <span class="p">=&gt;</span> <span class="s2">"test -f </span><span class="nv">${secret_file}</span><span class="s2">"</span><span class="p">,</span>
@@ -202,7 +202,7 @@ Use <code class="highlighter-rouge">refreshonly</code> to react to another resou
 <p><strong>Further Reading</strong></p>
 
 <ul>
-  <li><a href="https://puppet.com/docs/puppet/latest/types/exec.html">Resource Type: <code class="highlighter-rouge">exec</code></a></li>
+  <li><a href="https://puppet.com/docs/puppet/latest/types/exec.html">Resource Type: <code class="language-plaintext highlighter-rouge">exec</code></a></li>
 </ul>
 
 <h2 id="custom-facts">Custom Facts</h2>
@@ -215,7 +215,7 @@ They can be used to write conditional expressions based on site-specific data th
 
 <p><strong>Example</strong></p>
 
-<p>The apt module has a few <a href="https://github.com/puppetlabs/puppetlabs-apt#facts">custom facts</a>. The <code class="highlighter-rouge">apt_update_last_success</code> fact is used in <a href="https://github.com/puppetlabs/puppetlabs-apt/blob/master/manifests/update.pp">update.pp</a> to decide whether or not it is necessary to update apt caches depending on the various configurations specified.</p>
+<p>The apt module has a few <a href="https://github.com/puppetlabs/puppetlabs-apt#facts">custom facts</a>. The <code class="language-plaintext highlighter-rouge">apt_update_last_success</code> fact is used in <a href="https://github.com/puppetlabs/puppetlabs-apt/blob/master/manifests/update.pp">update.pp</a> to decide whether or not it is necessary to update apt caches depending on the various configurations specified.</p>
 
 <p><strong>Use it …</strong></p>
 

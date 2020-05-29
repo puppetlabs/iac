@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.0.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-05-29T08:24:38+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">29th May 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update.html" rel="alternate" type="text/html" title="29th May 2020: IAC Team Status Update" /><published>2020-05-29T00:00:00+00:00</published><updated>2020-05-29T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update.html">&lt;p&gt;Greetings from the IAC Team - here’s our status update for this week!&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-05-29T08:48:44+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">29th May 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update.html" rel="alternate" type="text/html" title="29th May 2020: IAC Team Status Update" /><published>2020-05-29T00:00:00+00:00</published><updated>2020-05-29T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/05/29/status-update.html">&lt;p&gt;Greetings from the IAC Team - here’s our status update for this week!&lt;/p&gt;
 
 &lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
 &lt;p&gt;Here’s the new releases in the modules this week:&lt;/p&gt;
@@ -22,10 +22,10 @@
 &lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 &lt;p&gt;The wonderful community members that continue to contribute to our modules have provided us with the following enhancements:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/938&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;puppetlabs-apt#938&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/mdklapwijk&quot;&gt;mdklapwijk&lt;/a&gt; added support for https repositories by making use of the &lt;a href=&quot;https://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#ssluse&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;tell-me-what-you-need&lt;/code&gt;&lt;/a&gt; method in &lt;a href=&quot;https://wiki.debian.org/AptCacherNg&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;apt-cacher-ng&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/412&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;puppetlabs-kubernetes#412&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; A HUGE number of improvements from &lt;a href=&quot;https://github.com/Wiston999&quot;&gt;Wiston999&lt;/a&gt;. Check out &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/412&quot;&gt;the PR&lt;/a&gt; for all the details.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2033&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;puppetlabs-apache#2033&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/thechristschn&quot;&gt;thechristschn&lt;/a&gt; enhanced the &lt;code class=&quot;highlighter-rouge&quot;&gt;proxy_protocol_exceptions&lt;/code&gt; param in &lt;code class=&quot;highlighter-rouge&quot;&gt;mod_remoteip&lt;/code&gt; to accept IPv6 addresses in CIDR notation.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/429&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;puppetlabs-java#429&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/fraenki&quot;&gt;fraenki&lt;/a&gt; made an enhacement to allow management of symlinks in the &lt;code class=&quot;highlighter-rouge&quot;&gt;java::adopt&lt;/code&gt; defined type.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/938&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#938&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/mdklapwijk&quot;&gt;mdklapwijk&lt;/a&gt; added support for https repositories by making use of the &lt;a href=&quot;https://www.unix-ag.uni-kl.de/~bloch/acng/html/howtos.html#ssluse&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tell-me-what-you-need&lt;/code&gt;&lt;/a&gt; method in &lt;a href=&quot;https://wiki.debian.org/AptCacherNg&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apt-cacher-ng&lt;/code&gt;&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/412&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#412&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; A HUGE number of improvements from &lt;a href=&quot;https://github.com/Wiston999&quot;&gt;Wiston999&lt;/a&gt;. Check out &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/412&quot;&gt;the PR&lt;/a&gt; for all the details.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2033&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2033&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/thechristschn&quot;&gt;thechristschn&lt;/a&gt; enhanced the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;proxy_protocol_exceptions&lt;/code&gt; param in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_remoteip&lt;/code&gt; to accept IPv6 addresses in CIDR notation.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/429&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java#429&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/fraenki&quot;&gt;fraenki&lt;/a&gt; made an enhacement to allow management of symlinks in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;java::adopt&lt;/code&gt; defined type.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/mdklapwijk&quot;&gt;mdklapwijk&lt;/a&gt;, &lt;a href=&quot;https://github.com/Wiston999&quot;&gt;Wiston999&lt;/a&gt;, &lt;a href=&quot;https://github.com/thechristschn&quot;&gt;thechristschn&lt;/a&gt; and &lt;a href=&quot;https://github.com/fraenki&quot;&gt;fraenki&lt;/a&gt; for your excellent contributions!&lt;/p&gt;
@@ -39,7 +39,7 @@ Check out the videos on our new &lt;a href=&quot;/iac/docs/demos.html&quot;&gt;d
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;puppetdscbuilder-beta-testing&quot;&gt;PuppetDSCBuilder Beta Testing&lt;/h2&gt;
-&lt;p&gt;It has been greatly encouraging to see a number of people signed up to be early adopters of the &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;PuppetDSCBuilder&lt;/code&gt;&lt;/a&gt; project.
+&lt;p&gt;It has been greatly encouraging to see a number of people signed up to be early adopters of the &lt;a href=&quot;https://github.com/puppetlabs/PuppetDscBuilder&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PuppetDSCBuilder&lt;/code&gt;&lt;/a&gt; project.
 We just had another sign up this week!
 If you’re heavily involved in Windows admin, Powershell and DSC, check out the &lt;a href=&quot;/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;previous blog post&lt;/a&gt; from &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt; which outlines the functionality and how to get in touch with us to participate!&lt;/p&gt;
 
@@ -72,13 +72,13 @@ To our Romanian IAC team members (&lt;a href=&quot;https://github.com/carabasdan
 
 &lt;h2 id=&quot;community-management-tool&quot;&gt;Community Management Tool&lt;/h2&gt;
 
-&lt;p&gt;We wanted to have all the information about our supported modules in one place. We decided to change the data source of the &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;Community Tool&lt;/a&gt; from a local file called &lt;code class=&quot;highlighter-rouge&quot;&gt;modules.json&lt;/code&gt; to the online available &lt;code class=&quot;highlighter-rouge&quot;&gt;https://puppetlabs.github.io/iac/modules.json&lt;/code&gt; which is generated from the same information that is powering the &lt;a href=&quot;https://puppetlabs.github.io/iac/modules/&quot;&gt;team’s modules page&lt;/a&gt;. You can check the new updates &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/22&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We wanted to have all the information about our supported modules in one place. We decided to change the data source of the &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;Community Tool&lt;/a&gt; from a local file called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;modules.json&lt;/code&gt; to the online available &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;https://puppetlabs.github.io/iac/modules.json&lt;/code&gt; which is generated from the same information that is powering the &lt;a href=&quot;https://puppetlabs.github.io/iac/modules/&quot;&gt;team’s modules page&lt;/a&gt;. You can check the new updates &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/22&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;The report for our tooling has been using the &lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/12&quot;&gt;same mechanism&lt;/a&gt; since March. We will continue to build all our future automation tooling based on this data set, so that we can update-once-run-everywhere.&lt;/p&gt;
 
 &lt;h2 id=&quot;pdksync-runs&quot;&gt;PDKSync Runs&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; has performed 2 PDKSync runs this week to include generic template updates in our modules and to add Ubuntu 20.04 support. &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny&lt;/a&gt; has been running one to switch our default provisioner from VMPooler to ABS for our weekly and pre-release CI runs. Travis was busy! &lt;code class=&quot;highlighter-rouge&quot;&gt;:D&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; has performed 2 PDKSync runs this week to include generic template updates in our modules and to add Ubuntu 20.04 support. &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny&lt;/a&gt; has been running one to switch our default provisioner from VMPooler to ABS for our weekly and pre-release CI runs. Travis was busy! &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:D&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;making-it-possible-to-visualize-data&quot;&gt;Making it Possible to Visualize Data&lt;/h2&gt;
 
@@ -119,7 +119,7 @@ To our Romanian IAC team members (&lt;a href=&quot;https://github.com/carabasdan
 
 &lt;h2 id=&quot;covid-19-who&quot;&gt;COVID-19 who?&lt;/h2&gt;
 &lt;p&gt;We don’t count anymore the days as a fully remote working team, but we count the days when we work hard and with all the energy we have for the best results!
-&lt;code class=&quot;highlighter-rouge&quot;&gt;#unstoppableteam #workHard #staysafe #thinkpositive&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#unstoppableteam #workHard #staysafe #thinkpositive&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;module-releases&quot;&gt;Module Releases&lt;/h2&gt;
 
@@ -143,8 +143,8 @@ To our Romanian IAC team members (&lt;a href=&quot;https://github.com/carabasdan
 
 &lt;p&gt;We think that is no doubt about our community contributors, they are always ready to help and they have excellent ideas. Here are some highlights of this week:&lt;/p&gt;
 
-&lt;p&gt;Thank you to &lt;a href=&quot;https://github.com/akerl-unpriv&quot;&gt;akerl-unpriv&lt;/a&gt; for his contribution to the &lt;a href=&quot;https://github.com/puppetlabs-firewall&quot;&gt;puppetlabs-firewall&lt;/a&gt; module. We now have support for the &lt;code class=&quot;highlighter-rouge&quot;&gt;cgroup&lt;/code&gt; flag in iptables.
-Thanks to &lt;a href=&quot;https://github.com/crazymind1337&quot;&gt;crazymind1337&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/607&quot;&gt;the great effort&lt;/a&gt; cleaning up the &lt;code class=&quot;highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt; repo. It’s fantastic to see the open source community committed to keeping the standard high.&lt;/p&gt;
+&lt;p&gt;Thank you to &lt;a href=&quot;https://github.com/akerl-unpriv&quot;&gt;akerl-unpriv&lt;/a&gt; for his contribution to the &lt;a href=&quot;https://github.com/puppetlabs-firewall&quot;&gt;puppetlabs-firewall&lt;/a&gt; module. We now have support for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cgroup&lt;/code&gt; flag in iptables.
+Thanks to &lt;a href=&quot;https://github.com/crazymind1337&quot;&gt;crazymind1337&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/607&quot;&gt;the great effort&lt;/a&gt; cleaning up the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt; repo. It’s fantastic to see the open source community committed to keeping the standard high.&lt;/p&gt;
 
 &lt;h2 id=&quot;new-surprises&quot;&gt;New surprises&lt;/h2&gt;
 
@@ -158,7 +158,7 @@ Thanks to &lt;a href=&quot;https://github.com/crazymind1337&quot;&gt;crazymind13
 &lt;h2 id=&quot;michael-is-working-hardwith-baby-theo&quot;&gt;Michael is working hard…with baby Theo&lt;/h2&gt;
 
 &lt;p&gt;Parenting tip
-&lt;code class=&quot;highlighter-rouge&quot;&gt;#101&lt;/code&gt;:
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#101&lt;/code&gt;:
 &lt;em&gt;When my kids play up in public I like to yell “Wait until I tell your mother!” &amp;amp; pretend they are not mine.&lt;/em&gt;
 Good luck, dear Michael! Enjoy this beautiful time!&lt;/p&gt;
 
@@ -224,9 +224,9 @@ For example, &lt;a href=&quot;https://www.youtube.com/watch?v=iqBzBVTlwWI&quot;&
 
 &lt;p&gt;Another big thank you for &lt;a href=&quot;https://github.com/alexjfisher&quot;&gt;alexjfisher&lt;/a&gt; on his great contributions to the apache module:&lt;/p&gt;
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2023&quot;&gt;Replace &lt;code class=&quot;highlighter-rouge&quot;&gt;validate_apache_loglevel&lt;/code&gt; method with data type&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2024&quot;&gt;Tidy up &lt;code class=&quot;highlighter-rouge&quot;&gt;pw_hash&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2025&quot;&gt;Replace legacy &lt;code class=&quot;highlighter-rouge&quot;&gt;bool2httpd()&lt;/code&gt; function with shim&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2023&quot;&gt;Replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;validate_apache_loglevel&lt;/code&gt; method with data type&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2024&quot;&gt;Tidy up &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pw_hash&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2025&quot;&gt;Replace legacy &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bool2httpd()&lt;/code&gt; function with shim&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Thank you &lt;a href=&quot;https://github.com/zoojar&quot;&gt;zoojar&lt;/a&gt; for ensuring consistency on the bootstrap module:&lt;/p&gt;
@@ -290,7 +290,7 @@ Tue, May 5, 2020&lt;br /&gt;
 
 &lt;h2 id=&quot;continued-work-on-puppet-dsc&quot;&gt;Continued Work on Puppet DSC&lt;/h2&gt;
 
-&lt;p&gt;The &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;Puppet DSC project&lt;/a&gt; continues on through phase II, with this week seeing the ability to puppetize a PowerShell module’s DSC resources with a single command (&lt;code class=&quot;highlighter-rouge&quot;&gt;New-PuppetDscModule&lt;/code&gt;), as well as improving the output modules themselves, ensuring that their reference documentation and README are generated.
+&lt;p&gt;The &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-41&quot;&gt;Puppet DSC project&lt;/a&gt; continues on through phase II, with this week seeing the ability to puppetize a PowerShell module’s DSC resources with a single command (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;New-PuppetDscModule&lt;/code&gt;), as well as improving the output modules themselves, ensuring that their reference documentation and README are generated.
 The other big change in the last week was to the underlying provider and type generation, improving debuggability and fully mapping embedded CIM instances!&lt;/p&gt;
 
 &lt;p&gt;To any community members who would like to be part of our beta testing program, I encourage you to reach out to &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;dsc@puppet.com&lt;/a&gt; with answers to the following questions:&lt;/p&gt;
@@ -400,9 +400,9 @@ That PR also adds protection for passwords being passed through Puppet.&lt;/li&g
 &lt;p&gt;When we talk of community it’s not just the issues that they have raised, but also the contributions that they have made, so here’s a few of the excellent PRs opened by community members that have been merged in over the last week:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_password&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_escape&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163&quot;&gt;Finish conversion of &lt;code class=&quot;highlighter-rouge&quot;&gt;postgresql_acls_to_resources_hash&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1161&quot;&gt;Finish conversion of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgresql_password&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1162&quot;&gt;Finish conversion of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgresql_escape&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1163&quot;&gt;Finish conversion of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgresql_acls_to_resources_hash&lt;/code&gt; function&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/911&quot;&gt;(MODULES-8543) Remove nftables’ backend warning from iptables_save output&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
@@ -517,11 +517,11 @@ Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 This week, we want to take a moment to highlight a few PRs and the people behind them!&lt;/p&gt;
 
 &lt;p&gt;First up, a &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/562&quot;&gt;pull request to the puppetlabs/docker module&lt;/a&gt; by &lt;a href=&quot;https://github.com/seriv&quot;&gt;Sergey Ivanov&lt;/a&gt;.
-Sergey’s work enabled the module to function transparently on RedHat systems utilizing the &lt;a href=&quot;https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users/&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;podman-docker&lt;/code&gt; package!&lt;/a&gt;.
+Sergey’s work enabled the module to function transparently on RedHat systems utilizing the &lt;a href=&quot;https://developers.redhat.com/blog/2019/02/21/podman-and-buildah-for-docker-users/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;podman-docker&lt;/code&gt; package!&lt;/a&gt;.
 Thank you, Sergey!&lt;/p&gt;
 
 &lt;p&gt;We’d like to thank &lt;a href=&quot;https://github.com/amorphina&quot;&gt;Atanas Stoyanov&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2017&quot;&gt;his fix to the Apache module&lt;/a&gt;.
-This PR ensures that the custom ldap options in &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/apache2/mods&lt;/code&gt; can actually be applied and loaded, fixing a previously unknown bug!
+This PR ensures that the custom ldap options in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;/etc/apache2/mods&lt;/code&gt; can actually be applied and loaded, fixing a previously unknown bug!
 Thank you, Atanas!&lt;/p&gt;
 
 &lt;p&gt;Finally, big Thanks to &lt;a href=&quot;https://github.com/fraenki&quot;&gt;Frank Wall&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1245&quot;&gt;his PR&lt;/a&gt; that will fix &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-10023&quot;&gt;MODULES-10023&lt;/a&gt;, ensuring that the xtrabackup functionality in &lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;puppetlabs/mysql&lt;/a&gt; actually works as intended!
@@ -704,7 +704,7 @@ Check out &lt;a href=&quot;https://github.com/DavidS&quot;&gt;dev_el_ops’s&lt;
 # /Users/danielcarabas/.rvm/gems/ruby-2.6.3/gems/rspec_honeycomb_formatter-0.2.0/lib/rspec_honeycomb_formatter.rb:95:in `&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;example_pending&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;'&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;That clearly rings a bell, but a trivial try at reproducing this using &lt;code class=&quot;highlighter-rouge&quot;&gt;pending&lt;/code&gt; brought up a weird issue:&lt;/p&gt;
+&lt;p&gt;That clearly rings a bell, but a trivial try at reproducing this using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pending&lt;/code&gt; brought up a weird issue:&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;From&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;sr&quot;&gt;/home/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;david&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;git&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rspec_honeycomb_formatter&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;lib&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;rspec_honeycomb_formatter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;rb&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;@&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;line&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;99&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;RSpecHoneycombFormatter&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;#example_pending:&lt;/span&gt;
 
@@ -725,7 +725,7 @@ Check out &lt;a href=&quot;https://github.com/DavidS&quot;&gt;dev_el_ops’s&lt;
 
 &lt;p&gt;The class here is not the same as the initial report is complaining about.
 And this does not fail.
-&lt;code class=&quot;highlighter-rouge&quot;&gt;PendingExampleFailedAsExpectedNotification&lt;/code&gt; does have &lt;code class=&quot;highlighter-rouge&quot;&gt;message_lines&lt;/code&gt;.
+&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PendingExampleFailedAsExpectedNotification&lt;/code&gt; does have &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message_lines&lt;/code&gt;.
 Since the original report didn’t have any more information attached (and for the sake of the pacing of this blog post) I went to honeycomb to see if other modules were exhibiting the same problem.
 After a couple of clicks this was what I had:&lt;/p&gt;
 
@@ -763,8 +763,8 @@ I’m assuming the following clause is the issue:&lt;/p&gt;
 
 &lt;p&gt;Putting that into the manual test case quickly confirmed that this was indeed the problem.
 After being able to reproduce this locally, it was a matter of poking pry to figure out what needs to be done about it.
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;SkippedExampleNotification&lt;/code&gt; doesn’t have a &lt;code class=&quot;highlighter-rouge&quot;&gt;message_lines&lt;/code&gt; method, and needs to be handled differently.
+The &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;SkippedExampleNotification&lt;/code&gt; doesn’t have a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message_lines&lt;/code&gt; method, and needs to be handled differently.
 The result has been posted in the &lt;a href=&quot;https://github.com/puppetlabs/rspec_honeycomb_formatter/pull/10&quot;&gt;“Fix missing message_lines method” PR&lt;/a&gt; and should be merged and released by the time you read this post.&lt;/p&gt;
 
-&lt;p&gt;Finally, to cross-check that this is the only problem we’ve been seeing, I’ve added a &lt;code class=&quot;highlighter-rouge&quot;&gt;rspec.message does-not-contain SkippedExampleNotification&lt;/code&gt; clause to the honeycomb query.
+&lt;p&gt;Finally, to cross-check that this is the only problem we’ve been seeing, I’ve added a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec.message does-not-contain SkippedExampleNotification&lt;/code&gt; clause to the honeycomb query.
 That new query did not return any results, increasing my confidence in having addressed all currently visible issues with the formatter.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="modules" /><category term="CI" /><category term="debugging" /><category term="testing" /><category term="honeycomb" /><summary type="html">Since last week we’re collecting unit-test results and acceptance test runs in honeycomb, a tool for introspecting and interrogating production systems. In our team’s case, CI is the “production” environment we manage. Today Daniel pointed out that there was a curious issue with one of our test suites:</summary></entry></feed>

@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>21st Feb 2020: IAC Team Status Update | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.0.1" />
+<meta name="generator" content="Jekyll v4.1.0" />
 <meta property="og:title" content="21st Feb 2020: IAC Team Status Update" />
 <meta name="author" content="dev_el_ops" />
 <meta property="og:locale" content="en_US" />
@@ -93,7 +93,7 @@ Here’s a brief overview of what we’ve been up to:</p>
 <h2 id="new-puppet-modulebuilder-gem">New puppet-modulebuilder Gem</h2>
 
 <p>Work <a href="https://tickets.puppetlabs.com/browse/IAC-532">has started</a> on creating a <a href="https://github.com/puppetlabs/puppet-modulebuilder">puppet-modulebuilder</a> gem.
-This will carry the actual functionality for <code class="highlighter-rouge">pdk build</code> and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
+This will carry the actual functionality for <code class="language-plaintext highlighter-rouge">pdk build</code> and allow third-party tools to re-use the same functionality without having to pull in the whole PDK.
 We expect a first release early next week.
 Follow <a href="https://tickets.puppetlabs.com/browse/IAC-552">IAC-552</a> to get a notification when that happens.</p>
 
@@ -101,7 +101,7 @@ Follow <a href="https://tickets.puppetlabs.com/browse/IAC-552">IAC-552</a> to ge
 
 <h2 id="ongoing-litmus-conversions">Ongoing Litmus Conversions</h2>
 
-<p>This week saw a flurry of PRs (through <a href="https://github.com/puppetlabs/pdksync">pdksync</a>) to <a href="https://tickets.puppetlabs.com/browse/IAC-215">update all our modules</a> to use the new <code class="highlighter-rouge">use_litmus</code> support in <a href="https://github.com/puppetlabs/pdk-templates">pdk-templates</a>.
+<p>This week saw a flurry of PRs (through <a href="https://github.com/puppetlabs/pdksync">pdksync</a>) to <a href="https://tickets.puppetlabs.com/browse/IAC-215">update all our modules</a> to use the new <code class="language-plaintext highlighter-rouge">use_litmus</code> support in <a href="https://github.com/puppetlabs/pdk-templates">pdk-templates</a>.
 This reduces the amount of configuration we need to carry in each module and validates the pdk-templates feature.</p>
 
 <p>As expected, the last remaining modules to convert to <a href="https://github.com/puppetlabs/puppet_litmus">Litmus</a> were the ones we didn’t want to touch earlier for good reasons.</p>
