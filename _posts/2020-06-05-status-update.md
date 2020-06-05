@@ -16,8 +16,6 @@ Greetings from the IAC Team - before we start we would just like to say that we 
 
 > Puppet stands with the Black community. We stand against racism, violence and hate. Equality is not a privilege. Justice is not a privilege. These are rights for everyone. Silence prevents progress so join us in speaking up for equality and justice for Black lives now and always.
 
-If you're not following US-news, there are currently ongoing protests in the USA against widespread racist and discriminatory policing, that [regularly](https://www.statista.com/statistics/585152/people-shot-to-death-by-us-police-by-race/) ends in the death of black people at the hands of the police. The most recent widely documented and published cases are [George Floyd](https://en.wikipedia.org/wiki/Killing_of_George_Floyd) and [Breonna Taylor](https://en.wikipedia.org/wiki/Shooting_of_Breonna_Taylor).
-
 ----
 <br/>
 <br/>
@@ -50,8 +48,9 @@ The release process for the following modules has been started and although we h
 ## Community Contributions
 The wonderful community members that continue to contribute to our modules have provided us with the following enhancements:
 - **[`puppetlabs-java_ks#319`](https://github.com/puppetlabs/puppetlabs-java_ks/pull/319):** [tomkitchen](https://github.com/tomkitchen) a first time contributor has worked hard to add the ability to import a DER formatted certificate file and its corresponding key into a keystore.
+- **[`puppetlabs-docker#620`](https://github.com/puppetlabs/puppetlabs-docker/pull/620):** [runejuhl](https://github.com/junejuhl) a returning contributor has updated the code so as to allow all 3.x docker-compose minor versions, expanding the range with which we are compatible.
 
-Many thanks to [tomkitchen](https://github.com/tomkitchen) for the work that he has put in and we hope to see more in the future.
+Many thanks to [tomkitchen](https://github.com/tomkitchen) and [runejuhl](https://github.com/junejuhl) for the work that they have put in and we hope to see more in the future.
 
 ## Ubuntu 20.04 Certification
 Over the last week or two [I](https://github.com/david22swan) have personally worked on adding support to all of our relevant modules with much of it having been completed. As of right now there are only a small handful of modules that require some further work in order for us to officially declare that they support the new OS. Follow along at [IAC-746](https://tickets.puppetlabs.com/browse/IAC-746).
