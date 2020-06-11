@@ -51,6 +51,8 @@ Thanks to everyone in the community who's chipping in with fixes and features!
 ## Litmus
 We have released [Puppet Litmus v0.18.3](https://github.com/puppetlabs/puppet_litmus/tree/v0.18.3) ([CHANGELOG](https://github.com/puppetlabs/puppet_litmus/blob/v0.18.3/CHANGELOG.md)) with a couple of important fixes in error formatting and making sure `install_modules_from_directory` works in all cases.
 
+We have also updated the Litmus Concept documentation [here](https://puppetlabs.github.io/litmus/litmus-concepts.html). It's a great resource for better understanding of Puppet Litmus.  
+
 ## Puppet Module Builder
 We have also released a new version of [Puppet Module Builder v0.2.1](https://github.com/puppetlabs/puppet-modulebuilder/tree/v0.2.1) with added fix for symlink handling and Ruby 2.7 testing.
 
