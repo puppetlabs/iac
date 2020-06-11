@@ -13,6 +13,7 @@ tags:
   - modules
   - tools
   - social
+  - archived
 ---
 
 The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:
@@ -25,6 +26,15 @@ The release process for the following modules has been started and these will fi
 ## Updated Puppet GPG signing key, 2020 edition
 
 The GPG signing key we’ve been using to sign Puppet products on Linux is expiring in August 2021 and this change will affect both Puppet Enterprise users and open source Puppet users. Please read the blog [here](http://feedproxy.google.com/~r/planetpuppet/~3/BAyZ9YYraQA/) for more information on how to update your keys.
+
+## Puppet Module Repository Housekeeping
+
+This week Puppet has started archiving stale unmaintained module repos living within the Puppet namespace.  
+The following module repos have been archived:
+- **[puppetlabs-kvm](https://github.com/puppetlabs/puppetlabs-kvm)**
+- **[puppetlabs-kwalify](https://github.com/puppetlabs/puppetlabs-kwalify)** 
+- **[puppetlabs-openstack_admin](https://github.com/puppetlabs/puppetlabs-openstack_admin)**
+The IAC team will try and answer any questions/concerns the community may have or redirect your questions/concerns to the appropriate teams.
 
 ## Community Contributions
 THANK YOU for our great community members that continue to contribute to our modules:
