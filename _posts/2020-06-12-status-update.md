@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "22nd June 2020: IAC Team Status Update"
+title: "12th June 2020: IAC Team Status Update"
 author: carabasdaniel
 categories:
   - team
