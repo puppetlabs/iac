@@ -7,6 +7,7 @@ categories:
   - status
 tags:
   - litmus
+  - gpg
   - puppet-modulebuilder
   - community
   - modules
@@ -20,6 +21,10 @@ The IAC team has been working on a lot of things over the past week. We want to 
 The release process for the following modules has been started and these will finished as soon as we manage to resolve our testing infrastructure issues:
 - [puppetlabs/postgresql](https://github.com/puppetlabs/puppetlabs-postgresql) (6.6.0)
 - [puppetlabs/ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager) (2.2.0)
+
+## Updated Puppet GPG signing key, 2020 edition
+
+The GPG signing key we’ve been using to sign Puppet products on Linux is expiring in August 2021 and this change will affect both Puppet Enterprise users and open source Puppet users. Please read the blog [here](http://feedproxy.google.com/~r/planetpuppet/~3/BAyZ9YYraQA/) for more information on how to update your keys.
 
 ## Community Contributions
 THANK YOU for our great community members that continue to contribute to our modules:
