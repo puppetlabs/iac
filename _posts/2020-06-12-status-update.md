@@ -11,6 +11,7 @@ tags:
   - community
   - modules
   - tools
+  - social
 ---
 
 The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:
@@ -37,6 +38,9 @@ We have released [Puppet Litmus v0.18.3](https://github.com/puppetlabs/puppet_li
 
 ## Puppet Module Builder
 We have also released a new version of [Puppet Module Builder v0.2.1](https://github.com/puppetlabs/puppet-modulebuilder/tree/v0.2.1) with added fix for symlink handling and Ruby 2.7 testing.
+
+## Social hour
+A big thank you for the EMEA Customer Support team that joined us last Friday in a nice social hour meeting where we shared two awesome games of trivia and a couple of beers. We hope you'll join us again some time for another great round of games and beer. 
 
 ## Wrap-up
 
