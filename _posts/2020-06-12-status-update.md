@@ -27,7 +27,10 @@ THANK YOU for our great community members that continue to contribute to our mod
 - **[`puppetlabs-mysql#1305`](https://github.com/puppetlabs/puppetlabs-mysql/pull/1305):** [Evgeny Kisel](https://github.com/evgenkisel) adding a bug-fix for mysql managed directories as specified in [MODULES-10679](https://tickets.puppetlabs.com/browse/MODULES-10679)
 
 ## Tools
-This week we have organised our first all day PR review for all the tools currently under the team's supervision. This was a very productive day as we have managed to get a clear view across the team on the current development work on all our tool repositories and close out/merge a lot of PRs. This will make the triage process a lot easier in the future.
+This week we have organised our first all day PR review for all the [tools]({% link tools.html %}) currently under the team's supervision.
+This was a very productive day as we have managed to get a clear view across the team on the current development work on all our tool repositories and close out/merge a lot of PRs.
+This will make the triage process a lot easier in the future.
+Thanks to everyone in the community who's chipping in with fixes and features!
 
 ## Litmus
 We have released [Puppet Litmus v0.18.3](https://github.com/puppetlabs/puppet_litmus/tree/v0.18.3) ([CHANGELOG](https://github.com/puppetlabs/puppet_litmus/blob/v0.18.3/CHANGELOG.md)) with a couple of important fixes in error formatting and making sure `install_modules_from_directory` works in all cases.
