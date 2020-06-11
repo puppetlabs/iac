@@ -1,7 +1,7 @@
 ---
 layout: tool
 title: Community reports
-github: underscorgan/community_management
+github: puppetlabs/community_management
 description: "This set of scripts collates daily reports on our responsibilities as the stewards of supported modules."
 appveyor: false
 codecov_token: false
