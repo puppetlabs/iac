@@ -30,7 +30,7 @@ The GPG signing key we’ve been using to sign Puppet products on Linux is expir
 ## Puppet Module Repository Housekeeping
 
 This week Puppet has started archiving stale unmaintained module repos living within the Puppet namespace.  
-The following module repos have been archived:
+Some examples of module repos that have been archived:
 - **[puppetlabs-kvm](https://github.com/puppetlabs/puppetlabs-kvm)**
 - **[puppetlabs-kwalify](https://github.com/puppetlabs/puppetlabs-kwalify)** 
 - **[puppetlabs-openstack_admin](https://github.com/puppetlabs/puppetlabs-openstack_admin)**
