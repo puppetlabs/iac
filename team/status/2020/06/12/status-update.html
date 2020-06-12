@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>12th June 2020: IAC Team Status Update | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.1.0" />
+<meta property="og:title" content="12th June 2020: IAC Team Status Update" />
+<meta name="author" content="carabasdaniel" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:" />
+<meta property="og:description" content="The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/team/status/2020/06/12/status-update.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/team/status/2020/06/12/status-update.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-06-12T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:","headline":"12th June 2020: IAC Team Status Update","dateModified":"2020-06-12T00:00:00+00:00","datePublished":"2020-06-12T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/team/status/2020/06/12/status-update.html"},"url":"https://puppetlabs.github.io/iac/team/status/2020/06/12/status-update.html","author":{"@type":"Person","name":"carabasdaniel"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">12th June 2020: IAC Team Status Update</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-06-12T00:00:00+00:00" itemprop="datePublished">Jun 12, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">carabasdaniel</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</p>
+
+<h2 id="module-releases-from-iac-team">Module Releases from IAC Team</h2>
+<p>The release process for the following modules has been started and these will finished as soon as we manage to resolve our testing infrastructure issues:</p>
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql">puppetlabs/postgresql</a> (6.6.0)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-ibm_installation_manager">puppetlabs/ibm_installation_manager</a> (2.2.0)</li>
+</ul>
+
+<h2 id="updated-puppet-gpg-signing-key-2020-edition">Updated Puppet GPG signing key, 2020 edition</h2>
+
+<p>The GPG signing key we’ve been using to sign Puppet products on Linux is expiring in August 2021 and this change will affect both Puppet Enterprise users and open source Puppet users. Please read the blog <a href="http://feedproxy.google.com/~r/planetpuppet/~3/BAyZ9YYraQA/">here</a> for more information on how to update your keys.</p>
+
+<h2 id="puppet-module-repository-housekeeping">Puppet Module Repository Housekeeping</h2>
+
+<p>This week Puppet has started archiving stale unmaintained module repos living within the Puppet namespace.<br />
+Some examples of module repos that have been archived:</p>
+<ul>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-kvm">puppetlabs-kvm</a></strong></li>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-kwalify">puppetlabs-kwalify</a></strong></li>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-openstack_admin">puppetlabs-openstack_admin</a></strong>
+The IAC team will try and answer any questions/concerns the community may have or redirect your questions/concerns to the appropriate teams.</li>
+</ul>
+
+<h2 id="community-contributions">Community Contributions</h2>
+<p>THANK YOU for our great community members that continue to contribute to our modules:</p>
+<ul>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1307"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1307</code></a>:</strong> <a href="https://github.com/mcb30">Michael Brown</a> adding the use of ALTER USER for mariadb 10.2.0 or newer</li>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1174"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1174</code></a>:</strong> <a href="https://github.com/mcb30">Michael Brown</a> adding default postgresql version for Fedora 32</li>
+  <li><strong><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1305"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1305</code></a>:</strong> <a href="https://github.com/evgenkisel">Evgeny Kisel</a> adding a bug-fix for mysql managed directories as specified in <a href="https://tickets.puppetlabs.com/browse/MODULES-10679">MODULES-10679</a></li>
+</ul>
+
+<h2 id="tools">Tools</h2>
+<p>This week we have organised our first all day PR review for all the <a href="/iac/tools/">tools</a> currently under the team’s supervision.
+This was a very productive day as we have managed to get a clear view across the team on the current development work on all our tool repositories and close out/merge a lot of PRs.
+This will make the triage process a lot easier in the future.
+Thanks to everyone in the community who’s chipping in with fixes and features!</p>
+
+<h2 id="litmus">Litmus</h2>
+<p>We have released <a href="https://github.com/puppetlabs/puppet_litmus/tree/v0.18.3">Puppet Litmus v0.18.3</a> (<a href="https://github.com/puppetlabs/puppet_litmus/blob/v0.18.3/CHANGELOG.md">CHANGELOG</a>) with a couple of important fixes in error formatting and making sure <code class="language-plaintext highlighter-rouge">install_modules_from_directory</code> works in all cases.</p>
+
+<p>We have also updated the Litmus Concept documentation <a href="https://puppetlabs.github.io/litmus/litmus-concepts.html">here</a>. It’s a great resource for better understanding of Puppet Litmus.</p>
+
+<h2 id="puppet-module-builder">Puppet Module Builder</h2>
+<p>We have also released a new version of <a href="https://github.com/puppetlabs/puppet-modulebuilder/tree/v0.2.1">Puppet Module Builder v0.2.1</a> with added fix for symlink handling and Ruby 2.7 testing.</p>
+
+<h2 id="social-hour">Social hour</h2>
+<p>A big thank you for the EMEA Customer Support team that joined us last Friday in a nice social hour meeting where we shared two awesome games of trivia and a couple of beers. We hope you’ll join us again some time for another great round of games and beer.</p>
+
+<h2 id="wrap-up">Wrap-up</h2>
+
+<p>That’s it for this weeks update, a big THANK YOU for all your contributions and support.</p>
+
+  </div><a class="u-url" href="/iac/team/status/2020/06/12/status-update.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
