@@ -18,7 +18,7 @@ Here’s a brief overview of what we’ve been up to:
 
 ## The Return of Michael
 
-To start things off on a high note I'd like to announce the return of [Michael T Lombardi](michaeltlombardi) to the modules team.
+To start things off on a high note I'd like to announce the return of [Michael T Lombardi][michaeltlombardi] to the modules team.
 
 Michael had spent the last couple of months on paternity leave but has returned to the team, he could not stay away and is now once again ready to take part in the vital work that we accomplish throughout the year.
 
@@ -36,7 +36,7 @@ The release process for the following modules has been started and these will be
 ## Community Shout outs for IAC
 
 - [Dan Manners][danmanners] shared a nice write up of his [homelab deployment](https://github.com/danmanners/homelab-deployment) over on github.
-- [Chad Huneycutt](chadh) ported the [git_config type&provider](https://github.com/chadh/puppetlabs-git/pull/2) over to the [Resource API][resourceapi], making it a nice example of multiple namevars and a local command-based provider.
+- [Chad Huneycutt][chadh] ported the [git_config type&provider](https://github.com/chadh/puppetlabs-git/pull/2) over to the [Resource API][resourceapi], making it a nice example of multiple namevars and a local command-based provider.
 - One of our customer is very happy about [litmus][litmus] as they were able to ramp up with litmus in a couple of days, compared to beaker which took weeks.
 
 ## Ubuntu 20.04 Certification
@@ -45,19 +45,18 @@ We have added Ubuntu 20.04 support to all of our supported modules. Thanks [Davi
 
 ## puppetlabs_spec_helper Gem 2.15.0 Release
 
-[puppetlabs_spec_helper][puppetlabs_spec_helper] gem, which has now [been released](https://rubygems.org/gems/puppetlabs_spec_helper/versions/2.15.0) with a couple of fixes and enhancements  ([CHANGELOG](https://github.com/puppetlabs/puppetlabs_spec_helper/blob/v2.15.0/CHANGELOG.md))
+[puppetlabs_spec_helper][puppetlabs_spec_helper] gem, which has now [been released](https://rubygems.org/gems/puppetlabs_spec_helper/versions/2.15.0) with a couple of fixes and enhancements ([CHANGELOG](https://github.com/puppetlabs/puppetlabs_spec_helper/blob/v2.15.0/CHANGELOG.md#v2150-2020-06-11)).
 
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
 
-[michaeltlombardi]:                      https://github.com/michaeltlombardi
-[davidswan]:       									    https://github.com/david22swan
-[PDK]:                                  https://github.com/puppetlabs/pdk
-[sheenaajay]:                           https://github.com/sheenaajay
-[danmanners]:                           https://github.com/danmanners
-[chadh]:                                https://github.com/chadh
-[puppetlabs_spec_helper]:               https://github.com/puppetlabs/puppetlabs_spec_helper
-[resourceapi]:                          https://puppet.com/docs/puppet/latest/custom_resources.html
-[litmus]:                               https://github.com/puppetlabs/puppet_litmus
-
+[michaeltlombardi]:       https://github.com/michaeltlombardi
+[davidswan]:              https://github.com/david22swan
+[PDK]:                    https://github.com/puppetlabs/pdk
+[sheenaajay]:             https://github.com/sheenaajay
+[danmanners]:             https://github.com/danmanners
+[chadh]:                  https://github.com/chadh
+[puppetlabs_spec_helper]: https://github.com/puppetlabs/puppetlabs_spec_helper
+[resourceapi]:            https://puppet.com/docs/puppet/latest/custom_resources.html
+[litmus]:                 https://github.com/puppetlabs/puppet_litmus
