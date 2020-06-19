@@ -100,7 +100,7 @@ We have started a collection on the [tools](/tools/index.html) page.
 ##### IDEs
 
 For the most part, the IDE of choice for us is VSCode.
-It has support for Puppet manifests and more via [the puppet extension](https://marketplace.visualstudio.com/items?itemName=jpogran.puppet-vscode).
+It has support for Puppet manifests and more via [the Puppet Extension](https://marketplace.visualstudio.com/items?itemName=puppet.puppet-vscode).
 Some of the team also use RubyMine and Sublime Text can also be found on a lot of laptops.
 The [Ruby gem pry](https://rubygems.org/gems/pry/) is a heavily utilised one.
 This has proven an invaluable tool for debugging during development or investigation when reproducing issues reported to us.
