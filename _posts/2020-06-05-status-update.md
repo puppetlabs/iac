@@ -48,7 +48,7 @@ The release process for the following modules has been started and although we h
 ## Community Contributions
 The wonderful community members that continue to contribute to our modules have provided us with the following enhancements:
 - **[`puppetlabs-java_ks#319`](https://github.com/puppetlabs/puppetlabs-java_ks/pull/319):** [tomkitchen](https://github.com/tomkitchen) a first time contributor has worked hard to add the ability to import a DER formatted certificate file and its corresponding key into a keystore.
-- **[`puppetlabs-docker#620`](https://github.com/puppetlabs/puppetlabs-docker/pull/620):** [runejuhl](https://github.com/junejuhl) a returning contributor has updated the code so as to allow all 3.x docker-compose minor versions, expanding the range with which we are compatible.
+- **[`puppetlabs-docker#620`](https://github.com/puppetlabs/puppetlabs-docker/pull/620):** [runejuhl](https://github.com/runejuhl) a returning contributor has updated the code so as to allow all 3.x docker-compose minor versions, expanding the range with which we are compatible.
 
 Many thanks to [tomkitchen](https://github.com/tomkitchen) and [runejuhl](https://github.com/junejuhl) for the work that they have put in and we hope to see more in the future.
 
