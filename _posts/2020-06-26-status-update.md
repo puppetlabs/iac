@@ -60,7 +60,7 @@ The most common issue that needs addressing is disambiguating passing hashes vs 
 
 ## Updating Bolt
 
-Thanks to the Bolt for fixing [an issue](https://github.com/puppetlabs/bolt/issues/1846) that was impacting litmus use.
+Thanks to the Bolt team for fixing [an issue](https://github.com/puppetlabs/bolt/issues/1846) that was impacting Litmus use.
 [Sheena](https://github.com/sheenaajay) [successfully updated](https://tickets.puppetlabs.com/browse/IAC-897) all our test suites to the most recent release of bolt.
 
 ## Community Shoutouts
