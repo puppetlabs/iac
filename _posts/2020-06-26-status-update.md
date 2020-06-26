@@ -25,6 +25,7 @@ To avoid the various infrastructure issues that have been plaguing our release v
 - [puppetlabs/postgresql](https://github.com/puppetlabs/puppetlabs-postgresql) (6.6.0)
 - [puppetlabs/mysql](https://github.com/puppetlabs/puppetlabs-mysql) (10.6.0)
 - [puppetlabs/package](https://github.com/puppetlabs/puppetlabs-package) (1.2.0)
+- [puppetlabs/vcsrepo](https://github.com/puppetlabs/puppetlabs-package) (3.1.1)
 - [puppetlabs/vsphere](https://github.com/puppetlabs/puppetlabs-vsphere) (1.5.0)
 
 As you might have noticed, in the past weeks we have been having trouble with our Github Actions CI setup for our usual in-depth testing and releases.
