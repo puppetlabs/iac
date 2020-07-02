@@ -35,7 +35,7 @@ There were quite a number of fixes but a few highlights worth mentioning:
 
 ## Community Shout outs for IAC
 
-We think that is no doubt about our community contributors, they are always ready to help and they have excellent ideas. Here are some highlights of this week:
+We appreciate our community contributors as they are always ready to help and they have excellent ideas. Here are some highlights of this week:
 
 Thanks to [Guillaume Leroy](https://github.com/leroyguillaume) for the bug [fix](https://github.com/puppetlabs/puppetlabs-tomcat/pull/400) on tomcat module.
 
@@ -69,7 +69,6 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% l
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
 
 
 
