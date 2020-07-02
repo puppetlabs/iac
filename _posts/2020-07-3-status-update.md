@@ -43,7 +43,7 @@ Thanks to [Marc Schöchlin](https://github.com/scoopex) for the kubernetes PRs w
 
 ## Customer tickets closed this week
 
-The team have closed out the following customer tickets: MySQL issue (MODULES-10597) and a vcsrepo issue (MODULES-10659).
+The team have closed out the following customer tickets: MySQL issue ([MODULES-10597](https://tickets.puppetlabs.com/browse/MODULES-10597)) and a vcsrepo issue ([MODULES-10659](https://tickets.puppetlabs.com/browse/MODULES-10659)).
 
 Big thanks to [Adrian](https://github.com/adrianiurca) and [Sheena](https://github.com/sheenaajay).
 
@@ -69,6 +69,5 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% l
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
 
 
