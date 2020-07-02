@@ -61,7 +61,7 @@ Tuesday, Daiana had her last exam from college, now she is officially an enginee
 
 ## Apache module work in progress 
 
-This week sees a lot of excellent community contribution’s in `v5.5.0` of the [puppetlabs-apache](
+This week sees a lot of excellent community contributions in `v5.5.0` of the [puppetlabs-apache](
 https://forge.puppet.com/puppetlabs/apache) module.
 We have also been working on improving our test strategy around [Apache MODs](https://httpd.apache.org/docs/2.4/mod) to ensure we can turn around updates to the module in a faster manner.
 Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% link _posts/2020-07-03-apache-mod-test-improvements.md %}) which outlines what we’ve done and how we’re handling test coverage for [Apache MODs](https://httpd.apache.org/docs/2.4/mod), going forward.
@@ -69,7 +69,6 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% l
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
 
 
 
