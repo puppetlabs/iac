@@ -57,7 +57,7 @@ Thank you, folks! Thank you for your contributions and your positive feedback!
 
 ## Final exam for Daiana 
 
-Tuesday, Daiana had her last exam from college, now she is officially an engineer and she started the work on docker and kubernetes module.
+Tuesday, Daiana had her last exam from college, now she is officially an engineer and she started the work on the docker and kubernetes modules.
 
 ## Apache module work in progress 
 
@@ -69,7 +69,6 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% _
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
 
 
 
