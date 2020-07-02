@@ -20,6 +20,7 @@ Here’s a brief overview of what we’ve been up to:
 
 ## Module Releases from IAC Team
 
+- [puppetlabs/apache](https://github.com/puppetlabs/puppetlabs-apache)(5.5.0)
 - [puppetlabs/java_ks](https://github.com/puppetlabs/puppetlabs-java_ks)(3.2.0)
 - [puppetlabs/tagmail](https://github.com/puppetlabs/puppetlabs-tagmail)(3.3.0)
 - [puppetlabs/ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager)(2.2.0)
@@ -69,4 +70,3 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% l
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
