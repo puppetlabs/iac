@@ -40,7 +40,7 @@ We appreciate our community contributors as they are always ready to help and th
 Thanks to [Guillaume Leroy](https://github.com/leroyguillaume) for the bug [fix](https://github.com/puppetlabs/puppetlabs-tomcat/pull/400) on tomcat module.
 
 Thanks to [Marc Schöchlin](https://github.com/scoopex) for the kubernetes PRs which bring a lot of new changes.
-
+We'd also like to call out two fixes in the `puppetlabs-apache` module: [h-haaks](https://github.com/h-haaks) for [2041](https://github.com/puppetlabs/puppetlabs-apache/pull/2041) and [farebers](https://github.com/farebers) for [2021](https://github.com/puppetlabs/puppetlabs-apache/pull/2021).
 ## Customer tickets closed this week
 
 The team have closed out the following customer tickets: MySQL issue ([MODULES-10597](https://tickets.puppetlabs.com/browse/MODULES-10597)) and a vcsrepo issue ([MODULES-10659](https://tickets.puppetlabs.com/browse/MODULES-10659)).
@@ -69,5 +69,4 @@ Check out [sanfrancrisko’s](https://github.com/sanfrancrisko) [blog post]({% l
 ## Wrap-up
 
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
 
