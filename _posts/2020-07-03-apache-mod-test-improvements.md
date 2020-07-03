@@ -14,8 +14,8 @@ This week sees version `v5.5.0` of the [puppetlabs-apache][puppetlabs-apache-for
 There are a lot of new features within this release - check out the [CHANGELOG entry for this version][apache-5-5-0-changelog] to see what's included.
 
 The last release of this module was `v5.4.0` on `2020-01-23`, over 5 months ago.
-For those unaware of what the IAC Team handle, you can see on our site what [modules]({% link modules.html %}) and [tools]({% link tools.html %}) we are responsible for.
-It is fair to say that for a small team, there is plenty to manage, so we are always trying to improve our processes to ensure we're maximising our time.
+Currently the IAC Team is responsible for [these supported modules]({% link modules.html %}) and [tools]({% link tools.html %}).
+As a small team we always continue to improve our processes to ensure we're maximising our time and efforts.
 Still, the gap in time between the release of `v5.4.0` and `v5.5.0` of the [puppetlabs-apache][puppetlabs-apache-forge] module was a concern for us.
 What happened and how did we address this issue?
 
@@ -143,7 +143,7 @@ JIRA tickets [IAC-801][iac-801] and [IAC-824][iac-824] outline the design and im
 [mod_auth_openidc_2_4_3]:       https://github.com/zmartzone/mod_auth_openidc/releases/tag/v2.4.3
 [yard-note-tag]:                https://www.rubydoc.info/gems/yard/file/docs/Tags.md#note
 [manifest/mod]:                 https://github.com/puppetlabs/puppetlabs-apache/tree/983b1fd3ff178d46145f4b8c0a88bae36dfad12b/manifests/mod
-[tag-rules]:                    TODO
+[tag-rules]:                    https://github.com/puppetlabs/puppetlabs-apache/blob/c726313dad64683d05465d2f978965ad14690f35/README.md#apache-mod-test--support-lifecycle
 [pr-2036]:                      https://github.com/puppetlabs/puppetlabs-apache/pull/2036
 [iac-801]:                      https://tickets.puppetlabs.com/browse/IAC-801
 [iac-824]:                      https://tickets.puppetlabs.com/browse/IAC-824
