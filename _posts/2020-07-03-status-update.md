@@ -61,6 +61,10 @@ Thank you, folks! Thank you for your contributions and your positive feedback!
 
 Tuesday, Daiana had her last exam from college, now she is officially an engineer and she started the work on the docker and kubernetes modules.
 
+## Michael Lombardi got a well deserved promotion
+
+Michael Lombardi is now a Senior Software Engineer. Well done, Michael, the promotion was long overdue and truly deserved. Thank you Michael for the hard work! Congratulations!
+
 ## Apache module work in progress 
 
 This week sees a lot of excellent community contributions in `v5.5.0` of the [puppetlabs-apache](
