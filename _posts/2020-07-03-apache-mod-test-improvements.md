@@ -45,7 +45,7 @@ Time permitting...
 
 ## Solution
 ### Test Support Policy
-Straight away, we realised that, in future, we would need to strictly time box the amount of time we would spend attempting to configure the OS with the correct repositories and/or dependencies for a given MOD.
+Straight away, we realised that, in the future, we need to strictly time box the amount of time we spend attempting to configure the OS with the correct repositories and/or dependencies for any given MOD.
 A rule of thumb was that if it's not available in the default repositories of the OS, or a common, well supported auxiliary repository (e.g. EPEL), then we are not going to pin down the very unique snowflake configuration required for that MOD.
 There is always the concept of [default MODs][default-mods-pp] in Apache and these will [remain supported][default-mods-spec] with the module, however, in future, we are going to evaluate how we proceed with a test failure with a much stricter time limit.
 
@@ -82,7 +82,7 @@ For example, after a bit more digging, I can see that the `mod_auth_openidc` pac
 - Fedora 31
 - Fedora 32
 
-This search was not exhaustive, and to make it so would require a lot more effort on my part, which is part of the issue we find ourselves up against.
+This search was not exhaustive, and to make it so would require a lot more effort, which is part of the issue we find ourselves up against.
 Still, we now have a list of platforms that we want to include/exclude from being tested - depending on how we look at it.
 I'm sure you can envisage that the filtering rule for this test is going to become pretty gnarly?
 What if I were to also throw in some of the challenges the IAC team face, on top:
