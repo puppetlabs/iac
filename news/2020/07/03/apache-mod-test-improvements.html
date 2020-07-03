@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Apache MOD Test Maintenance | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Apache MOD Test Maintenance" />
+<meta name="author" content="sanfrancrisko" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="This week sees version v5.5.0 of the puppetlabs-apache module released. There are a lot of new features within this release - check out the CHANGELOG entry for this version to see what’s included." />
+<meta property="og:description" content="This week sees version v5.5.0 of the puppetlabs-apache module released. There are a lot of new features within this release - check out the CHANGELOG entry for this version to see what’s included." />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-03T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"This week sees version v5.5.0 of the puppetlabs-apache module released. There are a lot of new features within this release - check out the CHANGELOG entry for this version to see what’s included.","headline":"Apache MOD Test Maintenance","dateModified":"2020-07-03T00:00:00+00:00","datePublished":"2020-07-03T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html"},"url":"https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html","author":{"@type":"Person","name":"sanfrancrisko"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Apache MOD Test Maintenance</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-07-03T00:00:00+00:00" itemprop="datePublished">Jul 3, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">sanfrancrisko</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>This week sees version <code class="language-plaintext highlighter-rouge">v5.5.0</code> of the <a href="https://forge.puppet.com/puppetlabs/apache">puppetlabs-apache</a> module released.
+There are a lot of new features within this release - check out the <a href="https://forge.puppet.com/puppetlabs/apache/changelog#v550-2020-07-01">CHANGELOG entry for this version</a> to see what’s included.</p>
+
+<p>The last release of this module was <code class="language-plaintext highlighter-rouge">v5.4.0</code> on <code class="language-plaintext highlighter-rouge">2020-01-23</code>, over 5 months ago.
+Currently the IAC Team is responsible for <a href="/iac/modules/">these supported modules</a> and <a href="/iac/tools/">tools</a>.
+As a small team we always continue to improve our processes to ensure we’re maximising our time and efforts.
+Still, the gap in time between the release of <code class="language-plaintext highlighter-rouge">v5.4.0</code> and <code class="language-plaintext highlighter-rouge">v5.5.0</code> of the <a href="https://forge.puppet.com/puppetlabs/apache">puppetlabs-apache</a> module was a concern for us.
+What happened and how did we address this issue?</p>
+
+<h2 id="why-the-delay">Why the delay?</h2>
+<p>There was no shortage of excellent community contributions to the <a href="https://github.com/puppetlabs/puppetlabs-apache">puppetlabs-apache</a> module in the period between these two releases.
+The team were keen to get a new release of the module out sooner than this, so the community could take advantage of these contributions.
+Part of the process of releasing a module involves us running our release check suite on our internal VM infrastructure.
+We were finding that there were cases where tests for <a href="https://httpd.apache.org/docs/2.4/mod">Apache MODs</a> were failing on certain platforms after someone in the community put forward a fix.</p>
+
+<h2 id="what-was-the-issue">What was the issue?</h2>
+<p>There are multiple reasons we ended up in this scenario, which ultimately had the same root cause, namely, a lack of test coverage.
+Some examples are:</p>
+<ul>
+  <li>New platforms changing MOD package names (e.g. <a href="https://github.com/farebers">farebers’s</a> fix in <a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2021">#2021</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/1913">Fixes for one environment</a> having a knock-on effect for a <a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2041">different environment</a> (thanks to <a href="https://github.com/h-haaks">h-haaks</a> for the fix!)</li>
+</ul>
+
+<p>When a new version of an OS comes out, it is quite common for issues to manifest when trying to configure some of the less mainstream <a href="https://httpd.apache.org/docs/2.4/mod">Apache MODs</a>:</p>
+<ul>
+  <li>A simple change in it’s package name (<em>thankfully a relatively quick fix!</em>)</li>
+  <li>The package is no longer available from the core “out-of-the-box” repositories (e.g. a 3rd party repos or edge/experimental/extra package streams need to be configured)</li>
+  <li>Package dependencies are unavailable in non-standard repositories</li>
+  <li>Support is dropped altogether - there is no way to locate the package or dependencies for a newer OS version</li>
+</ul>
+
+<p>This led us to a conversation about how we continue to support all the various prerequisites and configurations required when presented with a matrix of <a href="https://httpd.apache.org/docs/2.4/mod">Apache MODs</a> and <a href="https://forge.puppet.com/puppetlabs/apache/compatibility">compatible OSs</a>.
+We could, if time permitted, ensure that we have the steps to install every version…of every MOD…on every OS…documented and implemented.</p>
+
+<p>Time permitting…</p>
+
+<h2 id="solution">Solution</h2>
+<h3 id="test-support-policy">Test Support Policy</h3>
+<p>Straight away, we realised that, in the future, we need to strictly time box the amount of time we spend attempting to configure the OS with the correct repositories and/or dependencies for any given MOD.
+A rule of thumb was that if it’s not available in the default repositories of the OS, or a common, well supported auxiliary repository (e.g. EPEL), then we are not going to pin down the very unique snowflake configuration required for that MOD.
+There is always the concept of <a href="https://github.com/puppetlabs/puppetlabs-apache/blob/master/manifests/default_mods.pp">default MODs</a> in Apache and these will <a href="https://github.com/puppetlabs/puppetlabs-apache/blob/master/spec/acceptance/default_mods_spec.rb">remain supported</a> with the module, however, in future, we are going to evaluate how we proceed with a test failure with a much stricter time limit.</p>
+
+<h3 id="mods-arent-supported-anymore">MODs aren’t supported anymore!?</h3>
+<p>Absolutely not! They are still supported! If you want to add support for a new MOD, we do ask that you also write an acceptance test too.
+The IAC Team are always happy to help you with this process.</p>
+
+<h3 id="i-cant-get-the-test-to-pass-on-all-platforms">I can’t get the test to pass on all platforms!</h3>
+<p>Yes - this is likely an issue you’re going to run in to.
+Kudos to those who chase down ALL the package, package dependencies and configurations required for ALL of the <a href="https://forge.puppet.com/puppetlabs/apache/compatibility">compatible platforms</a> of the Apache module.
+Realistically, you will likely encounter a few OSs where it is beyond reasonable to try and get this MOD working.
+In these scenarios, we’ll start a conversation on the PR about what the acceptable minimum is for the change being proposed - there’s no hard/fast rule here.</p>
+
+<h3 id="weve-agreed-were-not-supporting-this-mod-on-this-os-version---what-now">We’ve agreed we’re not supporting this MOD on this OS version - what now?</h3>
+<p>You may be familiar with <a href="https://relishapp.com/rspec/rspec-core/v/3-8/docs/filtering/conditional-filters">RSpec’s conditional filtering</a>?
+If not, <a href="https://github.com/puppetlabs/puppetlabs-apache/blob/51ce2adcfc231c6a78dda5cc59c2aaf4028bb5bd/spec/acceptance/mod_ldap_spec.rb#L4">here is an example</a>:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">describe</span> <span class="s1">'apache::mod::ldap'</span><span class="p">,</span> <span class="ss">unless: </span><span class="n">os</span><span class="p">[</span><span class="ss">:family</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'redhat'</span> <span class="o">&amp;&amp;</span> <span class="n">os</span><span class="p">[</span><span class="ss">:release</span><span class="p">].</span><span class="nf">to_i</span> <span class="o">&gt;=</span> <span class="mi">8</span> <span class="k">do</span>
+</code></pre></div></div>
+<p>This will mean that this test will <strong>not</strong> run if the OS family is <code class="language-plaintext highlighter-rouge">RedHat</code> and the version is <code class="language-plaintext highlighter-rouge">8</code> or higher.
+These work well, but, things can start to get messy when there is quite a narrow band of compatible OSs for a MOD.
+Consider <a href="https://github.com/zmartzone/mod_auth_openidc/releases/tag/v2.4.3"><code class="language-plaintext highlighter-rouge">v2.4.3</code> of <code class="language-plaintext highlighter-rouge">mod_auth_openidc</code></a> - we can see from the build artifacts’ names that we “officially” have support for:</p>
+<ul>
+  <li>Ubuntu 16.04</li>
+  <li>Ubuntu 18.04</li>
+  <li>Debian 10</li>
+  <li>RHEL 7</li>
+</ul>
+
+<p>This does not consider the fact that there are many other OSs derived from RHEL and other distro vendors / maintainers can port packages to their OS.
+For example, after a bit more digging, I can see that the <code class="language-plaintext highlighter-rouge">mod_auth_openidc</code> package is available for the following OSs too:</p>
+<ul>
+  <li>CentOS 7</li>
+  <li>CentOS 8 (via AppStream)</li>
+  <li>RHEL 8 (via AppStream)</li>
+  <li>Fedora 30</li>
+  <li>Fedora 31</li>
+  <li>Fedora 32</li>
+</ul>
+
+<p>This search was not exhaustive, and to make it so would require a lot more effort, which is part of the issue we find ourselves up against.
+Still, we now have a list of platforms that we want to include/exclude from being tested - depending on how we look at it.
+I’m sure you can envisage that the filtering rule for this test is going to become pretty gnarly?
+What if I were to also throw in some of the challenges the IAC team face, on top:</p>
+<ul>
+  <li>Expanding test coverage uncovering more MOD / OS incompatibility</li>
+  <li>Some tests invoking a MOD load/configure indirectly whist testing other functionality</li>
+  <li>New OS support requirements</li>
+</ul>
+
+<h3 id="tagging-and-helper-methods">Tagging and Helper Methods</h3>
+<p>We had to come up with some better solution than ridiculously complex filtering rules.
+After some conversations and design reviews, we settled on an idea of using <a href="https://www.rubydoc.info/gems/yard/file/docs/Tags.md#note">YARD’s note tags</a>.
+This gives us the benefit of:</p>
+<ul>
+  <li>Keeping within the conventions already in use</li>
+  <li>Easy syntax to understand</li>
+  <li>Free documentation whilst we’re at it</li>
+</ul>
+
+<p>All the class definitions for <a href="https://httpd.apache.org/docs/2.4/mod">Apache MODs</a> live under <a href="https://github.com/puppetlabs/puppetlabs-apache/tree/983b1fd3ff178d46145f4b8c0a88bae36dfad12b/manifests/mod"><code class="language-plaintext highlighter-rouge">manifest/mod</code></a>.
+This seemed like the most logical place for our tags to live.
+Next, we wanted to decide whether this was an “opt-in” or “opt-out” affair.
+In the end, we determined that it would be best to “opt-out” and so, the tag became <code class="language-plaintext highlighter-rouge">Unsupported platforms</code>.
+You can now define what platforms a given MOD will <em>not</em> be expected to run on:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># @note Unsupported platforms: RedHat: 5, 6; Ubuntu: 14.04; SLES: all; Scientific: 11 SP1</span>
+<span class="k">class</span> <span class="nc">apache::mod::actions</span> <span class="p">{</span>
+    <span class="n">apache</span><span class="o">::</span><span class="n">mod</span> <span class="p">{</span> <span class="s1">'actions'</span><span class="p">:</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>For a full overview of the tag syntax rules, see <a href="https://github.com/puppetlabs/puppetlabs-apache/blob/c726313dad64683d05465d2f978965ad14690f35/README.md#apache-mod-test--support-lifecycle">this section of the README</a> in the module.</p>
+
+<p>When RSpec tests are kicked off in the module, we will parse the <code class="language-plaintext highlighter-rouge">Unsupported platform</code> tags under <a href="https://github.com/puppetlabs/puppetlabs-apache/tree/983b1fd3ff178d46145f4b8c0a88bae36dfad12b/manifests/mod"><code class="language-plaintext highlighter-rouge">manifest/mod</code></a> as part of the <code class="language-plaintext highlighter-rouge">Rspec.before</code> hooks and generate a mapping of MOD -&gt; Unsupported Platforms.
+Now, from within the tests, you can make use of the <code class="language-plaintext highlighter-rouge">mod_supported_on_platform</code> helper method to determine whether the test should run on a given platform or be filtered out:</p>
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">describe</span> <span class="s1">'auth_oidc'</span><span class="p">,</span> <span class="ss">if: </span><span class="n">mod_supported_on_platform</span><span class="p">(</span><span class="s1">'apache::mod::auth_openidc'</span><span class="p">)</span> <span class="k">do</span>
+</code></pre></div></div>
+
+<p>Hopefully you’ll agree that this is a much cleaner solution that a complex filtering rule?
+For the IAC Team, it makes our life a lot easier, and hopefully means more frequent updates released for the Apache module for the community.</p>
+
+<h4 id="want-more-details">Want more details?</h4>
+<p>You can see the implementation on <a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2036">#2036</a>, which has a detailed description outlining the functionality.
+JIRA tickets <a href="https://tickets.puppetlabs.com/browse/IAC-801">IAC-801</a> and <a href="https://tickets.puppetlabs.com/browse/IAC-824">IAC-824</a> outline the design and implementation, respectively, should you wish to take a look.</p>
+
+
+  </div><a class="u-url" href="/iac/news/2020/07/03/apache-mod-test-improvements.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
