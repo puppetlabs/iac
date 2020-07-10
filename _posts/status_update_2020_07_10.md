@@ -15,7 +15,7 @@ tags:
 
 ---
 
-The IAC team has been working on a lot of things over the past week.
+This has been as short week for the IAC team and we mostly focused our attention on maintenance and support activities.
 We want to share with our community some of the most interesting things.
 Here’s a brief overview of what we’ve been up to:
 
