@@ -1,18 +1,17 @@
+---
 layout: post
 title: "10th July 2020: IAC Team Status Update"
 author: adrianiurca
 categories:
-
-- team
-- status
+  - team
+  - status
 tags:
-- releases
-- community_management
-- iis
-- tomcat
-- powershell
-- shoutouts
-
+  - releases
+  - community_management
+  - iis
+  - tomcat
+  - powershell
+  - shoutouts
 ---
 
 This has been as short week for the IAC team and we mostly focused our attention on maintenance and support activities.
@@ -31,7 +30,7 @@ We appreciate our community contributors as they are always ready to help and th
 
 Thanks to [Ben Ford](https://github.com/binford2k) for his great idea [feature](https://github.com/puppetlabs/community_management/pull/39) on community_management.
 
-Thanks to [Chris Denneen](https://github.com/cdenneen) for the contributions on pdk-templates.
+Thanks to [Chris Denneen](https://github.com/cdenneen) for the contributions on pdk-templates([#338](https://github.com/puppetlabs/pdk-templates/pull/338), [#337](https://github.com/puppetlabs/pdk-templates/pull/337), [#332](https://github.com/puppetlabs/pdk-templates/pull/332))
 
 ## Customer tickets this week
 
