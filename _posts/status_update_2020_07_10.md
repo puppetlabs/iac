@@ -24,7 +24,7 @@ Here’s a brief overview of what we’ve been up to:
 - [puppetlabs/tomcat](https://github.com/puppetlabs/puppetlabs-tomcat)(4.1.0)
 - [puppetlabs/powershell](https://github.com/puppetlabs/puppetlabs-powershell)(4.0.0)
 
-## Community Shout outs for IAC
+## Community Shoutouts for IAC
 
 We appreciate our community contributors as they are always ready to help and they have excellent ideas. Here are some highlights of this week:
 
