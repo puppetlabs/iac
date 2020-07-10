@@ -5,7 +5,7 @@ categories:
 
 - team
 - status
-  tags:
+tags:
 - releases
 - community_management
 - iis
