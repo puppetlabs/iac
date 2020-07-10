@@ -46,7 +46,7 @@ Many thanks to [Daiana](https://github.com/daianamezdrea) for managing this prob
 ## Happy 90 days at Puppet
 
 A great achievement made by [Adrian](https://github.com/adrianiurca).
-For his hard work made in these 3 months, he was rewarded to write this blog post.
+For the great progress he made in this time, as a reward, he got to write this week's status update.
 
 ## Wrap-up
 
