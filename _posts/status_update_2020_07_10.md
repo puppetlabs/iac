@@ -22,7 +22,7 @@ Here’s a brief overview of what we’ve been up to:
 ## Module Releases from IAC Team
 
 - [puppetlabs/iis](https://github.com/puppetlabs/puppetlabs-iis)(7.1.0)
-- [puppetlabs/java_ks](https://github.com/puppetlabs/puppetlabs-tomcat)(4.1.0)
+- [puppetlabs/tomcat](https://github.com/puppetlabs/puppetlabs-tomcat)(4.1.0)
 - [puppetlabs/powershell](https://github.com/puppetlabs/puppetlabs-powershell)(4.0.0)
 
 ## Community Shout outs for IAC
