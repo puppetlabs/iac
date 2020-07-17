@@ -38,7 +38,7 @@ This has had a knock-on effect in [`rspec-puppet`][rspec-puppet] and the [`pdk`]
 ### rspec-puppet 2.7.10
 Many thanks to [sgnn7][sgnn7] for the quick turnaround and fix provided in [rspec-puppet#796][rspec-puppet-796].
 Also, thanks to [scotje][scotje] for getting the fix reviewed, merged and version `2.7.10` of [`rspec-puppet`][rspec-puppet] released so quickly.
-### PDK 0.18.0.1
+### PDK 0.18.1
 Again, many thanks to [natemccurdy][natemccurdy] for getting a fix available to the [pdk][pdk] in [pdk#891][pdk-891] so quickly.
 Thanks to [joshcooper][joshcooper] for his help during the review process and [scotje][scotje] for merging and kicking off the PDK release.
 
@@ -49,6 +49,17 @@ Given her track record on the team, this past year, and her excellent graduation
 We look forward to increasing the awareness of security on the team even further - an ever increasing skill requirement in modern software development.
 Just take a look at two of the major security issues landing this week to prove this point: [CVE-2020-1350][CVE-2020-1350] and [CVE-2020-6287][CVE-2020-6287].
 
+## Best wishes to DavidS
+I'm sure many of you reading this will know [David][davids] as he is such an integral part of the Puppet Community.
+Similarly, he is a critical member of the IAC Team and the Puppet organisation, as a whole.
+The amount of people he helps on a daily basis is quite phenomenal, not least, all of us on the IAC Team.
+We are incredibly privileged to be able to learn from and work with [David][davids] on a daily basis, but recently, we have been made even more acutely aware of the privilege we hold.
+
+David has had to take up the fight against health issues in the past and is once again, entering that fight.
+We know that he is going to get through this with the similar courage and determination he did previously and we want to wish him the very best as he recovers from his surgery in London.
+We're all here for you during your recovery and are very much looking forward to having you back with us in the near future, David.
+
+Alles Gute and much love from the IAC Team, Puppet and the wider Community!
 
 [agent_6_17_0]:     https://puppet.com/docs/puppet/6.17/release_notes_puppet.html#release_notes_puppet_x-17-0
 [agent_5_5_21]:     https://puppet.com/docs/puppet/5.5/release_notes.html#puppet-5521
@@ -74,3 +85,4 @@ Just take a look at two of the major security issues landing this week to prove 
 [inifile]:          https://github.com/puppetlabs/puppetlabs-inifile
 [inifile-405]:      https://github.com/puppetlabs/puppetlabs-inifile/pull/405
 [mmarod]:           https://github.com/mmarod
+[davids]:           https://github.com/DavidS
