@@ -38,7 +38,7 @@ This has had a knock-on effect in [`rspec-puppet`][rspec-puppet] and the [`pdk`]
 ### rspec-puppet 2.7.10
 Many thanks to [sgnn7][sgnn7] for the quick turnaround and fix provided in [rspec-puppet#796][rspec-puppet-796].
 Also, thanks to [scotje][scotje] for getting the fix reviewed, merged and version `2.7.10` of [`rspec-puppet`][rspec-puppet] released so quickly.
-### PDK 0.18.1
+### PDK 1.18.1.0
 Again, many thanks to [natemccurdy][natemccurdy] for getting a fix available to the [pdk][pdk] in [pdk#891][pdk-891] so quickly.
 Thanks to [joshcooper][joshcooper] for his help during the review process and [scotje][scotje] for merging and kicking off the PDK release.
 
