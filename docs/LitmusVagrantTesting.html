@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Testing Puppet Modules with Litmus and Vagrant | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="Testing Puppet Modules with Litmus and Vagrant" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Testing Puppet Modules with Litmus and Vagrant The Setup" />
+<meta property="og:description" content="Testing Puppet Modules with Litmus and Vagrant The Setup" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/docs/LitmusVagrantTesting.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/docs/LitmusVagrantTesting.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-30T10:13:12+00:00" />
+<script type="application/ld+json">
+{"description":"Testing Puppet Modules with Litmus and Vagrant The Setup","@type":"BlogPosting","headline":"Testing Puppet Modules with Litmus and Vagrant","dateModified":"2020-07-30T10:13:12+00:00","url":"https://puppetlabs.github.io/iac/docs/LitmusVagrantTesting.html","datePublished":"2020-07-30T10:13:12+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/docs/LitmusVagrantTesting.html"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Testing Puppet Modules with Litmus and Vagrant</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="testing-puppet-modules-with-litmus-and-vagrant">Testing Puppet Modules with Litmus and Vagrant</h2>
+
+<h3 id="the-setup">The Setup</h3>
+
+<p>For this demo I’m gonna run through the entire process from start to finish - I hope that you find it useful.
+To start, the first thing that you need to do is clone down the module that you want to test; in this case we’ll be using <code class="language-plaintext highlighter-rouge">puppetlabs-scheduled_task</code>. This can easily be accomplished with a simple command:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/user-name/puppetlabs-scheduled_task.git
+</code></pre></div></div>
+
+<p>Now that you have the module cloned down, simply run the below command to set up the environment:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install --path .bundle/gems/
+</code></pre></div></div>
+
+<h3 id="provisioning-the-machine">Provisioning the Machine</h3>
+
+<p>With the environment setup it is time to provision the machine. Rather than spin up the vagrant machine directly, we can use Litmus as an intermediary to do it for us.</p>
+
+<p><img src="Vagrant%20Provision.png" alt="Litmus Vagrant Testing - provisioning the machine" /></p>
+
+<p>If you are testing against multiple different OSs then you can also utilise the <code class="language-plaintext highlighter-rouge">provision_list</code> command, which alows you to provision an entire suite of machines from pre-set lists found within the <code class="language-plaintext highlighter-rouge">provision.yml</code> file.</p>
+
+<p>With the machine provisioned, first doublecheck that you have root/administrator privileges for the box and then it’s a simple matter of running the <code class="language-plaintext highlighter-rouge">install_agent</code> and <code class="language-plaintext highlighter-rouge">install_module</code> commands and you will be setup and ready to go. With <code class="language-plaintext highlighter-rouge">install_agent</code> you can run the command as it is to install a default version of the agent or you can specify puppet 5 or 6 specificilly.</p>
+
+<p><img src="Agent%20Module%20Install.png" alt="Litmus Vagrant Testing - installing the agent and the module" /></p>
+
+<h3 id="running-the-tests">Running the Tests</h3>
+
+<p>Now that the machine is fully setup it is time to run the tests.</p>
+
+<p>This can be done in several ways, either through Litmus or through rspec.</p>
+
+<p>We’ll start with the command <code class="language-plaintext highlighter-rouge">bundle exec rake litmus:acceptance:parallel</code>.</p>
+
+<p>When this command is given, Litmus will retrieve each machine that has been setup during the provision step and run the test suite against them simultaneously. This is an excellent function for testing prior to a release or merge as it helps achieve full coverage in a fraction of the time that it would normally take.</p>
+
+<p>The next command that can be given is <code class="language-plaintext highlighter-rouge">bundle exec rake litmus:acceptance:127.0.0.1:55985</code></p>
+
+<p>This command will run the tests only against the machine whose name was provided, allowing you to run your test suite against a specific OS. This can be useful when making a change specific to a certain OS or when re-running previously failed tests after applying a quick bug fix.</p>
+
+<p>The final command that we wll be covering is <code class="language-plaintext highlighter-rouge">TARGET_HOST=127.0.0.1:55985 bundle exec rspec spec/acceptance/should_create_task_spec.rb</code>.</p>
+
+<p>Rather than calling on Litmus this instead utilises the older, but still functional, rspec command. This allows you to specify specific test files to be run rather than the entire suite as well as allowing more detailed debugs to be returned.</p>
+
+<h3 id="additional-parameters">Additional Parameters</h3>
+
+<p>Aside from the basic usage shown above there are a few additional parameters than can be passed through as environment variables during the provision command, allowing some extended functionality.</p>
+
+<p>These include several basic parameters that can set up the provider of the vagrant box, <code class="language-plaintext highlighter-rouge">provider</code>, or even enhance the boxes performance by increasing the resources it can draw on, <code class="language-plaintext highlighter-rouge">cpus</code> and <code class="language-plaintext highlighter-rouge">memory</code>.</p>
+
+<p>Another parameter is <code class="language-plaintext highlighter-rouge">enable_synced_folders</code>, a feature that is disabled by default but when enabled will allow you to share folders between the host and the vagrant, allowing you to more easily pass information between the two.</p>
+
+<p>Finaly there is also a collection of parameters that can be set only against a Windows host, which when combined allow the utilization of Hyper-V Vagrant boxes and all that that entails: <code class="language-plaintext highlighter-rouge">hyperv_vswitch</code>, <code class="language-plaintext highlighter-rouge">hyperv_smb_username</code> and <code class="language-plaintext highlighter-rouge">hyperv_smb_password</code>.</p>
+
+<h3 id="troubleshooting">Troubleshooting</h3>
+
+<p>Certain Vagrant boxes do not allow ssh root logins, that is why the <em>vagrant</em> user as part of the sudoers group is used to execute privileged commands. As the Puppet agent installation requires sudo privileges, there are some cases where the secure_path configuration for the puppet binary path is not set correctly, leading to errors when attempting to execute puppet commands on the system. If you encounter these errors, a quick fix is to use the <code class="language-plaintext highlighter-rouge">provision::fix_secure_path</code> Bolt Task. This will update the secure_path configuration and solve any related errors you may be seeing.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle exec bolt --modulepath /Users/{Your Name}/workspace/git/ task run provision::fix_secure_path path=/opt/puppetlabs/bin -i inventory.yaml -t ssh_nodes
+</code></pre></div></div>
+
+<h3 id="wrapup">Wrapup</h3>
+
+<p>Well that’s it, everything you need to know to get started with a vagrant test suite! I hope that you all find it helpful going forward and can all learn to experience the joys of Vagrant.</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
