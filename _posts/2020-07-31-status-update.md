@@ -37,7 +37,7 @@ In response to some questions from the community, the wonderfully talented [Davi
 
 ## Puppet 7
 Testing with the Puppet 7 nightly builds began in earnest, this week.
-Whilst building out our automation for more extensive and regular testing (_using [pdksync](pdksync) at it's core_), we have been running tests against a subset of the [supported modules]({% link modules.html %}).
+Whilst building out our automation for more extensive and regular testing (_using [pdksync][pdksync] at it's core_), we have been running tests against a subset of the [supported modules]({% link modules.html %}).
 So far, testing has generally been quite positive, with some minor issues arising.
 Fortunately, we work with awesome colleagues who are very quick to react to any issues we discover, helping with the debugging process and providing fixes really quickly.
 Thanks to [joshcooper][joshcooper], we hope to have a fix for one of these issues quite soon!
