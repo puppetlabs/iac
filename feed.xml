@@ -1,4 +1,51 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-08-07T02:12:22+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">31th July 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update.html" rel="alternate" type="text/html" title="31th July 2020: IAC Team Status Update" /><published>2020-07-31T00:00:00+00:00</published><updated>2020-07-31T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update.html">&lt;p&gt;It’s Friday - time for another status update from the IAC Team!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-08-07T09:42:31+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">7th August 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/08/07/status-update.html" rel="alternate" type="text/html" title="7th August 2020: IAC Team Status Update" /><published>2020-08-07T00:00:00+00:00</published><updated>2020-08-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/08/07/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/08/07/status-update.html">&lt;p&gt;The IAC team has been working on a lot of things over the past week.
+We want to share with our community some of the most interesting things.
+Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
+
+&lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
+&lt;p&gt;We’ve had a few modules released this week:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://forge.puppet.com/puppetlabs/cisco_ios&quot;&gt;puppetlabs/cisco_ios&lt;/a&gt; (v1.3.0)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+&lt;p&gt;We’ve had plenty of great community contributions this week:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416&quot;&gt;a bit boost to imporve the initial installation&lt;/a&gt; on the puppetlabs-kubernetes module has been finally tested and merged. The next two related PRs are being tested now and hopefully we can get these merged soon. A big thank you goes out to [Marc Schöchlin][https://github.com/scoopex] for these great contributions.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/942&quot;&gt;documentation update&lt;/a&gt; on the puppetlabs-apt module has been merged. Thank you [Garrett Guillotte][https://github.com/gguillotte] for correction and clarification of the module README&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/624&quot;&gt;refactor RSpec tests&lt;/a&gt; on the puppetlabs-docker module has been merged. Thanks to &lt;a href=&quot;https://github.com/crazymind1337&quot;&gt;crazymind1337&lt;/a&gt; for significantly improving the readability of the tests and code coverage&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;puppet-7&quot;&gt;Puppet 7&lt;/h2&gt;
+&lt;p&gt;Puppet 7 testing has been making good progress.
+We’re now in a position where we can rapidly generate configurations to test modules on our internal infrastructure or TravisCI, using &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt;.
+Thanks to &lt;a href=&quot;https://github.com/joshcooper&quot;&gt;joshcooper&lt;/a&gt; for the very rapid turnaround on &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry/pull/216&quot;&gt;this fix&lt;/a&gt; for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry&quot;&gt;puppetlabs-registry&lt;/a&gt;.
+Also, a big shout out to the Night’s Watch team for their continued help in addressing issues we’ve discovered.&lt;/p&gt;
+
+&lt;h2 id=&quot;terminology-changes&quot;&gt;Terminology changes&lt;/h2&gt;
+&lt;p&gt;Recent anti-racial movements across the globe have prompted much-needed global change, Puppet is committed to reevaluate our terminology and uses of words and phrases that evoke unintended associations making a concerted effort to provide a non-biased, user-friendly experience through every aspect of our software and documentation. Language matters. As an initial step in this regard, we would like to ask the community, that’s always shown great support, to try and avoid using any references to our repository master branches in the future as we are starting to lay down the foundations of these changes by renaming the default branch.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; has already started work in this regard with these PRs:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts/pull/318&quot;&gt;https://github.com/puppetlabs/puppetlabs-accounts/pull/318&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-acl/pull/199&quot;&gt;https://github.com/puppetlabs/puppetlabs-acl/pull/199&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2054&quot;&gt;https://github.com/puppetlabs/puppetlabs-apache/pull/2054&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/940&quot;&gt;https://github.com/puppetlabs/puppetlabs-apt/pull/940&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-bootstrap/pull/147&quot;&gt;https://github.com/puppetlabs/puppetlabs-bootstrap/pull/147&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-chocolatey/pull/218&quot;&gt;https://github.com/puppetlabs/puppetlabs-chocolatey/pull/218&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/654&quot;&gt;https://github.com/puppetlabs/puppetlabs-concat/pull/654&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/643&quot;&gt;https://github.com/puppetlabs/puppetlabs-docker/pull/643&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-dsc/pull/461&quot;&gt;https://github.com/puppetlabs/puppetlabs-dsc/pull/461&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-dsc_lite/pull/159&quot;&gt;https://github.com/puppetlabs/puppetlabs-dsc_lite/pull/159&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-exec/pull/129&quot;&gt;https://github.com/puppetlabs/puppetlabs-exec/pull/129&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-facter_task/pull/127&quot;&gt;https://github.com/puppetlabs/puppetlabs-facter_task/pull/127&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/933&quot;&gt;https://github.com/puppetlabs/puppetlabs-firewall/pull/933&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/437&quot;&gt;https://github.com/puppetlabs/puppetlabs-haproxy/pull/437&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-motd/pull/320&quot;&gt;https://github.com/puppetlabs/puppetlabs-motd/pull/320&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
+&lt;p&gt;That concludes this weeks summary. As always we want to thank you all for your continous support and understanding.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="puppet7" /><category term="apt" /><category term="kubernetes" /><category term="docker" /><category term="language" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">31th July 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update.html" rel="alternate" type="text/html" title="31th July 2020: IAC Team Status Update" /><published>2020-07-31T00:00:00+00:00</published><updated>2020-07-31T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/07/31/status-update.html">&lt;p&gt;It’s Friday - time for another status update from the IAC Team!
 Here’s an overview of some of the work we and the community have been up to recently:&lt;/p&gt;
 
 &lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
@@ -477,60 +524,4 @@ Thanks to everyone in the community who’s chipping in with fixes and features!
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
 
-&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="gpg" /><category term="puppet-modulebuilder" /><category term="community" /><category term="modules" /><category term="tools" /><category term="social" /><category term="archived" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">5th June 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/06/05/status-update.html" rel="alternate" type="text/html" title="5th June 2020: IAC Team Status Update" /><published>2020-06-05T00:00:00+00:00</published><updated>2020-06-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/06/05/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/06/05/status-update.html">&lt;p&gt;Greetings from the IAC Team - before we start we would just like to say that we echo &lt;a href=&quot;https://twitter.com/puppetize/status/1267558026858266625&quot;&gt;Puppet’s recent statement&lt;/a&gt;, that we stand with the black community now and always.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Puppet stands with the Black community. We stand against racism, violence and hate. Equality is not a privilege. Justice is not a privilege. These are rights for everyone. Silence prevents progress so join us in speaking up for equality and justice for Black lives now and always.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;hr /&gt;
-&lt;p&gt;&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;temporary-interuption-to-test-infrastructure&quot;&gt;Temporary Interuption to Test Infrastructure&lt;/h2&gt;
-&lt;p&gt;Due to the AddTrust intermediate certificate expiring, all Github Actions tests that we are running to verify modules on commercially licensed and/or non-dockerizable OS, we were not running any releases this week. A support ticket with VMware has been raised as apparently changing certificate chains is not as straight-forward as one might expect. Big Thanks to the DIO team who is working tirelessly on this issue.&lt;/p&gt;
-
-&lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
-&lt;p&gt;The release process for the following modules has been started and although we have had some issues, as was elaborated on above, we hope to get them out soon.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;puppetlabs/postgresql&lt;/a&gt; (6.6.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ibm_installation_manager&quot;&gt;puppetlabs/ibm_installation_manager&lt;/a&gt; (2.2.0)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-&lt;p&gt;The wonderful community members that continue to contribute to our modules have provided us with the following enhancements:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/319&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#319&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/tomkitchen&quot;&gt;tomkitchen&lt;/a&gt; a first time contributor has worked hard to add the ability to import a DER formatted certificate file and its corresponding key into a keystore.&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/620&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#620&lt;/code&gt;&lt;/a&gt;:&lt;/strong&gt; &lt;a href=&quot;https://github.com/runejuhl&quot;&gt;runejuhl&lt;/a&gt; a returning contributor has updated the code so as to allow all 3.x docker-compose minor versions, expanding the range with which we are compatible.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/tomkitchen&quot;&gt;tomkitchen&lt;/a&gt; and &lt;a href=&quot;https://github.com/junejuhl&quot;&gt;runejuhl&lt;/a&gt; for the work that they have put in and we hope to see more in the future.&lt;/p&gt;
-
-&lt;h2 id=&quot;ubuntu-2004-certification&quot;&gt;Ubuntu 20.04 Certification&lt;/h2&gt;
-&lt;p&gt;Over the last week or two &lt;a href=&quot;https://github.com/david22swan&quot;&gt;I&lt;/a&gt; have personally worked on adding support to all of our relevant modules with much of it having been completed. As of right now there are only a small handful of modules that require some further work in order for us to officially declare that they support the new OS. Follow along at &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-746&quot;&gt;IAC-746&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-litmus-github-io-page&quot;&gt;New Litmus Github IO Page&lt;/h2&gt;
-&lt;p&gt;A new docs microsite containing all that we know about the excellent Litmus tool has been released just this week. This &lt;a href=&quot;https://puppetlabs.github.io/litmus&quot;&gt;site&lt;/a&gt;, created with care by the combined brilliance of our very own &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David Schmitt&lt;/a&gt; and the docs teams star &lt;a href=&quot;https://github.com/clairecadman&quot;&gt;Claire Cadman&lt;/a&gt; will take you through everything you need to know about Litmus and help you get of the ground running with a mix of technical documentation and step-by-step walkthroughs.&lt;/p&gt;
-
-&lt;p&gt;The site is (like this blog) powered by Jekyll, and its code available for review and contribution at &lt;a href=&quot;https://github.com/puppetlabs/litmus&quot;&gt;puppetlabs/litmus&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
-&lt;p&gt;Well, that’s all folks!
-If you’re eager for more then be sure to tune in next week for more from the exciting adventures of the IAC team!&lt;/p&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><category term="demos" /><category term="litmus" /><category term="community" /><category term="modules" /><summary type="html">Greetings from the IAC Team - before we start we would just like to say that we echo Puppet’s recent statement, that we stand with the black community now and always.</summary></entry></feed>
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="gpg" /><category term="puppet-modulebuilder" /><category term="community" /><category term="modules" /><category term="tools" /><category term="social" /><category term="archived" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
