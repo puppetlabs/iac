@@ -56,6 +56,6 @@ Recent anti-racial movements across the globe have prompted much-needed global c
 - [https://github.com/puppetlabs/puppetlabs-motd/pull/320](https://github.com/puppetlabs/puppetlabs-motd/pull/320)
 
 ## Wrap-up
-That concludes this weeks summary. As always we want to thank you all for your continous support and understanding.
+That concludes this weeks summary. As always we want to thank you all for your continuous support and understanding.
 
 [david_swan]:                               https://github.com/david22swan
