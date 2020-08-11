@@ -25,8 +25,8 @@ We've had a few modules released this week:
 
 ## Community Contributions
 We've had plenty of great community contributions this week:
-- [a bit boost to imporve the initial installation](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416) on the puppetlabs-kubernetes module has been finally tested and merged. The next two related PRs are being tested now and hopefully we can get these merged soon. A big thank you goes out to [Marc Schöchlin][https://github.com/scoopex] for these great contributions. 
-- [documentation update](https://github.com/puppetlabs/puppetlabs-apt/pull/942) on the puppetlabs-apt module has been merged. Thank you [Garrett Guillotte][https://github.com/gguillotte] for correction and clarification of the module README
+- [a bit boost to improve the initial installation](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/416) on the puppetlabs-kubernetes module has been finally tested and merged. The next two related PRs are being tested now and hopefully we can get these merged soon. A big thank you goes out to [Marc Schöchlin](https://github.com/scoopex) for these great contributions. 
+- [documentation update](https://github.com/puppetlabs/puppetlabs-apt/pull/942) on the puppetlabs-apt module has been merged. Thank you [Garrett Guillotte](https://github.com/gguillotte) for correction and clarification of the module README
 - [refactor RSpec tests](https://github.com/puppetlabs/puppetlabs-docker/pull/624) on the puppetlabs-docker module has been merged. Thanks to [crazymind1337](https://github.com/crazymind1337) for significantly improving the readability of the tests and code coverage
  
 ## Puppet 7
@@ -56,6 +56,6 @@ Recent anti-racial movements across the globe have prompted much-needed global c
 - [https://github.com/puppetlabs/puppetlabs-motd/pull/320](https://github.com/puppetlabs/puppetlabs-motd/pull/320)
 
 ## Wrap-up
-That concludes this weeks summary. As always we want to thank you all for your continous support and understanding.
+That concludes this weeks summary. As always we want to thank you all for your continuous support and understanding.
 
 [david_swan]:                               https://github.com/david22swan
