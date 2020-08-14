@@ -38,6 +38,10 @@ Thanks to [tphoney][tphoney] for [this enhancement][abs-enhancement] to the ABS 
 
 Shout out to Jason Stewart from our Customer Support team for liasing with [Adrian][adrian_iurca], [MODULES-10734](https://tickets.puppetlabs.com/browse/MODULES-10734) has now been resolved and released.
 
+## Using Puppet with Private Cloudsmith Repositories
+[Dan McKinney][dan-mckinney] from [Cloudsmith][cloudsmith] has uploaded a [cool video][cloudsmith-puppet-vid] which demonstrates how to use Puppet to deploy a package from a private [Cloudsmith][cloudsmith] repository.
+It's great to see how Puppet can help automate ALL THE THINGS!
+Great [video][cloudsmith-puppet-vid], [Dan][dan-mckinney]!
 
 ## Puppet 7
 Puppet 7 testing is ongoing. [Ciaran][ciaran_mccrisken] is kicking Puppet 7 testing off when the nightly builds are published.
@@ -72,3 +76,6 @@ That concludes this weeks summary. As always we want to thank you all for your c
 [kubernetes-issue-417]:		https://github.com/puppetlabs/puppetlabs-kubernetes/issues/417
 [tphoney]:								https://github.com/tphoney
 [abs-enhancement]:				https://github.com/puppetlabs/provision/pull/126
+[dan-mckinney]:           https://www.linkedin.com/in/dan-mckinney/
+[cloudsmith-puppet-vid]:  https://www.youtube.com/watch?v=lCmS3omimEM
+[cloudsmith]:             https://cloudsmith.com/
