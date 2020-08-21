@@ -9,6 +9,8 @@ tags:
   - shoutouts
   - acl
   - accounts
+  - motd
+  - stdlib
   - puppet-module-gems
   - holiday time
   - team work
