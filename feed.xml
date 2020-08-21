@@ -1,25 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-08-21T15:00:12+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Status Update</title><link href="https://puppetlabs.github.io/iac/2020/08/21/status-update.html" rel="alternate" type="text/html" title="Status Update" /><published>2020-08-21T00:00:00+00:00</published><updated>2020-08-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/2020/08/21/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/2020/08/21/status-update.html">&lt;p&gt;layout: post
-title: “21th August 2020: IAC Team Status Update”
-author: daiana.mezdrea
-categories:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;team&lt;/li&gt;
-  &lt;li&gt;status
-tags:&lt;/li&gt;
-  &lt;li&gt;releases&lt;/li&gt;
-  &lt;li&gt;shoutouts&lt;/li&gt;
-  &lt;li&gt;acl&lt;/li&gt;
-  &lt;li&gt;accounts&lt;/li&gt;
-  &lt;li&gt;motd&lt;/li&gt;
-  &lt;li&gt;stdlib&lt;/li&gt;
-  &lt;li&gt;puppet-module-gems&lt;/li&gt;
-  &lt;li&gt;holiday time&lt;/li&gt;
-  &lt;li&gt;
-    &lt;h2 id=&quot;team-work&quot;&gt;team work&lt;/h2&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The IAC team has been working on a lot of things over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-08-21T15:23:44+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">21th August 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update.html" rel="alternate" type="text/html" title="21th August 2020: IAC Team Status Update" /><published>2020-08-21T00:00:00+00:00</published><updated>2020-08-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update.html">&lt;p&gt;The IAC team has been working on a lot of things over the past week.
 We want to share with our community some of the most interesting things.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
@@ -64,7 +43,7 @@ Thank you &lt;a href=&quot;https://github.com/pmcmaw&quot;&gt;Paula&lt;/a&gt;, &
 &lt;p&gt;As no summer can end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs!&lt;/p&gt;
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
-&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name></name></author><summary type="html">layout: post title: “21th August 2020: IAC Team Status Update” author: daiana.mezdrea categories: team status tags: releases shoutouts acl accounts motd stdlib puppet-module-gems holiday time team work</summary></entry><entry><title type="html">14th August 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update.html" rel="alternate" type="text/html" title="14th August 2020: IAC Team Status Update" /><published>2020-08-14T00:00:00+00:00</published><updated>2020-08-14T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update.html">&lt;p&gt;The IAC team has been working on a lot of things over the past week.
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>daiana.mezdrea</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="acl" /><category term="accounts" /><category term="motd" /><category term="stdlib" /><category term="puppet-module-gems" /><category term="holiday time" /><category term="team work" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">14th August 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update.html" rel="alternate" type="text/html" title="14th August 2020: IAC Team Status Update" /><published>2020-08-14T00:00:00+00:00</published><updated>2020-08-14T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/08/14/status-update.html">&lt;p&gt;The IAC team has been working on a lot of things over the past week.
 We want to share with our community some of the most interesting things.
 Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
 
