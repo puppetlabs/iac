@@ -1,0 +1,67 @@
+<p>layout: post
+title: “21th August 2020: IAC Team Status Update”
+author: daiana.mezdrea
+categories:</p>
+<ul>
+  <li>team</li>
+  <li>status
+tags:</li>
+  <li>releases</li>
+  <li>shoutouts</li>
+  <li>acl</li>
+  <li>accounts</li>
+  <li>motd</li>
+  <li>stdlib</li>
+  <li>puppet-module-gems</li>
+  <li>holiday time</li>
+  <li>
+    <h2 id="team-work">team work</h2>
+  </li>
+</ul>
+
+<p>The IAC team has been working on a lot of things over the past week.
+We want to share with our community some of the most interesting things.
+Here’s a brief overview of what we’ve been up to:</p>
+
+<h2 id="module-releases-from-iac-team">Module Releases from IAC Team</h2>
+<p>We’ve had a few modules released this week:</p>
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-acl">puppetlabs/acl</a> (v3.2.0)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-accounts">puppetlabs/accounts</a> (v6.2.0)</li>
+  <li><a href="https://github.com/puppetlabs/ruby-pwsh">puppetlabs/pwshlib</a> (v0.5.0)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib">puppetlabs/stdlib</a> (v6.4.0)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-motd">puppetlabs/motd</a> (v4.2.0)</li>
+</ul>
+
+<h2 id="team-work-dream-work">Team work, dream work</h2>
+<p>We’ve noticed that <code class="language-plaintext highlighter-rouge">simplecov</code> dropped support for Ruby 2.4 from v0.19.0 and in order to solve this problem which was first highlighted <a href="https://github.com/puppetlabs/pdk-templates/issues/345">here</a>, all the team put their resources in one debug session. Step by step, we were able to understand what is happening and shortly after that, <a href="https://github.com/puppetlabs/puppet-module-gems">puppet-module-gems</a>(v0.5.1) was released.
+Thank you <a href="https://github.com/pmcmaw">Paula</a>, <a href="https://github.com/sanfrancisko">Ciaran</a> and <a href="https://github.com/carabasdaniel">Dani</a> for the demonstration!</p>
+
+<p><strong>PLEASE NOTE:</strong> <code class="language-plaintext highlighter-rouge">v0.5.1</code> of <code class="language-plaintext highlighter-rouge">puppet-module-gems</code> for Ruby 2.7 on Windows has not yet been uploaded to <a href="https://rubygems.org/">RubyGems</a> - we are working to get this resolved a.s.a.p.</p>
+
+<h2 id="community-contributions">Community Contributions</h2>
+<p>We’d like to thank the fantastic Puppet Community for the following contributions over the past week:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache">puppetlabs/puppetlabs-apache</a>: Thanks to [ekohl][ekohl] for this <a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2060">fix</a> which ensures that the bool2httpd function is compatible in Ruby 2.7.</li>
+  <li><a href="https://github.com/puppetlabs/puppet-strings">puppetlabs/puppet-strings</a>: [ekohl][ekohl] also provided this <a href="https://github.com/puppetlabs/puppet-strings/pull/246">fix</a> to ensure that we handle missing descriptions more gracefully in puppet-strings, thanks again [ekohl][ekohl]!</li>
+  <li><a href="https://github.com/puppetlabs/action-litmus_spec">puppetlabs/action-litmus-spec</a>: This update to the README should hopefully make things a bit clearer for anyone else wishing to leverage the action-litmus-spec Github Action, thanks for the <a href="https://github.com/puppetlabs/action-litmus_spec/pull/38">fix</a> [choffee][choffee]!</li>
+  <li><a href="https://github.com/puppetlabs/pdk-docker">puppetlabs/pdk-docker</a>: Thank you [alanraison][alanraison] for the <a href="https://github.com/puppetlabs/pdk-docker/pull/10">fix</a> to pdk-docker which ensures openssh is now installed during container initialisation.</li>
+</ul>
+
+<p>A BIG applause for this week and the community:
+[ekohl]:                      https://github.com/ekohl
+[choffee]:                    https://github.com/choffee
+[alanraison]:                 https://github.com/alanraison</p>
+
+<h2 id="dsc-builder-nearing-testing">DSC Builder Nearing Testing</h2>
+
+<p>Lots of small issues have been closed out recently for the DSC work - paths and non enum values are now case-insensitive, DscRunAsCredential now works as expected, and the base provider lives in the <code class="language-plaintext highlighter-rouge">pwshlib</code> (check the latest release) meaning you don’t have to rebuild your modules every time the base provider gets updated or improved!</p>
+
+<p>The tickets closed out this week represent the last technical implementation blockers for this phase of the project, everything else is documentation, testing, and user feedback! We’re nearing a launch of the PowerShell module to the <a href="https://powershellgallery.com">public Gallery</a>!</p>
+
+<h2 id="time-for-holiday">Time for holiday</h2>
+<p>As no summer can end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs!</p>
+
+<h2 id="wrap-up">Wrap-up</h2>
+<p>That’s it for this weeks update, a big THANK YOU for all your contributions and support.</p>
