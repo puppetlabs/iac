@@ -22,6 +22,7 @@ Here’s a brief overview of what we’ve been up to:
 We've had a few modules released this week:
 - [puppetlabs/acl](https://github.com/puppetlabs/puppetlabs-acl) (v3.2.0)
 - [puppetlabs/accounts](https://github.com/puppetlabs/puppetlabs-accounts) (v6.2.0)
+- [puppetlabs/pwshlib](https://github.com/puppetlabs/ruby-pwsh) (v0.5.0)
 
 ## Team work, dream work
 We've noticed that simplecov dropped support for Ruby 2.4 from v0.19.0 and in order to solve this problem which was first highlighted [here](https://github.com/puppetlabs/pdk-templates/issues/345), all the team put their resourcers in one debug session. Step by step, we were able to understand what is happening and short after that, [puppet-module-gems](https://github.com/puppetlabs/puppet-module-gems)(v0.5.1) was released.
@@ -45,4 +46,3 @@ As no summer can't end without a holiday, our team members Daiana and Dani will 
 
 ## Wrap-up
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
-
