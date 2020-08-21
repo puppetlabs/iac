@@ -25,7 +25,7 @@ We've had a few modules released this week:
 - [puppetlabs/pwshlib](https://github.com/puppetlabs/ruby-pwsh) (v0.5.0)
 
 ## Team work, dream work
-We've noticed that simplecov dropped support for Ruby 2.4 from v0.19.0 and in order to solve this problem which was first highlighted [here](https://github.com/puppetlabs/pdk-templates/issues/345), all the team put their resourcers in one debug session. Step by step, we were able to understand what is happening and short after that, [puppet-module-gems](https://github.com/puppetlabs/puppet-module-gems)(v0.5.1) was released.
+We've noticed that `simplecov` dropped support for Ruby 2.4 from v0.19.0 and in order to solve this problem which was first highlighted [here](https://github.com/puppetlabs/pdk-templates/issues/345), all the team put their resources in one debug session. Step by step, we were able to understand what is happening and shortly after that, [puppet-module-gems](https://github.com/puppetlabs/puppet-module-gems)(v0.5.1) was released.
 Thank you [Paula](https://github.com/pmcmaw), [Ciaran](https://github.com/sanfrancisko) and [Dani](https://github.com/carabasdaniel) for the demonstration! 
 
 ## Community Contributions
