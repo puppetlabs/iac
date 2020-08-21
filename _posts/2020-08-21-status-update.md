@@ -41,6 +41,12 @@ A BIG applause for this week and the community:
 [choffee]:                    https://github.com/choffee
 [alanraison]:                 https://github.com/alanraison
 
+## DSC Builder Nearing Testing
+
+Lots of small issues have been closed out recently for the DSC work - paths and non enum values are now case-insensitive, DscRunAsCredential now works as expected, and the base provider lives in the `pwshlib` (check the latest release) meaning you don't have to rebuild your modules every time the base provider gets updated or improved!
+
+The tickets closed out this week represent the last technical implementation blockers for this phase of the project, everything else is documentation, testing, and user feedback! We're nearing a launch of the PowerShell module to the [public Gallery](https://powershellgallery.com)!
+
 ## Time for holiday
 As no summer can't end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs! 
 
