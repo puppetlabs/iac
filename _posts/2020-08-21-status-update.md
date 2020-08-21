@@ -1,5 +1,5 @@
 layout: post
-title: "20th August 2020: IAC Team Status Update"
+title: "21th August 2020: IAC Team Status Update"
 author: daiana.mezdrea
 categories:
   - team
