@@ -59,3 +59,11 @@ As no summer can end without a holiday, our team members Daiana and Dani will ha
 
 ## Wrap-up
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
+
+[ekohl]:                      https://github.com/ekohl
+[choffee]:                    https://github.com/choffee
+[alanraison]:                 https://github.com/alanraison
+[puppet-strings-pr-246]:      https://github.com/puppetlabs/puppet-strings/pull/246
+[action-litmus_spec-pr-38]:   https://github.com/puppetlabs/action-litmus_spec/pull/38
+[pdk-docker-pr-10]:           https://github.com/puppetlabs/pdk-docker/pull/10
+[puppetlabs-apache-pr-2060]:  https://github.com/puppetlabs/puppetlabs-apache/pull/2060
