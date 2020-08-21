@@ -50,7 +50,7 @@ Lots of small issues have been closed out recently for the DSC work - paths and 
 The tickets closed out this week represent the last technical implementation blockers for this phase of the project, everything else is documentation, testing, and user feedback! We're nearing a launch of the PowerShell module to the [public Gallery](https://powershellgallery.com)!
 
 ## Time for holiday
-As no summer can't end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs! 
+As no summer can end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs! 
 
 ## Wrap-up
 That’s it for this weeks update, a big THANK YOU for all your contributions and support.
