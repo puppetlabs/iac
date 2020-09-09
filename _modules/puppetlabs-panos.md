@@ -9,5 +9,5 @@ puppet_module: puppetlabs/panos
 travis_com: false
 travis_org: true
 workflow: false
-category: Network
+category: Networking
 ---
