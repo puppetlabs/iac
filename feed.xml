@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-09-11T02:14:14+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">4th September 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update.html" rel="alternate" type="text/html" title="4th September 2020: IAC Team Status Update" /><published>2020-09-04T00:00:00+00:00</published><updated>2020-09-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update.html">&lt;p&gt;The IAC team has been active over the past week.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-09-11T12:25:24+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">11th September 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/09/11/status-update.html" rel="alternate" type="text/html" title="11th September 2020: IAC Team Status Update" /><published>2020-09-11T00:00:00+00:00</published><updated>2020-09-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/09/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/09/11/status-update.html">&lt;p&gt;Hi everybody!
+Here’s an update from the IAC Team for the week that was.
+It’s worth mentioning that it has been quite an eventful week with some unexpected fires, here and there.
+Nothing we and our wonderful Puppet colleagues can’t get on top of, but, worth highlighting as this week’s update may be a little light!
+We’ll divulge more details in due course, after we’re on top of the fixes.&lt;/p&gt;
+
+&lt;p&gt;Speaking of fires, we hope that any of our Community members and Puppet colleagues on the US West Coast are keeping safe at the moment and that life hasn’t been impacted too adversely with the wildfires coarsing through many parts of California, Washington and of course, our HQ’s home state of Oregon.&lt;/p&gt;
+
+&lt;p&gt;Stay safe!&lt;/p&gt;
+
+&lt;h2 id=&quot;welcome-back-david&quot;&gt;Welcome Back David!&lt;/h2&gt;
+&lt;p&gt;Many of you in the Community (and of course, Puppet!) will know who &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David&lt;/a&gt; is - he is definitely one of the most integral members of both the Community and Puppet, interally.
+&lt;a href=&quot;https://github.com/DavidS&quot;&gt;David&lt;/a&gt; had to take some time away back in July - we mentioned this in our &lt;a href=&quot;https://puppetlabs.github.io/iac/team/status/2020/07/17/status-update.html&quot;&gt;2020-07-17 blog post&lt;/a&gt;.
+We’re &lt;em&gt;extremely&lt;/em&gt; happy to be able to formally welcome &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David&lt;/a&gt; back - for the two months or so you were away, it certainly highlighted how pivotal you are to the IAC Team!&lt;/p&gt;
+
+&lt;p&gt;I’m sure everyone in the wider Puppet Community are also glad to see you back too! :)&lt;/p&gt;
+
+&lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
+&lt;p&gt;We have two modules released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;puppetlabs-inifile&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v.4.3.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp&quot;&gt;puppetlabs-ntp&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v.8.4.0&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2063&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2063&lt;/code&gt;&lt;/a&gt;: We’d lke to thank &lt;a href=&quot;https://github.com/nbarrientos&quot;&gt;nbarrientos&lt;/a&gt; for his fix that ensures the correct default shared lib path for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_wsgi&lt;/code&gt; on RHEL 8.
+The responsiveness was very much appreciated by the team - a pleasure working with you!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;puppet-7--ruby-27-testing&quot;&gt;Puppet 7 &amp;amp; Ruby 2.7 Testing&lt;/h2&gt;
+&lt;p&gt;We continue to expand the integration testing effort of the Puppet 7 nightly builds against our core, &lt;a href=&quot;/iac/modules/&quot;&gt;supported modules&lt;/a&gt;.
+Thanks to &lt;a href=&quot;https://github.com/sheenaajay&quot;&gt;Sheena&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/norman-heaney-b52bb5&quot;&gt;Norman&lt;/a&gt; for leading the test effort whilst I was out on vacation.&lt;/p&gt;
+
+&lt;h2 id=&quot;dishas-second-week&quot;&gt;Disha’s Second Week&lt;/h2&gt;
+&lt;p&gt;We didn’t scare &lt;a href=&quot;https://github.com/disha-maker&quot;&gt;Disha&lt;/a&gt; off, by the looks of things, so we must be doing something right :)
+&lt;a href=&quot;https://github.com/disha-maker&quot;&gt;Disha&lt;/a&gt; has been working through some training material set out by the team and here’s how she’s been getting on so far, in her own words:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I am currently working on the learning VM quest guide with &lt;a href=&quot;https://github.com/pmcmaw&quot;&gt;Paula&lt;/a&gt;, &lt;a href=&quot;https://github.com/daianamezdrea&quot;&gt;Daiana&lt;/a&gt; and &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; to solve an issue for verifying certificates. 
+  We hope to get this issue resolved soon so that I can continue with the learning VM training. 
+  The link to the Quest Guide for the Puppet Learning VM is &lt;a href=&quot;https://github.com/puppetlabs/puppet-quest-guide&quot;&gt;here&lt;/a&gt;.
+  I also had a quick session with &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; to learn markdown language for writing weekly team blogs. 
+  I will be exploring markdown language via this &lt;a href=&quot;https://www.markdowntutorial.com/&quot;&gt;tutorial&lt;/a&gt; provided by &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt;. 
+  There will be a dedicated training session on markdown language in the coming weeks.&lt;br /&gt;
+  Thank you to the team of IAC for helping me this week in the training sessions! 
+  I am now looking forward to next week and all the exciting stuff to learn.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap Up&lt;/h2&gt;
+&lt;p&gt;Glad to have you on board &lt;a href=&quot;https://github.com/disha-maker&quot;&gt;Disha&lt;/a&gt; and great to see you progressing really well in such a short space of time! :)&lt;/p&gt;
+
+&lt;p&gt;That’s all for this week from the IAC Team! Stay safe!&lt;/p&gt;</content><author><name>sanfrancrisko</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="apache" /><category term="inifile" /><category term="newstart" /><category term="learningvm" /><summary type="html">Hi everybody! Here’s an update from the IAC Team for the week that was. It’s worth mentioning that it has been quite an eventful week with some unexpected fires, here and there. Nothing we and our wonderful Puppet colleagues can’t get on top of, but, worth highlighting as this week’s update may be a little light! We’ll divulge more details in due course, after we’re on top of the fixes.</summary></entry><entry><title type="html">4th September 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update.html" rel="alternate" type="text/html" title="4th September 2020: IAC Team Status Update" /><published>2020-09-04T00:00:00+00:00</published><updated>2020-09-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/09/04/status-update.html">&lt;p&gt;The IAC team has been active over the past week.
 We worked on releasing modules and also reviewing contributions from the community.
 Here’s a resume of the most cool things:&lt;/p&gt;
 
@@ -362,124 +415,4 @@ For the great progress he made in this time, as a reward, he got to write this w
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
 
-&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>adrianiurca</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="community_management" /><category term="iis" /><category term="tomcat" /><category term="powershell" /><category term="shoutouts" /><summary type="html">This has been as short week for the IAC team and we mostly focused our attention on maintenance and support activities. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">Apache MOD Test Maintenance</title><link href="https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html" rel="alternate" type="text/html" title="Apache MOD Test Maintenance" /><published>2020-07-03T00:00:00+00:00</published><updated>2020-07-03T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements</id><content type="html" xml:base="https://puppetlabs.github.io/iac/news/2020/07/03/apache-mod-test-improvements.html">&lt;p&gt;This week sees version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v5.5.0&lt;/code&gt; of the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache&quot;&gt;puppetlabs-apache&lt;/a&gt; module released.
-There are a lot of new features within this release - check out the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache/changelog#v550-2020-07-01&quot;&gt;CHANGELOG entry for this version&lt;/a&gt; to see what’s included.&lt;/p&gt;
-
-&lt;p&gt;The last release of this module was &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v5.4.0&lt;/code&gt; on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2020-01-23&lt;/code&gt;, over 5 months ago.
-Currently the IAC Team is responsible for &lt;a href=&quot;/iac/modules/&quot;&gt;these supported modules&lt;/a&gt; and &lt;a href=&quot;/iac/tools/&quot;&gt;tools&lt;/a&gt;.
-As a small team we always continue to improve our processes to ensure we’re maximising our time and efforts.
-Still, the gap in time between the release of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v5.4.0&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v5.5.0&lt;/code&gt; of the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache&quot;&gt;puppetlabs-apache&lt;/a&gt; module was a concern for us.
-What happened and how did we address this issue?&lt;/p&gt;
-
-&lt;h2 id=&quot;why-the-delay&quot;&gt;Why the delay?&lt;/h2&gt;
-&lt;p&gt;There was no shortage of excellent community contributions to the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;puppetlabs-apache&lt;/a&gt; module in the period between these two releases.
-The team were keen to get a new release of the module out sooner than this, so the community could take advantage of these contributions.
-Part of the process of releasing a module involves us running our release check suite on our internal VM infrastructure.
-We were finding that there were cases where tests for &lt;a href=&quot;https://httpd.apache.org/docs/2.4/mod&quot;&gt;Apache MODs&lt;/a&gt; were failing on certain platforms after someone in the community put forward a fix.&lt;/p&gt;
-
-&lt;h2 id=&quot;what-was-the-issue&quot;&gt;What was the issue?&lt;/h2&gt;
-&lt;p&gt;There are multiple reasons we ended up in this scenario, which ultimately had the same root cause, namely, a lack of test coverage.
-Some examples are:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;New platforms changing MOD package names (e.g. &lt;a href=&quot;https://github.com/farebers&quot;&gt;farebers’s&lt;/a&gt; fix in &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2021&quot;&gt;#2021&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/1913&quot;&gt;Fixes for one environment&lt;/a&gt; having a knock-on effect for a &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2041&quot;&gt;different environment&lt;/a&gt; (thanks to &lt;a href=&quot;https://github.com/h-haaks&quot;&gt;h-haaks&lt;/a&gt; for the fix!)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;When a new version of an OS comes out, it is quite common for issues to manifest when trying to configure some of the less mainstream &lt;a href=&quot;https://httpd.apache.org/docs/2.4/mod&quot;&gt;Apache MODs&lt;/a&gt;:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;A simple change in it’s package name (&lt;em&gt;thankfully a relatively quick fix!&lt;/em&gt;)&lt;/li&gt;
-  &lt;li&gt;The package is no longer available from the core “out-of-the-box” repositories (e.g. a 3rd party repos or edge/experimental/extra package streams need to be configured)&lt;/li&gt;
-  &lt;li&gt;Package dependencies are unavailable in non-standard repositories&lt;/li&gt;
-  &lt;li&gt;Support is dropped altogether - there is no way to locate the package or dependencies for a newer OS version&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This led us to a conversation about how we continue to support all the various prerequisites and configurations required when presented with a matrix of &lt;a href=&quot;https://httpd.apache.org/docs/2.4/mod&quot;&gt;Apache MODs&lt;/a&gt; and &lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache/compatibility&quot;&gt;compatible OSs&lt;/a&gt;.
-We could, if time permitted, ensure that we have the steps to install every version…of every MOD…on every OS…documented and implemented.&lt;/p&gt;
-
-&lt;p&gt;Time permitting…&lt;/p&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-&lt;h3 id=&quot;test-support-policy&quot;&gt;Test Support Policy&lt;/h3&gt;
-&lt;p&gt;Straight away, we realised that, in the future, we need to strictly time box the amount of time we spend attempting to configure the OS with the correct repositories and/or dependencies for any given MOD.
-A rule of thumb was that if it’s not available in the default repositories of the OS, or a common, well supported auxiliary repository (e.g. EPEL), then we are not going to pin down the very unique snowflake configuration required for that MOD.
-There is always the concept of &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/blob/master/manifests/default_mods.pp&quot;&gt;default MODs&lt;/a&gt; in Apache and these will &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/blob/master/spec/acceptance/default_mods_spec.rb&quot;&gt;remain supported&lt;/a&gt; with the module, however, in future, we are going to evaluate how we proceed with a test failure with a much stricter time limit.&lt;/p&gt;
-
-&lt;h3 id=&quot;mods-arent-supported-anymore&quot;&gt;MODs aren’t supported anymore!?&lt;/h3&gt;
-&lt;p&gt;Absolutely not! They are still supported! If you want to add support for a new MOD, we do ask that you also write an acceptance test too.
-The IAC Team are always happy to help you with this process.&lt;/p&gt;
-
-&lt;h3 id=&quot;i-cant-get-the-test-to-pass-on-all-platforms&quot;&gt;I can’t get the test to pass on all platforms!&lt;/h3&gt;
-&lt;p&gt;Yes - this is likely an issue you’re going to run in to.
-Kudos to those who chase down ALL the package, package dependencies and configurations required for ALL of the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/apache/compatibility&quot;&gt;compatible platforms&lt;/a&gt; of the Apache module.
-Realistically, you will likely encounter a few OSs where it is beyond reasonable to try and get this MOD working.
-In these scenarios, we’ll start a conversation on the PR about what the acceptable minimum is for the change being proposed - there’s no hard/fast rule here.&lt;/p&gt;
-
-&lt;h3 id=&quot;weve-agreed-were-not-supporting-this-mod-on-this-os-version---what-now&quot;&gt;We’ve agreed we’re not supporting this MOD on this OS version - what now?&lt;/h3&gt;
-&lt;p&gt;You may be familiar with &lt;a href=&quot;https://relishapp.com/rspec/rspec-core/v/3-8/docs/filtering/conditional-filters&quot;&gt;RSpec’s conditional filtering&lt;/a&gt;?
-If not, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/blob/51ce2adcfc231c6a78dda5cc59c2aaf4028bb5bd/spec/acceptance/mod_ldap_spec.rb#L4&quot;&gt;here is an example&lt;/a&gt;:&lt;/p&gt;
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'apache::mod::ldap'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;unless: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:family&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'redhat'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;os&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:release&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;to_i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;This will mean that this test will &lt;strong&gt;not&lt;/strong&gt; run if the OS family is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RedHat&lt;/code&gt; and the version is &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8&lt;/code&gt; or higher.
-These work well, but, things can start to get messy when there is quite a narrow band of compatible OSs for a MOD.
-Consider &lt;a href=&quot;https://github.com/zmartzone/mod_auth_openidc/releases/tag/v2.4.3&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v2.4.3&lt;/code&gt; of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_auth_openidc&lt;/code&gt;&lt;/a&gt; - we can see from the build artifacts’ names that we “officially” have support for:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Ubuntu 16.04&lt;/li&gt;
-  &lt;li&gt;Ubuntu 18.04&lt;/li&gt;
-  &lt;li&gt;Debian 10&lt;/li&gt;
-  &lt;li&gt;RHEL 7&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This does not consider the fact that there are many other OSs derived from RHEL and other distro vendors / maintainers can port packages to their OS.
-For example, after a bit more digging, I can see that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_auth_openidc&lt;/code&gt; package is available for the following OSs too:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;CentOS 7&lt;/li&gt;
-  &lt;li&gt;CentOS 8 (via AppStream)&lt;/li&gt;
-  &lt;li&gt;RHEL 8 (via AppStream)&lt;/li&gt;
-  &lt;li&gt;Fedora 30&lt;/li&gt;
-  &lt;li&gt;Fedora 31&lt;/li&gt;
-  &lt;li&gt;Fedora 32&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This search was not exhaustive, and to make it so would require a lot more effort, which is part of the issue we find ourselves up against.
-Still, we now have a list of platforms that we want to include/exclude from being tested - depending on how we look at it.
-I’m sure you can envisage that the filtering rule for this test is going to become pretty gnarly?
-What if I were to also throw in some of the challenges the IAC team face, on top:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Expanding test coverage uncovering more MOD / OS incompatibility&lt;/li&gt;
-  &lt;li&gt;Some tests invoking a MOD load/configure indirectly whist testing other functionality&lt;/li&gt;
-  &lt;li&gt;New OS support requirements&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;tagging-and-helper-methods&quot;&gt;Tagging and Helper Methods&lt;/h3&gt;
-&lt;p&gt;We had to come up with some better solution than ridiculously complex filtering rules.
-After some conversations and design reviews, we settled on an idea of using &lt;a href=&quot;https://www.rubydoc.info/gems/yard/file/docs/Tags.md#note&quot;&gt;YARD’s note tags&lt;/a&gt;.
-This gives us the benefit of:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Keeping within the conventions already in use&lt;/li&gt;
-  &lt;li&gt;Easy syntax to understand&lt;/li&gt;
-  &lt;li&gt;Free documentation whilst we’re at it&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;All the class definitions for &lt;a href=&quot;https://httpd.apache.org/docs/2.4/mod&quot;&gt;Apache MODs&lt;/a&gt; live under &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/tree/983b1fd3ff178d46145f4b8c0a88bae36dfad12b/manifests/mod&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;manifest/mod&lt;/code&gt;&lt;/a&gt;.
-This seemed like the most logical place for our tags to live.
-Next, we wanted to decide whether this was an “opt-in” or “opt-out” affair.
-In the end, we determined that it would be best to “opt-out” and so, the tag became &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unsupported platforms&lt;/code&gt;.
-You can now define what platforms a given MOD will &lt;em&gt;not&lt;/em&gt; be expected to run on:&lt;/p&gt;
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# @note Unsupported platforms: RedHat: 5, 6; Ubuntu: 14.04; SLES: all; Scientific: 11 SP1&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;apache::mod::actions&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;apache&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'actions'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-&lt;p&gt;For a full overview of the tag syntax rules, see &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/blob/c726313dad64683d05465d2f978965ad14690f35/README.md#apache-mod-test--support-lifecycle&quot;&gt;this section of the README&lt;/a&gt; in the module.&lt;/p&gt;
-
-&lt;p&gt;When RSpec tests are kicked off in the module, we will parse the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Unsupported platform&lt;/code&gt; tags under &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/tree/983b1fd3ff178d46145f4b8c0a88bae36dfad12b/manifests/mod&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;manifest/mod&lt;/code&gt;&lt;/a&gt; as part of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rspec.before&lt;/code&gt; hooks and generate a mapping of MOD -&amp;gt; Unsupported Platforms.
-Now, from within the tests, you can make use of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_supported_on_platform&lt;/code&gt; helper method to determine whether the test should run on a given platform or be filtered out:&lt;/p&gt;
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;describe&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'auth_oidc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;if: &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;mod_supported_on_platform&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'apache::mod::auth_openidc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Hopefully you’ll agree that this is a much cleaner solution that a complex filtering rule?
-For the IAC Team, it makes our life a lot easier, and hopefully means more frequent updates released for the Apache module for the community.&lt;/p&gt;
-
-&lt;h4 id=&quot;want-more-details&quot;&gt;Want more details?&lt;/h4&gt;
-&lt;p&gt;You can see the implementation on &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2036&quot;&gt;#2036&lt;/a&gt;, which has a detailed description outlining the functionality.
-JIRA tickets &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-801&quot;&gt;IAC-801&lt;/a&gt; and &lt;a href=&quot;https://tickets.puppetlabs.com/browse/IAC-824&quot;&gt;IAC-824&lt;/a&gt; outline the design and implementation, respectively, should you wish to take a look.&lt;/p&gt;</content><author><name>sanfrancrisko</name></author><category term="news" /><category term="apache" /><category term="rspec" /><category term="MODs" /><category term="testing" /><summary type="html">This week sees version v5.5.0 of the puppetlabs-apache module released. There are a lot of new features within this release - check out the CHANGELOG entry for this version to see what’s included.</summary></entry></feed>
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>adrianiurca</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="community_management" /><category term="iis" /><category term="tomcat" /><category term="powershell" /><category term="shoutouts" /><summary type="html">This has been as short week for the IAC team and we mostly focused our attention on maintenance and support activities. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
