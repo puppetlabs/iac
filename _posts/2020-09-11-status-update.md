@@ -22,9 +22,11 @@ We'll divulge more details in due course, after we're on top of the fixes.
 
 Speaking of fires, we hope that any of our Community members and Puppet colleagues on the US West Coast are keeping safe at the moment and that life hasn't been impacted too adversely with the wildfires coarsing through many parts of California, Washington and of course, our HQ's home state of Oregon.
 
+Stay safe!
+
 ## Welcome Back David!
 Many of you in the Community (and of course, Puppet!) will know who [David][davids] is - he is definitely one of the most integral members of both the Community and Puppet, interally.
-[David][davids] had to take some time away back in July - we mentioned this in our [2020-07-17 blog post]({%link team/status/2020/07/17/status-update.html}).
+[David][davids] had to take some time away back in July - we mentioned this in our [2020-07-17 blog post](https://puppetlabs.github.io/iac/team/status/2020/07/17/status-update.html).
 We're _extremely_ happy to be able to formally welcome [David][davids] back - for the two months or so you were away, it certainly highlighted how pivotal you are to the IAC Team!
 
 I'm sure everyone in the wider Puppet Community are also glad to see you back too! :)
