@@ -23,9 +23,10 @@ We'll divulge more details in due course, after we're on top of the fixes.
 Speaking of fires, we hope that any of our Community members and Puppet colleagues on the US West Coast are keeping safe at the moment and that life hasn't been impacted too adversely with the wildfires coarsing through many parts of California, Washington and of course, our HQ's home state of Oregon.
 
 ## Module Releases from IAC Team
-Just one module released this week:
+We have two modules released this week:
 
 - [puppetlabs-inifile](https://github.com/puppetlabs/puppetlabs-inifile) (`v.4.3.0`)
+- [puppetlabs-ntp](https://github.com/puppetlabs/puppetlabs-ntp) (`v.8.4.0`)
 
 ## Community Contributions
 - [`puppetlabs-apache#2063`][puppetlabs-apache-pr-2063]: We'd lke to thank [nbarrientos][nbarrientos] for his fix that ensures the correct default shared lib path for `mod_wsgi` on RHEL 8.
