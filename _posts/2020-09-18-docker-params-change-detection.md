@@ -13,9 +13,11 @@ tags:
 
 ## Docker params change detection
 
-An interesting behaviour was present in docker::run component. The problem was that if any parameter was added/modified/removed puppet agent didn't apply the change only if you stopped, removed manually the container, and reapply the manifest, forcing a new container creation. 
+The problem was reported by a client with the ticket [MODULES-10743](https://tickets.puppetlabs.com/browse/MODULES-10743). After analysis, we discover that we don't have parameter change detection mechanisms. In this blog post, we try to explain the problem in detail with examples.
 
-The solution was to create a new function that detects if at least one parameter is changed. The detection mechanism is based on the check between parameter values from the manifest file and correspondent field from the docker inspect object of the currently running container. The solution is present in the 3.11.0 version. 
+An interesting behaviour was present in docker::run component. The problem was that if any parameter was added/modified/removed puppet agent didn't apply the change only if you stopped, removed manually the container, and reapply the manifest, forcing a new container creation.
+
+The solution was to create a new function that detects if at least one parameter is changed. The detection mechanism is based on the check between parameter values from the manifest file and correspondent field from the docker inspect object of the currently running container. The solution is present in the 3.11.0 version.
 
 So now let's see how the problem can be reproduced by using version <= 3.10.2:
 
@@ -76,7 +78,7 @@ so... something is wrong, the tag was not changed to `hello-world:latest`. If we
 - remove the container: `docker rm servercore`
 - reapply the manifest detailed above: `puppet apply <manifest_file_name>`
 
-In conclusion in the puppetlabs/docker module versions <= 3.10.2 the parameter change is not detected. If we want to change some parameters for the same container, the puppet agent will not apply these changes for us until we delete the container manually. 
+In conclusion in the puppetlabs/docker module versions <= 3.10.2 the parameter change is not detected. If we want to change some parameters for the same container, the puppet agent will not apply these changes for us until we delete the container manually.
 Using the latest versions(>=3.11.0) this problem is resolved by having the parameter detection mechanism implemented for the most important parameters such as image, volumes and ports.
 Also please take a look at the [sollution](https://github.com/puppetlabs/puppetlabs-docker/pull/648).
 
