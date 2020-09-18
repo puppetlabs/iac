@@ -19,7 +19,7 @@ An interesting behaviour was present in docker::run component. The problem was t
 
 The solution was to create a new function that detects if at least one parameter is changed. The detection mechanism is based on the check between parameter values from the manifest file and correspondent field from the docker inspect object of the currently running container. The solution is present in the 3.11.0 version.
 
-So now let's see how the problem can be reproduced by using version <= 3.10.2:
+So now let's see how the problem can be reproduced by using version `<= 3.10.2`:
 
 ### 1. install puppetlabs/docker module
 
