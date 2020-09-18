@@ -75,7 +75,7 @@ After completing the session with [Sheena](https://github.com/sheenaajay), I the
 Finally, on Friday I attended a session with Caoimhe to give her an overview of how to use the [Queen's University Belfast](https://virtualcareersfairs.qub.ac.uk/events) Virtual Events Page for the Graduate and Placement Fair 2020 taking place virtually this October. 
 We hope to see the QUB students at the virtual fair in this October! 
 After the session with Caoimhe, I attended the weekly Belfast's Wrap Up Session. 
-I also attended a zoom call with [John O' Connor] where he gave me an overview of the what the Development Infrastructure Operations is and what they do! Thanks for such an informative session [John O'Connor] on [Grafana](https://puppet.grafana.net/login), ABS, Mesos and Puppet Tech Tools Registry. 
+I also attended a zoom call with [John O' Connor][joc] where he gave me an overview of the what the Development Infrastructure Operations is and what they do! Thanks for such an informative session [John O'Connor][joc] on [Grafana](https://puppet.grafana.net/login), ABS, Mesos and Puppet Tech Tools Registry. 
 That's all for this week from me!
 Happy reading!!
 
