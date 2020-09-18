@@ -13,7 +13,7 @@ tags:
 
 ## Docker params change detection
 
-The problem was reported by a client with the ticket [MODULES-10743](https://tickets.puppetlabs.com/browse/MODULES-10743). After analysis, we discover that we don't have parameter change detection mechanisms. In this blog post, we try to explain the problem in detail with examples.
+The problem was reported by a client with the ticket [MODULES-10743](https://tickets.puppetlabs.com/browse/MODULES-10743). After analysis, we discovered that we don't have parameter change detection mechanisms. In this blog post, we try to explain the problem in detail with examples.
 
 An interesting behaviour was present in docker::run component. The problem was that if any parameter was added/modified/removed puppet agent didn't apply the change only if you stopped, removed manually the container, and reapply the manifest, forcing a new container creation.
 
