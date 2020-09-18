@@ -79,7 +79,7 @@ so... something is wrong, the tag was not changed to `hello-world:latest`. If we
 - reapply the manifest detailed above: `puppet apply <manifest_file_name>`
 
 In conclusion in the puppetlabs/docker module versions <= 3.10.2 the parameter change is not detected. If we want to change some parameters for the same container, the puppet agent will not apply these changes for us until we delete the container manually.
-Using the latest versions(>=3.11.0) this problem is resolved by having the parameter detection mechanism implemented for the most important parameters such as image, volumes and ports.
+Using the latest versions(`>=3.11.0`) this problem is resolved by having the parameter detection mechanism implemented for the most important parameters such as image, volumes and ports.
 Also please take a look at the [solution](https://github.com/puppetlabs/puppetlabs-docker/pull/648).
 
 Kind regards,
