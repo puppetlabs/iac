@@ -38,7 +38,14 @@ We'd like to thank the [Bolt][bolt] team, and specifically [lucywyman][lucywyman
 Also, thanks to [jpogran][jpogran] and [nicklewis][nicklewis] for quickly jumping on [bolt#2188][bolt-issue-2188], discovered by [daianamezdrea][daianamezdrea].
 Very much appreciated! :)
 
-### Disha's Week 3 Update
+## `Puppet.Dsc` PowerShell Module Published
+
+We also released the first public version of the [`Puppet.Dsc` PowerShell module][dsc-repo] to the [PowerShell Gallery][dsc-psgallery] this week!
+This is the initial public follow up to our earlier blog post, [_DSC + Puppet: Incoming!_][dsc-old-blog], wherein we make the cleaned up and tested version of our tool for converting PowerShell modules with DSC Resources into Puppet modules!
+
+We'll have a new blog going more in depth on this topic in short order.
+
+## Disha's Week 3 Update
 I had a very busy and productive week 3 at [Puppet](https://puppet.com/). I started off my week 3 with the IDEA Working Group, where we discussed what to do with the upcoming events such as [Women Who Code](https://www.womenwhocode.com/) taking opinions of existing interns of how they applied to Puppet for their placement year and if there was anything that can be improved.On the same day, I started to work on [Learn Ruby The Hard Way](https://learnrubythehardway.org/book/)
 During the week, I continued to work on this tutorial when I was free and so far made great progress. Later on in the week, I had some very interesting and enjoyable sessions of training. I had two sessions on [GitHub](https://github.com/)  training which was a high-level introduction, covering things like:-
 
@@ -79,6 +86,9 @@ I also attended a zoom call with [John O' Connor][joc] where he gave me an overv
 That's all for this week from me!
 Happy reading!!
 
+[dsc-repo]:             https://github.com/puppetlabs/Puppet.Dsc
+[dsc-psgallery]:        https://www.powershellgallery.com/packages/Puppet.Dsc/0.1.0
+[dsc-old-blog]:         https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html
 [jcpunk]:               https://github.com/jcpunk
 [puppet-lint]:          https://github.com/rodjek/puppet-lint
 [translation-pr-93]:    https://github.com/puppetlabs/puppetlabs-translate/pull/93
