@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>DSC + Puppet: Arrived! | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="DSC + Puppet: Arrived!" />
+<meta name="author" content="michaeltlombardi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!" />
+<meta property="og:description" content="Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-21T00:00:00+00:00" />
+<script type="application/ld+json">
+{"description":"Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!","@type":"BlogPosting","headline":"DSC + Puppet: Arrived!","dateModified":"2020-09-21T00:00:00+00:00","url":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html","datePublished":"2020-09-21T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html"},"author":{"@type":"Person","name":"michaeltlombardi"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">DSC + Puppet: Arrived!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2020-09-21T00:00:00+00:00" itemprop="datePublished">Sep 21, 2020
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">michaeltlombardi</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Earlier this year, we <a href="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html">announced an upcoming project</a> to drastically improve the story for using DSC Resources with Puppet.
+Today, we’re announcing the general availability of that project!</p>
+
+<p>The <a href="https://github.com/puppetlabs/Puppet.Dsc"><code class="language-plaintext highlighter-rouge">Puppet.Dsc</code> PowerShell module</a> is now available on the <a href="https://www.powershellgallery.com/packages/Puppet.Dsc">PowerShell Gallery</a>;
+furthermore, an initial batch of <strong>twenty-six</strong> PowerShell modules with DSC Resources have been Puppetized and <a href="https://forge.puppet.com/dsc">published to the Forge</a>!</p>
+
+<p>We picked several of the most-downloaded modules with DSC Resources released in the last year to start with, but in the coming weeks you should find <em>everything</em> available on the PowerShell Gallery up on the Forge!</p>
+
+<p>But today, in addition to sharing this news, I want to go into a bit more detail, both with what’s going on under the hood and with how you can use these auto-generated modules.</p>
+
+<h3 id="installing-the-modules">Installing the Modules</h3>
+
+<p>If you just want to get your hands on the PowerShell module to read the help and experiment on your own, you can install it like any other PowerShell module:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="nf">Import-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="nf">Get-Command</span><span class="w"> </span><span class="nt">-Module</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="nf">Get-Help</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-ShowWindow</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Some of the functions from the PowerShell module rely on the <a href="https://puppet.com/docs/pdk/1.x/pdk.html">Puppet Development Kit (PDK)</a> being installed;
+we suggest using <a href="https://chocolatey.org/">Chocolatey</a> to do so, but you can also <a href="https://puppet.com/try-puppet/puppet-development-kit/">manually download and install</a> if you prefer.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>choco <span class="nb">install </span>pdk
+</code></pre></div></div>
+
+<p>If you want to do the same sort of thing with one of the Puppetized modules from the forge, you can install them and treat them just like any other Puppet module:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># For example, installing the Puppetized ComputerManagementDsc module manually:</span>
+puppet module <span class="nb">install </span>dsc-computermanagementdsc <span class="nt">--Version</span> 8.4.0-0-0
+<span class="c"># Or via r10k / Code Manager / Bolt:</span>
+mod <span class="s1">'dsc-computermanagementdsc'</span>, <span class="s1">'8.4.0-0-0'</span>
+</code></pre></div></div>
+
+<h2 id="puppetizing-a-powershell-module">Puppetizing a PowerShell module</h2>
+
+<p>So, you want to turn a PowerShell module with DSC Resources into a Puppet module?
+You can do this with a single command:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># If you run this command without the PassThru flag it returns nothing to the output stream.</span><span class="w">
+</span><span class="c"># Any conversion errors will be in the error stream, as usual.</span><span class="w">
+</span><span class="c"># If you'd like a deeper look at what it's doing, try running it with the Verbose flag.</span><span class="w">
+</span><span class="nf">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-PowerShellModuleName</span><span class="w"> </span><span class="nx">ComputerManagementDsc</span><span class="w"> </span><span class="nt">-PassThru</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Unfortunately, the output from running it isn’t all that exciting:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/new-puppetdscmodule.png" alt="Output from a PowerShell console showing the running of the command above as well as the return output, which is the folder object representing the new Puppet module on disk" /></p>
+
+<p>Behind the scenes, the command:</p>
+
+<ol>
+  <li>Uses the <a href="https://puppet.com/docs/pdk/1.x/pdk.html">PDK</a> to create a new Puppet module</li>
+  <li>Searches the <a href="https://www.powershellgallery.com">PowerShell Gallery</a> for the ComputerManagementDsc module and vendor it into the new Puppet module</li>
+  <li>Converts each of the DSC Resources from the vendored PowerShell module into a Puppet Resource API type and provider</li>
+  <li>Updates the Puppet module’s metadata and documentation based on the PowerShell module.</li>
+</ol>
+
+<blockquote>
+  <p>At this time, for best results we strongly recommend you run the command with administrator privileges in a Windows PowerShell 5.1 session.
+While it <em>does</em> work without administrator privileges, the function cannot fully map nested CIM instances without administrator privileges.
+For more information on this process, check out the <a href="https://github.com/puppetlabs/Puppet.Dsc/blob/main/docs/about_Puppetization.md"><code class="language-plaintext highlighter-rouge">about_Puppetization</code> HelpFile</a> via <code class="language-plaintext highlighter-rouge">Get-Help</code> for a more in-depth documentation of this process.</p>
+</blockquote>
+
+<h2 id="using-puppetized-modules">Using puppetized modules</h2>
+
+<p>On the one hand, there’s not much to say about using the Puppetized modules with DSC Resources;
+you use them <em>precisely</em> like any other Puppet module, after all.
+On the other hand, there’s some strong utility worth going over in more detail you may or may not be aware of!</p>
+
+<p>To get the most value from your workflow, we <strong>strongly</strong> recommend you author your manifests that include Puppetized DSC Resources in <a href="https://code.visualstudio.com/">VSCode</a> with the <a href="https://puppet-vscode.github.io/">Puppet extension</a> enabled.</p>
+
+<p>When we open a file named <code class="language-plaintext highlighter-rouge">example.pp</code> to edit, the Puppet extension automatically begins to load;
+once this is finished, we have access to a ton of useful authoring support, including intellisense.</p>
+
+<p>For example, if we’ve installed the <code class="language-plaintext highlighter-rouge">computermanagementdsc</code> Puppet module, we need only type <code class="language-plaintext highlighter-rouge">dsc_execution</code> before IntelliSense kicks in and helps us out:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/intellisense-resource.png" alt="A VSCode window showing the text 'dsc_execution' has raised a tooltip which lists multiple possible matches, including dsc_powershellexecutionpolicy, and to the right it shows the help information for this resource." /></p>
+
+<p>Note that it tells us not just what available resources might match, it also displays the available documentation for each resource.</p>
+
+<p>We also get IntelliSense for each property we want to pass, too;
+again, this doesn’t just show the available options but also includes any available documentation for each property.</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/intellisense-property.png" alt="A VSCode window showing the text 'dsc' inside a Puppet resource declaration for dsc_powershellexecutionpolicy, with a tooltip listing the possible properties, including dsc_executionpolicy and dsc_executionpolicyscope; as before, the help information (now including valid values) is to the right." /></p>
+
+<p>You can also review the documentation for a property by hovering over it:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/docs-property.png" alt="A VSCode window showing an empty declaration for 'dsc_executionpolicy' with the mouse hovering over that key, displaying a tooltip which includes the documentation and valid values for the property." /></p>
+
+<p>Where this combination really begins to sing is when you’ve begun authoring a manifest and something goes wrong.</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/problems.png" alt="A VSCode window showing a fully defined manifest with markings to highlight issues." /></p>
+
+<p>The image above shows that the file name in the left-hand pane has changed colors and is now red.
+It also underscores two entries in the manifest that VSCode has highlighted - one with orange underlining, indicating a warning, and one with red underlining, indicating an error.
+Finally, down in the bottom left corner it highlights the problem symbols for errors and warnings, both of which display a count of one.</p>
+
+<p>VSCode (via the extension) knows <em>something</em> is wrong with our manifest;
+we can click on those symbols to bring up the Problems Pane and investigate:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/problems-pane.png" alt="A VSCode window displaying the Problems Pane with two entries" /></p>
+
+<p>This tells us there’s a warning about the indentation of a hash rocket and some sort of syntax error preventing the extension from parsing line 3.</p>
+
+<p>A quick look at the code tells us that we’re missing a comma in the resource declaration on line 2, and as soon as we add that comma in we get confirmation:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/problems-added-comma.png" alt="A VSCode window displaying the Problems Pane with only one warning" /></p>
+
+<p>All that remains now is the formatting issue.
+Luckily, VSCode is able to automatically handle this for us via the <em>Format Document</em> command:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/format-document-option.png" alt="A VSCode window displaying the right-click menu over the manifest, highlighting the 'Format Document' command with a hotkey combination of 'Shift+Alt+F'" /></p>
+
+<p>Which we can see does in fact move the hash rocket and resolve our last problem:</p>
+
+<p><img src="/iac/assets/2020-09-21-dsc-release/manifest-fixed.png" alt="A VSCode window displaying the manifest with no issues or warnings, the hash rocket moved appropriately to ensure preferred formatting for the manifest." /></p>
+
+<p>We’re ready to apply this manifest!</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>puppet apply ./example.pp
+</code></pre></div></div>
+
+<p>Only… there was a problem;
+without reading the documentation for <code class="language-plaintext highlighter-rouge">dsc_executionpolicyscope</code> thoroughly enough, we specified <code class="language-plaintext highlighter-rouge">Machine</code> instead of <code class="language-plaintext highlighter-rouge">MachinePolicy</code>!</p>
+
+<p>Puppet gives us back a pretty good error message though:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Error: Parameter dsc_executionpolicyscope failed on Dsc_powershellexecutionpolicy[[OPS-213]]: dsc_powershellexecutionpolicy.dsc_executionpolicyscope expects a match for Enum['CurrentUser', 'LocalMachine', 'MachinePolicy', 'Process', 'UserPolicy'], got 'Machine'
+</code></pre></div></div>
+
+<p>We get an explicit list of the allowed values <em>before</em> it tries to invoke DSC with the <code class="language-plaintext highlighter-rouge">Set</code> action.
+This is unlike our prior implementation in <code class="language-plaintext highlighter-rouge">puppetlabs-dsc_lite</code>, which has no way of knowing whether the values you’ve provided are correct.</p>
+
+<p>Once we correct our manifest to specify <code class="language-plaintext highlighter-rouge">LocalMachine</code> and re-run the command, we get something else:</p>
+
+<div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Notice: Compiled catalog for michael.lombardi-pf12aa84 in environment workstation_production in 1.04 seconds
+Notice: /Stage[main]/Main/Dsc_powershellexecutionpolicy[[OPS-213]]/dsc_executionpolicy: dsc_executionpolicy changed 'Unrestricted' to 'RemoteSigned'
+Notice: dsc_powershellexecutionpolicy[{:name=&gt;"[OPS-213]", :dsc_executionpolicyscope=&gt;"LocalMachine"}]: Updating: Finished in 0.809555 seconds
+Notice: Applied catalog in 1.68 seconds
+</code></pre></div></div>
+
+<p>This highlights a change from both of our prior implementations:
+you now get <em>property-by-property</em> reporting for DSC Resources when using Puppet!
+This implementation knows not just <em>that</em> a DSC Resource was out of sync and therefore applied, but it can tell you exactly which properties were out of sync, what their value was, and what it has been set to in this run.</p>
+
+<p>This brings DSC Resources in line with all of the rest of the resources you manage with Puppet and drastically improves the usefulness of your run reports!</p>
+
+<h2 id="coming-up">Coming Up</h2>
+
+<p>This wave of converted DSC Resources and the release of the <code class="language-plaintext highlighter-rouge">Puppet.Dsc</code> module to the PowerShell Gallery is not the <em>last</em> step of our support for using DSC with Puppet, just the initial step.</p>
+
+<p>Over the coming weeks we’re going to be looking to you for feedback and incorporating it as fast as we can manage.</p>
+
+<p>We’re also moving towards automatically Puppetizing <em>every</em> PowerShell module with DSC Resources on the Gallery.
+If there’s a module you want to use that isn’t yet published under our <a href="https://forge.puppet.com/dsc"><strong>dsc</strong> namespace on the Forge</a>, let us know in <a href="https://slack.puppet.com/">Slack</a> or by <a href="mailto:dsc@puppet.com">emailing us</a> and we’ll publish it as soon as we can!</p>
+
+<p>In the long run, we plan to get some nightly builds in place to ensure that there’s never more than a 24 hour lag between when a PowerShell module with DSC Resources is published (new or merely updated) to the Gallery and when that same module is Puppetized and published to the Forge.</p>
+
+<p>We hope to hear from you soon!</p>
+
+
+  </div><a class="u-url" href="/iac/news/roadmap/2020/09/21/dsc-release.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
