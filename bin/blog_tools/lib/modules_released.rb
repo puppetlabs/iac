@@ -18,7 +18,7 @@ forge_modules = resp['results']
                 .select { |forge_module| Date.parse(forge_module['updated_at']).strftime('%s').to_i >= last_blog_post_utc_time }
 
 if forge_modules.size == 0
-  puts "No modules release this week!"
+  puts 'No modules released this week!'
 else
   puts "#{forge_modules.size} modules released since last blog post:" unless forge_modules.size == 0
 end
