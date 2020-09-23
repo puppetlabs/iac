@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-09-22T02:14:52+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">DSC + Puppet: Arrived!</title><link href="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html" rel="alternate" type="text/html" title="DSC + Puppet: Arrived!" /><published>2020-09-21T00:00:00+00:00</published><updated>2020-09-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release</id><content type="html" xml:base="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html">&lt;p&gt;Earlier this year, we &lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;announced an upcoming project&lt;/a&gt; to drastically improve the story for using DSC Resources with Puppet.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-09-23T02:14:13+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Docker params change detection</title><link href="https://puppetlabs.github.io/iac/docker/development/2020/09/23/docker-params-change-detection.html" rel="alternate" type="text/html" title="Docker params change detection" /><published>2020-09-23T00:00:00+00:00</published><updated>2020-09-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/docker/development/2020/09/23/docker-params-change-detection</id><content type="html" xml:base="https://puppetlabs.github.io/iac/docker/development/2020/09/23/docker-params-change-detection.html">&lt;h2 id=&quot;docker-params-change-detection&quot;&gt;Docker params change detection&lt;/h2&gt;
+
+&lt;p&gt;The problem was reported by a client with the ticket &lt;a href=&quot;https://tickets.puppetlabs.com/browse/MODULES-10734&quot;&gt;MODULES-10734&lt;/a&gt;. After analysis, we discovered that we don’t have parameter change detection mechanisms. In this blog post, we try to explain the problem in detail with examples.&lt;/p&gt;
+
+&lt;p&gt;An interesting behaviour was present in docker::run component. The problem was that if any parameter was added/modified/removed puppet agent would only apply the change only if you stopped, removed the container manually and reapplied the manifest, forcing a new container creation.&lt;/p&gt;
+
+&lt;p&gt;The solution was to create a new function that detects if at least one parameter is changed. The detection mechanism is based on the check between parameter values from the manifest file and correspondent field from the docker inspect object of the currently running container. The solution is present in the 3.11.0 version.&lt;/p&gt;
+
+&lt;p&gt;So now let’s see how the problem can be reproduced by using version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;= 3.10.2&lt;/code&gt;:&lt;/p&gt;
+
+&lt;h3 id=&quot;1-install-puppetlabsdocker-module&quot;&gt;1. install puppetlabs/docker module&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; puppet module &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;puppetlabs/docker &lt;span class=&quot;nt&quot;&gt;--version&lt;/span&gt; 3.10.2
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;2-apply-this-manifest&quot;&gt;2. apply this manifest:&lt;/h3&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'docker'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;docker::run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'servercore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;image&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello-world:linux'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'always'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;net&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$facts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'os'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'windows'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'nat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;default&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bridge'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;3-check-the-image-tag-by-running-this-command&quot;&gt;3. check the image tag by running this command:&lt;/h3&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; docker inspect &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; servercore
+&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; hello-world:linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;4-change-the-image-tag-from-hello-worldlinux-to-hello-worldlatest-and-reapply-the-manifest&quot;&gt;4. change the image tag from &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hello-world:linux&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hello-world:latest&lt;/code&gt; and reapply the manifest.&lt;/h3&gt;
+
+&lt;p&gt;The manifest should look like this:&lt;/p&gt;
+
+&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'docker'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;docker::run&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'servercore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;image&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'hello-world:latest'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;restart&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'always'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;py&quot;&gt;net&lt;/span&gt;     &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$facts&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'os'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;][&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'name'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;s1&quot;&gt;'windows'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'nat'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;py&quot;&gt;default&lt;/span&gt;   &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bridge'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;… and now check if the change was applied&lt;/p&gt;
+
+&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; docker inspect &lt;span class=&quot;nt&quot;&gt;--format&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&quot;&lt;/span&gt; servercore
+&lt;span class=&quot;nv&quot;&gt;$:&lt;/span&gt; hello-world:linux
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;so… something is wrong, the tag was not changed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hello-world:latest&lt;/code&gt;. If we want to apply this change we need to do a few more steps:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;stop the container: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker stop servercore&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;remove the container: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docker rm servercore&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;reapply the manifest detailed above: &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet apply &amp;lt;manifest_file_name&amp;gt;&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;In conclusion in the puppetlabs/docker module versions &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;= 3.10.2 &lt;/code&gt;the parameter change is not detected. If we want to change some parameters for the same container, the puppet agent will not apply these changes for us until we delete the container manually.
+Using the latest versions(&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;gt;=3.11.0&lt;/code&gt;) this problem is resolved by having the parameter detection mechanism implemented for the most important parameters such as image, volumes and ports.
+Also please take a look at the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/648&quot;&gt;solution&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Kind regards,
+&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian Iurca&lt;/a&gt;&lt;/p&gt;</content><author><name>adrianiurca</name></author><category term="docker" /><category term="development" /><category term="bugfix" /><category term="docker" /><category term="personal" /><summary type="html">Docker params change detection</summary></entry><entry><title type="html">DSC + Puppet: Arrived!</title><link href="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html" rel="alternate" type="text/html" title="DSC + Puppet: Arrived!" /><published>2020-09-21T00:00:00+00:00</published><updated>2020-09-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release</id><content type="html" xml:base="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html">&lt;p&gt;Earlier this year, we &lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;announced an upcoming project&lt;/a&gt; to drastically improve the story for using DSC Resources with Puppet.
 Today, we’re announcing the general availability of that project!&lt;/p&gt;
 
 &lt;p&gt;The &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt; PowerShell module&lt;/a&gt; is now available on the &lt;a href=&quot;https://www.powershellgallery.com/packages/Puppet.Dsc&quot;&gt;PowerShell Gallery&lt;/a&gt;;
@@ -554,32 +623,4 @@ So far, testing has generally been quite positive, with some minor issues arisin
 Fortunately, we work with awesome colleagues who are very quick to react to any issues we discover, helping with the debugging process and providing fixes really quickly.
 Thanks to &lt;a href=&quot;https://github.com/joshcooper&quot;&gt;joshcooper&lt;/a&gt;, we hope to have a fix for one of these issues quite soon!
 &lt;a href=&quot;https://github.com/gimmyxd&quot;&gt;gimmyxd&lt;/a&gt; and &lt;a href=&quot;https://github.com/mihaibuzgau&quot;&gt;mihaibuzgau&lt;/a&gt; are helping to analyse the other issue we’re currently encountering and &lt;a href=&quot;https://github.com/binford2k&quot;&gt;binford2k&lt;/a&gt; has been assisting in how we communicate any potential impacts to the Puppet Community.
-On that note, it goes without saying, we are doing everything possible to make the jump to Puppet 7 as seamless as possible and provide clear communication to the Community for anything that you will need to be aware of.&lt;/p&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="firewall" /><category term="websphere_application_server" /><category term="puppet7" /><category term="vagrant" /><category term="litmus" /><category term="docker" /><category term="apache" /><category term="tomcat" /><summary type="html">It’s Friday - time for another status update from the IAC Team! Here’s an overview of some of the work we and the community have been up to recently:</summary></entry><entry><title type="html">24th July 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/07/24/status-update.html" rel="alternate" type="text/html" title="24th July 2020: IAC Team Status Update" /><published>2020-07-24T00:00:00+00:00</published><updated>2020-07-24T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/07/24/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/07/24/status-update.html">&lt;p&gt;It’s Friday - time for another status update from the IAC Team!
-Here’s a short overview of some of the work we and the community have been up to recently:&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-&lt;p&gt;We’ve had plenty of great community contributions this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/fe80&quot;&gt;fe80&lt;/a&gt; &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1314/&quot;&gt;added the capability too specify by package provider and source&lt;/a&gt;, to the &lt;a href=&quot;https://forge.puppet.com/puppetlabs/mysql&quot;&gt;MySQL module&lt;/a&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/elmobp&quot;&gt;elmobp&lt;/a&gt; &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1315&quot;&gt;fixed a bug in the MySQL module&lt;/a&gt; which was caused by improper handling of non-printable characters being returned by MySQL.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;preparing-for-puppet-7&quot;&gt;Preparing for Puppet 7&lt;/h2&gt;
-
-&lt;p&gt;Given the upcoming release of Puppet 7, the IAC team have begun working with our colleagues on the Puppet Agent team to ensure that the &lt;a href=&quot;/iac/modules/&quot;&gt;supported modules&lt;/a&gt; and &lt;a href=&quot;/iac/tools/&quot;&gt;tools&lt;/a&gt; we manage are thoroughly tested with Puppet 7.
-We hope to begin testing the modules with the nightly builds of Puppet 7 from next week.
-Special thanks to &lt;a href=&quot;https://github.com/mihaibuzgau&quot;&gt;mihaibuzgau&lt;/a&gt; and &lt;a href=&quot;https://github.com/gimmyxd&quot;&gt;gimmyxd&lt;/a&gt; for their help in this effort!&lt;/p&gt;
-
-&lt;h2 id=&quot;re-engaging-with-the-dsc-builder&quot;&gt;Re-Engaging with the DSC Builder&lt;/h2&gt;
-
-&lt;p&gt;As I’m (&lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;michaeltlombardi&lt;/a&gt;) back from my paternity leave and off of CI triage, &lt;a href=&quot;https://github.com/sheenaajay&quot;&gt;sheenaajay&lt;/a&gt; and I are back at work on the DSC builder, racing to cross the last couple hurdles before we’re happy with the implementation.&lt;/p&gt;
-
-&lt;p&gt;More on this - and possibly a full blog post on it - later, but I’ve been wrestling with canonicalizing manifest values so we can get a case insensitive &lt;em&gt;but case preserving&lt;/em&gt; behavior from Puppet - which is what PowerShell users expect of DSC whether or not they think about it explicitly!
-If you’d like to see more on the tangled web that this PR/ticket has turned into, let us know!&lt;/p&gt;
-
-&lt;p&gt;Sheena meanwhile has been hard at work fixing bugs and ensuring that our support for class-based DSC resources is up to scratch!
-She’s working on the broader end-to-end testing which should help significantly boost confidence in the capabilities of this builder.&lt;/p&gt;
-
-&lt;!-- Links --&gt;
-&lt;!-- Mentioned People --&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><category term="shoutouts" /><category term="mysql" /><category term="puppet7" /><summary type="html">It’s Friday - time for another status update from the IAC Team! Here’s a short overview of some of the work we and the community have been up to recently:</summary></entry></feed>
+On that note, it goes without saying, we are doing everything possible to make the jump to Puppet 7 as seamless as possible and provide clear communication to the Community for anything that you will need to be aware of.&lt;/p&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="firewall" /><category term="websphere_application_server" /><category term="puppet7" /><category term="vagrant" /><category term="litmus" /><category term="docker" /><category term="apache" /><category term="tomcat" /><summary type="html">It’s Friday - time for another status update from the IAC Team! Here’s an overview of some of the work we and the community have been up to recently:</summary></entry></feed>
