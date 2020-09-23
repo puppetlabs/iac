@@ -1,5 +1,7 @@
 # Bootstrap Blog
+
 ## Psst...IAC Team Member! Read This!
+
 Have you been on Triage?
 
 Don't you hate it when you had to go through all the various Slack threads and Github PRs to try and figure out what awesome contributions the Puppet Community have made this week for our weekly blog?
@@ -7,7 +9,9 @@ Don't you hate it when you had to go through all the various Slack threads and G
 Well, this is the tool for you!
 
 ## What does it do?
+
 The `bootstrap_blog.rb` script will:
+
 - Determine the last IAC weekly status update blog post date (_usually, last Friday_)
 - Check what modules have been released between then and today
 - Check what PRs have been merged to the `main` branch of the  [IAC Supported Modules][iac-supported-modules] repos that are from the Puppet Community and:
@@ -20,7 +24,9 @@ The `bootstrap_blog.rb` script will:
 ...and all the necessary links required at the bottom of the file!
 
 ## How do I run it?
+
 You'll need to supply your Github authentication token with a minimum or RO access to the `GITHUB_TOKEN` ENV var:
+
 ```bash
 # Assuming from repo root
 
@@ -30,19 +36,24 @@ GITHUB_TOKEN=abcdefg1234567 bundle exec ruby bootstrap_blog.rb
 ```
 
 ## What is the output?
+
 It will generate a weekly status update blog template that can be further enhanced for the next Friday weekly update.
 All this is built off the template in `blog_template/status-update-template.md.erb`
 
 ### Filename and Location
+
 - It'll create the appropriate `MD` under `_posts/` with the upcoming Friday's date:
+
 ```bash
 _posts/2020-09-25-status-update.md
 ```
 
 ### Header / Metadata Generation
+
 - The `title` parameter will also have the upcoming Friday's date
 - The Github username derived from the supplied token (`GITHUB_TOKEN`) will populate the `author` parameter
 - **NOTE:** `categories` and `tags` will need to be updated manually
+
 ```md
 ---
 layout: post
@@ -56,6 +67,7 @@ tags:
 ```
 
 ### Community Contribution Generation
+
 - The PRs will be linked
 - The author's Github profiles will be linked
 - If there were any other contributors / collaborators commenting on the PR, the will be credited too
@@ -72,6 +84,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 ```
 
 ### Modules Released Generation
+
 - The module Github repos will be linked
 - The version number of the release will be referenced
 
@@ -85,6 +98,7 @@ The following modules were released this week:
 ```
 
 ### All the links!
+
 All the link references required to render the data above are dumped at the bottom of the file:
 
 ```md
@@ -97,6 +111,7 @@ All the link references required to render the data above are dumped at the bott
 ```
 
 ## What does it **NOT** do?
+
 - Fills in the tags
 - Gives a genuine heartfelt thanks to the contributors and collaborators for their contributions
 - Magically knows what else happened on the IAC Team worth mentioning this week
