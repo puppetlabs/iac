@@ -1,0 +1,29 @@
+---
+layout: post
+title: "<%= blog_post_date %>: IAC Team Status Update"
+author: <%= @blog_author %>
+categories:
+  - team
+  - status
+tags:
+---
+
+## Community Contributions
+
+We'd like to thank the following people in the Puppet Community for their contributions over this past week:
+
+<% @community_prs_shoutout.each do |pr_shoutout| -%>
+- <%= pr_shoutout %>
+<% end -%>
+
+## New Module / Gem Releases
+
+The following modules were released this week:
+
+<% @module_releases.each do |module_release| -%>
+- <%= module_release[:module_link_ref] %> (<%= module_release[:version] %>)
+<% end -%>
+
+<% @links.each do |link| -%>
+  <%= link %>
+<% end -%>
