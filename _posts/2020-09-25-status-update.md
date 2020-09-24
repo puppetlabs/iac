@@ -33,6 +33,19 @@ The following modules were released this week:
 
 - [`puppetlabs-accounts`][puppetlabs-accounts] (`6.3.0`)
 
+## Semi-Automated Blog Writing
+
+Well, the way the world is going, everything will be automated soon, won't it?
+This week's blog post was partially written by a new script that will compile:
+
+- The modules released since last week's update
+- The awesome contributions from you, in the Community, that have landed in to `puppetlabs:main`
+
+These are sections that are there every week and the previous process to compiling everything in to Markdown, was a becoming a tedious, manual one.
+So like all repetitive, manual stuff, we automated it! :smiley:
+
+If you're interested in how it all works, check out [`iac#114`][iac-pr-114] and/or the [README][iac-bootstrap-blog-tools].
+
   [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
   [puppetlabs-concat-pr-660]: https://github.com/puppetlabs/puppetlabs-concat/pull/660
   [jcpunk]: https://github.com/jcpunk
@@ -44,3 +57,5 @@ The following modules were released this week:
   [puppetlabs-strings-pr-252]: https://github.com/puppetlabs/puppet-strings/pull/252
   [kozl]: https://github.com/kozl
   [binford2k]: https://github.com/binford2k
+  [iac-pr-114]: https://github.com/puppetlabs/iac/pull/114
+  [iac-bootstrap-blog-tools]: https://github.com/puppetlabs/iac/tree/master/bin/blog_tools 
