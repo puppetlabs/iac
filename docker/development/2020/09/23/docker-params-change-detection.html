@@ -90,7 +90,7 @@
 
 <h3 id="3-check-the-image-tag-by-running-this-command">3. check the image tag by running this command:</h3>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$:</span> docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s2">""</span> servercore
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$:</span> docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s2">"{{ .Config.Image }}"</span> servercore
 <span class="nv">$:</span> hello-world:linux
 </code></pre></div></div>
 
@@ -111,7 +111,7 @@
 
 <p>… and now check if the change was applied</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$:</span> docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s2">""</span> servercore
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$:</span> docker inspect <span class="nt">--format</span><span class="o">=</span><span class="s2">"{{ .Config.Image }}"</span> servercore
 <span class="nv">$:</span> hello-world:linux
 </code></pre></div></div>
 
