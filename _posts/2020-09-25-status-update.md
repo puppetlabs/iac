@@ -6,6 +6,13 @@ categories:
   - team
   - status
 tags:
+  - concat
+  - kubernetes
+  - stdlib
+  - translate
+  - postgresql
+  - strings
+  - accounts
 ---
 
 ## Community Contributions
@@ -18,6 +25,7 @@ We'd like to thank the following people in the Puppet Community for their contri
   - [`puppetlabs-stdlib#1127`][puppetlabs-stdlib-pr-1127]
   - [`puppetlabs-translate#93`][puppetlabs-translate-pr-93]
 - [`puppetlabs-postgresql#1187`][puppetlabs-postgresql-pr-1187]: Thanks to [ekohl][ekohl] for the enhancement that allows you to remove config entries by setting them to `undef` - a very useful addition!
+- [`puppetlabs-strings#252`][puppetlabs-strings-pr-252]: Thanks to [kozl][kozl] for the various enhancements and fixes in this. Check out [the description](https://github.com/puppetlabs/puppet-strings/pull/252#issue-487952635) for more details.
 
 ## New Module / Gem Releases
 
@@ -33,3 +41,6 @@ The following modules were released this week:
   [ekohl]: https://github.com/ekohl
   [puppetlabs-stdlib-pr-1127]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1127
   [puppetlabs-translate-pr-93]: https://github.com/puppetlabs/puppetlabs-translate/pull/93
+  [puppetlabs-strings-pr-252]: https://github.com/puppetlabs/puppet-strings/pull/252
+  [kozl]: https://github.com/kozl
+  [binford2k]: https://github.com/binford2k
