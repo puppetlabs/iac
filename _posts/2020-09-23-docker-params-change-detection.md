@@ -45,7 +45,7 @@ docker::run { 'servercore':
 ### 3. check the image tag by running this command:
 
 ```bash
-$: docker inspect --format="{{ .Config.Image }}" servercore
+$: docker inspect --format={% raw %}"{{ .Config.Image }}"{% endraw %} servercore
 $: hello-world:linux
 ```
 
@@ -68,7 +68,7 @@ docker::run { 'servercore':
 ... and now check if the change was applied
 
 ```bash
-$: docker inspect --format="{{ .Config.Image }}" servercore
+$: docker inspect --format={% raw %}"{{ .Config.Image }}"{% endraw %} servercore
 $: hello-world:linux
 ```
 
