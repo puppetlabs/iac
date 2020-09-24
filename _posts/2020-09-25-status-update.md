@@ -46,16 +46,40 @@ So like all repetitive, manual stuff, we automated it! :smiley:
 
 If you're interested in how it all works, check out [`iac#114`][iac-pr-114] and/or the [README][iac-bootstrap-blog-tools].
 
-  [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
-  [puppetlabs-concat-pr-660]: https://github.com/puppetlabs/puppetlabs-concat/pull/660
-  [jcpunk]: https://github.com/jcpunk
-  [puppetlabs-kubernetes-pr-438]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/438
-  [puppetlabs-postgresql-pr-1187]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1187
-  [ekohl]: https://github.com/ekohl
-  [puppetlabs-stdlib-pr-1127]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1127
-  [puppetlabs-translate-pr-93]: https://github.com/puppetlabs/puppetlabs-translate/pull/93
-  [puppetlabs-strings-pr-252]: https://github.com/puppetlabs/puppet-strings/pull/252
-  [kozl]: https://github.com/kozl
-  [binford2k]: https://github.com/binford2k
-  [iac-pr-114]: https://github.com/puppetlabs/iac/pull/114
-  [iac-bootstrap-blog-tools]: https://github.com/puppetlabs/iac/tree/master/bin/blog_tools 
+And before I continue I would just like to give a personal thanks to our very own [Ciaran][sanfrancrisko] for getting this up and working, cutting at least an hour of work from the writing of this post.
+
+## CI Improvements
+
+Over the last few months or so work has been put in to improve our CI coverage with this short message from our very own [Daniel Carabas][carabasdaniel] explaining more:
+
+```
+The IAC Team is currently working on a CI improvement that will increase the testing coverage across all our supported modules and allow contributors to check and run unit and acceptance tests on more platforms. Please look forward to more details about our improved CI in the upcoming weeks.
+```
+
+## New Blogs
+
+We've got several new blog posts out for your iewing pleasure:
+
+- First from [Michael Lombardi][michaeltlombardi] we have an excellent blog which (spoiler alert!) announces the official release of our brand new module [Puppet.Dsc][dsc-repo]! Please check it out [here]({% link _posts/2020-09-21-dsc-release.md %}).
+- Next from [Adrian Iurca][adrianiurca] we have a lovely blog post detailing some imortant changes that where recently made to the [docker][puppetlabs-docker] module. Just click the following link to take a [look]({% link _posts/2020-09-23-docker-params-change-detection %}).
+
+[puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
+[puppetlabs-concat-pr-660]: https://github.com/puppetlabs/puppetlabs-concat/pull/660
+[jcpunk]: https://github.com/jcpunk
+[puppetlabs-kubernetes-pr-438]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/438
+[puppetlabs-postgresql-pr-1187]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1187
+[ekohl]: https://github.com/ekohl
+[puppetlabs-stdlib-pr-1127]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1127
+[puppetlabs-translate-pr-93]: https://github.com/puppetlabs/puppetlabs-translate/pull/93
+[puppetlabs-strings-pr-252]: https://github.com/puppetlabs/puppet-strings/pull/252
+[kozl]: https://github.com/kozl
+[binford2k]: https://github.com/binford2k
+[iac-pr-114]: https://github.com/puppetlabs/iac/pull/114
+[iac-bootstrap-blog-tools]: https://github.com/puppetlabs/iac/tree/master/bin/blog_tools
+[binford2k]: https://github.com/binford2k
+[carabasdaniel]: https://github.com/carabasdaniel
+[sanfrancrisko]: https://github.com/sanfrancrisko
+[michaeltlombardi]: https://github.com/michaeltlombardi
+[dsc-repo]: https://github.com/puppetlabs/Puppet.Dsc
+[adrianiurca]: https://github.com/adrianiurca
+[puppetlabs-docker]: https://github.com/puppetlabs/puppetlabs-docker
