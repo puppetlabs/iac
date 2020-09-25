@@ -61,7 +61,7 @@ The IAC Team is currently working on a CI improvement that will increase the tes
 We've got several new blog posts out for your viewing pleasure:
 
 - First from [Michael Lombardi][michaeltlombardi] we have an excellent blog which (spoiler alert!) announces the official release of our brand new module [Puppet.Dsc][dsc-repo]! Please check it out [here]({% link _posts/2020-09-21-dsc-release.md %}).
-- Next from [Adrian Iurca][adrianiurca] we have a lovely blog post detailing some imortant changes that were recently made to the [docker][puppetlabs-docker] module. Just click the following link to take a [look]({% link _posts/2020-09-23-docker-params-change-detection %}).
+- Next from [Adrian Iurca][adrianiurca] we have a lovely blog post detailing some important changes that were recently made to the [docker][puppetlabs-docker] module. Just click the following link to take a [look]({% link _posts/2020-09-23-docker-params-change-detection.md %}).
 - Finally from this week onwards, Disha's blog posts are in a new, dedicated section of our site called [Life as an Internet at Puppet](https://puppetlabs.github.io/iac/docs/life_of_intern)
 
 [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
