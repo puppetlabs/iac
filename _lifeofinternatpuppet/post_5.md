@@ -14,7 +14,7 @@ Hi all,
 This week wasn't too busy.... but there are some key highlights to note....
 
 The week started off as normal when I had a sync up with Norman on Monday morning, followed on from that I worked on the feedback received from Michael regarding my new blog page 'Life of an Intern at Puppet'
-Check out the link to the feedack received [here]https://github.com/puppetlabs/iac/pull/117
+Check out the link to the feedback received [here](https://github.com/puppetlabs/iac/pull/117)
 
 Once the feedback was fixed, I created a pull request for review and merge for Micheal's final sign off.
 
@@ -39,7 +39,7 @@ I attended the show and tell session where I was given a demo on Honeycomb by Da
 Thank you to David for such an interesting session!
 
 As part of the learning VM traning I was struggling to complete the section on Conditionals Statements, this was because I was having issues on editing files within VIM text editor. This training will be kept on hold until I do some initial training on how to use VIM before continuing my Learning VM Quest Guide.
-Check out the link to VIM tutorial [here](https://medium.com/@fay_jai/what-is-vim-and-why-use-vim-54c67ce3c18e)
+Check out the link to VIM tutorial [here](https://vim-adventures.com/)
 
 On Thursday morning, I wrote this blog update, did a tutorial on [Pry](https://learn.co/lessons/debugging-with-pry), attended standup as well as a session on Litmus, Pry and how to work with Modules later in the afternoon.
 I am looking forward to this session with Paula!
