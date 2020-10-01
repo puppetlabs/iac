@@ -8,6 +8,12 @@ categories:
 tags:
 ---
 
+Hello everyone!
+
+The IAC Team had a lot of activity this past week. 
+
+Here's a brief summary:
+
 ## Community Contributions
 
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
@@ -31,6 +37,22 @@ The following modules were released this week:
 - [`puppetlabs-mysql`][puppetlabs-mysql] (`10.7.1`)
 - [`puppetlabs-package`][puppetlabs-package] (`1.3.0`)
 
+## CI Improvements
+
+As mentioned in the last week's status update, we are currently under development of a solution that would improve the CI experience both for us as the maintainers of the modules and for everyone else in the community. One of the goals of this activity is to allow you, as the contributors, to see if any code changes affect module functionality across the supported platforms.
+At the moment we depend on Travis and Docker containers to offer you a part of this experience. The solution we are working on will harness the power of different cloud providers to allow acceptance test runs on more platforms with Puppet Litmus.
+
+## Life of an intern at Puppet
+
+As you all know already, we have our lovely new intern, [Disha][disha-maker] who is sharing her experience with the team on the [Life of an intern at Puppet]({% link _docs/life_of_intern.md %}) page. Please follow her blog to keep up to date with her activity here.
+
+## Wrap-up
+
+That's it for this weeks update, have a great weekend everyone! 
+
+Thank you for all your contributions and support!
+
+  [disha-maker]: https://github.com/disha-maker
   [puppetlabs-stdlib]: https://github.com/puppetlabs/puppetlabs-stdlib
   [puppetlabs-docker]: https://github.com/puppetlabs/puppetlabs-docker
   [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
