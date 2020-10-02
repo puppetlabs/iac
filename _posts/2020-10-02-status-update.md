@@ -58,7 +58,9 @@ As you all know already, we have our lovely new intern, [Disha][disha-maker] who
 
 ## #everyonecancontribute podcast
 
-[DavidS](https://github.com/DavidS) participated in the [#everyonecancontribute](https://everyonecancontribute.com/) podcast ([recording](https://www.youtube.com/watch?v=6c0Vfn8BIM4) on Wednesday where we (amongst other things) tried out the [gitlab](https://about.gitlab.com/) integration of [gitpod.io](https://www.gitpod.io/), which provides a fully online hosted VSCode instance to code in any browser. A lot of things just work out of the box, and we even got some of the [Puppet VSCode extension](https://puppet-vscode.github.io/) to work.
+[DavidS](https://github.com/DavidS) participated in the [#everyonecancontribute](https://everyonecancontribute.com/) podcast ([recording](https://www.youtube.com/watch?v=6c0Vfn8BIM4) on Wednesday where we (amongst other things) tried out the [gitlab](https://about.gitlab.com/) integration of [gitpod.io](https://www.gitpod.io/), which provides a fully online hosted VSCode instance to code in any browser.
+A lot of things just work out of the box, and we even got some of the [Puppet VSCode extension](https://puppet-vscode.github.io/) to work.
+Find the full writeup by [@dnsmichi](https://github.com/dnsmichi)'s writeup [online](https://everyonecancontribute.com/post/2020-09-30-kaeffchen-20-gitpod/).
 ## Wrap-up
 
 That's it for this weeks update, have a great weekend everyone! 
