@@ -6,6 +6,15 @@ categories:
   - team
   - status
 tags:
+  - apache
+  - haproxy
+  - kubernetes
+  - docker
+  - stdlib
+  - postgresql
+  - mysql
+  - package
+  - ci
 ---
 
 Hello everyone!
