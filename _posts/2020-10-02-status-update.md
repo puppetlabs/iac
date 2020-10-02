@@ -35,6 +35,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`puppetlabs-stdlib#1130`][puppetlabs-stdlib-pr-1130]: A very useful additional function for parsing HOCON files from [reidmv][reidmv] - thanks for the new function!
 - [`puppetlabs-stdlib#1129`][puppetlabs-stdlib-pr-1129]: Thank you [b4ldr][b4ldr] for the new types added to `Stdlib::Ensure::File`
 - [`puppetlabs-stdlib#1128`][puppetlabs-stdlib-pr-1128]: ...and again from [b4ldr][b4ldr] - this is a great addition: we now have types aligned with the IANA port category definitions, for easier comprehension.
+- [`puppetlabs-apache#2071`][puppetlabs-apache-pr-2071]: Thanks to [creativefre][creativefre] for the fix in `apache::mod::fcgid` to make it compatible on RHEL 8.
 
 ## New Module / Gem Releases
 
