@@ -46,6 +46,9 @@ At the moment we depend on Travis and Docker containers to offer you a part of t
 
 As you all know already, we have our lovely new intern, [Disha][disha-maker] who is sharing her experience with the team on the [Life of an intern at Puppet]({% link _docs/life_of_intern.md %}) page. Please follow her blog to keep up to date with her activity here.
 
+## #everyonecancontribute podcast
+
+[DavidS](https://github.com/DavidS) participated in the [#everyonecancontribute](https://everyonecancontribute.com/) podcast ([recording](https://www.youtube.com/watch?v=6c0Vfn8BIM4) on Wednesday where we (amongst other things) tried out the [gitlab](https://about.gitlab.com/) integration of [gitpod.io](https://www.gitpod.io/), which provides a fully online hosted VSCode instance to code in any browser. A lot of things just work out of the box, and we even got some of the [Puppet VSCode extension](https://puppet-vscode.github.io/) to work.
 ## Wrap-up
 
 That's it for this weeks update, have a great weekend everyone! 
