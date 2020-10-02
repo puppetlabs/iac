@@ -88,3 +88,5 @@ Thank you for all your contributions and support!
   [puppetlabs-stdlib-pr-1129]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1129
   [b4ldr]: https://github.com/b4ldr
   [puppetlabs-stdlib-pr-1128]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128
+  [creativefre]: https://github.com/creativefre
+  [puppetlabs-apache-pr-2071]: https://github.com/puppetlabs/puppetlabs-apache/pull/2071
