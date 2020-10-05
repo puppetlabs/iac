@@ -83,6 +83,8 @@ end
 def create_user
   result = run_command("id -u #{STANDARD_USER_ACCOUNT}", false)
   return if result[:exit_code].zero?
+  log "Bumping global ulimit -n to 4096"
+  run_command('echo "* soft nofile 4096" >> /etc/security/limits.conf')
   log "Creating user account '#{STANDARD_USER_ACCOUNT}' on #{@provision_runner_host}"
   home_path = "/home/#{STANDARD_USER_ACCOUNT}"
   ssh_path = "#{home_path}/.ssh"
