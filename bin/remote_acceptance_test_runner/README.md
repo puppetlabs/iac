@@ -23,6 +23,7 @@ bundle exec rake 'litmus:provision_list[key]'
 After this has been completed, run the `remote_runner.rb` script to copy the module directory (including the `inventory.yaml`) to an Ubuntu 18.04 host running in the `delivery.puppetlabs.net` subnet:
 
 ```shell script
+bundle install
 ruby remote_runner.rb -r /path/to/module_directory
 ```
 
