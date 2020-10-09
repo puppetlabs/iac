@@ -69,4 +69,3 @@ That's it for this weeks update, have a great weekend everyone!
   [puppetlabs-stdlib-pr-1133]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1133
   [puppetlabs-concat-pr-661]: https://github.com/puppetlabs/puppetlabs-concat/pull/661
   [smortex]: https://github.com/smortex
-  [codecov-io]: https://github.com/codecov-io
