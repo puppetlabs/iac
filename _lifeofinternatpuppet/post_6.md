@@ -23,7 +23,7 @@ I have been approached by Caoimhe for helping out on the Queen's University Grad
 I am really looking forward to the event.
 Thank you Norman for recommending my name.
 
-At this week's show and tell session on Wednesday, David Swan delivered a presentation on puppet-lint and rubcop.
+At this week's show and tell session on Wednesday, David Swan delivered a presentation on puppet-lint and rubocop.
 
 I also worked with Adrian and Paula on doing some debugging of errors on the Learning VM Training.
 Thank you for all your help Adrian and Paula.
