@@ -68,4 +68,3 @@ That's it for this weeks update, have a great weekend everyone!
   [puppetlabs-concat-pr-661]: https://github.com/puppetlabs/puppetlabs-concat/pull/661
   [smortex]: https://github.com/smortex
   [codecov-io]: https://github.com/codecov-io
-  https://github.com/puppetlabs/puppetlabs-concat/pull/661
