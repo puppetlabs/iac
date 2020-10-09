@@ -1,4 +1,45 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-10-09T02:15:35+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Collecting GCP info and system metrics for Honeycomb</title><link href="https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics.html" rel="alternate" type="text/html" title="Collecting GCP info and system metrics for Honeycomb" /><published>2020-10-05T00:00:00+00:00</published><updated>2020-10-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics</id><content type="html" xml:base="https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics.html">&lt;p&gt;For a new and exciting project, the team is currently onboarding on &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Cloud_Platform&quot;&gt;Google Cloud Platform (GCP)&lt;/a&gt; development.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-10-09T15:11:55+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2020-10-09: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/10/09/status-update.html" rel="alternate" type="text/html" title="2020-10-09: IAC Team Status Update" /><published>2020-10-09T00:00:00+00:00</published><updated>2020-10-09T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/10/09/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/10/09/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We had a busy week and the community was very active so we’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;p&gt;Thanks to &lt;a href=&quot;https://github.com/jcpunk&quot;&gt;jcpunk&lt;/a&gt; for the folowing PRs where he resolves &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yamllint&lt;/code&gt; warnings across the following repos:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2066&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2066&lt;/code&gt;&lt;/a&gt;, thanks also to &lt;a href=&quot;https://github.com/igalic&quot;&gt;igalic&lt;/a&gt;, who helped get it over the line.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1327&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1327&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile/pull/414&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile#414&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-motd/pull/333&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-motd#333&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1191&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1191&lt;/code&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/945&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#945&lt;/code&gt;&lt;/a&gt;: Thanks to &lt;a href=&quot;https://github.com/pellisesol&quot;&gt;pellisesol&lt;/a&gt; for ading carp protocol to :proto property.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1133&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1133&lt;/code&gt;&lt;/a&gt;: Thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt; for his fix from CHANGELOG.md.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/661&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat#661&lt;/code&gt;&lt;/a&gt;: Thanks to &lt;a href=&quot;https://github.com/seanmil&quot;&gt;seanmil&lt;/a&gt; who treats the case when no concat_fragment resources are specified.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.6.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-firewall&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.6.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-exec&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-exec&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.8.0&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;life-of-an-intern-at-puppet&quot;&gt;Life of an intern at Puppet&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/disha-maker&quot;&gt;Disha&lt;/a&gt; continues her journey at Puppet and &lt;a href=&quot;https://puppetlabs.github.io/iac/docs/life_of_intern&quot;&gt;here&lt;/a&gt; you can find the last updates of ** Life of an intern at Puppet ** .&lt;/p&gt;
+
+&lt;h2 id=&quot;dsc&quot;&gt;DSC&lt;/h2&gt;
+
+&lt;p&gt;With the first customers starting to use the &lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html&quot;&gt;wonderful new DSC modules&lt;/a&gt; we encountered some hurdles when directly upgrading from old DSC management options. While we’re working on a complete fix, we recommend for now to start with removing old DSC modules completely before rolling out the new. For any DSC issues, you can always find us &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-dsc&quot;&gt;here&lt;/a&gt; ready to help!&lt;/p&gt;
+
+&lt;h2 id=&quot;ci-improvements&quot;&gt;CI Improvements&lt;/h2&gt;
+
+&lt;p&gt;Work continues on a solution for public on-demand acceptance tests for modules. This week saw us finishing up a fully automated deployment solution for all the involved cloud components, some light testing, and tightening up of code. If nothing goes horribly wrong, we’ll be able to share more details and a sneak-peak of the final results in the next two weeks.&lt;/p&gt;
+
+&lt;p&gt;If you want to know about the project in person, check out the &lt;a href=&quot;https://puppet.com/blog/hacktoberfest-2020/&quot;&gt;Puppet Hacktoberfest Hackathon&lt;/a&gt; on 20 October, 2020 (GMT and PST).&lt;/p&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
+
+&lt;p&gt;That’s it for this weeks update, have a great weekend everyone!&lt;/p&gt;</content><author><name>daianamezdrea</name></author><category term="team" /><category term="status" /><category term="concat" /><category term="apache" /><category term="exec" /><category term="firewall" /><category term="stdlib" /><category term="puppet_intern" /><category term="dsc" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">Collecting GCP info and system metrics for Honeycomb</title><link href="https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics.html" rel="alternate" type="text/html" title="Collecting GCP info and system metrics for Honeycomb" /><published>2020-10-05T00:00:00+00:00</published><updated>2020-10-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics</id><content type="html" xml:base="https://puppetlabs.github.io/iac/development/gcp/2020/10/05/honeycomb-gcp-metrics.html">&lt;p&gt;For a new and exciting project, the team is currently onboarding on &lt;a href=&quot;https://en.wikipedia.org/wiki/Google_Cloud_Platform&quot;&gt;Google Cloud Platform (GCP)&lt;/a&gt; development.
 &lt;!-- This is part of a series of posts describing our journey. --&gt;
 I can’t wait until I’m able to share more, but for now I can only say we’re looking at a &lt;a href=&quot;http://sinatrarb.com/intro.html&quot;&gt;Sinatra&lt;/a&gt;-hosted Ruby API server.
 To gain a better understanding how the service is performing, we want to collect some “traditional” metrics.
@@ -647,49 +688,4 @@ Thanks alot to the bolt team for the quick turn around and release of &lt;a href
 &lt;p&gt;As no summer can end without a holiday, our team member &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; will have a short PTO for recharging the batteries and prepare for a new season of fixing bugs!&lt;/p&gt;
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
-&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="acl" /><category term="accounts" /><category term="motd" /><category term="stdlib" /><category term="puppet-module-gems" /><category term="holiday time" /><category term="team work" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry><entry><title type="html">21th August 2020: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update.html" rel="alternate" type="text/html" title="21th August 2020: IAC Team Status Update" /><published>2020-08-21T00:00:00+00:00</published><updated>2020-08-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/08/21/status-update.html">&lt;p&gt;The IAC team has been working on a lot of things over the past week.
-We want to share with our community some of the most interesting things.
-Here’s a brief overview of what we’ve been up to:&lt;/p&gt;
-
-&lt;h2 id=&quot;module-releases-from-iac-team&quot;&gt;Module Releases from IAC Team&lt;/h2&gt;
-&lt;p&gt;We’ve had a few modules released this week:&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-acl&quot;&gt;puppetlabs/acl&lt;/a&gt; (v3.2.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;puppetlabs/accounts&lt;/a&gt; (v6.2.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/ruby-pwsh&quot;&gt;puppetlabs/pwshlib&lt;/a&gt; (v0.5.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;puppetlabs/stdlib&lt;/a&gt; (v6.4.0)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-motd&quot;&gt;puppetlabs/motd&lt;/a&gt; (v4.2.0)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;team-work-dream-work&quot;&gt;Team work, dream work&lt;/h2&gt;
-&lt;p&gt;We’ve noticed that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;simplecov&lt;/code&gt; dropped support for Ruby 2.4 from v0.19.0 and in order to solve this problem which was first highlighted &lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/issues/345&quot;&gt;here&lt;/a&gt;, all the team put their resources in one debug session. Step by step, we were able to understand what is happening and shortly after that, &lt;a href=&quot;https://github.com/puppetlabs/puppet-module-gems&quot;&gt;puppet-module-gems&lt;/a&gt;(v0.5.1) was released.
-Thank you &lt;a href=&quot;https://github.com/pmcmaw&quot;&gt;Paula&lt;/a&gt;, &lt;a href=&quot;https://github.com/sanfrancisko&quot;&gt;Ciaran&lt;/a&gt; and &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Dani&lt;/a&gt; for the demonstration!&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;PLEASE NOTE:&lt;/strong&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v0.5.1&lt;/code&gt; of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-module-gems&lt;/code&gt; for Ruby 2.7 on Windows has not yet been uploaded to &lt;a href=&quot;https://rubygems.org/&quot;&gt;RubyGems&lt;/a&gt; - we are working to get this resolved a.s.a.p.&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-&lt;p&gt;We’d like to thank the fantastic Puppet Community for the following contributions over the past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;puppetlabs/puppetlabs-apache&lt;/a&gt;: Thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; for this &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2060&quot;&gt;fix&lt;/a&gt; which ensures that the bool2httpd function is compatible in Ruby 2.7.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-strings&quot;&gt;puppetlabs/puppet-strings&lt;/a&gt;: &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; also provided this &lt;a href=&quot;https://github.com/puppetlabs/puppet-strings/pull/246&quot;&gt;fix&lt;/a&gt; to ensure that we handle missing descriptions more gracefully in puppet-strings, thanks again &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/action-litmus_spec&quot;&gt;puppetlabs/action-litmus-spec&lt;/a&gt;: This update to the README should hopefully make things a bit clearer for anyone else wishing to leverage the action-litmus-spec Github Action, thanks for the &lt;a href=&quot;https://github.com/puppetlabs/action-litmus_spec/pull/38&quot;&gt;fix&lt;/a&gt; &lt;a href=&quot;https://github.com/choffee&quot;&gt;choffee&lt;/a&gt;!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-docker&quot;&gt;puppetlabs/pdk-docker&lt;/a&gt;: Thank you &lt;a href=&quot;https://github.com/alanraison&quot;&gt;alanraison&lt;/a&gt; for the &lt;a href=&quot;https://github.com/puppetlabs/pdk-docker/pull/10&quot;&gt;fix&lt;/a&gt; to pdk-docker which ensures openssh is now installed during container initialisation.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;A BIG applause for this week and the community:
-&lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;:                      https://github.com/ekohl
-&lt;a href=&quot;https://github.com/choffee&quot;&gt;choffee&lt;/a&gt;:                    https://github.com/choffee
-&lt;a href=&quot;https://github.com/alanraison&quot;&gt;alanraison&lt;/a&gt;:                 https://github.com/alanraison&lt;/p&gt;
-
-&lt;h2 id=&quot;dsc-builder-nearing-testing&quot;&gt;DSC Builder Nearing Testing&lt;/h2&gt;
-
-&lt;p&gt;Lots of small issues have been closed out recently for the DSC work - paths and non enum values are now case-insensitive, DscRunAsCredential now works as expected, and the base provider lives in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pwshlib&lt;/code&gt; (check the latest release) meaning you don’t have to rebuild your modules every time the base provider gets updated or improved!&lt;/p&gt;
-
-&lt;p&gt;The tickets closed out this week represent the last technical implementation blockers for this phase of the project, everything else is documentation, testing, and user feedback! We’re nearing a launch of the PowerShell module to the &lt;a href=&quot;https://powershellgallery.com&quot;&gt;public Gallery&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h2 id=&quot;time-for-holiday&quot;&gt;Time for holiday&lt;/h2&gt;
-&lt;p&gt;As no summer can end without a holiday, our team members Daiana and Dani will have a short PTO for recharging their batteries and prepare for a new season of fixing bugs!&lt;/p&gt;
-
-&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
-&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>daiana.mezdrea</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="acl" /><category term="accounts" /><category term="motd" /><category term="stdlib" /><category term="puppet-module-gems" /><category term="holiday time" /><category term="team work" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
+&lt;p&gt;That’s it for this weeks update, a big THANK YOU for all your contributions and support.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="team" /><category term="status" /><category term="releases" /><category term="shoutouts" /><category term="acl" /><category term="accounts" /><category term="motd" /><category term="stdlib" /><category term="puppet-module-gems" /><category term="holiday time" /><category term="team work" /><summary type="html">The IAC team has been working on a lot of things over the past week. We want to share with our community some of the most interesting things. Here’s a brief overview of what we’ve been up to:</summary></entry></feed>
