@@ -42,7 +42,7 @@ The following modules were released this week:
 
 ## DSC
 
-
+With the first customers starting to use the [wonderful new DSC modules](https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html) we encountered some hurdles when directly upgrading from old DSC management options. While we're working on a complete fix, we recommend for now to start with removing old DSC modules completely before rolling out the new.
 
 ## Wrap-up
 
