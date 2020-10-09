@@ -20,7 +20,6 @@ tags:
 We had a busy week and the community was very active so we'd like to thank the following people in the Puppet Community for their contributions over this past week:
 
  Thanks to [jcpunk][jcpunk] for the folowing PRs where he resolves `puppet-lint` and `yamllint` warnings across the following repos: 
-
 - [`puppetlabs-apache#2066`][puppetlabs-apache-pr-2066], thanks also to [igalic][igalic], who helped get it over the line.
 - [`puppetlabs-mysql#1327`][puppetlabs-mysql-pr-1327]
 - [`puppetlabs-inifile#414`][puppetlabs-inifile-pr-414]
@@ -33,7 +32,6 @@ We had a busy week and the community was very active so we'd like to thank the f
 ## New Module / Gem Releases
 
 The following modules were released this week:
-
 - [`puppetlabs-apache`][puppetlabs-apache] (`5.6.0`)
 - [`puppetlabs-firewall`][puppetlabs-firewall] (`2.6.0`)
 - [`puppetlabs-exec`][puppetlabs-exec] (`0.8.0`)
