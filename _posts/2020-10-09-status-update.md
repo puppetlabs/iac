@@ -42,12 +42,14 @@ The following modules were released this week:
 
 ## DSC
 
-With the first customers starting to use the [wonderful new DSC modules](https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html) we encountered some hurdles when directly upgrading from old DSC management options. While we're working on a complete fix, we recommend for now to start with removing old DSC modules completely before rolling out the new.
+With the first customers starting to use the [wonderful new DSC modules](https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html) we encountered some hurdles when directly upgrading from old DSC management options. While we're working on a complete fix, we recommend for now to start with removing old DSC modules completely before rolling out the new. For any DSC issues, you can always find us [here](https://github.com/puppetlabs/puppetlabs-dsc) ready to help!
+
 ## CI Improvements
 
-Work continues on a solution for public on-demand acceptance tests for modules. This week saw us finishing up a fully automated deployment solution for all the involved cloud components, some light testing, and tightening up of code. If nothing goes horribly wrong, we'll be able to share more details and a sneak-peak of the final results in the within the next two weeks.
+Work continues on a solution for public on-demand acceptance tests for modules. This week saw us finishing up a fully automated deployment solution for all the involved cloud components, some light testing, and tightening up of code. If nothing goes horribly wrong, we'll be able to share more details and a sneak-peak of the final results in the next two weeks.
 
 If you want to know about the project in person, check out the [Puppet Hacktoberfest Hackathon](https://puppet.com/blog/hacktoberfest-2020/) on 20 October, 2020 (GMT and PST).
+
 ## Wrap-up
 
 That's it for this weeks update, have a great weekend everyone! 
