@@ -26,8 +26,6 @@ We had a busy week and the community was very active so we'd like to thank the f
 - [`puppetlabs-inifile#414`][puppetlabs-inifile-pr-414]
 - [`puppetlabs-motd#333`][puppetlabs-motd-pr-333]
 - [`puppetlabs-postgresql#1191`][puppetlabs-postgresql-pr-1191]
-
-
 - [`puppetlabs-firewall#945`][puppetlabs-firewall-pr-945]: Thanks to [pellisesol][pellisesol] for ading carp protocol to :proto property.
 - [`puppetlabs-stdlib#1133`][puppetlabs-stdlib-pr-1133]: Thanks to [smortex][smortex] for his fix from CHANGELOG.md.
 - [`puppetlabs-concat#661`][puppetlabs-concat-pr-661]: Thanks to [seanmil][seanmil] who treats the case when no concat_fragment resources are specified.
@@ -51,7 +49,6 @@ The following modules were released this week:
 ## Wrap-up
 
 That's it for this weeks update, have a great weekend everyone! 
-
 
   [puppetlabs-apache]: https://github.com/puppetlabs/puppetlabs-apache
   [puppetlabs-firewall]: http://github.com/puppetlabs/puppetlabs-firewall
