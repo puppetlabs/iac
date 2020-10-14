@@ -5,3 +5,4 @@ _site
 .bundle
 .idea/
 .DS_Store
+bin/blog_tools/Gemfile.lock
