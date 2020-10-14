@@ -2,7 +2,10 @@ require_relative 'common'
 require_relative 'octokit_util'
 
 COMMENT_AUTHOR_IGNORE_LIST = [
-  'codecov-commenter'
+  'codecov-commenter',
+  'codecov-io',
+  'coveralls',
+  'dependabot-preview[bot]',
 ].freeze
 
 @octokit_util = OctoKitUtil.new
@@ -40,12 +43,13 @@ end
 prs_to_credit = []
 
 puts 'Checking supported IAC repos for contributions to credit:'
+max_length = iac_repos.map(&:length).max
 iac_repos.each do |repo_name|
-  padding = 45 - repo_name.size
+  padding = max_length - repo_name.size
   puts "- #{repo_name}" + ' ' * padding + "(TOTAL: #{prs_to_credit.size})"
   back_off_api_if_required
 
-  pr_res = @client.get("repos/puppetlabs/#{repo_name}/pulls", state: 'all')
+  pr_res = @client.get("repos/#{repo_name}/pulls", state: 'all')
   pr_res.each do |pr|
     next if @octokit_util.iac_member?(pr['user']['login'])
     next if pr['merged_at'].nil?

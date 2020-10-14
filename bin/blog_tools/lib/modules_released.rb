@@ -14,7 +14,7 @@ request = http.get(FORGE_URI.request_uri)
 
 resp = JSON.parse(request.body)
 forge_modules = resp['results']
-                .select { |forge_module| iac_repos.include? (forge_module['slug']) }
+                .select { |forge_module| iac_repos.include? ("puppetlabs/" + forge_module['slug']) }
                 .select { |forge_module| Date.parse(forge_module['updated_at']).strftime('%s').to_i >= last_blog_post_utc_time }
 
 if forge_modules.size == 0
