@@ -27,6 +27,32 @@ The following modules were released this week:
 - [`puppetlabs-docker`][puppetlabs-docker] (`3.12.1`)
 - [`puppetlabs-firewall`][puppetlabs-firewall] (`2.7.0`)
 
+## Life of an intern at Puppet
+
+[Disha][disha-maker] continues her journey as a placement student at Puppet and you can find her updates aout the [Life of an intern at Puppet](https://puppetlabs.github.io/iac/docs/life_of_intern).
+
+## Puppet 7 Nightly Testing
+
+As part of our progress to a stable Puppet 7 platform release, we are now expanding our Puppet 7 nightly build tests to all [supported modules][supported modules].
+A big thank you to the Nights Watch team, specifically, [Florin][florin], [Gimmy][gimmy] and [Oana][oana] for their help in debugging an issue in the [`puppetlabs-docker`][puppetlabs-docker] module.
+
+## CI Improvements
+
+As hinted before we are working on a public cloud-based acceptance testing solution for the puppet modules we maintain.
+One of the big problems over the years was that our internal testing results were not available for our community contributors.
+This locked up our investment in testing inside the corporate VPN and did not help community contributors.
+
+This is about to change.
+Today we had the first public (test-)pull request run unit and acceptance tests on entirely public infrastructure and report the [results in public](https://github.com/puppetlabs/puppetlabs-testing/pull/301/checks).
+As we roll out the new jobs to all our [modules][supported modules] and all our platforms, you'll be start to see the test results show up on PRs and on a schedule checking against environmental drift.
+Over the next weeks we'll also work on batting down the hatches and tidying up the code base to allow us run a smooth and reliable platform.
+Expect more detailed blog posts and announcements as we continue to progress towards a production-ready stable service.
+
+
+  [supported modules]: https://puppetlabs.github.io/iac/modules/
+  [florin]: https://github.com/florindragos
+  [gimmy]: https://github.com/gimmyxd
+  [oana]: https://github.com/oanatmaria
   [puppetlabs-docker]: https://github.com/puppetlabs/puppetlabs-docker
   [puppetlabs-firewall]: http://github.com/puppetlabs/puppetlabs-firewall
   [puppetlabs-docker-pr-666]: https://github.com/puppetlabs/puppetlabs-docker/pull/666
