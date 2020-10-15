@@ -48,6 +48,9 @@ As we roll out the new jobs to all our [modules][supported modules] and all our 
 Over the next weeks we'll also work on batting down the hatches and tidying up the code base to allow us run a smooth and reliable platform.
 Expect more detailed blog posts and announcements as we continue to progress towards a production-ready stable service.
 
+As part of that work, we submitted some work and bug reports to upstream repos:
+- Improve caching in Google Cloud Build: [GoogleCloudPlatform/cloud-builders-community#454](https://github.com/GoogleCloudPlatform/cloud-builders-community/pull/454) and [GoogleCloudPlatform/cloud-builders-community#456](https://github.com/GoogleCloudPlatform/cloud-builders-community/pull/456)
+- Reported a API error in [googleapis/google-auth-library-ruby#274](https://github.com/googleapis/google-auth-library-ruby/issues/274), which was subsequently fixed by [Daniel Azuma](https://github.com/dazuma) and released as 0.14.0.
 
   [supported modules]: https://puppetlabs.github.io/iac/modules/
   [florin]: https://github.com/florindragos
