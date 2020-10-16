@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require_relative 'common'
 require_relative 'octokit_util'
 
@@ -20,16 +22,17 @@ def back_off_api_if_required
   sleep(back_off_time)
 end
 
-def reject_comment_author?(comment_author)
+def bot_author?(comment_author)
   return true if @octokit_util.iac_member? comment_author
   return true if COMMENT_AUTHOR_IGNORE_LIST.include? comment_author
 end
 
-def get_comment_authors(comment_url)
+def get_comment_authors(comment_url, pr_author)
   comments_to_credit = []
   resp = @client.get(comment_url)
   comments = resp.reject { |comment| comment['user']['type'] == 'Bot' }
-                 .reject { |comment| reject_comment_author?(comment['user']['login']) }
+                 .reject { |comment| bot_author?(comment['user']['login']) }
+                 .reject { |comment| comment['user']['login'] == pr_author}
   comments.each do |comment|
     user_comment_name_ref = "[#{comment['user']['login']}][#{comment['user']['login']}]"
     comments_to_credit << user_comment_name_ref unless comments_to_credit.include? user_comment_name_ref
@@ -52,6 +55,7 @@ iac_repos.each do |repo_name|
   pr_res = @client.get("repos/#{repo_name}/pulls", state: 'all')
   pr_res.each do |pr|
     next if @octokit_util.iac_member?(pr['user']['login'])
+    next if bot_author?(pr['user']['login'])
     next if pr['merged_at'].nil?
     next if pr['merged_at'].to_i < last_blog_post_utc_time
 
@@ -74,7 +78,7 @@ prs_to_credit.each do |pr|
   @links << author_link_url unless @links.include? author_link_url
   author_link_ref = "[#{pr['user']['login']}][#{pr['user']['login']}]"
 
-  comment_author_refs = get_comment_authors(pr['comments_url'])
+  comment_author_refs = get_comment_authors(pr['comments_url'], pr['user']['login'])
 
   community_pr_shoutout = "#{pr_link_ref} Thanks to #{author_link_ref}"
   unless comment_author_refs.empty?
