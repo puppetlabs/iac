@@ -16,8 +16,12 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`puppetlabs-mysql#1334`][puppetlabs-mysql-pr-1334]: Thanks to [andeman][andeman]
 - [`facterdb#160`][facterdb-pr-160]: Thanks to [logicminds][logicminds]
 - [`facterdb#159`][facterdb-pr-159]: Thanks to [logicminds][logicminds]
-- [`pdk-vanagon#267`][pdk-vanagon-pr-267]: Thanks to [scotje][scotje]
 - [`pdk#916`][pdk-pr-916]: Thanks to [scotje][scotje]
+- [`pdk-templates#351`][pdk-templates-pr-351]: Thanks to [silug][silug]
+- [`pdk-vanagon#267`][pdk-vanagon-pr-267]: Thanks to [scotje][scotje]
+- [`puppet_litmus#324`][puppet_litmus-pr-324]: Thanks to [RandomNoun7][RandomNoun7]
+- [`rspec-puppet#806`][rspec-puppet-pr-806]: Thanks to [scotje][scotje]
+- [`rspec-puppet#805`][rspec-puppet-pr-805]: Thanks to [scotje][scotje]
 - [`rspec-puppet#799`][rspec-puppet-pr-799]: Thanks to [scotje][scotje]
 
 ## New Module / Gem Releases
@@ -66,8 +70,13 @@ As part of that work, we submitted some work and bug reports to upstream repos:
   [facterdb-pr-160]: https://github.com/camptocamp/facterdb/pull/160
   [logicminds]: https://github.com/logicminds
   [facterdb-pr-159]: https://github.com/camptocamp/facterdb/pull/159
-  [iac-pr-123]: https://github.com/puppetlabs/iac/pull/123
-  [pdk-vanagon-pr-267]: https://github.com/puppetlabs/pdk-vanagon/pull/267
-  [scotje]: https://github.com/scotje
   [pdk-pr-916]: https://github.com/puppetlabs/pdk/pull/916
+  [scotje]: https://github.com/scotje
+  [pdk-templates-pr-351]: https://github.com/puppetlabs/pdk-templates/pull/351
+  [silug]: https://github.com/silug
+  [pdk-vanagon-pr-267]: https://github.com/puppetlabs/pdk-vanagon/pull/267
+  [puppet_litmus-pr-324]: https://github.com/puppetlabs/puppet_litmus/pull/324
+  [RandomNoun7]: https://github.com/RandomNoun7
+  [rspec-puppet-pr-806]: https://github.com/rodjek/rspec-puppet/pull/806
+  [rspec-puppet-pr-805]: https://github.com/rodjek/rspec-puppet/pull/805
   [rspec-puppet-pr-799]: https://github.com/rodjek/rspec-puppet/pull/799
