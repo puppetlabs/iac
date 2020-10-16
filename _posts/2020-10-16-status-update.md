@@ -6,6 +6,11 @@ categories:
   - team
   - status
 tags:
+  - community
+  - releases
+  - puppet_intern
+  - puppet7
+  - cloud-ci
 ---
 
 ## Community Contributions
