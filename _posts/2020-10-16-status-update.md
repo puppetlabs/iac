@@ -29,7 +29,7 @@ The following modules were released this week:
 
 ## Life of an intern at Puppet
 
-[Disha][disha-maker] continues her journey as a placement student at Puppet and you can find her updates aout the [Life of an intern at Puppet](https://puppetlabs.github.io/iac/docs/life_of_intern).
+[Disha][disha-maker] continues her journey as a placement student at Puppet. Expect her next update about the [Life of an intern at Puppet](https://puppetlabs.github.io/iac/docs/life_of_intern) next week.
 
 ## Puppet 7 Nightly Testing
 
@@ -52,6 +52,7 @@ As part of that work, we submitted some work and bug reports to upstream repos:
 - Improve caching in Google Cloud Build: [GoogleCloudPlatform/cloud-builders-community#454](https://github.com/GoogleCloudPlatform/cloud-builders-community/pull/454) and [GoogleCloudPlatform/cloud-builders-community#456](https://github.com/GoogleCloudPlatform/cloud-builders-community/pull/456)
 - Reported a API error in [googleapis/google-auth-library-ruby#274](https://github.com/googleapis/google-auth-library-ruby/issues/274), which was subsequently fixed by [Daniel Azuma](https://github.com/dazuma) and released as 0.14.0.
 
+  [disha-maker]: https://github.com/disha-maker
   [supported modules]: https://puppetlabs.github.io/iac/modules/
   [florin]: https://github.com/florindragos
   [gimmy]: https://github.com/gimmyxd
