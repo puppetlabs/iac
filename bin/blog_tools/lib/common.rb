@@ -19,7 +19,7 @@ end
 
 def date_of_next_friday
   date  = Date.parse('Friday')
-  delta = date > Date.today ? 0 : 7
+  delta = date >= Date.today ? 0 : 7
   (date + delta).iso8601
 end
 
