@@ -72,7 +72,7 @@ prs_to_credit.each do |pr|
 
   pr_link_url = "[#{repo}-pr-#{pr['number']}]: #{pr['html_url']}"
   @links << pr_link_url unless @links.include? pr_link_url
-  pr_link_ref = "[`#{repo}##{pr['number']}`][#{repo}-pr-#{pr['number']}]:"
+  pr_link_ref = "[`#{repo}##{pr['number']}`][#{repo}-pr-#{pr['number']}]"
 
   author_link_url = "[#{pr['user']['login']}]: #{pr['user']['html_url']}"
   @links << author_link_url unless @links.include? author_link_url
@@ -80,7 +80,7 @@ prs_to_credit.each do |pr|
 
   comment_author_refs = get_comment_authors(pr['comments_url'], pr['user']['login'])
 
-  community_pr_shoutout = "#{pr_link_ref} Thanks to #{author_link_ref}"
+  community_pr_shoutout = "#{pr_link_ref}: \"#{pr['title']}\", thanks to #{author_link_ref}"
   unless comment_author_refs.empty?
     community_pr_shoutout += ' and the following people who helped get it over the line ' \
                            "(#{comment_author_refs.join(', ')})"

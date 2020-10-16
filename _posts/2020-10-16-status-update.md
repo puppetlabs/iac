@@ -12,17 +12,17 @@ tags:
 
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
 
-- [`puppetlabs-docker#666`][puppetlabs-docker-pr-666]: Thanks to [optiz0r][optiz0r]
-- [`puppetlabs-mysql#1334`][puppetlabs-mysql-pr-1334]: Thanks to [andeman][andeman]
-- [`facterdb#160`][facterdb-pr-160]: Thanks to [logicminds][logicminds]
-- [`facterdb#159`][facterdb-pr-159]: Thanks to [logicminds][logicminds]
-- [`pdk#916`][pdk-pr-916]: Thanks to [scotje][scotje]
-- [`pdk-templates#351`][pdk-templates-pr-351]: Thanks to [silug][silug]
-- [`pdk-vanagon#267`][pdk-vanagon-pr-267]: Thanks to [scotje][scotje]
-- [`puppet_litmus#324`][puppet_litmus-pr-324]: Thanks to [RandomNoun7][RandomNoun7]
-- [`rspec-puppet#806`][rspec-puppet-pr-806]: Thanks to [scotje][scotje]
-- [`rspec-puppet#805`][rspec-puppet-pr-805]: Thanks to [scotje][scotje]
-- [`rspec-puppet#799`][rspec-puppet-pr-799]: Thanks to [scotje][scotje]
+- [`puppetlabs-docker#666`][puppetlabs-docker-pr-666]: "Fix misplaced backslash in start template", thanks to [optiz0r][optiz0r]
+- [`puppetlabs-mysql#1334`][puppetlabs-mysql-pr-1334]: "(MODULES-10788) - fix for password prompt when creating mysql_login_path resource", thanks to [andeman][andeman]
+- [`facterdb#160`][facterdb-pr-160]: "Fixes a bug with generate_filter_str", thanks to [logicminds][logicminds]
+- [`facterdb#159`][facterdb-pr-159]: "Fixes #19 - add filter validation", thanks to [logicminds][logicminds]
+- [`pdk#916`][pdk-pr-916]: "(MAINT) Switch default pdk-templates branch to `main`", thanks to [scotje][scotje]
+- [`pdk-templates#351`][pdk-templates-pr-351]: "(#350) Update deprecated globals", thanks to [silug][silug]
+- [`pdk-vanagon#267`][pdk-vanagon-pr-267]: "(MAINT) Make it easier to test non-tagged puppet-runtime builds", thanks to [scotje][scotje]
+- [`puppet_litmus#324`][puppet_litmus-pr-324]: "Add write_file helper", thanks to [RandomNoun7][RandomNoun7]
+- [`rspec-puppet#806`][rspec-puppet-pr-806]: "(MAINT) Use Appveyor 2019 image for Ruby 2.7/Windows testing", thanks to [scotje][scotje]
+- [`rspec-puppet#805`][rspec-puppet-pr-805]: " coverage.rb: Fix handling of 0 total resources", thanks to [scotje][scotje]
+- [`rspec-puppet#799`][rspec-puppet-pr-799]: "Add 2.7.10 release to changelog", thanks to [scotje][scotje]
 
 ## New Module / Gem Releases
 
