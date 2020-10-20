@@ -124,7 +124,7 @@ def prep_repo_on_runner
   log "Prepping #{@repo} on #{@provision_runner_host}"
   run_command("cd #{@repo} && git checkout #{@branch}")
   run_command("cd #{@repo} && bundle install")
-  run_command("cd #{@repo} && bundle exec rake litmus:install_agent[puppet#{@puppet_version}]")
+  run_command("cd #{@repo} && bundle exec rake litmus:install_agent[#{@puppet_version}]")
   run_command("cd #{@repo} && bundle exec rake litmus:install_module")
 end
 
