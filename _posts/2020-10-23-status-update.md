@@ -50,7 +50,7 @@ A big thank you to the Nights Watch team, specifically, [Florin][florin] and [Bo
 ## CI Improvements
 
 Hacktoberfest is an annual event hosted by DigitalOcean and DEV.to in order to promote Open Source collaboration. More details can be found [here][hacktoberfest]. 
-It was held on 20-Oct-2020 and we did a demo on Trusted Contributor CI project where public (test-)pull request run unit and acceptance tests on entirely public infrastructure and report the [results in public](https://github.com/puppetlabs/puppetlabs-testing/pull/306/checks. 
+It was held on 20-Oct-2020 and we did a demo on Trusted Contributor CI project where public (test-)pull request run unit and acceptance tests on entirely public infrastructure and report the [results in public](https://github.com/puppetlabs/puppetlabs-testing/pull/306/checks). 
 Thanks to [David][DavidS], [Dany][carabasdaniel] and [Michael][michaeltlombardi] for the demo. 
 
 As part of that work, we submitted some work and bug report to upstream repos:
