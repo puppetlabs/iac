@@ -7,7 +7,7 @@ STANDARD_USER_ACCOUNT = 'iacremoterunner'.freeze
 @branch = 'release'
 @debug = false
 @provision_runner_host = nil
-@puppet_version = '6'
+@puppet_version = 'puppet6'
 
 OptionParser.new do |opts|
   opts.banner = 'Usage: run_in_portland.rb [options]'
