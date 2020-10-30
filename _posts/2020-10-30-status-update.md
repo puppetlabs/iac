@@ -14,6 +14,11 @@ tags:
   - strings
   - rspec-puppet
   - tagmail
+  - cloud-ci
+  - puppetize
+  - dsc
+  - motd
+  - triage
 ---
 
 ## Community Contributions
