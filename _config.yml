@@ -27,6 +27,7 @@ github_username: puppetlabs
 markdown: kramdown
 theme: minima
 plugins:
+  - jemoji
   - jekyll-feed
   - jekyll-analytics
   - jekyll-sitemap
