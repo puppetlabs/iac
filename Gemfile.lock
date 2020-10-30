@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/hendrikschneider/jekyll-analytics.git
-  revision: 6bb1bf68a16ecb47c33e9d2fb1fbedf6980f6f37
+  revision: 40e09570dea80e3a9ecb0ad796aad1c434ff067c
   branch: master
   specs:
     jekyll-analytics (0.1.12)
