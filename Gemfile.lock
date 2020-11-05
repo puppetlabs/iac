@@ -82,7 +82,7 @@ DEPENDENCIES
   jekyll-analytics!
   jekyll-feed (~> 0.15)
   jekyll-sitemap (~> 1.4)
-  minima (~> 2.0)
+  minima (~> 2.1)
   tzinfo-data
 
 BUNDLED WITH
