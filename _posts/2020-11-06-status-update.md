@@ -47,6 +47,10 @@ As we move closer to ironing out some of the bugs we have set our targets on a c
 We have started with setting up a PR for puppetlabs-acl and as soon as we are happy with the workflow puppetlabs-iis and registry will follow.
 For a quick glance at a demo on how this setup will help in the future please take a look at "The new Puppet Developer Experience:it's all about you" presented at the Puppetize Digital 2020 event by Ben Ford.
 
+## Thanks to James Pogran
+
+Many thanks to [jpogran][james jogran] from the Bolt team for helping us to resolve failing tests on [puppetlabs-concat][concat] module.
+
 ## Community Contributions
 
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
@@ -121,3 +125,5 @@ The following modules were released this week:
   [sheena]: https://github.com/sheenaajay
   [supported modules]: https://puppetlabs.github.io/iac/modules/
   [tools]: https://puppetlabs.github.io/iac/tools/
+  [jpogran]: https://github.com/jpogran
+  [concat]: http://github.com/puppetlabs/puppetlabs-concat
