@@ -50,7 +50,7 @@ For a quick glance at a demo on how this setup will help in the future please ta
 
 ## Thanks to James Pogran
 
-Many thanks to [jpogran][james jogran] from the Bolt team for helping us to resolve failing tests on [puppetlabs-concat][concat] module.
+Many thanks to [James][jpogran] from the Bolt team for helping us to resolve failing tests on [puppetlabs-concat][concat] module.
 
 ## Community Contributions
 
