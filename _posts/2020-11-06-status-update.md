@@ -45,8 +45,8 @@ A message from our intern:
 ## Cloud CI update
 
 As we move closer to ironing out some of the bugs we have set our targets on a couple of windows modules for the initial porting to use Cloud resources in their acceptance testing.
-We have started with setting up a PR for puppetlabs-acl and as soon as we are happy with the workflow puppetlabs-iis and registry will follow.
-For a quick glance at a demo on how this setup will help in the future please take a look at "The new Puppet Developer Experience:it's all about you" presented at the Puppetize Digital 2020 event by Ben Ford.
+We have started with setting up a [PR for puppetlabs-acl](https://github.com/puppetlabs/puppetlabs-acl/pull/211) and as soon as we are happy with the workflow puppetlabs-iis and registry will follow.
+For a quick glance at a demo on how this setup will help in the future please take a look at "The new Puppet Developer Experience: it's all about you" presented at the [Puppetize Digital 2020](https://digital.puppetize.com) event by Ben Ford.
 
 ## Thanks to James Pogran
 
