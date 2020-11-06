@@ -32,14 +32,15 @@ We are now entering the final stages of our Puppet 7 testing. With the Puppet 7 
 
 In the [24th "everyonecancontribute" Kaeffchen (german)](https://everyonecancontribute.com/post/2020-11-04-kaeffchen-24-puppet-insights/) with [dnsmichi](https://twitter.com/dnsmichi), David Schmitt talks about the up and coming puppet 7 features and our new security and compliance focused products.
 
-## Week 10 - PTO and First Ticket Completed
+## Disha's 10th Week: PTO and First Ticket Completed
 
-Hi all,
-This week I haven't got a lot to say.... I got my first PTO in Puppet at the start of the week from Monday to Wednesday.
-I returned to work on Thursday morning and started doing litmus acceptance testing on the tomcat module which was the first ticket assigned to me before going on PTO. I am delighted to have it completed!
-I would also like to say thanks to my mentor Ciaran for a 1:1 session on how to do effective debugging of errors. Thanks Ciaran for such a useful session.
-That's all for this week.
-Have a good weekend everyone!
+A message from our intern:
+> Hi all,
+> This week I haven't got a lot to say.... I got my first PTO in Puppet at the start of the week from Monday to Wednesday.
+> I returned to work on Thursday morning and started doing litmus acceptance testing on the tomcat module which was the first ticket assigned to me before going on PTO. I am delighted to have it completed!
+> I would also like to say thanks to my mentor Ciaran for a 1:1 session on how to do effective debugging of errors. Thanks Ciaran for such a useful session.
+> That's all for this week.
+> Have a good weekend everyone!
 
 ## Cloud CI update
 
