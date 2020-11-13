@@ -61,7 +61,6 @@ The following modules were released this week:
 
 - [`puppetlabs-java`][puppetlabs-java] (`6.4.0`)
 - [`puppetlabs-inifile`][puppetlabs-inifile] (`4.3.1`)
-- [`puppetlabs-windows`][puppetlabs-windows] (`6.1.0`)
 
   [cdenneen]: https://github.com/cdenneen
   [ekohl]: https://github.com/ekohl
@@ -88,7 +87,6 @@ The following modules were released this week:
   [puppetlabs-postgresql-pr-1204]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1204
   [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
   [Puppetlabs-registry]: https://github.com/puppetlabs/puppetlabs-registry
-  [puppetlabs-windows]: https://github.com/puppetlabs/puppetlabs-windows
   [rodjek]: https://github.com/rodjek
   [rspec-puppet-facts-pr-122]: https://github.com/mcanevet/rspec-puppet-facts/pull/122
   [rspec-puppet-pr-812]: https://github.com/rodjek/rspec-puppet/pull/812
