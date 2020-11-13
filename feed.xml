@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-11-13T02:13:06+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2020-11-06: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html" rel="alternate" type="text/html" title="2020-11-06: IAC Team Status Update" /><published>2020-11-06T00:00:00+00:00</published><updated>2020-11-06T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html">&lt;p&gt;It was an interesting week for IAC team and we have exciting news for you.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-11-13T14:11:30+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2020-11-13: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update.html" rel="alternate" type="text/html" title="2020-11-13: IAC Team Status Update" /><published>2020-11-13T00:00:00+00:00</published><updated>2020-11-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update.html">&lt;p&gt;As always, interesting weeks for the IAC team means a slew of updates for everyone else!&lt;/p&gt;
+
+&lt;h2 id=&quot;new-triage-practice&quot;&gt;New Triage Practice&lt;/h2&gt;
+
+&lt;p&gt;This week marked our second experimental session of full-team triage of all of our repositories.
+We decided to move from an ongoing triage rotation which assigned two engineers full-time to handling incoming issues and pull requests (rotating the assignment every two weeks) to having the entire team focus on triage work every Monday.&lt;/p&gt;
+
+&lt;p&gt;On Monday our team processed &lt;strong&gt;sixty-five&lt;/strong&gt; PRs—34 in our tools repositories, 31 in module repositories—and released two modules.
+It has also meant a lot of pairing and knowledge sharing on the team, which has been great!&lt;/p&gt;
+
+&lt;p&gt;We’re going to keep going with this experiment for several more weeks, but we’re extremely excited with these initial results!&lt;/p&gt;
+
+&lt;h2 id=&quot;puppet-7-compatibility-testing--ruby-27-ci-support&quot;&gt;Puppet 7 Compatibility Testing / Ruby 2.7 CI Support&lt;/h2&gt;
+
+&lt;p&gt;Our proof of concept (PoC) on getting Ruby 2.7 rolled out across TravisCI is making good progress, although still in the initial stages of testing.
+Depending on the results of our PoC, we may be going live with this sooner than expected—stay tuned for more updates soon.
+We are now in a position where we’re confident we’ve uncovered most compatibility issues with Puppet 7 / &lt;a href=&quot;https://puppetlabs.github.io/iac/modules/&quot;&gt;Supported Modules&lt;/a&gt;.
+We’ve had the fringe benefit of finding issues that have needed to be addressed on the CI pipelines for a while and are now farming these issues out across the team, to resolve.
+Inspired by the success of our full-team Triage days, we may borrow that methodology and swarm on them in one last push!&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h2&gt;
+
+&lt;p&gt;This week we have managed to finish the port of the initial 3 windows modules to run using our new Cloud CI setup.
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppetlabs-registry&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-acl&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-acl&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; will now run PR acceptance tests using GCP provisioned resources and will have nightly scheduled workflows set up.
+Currently there are still some issues we are facing on the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; acceptance tests but we hope to get a fix for those as soon as possible.&lt;/p&gt;
+
+&lt;p&gt;Next week we will start to shift our focus to start the porting for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; while continuing to improve and stabilise our solution.&lt;/p&gt;
+
+&lt;p&gt;For a quick demo on how this all works please see Ben Ford’s presentation on “The new Puppet Developer Experience: it’s all about you”.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2086&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2086&lt;/code&gt;&lt;/a&gt;: “Add new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$use_servername_for_filenames&lt;/code&gt; parameter”: Thanks to &lt;a href=&quot;https://github.com/rsynnest&quot;&gt;rsynnest&lt;/a&gt; and &lt;a href=&quot;https://github.com/pstray&quot;&gt;pstray&lt;/a&gt; for PRs &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2064&quot;&gt;#2064&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2068&quot;&gt;#2068&lt;/a&gt;, respectively, which prompted this new parameter to be added. Also thanks to &lt;a href=&quot;https://github.com/igalic&quot;&gt;igalic&lt;/a&gt; and &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; for their suggestions and feedback during the development process.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/447&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#447&lt;/code&gt;&lt;/a&gt;: “frontend options: order default_backend after specific backends &amp;amp; test”, thanks to &lt;a href=&quot;https://github.com/MajorFlamingo&quot;&gt;MajorFlamingo&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1204&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1204&lt;/code&gt;&lt;/a&gt;: “Use non-deprecation password function in acceptance tests”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1203&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1203&lt;/code&gt;&lt;/a&gt;: “Drop concat_basedir fact in tests”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/mcanevet/rspec-puppet-facts/pull/122&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet-facts#122&lt;/code&gt;&lt;/a&gt;: “Implement fact memoization”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/mcanevet&quot;&gt;mcanevet&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/919&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#919&lt;/code&gt;&lt;/a&gt;: “(MAINT) Update package specs for dropping Ruby 2.1.9”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/358&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#358&lt;/code&gt;&lt;/a&gt;: “(MAINT) Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; pin for Ruby 2.7.x”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/332&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#332&lt;/code&gt;&lt;/a&gt;: “Change global_variables key for GitLab CI to set defaults that can be overridden by jobs”, thanks to &lt;a href=&quot;https://github.com/cdenneen&quot;&gt;cdenneen&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-module-gems/pull/148&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-module-gems#148&lt;/code&gt;&lt;/a&gt;: “Pin parallel to &amp;lt; 1.20 on ruby 2.4, since 1.20 requires ruby 2.5 “, thanks to &lt;a href=&quot;https://github.com/wmuizelaar&quot;&gt;wmuizelaar&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/934&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#934&lt;/code&gt;&lt;/a&gt;: “Select parameter tokens based on preceeding code token”, thanks to &lt;a href=&quot;https://github.com/rodjek&quot;&gt;rodjek&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/815&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#815&lt;/code&gt;&lt;/a&gt;: “(MAINT) Bump version to 2.9.0.pre”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/812&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#812&lt;/code&gt;&lt;/a&gt;: “Add missing links for keep-a-changelog-ish diffs”, thanks to &lt;a href=&quot;https://github.com/op-ct&quot;&gt;op-ct&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.4.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.3.1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-windows&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-windows&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.1.0&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html">As always, interesting weeks for the IAC team means a slew of updates for everyone else!</summary></entry><entry><title type="html">2020-11-06: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html" rel="alternate" type="text/html" title="2020-11-06: IAC Team Status Update" /><published>2020-11-06T00:00:00+00:00</published><updated>2020-11-06T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html">&lt;p&gt;It was an interesting week for IAC team and we have exciting news for you.&lt;/p&gt;
 
 &lt;h2 id=&quot;puppet-7--ruby-27-certification&quot;&gt;Puppet 7 / Ruby 2.7 Certification&lt;/h2&gt;
 
@@ -554,163 +614,4 @@ Using the latest versions(&lt;code class=&quot;language-plaintext highlighter-ro
 Also please take a look at the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/648&quot;&gt;solution&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Kind regards,
-&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian Iurca&lt;/a&gt;&lt;/p&gt;</content><author><name>adrianiurca</name></author><category term="docker" /><category term="development" /><category term="bugfix" /><category term="docker" /><category term="personal" /><summary type="html">Docker params change detection</summary></entry><entry><title type="html">DSC + Puppet: Arrived!</title><link href="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html" rel="alternate" type="text/html" title="DSC + Puppet: Arrived!" /><published>2020-09-21T00:00:00+00:00</published><updated>2020-09-21T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release</id><content type="html" xml:base="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html">&lt;p&gt;Earlier this year, we &lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;announced an upcoming project&lt;/a&gt; to drastically improve the story for using DSC Resources with Puppet.
-Today, we’re announcing the general availability of that project!&lt;/p&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt; PowerShell module&lt;/a&gt; is now available on the &lt;a href=&quot;https://www.powershellgallery.com/packages/Puppet.Dsc&quot;&gt;PowerShell Gallery&lt;/a&gt;;
-furthermore, an initial batch of &lt;strong&gt;twenty-six&lt;/strong&gt; PowerShell modules with DSC Resources have been Puppetized and &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;published to the Forge&lt;/a&gt;!&lt;/p&gt;
-
-&lt;p&gt;We picked several of the most-downloaded modules with DSC Resources released in the last year to start with, but in the coming weeks you should find &lt;em&gt;everything&lt;/em&gt; available on the PowerShell Gallery up on the Forge!&lt;/p&gt;
-
-&lt;p&gt;But today, in addition to sharing this news, I want to go into a bit more detail, both with what’s going on under the hood and with how you can use these auto-generated modules.&lt;/p&gt;
-
-&lt;h3 id=&quot;installing-the-modules&quot;&gt;Installing the Modules&lt;/h3&gt;
-
-&lt;p&gt;If you just want to get your hands on the PowerShell module to read the help and experiment on your own, you can install it like any other PowerShell module:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nf&quot;&gt;Install-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Puppet.Dsc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Import-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Puppet.Dsc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-Command&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Puppet.Dsc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;Get-Help&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;New-PuppetDscModule&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ShowWindow&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Some of the functions from the PowerShell module rely on the &lt;a href=&quot;https://puppet.com/docs/pdk/1.x/pdk.html&quot;&gt;Puppet Development Kit (PDK)&lt;/a&gt; being installed;
-we suggest using &lt;a href=&quot;https://chocolatey.org/&quot;&gt;Chocolatey&lt;/a&gt; to do so, but you can also &lt;a href=&quot;https://puppet.com/try-puppet/puppet-development-kit/&quot;&gt;manually download and install&lt;/a&gt; if you prefer.&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;choco &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;pdk
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you want to do the same sort of thing with one of the Puppetized modules from the forge, you can install them and treat them just like any other Puppet module:&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# For example, installing the Puppetized ComputerManagementDsc module manually:&lt;/span&gt;
-puppet module &lt;span class=&quot;nb&quot;&gt;install &lt;/span&gt;dsc-computermanagementdsc &lt;span class=&quot;nt&quot;&gt;--Version&lt;/span&gt; 8.4.0-0-0
-&lt;span class=&quot;c&quot;&gt;# Or via r10k / Code Manager / Bolt:&lt;/span&gt;
-mod &lt;span class=&quot;s1&quot;&gt;'dsc-computermanagementdsc'&lt;/span&gt;, &lt;span class=&quot;s1&quot;&gt;'8.4.0-0-0'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;puppetizing-a-powershell-module&quot;&gt;Puppetizing a PowerShell module&lt;/h2&gt;
-
-&lt;p&gt;So, you want to turn a PowerShell module with DSC Resources into a Puppet module?
-You can do this with a single command:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# If you run this command without the PassThru flag it returns nothing to the output stream.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Any conversion errors will be in the error stream, as usual.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# If you'd like a deeper look at what it's doing, try running it with the Verbose flag.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;New-PuppetDscModule&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-PowerShellModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ComputerManagementDsc&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-PassThru&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Unfortunately, the output from running it isn’t all that exciting:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/new-puppetdscmodule.png&quot; alt=&quot;Output from a PowerShell console showing the running of the command above as well as the return output, which is the folder object representing the new Puppet module on disk&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Behind the scenes, the command:&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Uses the &lt;a href=&quot;https://puppet.com/docs/pdk/1.x/pdk.html&quot;&gt;PDK&lt;/a&gt; to create a new Puppet module&lt;/li&gt;
-  &lt;li&gt;Searches the &lt;a href=&quot;https://www.powershellgallery.com&quot;&gt;PowerShell Gallery&lt;/a&gt; for the ComputerManagementDsc module and vendor it into the new Puppet module&lt;/li&gt;
-  &lt;li&gt;Converts each of the DSC Resources from the vendored PowerShell module into a Puppet Resource API type and provider&lt;/li&gt;
-  &lt;li&gt;Updates the Puppet module’s metadata and documentation based on the PowerShell module.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;At this time, for best results we strongly recommend you run the command with administrator privileges in a Windows PowerShell 5.1 session.
-While it &lt;em&gt;does&lt;/em&gt; work without administrator privileges, the function cannot fully map nested CIM instances without administrator privileges.
-For more information on this process, check out the &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc/blob/main/docs/about_Puppetization.md&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;about_Puppetization&lt;/code&gt; HelpFile&lt;/a&gt; via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get-Help&lt;/code&gt; for a more in-depth documentation of this process.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;using-puppetized-modules&quot;&gt;Using puppetized modules&lt;/h2&gt;
-
-&lt;p&gt;On the one hand, there’s not much to say about using the Puppetized modules with DSC Resources;
-you use them &lt;em&gt;precisely&lt;/em&gt; like any other Puppet module, after all.
-On the other hand, there’s some strong utility worth going over in more detail you may or may not be aware of!&lt;/p&gt;
-
-&lt;p&gt;To get the most value from your workflow, we &lt;strong&gt;strongly&lt;/strong&gt; recommend you author your manifests that include Puppetized DSC Resources in &lt;a href=&quot;https://code.visualstudio.com/&quot;&gt;VSCode&lt;/a&gt; with the &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;Puppet extension&lt;/a&gt; enabled.&lt;/p&gt;
-
-&lt;p&gt;When we open a file named &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;example.pp&lt;/code&gt; to edit, the Puppet extension automatically begins to load;
-once this is finished, we have access to a ton of useful authoring support, including intellisense.&lt;/p&gt;
-
-&lt;p&gt;For example, if we’ve installed the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;computermanagementdsc&lt;/code&gt; Puppet module, we need only type &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsc_execution&lt;/code&gt; before IntelliSense kicks in and helps us out:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/intellisense-resource.png&quot; alt=&quot;A VSCode window showing the text 'dsc_execution' has raised a tooltip which lists multiple possible matches, including dsc_powershellexecutionpolicy, and to the right it shows the help information for this resource.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that it tells us not just what available resources might match, it also displays the available documentation for each resource.&lt;/p&gt;
-
-&lt;p&gt;We also get IntelliSense for each property we want to pass, too;
-again, this doesn’t just show the available options but also includes any available documentation for each property.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/intellisense-property.png&quot; alt=&quot;A VSCode window showing the text 'dsc' inside a Puppet resource declaration for dsc_powershellexecutionpolicy, with a tooltip listing the possible properties, including dsc_executionpolicy and dsc_executionpolicyscope; as before, the help information (now including valid values) is to the right.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can also review the documentation for a property by hovering over it:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/docs-property.png&quot; alt=&quot;A VSCode window showing an empty declaration for 'dsc_executionpolicy' with the mouse hovering over that key, displaying a tooltip which includes the documentation and valid values for the property.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Where this combination really begins to sing is when you’ve begun authoring a manifest and something goes wrong.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/problems.png&quot; alt=&quot;A VSCode window showing a fully defined manifest with markings to highlight issues.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The image above shows that the file name in the left-hand pane has changed colors and is now red.
-It also underscores two entries in the manifest that VSCode has highlighted - one with orange underlining, indicating a warning, and one with red underlining, indicating an error.
-Finally, down in the bottom left corner it highlights the problem symbols for errors and warnings, both of which display a count of one.&lt;/p&gt;
-
-&lt;p&gt;VSCode (via the extension) knows &lt;em&gt;something&lt;/em&gt; is wrong with our manifest;
-we can click on those symbols to bring up the Problems Pane and investigate:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/problems-pane.png&quot; alt=&quot;A VSCode window displaying the Problems Pane with two entries&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;This tells us there’s a warning about the indentation of a hash rocket and some sort of syntax error preventing the extension from parsing line 3.&lt;/p&gt;
-
-&lt;p&gt;A quick look at the code tells us that we’re missing a comma in the resource declaration on line 2, and as soon as we add that comma in we get confirmation:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/problems-added-comma.png&quot; alt=&quot;A VSCode window displaying the Problems Pane with only one warning&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;All that remains now is the formatting issue.
-Luckily, VSCode is able to automatically handle this for us via the &lt;em&gt;Format Document&lt;/em&gt; command:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/format-document-option.png&quot; alt=&quot;A VSCode window displaying the right-click menu over the manifest, highlighting the 'Format Document' command with a hotkey combination of 'Shift+Alt+F'&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Which we can see does in fact move the hash rocket and resolve our last problem:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2020-09-21-dsc-release/manifest-fixed.png&quot; alt=&quot;A VSCode window displaying the manifest with no issues or warnings, the hash rocket moved appropriately to ensure preferred formatting for the manifest.&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We’re ready to apply this manifest!&lt;/p&gt;
-
-&lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;puppet apply ./example.pp
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Only… there was a problem;
-without reading the documentation for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsc_executionpolicyscope&lt;/code&gt; thoroughly enough, we specified &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Machine&lt;/code&gt; instead of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;MachinePolicy&lt;/code&gt;!&lt;/p&gt;
-
-&lt;p&gt;Puppet gives us back a pretty good error message though:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Error: Parameter dsc_executionpolicyscope failed on Dsc_powershellexecutionpolicy[[OPS-213]]: dsc_powershellexecutionpolicy.dsc_executionpolicyscope expects a match for Enum['CurrentUser', 'LocalMachine', 'MachinePolicy', 'Process', 'UserPolicy'], got 'Machine'
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We get an explicit list of the allowed values &lt;em&gt;before&lt;/em&gt; it tries to invoke DSC with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set&lt;/code&gt; action.
-This is unlike our prior implementation in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-dsc_lite&lt;/code&gt;, which has no way of knowing whether the values you’ve provided are correct.&lt;/p&gt;
-
-&lt;p&gt;Once we correct our manifest to specify &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;LocalMachine&lt;/code&gt; and re-run the command, we get something else:&lt;/p&gt;
-
-&lt;div class=&quot;language-text highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Notice: Compiled catalog for michael.lombardi-pf12aa84 in environment workstation_production in 1.04 seconds
-Notice: /Stage[main]/Main/Dsc_powershellexecutionpolicy[[OPS-213]]/dsc_executionpolicy: dsc_executionpolicy changed 'Unrestricted' to 'RemoteSigned'
-Notice: dsc_powershellexecutionpolicy[{:name=&amp;gt;&quot;[OPS-213]&quot;, :dsc_executionpolicyscope=&amp;gt;&quot;LocalMachine&quot;}]: Updating: Finished in 0.809555 seconds
-Notice: Applied catalog in 1.68 seconds
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This highlights a change from both of our prior implementations:
-you now get &lt;em&gt;property-by-property&lt;/em&gt; reporting for DSC Resources when using Puppet!
-This implementation knows not just &lt;em&gt;that&lt;/em&gt; a DSC Resource was out of sync and therefore applied, but it can tell you exactly which properties were out of sync, what their value was, and what it has been set to in this run.&lt;/p&gt;
-
-&lt;p&gt;This brings DSC Resources in line with all of the rest of the resources you manage with Puppet and drastically improves the usefulness of your run reports!&lt;/p&gt;
-
-&lt;h2 id=&quot;coming-up&quot;&gt;Coming Up&lt;/h2&gt;
-
-&lt;p&gt;This wave of converted DSC Resources and the release of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt; module to the PowerShell Gallery is not the &lt;em&gt;last&lt;/em&gt; step of our support for using DSC with Puppet, just the initial step.&lt;/p&gt;
-
-&lt;p&gt;Over the coming weeks we’re going to be looking to you for feedback and incorporating it as fast as we can manage.&lt;/p&gt;
-
-&lt;p&gt;We’re also moving towards automatically Puppetizing &lt;em&gt;every&lt;/em&gt; PowerShell module with DSC Resources on the Gallery.
-If there’s a module you want to use that isn’t yet published under our &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;&lt;strong&gt;dsc&lt;/strong&gt; namespace on the Forge&lt;/a&gt;, let us know in &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;Slack&lt;/a&gt; or by &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;emailing us&lt;/a&gt; and we’ll publish it as soon as we can!&lt;/p&gt;
-
-&lt;p&gt;In the long run, we plan to get some nightly builds in place to ensure that there’s never more than a 24 hour lag between when a PowerShell module with DSC Resources is published (new or merely updated) to the Gallery and when that same module is Puppetized and published to the Forge.&lt;/p&gt;
-
-&lt;p&gt;We hope to hear from you soon!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="news" /><category term="roadmap" /><category term="powershell" /><category term="dsc" /><category term="windows" /><category term="forge" /><summary type="html">Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!</summary></entry></feed>
+&lt;a href=&quot;https://github.com/adrianiurca&quot;&gt;Adrian Iurca&lt;/a&gt;&lt;/p&gt;</content><author><name>adrianiurca</name></author><category term="docker" /><category term="development" /><category term="bugfix" /><category term="docker" /><category term="personal" /><summary type="html">Docker params change detection</summary></entry></feed>
