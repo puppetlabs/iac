@@ -54,6 +54,12 @@ Some required changes for deploying the Github Actions to all our modules (and t
 
 Another busy and productive Monday. During IAC triage day the team processed 30 community PR’s (20 related to our tooling, and 10 related to our supported modules). On top of this, the team managed to release 3 modules as part of triage day.
 
+## Life of an intern at Puppet
+
+[Disha's][disha-maker] Placement Journey Continues.....
+
+Hard to believe she is in the Week 12 already? Refer to the life of an intern channel [here](life_of_intern) for more interesting information!
+
 ## Community Contributions
 
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
@@ -100,6 +106,8 @@ The following modules were released this week:
 
   [pdk-templates]: https://github.com/puppetlabs/pdk-templates/pull/363
   [puppetlabs-pdk-templates-pr-363]: https://github.com/puppetlabs/pdk-templates/pull/363
+
+  [life_of_intern]: https://puppetlabs.github.io/iac/docs/life_of_intern
 
   [puppetlabs-java_ks]: https://github.com/puppetlabs/puppetlabs-java_ks
   [puppetlabs-reboot]: https://github.com/puppetlabs/puppetlabs-reboot
