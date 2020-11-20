@@ -48,7 +48,7 @@ The puppetlabs-iis porting PR is still waiting to be merged, however we have stu
 
 For next week we will be focusing on improving the provision service and the associated task error handling and stabilization improvement, ironing out any remaining bumps we stumble across as we port more and more modules to use the new CI solution.
 
-Some required changes for deploying the Github Actions to all our modules (and the reporting from the changes) can be seen in [puppetlabs/pdk-templates#363](puppetlabs/pdk-templates#363).
+Some required changes for deploying the Github Actions to all our modules (and the reporting from the changes) can be seen in [puppetlabs/pdk-templates#363](puppetlabs-pdk-templates-pr-363).
 
 ## Triage day
 
@@ -99,11 +99,11 @@ The following modules were released this week:
   [ruby-pwsh]: https://github.com/puppetlabs/ruby-pwsh
 
   [pdk-templates]: https://github.com/puppetlabs/pdk-templates/pull/363
-  [puppetlabs/pdk-templates#363]: https://github.com/puppetlabs/pdk-templates/pull/363
+  [puppetlabs-pdk-templates-pr-363]: https://github.com/puppetlabs/pdk-templates/pull/363
 
   [puppetlabs-java_ks]: https://github.com/puppetlabs/puppetlabs-java_ks
   [puppetlabs-reboot]: https://github.com/puppetlabs/puppetlabs-reboot
-  [puppetlabs-puppet_conf]: 
+  [puppetlabs-puppet_conf]: https://github.com/puppetlabs/puppetlabs-puppet_conf
   [puppetlabs-apache-pr-2091]: https://github.com/puppetlabs/puppetlabs-apache/pull/2091
   [tphoney]: https://github.com/tphoney
   [puppetlabs-docker-pr-672]: https://github.com/puppetlabs/puppetlabs-docker/pull/672
