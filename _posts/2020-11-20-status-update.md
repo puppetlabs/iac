@@ -48,7 +48,7 @@ The puppetlabs-iis porting PR is still waiting to be merged, however we have stu
 
 For next week we will be focusing on improving the provision service and the associated task error handling and stabilization improvement, ironing out any remaining bumps we stumble across as we port more and more modules to use the new CI solution.
 
-Some required changes for deploying the Github Actions to all our modules (and the reporting from the changes) can be seen in [puppetlabs/pdk-templates#363](puppetlabs-pdk-templates-pr-363).
+Some required changes for deploying the Github Actions to all our modules (and the reporting from the changes) can be seen in [puppetlabs/pdk-templates#363][puppetlabs-pdk-templates-pr-363].
 
 ## Triage day
 
