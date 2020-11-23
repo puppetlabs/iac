@@ -56,7 +56,7 @@ Another busy and productive Monday. During IAC triage day the team processed 30 
 
 ## Life of an intern at Puppet
 
-[Disha's][disha-maker] Placement Journey Continues.....
+[Disha's][Disha] Placement Journey Continues.....
 
 Hard to believe she is in the Week 12 already? Refer to the life of an intern channel [here](life_of_intern) for more interesting information!
 
