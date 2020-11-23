@@ -58,7 +58,7 @@ Another busy and productive Monday. During IAC triage day the team processed 30 
 
 [Disha's][Disha] Placement Journey Continues.....
 
-Hard to believe she is in the Week 12 already? Refer to the life of an intern channel [here](life_of_intern) for more interesting information!
+Hard to believe she is in the Week 12 already? Refer to the life of an intern channel [https://puppetlabs.github.io/iac/docs/life_of_intern.html](life_of_intern) for more interesting information!
 
 ## Community Contributions
 
