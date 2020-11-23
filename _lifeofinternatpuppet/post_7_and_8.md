@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Week 7 and Week 8"
+title: "Week 7 & Week 8"
 author: Disha-maker
 categories:
   - IAC Team

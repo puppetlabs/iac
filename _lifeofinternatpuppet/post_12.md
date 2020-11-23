@@ -1,6 +1,6 @@
 ---
 layout: page
-title: “Week 12”
+title: Week 12
 author: Disha-maker
 categories:
   - team
