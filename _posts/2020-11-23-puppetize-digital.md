@@ -12,8 +12,8 @@ tags:
   - videos
 ---
 
-Last week saw [Puppetize Digital 2020](https://digital.puppetize.com/) our annual conference on all things Puppet.
-If you've missed something as it was streamed, over the weekend the production team uploaded all the talks to [the Puppet YouTube channel](https://www.youtube.com/user/PuppetLabsInc/videos).
+Last week saw [Puppetize Digital 2020](https://digital.puppetize.com/), our annual conference on all things Puppet.
+Over the weekend, the production team uploaded all the talks to [the Puppet YouTube channel](https://www.youtube.com/user/PuppetLabsInc/videos), so if you missed anything, you can now catch up at your own leisure.
 There is a [playlist](https://www.youtube.com/playlist?list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW) with all videos, and in this post I'll directly link to my favourites - of course focused on Puppet Content and the IAC team's work.
 
 ## Puppet Pair Programming with Visual Studio Code
@@ -23,7 +23,7 @@ The authors of the plugin, [James Pogran](https://www.linkedin.com/in/jamespogra
 
 {% youtube j3o-U1c_dXs 800 450 %}
 
-Since last week we also provide a default [gitpod](https://gitpod.io) and [codespaces](https://github.com/features/codespaces) environment on our supported modules. So either install the [gitpod browser extension]()
+Since last week we also provide a default [gitpod](https://gitpod.io) and [codespaces](https://github.com/features/codespaces) environment on our supported modules. This way you can try out and use all of that goodness directly from your browser.
 
 ## The new Puppet Developer Experience: it's all about you
 
@@ -39,8 +39,8 @@ Since last week we also provide a default [gitpod](https://gitpod.io) and [codes
 
 As the IAC's headline feature this year, [Michael Lombardi](https://www.linkedin.com/in/michaeltlombardi/) is talking about how we finally fixed the "DSC-update" problem.
 From now on, we can publish up-to-date puppet wrappers of [all DSC module from the gallery](https://www.powershellgallery.com/packages) (select "DSC Resource" in the filters) to the new [DSC namespace on the forge](https://forge.puppet.com/dsc).
-This means that any improvement on upstream DSC resources will become available in a timely manner - and without additional build steps - to all puppet users.
-The way it is built also means that from now on everyone can build their local DSC resources into a puppet module using the [Puppet.Dsc Powershell Module](https://www.powershellgallery.com/packages/Puppet.Dsc).
+This means that any improvement on upstream DSC resources will become available in a timely manner - and without additional build steps - to all Puppet users.
+The way it is designed also means that from this point forward, everyone can build their local DSC resources into a puppet module using the [Puppet.Dsc Powershell Module](https://www.powershellgallery.com/packages/Puppet.Dsc).
 
 
 {% youtube i-eo58NaYKg 800 450 %}
