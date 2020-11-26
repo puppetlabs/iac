@@ -57,7 +57,7 @@ For more information on the changes [see the CHANGELOG.md](https://github.com/pu
 
 ## Cloud CI
 
-This week we managed to fix a couple of stability issues with the Cloud CI provisioning and finish a successful run with 100 windows machines. You can see the results [here](https://github.com/puppetlabs/puppetlabs-testing/actions/runs/383528880).
+This week we managed to fix a couple of stability issues with the Cloud CI provisioning and finish a successful run with 100 Windows machines. You can see the results [here](https://github.com/puppetlabs/puppetlabs-testing/actions/runs/383528880).
 
 We have ported accross a couple more modules this week: [`puppetlabs-stdlib`][puppetlabs-stdlib], [`puppetlabs-registry`][puppetlabs-registry] and [`puppetlabs-package`][puppetlabs-package] but we also encountered another interesting issue with puppetlabs-postgresql that we are currently investigating. 
 
