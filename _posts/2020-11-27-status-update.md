@@ -30,7 +30,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 
 ## New Module / Gem Releases
 
-The following modules were released this week:
+The following modules and gem were released this week:
 
 - [`puppetlabs-apache`][puppetlabs-apache] (`5.7.0`)
 - [`puppetlabs-haproxy`][puppetlabs-haproxy] (`4.4.0`)
