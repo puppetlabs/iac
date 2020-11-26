@@ -7,6 +7,12 @@ categories:
   - litmus
   - status
 tags:
+  - litmus
+  - module updates
+  - gem updates
+  - status
+  - community
+  - cloud ci
 ---
 
 ## Community Contributions
