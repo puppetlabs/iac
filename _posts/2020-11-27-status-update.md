@@ -46,7 +46,7 @@ This week we had another very productive Triage day:
 ## Puppet Litmus
 
 This week we have done two releases of the Puppet Litmus gem we generally use for our acceptance testing. The first release we finished on Monday included a couple of nice fixes:
-- added the possibility to generate a job matrix from the metadata.json of a module for the Github Action workflows we will use with the Cloud CI
+- Added the possibility to generate a job matrix from the metadata.json of a module for the Github Action workflows we will use with the Cloud CI
 - Added a write_file helper 
 - Added the option to fileter testcase execution based on tags
 - Allowing the acceptance tests to be run as a sudo user
