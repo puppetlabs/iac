@@ -4,7 +4,6 @@ title: "2020-11-27: IAC Team Status Update"
 author: carabasdaniel
 categories:
   - team
-  - litmus
   - status
 tags:
   - litmus
@@ -41,12 +40,12 @@ The following modules and gem were released this week:
 - [`puppetlabs-apache`][puppetlabs-apache] (`5.7.0`)
 - [`puppetlabs-haproxy`][puppetlabs-haproxy] (`4.4.0`)
 - [`puppetlabs-ibm_installation_manager`][puppetlabs-ibm_installation_manager] (`2.2.1`)
-- [`puppet_litmus`][puppet-litmus] (`0.20.0`)
+- [`puppet_litmus`][puppet_litmus] (`0.20.0`)
 
 ## Triage day
 
 This week we had another very productive Triage day:
-- 27 community PR processed by the team (2 tooling 24 modules) 
+- 27 community PR processed by the team (2 tooling, 24 modules) 
 - released two modules and Puppet Litmus
 
 ## Puppet Litmus
