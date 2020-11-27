@@ -1,4 +1,68 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-11-27T02:14:46+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Puppetize Digital 2020 - Content Selection</title><link href="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html" rel="alternate" type="text/html" title="Puppetize Digital 2020 - Content Selection" /><published>2020-11-23T00:00:00+00:00</published><updated>2020-11-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital</id><content type="html" xml:base="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html">&lt;p&gt;Last week saw &lt;a href=&quot;https://digital.puppetize.com/&quot;&gt;Puppetize Digital 2020&lt;/a&gt;, our annual conference on all things Puppet.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2020-11-27T14:08:27+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2020-11-27: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/27/status-update.html" rel="alternate" type="text/html" title="2020-11-27: IAC Team Status Update" /><published>2020-11-27T00:00:00+00:00</published><updated>2020-11-27T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/27/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/27/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts/pull/338&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts#338&lt;/code&gt;&lt;/a&gt;: “MODULES-10862 add support for authorized_keys file mode”, thanks to &lt;a href=&quot;https://github.com/simondeziel&quot;&gt;simondeziel&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2089&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2089&lt;/code&gt;&lt;/a&gt;: “Add cas_cookie_path in vhosts”, thanks to &lt;a href=&quot;https://github.com/yakatz&quot;&gt;yakatz&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2081&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2081&lt;/code&gt;&lt;/a&gt;: “Improve SSLVerify options”, thanks to &lt;a href=&quot;https://github.com/bovy89&quot;&gt;bovy89&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/953&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#953&lt;/code&gt;&lt;/a&gt;: “Make auth.conf contents Sensitive”, thanks to &lt;a href=&quot;https://github.com/suchpuppet&quot;&gt;suchpuppet&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/449&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#449&lt;/code&gt;&lt;/a&gt;: “(bugfix) backend: dont log warnings if not necessary”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/447&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#447&lt;/code&gt;&lt;/a&gt;: “Add configuration options for conntrack settings in v1beta1 and v1beta2”, thanks to &lt;a href=&quot;https://github.com/Wiston999&quot;&gt;Wiston999&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/pull/590&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ntp#590&lt;/code&gt;&lt;/a&gt;: “(MAINT) Make mode for logfile configurable”, thanks to &lt;a href=&quot;https://github.com/tmanninger&quot;&gt;tmanninger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1199&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1199&lt;/code&gt;&lt;/a&gt;: “Manage postgresql_conf_path file permissions”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-satellite_pe_tools/pull/139&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-satellite_pe_tools#139&lt;/code&gt;&lt;/a&gt;: “Update satellite.rb”, thanks to &lt;a href=&quot;https://github.com/eppini&quot;&gt;eppini&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1139&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1139&lt;/code&gt;&lt;/a&gt;: “seeded_rand: update funtion to ensure it returns an int not String”, thanks to &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-tomcat/pull/415&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-tomcat#415&lt;/code&gt;&lt;/a&gt;: “Refactor valve types”, thanks to &lt;a href=&quot;https://github.com/h-haaks&quot;&gt;h-haaks&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/926&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#926&lt;/code&gt;&lt;/a&gt;: “(MAINT) Adjust how expected Gemfile.lock is calculated in package tests”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-vanagon/pull/268&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-vanagon#268&lt;/code&gt;&lt;/a&gt;: “(MAINT) Drop Ruby 2.1.9/puppet 4.x from packaging”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/metadata-json-lint/pull/113&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#113&lt;/code&gt;&lt;/a&gt;: “release 3.0.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules and gem were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.7.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.4.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ibm_installation_manager&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ibm_installation_manager&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.2.1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://rubygems.org/gems/puppet_litmus&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.20.0&lt;/code&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;triage-day&quot;&gt;Triage day&lt;/h2&gt;
+
+&lt;p&gt;This week we had another very productive Triage day:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;27 community PR processed by the team (2 tooling, 24 modules)&lt;/li&gt;
+  &lt;li&gt;released two modules and Puppet Litmus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;puppet-litmus&quot;&gt;Puppet Litmus&lt;/h2&gt;
+
+&lt;p&gt;This week we have done two releases of the Puppet Litmus gem we generally use for our acceptance testing. The first release we finished on Monday included a couple of nice fixes:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Added the possibility to generate a job matrix from the metadata.json of a module for the Github Action workflows we will use with the Cloud CI&lt;/li&gt;
+  &lt;li&gt;Added a write_file helper&lt;/li&gt;
+  &lt;li&gt;Added the option to fileter testcase execution based on tags&lt;/li&gt;
+  &lt;li&gt;Allowing the acceptance tests to be run as a sudo user&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The second release was a bug fix that allows litmus to check connectivity after provisioning and remove some of the debugging output.&lt;/p&gt;
+
+&lt;p&gt;For more information on the changes &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/blob/main/CHANGELOG.md&quot;&gt;see the CHANGELOG.md&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-ci&quot;&gt;Cloud CI&lt;/h2&gt;
+
+&lt;p&gt;This week we managed to fix a couple of stability issues with the Cloud CI provisioning and finish a successful run with 100 Windows machines. You can see the results &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-testing/actions/runs/383528880&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;We have ported accross a couple more modules this week: &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-registry&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package&lt;/code&gt;&lt;/a&gt; but we also encountered another interesting issue with puppetlabs-postgresql that we are currently investigating.&lt;/p&gt;
+
+&lt;p&gt;Next week, we will focus a bit on hardening the provision service and start porting over more of the supported modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
+
+&lt;p&gt;That’s it for this week, have a great week-end and stay safe !&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="module updates" /><category term="gem updates" /><category term="status" /><category term="community" /><category term="cloud ci" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">Puppetize Digital 2020 - Content Selection</title><link href="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html" rel="alternate" type="text/html" title="Puppetize Digital 2020 - Content Selection" /><published>2020-11-23T00:00:00+00:00</published><updated>2020-11-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital</id><content type="html" xml:base="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html">&lt;p&gt;Last week saw &lt;a href=&quot;https://digital.puppetize.com/&quot;&gt;Puppetize Digital 2020&lt;/a&gt;, our annual conference on all things Puppet.
 Over the weekend, the production team uploaded all the talks to &lt;a href=&quot;https://www.youtube.com/user/PuppetLabsInc/videos&quot;&gt;the Puppet YouTube channel&lt;/a&gt;, so if you missed anything, you can now catch up at your own leisure.
 There is a &lt;a href=&quot;https://www.youtube.com/playlist?list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&quot;&gt;playlist&lt;/a&gt; with all videos, and in this post I’ll directly link to my favourites - of course focused on Puppet Content and the IAC team’s work.&lt;/p&gt;
 
@@ -580,56 +644,4 @@ This sounds like something to keep an eye on eventually.&lt;/p&gt;
 
 &lt;p&gt;Honeycomb recommends keeping system metrics in a separate dataset from application events.
 During development we currently have very little traffic on the service, so for simplicities sake, we keep everything global and attached to all events.
-We’ll have to revisit this once we get more traffic on the service.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="development" /><category term="gcp" /><category term="honeycomb" /><category term="observability" /><category term="metadata" /><category term="metrics" /><summary type="html">For a new and exciting project, the team is currently onboarding on Google Cloud Platform (GCP) development. I can’t wait until I’m able to share more, but for now I can only say we’re looking at a Sinatra-hosted Ruby API server. To gain a better understanding how the service is performing, we want to collect some “traditional” metrics. Since we’re already using honeycomb for tracing tests and API calls, looking into honeycomb for more was my first choice. Most of the content here is based off the “Getting Started With Honeycomb Metrics” whitepaper at [https://www.honeycomb.io/white-papers/], made specific to Ruby and GCP.</summary></entry><entry><title type="html">2020-10-02: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/10/02/status-update.html" rel="alternate" type="text/html" title="2020-10-02: IAC Team Status Update" /><published>2020-10-02T00:00:00+00:00</published><updated>2020-10-02T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/10/02/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/10/02/status-update.html">&lt;p&gt;Hello everyone!&lt;/p&gt;
-
-&lt;p&gt;The IAC Team had a lot of activity this past week.&lt;/p&gt;
-
-&lt;p&gt;Here’s a brief summary:&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2070&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2070&lt;/code&gt;&lt;/a&gt;: Thanks &lt;a href=&quot;https://github.com/DLeich&quot;&gt;DLeich&lt;/a&gt; for fixing up some non-ASCII characters in the codebase that was causing issues in Onceover.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2069&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2069&lt;/code&gt;&lt;/a&gt;: Thanks &lt;a href=&quot;https://github.com/altmas5&quot;&gt;altmas5&lt;/a&gt; for the typo fixes!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/442&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#442&lt;/code&gt;&lt;/a&gt;: &lt;a href=&quot;https://github.com/pkaroluk&quot;&gt;pkaroluk&lt;/a&gt; put up a fix ensuring that the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;haproxy.cfg&lt;/code&gt; is correctly structured when using the option &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;httpchk&lt;/code&gt; in conjunction with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;http-check&lt;/code&gt; directive. Many thanks!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/443&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#443&lt;/code&gt;&lt;/a&gt;: We can now specifically set the advertise address for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;etcd&lt;/code&gt; now thanks to &lt;a href=&quot;https://github.com/faxm0dem&quot;&gt;faxm0dem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1195&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1195&lt;/code&gt;&lt;/a&gt;: Thank you &lt;a href=&quot;https://github.com/osijan&quot;&gt;osijan&lt;/a&gt; for adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;hostgssenc&lt;/code&gt; as an additional option in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$type&lt;/code&gt; parameter within &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;postgresql::server::pg_hba_rule&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1130&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1130&lt;/code&gt;&lt;/a&gt;: A very useful additional function for parsing HOCON files from &lt;a href=&quot;https://github.com/reidmv&quot;&gt;reidmv&lt;/a&gt; - thanks for the new function!&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1129&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1129&lt;/code&gt;&lt;/a&gt;: Thank you &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt; for the new types added to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Stdlib::Ensure::File&lt;/code&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1128&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1128&lt;/code&gt;&lt;/a&gt;: …and again from &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt; - this is a great addition: we now have types aligned with the IANA port category definitions, for easier comprehension.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2071&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2071&lt;/code&gt;&lt;/a&gt;: Thanks to &lt;a href=&quot;https://github.com/creativefre&quot;&gt;creativefre&lt;/a&gt; for the fix in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;apache::mod::fcgid&lt;/code&gt; to make it compatible on RHEL 8.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.5.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.12.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.8.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10.7.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-package&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.3.0&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;ci-improvements&quot;&gt;CI Improvements&lt;/h2&gt;
-
-&lt;p&gt;As mentioned in the last week’s status update, we are currently under development of a solution that would improve the CI experience both for us as the maintainers of the modules and for everyone else in the community. One of the goals of this activity is to allow you, as the contributors, to see if any code changes affect module functionality across the supported platforms.
-At the moment we depend on Travis and Docker containers to offer you a part of this experience. The solution we are working on will harness the power of different cloud providers to allow acceptance test runs on more platforms with Puppet Litmus.&lt;/p&gt;
-
-&lt;h2 id=&quot;life-of-an-intern-at-puppet&quot;&gt;Life of an intern at Puppet&lt;/h2&gt;
-
-&lt;p&gt;As you all know already, we have our lovely new intern, &lt;a href=&quot;https://github.com/disha-maker&quot;&gt;Disha&lt;/a&gt; who is sharing her experience with the team on the &lt;a href=&quot;/iac/docs/life_of_intern.html&quot;&gt;Life of an intern at Puppet&lt;/a&gt; page. Please follow her blog to keep up to date with her activity here.&lt;/p&gt;
-
-&lt;h2 id=&quot;everyonecancontribute-podcast&quot;&gt;#everyonecancontribute podcast&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/DavidS&quot;&gt;DavidS&lt;/a&gt; participated in the &lt;a href=&quot;https://everyonecancontribute.com/&quot;&gt;#everyonecancontribute&lt;/a&gt; podcast (&lt;a href=&quot;https://www.youtube.com/watch?v=6c0Vfn8BIM4&quot;&gt;recording&lt;/a&gt; on Wednesday where we (amongst other things) tried out the &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;gitlab&lt;/a&gt; integration of &lt;a href=&quot;https://www.gitpod.io/&quot;&gt;gitpod.io&lt;/a&gt;, which provides a fully online hosted VSCode instance to code in any browser.
-A lot of things just work out of the box, and we even got some of the &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;Puppet VSCode extension&lt;/a&gt; to work.
-Find the full writeup by &lt;a href=&quot;https://github.com/dnsmichi&quot;&gt;@dnsmichi&lt;/a&gt;’s writeup &lt;a href=&quot;https://everyonecancontribute.com/post/2020-09-30-kaeffchen-20-gitpod/&quot;&gt;online&lt;/a&gt;.&lt;/p&gt;
-&lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
-
-&lt;p&gt;That’s it for this weeks update, have a great weekend everyone!&lt;/p&gt;
-
-&lt;p&gt;Thank you for all your contributions and support!&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="apache" /><category term="haproxy" /><category term="kubernetes" /><category term="docker" /><category term="stdlib" /><category term="postgresql" /><category term="mysql" /><category term="package" /><category term="ci" /><summary type="html">Hello everyone!</summary></entry></feed>
+We’ll have to revisit this once we get more traffic on the service.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="development" /><category term="gcp" /><category term="honeycomb" /><category term="observability" /><category term="metadata" /><category term="metrics" /><summary type="html">For a new and exciting project, the team is currently onboarding on Google Cloud Platform (GCP) development. I can’t wait until I’m able to share more, but for now I can only say we’re looking at a Sinatra-hosted Ruby API server. To gain a better understanding how the service is performing, we want to collect some “traditional” metrics. Since we’re already using honeycomb for tracing tests and API calls, looking into honeycomb for more was my first choice. Most of the content here is based off the “Getting Started With Honeycomb Metrics” whitepaper at [https://www.honeycomb.io/white-papers/], made specific to Ruby and GCP.</summary></entry></feed>
