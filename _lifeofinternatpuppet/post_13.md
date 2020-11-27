@@ -25,12 +25,12 @@ The testing for this module has been parked for now
 Thanks Paula for the useful session!
 - litmus testing on IAC Modules (related to the release of the new CI - Google Cloud Platform)
   Some of the modules tested to date included:-
-  - puppetlabs-apt [link here](https://github.com/puppetlabs/puppetlabs-apt)
-  - puppetlabs-motd [link here](https://github.com/puppetlabs/puppetlabs-motd)
-  - puppetlabs-accounts [link here](https://github.com/puppetlabs/puppetlabs-accounts)
-  - puppetlabs-java [link here](https://github.com/puppetlabs/puppetlabs-java)
-  - puppetlabs-inifile [link here](https://github.com/puppetlabs/puppetlabs-inifile)
-  - puppetlabs-ntp [link here](https://github.com/Disha-maker/puppetlabs-ntp)
+  - [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt)
+  - [puppetlabs-motd](https://github.com/puppetlabs/puppetlabs-motd)
+  - [puppetlabs-accounts](https://github.com/puppetlabs/puppetlabs-accounts)
+  - [puppetlabs-java](https://github.com/puppetlabs/puppetlabs-java)
+  - [puppetlabs-inifile](https://github.com/puppetlabs/puppetlabs-inifile)
+  - [puppetlabs-ntp](https://github.com/puppetlabs/puppetlabs-ntp)
 
 This task will be continued in the coming weeks!
 
