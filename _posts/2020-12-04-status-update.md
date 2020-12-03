@@ -33,7 +33,6 @@ The following modules were released this week:
 - [`puppetlabs-kubernetes`][puppetlabs-kubernetes] (`5.4.0`)
 - [`puppetlabs-device_manager`][puppetlabs-device_manager] (`3.1.0`)
 
-
 ## Triage day
 
 Even if half of the team was on PTO, we got through all the supported modules repos and most of all our tooling processing, so we managed to review and merge 11 PRs and we released 4 modules. 
