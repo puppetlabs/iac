@@ -35,7 +35,7 @@ The following modules were released this week:
 
 ## Triage day
 
-Even if half of the team was on PTO, we got through all the supported modules repos and most of all our tooling processing, so we managed to review and merge 11 PRs and we released 4 modules. 
+Even if half of the team was on PTO, we got through all the supported modules repos and most of all our tooling processing, so we managed to review and merge 11 PRs as well as releasing 4 modules. 
 
 ## CI and special Wednesday
 
