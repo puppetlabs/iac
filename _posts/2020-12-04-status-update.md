@@ -6,9 +6,9 @@ categories:
   - team
   - status
 tags:
--community
--ci cloud
--module releases
+- community
+- ci cloud
+- module releases
 ---
 
 ## Community Contributions
