@@ -39,7 +39,7 @@ Even if half of the team was on PTO, we got through all the supported modules re
 
 ## CI and special Wednesday
 
-We aplied again the principle "Team work, dream work" and together we ported successfully 22 modules onto the CI. Many thanks to the entire team for the hard work! Check out the new look of our modules: https://github.com/puppetlabs/puppetlabs-chocolatey/pull/235/checks
+Again, we applied the principle "Team work, dream work" and together we successfully ported 22 modules onto the Cloud CI. Many thanks to the entire team for the hard work! Check out the new look of our module test runs: [`puppetlabs-chocolatey#235`](https://github.com/puppetlabs/puppetlabs-chocolatey/pull/235/checks)
 
 ## Happy 3 months for Disha! 
 
