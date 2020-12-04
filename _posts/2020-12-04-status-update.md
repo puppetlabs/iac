@@ -43,7 +43,7 @@ Again, we applied the principle "Team work, dream work" and together we successf
 
 ## Happy 3 months for Disha! 
 
-It's been 3 months since Disha joined the team and she started her journey in our team. If you want to know more about her work and last updates, you can always check [here](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_14.html) her blog.
+It's been 3 months since Disha joined the team and she started her journey in our team. If you want to know more about her work and last updates, you can always check her blog [here](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_14.html).
 
 #### Wrap-up
 
