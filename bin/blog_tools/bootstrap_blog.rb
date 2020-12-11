@@ -1,3 +1,5 @@
+#!/usr/bin/env ruby
+
 raise 'Please define Github token as env var GITHUB_TOKEN' unless ENV['GITHUB_TOKEN']
 
 require 'erb'
