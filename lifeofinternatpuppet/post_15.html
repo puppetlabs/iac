@@ -3,19 +3,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
-<title>puppetlabs-powershell | Puppet IAC Team</title>
+<title>Week 15 | Puppet IAC Team</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="puppetlabs-powershell" />
+<meta property="og:title" content="Week 15" />
+<meta name="author" content="Disha-maker" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Adds a new exec provider for executing PowerShell commands." />
-<meta property="og:description" content="Adds a new exec provider for executing PowerShell commands." />
-<link rel="canonical" href="https://puppetlabs.github.io/iac/modules/puppetlabs-powershell.html" />
-<meta property="og:url" content="https://puppetlabs.github.io/iac/modules/puppetlabs-powershell.html" />
+<meta name="description" content="Hello everyone," />
+<meta property="og:description" content="Hello everyone," />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_15.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_15.html" />
 <meta property="og:site_name" content="Puppet IAC Team" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-12-11T11:57:46+00:00" />
 <script type="application/ld+json">
-{"dateModified":"2020-12-11T11:57:46+00:00","datePublished":"2020-12-11T11:57:46+00:00","description":"Adds a new exec provider for executing PowerShell commands.","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/modules/puppetlabs-powershell.html"},"@type":"BlogPosting","url":"https://puppetlabs.github.io/iac/modules/puppetlabs-powershell.html","headline":"puppetlabs-powershell","@context":"https://schema.org"}</script>
+{"dateModified":"2020-12-11T11:57:46+00:00","datePublished":"2020-12-11T11:57:46+00:00","description":"Hello everyone,","author":{"@type":"Person","name":"Disha-maker"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_15.html"},"@type":"BlogPosting","url":"https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_15.html","headline":"Week 15","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" /></head>
 <body><header class="site-header" role="banner">
@@ -38,46 +39,43 @@
         <article class="post">
 
   <header class="post-header">
-    <h1 class="post-title">puppetlabs-powershell</h1>
+    <h1 class="post-title">Week 15</h1>
   </header>
 
   <div class="post-content">
-    <h1></h1>
-<h2>Summary</h2>
+    <p>Hello everyone,</p>
 
-<p>Adds a new exec provider for executing PowerShell commands.</p>
+<p>What a busy time of the year as we wrap up for Christmas?</p>
 
+<p>Important Highlights from this week:-</p>
 <ul>
-  
-  <li>
-    <a href="https://github.com/puppetlabs/puppetlabs-powershell">Github Repo</a>
-    <img alt="License" src="https://img.shields.io/github/license/puppetlabs/puppetlabs-powershell">
-    <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/puppetlabs/puppetlabs-powershell?logo=github"/>
-    <a href="https://github.com/puppetlabs/puppetlabs-powershell/pulls"><img alt="GitHub PRs" src="https://img.shields.io/github/issues-pr/puppetlabs/puppetlabs-powershell?logo=github">
-    <img alt="GitHub PRs closed" src="https://img.shields.io/github/issues-pr-closed/puppetlabs/puppetlabs-powershell?logo=github"></a>
-    <img alt="Travis" src="https://img.shields.io/travis/puppetlabs/puppetlabs-powershell?logo=travis">
-    
-    <img alt="Appveyor" src="https://img.shields.io/appveyor/build/puppetlabs/puppetlabs-powershell?logo=appveyor" />
-    <img alt="GitHub Actions" src="https://img.shields.io/github/workflow/status/puppetlabs/puppetlabs-powershell/nightly?logo=github"/>
-    <img alt="Codecov" src="https://img.shields.io/codecov/c/gh/puppetlabs/puppetlabs-powershell?logo=codecov&token=ef8ebfa9632b46799eb523869ffa6cd5">
-    
+  <li>I continued working on running Litmus Acceptance Tests locally for the IAC modules before shifting them on the new Google Cloud CI.
+The modules tested this week are given below:-
+    <ul>
+      <li><a href="https://github.com/puppetlabs/puppetlabs-vcsrepo">puppetlabs-vcsrepo</a></li>
+      <li><a href="https://github.com/puppetlabs/puppetlabs-exec">puppetlabs-exec</a></li>
+      <li><a href="https://github.com/puppetlabs/puppetlabs-facter_task">puppetlabs-facter_task</a></li>
+    </ul>
   </li>
-  
-  
-  
-  <li>
-    <a href="https://forge.puppet.com/puppetlabs/powershell">Puppet Forge</a>
-    <img alt="Puppet Forge version" src="https://img.shields.io/puppetforge/v/puppetlabs/powershell">
-    <img alt="PDK version" src="https://img.shields.io/puppetforge/pdk-version/puppetlabs/powershell">
-    <img alt="Puppet Forge downloads" src="https://img.shields.io/puppetforge/dt/puppetlabs/powershell">
-    <img alt="Puppet Forge endorsement" src="https://img.shields.io/puppetforge/e/puppetlabs/powershell">
+  <li>Thank you to <a href="https://github.com/sheenaajay">Sheena</a> for doing such an enjoyable session on module release prep and module release.
+The modules covered during the session were:-
+    <ul>
+      <li><a href="https://github.com/puppetlabs/puppetlabs-registry">puppetlabs-registry</a> - (3.2.0)</li>
+      <li><a href="https://github.com/puppetlabs/puppetlabs-apt">puppetlabs-apt</a> - (7.7.0)</li>
+    </ul>
   </li>
-  
-  
+  <li>Thanks to <a href="https://github.com/daianamezdrea">Daiana</a> and <a href="https://github.com/pmcmaw">Paula</a> for giving me the following PR’s for review and merge
+    <ul>
+      <li>PDK update for GA workflows</li>
+      <li>PDK update for GA workflow</li>
+      <li>Delete i18n header</li>
+    </ul>
+  </li>
+  <li>Thank you <a href="https://github.com/sanfrancrisko">Ciaran</a> for giving me the opportunity to do my 1st version release on the <a href="https://github.com/puppetlabs/puppetlabs-chocolatey">puppetlabs-chocolately</a> - (5.2.0) module.</li>
 </ul>
 
-
-
+<p>Have a great weekend everyone!
+See you next week with more exciting updates!</p>
 
   </div>
 
