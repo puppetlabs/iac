@@ -22,8 +22,8 @@ The modules tested this week are given below:-
 
 - Thank you to [Sheena](https://github.com/sheenaajay) for doing such an enjoyable session on module release prep and module release.
 The modules covered during the session were:-
-    -[puppetlabs-registry](https://github.com/puppetlabs/puppetlabs-registry) - (3.2.0)
-    -[puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt) - (7.7.0)
+    - [puppetlabs-registry](https://github.com/puppetlabs/puppetlabs-registry) - (3.2.0)
+    - [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt) - (7.7.0)
 
 - Thanks to [Daiana](https://github.com/daianamezdrea) and [Paula](https://github.com/pmcmaw)for giving me the following PR's for review and merge
     - PDK update for GA workflows[https://github.com/puppetlabs/puppetlabs-helm/pull/134]
