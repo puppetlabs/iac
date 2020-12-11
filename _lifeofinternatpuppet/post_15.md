@@ -20,7 +20,7 @@ The modules tested this week are given below:-
     -[puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec)
     -[puppetlabs-facter_task](https://github.com/puppetlabs/puppetlabs-facter_task)
 
-- Thank you to [Sheena](https://github.com/sheenaajay)for doing such an enjoyable session on module release prep and module release.
+- Thank you to [Sheena](https://github.com/sheenaajay) for doing such an enjoyable session on module release prep and module release.
 The modules covered during the session were:-
     -[puppetlabs-registry](https://github.com/puppetlabs/puppetlabs-registry) - (3.2.0)
     -[puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt) - (7.7.0)
