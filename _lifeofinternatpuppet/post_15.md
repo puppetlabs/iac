@@ -16,9 +16,9 @@ What a busy time of the year as we wrap up for Christmas?
 Important Highlights from this week:-
 - I continued working on running Litmus Acceptance Tests locally for the IAC modules before shifting them on the new Google Cloud CI.
 The modules tested this week are given below:-
-    -[puppetlabs-vcsrepo](https://github.com/puppetlabs/puppetlabs-vcsrepo)
-    -[puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec)
-    -[puppetlabs-facter_task](https://github.com/puppetlabs/puppetlabs-facter_task)
+    - [puppetlabs-vcsrepo](https://github.com/puppetlabs/puppetlabs-vcsrepo)
+    - [puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec)
+    - [puppetlabs-facter_task](https://github.com/puppetlabs/puppetlabs-facter_task)
 
 - Thank you to [Sheena](https://github.com/sheenaajay) for doing such an enjoyable session on module release prep and module release.
 The modules covered during the session were:-
