@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>DSC + Puppet: Arrived! | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="DSC + Puppet: Arrived!" />
 <meta name="author" content="michaeltlombardi" />
 <meta property="og:locale" content="en_US" />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-09-21T00:00:00+00:00" />
 <script type="application/ld+json">
-{"dateModified":"2020-09-21T00:00:00+00:00","datePublished":"2020-09-21T00:00:00+00:00","description":"Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!","author":{"@type":"Person","name":"michaeltlombardi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html"},"@type":"BlogPosting","url":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html","headline":"DSC + Puppet: Arrived!","@context":"https://schema.org"}</script>
+{"description":"Earlier this year, we announced an upcoming project to drastically improve the story for using DSC Resources with Puppet. Today, we’re announcing the general availability of that project!","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"michaeltlombardi"},"url":"https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html","headline":"DSC + Puppet: Arrived!","dateModified":"2020-09-21T00:00:00+00:00","datePublished":"2020-09-21T00:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
     <!-- Google Analytics -->
@@ -73,10 +73,10 @@ furthermore, an initial batch of <strong>twenty-six</strong> PowerShell modules 
 
 <p>If you just want to get your hands on the PowerShell module to read the help and experiment on your own, you can install it like any other PowerShell module:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
-</span><span class="nf">Import-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
-</span><span class="nf">Get-Command</span><span class="w"> </span><span class="nt">-Module</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
-</span><span class="nf">Get-Help</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-ShowWindow</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Install-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="n">Import-Module</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="n">Get-Command</span><span class="w"> </span><span class="nt">-Module</span><span class="w"> </span><span class="nx">Puppet.Dsc</span><span class="w">
+</span><span class="n">Get-Help</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="nx">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-ShowWindow</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Some of the functions from the PowerShell module rely on the <a href="https://puppet.com/docs/pdk/1.x/pdk.html">Puppet Development Kit (PDK)</a> being installed;
@@ -101,7 +101,7 @@ You can do this with a single command:</p>
 <div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># If you run this command without the PassThru flag it returns nothing to the output stream.</span><span class="w">
 </span><span class="c"># Any conversion errors will be in the error stream, as usual.</span><span class="w">
 </span><span class="c"># If you'd like a deeper look at what it's doing, try running it with the Verbose flag.</span><span class="w">
-</span><span class="nf">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-PowerShellModuleName</span><span class="w"> </span><span class="nx">ComputerManagementDsc</span><span class="w"> </span><span class="nt">-PassThru</span><span class="w">
+</span><span class="n">New-PuppetDscModule</span><span class="w"> </span><span class="nt">-PowerShellModuleName</span><span class="w"> </span><span class="nx">ComputerManagementDsc</span><span class="w"> </span><span class="nt">-PassThru</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Unfortunately, the output from running it isn’t all that exciting:</p>

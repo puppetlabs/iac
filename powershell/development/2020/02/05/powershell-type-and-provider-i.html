@@ -4,7 +4,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
 <title>Developing a PowerShell-Dependent Puppet Type &amp; Provider | Puppet IAC Team</title>
-<meta name="generator" content="Jekyll v4.1.1" />
+<meta name="generator" content="Jekyll v4.2.0" />
 <meta property="og:title" content="Developing a PowerShell-Dependent Puppet Type &amp; Provider" />
 <meta name="author" content="michaeltlombardi" />
 <meta property="og:locale" content="en_US" />
@@ -16,7 +16,7 @@
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-02-05T00:00:00+00:00" />
 <script type="application/ld+json">
-{"dateModified":"2020-02-05T00:00:00+00:00","datePublished":"2020-02-05T00:00:00+00:00","description":"Part One: Basic Functionality","author":{"@type":"Person","name":"michaeltlombardi"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html"},"@type":"BlogPosting","url":"https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html","headline":"Developing a PowerShell-Dependent Puppet Type &amp; Provider","@context":"https://schema.org"}</script>
+{"description":"Part One: Basic Functionality","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html"},"@type":"BlogPosting","author":{"@type":"Person","name":"michaeltlombardi"},"url":"https://puppetlabs.github.io/iac/powershell/development/2020/02/05/powershell-type-and-provider-i.html","headline":"Developing a PowerShell-Dependent Puppet Type &amp; Provider","dateModified":"2020-02-05T00:00:00+00:00","datePublished":"2020-02-05T00:00:00+00:00","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
     <!-- Google Analytics -->
@@ -270,8 +270,8 @@ class Puppet::Provider::SmbShare::SmbShare < Puppet::ResourceApi::SimpleProvider
 
 <p>The information we need to retrieve about our shares was defined in our type file; right now, we need the name of the share, the path to the share, and whether or not it exists. To find out this information though, we’re going to need to do a little PowerShell:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Get-SMBShare</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">Stop</span><span class="w"> </span><span class="o">|</span><span class="w">
-  </span><span class="nf">Select-Object</span><span class="w"> </span><span class="nt">-Property</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Path</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Get-SMBShare</span><span class="w"> </span><span class="nt">-ErrorAction</span><span class="w"> </span><span class="nx">Stop</span><span class="w"> </span><span class="o">|</span><span class="w">
+  </span><span class="n">Select-Object</span><span class="w"> </span><span class="nt">-Property</span><span class="w"> </span><span class="nx">Name</span><span class="p">,</span><span class="w"> </span><span class="nx">Path</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Which in Ruby, using the PowerShell manager, would be:</p>
@@ -316,7 +316,7 @@ This lets us decouple the properties to select from the command itself and will 
 <p>We’re also using a helper method (<code class="language-plaintext highlighter-rouge">custom_powershell_property</code>) from the PowerShell gem to create a PowerShell hash representing a custom object property.
 In this case, it will be:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ensure'</span><span class="err">;</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="err">{</span><span class="s2">"present"</span><span class="p">}}</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'ensure'</span><span class="p">;</span><span class="w"> </span><span class="nx">Expression</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="s2">"present"</span><span class="p">}}</span><span class="w">
 </span></code></pre></div></div>
 
 <p>It’s important to note that the string passed as the expression is <em>exactly</em> what will be placed in the expression script block;
@@ -377,7 +377,7 @@ We’re also specifying the modulepath to a special folder in our repository;
 This was created in the set up stage when you ran <code class="language-plaintext highlighter-rouge">pdk bundle exec rake spec_prep</code></p>
 </blockquote>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
 
 <p>That should give you back information that looks like this:</p>
@@ -427,7 +427,7 @@ In PowerShell, this is loosely analogous to doing something like:</p>
 <p>In the command array we can rely on another utility from the PowerShell gem: <code class="language-plaintext highlighter-rouge">format_powershell_value</code> will convert a Ruby object into an appropriate PowerShell representation.
 In this case, arguments is a hash and so will be represented as something like:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">KeyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'value'</span><span class="err">;</span><span class="w"> </span><span class="nx">NextKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">1</span><span class="p">}</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">@{</span><span class="nx">KeyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'value'</span><span class="p">;</span><span class="w"> </span><span class="nx">NextKey</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w">
 </span></code></pre></div></div>
 
 <p>We then rely on the hash table we stored in <code class="language-plaintext highlighter-rouge">$Arguments</code> to enable us to do some <a href="https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_splatting?view=powershell-7">splatting</a>.
@@ -488,7 +488,7 @@ Create a new file, <code class="language-plaintext highlighter-rouge">examples/b
 
 <p>And then we’ll run a command <em>with administrative privileges</em> (needed to create the SMB share) to execute this manifest:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
 
 <p>Which should produce output like this:</p>
@@ -506,7 +506,7 @@ Notice: Applied catalog in 9.22 seconds
 <p>Awesome! We’ve created an SMB share!
 We can even verify this by rerunning the <code class="language-plaintext highlighter-rouge">puppet resource</code> command from earlier:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdk (INFO): Using Ruby 2.5.7
@@ -534,7 +534,7 @@ smb_share { 'basic_example':
 <p>Now, let’s figure out how to remove an SMB share.
 Luckily, removing a share in PowerShell is straightforward:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">Remove-SmbShare</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s1">'name of the share'</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Remove-SmbShare</span><span class="w"> </span><span class="nt">-Name</span><span class="w"> </span><span class="s1">'name of the share'</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
 </span></code></pre></div></div>
 
 <p>So we can write this in ruby leveraging the PowerShell manager:</p>
@@ -557,7 +557,7 @@ Luckily, removing a share in PowerShell is straightforward:</p>
 We can use <code class="language-plaintext highlighter-rouge">puppet resource</code> to change the property of a managed resource–in this case, we want to use <code class="language-plaintext highlighter-rouge">ensure=absent</code> to remove the SMB share.
 Remember, this needs to be run <em>with</em> administrative privileges.</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nx">basic_example</span><span class="w"> </span><span class="nx">ensure</span><span class="o">=</span><span class="nf">absent</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">resource</span><span class="w"> </span><span class="nx">smb_share</span><span class="w"> </span><span class="nx">basic_example</span><span class="w"> </span><span class="nx">ensure</span><span class="o">=</span><span class="n">absent</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules</span><span class="w">
 </span></code></pre></div></div>
 
 <div class="language-text highlighter-rouge"><div class="highlight"><pre class="highlight"><code>pdk (INFO): Using Ruby 2.5.7
@@ -573,7 +573,7 @@ smb_share { 'basic_example':
 <p>You should see a notification that the share has been removed.
 Go ahead and rerun the manifest to recreate the share and prepare for our next step:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
 
 <h3 id="updating-a-share">Updating a Share</h3>
@@ -607,7 +607,7 @@ Go ahead and rerun the manifest to recreate the share and prepare for our next s
 
 <p>And then rerun the manifest:</p>
 
-<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pdk</span><span class="w"> </span><span class="nx">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/basic.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules/</span><span class="w">
 </span></code></pre></div></div>
 
 <p>You should see a line like this in your Puppet output:</p>
