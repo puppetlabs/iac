@@ -3,6 +3,9 @@ layout: post
 title: "2020-12-18: IAC Team Status Update"
 author: sheenaajay
 categories:
+  - team
+  - status
+tags:
   - community
   - releases
   - dsc
@@ -11,18 +14,15 @@ categories:
   - puppet-module-gem
   - rubocop
   - infrastructure
-  - team
-  - status
-tags:
 ---
 
 ## Christmas edition
 Puppet is getting ready for the Virtual Chirstmas Party.
 Santa, Food, Drinks, Sweets, Gaming, Charades and many more.
 
-The holiday season upon us, the IAC team would like to wish all of Puppets opensource community Happy Holidays and thank everyone for their contributions through the very challenging year of 2020.
-The IAC team will be taking a well-earned break to recharge the batteries.
-We look forward to the continued open-source communities help and contributions in 2021.
+The holiday season upon us, the IAC team would like to wish all of Puppet's Open Source Community Happy Holidays and thank everyone for their contributions through the very challenging year of 2020.
+The IAC team will be taking a well-earned break to recharge the batteries, and we hope you can too.
+We look forward to the continued open source communities help and contributions in 2021.
 
 ![Christmas]({% link /assets/2020-12-18-status-update/christmas.jpg %})
 
@@ -104,7 +104,7 @@ We will continue to improve the service and the reporting early next year.
 
 ## DSC
 
-DSC we are gathering momentum. Approximately 51 new DSC modules on the Forge. With every new module, we learn more and harden the solution.
+DSC is gathering momentum. We're now up to 51 [new DSC modules](https://forge.puppet.com/dsc) on the Forge. With every new module, we learn more and harden the solution.
 
 ## Inappropriate Terminology
 
