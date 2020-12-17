@@ -43,5 +43,7 @@ Some of the key highlights included:-
     -[puppetlabs-pdk-templates](https://github.com/puppetlabs/pdk-templates/pull/376)
     -[puppetlabs-scheduled_task](https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/172)
     (https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/176)
+    
+ - Local Litmus Testing of modules was continued this week too! 
 
 I also raised a [PR](https://github.com/puppetlabs/puppetlabs-modules/pull/10183) to be added to the user groups for doing local testing for the complicated modules such as [puppetlabs-websphere](https://github.com/puppetlabs/puppetlabs-websphere_application_server)
