@@ -17,14 +17,14 @@ This has been the busiest week of my placement so far, before the team wraps up 
 
 Some of the key highlights included:-
 
-- Module Release Prep
+1. Module Release Prep
   - [puppetlabs-motd](https://tickets.puppetlabs.com/browse/IAC-1308) - (v4.3.0)
   - [puppetlabs-tomcat](https://tickets.puppetlabs.com/browse/IAC-1330)
     (https://github.com/puppetlabs/puppetlabs-tomcat/pull/426) - (v4.3.0)
   - [puppetlabs-tagmail](https://tickets.puppetlabs.com/browse/IAC-1349)
     (https://github.com/puppetlabs/puppetlabs-tagmail/pull/196)
 
-- Module Releases
+2. Module Releases
     -[puppetlabs-accounts](https://tickets.puppetlabs.com/browse/IAC-1320)
     (https://github.com/puppetlabs/puppetlabs-accounts) - (v6.4.0)
     -[puppetlabs-concat](https://tickets.puppetlabs.com/browse/IAC-1318) - (v6.4.0)
@@ -34,7 +34,7 @@ Some of the key highlights included:-
     (https://tickets.puppetlabs.com/browse/IAC-1323)
     (v3.13.0)
 
-- PR's Merged
+3. PR's Merged
     -[puppetlabs-docker](https://github.com/puppetlabs/puppetlabs-docker/pull/696)
     (https://github.com/puppetlabs/puppetlabs-docker/pull/697)
     (https://github.com/puppetlabs/puppetlabs-docker/pull/698)
@@ -44,6 +44,6 @@ Some of the key highlights included:-
     -[puppetlabs-scheduled_task](https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/172)
     (https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/176)
     
- - Local Litmus Testing of modules was continued this week too! 
+ 4. Local Litmus Testing of modules was continued this week too! 
 
 I also raised a [PR](https://github.com/puppetlabs/puppetlabs-modules/pull/10183) to be added to the user groups for doing local testing for the complicated modules such as [puppetlabs-websphere](https://github.com/puppetlabs/puppetlabs-websphere_application_server)
