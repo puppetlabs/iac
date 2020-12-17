@@ -21,7 +21,7 @@ Puppet is getting ready for the Virtual Chirstmas Party.
 Santa, Food, Drinks, Sweets, Gaming, Charades and many more.
 
 The holiday season upon us, the IAC team would like to wish all of Puppet's Open Source Community Happy Holidays and thank everyone for their contributions through the very challenging year of 2020.
-The IAC team will be taking a well-earned break to recharge the batteries, and we hope you can too.
+The IAC team will be taking a well earned break to recharge the batteries, and we hope you can too.
 We look forward to the continued open source communities help and contributions in 2021.
 
 ![Christmas]({% link /assets/2020-12-18-status-update/christmas.jpg %})
