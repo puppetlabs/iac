@@ -18,11 +18,9 @@ This has been the busiest week of my placement so far, before the team wraps up 
 Some of the key highlights included:-
 
 **Module Release Prep**
-- [puppetlabs-motd (IAC-1308)](https://tickets.puppetlabs.com/browse/IAC-1308) (v4.3.0)
+- [puppetlabs-motd (IAC-1308)](https://tickets.puppetlabs.com/browse/IAC-1308)
 - [puppetlabs-tomcat (IAC-1330)](https://tickets.puppetlabs.com/browse/IAC-1330)
-- [puppetlabs-tomcat (PR #426)](https://github.com/puppetlabs/puppetlabs-tomcat/pull/426) (v4.3.0)
 - [puppetlabs-tagmail (IAC-1349)](https://tickets.puppetlabs.com/browse/IAC-1349)
-- [puppetlabs-tagmail (PR #196)](https://github.com/puppetlabs/puppetlabs-tagmail/pull/196)
 
 **Module Releases**
 -[puppetlabs/accounts](https://forge.puppet.com/puppetlabs/accounts) (v6.4.0)
