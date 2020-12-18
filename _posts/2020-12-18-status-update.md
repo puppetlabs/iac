@@ -66,7 +66,7 @@ The following modules were released this week:
 - [puppetlabs/ntp](https://forge.puppet.com/puppetlabs/ntp) (v8.5.0)
 - [puppetlabs/puppet_conf](https://forge.puppet.com/puppetlabs/puppet_conf) (v0.8.0)
 - [puppetlabs/pwshlib](https://forge.puppet.com/puppetlabs/pwshlib) (v0.6.3)
-- [puppetlabs/scheduled_task](https://forge.puppet.com/puppetlabs/scheduled_task) (v2.3.0)
+- [puppetlabs/scheduled_task](https://forge.puppet.com/puppetlabs/scheduled_task) (v2.3.1)
 - [puppetlabs/service](https://forge.puppet.com/puppetlabs/service) (v1.4.0)
 - [puppetlabs/tomcat](https://forge.puppet.com/puppetlabs/tomcat) (v4.3.0)
 
@@ -88,8 +88,8 @@ Last week we contributed a few changes ([#19](https://github.com/kvrhdn/gha-buil
 With those changes merged, we're one step closer to our goal.
 
 ## Customer bugs
-One new ticket has been raised against scheduled_task [MODULES-10893](https://tickets.puppetlabs.com/browse/MODULES-10893), Big thank you to [Bill][Bill] for helping the team out and putting up a [PR](https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/175) for this issue.
-Once and IAC team member always and IAC team member cheers [Bill][Bill].
+One new ticket has been raised against scheduled_task [MODULES-10893](https://tickets.puppetlabs.com/browse/MODULES-10893), Big thank you to [Bill][Bill] for helping the team out and putting up a [PR](https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/175) for this issue. Thanks [Ciaran][Ciaran] for the quick review, merge and release of the module.
+Once an IAC team member will always be an IAC team member cheers [Bill][Bill].
 
 ## Tales from the Intern
 
