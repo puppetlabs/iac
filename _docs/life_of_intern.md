@@ -33,6 +33,7 @@ I am Disha Kareer, originally from India but living in UK from last 15 years, lo
 I started off my academics with Knockbreda High School.
 This is where I completed my GCSE's and then decided to study for my A-Levels in Newtownbreda High School.
 I am very hardworking, diligent and caring individual who always had a keen interest in the field of Computing and IT.
+
 I developed a strong interest in this career path since the age of 10.
 
 This was because I always enjoyed developing and designing things
@@ -46,7 +47,6 @@ Now, I am sure you must have understood how I landed in Puppet for my placement 
 Well, I must say going to university was surely a life changing experience because I met and still meeting new people even today, I really enjoyed my second year, but hated the global pandemic!
 
 I spent the summer of 2019 thoroughly researching for IT companies who would be interested in placement students.
-
 Don't ask me how many companies I contacted! Why? As, I completely forgot the number :)
 
 After so many interviews, assessment days, applications and attending placement fairs, I finally landed into Puppet for my interview!
@@ -102,3 +102,5 @@ Finally, feel free to share your thoughts and comments on my blog pages :)
 [Week 15](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_15.html)
 
 [Week 16](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_16.html)
+
+[Week 17](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_17.html)
