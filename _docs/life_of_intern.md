@@ -20,7 +20,9 @@ tags:
 
 Hello Everyone!
 
-Welcome to my Blog Page **"Life of an Intern at Puppet"**
+Welcome to my Blog Page
+
+**"Life of an Intern at Puppet"**
 
 I am sure you cannot wait to hear about all the exciting things Puppet offers for their interns!!
 
@@ -31,10 +33,13 @@ I am Disha Kareer, originally from India but living in UK from last 15 years, lo
 I started off my academics with Knockbreda High School.
 This is where I completed my GCSE's and then decided to study for my A-Levels in Newtownbreda High School.
 I am very hardworking, diligent and caring individual who always had a keen interest in the field of Computing and IT.
+
 I developed a strong interest in this career path since the age of 10.
+
 This was because I always enjoyed developing and designing things
 
 I started my Higher National Diploma (HND) in Computing and Systems Development and passed the course with amazing results.
+
 I began my university journey in September 2019 to study BSc Computing and Information Technology with a Year of Professional Experience as a direct entry second year student, because I had completed a two year HND Diploma with Belfast Metropolitian College, Millfield Campus.
 
 Now, I am sure you must have understood how I landed in Puppet for my placement year, no?
