@@ -70,10 +70,11 @@ Please swing by our [office hours on Monday](https://puppet.com/community/office
 
 The following modules were released this week:
 
+- [`puppetlabs-mysql`][puppetlabs-mysql] (`10.9.1`)
 - [`puppetlabs-scheduled_task`][puppetlabs-scheduled_task] (`2.3.1`)
 - [`puppetlabs-tagmail`][puppetlabs-tagmail] (`3.5.0`)
-- [`puppetlabs-mysql`][puppetlabs-mysql] (`10.9.1`)
 
+  [puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
   [puppetlabs-scheduled_task]: https://github.com/puppetlabs/puppetlabs-scheduled_task
   [puppetlabs-tagmail]: https://github.com/puppetlabs/puppetlabs-tagmail/
   [provision-pr-152]: https://github.com/puppetlabs/provision/pull/152
@@ -118,5 +119,5 @@ The following modules were released this week:
   [Paula]:              https://github.com/pmcmaw
   [Sheena]:             https://github.com/sheenaajay
   [Supported Modules]:  https://puppetlabs.github.io/iac/modules/
-  [Tools]:              https://puppetlabs.github.io/iac/tools/
   [TP]:                 https://github.com/tphoney
+  [Tools]:              https://puppetlabs.github.io/iac/tools/
