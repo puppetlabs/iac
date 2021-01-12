@@ -40,7 +40,7 @@ Do not proceed to the next step without doing this.
 
 ### Using scripts with pdksync
 
-Sometimes you will want to make many changes in each module. below is a simple bash script to execute 3 commands in each module
+Sometimes you will want to make many changes in each module. Below is a simple bash script to execute 3 commands in each module
 
 `bundle exec rake 'pdksync:run_a_command[cp ../../yamlbthere.rb .]'`
 `bundle exec rake 'pdksync:run_a_command[ruby yamlbthere.rb Gemfile]'`
@@ -106,4 +106,3 @@ https://github.com/puppetlabs/pdksync
 https://github.com/puppetlabs/iac/blob/main/_posts/2020-02-12-gem-testing-with-pdksync.md 
 
 https://github.com/puppetlabs/iac/blob/main/_docs/demos.md 
-
