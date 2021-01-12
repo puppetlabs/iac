@@ -29,14 +29,14 @@ Do not proceed to the next step without doing this.
 ![pdksync - flowchart](pdksyncFlowchart.jpg)
 
 ### Using pdksync for mass updates
-
-`bundle exec rake git:clone_managed_modules`
-
-`bundle exec rake 'pdksync:run_a_command[touch dog]'`
-
-`bundle exec rake 'git:create_commit[removeboltgem, (maint) Remove bolt gem from sync.yaml file]'`
-
-`bundle exec rake 'git:push_and_create_pr[(MODULES-xxxx) Remove bolt gem from the modules]'`
+- Clone the modules into your local repo 
+  - `bundle exec rake git:clone_managed_modules`
+- Make changes to the local repo 
+  - `bundle exec rake 'pdksync:run_a_command[touch dog]'`
+- Commit your changes 
+  - `bundle exec rake 'git:create_commit[removeboltgem, (maint) Remove bolt gem from sync.yaml file]'`
+- Push and create your PR with the required labels 
+  - `bundle exec rake 'git:push_and_create_pr['(MODULES-xxxx) Remove bolt gem from the modules', 'maintenance']'`
 
 ### Using scripts with pdksync
 
@@ -52,7 +52,6 @@ Imagine the script below running against every module.
 
 ```
 require 'yaml'
-require 'pry'
 gems_to_remove = ["      - gem: beaker.*version: '~> 3.13'.*from_env: BEAKER_VERSION.",
                   "      - gem: beaker-abs.*version: '~> 0.1'.*from_env: BEAKER_ABS_VERSION.",
                   "      - gem: beaker-abs.*from_env: BEAKER_ABS_VERSION.*version: '~> 0.1'.",
