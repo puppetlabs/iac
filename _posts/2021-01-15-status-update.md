@@ -35,6 +35,11 @@ We're not going to lie - there's a lot to get through - we appreciate your patie
 
 There may be some that we will need to close due to long inactivity, however, please feel free to reengage with us over the next few weeks if you're pinged by JIRA activity on the ticket - we'll be very happy to work with anyone who has a contribution / suggested contributed that is beneficial to the wider Community.
 
+## Puppet Camp: Call for Papers (March, April)
+
+Puppet just announced on Thursday the CFPs for the two virtual Puppet Camps in March and April are now live.
+Please feel free to spread the word and of course, if you are interested in submitting a paper, full details [here](https://puppet.com/blog/puppet-camp-call-for-papers-now-open-for-march-and-april/)
+
 ## Cloud CI Update
 
 The Cloud CI provisioning service is nearing it's first v1.0.0 release.
