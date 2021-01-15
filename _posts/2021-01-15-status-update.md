@@ -44,7 +44,7 @@ Please feel free to spread the word and of course, if you are interested in subm
 
 The Cloud CI provisioning service is nearing it's first v1.0.0 release.
 We have begun to tidy up a couple of loose ends for the initial version.
-Although we have over 35 of the IAC supported modules using the service, some of our more complex modules are still not ported.
+We now have 35 of 47 the IAC supported [modules](https://puppetlabs.github.io/iac/modules/) using the service, only the most complex modules are still not ported, and will require more investment in supporting their additional needs.
 The future will bring a couple of improvement that will allow us to port a couple more modules (multi-node testing) and ease the module release process(automated module release preparation).
 
 
