@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>PDKSYNC | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="PDKSYNC" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="PDKSYNC" />
+<meta property="og:description" content="PDKSYNC" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/docs/pdksync.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/docs/pdksync.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-15T12:21:28+00:00" />
+<script type="application/ld+json">
+{"headline":"PDKSYNC","description":"PDKSYNC","datePublished":"2021-01-15T12:21:28+00:00","dateModified":"2021-01-15T12:21:28+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/docs/pdksync.html"},"url":"https://puppetlabs.github.io/iac/docs/pdksync.html","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">PDKSYNC</h1>
+  </header>
+
+  <div class="post-content">
+    <h2 id="pdksync">PDKSYNC</h2>
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Pdksync is an efficient way to run a pdk update command against the various Puppet module repositories that you manage — keeping them up-to-date with the changes made to PDK. 
+The tool checks out a module, runs the most recent version of pdk update then proceeds to create the PR for you with the changes. 
+This is the automated tool for ensuring modules can quickly adopt changes introduced by updates to the PDK and PDK template.</p>
+
+<p>Pdksync by default expects that your Puppet module repositories live on GitHub and will behave accordingly. It also supports GitLab as an alternative Git hosting platform.</p>
+
+<h3 id="step-by-step-guide">Step-by-step guide</h3>
+
+<p>Running the tool itself is quite simple and can be called from a rake task.</p>
+
+<ul>
+  <li>Download a fork of the repo, which can be found [here][https://github.com/puppetlabs/pdksync]. 
+Or you can install via Rubygems, it can be found [here][https://rubygems.org/gems/pdksync].</li>
+  <li>Install gems by using <code class="language-plaintext highlighter-rouge">bundle install</code>.</li>
+  <li>Ensure you have a GITHUB_TOKEN or GITLAB_TOKEN set in your env, if you don’t add it by running <code class="language-plaintext highlighter-rouge">export GITHUB_TOKEN=&lt;your github token&gt;</code> or <code class="language-plaintext highlighter-rouge">export GITLAB_TOKEN=&lt;access_token&gt;</code> , this is required for authentication.</li>
+  <li>Important - Manually edit the list contained in ‘managed_modules.yml’ to ensure it is correct with the modules you wish to update. 
+Please note this is critical as this tool will create PRs against the repos included in this list - you don’t want to run this against a module you aren’t familiar with. 
+Do not proceed to the next step without doing this.</li>
+  <li>Run the rake task by using <code class="language-plaintext highlighter-rouge">bundle exec rake pdksync</code>.</li>
+</ul>
+
+<p><img src="pdksyncFlowchart.jpg" alt="pdksync - flowchart" /></p>
+
+<h3 id="using-pdksync-for-mass-updates">Using pdksync for mass updates</h3>
+<ul>
+  <li>Clone the modules into your local repo
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">bundle exec rake git:clone_managed_modules</code></li>
+    </ul>
+  </li>
+  <li>Make changes to the local repo
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">bundle exec rake 'pdksync:run_a_command[touch dog]'</code></li>
+    </ul>
+  </li>
+  <li>Commit your changes
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">bundle exec rake 'git:create_commit[removeboltgem, (maint) Remove bolt gem from sync.yaml file]'</code></li>
+    </ul>
+  </li>
+  <li>Push and create your PR with the required labels
+    <ul>
+      <li><code class="language-plaintext highlighter-rouge">bundle exec rake 'git:push_and_create_pr['(MODULES-xxxx) Remove bolt gem from the modules', 'maintenance']'</code></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="using-scripts-with-pdksync">Using scripts with pdksync</h3>
+
+<p>Sometimes you will want to make many changes in each module. Below is a simple bash script to execute 3 commands in each module</p>
+
+<p><code class="language-plaintext highlighter-rouge">bundle exec rake 'pdksync:run_a_command[cp ../../yamlbthere.rb .]'</code>
+<code class="language-plaintext highlighter-rouge">bundle exec rake 'pdksync:run_a_command[ruby yamlbthere.rb Gemfile]'</code>
+<code class="language-plaintext highlighter-rouge">bundle exec rake 'pdksync:run_a_command[rm -f yamlbthere.rb]'</code></p>
+
+<p>Executing ruby scripts is even more powerful.</p>
+
+<p>Imagine the script below running against every module.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require 'yaml'
+gems_to_remove = ["      - gem: beaker.*version: '~&gt; 3.13'.*from_env: BEAKER_VERSION.",
+                  "      - gem: beaker-abs.*version: '~&gt; 0.1'.*from_env: BEAKER_ABS_VERSION.",
+                  "      - gem: beaker-abs.*from_env: BEAKER_ABS_VERSION.*version: '~&gt; 0.1'.",
+                  '      - gem: beaker-pe.',
+                  "      - gem: beaker-hostgenerator.*version: '&gt;= 0.0'.*from_env: BEAKER_HOSTGENERATOR_VERSION.",
+                  '      - gem: beaker-hostgenerator.*from_env: BEAKER_HOSTGENERATOR_VERSION.',
+                  "      - gem: beaker-rspec.*version: '&gt;= 0.0'.*from_env: BEAKER_RSPEC_VERSION.",
+                  '      - gem: beaker-rspec.*from_env: BEAKER_RSPEC_VERSION.']
+
+file = File.open('.sync.yml')
+contents = file.readlines.join
+gems_to_remove.each do |regex|
+  contents = contents.gsub(%r{#{regex}}m, '')
+end
+File.open('.sync.yml', 'w') { |f| f.write contents.to_s }`
+</code></pre></div></div>
+
+<h3 id="releasing-pdksync">Releasing PDKSync</h3>
+
+<p>PDKSync is a Gem the IAC team maintains, therefore the IAC team is currently responsible for releasing PDKSync as it goes through updates.</p>
+
+<p>The following steps should be followed for this process to go smooth:</p>
+
+<ul>
+  <li>Check the repo out locally and install your gems using bundler.</li>
+  <li>Check out a new branch.</li>
+  <li>Set your Changelog environment variable like so:
+<code class="language-plaintext highlighter-rouge">export GITHUB_TOKEN=*YOUR KEY HERE*</code></li>
+  <li>Update the ‘future_release’ property in the Rakefile to the next release version, [like so][https://github.com/puppetlabs/pdksync/pull/80/files#diff-52c976fc38ed2b4e3b1192f8a8e24cff]. Do the same with the version in the [gemspec][https://github.com/puppetlabs/pdksync/pull/80/files#diff-03cf58fcfb54553e44c06aecc5886429ae05dba24144b2c10e1cc8111ba1ba1fL6].</li>
+  <li>Run the Changelog generator rake task:
+<code class="language-plaintext highlighter-rouge">bundle exec rake changelog</code></li>
+  <li>Add all the files and push your work. <em>NOTE</em> Push your branch to upstream, travis requires this to be able to authenticate to run tests. The command should be similar to:
+<code class="language-plaintext highlighter-rouge">git push upstream myreleaseprep</code></li>
+  <li>Open your PR as normal, it should look very similar to this: https://github.com/puppetlabs/pdksync/pull/80/files</li>
+  <li>Get your PR merged after it goes green.</li>
+  <li>Build your Gem:
+<code class="language-plaintext highlighter-rouge">gem build &lt;gemspec&gt;</code>
+<code class="language-plaintext highlighter-rouge">bundle exec gem build pdksync.gemspec</code></li>
+  <li>Publish your gem (You’ll need to make sure you have a ruby gems account)
+<code class="language-plaintext highlighter-rouge">gem push &lt;.gem file&gt;</code>
+<code class="language-plaintext highlighter-rouge">bundle exec gem push pdksyncs-0.5.0.gem</code></li>
+  <li>Tag the Release and push it upstream
+<code class="language-plaintext highlighter-rouge">git tag -a -m "0.5.0" 0.5.0 0abbc85e409ce3065bf073387a31adfba38b1bb2</code>
+<code class="language-plaintext highlighter-rouge">git push upstream --tags</code></li>
+</ul>
+
+<p>Sit back and relax, you’ve released PDKSync!</p>
+
+<h3 id="references">References</h3>
+
+<p>https://github.com/puppetlabs/pdksync</p>
+
+<p>https://github.com/puppetlabs/iac/blob/main/_posts/2020-02-12-gem-testing-with-pdksync.md</p>
+
+<p>https://github.com/puppetlabs/iac/blob/main/_docs/demos.md</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
