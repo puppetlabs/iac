@@ -62,6 +62,11 @@ We are now 82% complete:
 - 1 in progress
 - 18 remaining
 
+## Introduction to PDKSync
+
+[Sheena][Sheena] has written a great blog post this week giving an [overview of PDKSync]({% link _docs/pdksync.md %}), an invaluable tool that we use a lot on the team!
+Definitely worth checking out, especially if you have many module repositories you want to bulk update.
+
 ## Networking Module Support
 
 We are closing out the PoC of an enhancement to the [Cisco IOS](https://github.com/puppetlabs/cisco_ios) module.
