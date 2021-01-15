@@ -56,7 +56,7 @@ We're hard at work on documentation and guidance for troubleshooting these autog
 
 ## Inappropriate Terminology Removal
 
-[DavidSwan][DavidSwan] has been diligently continuing with the effort to remove inappropriate terminology from our code repos.
+[David Swan][DavidSwan] has been diligently continuing with the effort to remove inappropriate terminology from our code repos.
 We are now 82% complete:
 - 41 modules resolved
 - 1 in progress
