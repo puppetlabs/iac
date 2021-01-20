@@ -71,3 +71,23 @@ If you ever find yourself in this position please don't hesitate to reach out to
 - All supported modules have an examples directory with example manifests
 - If your struggling to write a manifest check out our tests in spec/acceptance
 - We have a some demos uploaded on youtube!
+
+## Other team contacts
+
+# Security Team
+
+For security critical information use <security@puppet.com>. 
+
+*Your alert will be handled by our security specialists and routed to the right team. See also the [security page](https://puppet.com/security/) on puppet.com.*
+
+# Bolt Team
+
+Use the issues tab [on the repo](https://github.com/puppetlabs/bolt/issues).
+
+# Puppet Agent Team
+
+<team-nw@puppet.com>
+
+# Forge Team
+
+<forge@puppet.com>
