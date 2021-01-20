@@ -1,4 +1,66 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-19T16:07:34+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-15: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html" rel="alternate" type="text/html" title="2021-01-15: IAC Team Status Update" /><published>2021-01-15T00:00:00+00:00</published><updated>2021-01-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html">&lt;p&gt;Hello! Hope 2021 is panning out well for you all!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-20T03:12:52+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-20: Reaching the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html" rel="alternate" type="text/html" title="2021-01-20: Reaching the IAC Team" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/hello.png&quot; alt=&quot;hello&quot; height=&quot;170px&quot; width=&quot;170px&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To improve collaboration and avoid issues falling through the cracks, we have collected information on all the ways to get in contact with us. Whether this be to review a PR, highlight a nasty bug or really for any other reason, let us know what we did well, and what we need to do better.&lt;/p&gt;
+
+&lt;h2 id=&quot;monday-is-community-day-&quot;&gt;Monday is Community Day &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/calendar.png&quot; alt=&quot;slack&quot; height=&quot;30px&quot; width=&quot;30px&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;Yes, that’s right! The whole team dedicates a full day to you every week. Every Monday we go over pull requests, releases, new issues and anything else module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;reaching-out-via-slack-&quot;&gt;Reaching out via Slack &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/slack.png&quot; alt=&quot;slack&quot; height=&quot;45px&quot; width=&quot;45px&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;As part of Community Monday, we have weekly office hours on Monday 1.00pm and 5.00pm GMT alternating each week. Check the &lt;a href=&quot;https://puppet.com/community/office-hours&quot;&gt;calendar&lt;/a&gt; for the events in your timezone. Join #office-hours on our &lt;a href=&quot;https://puppetcommunity.slack.com&quot;&gt;community-slack&lt;/a&gt;. Between these hours the IAC team will be online and can chat about anything module related and much more!&lt;/p&gt;
+
+&lt;p&gt;Outside the office hours, some of us hang out in #forge-modules and #testing on our &lt;a href=&quot;https://puppetcommunity.slack.com&quot;&gt;community-slack&lt;/a&gt;. Even if nobody from the team is around, other community members might be able to help.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Use the &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/sos.gif&quot; alt=&quot;sos&quot; height=&quot;50px&quot; width=&quot;50px&quot; /&gt;
+ emoji on urgent issues that require the attention of a puppet employee.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;reaching-out-via-jira-&quot;&gt;Reaching out via Jira &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/bug.png&quot; alt=&quot;bug&quot; height=&quot;40px&quot; width=&quot;40px&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;When you come across an issue with one of our supported modules and want to raise an issue, in order for to it to come directly to us there are a few things we would doing first.&lt;/p&gt;
+
+&lt;p&gt;1) Confirm this issue hasn’t already been raised by using the JIRA search function&lt;/p&gt;
+
+&lt;p&gt;2) If the repository has issues enabled, use this instead of JIRA&lt;/p&gt;
+
+&lt;p&gt;Once the above has been confirmed, it is recommended that you complete the following settings in the ticket. This will ensure that our team sees the ticket pretty quick.&lt;/p&gt;
+
+&lt;p&gt;The values we would recommend setting are:&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Project:&lt;/code&gt; This will always need set to &lt;strong&gt;‘Modules’&lt;/strong&gt; if you want it to land with our team.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Issue Type:&lt;/code&gt; In most cases you will be raising bugs against our supported modules however you can choose the description that best suits your problem.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Summary:&lt;/code&gt; Just a quick simple summary of the topic you are looking to highlight to us.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Component:&lt;/code&gt; This is used to tag the module afffected and ensure the correct person sees your issue.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Description:&lt;/code&gt; This is one of the most important sections, add in here as much details as you possibly can, this should include:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;1) Description of the issue you are seeing
+2) Steps to Reproduce
+3) Expected Results
+4) Actual Results
+5) Logs/Screenshots/Sample Manifests
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;For more information on writing a good bug report check out this page on &lt;a href=&quot;https://rubygarage.org/blog/how-to-write-a-quality-bug-report&quot;&gt;RubyGarage&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Environment:&lt;/code&gt; What OS did did you see it on? Which puppet version is affected? What is the module version? You can even include more information like the Ruby version. Again the more information you include here, the higher likelihood of us being able to reproduce and speed up our turnaround.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Acceptance Criteria:&lt;/code&gt; What exactly do you want to be able to achieve with the issue being resolved?&lt;/p&gt;
+
+&lt;h2 id=&quot;some-things-just-cant-wait-&quot;&gt;Some things just can’t wait &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/clock.png&quot; alt=&quot;clock&quot; height=&quot;40px&quot; width=&quot;40px&quot; /&gt;&lt;/h2&gt;
+
+&lt;p&gt;If you ever find yourself in this position please don’t hesitate to reach out to our team using email and we will do our best to help you out. Our team alias is: ia_content@puppet.com&lt;/p&gt;
+
+&lt;h2 id=&quot;useful-tips-&quot;&gt;Useful Tips &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/magic.png&quot; alt=&quot;magic&quot; height=&quot;40px&quot; width=&quot;40px&quot; /&gt;&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;All supported modules have an examples directory with example manifests&lt;/li&gt;
+  &lt;li&gt;If your struggling to write a manifest check out our tests in spec/acceptance&lt;/li&gt;
+  &lt;li&gt;We have a some demos uploaded on youtube!&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>pmcmaw</name></author><category term="team" /><category term="community" /><category term="reviews" /><category term="modules" /><category term="windows" /><category term="communication" /><summary type="html"></summary></entry><entry><title type="html">2021-01-15: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html" rel="alternate" type="text/html" title="2021-01-15: IAC Team Status Update" /><published>2021-01-15T00:00:00+00:00</published><updated>2021-01-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html">&lt;p&gt;Hello! Hope 2021 is panning out well for you all!
 Here is this week’s update from the IAC Team:&lt;/p&gt;
 
 &lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
@@ -712,68 +774,4 @@ Currently there are still some issues we are facing on the &lt;a href=&quot;http
     &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.3.1&lt;/code&gt;)&lt;/p&gt;
 
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html">As always, interesting weeks for the IAC team means a slew of updates for everyone else!</summary></entry><entry><title type="html">2020-11-06: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html" rel="alternate" type="text/html" title="2020-11-06: IAC Team Status Update" /><published>2020-11-06T00:00:00+00:00</published><updated>2020-11-06T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/06/status-update.html">&lt;p&gt;It was an interesting week for IAC team and we have exciting news for you.&lt;/p&gt;
-
-&lt;h2 id=&quot;puppet-7--ruby-27-certification&quot;&gt;Puppet 7 / Ruby 2.7 Certification&lt;/h2&gt;
-
-&lt;p&gt;We are now entering the final stages of our Puppet 7 testing. With the Puppet 7 release imminent, and our Cloud CI project nearing completion, we are hoping to have Puppet 7 acceptance tests rolled out on it very soon. Before that, we are working to get unit tests running on TravisCI with Ruby 2.7.&lt;/p&gt;
-
-&lt;h2 id=&quot;outreach&quot;&gt;Outreach&lt;/h2&gt;
-
-&lt;p&gt;In the &lt;a href=&quot;https://everyonecancontribute.com/post/2020-11-04-kaeffchen-24-puppet-insights/&quot;&gt;24th “everyonecancontribute” Kaeffchen (german)&lt;/a&gt; with &lt;a href=&quot;https://twitter.com/dnsmichi&quot;&gt;dnsmichi&lt;/a&gt;, David Schmitt talks about the up and coming puppet 7 features and our new security and compliance focused products.&lt;/p&gt;
-
-&lt;h2 id=&quot;dishas-10th-week-pto-and-first-ticket-completed&quot;&gt;Disha’s 10th Week: PTO and First Ticket Completed&lt;/h2&gt;
-
-&lt;p&gt;A message from our intern:&lt;/p&gt;
-&lt;blockquote&gt;
-  &lt;p&gt;Hi all,
-This week I haven’t got a lot to say…. I got my first PTO in Puppet at the start of the week from Monday to Wednesday.
-I returned to work on Thursday morning and started doing litmus acceptance testing on the tomcat module which was the first ticket assigned to me before going on PTO. I am delighted to have it completed!
-I would also like to say thanks to my mentor Ciaran for a 1:1 session on how to do effective debugging of errors. Thanks Ciaran for such a useful session.
-That’s all for this week.
-Have a good weekend everyone!&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI update&lt;/h2&gt;
-
-&lt;p&gt;As we move closer to ironing out some of the bugs we have set our targets on a couple of windows modules for the initial porting to use Cloud resources in their acceptance testing.
-We have started with setting up a &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-acl/pull/211&quot;&gt;PR for puppetlabs-acl&lt;/a&gt; and as soon as we are happy with the workflow puppetlabs-iis and registry will follow.
-For a quick glance at a demo on how this setup will help in the future please take a look at “The new Puppet Developer Experience: it’s all about you” presented at the &lt;a href=&quot;https://digital.puppetize.com&quot;&gt;Puppetize Digital 2020&lt;/a&gt; event by Ben Ford.&lt;/p&gt;
-
-&lt;h2 id=&quot;thanks-to-james-pogran&quot;&gt;Thanks to James Pogran&lt;/h2&gt;
-
-&lt;p&gt;Many thanks to &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; from the Bolt team for helping us to resolve failing tests on &lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-concat&quot;&gt;puppetlabs-concat&lt;/a&gt; module.&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/provision/pull/112&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;provision#112&lt;/code&gt;&lt;/a&gt;: “docker: support podman; improve handling of OS distribution/version for non-litmusimage images”, thanks to &lt;a href=&quot;https://github.com/reenberg&quot;&gt;reenberg&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2077&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2077&lt;/code&gt;&lt;/a&gt;: “Add missing tests for RHEL 8”, thanks to &lt;a href=&quot;https://github.com/yakatz&quot;&gt;yakatz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2072&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2072&lt;/code&gt;&lt;/a&gt;: “Add ssl_proxy_machine_cert_chain param to vhost class”, thanks to &lt;a href=&quot;https://github.com/AbelNavarro&quot;&gt;AbelNavarro&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/673&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#673&lt;/code&gt;&lt;/a&gt;: “Ensure image digest checksum before starting”, thanks to &lt;a href=&quot;https://github.com/tmanninger&quot;&gt;tmanninger&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1328&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1328&lt;/code&gt;&lt;/a&gt;: “Add compatibility for Amazon Linux 2”, thanks to &lt;a href=&quot;https://github.com/greno2&quot;&gt;greno2&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1323&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1323&lt;/code&gt;&lt;/a&gt;: “Fix package for python bindings on Ubuntu 20.04”, thanks to &lt;a href=&quot;https://github.com/tobias-urdin&quot;&gt;tobias-urdin&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1202&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1202&lt;/code&gt;&lt;/a&gt;: “Set default PostgreSQL version for Fedora 33”, thanks to &lt;a href=&quot;https://github.com/blackknight36&quot;&gt;blackknight36&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1135&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1135&lt;/code&gt;&lt;/a&gt;: “Allow start/end checks on empty strings”, thanks to &lt;a href=&quot;https://github.com/jvrsantacruz&quot;&gt;jvrsantacruz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/356&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#356&lt;/code&gt;&lt;/a&gt;: “(#353) Add an empty, commented .sync.yml”, thanks to &lt;a href=&quot;https://github.com/silug&quot;&gt;silug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-module-gems/pull/144&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-module-gems#144&lt;/code&gt;&lt;/a&gt;: “Update puppet-debugger gem to 1.0 for ruby 2.4+”, thanks to &lt;a href=&quot;https://github.com/logicminds&quot;&gt;logicminds&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-strings/pull/261&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-strings#261&lt;/code&gt;&lt;/a&gt;: “fix minor typo”, thanks to &lt;a href=&quot;https://github.com/baldurmen&quot;&gt;baldurmen&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/binford2k&quot;&gt;binford2k&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/933&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#933&lt;/code&gt;&lt;/a&gt;: “Move most CI to GH actions”, thanks to &lt;a href=&quot;https://github.com/rodjek&quot;&gt;rodjek&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/932&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#932&lt;/code&gt;&lt;/a&gt;: “Correctly lex non-keyword type tokens in interpolation”, thanks to &lt;a href=&quot;https://github.com/rodjek&quot;&gt;rodjek&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/919&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#919&lt;/code&gt;&lt;/a&gt;: “Improve Rake task”, thanks to &lt;a href=&quot;https://github.com/raphink&quot;&gt;raphink&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/rodjek&quot;&gt;rodjek&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/814&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#814&lt;/code&gt;&lt;/a&gt;: “(MAINT) Release prep for 2.8.0 release”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/813&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#813&lt;/code&gt;&lt;/a&gt;: “Add high-level TOC links to README”, thanks to &lt;a href=&quot;https://github.com/op-ct&quot;&gt;op-ct&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;10.8.0&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>adrianiurca</name></author><category term="team" /><category term="status" /><category term="mysql" /><category term="cloud-ci" /><category term="puppet7" /><category term="apache" /><category term="docker" /><category term="postgresql" /><category term="stdlib" /><category term="provision" /><category term="rspec-puppet" /><category term="lint" /><category term="strings" /><category term="pdk-templates" /><category term="puppet-module-gems" /><category term="puppetize" /><summary type="html">It was an interesting week for IAC team and we have exciting news for you.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html">As always, interesting weeks for the IAC team means a slew of updates for everyone else!</summary></entry></feed>
