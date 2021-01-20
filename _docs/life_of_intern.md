@@ -20,7 +20,9 @@ tags:
 
 Hello Everyone!
 
-Welcome to my Blog Page **"Life of an Intern at Puppet"**
+Welcome to my Blog Page
+
+**"Life of an Intern at Puppet"**
 
 I am sure you cannot wait to hear about all the exciting things Puppet offers for their interns!!
 
