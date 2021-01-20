@@ -46,7 +46,7 @@ The values we would recommend setting are:
 
   ```Summary:``` Just a quick simple summary of the topic you are looking to highlight to us.
 
-  ```Component:``` This is used to tag the module afffected and ensure the correct person sees your issue.
+  ```Component:``` This is used to tag the module affected and ensure the correct person sees your issue.
 
   ```Description:``` This is one of the most important sections, add in here as much details as you possibly can, this should include:
 
@@ -64,10 +64,30 @@ The values we would recommend setting are:
 
 ## Some things just can't wait ![clock]({% link /assets/2021-01-20-reaching-out/clock.png %}){:height="40px" width="40px"}
 
-If you ever find yourself in this position please don't hesitate to reach out to our team using email and we will do our best to help you out. Our team alias is: ia_content@puppet.com
+If you ever find yourself in this position please don't hesitate to reach out to our team using email and we will do our best to help you out. Our team alias is: <ia_content@puppet.com>.
 
 ## Useful Tips ![magic]({% link /assets/2021-01-20-reaching-out/magic.png %}){:height="40px" width="40px"}
 
 - All supported modules have an examples directory with example manifests
-- If your struggling to write a manifest check out our tests in spec/acceptance
-- We have a some demos uploaded on youtube!
+- If your struggling to write a manifest check out our tests in `spec/acceptance`
+- We have a some demos uploaded on [youtube](https://www.youtube.com/user/PuppetLabsInc)!
+
+## Other team contacts
+
+### Security Team
+
+For security critical information use <security@puppet.com>.
+
+*Your alert will be handled by our security specialists and routed to the right team. See also the [security page](https://puppet.com/security/) on puppet.com.*
+
+### Bolt Team
+
+Use the issues tab [on the repo](https://github.com/puppetlabs/bolt/issues).
+
+### Puppet Agent Team
+
+<team-nw@puppet.com>
+
+### Forge Team
+
+<forge@puppet.com>
