@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-20T03:12:52+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-20: Reaching the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html" rel="alternate" type="text/html" title="2021-01-20: Reaching the IAC Team" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/hello.png&quot; alt=&quot;hello&quot; height=&quot;170px&quot; width=&quot;170px&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-20T11:53:42+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-20: Reaching the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html" rel="alternate" type="text/html" title="2021-01-20: Reaching the IAC Team" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/hello.png&quot; alt=&quot;hello&quot; height=&quot;170px&quot; width=&quot;170px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To improve collaboration and avoid issues falling through the cracks, we have collected information on all the ways to get in contact with us. Whether this be to review a PR, highlight a nasty bug or really for any other reason, let us know what we did well, and what we need to do better.&lt;/p&gt;
 
@@ -33,7 +33,7 @@
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Summary:&lt;/code&gt; Just a quick simple summary of the topic you are looking to highlight to us.&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Component:&lt;/code&gt; This is used to tag the module afffected and ensure the correct person sees your issue.&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Component:&lt;/code&gt; This is used to tag the module affected and ensure the correct person sees your issue.&lt;/p&gt;
 
 &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Description:&lt;/code&gt; This is one of the most important sections, add in here as much details as you possibly can, this should include:&lt;/p&gt;
 
@@ -52,15 +52,35 @@
 
 &lt;h2 id=&quot;some-things-just-cant-wait-&quot;&gt;Some things just can’t wait &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/clock.png&quot; alt=&quot;clock&quot; height=&quot;40px&quot; width=&quot;40px&quot; /&gt;&lt;/h2&gt;
 
-&lt;p&gt;If you ever find yourself in this position please don’t hesitate to reach out to our team using email and we will do our best to help you out. Our team alias is: ia_content@puppet.com&lt;/p&gt;
+&lt;p&gt;If you ever find yourself in this position please don’t hesitate to reach out to our team using email and we will do our best to help you out. Our team alias is: &lt;a href=&quot;mailto:ia_content@puppet.com&quot;&gt;ia_content@puppet.com&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h2 id=&quot;useful-tips-&quot;&gt;Useful Tips &lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/magic.png&quot; alt=&quot;magic&quot; height=&quot;40px&quot; width=&quot;40px&quot; /&gt;&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;All supported modules have an examples directory with example manifests&lt;/li&gt;
-  &lt;li&gt;If your struggling to write a manifest check out our tests in spec/acceptance&lt;/li&gt;
-  &lt;li&gt;We have a some demos uploaded on youtube!&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>pmcmaw</name></author><category term="team" /><category term="community" /><category term="reviews" /><category term="modules" /><category term="windows" /><category term="communication" /><summary type="html"></summary></entry><entry><title type="html">2021-01-15: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html" rel="alternate" type="text/html" title="2021-01-15: IAC Team Status Update" /><published>2021-01-15T00:00:00+00:00</published><updated>2021-01-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html">&lt;p&gt;Hello! Hope 2021 is panning out well for you all!
+  &lt;li&gt;If your struggling to write a manifest check out our tests in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;spec/acceptance&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;We have a some demos uploaded on &lt;a href=&quot;https://www.youtube.com/user/PuppetLabsInc&quot;&gt;youtube&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other-team-contacts&quot;&gt;Other team contacts&lt;/h2&gt;
+
+&lt;h3 id=&quot;security-team&quot;&gt;Security Team&lt;/h3&gt;
+
+&lt;p&gt;For security critical information use &lt;a href=&quot;mailto:security@puppet.com&quot;&gt;security@puppet.com&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Your alert will be handled by our security specialists and routed to the right team. See also the &lt;a href=&quot;https://puppet.com/security/&quot;&gt;security page&lt;/a&gt; on puppet.com.&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;bolt-team&quot;&gt;Bolt Team&lt;/h3&gt;
+
+&lt;p&gt;Use the issues tab &lt;a href=&quot;https://github.com/puppetlabs/bolt/issues&quot;&gt;on the repo&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h3 id=&quot;puppet-agent-team&quot;&gt;Puppet Agent Team&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;mailto:team-nw@puppet.com&quot;&gt;team-nw@puppet.com&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;forge-team&quot;&gt;Forge Team&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&quot;mailto:forge@puppet.com&quot;&gt;forge@puppet.com&lt;/a&gt;&lt;/p&gt;</content><author><name>pmcmaw</name></author><category term="team" /><category term="community" /><category term="reviews" /><category term="modules" /><category term="windows" /><category term="communication" /><summary type="html"></summary></entry><entry><title type="html">2021-01-15: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html" rel="alternate" type="text/html" title="2021-01-15: IAC Team Status Update" /><published>2021-01-15T00:00:00+00:00</published><updated>2021-01-15T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/15/status-update.html">&lt;p&gt;Hello! Hope 2021 is panning out well for you all!
 Here is this week’s update from the IAC Team:&lt;/p&gt;
 
 &lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
