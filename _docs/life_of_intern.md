@@ -37,6 +37,14 @@ I developed a strong interest in this career path since the age of 10.
 This was because I always enjoyed developing and designing things
 
 I started my Higher National Diploma (HND) in Computing and Systems Development and passed the course with amazing results.
+=======
+
+I developed a strong interest in this career path since the age of 10.
+
+This was because I always enjoyed developing and designing things
+
+I started my Higher National Diploma (HND) in Computing and Systems Development and passed the course with amazing results.
+
 I began my university journey in September 2019 to study BSc Computing and Information Technology with a Year of Professional Experience as a direct entry second year student, because I had completed a two year HND Diploma with Belfast Metropolitian College, Millfield Campus.
 
 Now, I am sure you must have understood how I landed in Puppet for my placement year, no?
@@ -83,6 +91,16 @@ Finally, feel free to share your thoughts and comments on my blog pages :)
 [Week 7 & 8](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_7_and_8.html)
 
 [Week 10](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_10.html)
+
+[Week 7](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_7.html)
+
+[Week 8](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html)
+
+[Week 9](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_9.html)
+
+[Week 10](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_10.html)
+
+[Week 11](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_11.html)
 
 [Week 12](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_12.html)
 
