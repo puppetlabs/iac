@@ -57,7 +57,7 @@ We are touching upon three different layers (facade, backend and provision resou
 
 ## litmus release 0.22.0
 
-David Swan released his workaround to a long-standing bug in bolt which was only triggered by the concat test suite.
+[David Swan][davidswan] released his workaround to a long-standing bug in bolt which was only triggered by the concat test suite.
 Please check the [litmus changelog](https://github.com/puppetlabs/puppet_litmus/blob/main/CHANGELOG.md) and [bolt ticket](https://tickets.puppetlabs.com/browse/BOLT-1535).
 
 ## New Module / Gem Releases
