@@ -22,7 +22,7 @@ Here is an interesting blog post about how you can reach IAC team [Puppet IAC Te
 
 ## Community Support Day
 
-The IAC Team processed 19 community PRs processed(12 toolings, 7 modules) also we have closed 32 module issues.
+The IAC Team processed 19 community PRs processed (12 tooling, 7 modules) also we have closed 32 module issues.
 
 ## Community Contributions
 
