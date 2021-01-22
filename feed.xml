@@ -1,4 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-22T03:12:26+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-20: Reaching the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html" rel="alternate" type="text/html" title="2021-01-20: Reaching the IAC Team" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/hello.png&quot; alt=&quot;hello&quot; height=&quot;170px&quot; width=&quot;170px&quot; /&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-22T12:24:17+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-22: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/22/status-update.html" rel="alternate" type="text/html" title="2021-01-22: IAC Team Status Update" /><published>2021-01-22T00:00:00+00:00</published><updated>2021-01-22T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/22/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/22/status-update.html">&lt;p&gt;Hello! We have exciting news to share with you.
+Here is this week’s update from the IAC Team:&lt;/p&gt;
+
+&lt;h2 id=&quot;reaching-iac-team&quot;&gt;Reaching IAC Team&lt;/h2&gt;
+
+&lt;p&gt;Here is an interesting blog post about how you can reach IAC team &lt;a href=&quot;https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html&quot;&gt;Puppet IAC Team&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;community-support-day&quot;&gt;Community Support Day&lt;/h2&gt;
+
+&lt;p&gt;The IAC Team processed 19 community PRs processed (12 tooling, 7 modules) also we have closed 32 module issues.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/provision/pull/151&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;provision#151&lt;/code&gt;&lt;/a&gt;: “Docker run opts”, thanks to &lt;a href=&quot;https://github.com/hajee&quot;&gt;hajee&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2111&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2111&lt;/code&gt;&lt;/a&gt;: “(FIX) Correct PHP packages on Ubuntu 16.04”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/964&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#964&lt;/code&gt;&lt;/a&gt;: “Use modern os facts”, thanks to &lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/471&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#471&lt;/code&gt;&lt;/a&gt;: “Ensure that changes to etcd systemd reload and restart etcd”, thanks to &lt;a href=&quot;https://github.com/treydock&quot;&gt;treydock&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1360&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1360&lt;/code&gt;&lt;/a&gt;: “Set default MySQL version for FreeBSD”, thanks to &lt;a href=&quot;https://github.com/olevole&quot;&gt;olevole&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/382&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#382&lt;/code&gt;&lt;/a&gt;: “Use ruby/setup-ruby Github action”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/379&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#379&lt;/code&gt;&lt;/a&gt;: “Add object templates for functions”, thanks to &lt;a href=&quot;https://github.com/logicminds&quot;&gt;logicminds&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-vanagon/pull/273&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-vanagon#273&lt;/code&gt;&lt;/a&gt;: “(RE-13454) Remove old gpg key from build_defaults.yaml”, thanks to &lt;a href=&quot;https://github.com/e-gris&quot;&gt;e-gris&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-vanagon/pull/272&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-vanagon#272&lt;/code&gt;&lt;/a&gt;: “(MAINT) Fix package building on windows”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-strings/pull/268&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-strings#268&lt;/code&gt;&lt;/a&gt;: “Do not fail in case return tag has no type specified”, thanks to &lt;a href=&quot;https://github.com/tiandrey&quot;&gt;tiandrey&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/376&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#376&lt;/code&gt;&lt;/a&gt;: “Remove deprecated version from bolt inventory”, thanks to &lt;a href=&quot;https://github.com/nmaludy&quot;&gt;nmaludy&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/883&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#883&lt;/code&gt;&lt;/a&gt;: “Include check name in log output by default”, thanks to &lt;a href=&quot;https://github.com/usev6&quot;&gt;usev6&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please swing by our &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;office hours on Monday&lt;/a&gt; on Slack if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-ci&quot;&gt;Cloud CI&lt;/h2&gt;
+
+&lt;p&gt;Great news this week as we have tagged the v1.0.0 of our provisioning service that is used by the Cloud CI.
+This week there have been a couple of upstream issues with GCP and Github but overall, we had a bit over 3300 successful runs and around 150 failures on the nightly runs of the supported modules.
+Currently all our Github Actions acceptance tests are running with Puppet 5, Puppet 6 and Puppet 7 nightly. As we have been very happy with the stability and resiliance of the nightly Puppet 7 agent we will switch the Puppet 6 runs to use the nightly builds also. We have a &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/373&quot;&gt;PR&lt;/a&gt; prepared for that and with the next release of Puppet Litmus all our Github Action workflow matrices will change to use the Puppet 6 nightly builds.
+We are very thankful for all the help and support &lt;a href=&quot;https://github.com/pup-shellee&quot;&gt;Shellee&lt;/a&gt; offered us in making the service a secure and stable tool for spinning up the ephemeral testing machines.
+We are touching upon three different layers (facade, backend and provision resources) to create appropriate firewalls which will helps us to tighten our security on Cloud CI provision service.&lt;/p&gt;
+
+&lt;h2 id=&quot;introduction-to-pdksync&quot;&gt;Introduction to PDKSync&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sheenaajay&quot;&gt;Sheena&lt;/a&gt; has written a great blog post this week giving an &lt;a href=&quot;/iac/docs/pdksync.html&quot;&gt;overview of PDKSync&lt;/a&gt;, an invaluable tool that we use a lot on the team!&lt;/p&gt;
+
+&lt;h2 id=&quot;litmus-release-0220&quot;&gt;litmus release 0.22.0&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; released his workaround to a long-standing bug in bolt which was only triggered by the concat test suite.
+Please check the &lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/blob/main/CHANGELOG.md&quot;&gt;litmus changelog&lt;/a&gt; and &lt;a href=&quot;https://tickets.puppetlabs.com/browse/BOLT-1535&quot;&gt;bolt ticket&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vcsrepo&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-vcsrepo&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-exec&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-exec&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.9.0&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>adrianiurca</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="cloud-ci" /><category term="modules" /><category term="iac-team" /><category term="community-day" /><summary type="html">Hello! We have exciting news to share with you. Here is this week’s update from the IAC Team:</summary></entry><entry><title type="html">2021-01-20: Reaching the IAC Team</title><link href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html" rel="alternate" type="text/html" title="2021-01-20: Reaching the IAC Team" /><published>2021-01-20T00:00:00+00:00</published><updated>2021-01-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-20-reaching-out/hello.png&quot; alt=&quot;hello&quot; height=&quot;170px&quot; width=&quot;170px&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;To improve collaboration and avoid issues falling through the cracks, we have collected information on all the ways to get in contact with us. Whether this be to review a PR, highlight a nasty bug or really for any other reason, let us know what we did well, and what we need to do better.&lt;/p&gt;
 
@@ -735,63 +795,4 @@ We’ve prepared the templates in &lt;a href=&quot;pdk-templates&quot;&gt;pdk-te
     &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-puppet_conf&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-puppet_conf&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.7.0&lt;/code&gt;)&lt;/p&gt;
 
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><summary type="html">Coming at you with the latest weekly blog post, here to fill you in on all the juicy IAC gossip!</summary></entry><entry><title type="html">2020-11-13: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update.html" rel="alternate" type="text/html" title="2020-11-13: IAC Team Status Update" /><published>2020-11-13T00:00:00+00:00</published><updated>2020-11-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2020/11/13/status-update.html">&lt;p&gt;As always, interesting weeks for the IAC team means a slew of updates for everyone else!&lt;/p&gt;
-
-&lt;h2 id=&quot;new-triage-practice&quot;&gt;New Triage Practice&lt;/h2&gt;
-
-&lt;p&gt;This week marked our second experimental session of full-team triage of all of our repositories.
-We decided to move from an ongoing triage rotation which assigned two engineers full-time to handling incoming issues and pull requests (rotating the assignment every two weeks) to having the entire team focus on triage work every Monday.&lt;/p&gt;
-
-&lt;p&gt;On Monday our team processed &lt;strong&gt;sixty-five&lt;/strong&gt; PRs—34 in our tools repositories, 31 in module repositories—and released two modules.
-It has also meant a lot of pairing and knowledge sharing on the team, which has been great!&lt;/p&gt;
-
-&lt;p&gt;We’re going to keep going with this experiment for several more weeks, but we’re extremely excited with these initial results!&lt;/p&gt;
-
-&lt;h2 id=&quot;puppet-7-compatibility-testing--ruby-27-ci-support&quot;&gt;Puppet 7 Compatibility Testing / Ruby 2.7 CI Support&lt;/h2&gt;
-
-&lt;p&gt;Our proof of concept (PoC) on getting Ruby 2.7 rolled out across TravisCI is making good progress, although still in the initial stages of testing.
-Depending on the results of our PoC, we may be going live with this sooner than expected—stay tuned for more updates soon.
-We are now in a position where we’re confident we’ve uncovered most compatibility issues with Puppet 7 / &lt;a href=&quot;https://puppetlabs.github.io/iac/modules/&quot;&gt;Supported Modules&lt;/a&gt;.
-We’ve had the fringe benefit of finding issues that have needed to be addressed on the CI pipelines for a while and are now farming these issues out across the team, to resolve.
-Inspired by the success of our full-team Triage days, we may borrow that methodology and swarm on them in one last push!&lt;/p&gt;
-
-&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h2&gt;
-
-&lt;p&gt;This week we have managed to finish the port of the initial 3 windows modules to run using our new Cloud CI setup.
-&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppetlabs-registry&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-acl&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-acl&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; will now run PR acceptance tests using GCP provisioned resources and will have nightly scheduled workflows set up.
-Currently there are still some issues we are facing on the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; acceptance tests but we hope to get a fix for those as soon as possible.&lt;/p&gt;
-
-&lt;p&gt;Next week we will start to shift our focus to start the porting for &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt;, &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; while continuing to improve and stabilise our solution.&lt;/p&gt;
-
-&lt;p&gt;For a quick demo on how this all works please see Ben Ford’s presentation on “The new Puppet Developer Experience: it’s all about you”.&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2086&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2086&lt;/code&gt;&lt;/a&gt;: “Add new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$use_servername_for_filenames&lt;/code&gt; parameter”: Thanks to &lt;a href=&quot;https://github.com/rsynnest&quot;&gt;rsynnest&lt;/a&gt; and &lt;a href=&quot;https://github.com/pstray&quot;&gt;pstray&lt;/a&gt; for PRs &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2064&quot;&gt;#2064&lt;/a&gt; and &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2068&quot;&gt;#2068&lt;/a&gt;, respectively, which prompted this new parameter to be added. Also thanks to &lt;a href=&quot;https://github.com/igalic&quot;&gt;igalic&lt;/a&gt; and &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; for their suggestions and feedback during the development process.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/447&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#447&lt;/code&gt;&lt;/a&gt;: “frontend options: order default_backend after specific backends &amp;amp; test”, thanks to &lt;a href=&quot;https://github.com/MajorFlamingo&quot;&gt;MajorFlamingo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1204&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1204&lt;/code&gt;&lt;/a&gt;: “Use non-deprecation password function in acceptance tests”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1203&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1203&lt;/code&gt;&lt;/a&gt;: “Drop concat_basedir fact in tests”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/mcanevet/rspec-puppet-facts/pull/122&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet-facts#122&lt;/code&gt;&lt;/a&gt;: “Implement fact memoization”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/mcanevet&quot;&gt;mcanevet&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/919&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#919&lt;/code&gt;&lt;/a&gt;: “(MAINT) Update package specs for dropping Ruby 2.1.9”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/358&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#358&lt;/code&gt;&lt;/a&gt;: “(MAINT) Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;json&lt;/code&gt; pin for Ruby 2.7.x”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/332&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#332&lt;/code&gt;&lt;/a&gt;: “Change global_variables key for GitLab CI to set defaults that can be overridden by jobs”, thanks to &lt;a href=&quot;https://github.com/cdenneen&quot;&gt;cdenneen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-module-gems/pull/148&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-module-gems#148&lt;/code&gt;&lt;/a&gt;: “Pin parallel to &amp;lt; 1.20 on ruby 2.4, since 1.20 requires ruby 2.5 “, thanks to &lt;a href=&quot;https://github.com/wmuizelaar&quot;&gt;wmuizelaar&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/puppet-lint/pull/934&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint#934&lt;/code&gt;&lt;/a&gt;: “Select parameter tokens based on preceeding code token”, thanks to &lt;a href=&quot;https://github.com/rodjek&quot;&gt;rodjek&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/815&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#815&lt;/code&gt;&lt;/a&gt;: “(MAINT) Bump version to 2.9.0.pre”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/rodjek/rspec-puppet/pull/812&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#812&lt;/code&gt;&lt;/a&gt;: “Add missing links for keep-a-changelog-ish diffs”, thanks to &lt;a href=&quot;https://github.com/op-ct&quot;&gt;op-ct&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.4.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.3.1&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html">As always, interesting weeks for the IAC team means a slew of updates for everyone else!</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><summary type="html">Coming at you with the latest weekly blog post, here to fill you in on all the juicy IAC gossip!</summary></entry></feed>
