@@ -48,7 +48,7 @@ Please swing by our [office hours on Monday](https://puppet.com/community/office
 Great news this week as we have tagged the v1.0.0 of our provisioning service that is used by the Cloud CI.
 This week there have been a couple of upstream issues with GCP and Github but overall, we had a bit over 3300 successful runs and around 150 failures on the nightly runs of the supported modules.
 Currently all our Github Actions acceptance tests are running with Puppet 5, Puppet 6 and Puppet 7 nightly. As we have been very happy with the stability and resiliance of the nightly Puppet 7 agent we will switch the Puppet 6 runs to use the nightly builds also. We have a [PR](https://github.com/puppetlabs/puppet_litmus/pull/373) prepared for that and with the next release of Puppet Litmus all our Github Action workflow matrices will change to use the Puppet 6 nightly builds.
-We are very thankful for all the help and support [Shelle](https://github.com/pup-shellee) offered us in making the service a secure and stable tool for spinning up the ephemeral testing machines.
+We are very thankful for all the help and support [Shellee](https://github.com/pup-shellee) offered us in making the service a secure and stable tool for spinning up the ephemeral testing machines.
 We are touching upon three different layers (facade, backend and provision resources) to create appropriate firewalls which will helps us to tighten our security on Cloud CI provision service.
 
 ## Introduction to PDKSync
