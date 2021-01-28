@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Troubleshooting Puppetized DSC Modules | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Troubleshooting Puppetized DSC Modules" />
+<meta name="author" content="michaeltlombardi" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Authoring Puppet manifests using the new Puppetized DSC Resources is, like using any other Puppet modules, a few steps and a deploy away for most use cases. Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources. What could be causing the problem?" />
+<meta property="og:description" content="Authoring Puppet manifests using the new Puppetized DSC Resources is, like using any other Puppet modules, a few steps and a deploy away for most use cases. Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources. What could be causing the problem?" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-25T00:00:00+00:00" />
+<script type="application/ld+json">
+{"headline":"Troubleshooting Puppetized DSC Modules","description":"Authoring Puppet manifests using the new Puppetized DSC Resources is, like using any other Puppet modules, a few steps and a deploy away for most use cases. Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources. What could be causing the problem?","datePublished":"2021-01-25T00:00:00+00:00","dateModified":"2021-01-25T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html"},"url":"https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html","author":{"@type":"Person","name":"michaeltlombardi"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Troubleshooting Puppetized DSC Modules</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-25T00:00:00+00:00" itemprop="datePublished">Jan 25, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">michaeltlombardi</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Authoring Puppet manifests using the new <a href="https://forge.puppet.com/dsc">Puppetized DSC Resources</a> is, like using any other Puppet modules, a few steps and a deploy away for most use cases.
+Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources.
+What could be causing the problem?</p>
+
+<p>Is it a problem with the builder?
+The Puppet representaion of the DSC Resource could not match the API surface, resulting in misgenerated types, enums or method calls.</p>
+
+<p>Could the problem be the DSC Resource itself?
+The PowerShell DSC code could not work, which would be hidden underneath the Puppet Ruby exception stacktrace.</p>
+
+<p>What happens if it’s Puppet?
+There could be an error in the Ruby code that translates the DSC resource back and forth between Puppet and PowerShell, in which case the issue lies in the <a href="https://forge.puppet.com/modules/puppetlabs/pwshlib"><code class="language-plaintext highlighter-rouge">pwshlib</code></a> module.</p>
+
+<p>Somewhere in between?
+How do you tell which symptom is which problem?
+Where do you begin to troubleshoot this?
+This blog post will help you find your way foreward.</p>
+
+<h2 id="basic-troubleshooting">Basic Troubleshooting</h2>
+
+<p>The first thing to note is that there’s actually a <a href="https://github.com/puppetlabs/Puppet.Dsc#troubleshooting">basic troubleshooting guide for <code class="language-plaintext highlighter-rouge">Puppet.Dsc</code></a>.
+That guide covers finding problems like <a href="https://github.com/puppetlabs/Puppet.Dsc#type-errors">type errors</a> or <a href="https://github.com/puppetlabs/Puppet.Dsc#incorrect-enum">incorrect enums</a> in the module builder, <a href="https://github.com/puppetlabs/Puppet.Dsc#error-during-invocation">invocation errors</a> during a Puppet run, and problems with the tanslation layer in <code class="language-plaintext highlighter-rouge">pwslib</code>. There is a lot of good information there, so we won’t cover those areas again here.</p>
+
+<p>The guide also covers running Puppet in <strong>debug</strong> mode, which you will need to know about for the next couple sections.
+In short, if you append the <code class="language-plaintext highlighter-rouge">--debug</code> flag to the end of your Puppet invocation, you’ll get a <em>ton</em> of additional information out of the run.
+Please make sure to read the guide to ensure you have a reference point before we proceed here.</p>
+
+<h2 id="advanced-troubleshooting">Advanced Troubleshooting</h2>
+
+<p>So, you have a Puppet manifest with one or more Puppetized DSC Resource declarations in it.
+Things are not working and the basic troublshooting guide didn’t solve the problem.</p>
+
+<p>The first place to start is to validate that what you declared in the manifest was translated correctly to the PowerShell DSC code to execute.</p>
+
+<h3 id="validating-manifests-and-the-powershell-hash">Validating manifests and the PowerShell hash</h3>
+
+<p>When you specify a DSC Resource in your Puppet manifest, behind the scenes Puppet converts that into PowerShell code to pass to <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code>.
+In debug mode, you can actually see what Puppet thinks you passed <em>and</em> that generated code.</p>
+
+<p>Lets walk through an example manifest:</p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">dsc_psrepository</span> <span class="p">{</span> <span class="s1">'PowerShell Gallery'</span><span class="p">:</span>
+  <span class="py">dsc_name</span>               <span class="p">=&gt;</span> <span class="s1">'psgAllery'</span><span class="p">,</span>
+  <span class="py">dsc_installationpolicy</span> <span class="p">=&gt;</span> <span class="s1">'Trusted'</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>If we execute Puppet in debug mode, we’ll get the following (abreviated) output:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Debug: dsc_psrepository[{:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery"}]: Updating: Invoking Set Method for '{:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery"}' with {:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery", :dsc_installationpolicy=&gt;"Trusted"}
+... (snipped for brevity)
+dsc_psrepository[{:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery"}]: Updating: Script:
+... (snipped for brevity)
+$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psgAllery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}} Try {
+  $Result = Invoke-DscResource @InvokeParams
+} catch {
+  $Response.errormessage   = $_.Exception.Message
+  return ($Response | ConvertTo-Json -Compress)
+}
+</code></pre></div></div>
+
+<p>Breaking this apart, there are several sections of information to pull out.</p>
+
+<p>The first line is Puppet telling us why it’s doing what it’s doing and with what information it has to execute.
+We see its the PowerShell Gallery module, using the Gallery DSC Resource and setting the <code class="language-plaintext highlighter-rouge">installationpolicy</code> to <code class="language-plaintext highlighter-rouge">Trusted</code>.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Debug: dsc_psrepository[{:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery"}]: Updating: Invoking Set Method for '{:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery"}' with {:name=&gt;"PowerShell Gallery", :dsc_name=&gt;"psgAllery", :dsc_installationpolicy=&gt;"Trusted"}
+</code></pre></div></div>
+
+<p>This can be more easily read as as Ruby hash:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="ss">:name</span><span class="o">=&gt;</span><span class="s2">"PowerShell Gallery"</span><span class="p">,</span>
+  <span class="ss">:dsc_name</span><span class="o">=&gt;</span><span class="s2">"psgAllery"</span><span class="p">,</span>
+  <span class="ss">:dsc_installationpolicy</span><span class="o">=&gt;</span><span class="s2">"Trusted"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>The next part in the log to look at is the invocation parameters.
+This is the PowerShell code generated from the section we just examined:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psgAllery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}}
+</code></pre></div></div>
+
+<p>Translating that to a PowerShell hash, we can see a similar represation of the Ruby hash we just looked at.
+This is the exact code that will be passed to <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code> (expanded from one line for clarity; note your <code class="language-plaintext highlighter-rouge">ModuleName</code> path will be system-specific):</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$InvokeParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+  </span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'PSRepository'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'get'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'psgAllery'</span><span class="w"> </span><span class="p">};</span><span class="w">
+  </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">RequiredVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2.2.4.1'</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>In summary, the debug logs from a Puppet execution run provide us detailed information about how your Puppet manifest was translated into PowerShell code to invoke the DSC Resource.</p>
+
+<p>This leads us neatly into trying to use this information to invoke the DSC Resource outside of Puppet to debug it.</p>
+
+<h3 id="invoking-without-puppet">Invoking without Puppet</h3>
+
+<p>After inspecting the debug Puppet logs, we now have the PowerShell code Puppet was executing to try out. We can take that code and move to a test machine and walk through the execution ourselves interactively.</p>
+
+<p>In a PowerShell console with administrator permissions, you’ll copy and paste the <code class="language-plaintext highlighter-rouge">$InvokeParams</code> line from the debug log we pulled out above. Then you’ll invoke it using <code class="language-plaintext highlighter-rouge">Invoke-DscRsource</code>. For example:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">PS</span><span class="w"> </span><span class="nx">C:\</span><span class="err">&gt;</span><span class="w"> </span><span class="nv">$InvokeParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">   </span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'PSRepository'</span><span class="p">;</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">   </span><span class="nx">Method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'get'</span><span class="p">;</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">   </span><span class="nx">Property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'psgAllery'</span><span class="w"> </span><span class="p">};</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">   </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">     </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'</span><span class="p">;</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">     </span><span class="nx">RequiredVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2.2.4.1'</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w">   </span><span class="p">}</span><span class="w">
+</span><span class="err">&gt;&gt;</span><span class="w"> </span><span class="p">}</span><span class="w">
+</span><span class="n">PS</span><span class="w"> </span><span class="nx">C:\</span><span class="err">&gt;</span><span class="w"> </span><span class="nx">Invoke-DscResource</span><span class="w"> </span><span class="err">@</span><span class="nx">InvokeParams</span><span class="w"> </span><span class="nt">-Verbose</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Now you can evaluate the success/failure of the invocation without involving Puppet at all;
+this way you can determine if the values being passed were incorrect or if the DSC Resource itself is misbehaving.</p>
+
+<p>If the code fails after pasting in the <code class="language-plaintext highlighter-rouge">$InvokeParams</code> block, then there is something wrong with the values or the hash statement.
+If something <em>has</em> gone wrong converting the values in your Puppet manifest to the <code class="language-plaintext highlighter-rouge">InvokeParams</code> hash being passed to <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code>, please do <a href="https://github.com/puppetlabs/Puppet.Dsc/issues/new?assignees=&amp;labels=Bug%2C+bug&amp;template=bug-report.md&amp;title=">file an issue</a> with us and we’ll be sure to take a look.</p>
+
+<p>If the code fails after invoking <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code>, then there is likely a problem inside the DSC Resource itself.
+If it’s an issue with the DSC Resource, hopefully you’ll have enough information from the execution to put together a bug report for the upstream PowerShell module and work with that DSC Resouce’s authors for a resolution.</p>
+
+<h4 id="invoking-dsc-resources-with-pscredentials">Invoking DSC Resources with PSCredentials</h4>
+
+<p>When your manifest specifies a PSCredential, you’ll see one or more lines above the <code class="language-plaintext highlighter-rouge">InvokeParams</code> declaration, like this (expanded for readability):</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$febabd4f_19e8_4ed6_a218_188e275ecc05</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">New-PSCredential</span><span class="w"> </span><span class="nt">-User</span><span class="w"> </span><span class="nx">apple</span><span class="w"> </span><span class="nt">-Password</span><span class="w"> </span><span class="s1">'#&lt;Sensitive [value redacted]&gt;'</span><span class="w">
+</span><span class="nv">$InvokeParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+  </span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'PSRepository'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'set'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'psgAllery'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">installationpolicy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Trusted'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">psdscrunascredential</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nv">$febabd4f_19e8_4ed6_a218_188e275ecc05</span><span class="w">
+  </span><span class="p">};</span><span class="w">
+  </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">RequiredVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'2.2.5'</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Note that it is building a credential object from plain text before passing that object to DSC;
+the debug logs will strip the password from being returned.</p>
+
+<p>In this case, you will need some of the custom helper code that we snipped for brevity earlier, namely this function:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">function</span><span class="w"> </span><span class="nf">new-pscredential</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="p">[</span><span class="n">CmdletBinding</span><span class="p">()]</span><span class="w">
+    </span><span class="kr">param</span><span class="w"> </span><span class="p">(</span><span class="w">
+        </span><span class="p">[</span><span class="n">parameter</span><span class="p">(</span><span class="n">Mandatory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$true</span><span class="p">,</span><span class="w">
+            </span><span class="n">ValueFromPipelineByPropertyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$true</span><span class="p">)]</span><span class="w">
+        </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="w">
+        </span><span class="nv">$user</span><span class="p">,</span><span class="w">
+
+        </span><span class="p">[</span><span class="n">parameter</span><span class="p">(</span><span class="n">Mandatory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$true</span><span class="p">,</span><span class="w">
+            </span><span class="n">ValueFromPipelineByPropertyName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="bp">$true</span><span class="p">)]</span><span class="w">
+        </span><span class="p">[</span><span class="n">string</span><span class="p">]</span><span class="w">
+        </span><span class="nv">$password</span><span class="w">
+    </span><span class="p">)</span><span class="w">
+
+    </span><span class="nv">$secpasswd</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConvertTo-SecureString</span><span class="w"> </span><span class="nv">$password</span><span class="w"> </span><span class="nt">-AsPlainText</span><span class="w"> </span><span class="nt">-Force</span><span class="w">
+    </span><span class="nv">$credentials</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">New-Object</span><span class="w"> </span><span class="nx">System.Management.Automation.PSCredential</span><span class="w"> </span><span class="p">(</span><span class="nv">$user</span><span class="p">,</span><span class="w"> </span><span class="nv">$secpasswd</span><span class="p">)</span><span class="w">
+    </span><span class="kr">return</span><span class="w"> </span><span class="nv">$credentials</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>Make sure to copy that code into your terminal <em>before</em> you try to copy in the invocation variables and <em>also</em> remember to replace <code class="language-plaintext highlighter-rouge">#&lt;Sensitive [value redacted]&gt;</code> with the appropriate password string.
+Alternatively, you could use <code class="language-plaintext highlighter-rouge">Get-Credential</code> and capture the output of that command to the same variable name from your debug log.</p>
+
+<h4 id="invoking-dsc-resources-with-cim-instances">Invoking DSC Resources with CIM Instances</h4>
+
+<p>Some DSC Resources use nested CIM instances to pass hashes as property values.
+In these cases, there’s one or more lines above the definition of the <code class="language-plaintext highlighter-rouge">InvokeParams</code> variable which creates these CIM instances.</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$b615d113_bb6e_49e4_9776_7e895dfe20c7</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">New-CimInstance</span><span class="w"> </span><span class="nt">-ClientOnly</span><span class="w"> </span><span class="nt">-ClassName</span><span class="w"> </span><span class="s1">'MSFT_KeyValuePair'</span><span class="w"> </span><span class="nt">-Property</span><span class="w"> </span><span class="p">@{</span><span class="s1">'key'</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Accept-Language'</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="s1">'value'</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'en-US'</span><span class="p">}</span><span class="w">
+</span><span class="nv">$InvokeParams</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+  </span><span class="nx">Name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'xRemoteFile'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Method</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'set'</span><span class="p">;</span><span class="w">
+  </span><span class="nx">Property</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">destinationpath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:\dsc-xpsdesiredstateconfiguration-9.1.0-0-1.tar.gz'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">headers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="n">CimInstance</span><span class="p">[]]@(</span><span class="nv">$b615d113_bb6e_49e4_9776_7e895dfe20c7</span><span class="p">);</span><span class="w">
+    </span><span class="nx">uri</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'https://forge.puppet.com/v3/files/dsc-xpsdesiredstateconfiguration-9.1.0-0-1.tar.gz'</span><span class="w">
+  </span><span class="p">};</span><span class="w">
+  </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">@{</span><span class="w">
+    </span><span class="nx">ModuleName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'C:/pathToPuppetModules/xpsdesiredstateconfiguration/lib/puppet_x/xpsdc/dsc_resources/xPSDesiredStateConfiguration/xPSDesiredStateConfiguration.psd1'</span><span class="p">;</span><span class="w">
+    </span><span class="nx">RequiredVersion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'9.1.0'</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p>This is necessary for DSC to correctly handle the objects, <em>especially</em> if they have a custom CIM instance class specific to the DSC Resource being called.</p>
+
+<h2 id="digging-deeper-with-pry">Digging deeper with Pry</h2>
+
+<p>Sometimes, reading the debug logs doesn’t give you enough information about what’s going on.
+You may need to <em>pry</em> into the parts of Puppet that happen after the execution starts, but before the PowerShell code is executed.</p>
+
+<p>When this is the case, the most powerful thing you can do is learn to interactively debug a Puppet run using a tool called <a href="https://github.com/pry/pry">pry</a>.</p>
+
+<p><a href="https://github.com/pry/pry">Pry</a> is a powerful tool for interactively debugging ruby.
+Using it with Puppet on Windows is a bit involved but it can be an extremely useful tool in your kit.</p>
+
+<p>First, you’ll want to get a functional ruby environment installed <em>separate</em> from the PDK.</p>
+
+<blockquote>
+  <p>Right now, the PDK does not support prying into a Puppet run due to limitations around native gems.
+If you don’t know what this means right now, don’t worry too much.
+As you get more used to how Ruby and Puppet works it will make more sense.</p>
+</blockquote>
+
+<p>You can accomplish this however you want, but make sure there is an installation of both Ruby and the associated Devkit installed when you are done.
+We suggest you do this via <a href="https://www.powershellgallery.com/packages/RubyInstaller">Glenn Sarti’s <code class="language-plaintext highlighter-rouge">RubyInstaller</code></a> PowerShell module:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Install-Module</span><span class="w"> </span><span class="nx">RubyInstaller</span><span class="w"> </span><span class="nt">-Scope</span><span class="w"> </span><span class="nx">CurrentUser</span><span class="w">
+</span><span class="c"># This will kick off an interactive installation of Ruby, including the necessary dependencies</span><span class="w">
+</span><span class="c"># It relies on Chocolatey (and will install it if needed)</span><span class="w">
+</span><span class="c"># Strongly suggest installation option G ('2.5.1-2 (x64)') at the time of this writing.</span><span class="w">
+</span><span class="n">Install-Ruby</span><span class="w">
+</span></code></pre></div></div>
+
+<p>The next step is to find the module files on disk.
+They’re <em>probably</em> in a location like this one:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:/ProgramData/PuppetLabs/code/environments/&lt;your environment name&gt;/modules/
+</code></pre></div></div>
+
+<p>The actual location will depend on how you configured your Puppet Environments.</p>
+
+<p>Next, you’re going to  <code class="language-plaintext highlighter-rouge">Set-Location</code> to the module you want to debug, like so:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Set-Location</span><span class="w"> </span><span class="s1">'C:/ProgramData/PuppetLabs/code/environments/production/modules/powershellget'</span><span class="w">
+</span></code></pre></div></div>
+
+<blockquote>
+  <p>We strongly suggest opening this location in VSCode to make editing a bit easier on yourself.</p>
+</blockquote>
+
+<p>In any case, you will want to <em>delete</em> the file <code class="language-plaintext highlighter-rouge">Gemfile.lock</code> in this directory and create a new file, <code class="language-plaintext highlighter-rouge">Gemfile.local</code>, with the following content:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'fuubar'</span>
+<span class="n">gem</span> <span class="s1">'pry-byebug'</span>
+<span class="n">gem</span> <span class="s1">'pry-stack_explorer'</span>
+</code></pre></div></div>
+
+<p>Next, you will run the following commands:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This loads ruby 2.5 for use; if you don't do this, you won't be able to run other commands</span><span class="w">
+</span><span class="n">uru</span><span class="w"> </span><span class="nx">2.5</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This is only necessary after you first install a ruby version; it's a tool to manage ruby dependencies</span><span class="w">
+</span><span class="n">gem</span><span class="w"> </span><span class="nx">install</span><span class="w"> </span><span class="nx">bundler</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This will cause bundler install all of the ruby dependencies into the folder you're currently in</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">config</span><span class="w"> </span><span class="nx">set</span><span class="w"> </span><span class="nx">path</span><span class="w"> </span><span class="s1">'.bundle/gems'</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This will install all of your ruby dependencies</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">install</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># This will pull down a copy of the `pwslib` module for use and editing in the rest of your debugging</span><span class="w">
+</span><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">rake</span><span class="w"> </span><span class="nx">spec_prep</span><span class="w">
+</span></code></pre></div></div>
+
+<p>At this point, you have a functioning Ruby installation and a Puppet Module setup and ready to be debugged.</p>
+
+<p>The next step is to create a new file in the module folder at <code class="language-plaintext highlighter-rouge">examples/test.pp</code> and put your test manifest code in there.</p>
+
+<p>Now, you can run your test manifest with the following command:</p>
+
+<div class="language-powershell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bundle</span><span class="w"> </span><span class="nx">exec</span><span class="w"> </span><span class="nx">puppet</span><span class="w"> </span><span class="nx">apply</span><span class="w"> </span><span class="o">.</span><span class="nx">/examples/test.pp</span><span class="w"> </span><span class="nt">--modulepath</span><span class="w"> </span><span class="o">.</span><span class="nx">/spec/fixtures/modules</span><span class="w">
+</span></code></pre></div></div>
+
+<p>If you want to run in debug mode, append <code class="language-plaintext highlighter-rouge">--debug</code> to the end of that command.
+The output you saw during a normal Puppet run will show, and the command runs until it stops at the error you are currently investigating.</p>
+
+<p>Now, you’re ready to start adding <em>pry</em> statements to the base provider and digging around.</p>
+
+<h3 id="prying-into-the-base-provider">Prying into the base provider</h3>
+
+<p>For the rest of this section we’ll be looking at the <code class="language-plaintext highlighter-rouge">dsc_base_provider.rb</code> file in the <a href="https://forge.puppet.com/modules/puppetlabs/pwshlib"><code class="language-plaintext highlighter-rouge">puppetlabs-pwshlib</code></a> module, which you can find at <code class="language-plaintext highlighter-rouge">./spec/fixtures/modules/pwshlib/puppet/provider/dsc_base_provider</code> in the module folder.
+That file is the shared provider that <em>all</em> Puppetized DSC Resources rely on.</p>
+
+<p>For this brief tutorial, we’re going to pry into <code class="language-plaintext highlighter-rouge">invoke_get_method</code>, but these techniques apply to all of the included methods you may want to debug.</p>
+
+<p>First, find the method in the provider file (at the time of this writing, that’s around line 231):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">invoke_get_method</span><span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">name_hash</span><span class="p">)</span>
+  <span class="o">...</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<p>We’re going to add a pry binding to this method.
+For the purposes of this tutorial, we’re going to add it just before the DSC invocation (around line 241 at the time of this writing):</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">context</span><span class="p">.</span><span class="nf">debug</span><span class="p">(</span><span class="s2">"Script:</span><span class="se">\n</span><span class="s2"> </span><span class="si">#{</span><span class="n">redact_secrets</span><span class="p">(</span><span class="n">script_content</span><span class="p">)</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
+<span class="c1"># This is the new code we're adding, which will tell ruby to enter a pry debugging session:</span>
+<span class="nb">require</span> <span class="s1">'pry'</span> <span class="p">;</span> <span class="nb">binding</span><span class="p">.</span><span class="nf">pry</span>
+<span class="n">output</span> <span class="o">=</span> <span class="n">ps_manager</span><span class="p">.</span><span class="nf">execute</span><span class="p">(</span><span class="n">script_content</span><span class="p">)[</span><span class="ss">:stdout</span><span class="p">]</span>
+</code></pre></div></div>
+
+<p>This will get you an interactive prompt inside the Puppet run:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.png" alt="Initial execution of pry" /></p>
+
+<p>You can call <code class="language-plaintext highlighter-rouge">ls</code> in that context to see what methods and variables are available:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.png" alt="Demonstrating the `ls` command in pry" /></p>
+
+<p>You can type the name of one of the variables, such as <code class="language-plaintext highlighter-rouge">name_hash</code> and hit enter to see what it is set to:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.png" alt="Printing the `name_hash` variable in pry" /></p>
+
+<p>You can use the <code class="language-plaintext highlighter-rouge">whereami</code> command to show where you are in the code.
+If you pass an integer to this command, it will show you that many lines around your current line.</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.png" alt="Running the `whereami` command in pry" /></p>
+
+<p>Next, we’ll execute the invocation script and assign it to our own variable (this will take a bit as it’s spinning up PowerShell for the first time and running <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code>):</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.png" alt="Executing independent code in pry" /></p>
+
+<p>In my case, it looks like we got some data for <code class="language-plaintext highlighter-rouge">stdout</code>, an exit code of zero, and no errors.</p>
+
+<p>If we call <code class="language-plaintext highlighter-rouge">next</code>, pry will execute the next line of code.</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.png" alt="Calling the `next` command in pry" /></p>
+
+<p>Note that the marker for our current line has updated to 243.
+We can keep using <code class="language-plaintext highlighter-rouge">next</code> to walk through the code execution, investigating any variables or running any methods for ourselves to see.
+I’ll keep doing that til we hit line 267, where the code manipulates the output data a little bit:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.png" alt="Showing the context that will modify the data variable in pry" /></p>
+
+<p>Before we run these lines, lets check on some state:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.png" alt="Printing the initial value of the data variable in pry" /></p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.png" alt="Printing the value of the valid_attributes variable in pry" /></p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.png" alt="Printing the value of the parameters variable in pry" /></p>
+
+<p>Okay, so that shows us the current state of the data, the list of valid attributes, and the parameters respectively.
+We can then run <code class="language-plaintext highlighter-rouge">next</code> and check the value of <code class="language-plaintext highlighter-rouge">data</code> again to see what the <code class="language-plaintext highlighter-rouge">data.select!</code> line did:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.png" alt="Printing the value of the data variable in pry after the select! method is used on it" /></p>
+
+<p>It looks like the list of key-value pairs has been trimmed down - we do this so only the values that Puppet cares about will be evaluated in the rest of the Puppet run.</p>
+
+<p>If we use <code class="language-plaintext highlighter-rouge">next</code> again and look at data a final time:</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.png" alt="Printing the value of the data variable in pry after the reject! method is used on it" /></p>
+
+<p>We see that the key for <code class="language-plaintext highlighter-rouge">PSDscRunAsCredential</code> has been removed, which happens because it was the only key which was in the list of parameters.</p>
+
+<p>This brings us to a loop in the code.
+If we want to see what happens <em>inside</em> the loop, we need to use the <code class="language-plaintext highlighter-rouge">step</code> command.
+This command also lets you shift contexts inside of any method being called.</p>
+
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.png" alt="Showing the result of stepping into a loop in Pry" /></p>
+
+<p>Note that we’re now <em>inside</em> the loop - if we had called <code class="language-plaintext highlighter-rouge">next</code>, it would’ve evaluated the whole loop and gone to the next line after it.</p>
+
+<p>If we want to just let Puppet run it’s course, we can use the <code class="language-plaintext highlighter-rouge">continue</code> command - this will keep us in the pry session, looking for the next <code class="language-plaintext highlighter-rouge">pry.binding</code> in our code.
+Right now we only have the one, but you can have any number of them.</p>
+
+<p>If instead we want to exit the puppet run entirely, we can use the <code class="language-plaintext highlighter-rouge">exit!</code> command, which will bring you back to your PowerShell prompt.</p>
+
+<p>And that’s it for basic pry debugging!
+A few commands and tools to help you look around and try stuff out to investigate where you think something has gone wrong.</p>
+
+<h4 id="places-to-look">Places to look</h4>
+
+<p>Here are a few methods you may want to investigate with a pry binding and reasons for that:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">canonicalize</code> - this method retrieves the state of the DSC Resource on the node, if it exists, and loads it into a cache for comparing later - if something goes wrong here, chances are you’ll get idempotency issues.</li>
+  <li><code class="language-plaintext highlighter-rouge">invoke_get_method</code> - this is responsible not just for querying the state of the DSC Resource but also for puppetizing the returned data</li>
+  <li><code class="language-plaintext highlighter-rouge">ps_script_content</code> - this method builds the PowerShell script that gets invoked to query or set the state of a DSC Resource.
+The methods included in it, particularly <code class="language-plaintext highlighter-rouge">prepare_credentials</code>, <code class="language-plaintext highlighter-rouge">prepare_cim_instances</code>, and <code class="language-plaintext highlighter-rouge">invoke_params</code> are where things are most likely to go wrong when turning Puppet code into PowerShell code.</li>
+</ul>
+
+
+  </div><a class="u-url" href="/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
