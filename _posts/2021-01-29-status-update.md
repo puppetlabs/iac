@@ -6,7 +6,7 @@ categories:
   - team
   - status
 tags:
-- litmus
+  - litmus
   - cloud-ci
   - modules
   - iac-team
