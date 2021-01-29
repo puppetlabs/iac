@@ -1,4 +1,60 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-29T02:35:07+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">Troubleshooting Puppetized DSC Modules</title><link href="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" rel="alternate" type="text/html" title="Troubleshooting Puppetized DSC Modules" /><published>2021-01-25T00:00:00+00:00</published><updated>2021-01-25T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules</id><content type="html" xml:base="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html">&lt;p&gt;Authoring Puppet manifests using the new &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;Puppetized DSC Resources&lt;/a&gt; is, like using any other Puppet modules, a few steps and a deploy away for most use cases.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-01-29T14:54:33+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-01-29: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/01/29/status-update.html" rel="alternate" type="text/html" title="2021-01-29: IAC Team Status Update" /><published>2021-01-29T00:00:00+00:00</published><updated>2021-01-29T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/01/29/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/01/29/status-update.html">&lt;p&gt;Hey everyone, it’s my honour to write my first blogpost for Puppet. Kinda strange in &lt;a href=&quot;https://github.com/tphoney&quot;&gt;I&lt;/a&gt; have done a number of other things for puppet, but never a blogpost. Case in point, my talk about &lt;a href=&quot;https://www.youtube.com/watch?v=FYfR7ZEGHoE&quot;&gt;litmus&lt;/a&gt; (available permanently on youtube to make me shudder at my own voice). On to business !!!&lt;/p&gt;
+
+&lt;h2 id=&quot;what-is-the-iac-team&quot;&gt;What is the IAC Team&lt;/h2&gt;
+
+&lt;p&gt;How did you find this post then ? Just kidding, we are a team at puppet that looks after all the modules / tasks / gems / tools that you as a community use. If we dont look after it we know who you should talk to. Here is a great blog post on how to reach us &lt;a href=&quot;https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html&quot;&gt;Puppet IAC Team&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;ecosystem-kickoff&quot;&gt;Ecosystem Kickoff&lt;/h2&gt;
+
+&lt;p&gt;The IAC team is part of a larger group at puppet that has as its main focus ‘you’ the community. We had our opening meeting discussing the direction of our work for the next year, and it all looks very exciting. I can’t give away too much yet, but more details will trickle out as we confirm our goals.&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-ci&quot;&gt;Cloud CI&lt;/h2&gt;
+&lt;p&gt;What I can talk a little about is &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny’s&lt;/a&gt; work on a new proof of concept. We are an automation company so we are always looking to remove a few steps from our process, this project will enable us to automate some of the manual steps required to release modules. Leaving the the human to only review and click merge on Github.
+We have made a bit of progress on preparing the initial workflow that can be seen &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-testing/blob/main/.github/workflows/auto_release.yml&quot;&gt;here&lt;/a&gt;
+In the last 7 days we had a bit over 5200 successful jobs runs and around 260 failures for both PRs and nightly jobs using Puppet Agent 6 Nightly, Puppet Agent 7 nightly and Puppet Agent 5.
+A bit of work is currently undergoing on revamping the Github Actions report on community management and we are very hopeful that the new report will allow us to pinpoint the failures easier and illustrate the current situation better.&lt;/p&gt;
+
+&lt;h2 id=&quot;dsc&quot;&gt;DSC&lt;/h2&gt;
+
+&lt;p&gt;Everyone’s favourite topic, &lt;a href=&quot;https://github.com/pmcmaw&quot;&gt;Paula&lt;/a&gt; and &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt; have hit their first &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc/milestone/3?closed=1&quot;&gt;milestone&lt;/a&gt;, and are now focusing on the most important part. Documentation and blogposts ! There will also be a rebuild of the DSC modules to fix a vendored path issue. AND the march to 1.0 is well underway with a real focus on testing.&lt;/p&gt;
+
+&lt;h2 id=&quot;networking-device-support-enhancements&quot;&gt;Networking Device Support Enhancements&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; has been working on enhancing the &lt;a href=&quot;https://github.com/puppetlabs/cisco_ios&quot;&gt;cisco_ios&lt;/a&gt; module to include two new &lt;a href=&quot;https://puppet.com/docs/bolt/latest/writing_tasks.html&quot;&gt;Bolt tasks&lt;/a&gt; to backup and restore configurations. The PoC has been proven out and now we’re just wrapping up on some final development tasks before moving on to more extensive testing. We are looking to make this as universal as we can across as many Cisco devices as we can and have some exciting developments in the pipeline for better testing against Cisco devices. More details soon…&lt;/p&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;On the community day we normally focus on all the wonderful contributions we receive in Github, but over the past couple of weeks we have started to look at our JIRA backlog. There are a lot of tickets there as you can imagine. We have been categorising them based on the module they are associated with and also closing off tickets that are no longer relevant or that have already been fixed. There were 20 community PR’s merged in FOSS module or tooling projects.&lt;/p&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2112&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2112&lt;/code&gt;&lt;/a&gt;: “Use the correct matches in rspec”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/965&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#965&lt;/code&gt;&lt;/a&gt;: “(RE-13415) Update GPG key in example”, thanks to &lt;a href=&quot;https://github.com/e-gris&quot;&gt;e-gris&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/349&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#349&lt;/code&gt;&lt;/a&gt;: “Fix keytool path handling”, thanks to &lt;a href=&quot;https://github.com/chillinger&quot;&gt;chillinger&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1227&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1227&lt;/code&gt;&lt;/a&gt;: “Set default PostgresQL version for FreeBSD”, thanks to &lt;a href=&quot;https://github.com/olevole&quot;&gt;olevole&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1154&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1154&lt;/code&gt;&lt;/a&gt;: “Drop facter.d facts needed for Facter &amp;lt; 1.7”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1150&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1150&lt;/code&gt;&lt;/a&gt;: “stdlib::ensure: new fuction to cast ensure values”, thanks to &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/938&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#938&lt;/code&gt;&lt;/a&gt;: “(MAINT) Update Travis/Appveyor to build &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt; branch”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-modulebuilder/pull/32&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-modulebuilder#32&lt;/code&gt;&lt;/a&gt;: “Use Puppet 7 in development on Ruby 2.7+”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-modulebuilder/pull/31&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-modulebuilder#31&lt;/code&gt;&lt;/a&gt;: “Add a setter for release_name”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs_spec_helper/pull/330&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs_spec_helper#330&lt;/code&gt;&lt;/a&gt;: “Restructure PuppetLint rake tasks so they can be configurable”, thanks to &lt;a href=&quot;https://github.com/nmaludy&quot;&gt;nmaludy&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Please swing by our &lt;a href=&quot;https://puppet.com/community/office-hours/&quot;&gt;office hours on Monday&lt;/a&gt; on Slack if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.9.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.9.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.2.0&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name>tphoney</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="cloud-ci" /><category term="modules" /><category term="iac-team" /><category term="community-day" /><summary type="html">Hey everyone, it’s my honour to write my first blogpost for Puppet. Kinda strange in I have done a number of other things for puppet, but never a blogpost. Case in point, my talk about litmus (available permanently on youtube to make me shudder at my own voice). On to business !!!</summary></entry><entry><title type="html">Troubleshooting Puppetized DSC Modules</title><link href="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" rel="alternate" type="text/html" title="Troubleshooting Puppetized DSC Modules" /><published>2021-01-25T00:00:00+00:00</published><updated>2021-01-25T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules</id><content type="html" xml:base="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html">&lt;p&gt;Authoring Puppet manifests using the new &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;Puppetized DSC Resources&lt;/a&gt; is, like using any other Puppet modules, a few steps and a deploy away for most use cases.
 Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources.
 What could be causing the problem?&lt;/p&gt;
 
@@ -1040,63 +1096,4 @@ While we try to sequence this work in a way that minimizes impact, please be awa
 
 &lt;h2 id=&quot;wrap-up&quot;&gt;Wrap-up&lt;/h2&gt;
 
-&lt;p&gt;That’s it for this week, have a great week-end and stay safe !&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="module updates" /><category term="gem updates" /><category term="status" /><category term="community" /><category term="cloud ci" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">Puppetize Digital 2020 - Content Selection</title><link href="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html" rel="alternate" type="text/html" title="Puppetize Digital 2020 - Content Selection" /><published>2020-11-23T00:00:00+00:00</published><updated>2020-11-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital</id><content type="html" xml:base="https://puppetlabs.github.io/iac/puppet/conference/2020/11/23/puppetize-digital.html">&lt;p&gt;Last week saw &lt;a href=&quot;https://digital.puppetize.com/&quot;&gt;Puppetize Digital 2020&lt;/a&gt;, our annual conference on all things Puppet.
-Over the weekend, the production team uploaded all the talks to &lt;a href=&quot;https://www.youtube.com/user/PuppetLabsInc/videos&quot;&gt;the Puppet YouTube channel&lt;/a&gt;, so if you missed anything, you can now catch up at your own leisure.
-There is a &lt;a href=&quot;https://www.youtube.com/playlist?list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&quot;&gt;playlist&lt;/a&gt; with all videos, and in this post I’ll directly link to my favourites - of course focused on Puppet Content and the IAC team’s work.&lt;/p&gt;
-
-&lt;h2 id=&quot;puppet-pair-programming-with-visual-studio-code&quot;&gt;Puppet Pair Programming with Visual Studio Code&lt;/h2&gt;
-
-&lt;p&gt;The &lt;a href=&quot;https://puppet-vscode.github.io/&quot;&gt;Puppet VSCode Plugin&lt;/a&gt; has evolved into THE canonical way to edit puppet modules.
-The authors of the plugin, &lt;a href=&quot;https://www.linkedin.com/in/jamespogran/&quot;&gt;James Pogran&lt;/a&gt; and &lt;a href=&quot;https://www.linkedin.com/in/glenn-sarti/&quot;&gt;Glenn Sarti&lt;/a&gt; are sharing the newest updates to the plugin, as well as some of the benefits of working with a modern, full-featured Development Environment:&lt;/p&gt;
-
-&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/j3o-U1c_dXs?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;
-
-&lt;p&gt;Since last week we also provide a default &lt;a href=&quot;https://gitpod.io&quot;&gt;gitpod&lt;/a&gt; and &lt;a href=&quot;https://github.com/features/codespaces&quot;&gt;codespaces&lt;/a&gt; environment on our supported modules. This way you can try out and use all of that goodness directly from your browser.&lt;/p&gt;
-
-&lt;h2 id=&quot;the-new-puppet-developer-experience-its-all-about-you&quot;&gt;The new Puppet Developer Experience: it’s all about you&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://www.linkedin.com/in/binford2k/&quot;&gt;Ben Ford&lt;/a&gt;, our Developer Advocate and Product Manager, on the state of Puppet Content.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;recent updates to the Forge in form and function&lt;/li&gt;
-  &lt;li&gt;announcing the Trusted Contributor programme&lt;/li&gt;
-  &lt;li&gt;a demo by &lt;a href=&quot;https://www.linkedin.com/in/daniel-carabas-b2bb0851/&quot;&gt;Daniel Carabas&lt;/a&gt; to show off our new public Cloud CI for modules&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/FspzumfFvBg?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;puppetizing-dsc&quot;&gt;Puppetizing DSC&lt;/h2&gt;
-
-&lt;p&gt;As the IAC’s headline feature this year, &lt;a href=&quot;https://www.linkedin.com/in/michaeltlombardi/&quot;&gt;Michael Lombardi&lt;/a&gt; is talking about how we finally fixed the “DSC-update” problem.
-From now on, we can publish up-to-date puppet wrappers of &lt;a href=&quot;https://www.powershellgallery.com/packages&quot;&gt;all DSC module from the gallery&lt;/a&gt; (select “DSC Resource” in the filters) to the new &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;DSC namespace on the forge&lt;/a&gt;.
-This means that any improvement on upstream DSC resources will become available in a timely manner - and without additional build steps - to all Puppet users.
-The way it is designed also means that from this point forward, everyone can build their local DSC resources into a puppet module using the &lt;a href=&quot;https://www.powershellgallery.com/packages/Puppet.Dsc&quot;&gt;Puppet.Dsc Powershell Module&lt;/a&gt;.&lt;/p&gt;
-
-&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/i-eo58NaYKg?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;automate-everything&quot;&gt;Automate Everything&lt;/h2&gt;
-
-&lt;p&gt;If you need to manage a lot of module repositories, &lt;a href=&quot;https://github.com/op-ct&quot;&gt;Chris Tessmer&lt;/a&gt; has your back.
-Based on a few scripts and bolt, he single-handedly (and very handily) replaces modulesync and pdksync with a much nicer alternative.
-&lt;a href=&quot;https://github.com/op-ct/puppetsync&quot;&gt;puppetsync&lt;/a&gt; is a set of tasks and plans supporting managing &lt;a href=&quot;https://forge.puppet.com/simp&quot;&gt;SIMP&lt;/a&gt;’s modules on github.
-In his talk, Chris shows how it is used, and a number of useful tips and tricks for working with bolt plans.&lt;/p&gt;
-
-&lt;iframe width=&quot;800&quot; height=&quot;450&quot; src=&quot;https://www.youtube.com/embed/48m8b5VRWoY?color=white&amp;amp;theme=light&quot;&gt;&lt;/iframe&gt;
-
-&lt;h2 id=&quot;further-content-watching&quot;&gt;Further Content Watching&lt;/h2&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=mDhmxH0hi9Q&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=5&quot;&gt;ServiceNow integration&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=PEn5UZR0bso&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=8&quot;&gt;Preparing People for Proper Patching with Puppet Plans&lt;/a&gt; (also aspirant for alliteration award)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=55KSc63W1_E&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=18&quot;&gt;Roles and Profiles&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=hYdF5vJu_HA&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=20&quot;&gt;Application Stack Builds&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=xLF6UkzpBQ4&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=24&quot;&gt;Automating Windows&lt;/a&gt;
-    &lt;ul&gt;
-      &lt;li&gt;More in-depth info in the &lt;a href=&quot;https://www.youtube.com/watch?v=NFnVSENjRGs&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=43&quot;&gt;workshop&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=bbZ9T3Hp_xI&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=26&quot;&gt;Update your code safely&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://www.youtube.com/watch?v=8FblErxC1OY&amp;amp;list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&amp;amp;index=33&quot;&gt;Git Workflows for Puppet&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;You can find the &lt;a href=&quot;https://www.youtube.com/playlist?list=PLV86BgbREluXpEPnW_Bb4kgZAlGit4EnW&quot;&gt;entire playlist on YouTube&lt;/a&gt;.&lt;/p&gt;</content><author><name>dev_el_ops</name></author><category term="puppet" /><category term="conference" /><category term="content" /><category term="demos" /><category term="tips-and-tricks" /><category term="videos" /><summary type="html">Last week saw Puppetize Digital 2020, our annual conference on all things Puppet. Over the weekend, the production team uploaded all the talks to the Puppet YouTube channel, so if you missed anything, you can now catch up at your own leisure. There is a playlist with all videos, and in this post I’ll directly link to my favourites - of course focused on Puppet Content and the IAC team’s work.</summary></entry></feed>
+&lt;p&gt;That’s it for this week, have a great week-end and stay safe !&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="module updates" /><category term="gem updates" /><category term="status" /><category term="community" /><category term="cloud ci" /><summary type="html">Community Contributions</summary></entry></feed>
