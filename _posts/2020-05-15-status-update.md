@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "15st May 2020: IAC Team Status Update"
+title: "15th May 2020: IAC Team Status Update"
 author: daianamezdrea
 categories:
   - team
