@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Converting to use Puppetized DSC Modules | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Converting to use Puppetized DSC Modules" />
+<meta name="author" content="pmcmaw" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Why bother?" />
+<meta property="og:description" content="Why bother?" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-01-26T00:00:00+00:00" />
+<script type="application/ld+json">
+{"headline":"Converting to use Puppetized DSC Modules","description":"Why bother?","datePublished":"2021-01-26T00:00:00+00:00","dateModified":"2021-01-26T00:00:00+00:00","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html"},"url":"https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html","author":{"@type":"Person","name":"pmcmaw"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" />
+    <!-- Google Analytics -->
+    <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-157301458-1', 'auto');
+	ga('send', 'pageview', { 'page': location.pathname + location.search + location.hash});
+	ga('set', 'anonymizeIp', true);
+    </script>
+    <!-- End Google Analytics -->
+    </head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Converting to use Puppetized DSC Modules</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2021-01-26T00:00:00+00:00" itemprop="datePublished">Jan 26, 2021
+      </time>• <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">pmcmaw</span></span></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="why-bother">Why bother?</h2>
+
+<p>To check out our reasons on why we think converting your module is a good idea, check out these blog posts written by <a href="https://github.com/michaeltlombardi">Michael</a>:</p>
+
+<ul>
+  <li><a href="https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html">DSC accouncement post</a></li>
+  <li><a href="https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html">DSC release post</a></li>
+</ul>
+
+<p>The blog posts cover information including:</p>
+
+<ul>
+  <li>Why we are doing this</li>
+  <li>Details about the builder</li>
+  <li>How to Pupperize your Powershell module</li>
+  <li>How to use your Puppetized module</li>
+</ul>
+
+<p><strong>Seriously though what is there to not love?</strong></p>
+
+<ul>
+  <li>Minimal module maintainence costs</li>
+  <li>Automated module building</li>
+  <li>Property by property reporting</li>
+  <li>VSCode Extension with intellisense</li>
+  <li>We have 68 modules on the Forge in the <a href="https://forge.puppet.com/dsc">DSC namespace</a></li>
+  <li>Converting is relatively straight forward</li>
+</ul>
+
+<h2 id="so-how-can-i-do-this">So how can I do this?</h2>
+
+<p><em>Old method:</em></p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod</span> <span class="s1">'puppetlabs-dsc'</span><span class="p">,</span> <span class="s1">'1.9.4'</span>
+</code></pre></div></div>
+
+<p><em>New method:</em></p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod</span> <span class="s1">'puppetlabs-pwshlib'</span><span class="p">,</span> <span class="s1">'0.7.1'</span>
+<span class="n">mod</span> <span class="s1">'dsc-activedirectorycsdsc'</span><span class="p">,</span> <span class="s1">'3.1.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-auditpolicydsc'</span><span class="p">,</span> <span class="s1">'1.4.0-0-1'</span>
+<span class="n">mod</span> <span class="s1">'dsc-certificatedsc'</span><span class="p">,</span> <span class="s1">'4.4.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-computermanagementdsc'</span><span class="p">,</span> <span class="s1">'6.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-dfsdsc'</span><span class="p">,</span> <span class="s1">'4.3.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-networkingdsc'</span><span class="p">,</span> <span class="s1">'7.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-officeonlineserverdsc'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-securitypolicydsc'</span><span class="p">,</span> <span class="s1">'2.7.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-sharepointdsc'</span><span class="p">,</span> <span class="s1">'3.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-sqlserverdsc'</span><span class="p">,</span> <span class="s1">'12.3.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-storagedsc'</span><span class="p">,</span> <span class="s1">'4.5.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-systemlocaledsc'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xactivedirectory'</span><span class="p">,</span> <span class="s1">'2.24.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xazure'</span><span class="p">,</span> <span class="s1">'0.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xazurepack'</span><span class="p">,</span> <span class="s1">'1.4.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xbitlocker'</span><span class="p">,</span> <span class="s1">'1.4.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xcredssp'</span><span class="p">,</span> <span class="s1">'1.3.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdatabase'</span><span class="p">,</span> <span class="s1">'1.9.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdefender'</span><span class="p">,</span> <span class="s1">'0.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdhcpserver'</span><span class="p">,</span> <span class="s1">'2.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdisk'</span><span class="p">,</span> <span class="s1">'1.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdismfeature'</span><span class="p">,</span> <span class="s1">'1.3.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xdnsserver'</span><span class="p">,</span> <span class="s1">'1.11.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xexchange'</span><span class="p">,</span> <span class="s1">'1.27.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xfailovercluster'</span><span class="p">,</span> <span class="s1">'1.12.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'ddsc-xhyper_v'</span><span class="p">,</span> <span class="s1">'3.16.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xinternetexplorerhomepage'</span><span class="p">,</span> <span class="s1">'1.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xjea'</span><span class="p">,</span> <span class="s1">'0.2.16-6-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xmysql'</span><span class="p">,</span> <span class="s1">'2.1.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xpendingreboot'</span><span class="p">,</span> <span class="s1">'0.4.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xphp'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xpowershellexecutionpolicy'</span><span class="p">,</span> <span class="s1">'3.1.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xpsdesiredstateconfiguration'</span><span class="p">,</span> <span class="s1">'8.5.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xremotedesktopadmin'</span><span class="p">,</span> <span class="s1">'1.1.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xremotedesktopsessionhost'</span><span class="p">,</span> <span class="s1">'1.8.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xrobocopy'</span><span class="p">,</span> <span class="s1">'2.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscdpm'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscom'</span><span class="p">,</span> <span class="s1">'1.3.3-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscsma'</span><span class="p">,</span> <span class="s1">'2.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscspf'</span><span class="p">,</span> <span class="s1">'1.3.1-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscsr'</span><span class="p">,</span> <span class="s1">'1.3.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xscvmm'</span><span class="p">,</span> <span class="s1">'1.2.4-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xsmbshare'</span><span class="p">,</span> <span class="s1">'2.1.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xsqlps'</span><span class="p">,</span> <span class="s1">'1.4.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xtimezone'</span><span class="p">,</span> <span class="s1">'1.8.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwebadministration'</span><span class="p">,</span> <span class="s1">'2.5.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwebdeploy'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwindowseventforwarding'</span><span class="p">,</span> <span class="s1">'1.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwindowsrestore'</span><span class="p">,</span> <span class="s1">'1.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwindowsupdate'</span><span class="p">,</span> <span class="s1">'2.7.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwineventlog'</span><span class="p">,</span> <span class="s1">'1.2.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-xwordpress'</span><span class="p">,</span> <span class="s1">'1.1.0-0-0'</span>
+</code></pre></div></div>
+
+<p>I know this <em>looks</em> like a lot of work, but really the work has been done for you!
+Just copy and paste the above code snippet.</p>
+
+<blockquote>
+  <p>The modules above are as alike to the <code class="language-plaintext highlighter-rouge">puppetlabs-dsc</code> module as we could possibly get.
+It is strongly recommended to migrate to these versions and when everything is up and running, upgrading to the latest versions.</p>
+</blockquote>
+
+<h2 id="a-few-caveats">A few caveats</h2>
+
+<p>The following modules cannot be automatically puppetized at the same version because they referenced commit SHAs instead of versions discoverable on the <a href="https://www.powershellgallery.com">gallery;</a>
+instead, we recommend using the next released stable version after those SHA’s, as listed below:</p>
+
+<blockquote>
+  <p><em><strong>Note:</strong> These are close but not precise replacements:</em></p>
+</blockquote>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod</span> <span class="s1">'dsc-fsrmdsc'</span><span class="p">,</span> <span class="s1">'2.5.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-iscsidsc'</span><span class="p">,</span> <span class="s1">'2.0.0-0-0'</span>
+<span class="n">mod</span> <span class="s1">'dsc-wsmandsc'</span><span class="p">,</span> <span class="s1">'2.4.0-0-0'</span>
+</code></pre></div></div>
+
+<p>Here are links to the specific commit SHAs that have been referenced:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/dsccommunity/FSRMDsc/commit/8945f610fa9a6f7f920260abf4e50d91db25bac0">FSRMDsc</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dsccommunity/iSCSIDsc/commit/2208ad24a0cc0a85ce19fb377e72fbc21d366587">iSCSIDsc</a></p>
+  </li>
+  <li>
+    <p><a href="https://github.com/dsccommunity/wsmandsc/commit/1aa6400e7ffa1932505bf9904a7ce9e147af9c45">WSManDsc</a></p>
+  </li>
+</ul>
+
+<blockquote>
+  <p><em><strong>Note:</strong> puppetized as <code class="language-plaintext highlighter-rouge">dsc/wminamespacesecurity</code> due to the name of the module changing when pushed to the <a href="https://www.powershellgallery.com">PowerShell Gallery</a> vs the old code repository.</em></p>
+</blockquote>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mod</span> <span class="s1">'dsc-wminamespacesecuritydsc'</span><span class="p">,</span> <span class="s1">'0.3.0-0-0'</span>
+</code></pre></div></div>
+
+<p>Again here is a link to the specific commit SHA that has been referenced:</p>
+
+<ul>
+  <li><a href="https://github.com/PowerShell/WmiNamespaceSecurityDsc/commit/d49daa4c18f12aabf32fd60631d927c6d276a453">WmiNamespaceSecurityDsc</a></li>
+</ul>
+
+<h2 id="guidance-on-troubleshooting">Guidance on troubleshooting</h2>
+
+<p>Coincidently <a href="https://github.com/michaeltlombardi">Michael</a> has just published a blog post on how to troubleshoot for DSC.</p>
+
+<p>Check it out on our <a href="https://puppetlabs.github.io/iac/">blog page</a>!</p>
+
+<h2 id="some-things-come-for-free">Some things come for free!</h2>
+
+<p>We suggest using the Puppet VSCode extension as it comes built in with an auto-completer. This will help you keep your pins up to date with the puppetfile resolver.</p>
+
+<p><img src="/iac/assets/2021-01-26-converting-dsc-modules/puppetfile-resolver.gif" alt="Showing validation errors in your Puppetfile" /></p>
+
+<h2 id="what-else-is-coming">What else is coming</h2>
+
+<p>As part of our next phase we plan to flesh out and update our testing infrastructure for this module on our road to the <code class="language-plaintext highlighter-rouge">1.0.0</code> release of <code class="language-plaintext highlighter-rouge">Puppet.Dsc</code>.
+In the pipeline, we still plan on getting nightly builds into place to ensure that there is never more than a 24 hour lag between published Powershell modules with DSC Resources and our Puppetized modules on the Forge.</p>
+
+<p>As always if you have any questions don’t hesistate to reach out to us via <a href="https://slack.puppet.com/">Slack</a> or <a href="mailto:dsc@puppet.com">emailing</a> and we will be as accomodating as we can be!</p>
+
+
+  </div><a class="u-url" href="/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
