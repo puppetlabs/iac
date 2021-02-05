@@ -38,7 +38,7 @@ The following modules were released this week:
 
 This week the development work was focused on the automated release preparation and multi-node testing.
 
-The tempate for the automated module release preparation in `pdk-templates` is currently [undergoing testing][pdk-templates-pr-394] and, hopefully, by the end of next week a pdksync across all our supported modules will ease releases in the future.
+The template for the automated module release preparation in `pdk-templates` is currently [undergoing testing][pdk-templates-pr-394] and, hopefully, by the end of next week a pdksync across all our supported modules will ease releases in the future.
 
 For a quick preview on multi-node testing, [take a look at this NTP pull request][puppetlabs-ntp-pr-603] that deploys two VMs on GCP with different roles and runs an integration test suite to check communications.
 
