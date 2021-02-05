@@ -67,6 +67,7 @@ Last week, [David Swan][DavidSwan] addressed a long-standing issue where litmus 
 ## Cisco Networking
 
 [Ciaran][Ciaran] put up a [draft PR](https://github.com/puppetlabs/cisco_ios/pull/427) on some new Cisco/Bolt functionality. All comments welcome!
+
 <!-- Reference Links -->
 [puppetlabs-ntp-pr-603]:         https://github.com/puppetlabs/puppetlabs-ntp/pull/603
 [pdk-templates-pr-394]:          https://github.com/puppetlabs/pdk-templates/pull/394
