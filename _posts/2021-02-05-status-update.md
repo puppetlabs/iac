@@ -17,6 +17,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`puppetlabs-kubernetes#462`][puppetlabs-kubernetes-pr-462]: "Allow tmp_directory to be changed", thanks to [treydock][treydock]
 - [`puppetlabs-postgresql#1226`][puppetlabs-postgresql-pr-1226]: "Fix postgresql::sql task when password is not set", thanks to [smortex][smortex]
 - [`puppetlabs-postgresql#1225`][puppetlabs-postgresql-pr-1225]: "Clean up globals logic to support CentOS 8 stream", thanks to [ekohl][ekohl]
+- [`puppetlabs-postgresql#1230`](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1230): "(bug) fix systemd daemon-reload order when updating service files", thanks to [vchepkov](https://github.com/vchepkov) and [ekohl][ekohl] for raising the issue and great cooperation on the PR!
 - [`pdk#939`][pdk-pr-939]: "(MAINT) Disable parallel unit package testing specs on Windows", thanks to [scotje][scotje]
 - [`pdk#932`][pdk-pr-932]: "Add ability to generate functions", thanks to [logicminds][logicminds]
 - [`pdk-vanagon#274`][pdk-vanagon-pr-274]: "Revert "Only install system_tests gem on the main ruby"", thanks to [scotje][scotje]
