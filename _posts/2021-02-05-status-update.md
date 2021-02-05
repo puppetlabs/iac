@@ -53,6 +53,20 @@ It also led to a pairing session with [Jordan Bush][jordanbush] where he was abl
 We're excited to see the adoption of the Puppetized modules in the `dsc` namespace on the Forge grow, especially now that we've cut down on some of the guess work for migrating from the older `puppetlabs-dsc` module.
 The last remaining tasks in our first milestone are administrative, so next week will see us tackling [issues in the next milestone][dsc-milestone-2] which should set us up for a `1.0.0` release.
 
+## PDK
+
+Check out the new [nightly builds](http://nightlies.puppet.com/) (use the `puppet6-nightly` repos [for now](https://tickets.puppetlabs.com/browse/PDK-1683)) of the PDK with ruby 2.7, facter 4 and puppet 7. Please note that this is also dropping puppet 4 and hence will become PDK 2.0 at some point in the near future.
+
+## Ecosystem Kickoffs
+
+Despite the travel restrictions, the wider ecosystem group at Puppet came together this week to share challenges, ideas, and plans. While we can't share many of the details (yet!!), it was a great opportunity to exchange with our friends from the Forge, Bolt, Integrations, and Solution teams, as well as update our understanding of how our work fits into the greater Puppet Product Strategy. Big shout-out to [Ben Ford](https://twitter.com/binford2k) for stepping up to the role of Product Manager and organising a week chock-full of Content!
+
+## Litmus
+Last week, [David Swan][DavidSwan] addressed a long-standing issue where litmus would get confused about exit codes when running puppet. This week saw a minor adjustment and another [litmus release](https://github.com/puppetlabs/puppet_litmus/releases/tag/v0.23.0) to make this also work for the `docker_exp` provisioner.
+
+## Cisco Networking
+
+[Ciaran][Ciaran] put up a [draft PR](https://github.com/puppetlabs/cisco_ios/pull/427) on some new Cisco/Bolt functionality. All comments welcome!
 <!-- Reference Links -->
 [puppetlabs-ntp-pr-603]:         https://github.com/puppetlabs/puppetlabs-ntp/pull/603
 [pdk-templates-pr-394]:          https://github.com/puppetlabs/pdk-templates/pull/394
