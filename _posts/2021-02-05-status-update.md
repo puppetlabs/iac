@@ -24,7 +24,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`ruby-pwsh#101`][ruby-pwsh-pr-101]: "(MAINT) Place nil check when assigning is_same", thanks to [bwilcox][bwilcox]
 - [`ruby-pwsh#96`][ruby-pwsh-pr-96]: "(MAINT) Ensure is_same check works for nil manifest values", thanks to [bwilcox][bwilcox]
 
-Please swing by our [office hours on Monday](https://puppet.com/community/office-hours/) on Slack if you want to directly contact us about anything module related.
+Check [all the ways to reach us](https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html) if you want to directly contact us about anything module related.
 
 ## New Module / Gem Releases
 
