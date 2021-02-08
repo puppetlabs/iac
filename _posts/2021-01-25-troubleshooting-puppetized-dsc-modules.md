@@ -335,55 +335,55 @@ output = ps_manager.execute(script_content)[:stdout]
 
 This will get you an interactive prompt inside the Puppet run:
 
-![Initial execution of pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.png)
+![Initial execution of pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.PNG %})
 
 You can call `ls` in that context to see what methods and variables are available:
 
-![Demonstrating the `ls` command in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.png)
+![Demonstrating the `ls` command in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.PNG %})
 
 You can type the name of one of the variables, such as `name_hash` and hit enter to see what it is set to:
 
-![Printing the `name_hash` variable in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.png)
+![Printing the `name_hash` variable in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.PNG %})
 
 You can use the `whereami` command to show where you are in the code.
 If you pass an integer to this command, it will show you that many lines around your current line.
 
-![Running the `whereami` command in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.png)
+![Running the `whereami` command in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.PNG %})
 
 Next, we'll execute the invocation script and assign it to our own variable (this will take a bit as it's spinning up PowerShell for the first time and running `Invoke-DscResource`):
 
-![Executing independent code in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.png)
+![Executing independent code in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.PNG %})
 
 In my case, it looks like we got some data for `stdout`, an exit code of zero, and no errors.
 
 If we call `next`, pry will execute the next line of code.
 
-![Calling the `next` command in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.png)
+![Calling the `next` command in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.PNG %})
 
 Note that the marker for our current line has updated to 243.
 We can keep using `next` to walk through the code execution, investigating any variables or running any methods for ourselves to see.
 I'll keep doing that til we hit line 267, where the code manipulates the output data a little bit:
 
-![Showing the context that will modify the data variable in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.png)
+![Showing the context that will modify the data variable in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.PNG %})
 
 Before we run these lines, lets check on some state:
 
-![Printing the initial value of the data variable in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.png)
+![Printing the initial value of the data variable in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.PNG %})
 
-![Printing the value of the valid_attributes variable in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.png)
+![Printing the value of the valid_attributes variable in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.PNG %})
 
-![Printing the value of the parameters variable in pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.png)
+![Printing the value of the parameters variable in pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.PNG %})
 
 Okay, so that shows us the current state of the data, the list of valid attributes, and the parameters respectively.
 We can then run `next` and check the value of `data` again to see what the `data.select!` line did:
 
-![Printing the value of the data variable in pry after the select! method is used on it](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.png)
+![Printing the value of the data variable in pry after the select! method is used on it]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.PNG %})
 
 It looks like the list of key-value pairs has been trimmed down - we do this so only the values that Puppet cares about will be evaluated in the rest of the Puppet run.
 
 If we use `next` again and look at data a final time:
 
-![Printing the value of the data variable in pry after the reject! method is used on it](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.png)
+![Printing the value of the data variable in pry after the reject! method is used on it]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.PNG %})
 
 We see that the key for `PSDscRunAsCredential` has been removed, which happens because it was the only key which was in the list of parameters.
 
@@ -391,7 +391,7 @@ This brings us to a loop in the code.
 If we want to see what happens _inside_ the loop, we need to use the `step` command.
 This command also lets you shift contexts inside of any method being called.
 
-![Showing the result of stepping into a loop in Pry](/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.png)
+![Showing the result of stepping into a loop in Pry]({% link /assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.PNG %})
 
 Note that we're now _inside_ the loop - if we had called `next`, it would've evaluated the whole loop and gone to the next line after it.
 
