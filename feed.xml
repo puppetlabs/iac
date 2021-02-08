@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-02-08T02:19:37+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-02-05: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update.html" rel="alternate" type="text/html" title="2021-02-05: IAC Team Status Update" /><published>2021-02-05T00:00:00+00:00</published><updated>2021-02-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-02-08T10:53:32+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-02-05: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update.html" rel="alternate" type="text/html" title="2021-02-05: IAC Team Status Update" /><published>2021-02-05T00:00:00+00:00</published><updated>2021-02-05T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/02/05/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 
 &lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
 
@@ -590,55 +590,55 @@ For the purposes of this tutorial, we’re going to add it just before the DSC i
 
 &lt;p&gt;This will get you an interactive prompt inside the Puppet run:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.png&quot; alt=&quot;Initial execution of pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.PNG&quot; alt=&quot;Initial execution of pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls&lt;/code&gt; in that context to see what methods and variables are available:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.png&quot; alt=&quot;Demonstrating the `ls` command in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.PNG&quot; alt=&quot;Demonstrating the `ls` command in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can type the name of one of the variables, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name_hash&lt;/code&gt; and hit enter to see what it is set to:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.png&quot; alt=&quot;Printing the `name_hash` variable in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.PNG&quot; alt=&quot;Printing the `name_hash` variable in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;You can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;whereami&lt;/code&gt; command to show where you are in the code.
 If you pass an integer to this command, it will show you that many lines around your current line.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.png&quot; alt=&quot;Running the `whereami` command in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.PNG&quot; alt=&quot;Running the `whereami` command in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Next, we’ll execute the invocation script and assign it to our own variable (this will take a bit as it’s spinning up PowerShell for the first time and running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;):&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.png&quot; alt=&quot;Executing independent code in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.PNG&quot; alt=&quot;Executing independent code in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;In my case, it looks like we got some data for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, an exit code of zero, and no errors.&lt;/p&gt;
 
 &lt;p&gt;If we call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt;, pry will execute the next line of code.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.png&quot; alt=&quot;Calling the `next` command in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.PNG&quot; alt=&quot;Calling the `next` command in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Note that the marker for our current line has updated to 243.
 We can keep using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; to walk through the code execution, investigating any variables or running any methods for ourselves to see.
 I’ll keep doing that til we hit line 267, where the code manipulates the output data a little bit:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.png&quot; alt=&quot;Showing the context that will modify the data variable in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.PNG&quot; alt=&quot;Showing the context that will modify the data variable in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Before we run these lines, lets check on some state:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.png&quot; alt=&quot;Printing the initial value of the data variable in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.PNG&quot; alt=&quot;Printing the initial value of the data variable in pry&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.png&quot; alt=&quot;Printing the value of the valid_attributes variable in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.PNG&quot; alt=&quot;Printing the value of the valid_attributes variable in pry&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.png&quot; alt=&quot;Printing the value of the parameters variable in pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.PNG&quot; alt=&quot;Printing the value of the parameters variable in pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Okay, so that shows us the current state of the data, the list of valid attributes, and the parameters respectively.
 We can then run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; and check the value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; again to see what the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data.select!&lt;/code&gt; line did:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.png&quot; alt=&quot;Printing the value of the data variable in pry after the select! method is used on it&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.PNG&quot; alt=&quot;Printing the value of the data variable in pry after the select! method is used on it&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;It looks like the list of key-value pairs has been trimmed down - we do this so only the values that Puppet cares about will be evaluated in the rest of the Puppet run.&lt;/p&gt;
 
 &lt;p&gt;If we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; again and look at data a final time:&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.png&quot; alt=&quot;Printing the value of the data variable in pry after the reject! method is used on it&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.PNG&quot; alt=&quot;Printing the value of the data variable in pry after the reject! method is used on it&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;We see that the key for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PSDscRunAsCredential&lt;/code&gt; has been removed, which happens because it was the only key which was in the list of parameters.&lt;/p&gt;
 
@@ -646,7 +646,7 @@ We can then run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&
 If we want to see what happens &lt;em&gt;inside&lt;/em&gt; the loop, we need to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step&lt;/code&gt; command.
 This command also lets you shift contexts inside of any method being called.&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.png&quot; alt=&quot;Showing the result of stepping into a loop in Pry&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.PNG&quot; alt=&quot;Showing the result of stepping into a loop in Pry&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Note that we’re now &lt;em&gt;inside&lt;/em&gt; the loop - if we had called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt;, it would’ve evaluated the whole loop and gone to the next line after it.&lt;/p&gt;
 

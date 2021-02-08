@@ -372,55 +372,55 @@ For the purposes of this tutorial, we’re going to add it just before the DSC i
 
 <p>This will get you an interactive prompt inside the Puppet run:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.png" alt="Initial execution of pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.PNG" alt="Initial execution of pry" /></p>
 
 <p>You can call <code class="language-plaintext highlighter-rouge">ls</code> in that context to see what methods and variables are available:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.png" alt="Demonstrating the `ls` command in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.PNG" alt="Demonstrating the `ls` command in pry" /></p>
 
 <p>You can type the name of one of the variables, such as <code class="language-plaintext highlighter-rouge">name_hash</code> and hit enter to see what it is set to:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.png" alt="Printing the `name_hash` variable in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.PNG" alt="Printing the `name_hash` variable in pry" /></p>
 
 <p>You can use the <code class="language-plaintext highlighter-rouge">whereami</code> command to show where you are in the code.
 If you pass an integer to this command, it will show you that many lines around your current line.</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.png" alt="Running the `whereami` command in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.PNG" alt="Running the `whereami` command in pry" /></p>
 
 <p>Next, we’ll execute the invocation script and assign it to our own variable (this will take a bit as it’s spinning up PowerShell for the first time and running <code class="language-plaintext highlighter-rouge">Invoke-DscResource</code>):</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.png" alt="Executing independent code in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.PNG" alt="Executing independent code in pry" /></p>
 
 <p>In my case, it looks like we got some data for <code class="language-plaintext highlighter-rouge">stdout</code>, an exit code of zero, and no errors.</p>
 
 <p>If we call <code class="language-plaintext highlighter-rouge">next</code>, pry will execute the next line of code.</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.png" alt="Calling the `next` command in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.PNG" alt="Calling the `next` command in pry" /></p>
 
 <p>Note that the marker for our current line has updated to 243.
 We can keep using <code class="language-plaintext highlighter-rouge">next</code> to walk through the code execution, investigating any variables or running any methods for ourselves to see.
 I’ll keep doing that til we hit line 267, where the code manipulates the output data a little bit:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.png" alt="Showing the context that will modify the data variable in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.PNG" alt="Showing the context that will modify the data variable in pry" /></p>
 
 <p>Before we run these lines, lets check on some state:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.png" alt="Printing the initial value of the data variable in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.PNG" alt="Printing the initial value of the data variable in pry" /></p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.png" alt="Printing the value of the valid_attributes variable in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.PNG" alt="Printing the value of the valid_attributes variable in pry" /></p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.png" alt="Printing the value of the parameters variable in pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.PNG" alt="Printing the value of the parameters variable in pry" /></p>
 
 <p>Okay, so that shows us the current state of the data, the list of valid attributes, and the parameters respectively.
 We can then run <code class="language-plaintext highlighter-rouge">next</code> and check the value of <code class="language-plaintext highlighter-rouge">data</code> again to see what the <code class="language-plaintext highlighter-rouge">data.select!</code> line did:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.png" alt="Printing the value of the data variable in pry after the select! method is used on it" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.PNG" alt="Printing the value of the data variable in pry after the select! method is used on it" /></p>
 
 <p>It looks like the list of key-value pairs has been trimmed down - we do this so only the values that Puppet cares about will be evaluated in the rest of the Puppet run.</p>
 
 <p>If we use <code class="language-plaintext highlighter-rouge">next</code> again and look at data a final time:</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.png" alt="Printing the value of the data variable in pry after the reject! method is used on it" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.PNG" alt="Printing the value of the data variable in pry after the reject! method is used on it" /></p>
 
 <p>We see that the key for <code class="language-plaintext highlighter-rouge">PSDscRunAsCredential</code> has been removed, which happens because it was the only key which was in the list of parameters.</p>
 
@@ -428,7 +428,7 @@ We can then run <code class="language-plaintext highlighter-rouge">next</code> a
 If we want to see what happens <em>inside</em> the loop, we need to use the <code class="language-plaintext highlighter-rouge">step</code> command.
 This command also lets you shift contexts inside of any method being called.</p>
 
-<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.png" alt="Showing the result of stepping into a loop in Pry" /></p>
+<p><img src="/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.PNG" alt="Showing the result of stepping into a loop in Pry" /></p>
 
 <p>Note that we’re now <em>inside</em> the loop - if we had called <code class="language-plaintext highlighter-rouge">next</code>, it would’ve evaluated the whole loop and gone to the next line after it.</p>
 
