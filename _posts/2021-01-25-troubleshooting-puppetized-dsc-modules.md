@@ -4,12 +4,14 @@ title: "Troubleshooting Puppetized DSC Modules"
 author: michaeltlombardi
 ---
 
+*[An edited version of this post was also published on the [OSPAssist Portal](https://ospassist.puppet.com/) as [Troubleshooting Puppetized DSC modules](https://ospassist.puppet.com/hc/en-us/articles/1500002388661-Troubleshooting-Puppetized-DSC-modules) and [Advanced troubleshooting: dig deeper with pry](https://ospassist.puppet.com/hc/en-us/articles/360061073994-Advanced-troubleshooting-dig-deeper-with-pry)]*
+
 Authoring Puppet manifests using the new [Puppetized DSC Resources][dsc-forge] is, like using any other Puppet modules, a few steps and a deploy away for most use cases.
-Sometimes you will run into a problem trying to apply a manifest containing one or more Puppetized DSC resources.
+Sometimes you will run into a problem trying to apply a manifest containing one or more puppetized DSC resources.
 What could be causing the problem?
 
 Is it a problem with the builder?
-The Puppet representaion of the DSC Resource could not match the API surface, resulting in misgenerated types, enums or method calls.
+The Puppet representation of the DSC Resource could not match the API surface, resulting in misgenerated types, enums or method calls.
 
 Could the problem be the DSC Resource itself?
 The PowerShell DSC code could not work, which would be hidden underneath the Puppet Ruby exception stacktrace.
@@ -25,7 +27,7 @@ This blog post will help you find your way foreward.
 ## Basic Troubleshooting
 
 The first thing to note is that there's actually a [basic troubleshooting guide for `Puppet.Dsc`][troubleshooting-doc].
-That guide covers finding problems like [type errors][type-errors] or [incorrect enums][incorrect-enums] in the module builder, [invocation errors][invocation-errors] during a Puppet run, and problems with the tanslation layer in `pwslib`. There is a lot of good information there, so we won't cover those areas again here.
+That guide covers finding problems like [type errors][type-errors] or [incorrect enums][incorrect-enums] in the module builder, [invocation errors][invocation-errors] during a Puppet run, and problems with the tanslation layer in `pwshlib`. There is a lot of good information there, so we won't cover those areas again here.
 
 The guide also covers running Puppet in **debug** mode, which you will need to know about for the next couple sections.
 In short, if you append the `--debug` flag to the end of your Puppet invocation, you'll get a _ton_ of additional information out of the run.
@@ -34,7 +36,7 @@ Please make sure to read the guide to ensure you have a reference point before w
 ## Advanced Troubleshooting
 
 So, you have a Puppet manifest with one or more Puppetized DSC Resource declarations in it.
-Things are not working and the basic troublshooting guide didn't solve the problem.
+Things are not working and the basic troubleshooting guide didn't solve the problem.
 
 The first place to start is to validate that what you declared in the manifest was translated correctly to the PowerShell DSC code to execute.
 
@@ -47,19 +49,19 @@ Lets walk through an example manifest:
 
 ```puppet
 dsc_psrepository { 'PowerShell Gallery':
-  dsc_name               => 'psgAllery',
+  dsc_name               => 'psGallery',
   dsc_installationpolicy => 'Trusted',
 }
 ```
 
-If we execute Puppet in debug mode, we'll get the following (abreviated) output:
+If we execute Puppet in debug mode, we'll get the following (abbreviated) output:
 
 ```
-Debug: dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psgAllery"}]: Updating: Invoking Set Method for '{:name=>"PowerShell Gallery", :dsc_name=>"psgAllery"}' with {:name=>"PowerShell Gallery", :dsc_name=>"psgAllery", :dsc_installationpolicy=>"Trusted"}
+Debug: dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psGallery"}]: Updating: Invoking Set Method for '{:name=>"PowerShell Gallery", :dsc_name=>"psGallery"}' with {:name=>"PowerShell Gallery", :dsc_name=>"psGallery", :dsc_installationpolicy=>"Trusted"}
 ... (snipped for brevity)
-dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psgAllery"}]: Updating: Script:
+dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psGallery"}]: Updating: Script:
 ... (snipped for brevity)
-$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psgAllery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}} Try {
+$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psGallery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}} Try {
   $Result = Invoke-DscResource @InvokeParams
 } catch {
   $Response.errormessage   = $_.Exception.Message
@@ -73,16 +75,16 @@ The first line is Puppet telling us why it's doing what it's doing and with what
 We see its the PowerShell Gallery module, using the Gallery DSC Resource and setting the `installationpolicy` to `Trusted`.
 
 ```
-Debug: dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psgAllery"}]: Updating: Invoking Set Method for '{:name=>"PowerShell Gallery", :dsc_name=>"psgAllery"}' with {:name=>"PowerShell Gallery", :dsc_name=>"psgAllery", :dsc_installationpolicy=>"Trusted"}
+Debug: dsc_psrepository[{:name=>"PowerShell Gallery", :dsc_name=>"psGallery"}]: Updating: Invoking Set Method for '{:name=>"PowerShell Gallery", :dsc_name=>"psGallery"}' with {:name=>"PowerShell Gallery", :dsc_name=>"psGallery", :dsc_installationpolicy=>"Trusted"}
 ```
 
 This can be more easily read as as Ruby hash:
 
 ```ruby
 {
-  :name=>"PowerShell Gallery",
-  :dsc_name=>"psgAllery",
-  :dsc_installationpolicy=>"Trusted"
+  :name => "PowerShell Gallery",
+  :dsc_name => "psGallery",
+  :dsc_installationpolicy => "Trusted"
 }
 ```
 
@@ -90,7 +92,7 @@ The next part in the log to look at is the invocation parameters.
 This is the PowerShell code generated from the section we just examined:
 
 ```
-$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psgAllery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}}
+$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psGallery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}}
 ```
 
 Translating that to a PowerShell hash, we can see a similar represation of the Ruby hash we just looked at.
@@ -100,7 +102,7 @@ This is the exact code that will be passed to `Invoke-DscResource` (expanded fro
 $InvokeParams = @{
   Name = 'PSRepository';
   Method = 'get';
-  Property = @{ name = 'psgAllery' };
+  Property = @{ name = 'psGallery' };
   ModuleName = @{
     ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1';
     RequiredVersion = '2.2.4.1'
@@ -122,7 +124,7 @@ In a PowerShell console with administrator permissions, you'll copy and paste th
 PS C:\> $InvokeParams = @{
 >>   Name = 'PSRepository';
 >>   Method = 'get';
->>   Property = @{ name = 'psgAllery' };
+>>   Property = @{ name = 'psGallery' };
 >>   ModuleName = @{
 >>     ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1';
 >>     RequiredVersion = '2.2.4.1'
@@ -138,7 +140,7 @@ If the code fails after pasting in the `$InvokeParams` block, then there is some
 If something _has_ gone wrong converting the values in your Puppet manifest to the `InvokeParams` hash being passed to `Invoke-DscResource`, please do [file an issue][puppet-dsc-bug-report] with us and we'll be sure to take a look.
 
 If the code fails after invoking `Invoke-DscResource`, then there is likely a problem inside the DSC Resource itself.
-If it's an issue with the DSC Resource, hopefully you'll have enough information from the execution to put together a bug report for the upstream PowerShell module and work with that DSC Resouce's authors for a resolution.
+If it's an issue with the DSC Resource, hopefully you'll have enough information from the execution to put together a bug report for the upstream PowerShell module and work with that DSC resource's authors for a resolution.
 
 #### Invoking DSC Resources with PSCredentials
 
@@ -150,7 +152,7 @@ $InvokeParams = @{
   Name = 'PSRepository';
   Method = 'set';
   Property = @{
-    name = 'psgAllery';
+    name = 'psGallery';
     installationpolicy = 'Trusted';
     psdscrunascredential = $febabd4f_19e8_4ed6_a218_188e275ecc05
   };
