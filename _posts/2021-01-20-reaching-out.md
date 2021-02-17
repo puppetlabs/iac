@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "2021-01-20: Reaching the IAC Team"
+title: "Reaching the IAC Team"
 author: pmcmaw
 categories:
   - team
