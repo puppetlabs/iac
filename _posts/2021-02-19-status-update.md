@@ -20,6 +20,7 @@ tags:
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
 
 - [`puppetlabs-apache#2122`][puppetlabs-apache-pr-2122]: "(IAC-1186) Add $use_port_for_filenames parameter", thanks to [smortex][smortex]
+- [`puppetlabs-apache#2121`][puppetlabs-apache-pr-2121]: "(MODULES-10899) Handle PHP8 MOD package naming convention changes", thanks to [cdamage][cdamage] for the original fix, [beatchristen][beatchristen] for some enhancements for Debian 10 and [gguillotte][gguillotte] for reviewing.
 - [`puppetlabs-apache#2120`][puppetlabs-apache-pr-2120]: "(MAINT) Use shared examples for facts + other spec cleanups", thanks to [ekohl][ekohl]
 - [`puppetlabs-java#461`][puppetlabs-java-pr-461]: "(MODULES-10935) - Switch legacy operatingsystem fact to modern kernel one", thanks to [rjd1][rjd1]
 - [`puppetlabs-kubernetes#473`][puppetlabs-kubernetes-pr-473]: "Fix calico CNI support", thanks to [djschaap][djschaap]
@@ -70,5 +71,4 @@ The work we are currently doing on Puppet Litmus and the PDK Templates will impr
 On the multi-node testing we have begun [work](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) on the puppetlabs-kubernetes module, where we are preparing an integration test setup that will use the Cloud CI provisioning mechanism to test puppetlabs-kubernetes module with the associated puppetlabs-helm and puppetlabs-rook modules. 
 
 ## PDK
-
 
