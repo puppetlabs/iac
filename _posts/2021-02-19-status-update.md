@@ -80,3 +80,8 @@ On the multi-node testing we have begun [work](https://github.com/puppetlabs/pup
 [cdamage]:       https://github.com/cdamage
 [gguillotte]:       https://github.com/gguillotte
 [puppetlabs-apache-pr-2121]: https://github.com/puppetlabs/puppetlabs-apache/pull/2124
+
+## Module Release
+Delighted to say that the [`puppetlabs-wsus_client`][puppetlabs-wsus_client] (`3.2.0`) is released! 
+
+During the release process I discovered that tests were failing on AppVeyor due to a legacy parameter error which adapted Pester 5 to Pester 4 syntax. Thanks to [Paula](https://github.com/pmcmaw) for fixing this issue by raising a new PR and taking time out with me to explain what was wrong as well as releasing the new version on the [Puppet Forge](https://forge.puppet.com/modules/puppetlabs/wsus_client) (`3.2.0`)
