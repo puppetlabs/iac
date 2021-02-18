@@ -19,20 +19,20 @@ tags:
 
 We'd like to thank the following people in the Puppet Community for their contributions over this past week:
 
-- [`puppetlabs-apache#2122`][puppetlabs-apache-pr-2122]: "(IAC-1186) Add $use_port_for_filenames parameter", thanks to [smortex][smortex]
-- [`puppetlabs-apache#2121`][puppetlabs-apache-pr-2121]: "(MODULES-10899) Handle PHP8 MOD package naming convention changes", thanks to [cdamage][cdamage] for the original fix, [beatchristen][beatchristen] for some enhancements for Debian 10 and [gguillotte][gguillotte] for reviewing.
-- [`puppetlabs-apache#2120`][puppetlabs-apache-pr-2120]: "(MAINT) Use shared examples for facts + other spec cleanups", thanks to [ekohl][ekohl]
-- [`puppetlabs-java#461`][puppetlabs-java-pr-461]: "(MODULES-10935) - Switch legacy operatingsystem fact to modern kernel one", thanks to [rjd1][rjd1]
-- [`puppetlabs-kubernetes#473`][puppetlabs-kubernetes-pr-473]: "Fix calico CNI support", thanks to [djschaap][djschaap]
-- [`puppetlabs-mysql#1363`][puppetlabs-mysql-pr-1363]: "Support compression command and extension", thanks to [dploeger][dploeger]
-- [`pdk#941`][pdk-pr-941]: "Allow Facter4 to be co-installed with PDK", thanks to [GabrielNagy][GabrielNagy]
-- [`pdk#927`][pdk-pr-927]: "Adds AIX support when creating a new module", thanks to [logicminds][logicminds]
-- [`pdk-templates#400`][pdk-templates-pr-400]: "gitlab-ci: unbreak litmus acceptance tests", thanks to [cdenneen][cdenneen]
-- [`pdk-templates#399`][pdk-templates-pr-399]: "gitlab-ci: make litmus[variables] optional", thanks to [cdenneen][cdenneen]
+- [`puppetlabs-apache#2122`][puppetlabs-apache-pr-2122]: "(IAC-1186) Add $use_port_for_filenames parameter", thanks to [`smortex`][smortex]
+- [`puppetlabs-apache#2121`][puppetlabs-apache-pr-2121]: "(MODULES-10899) Handle PHP8 MOD package naming convention changes, thanks to [`cdamage`][cdamage] for the original fix, [`beatchristen`][beatchristen] for some enhancements for Debian 10 and [`gguillotte`][gguillotte] for reviewing.
+- [`puppetlabs-apache#2120`][puppetlabs-apache-pr-2120]: "(MAINT) Use shared examples for facts + other spec cleanups", thanks to [`ekohl`][ekohl]
+- [`puppetlabs-java#461`][puppetlabs-java-pr-461]: "(MODULES-10935) - Switch legacy operatingsystem fact to modern kernel one", thanks to [`rjd1`][rjd1]
+- [`puppetlabs-kubernetes#473`][puppetlabs-kubernetes-pr-473]: "Fix calico CNI support", thanks to [`djschaap`][djschaap]
+- [`puppetlabs-mysql#1363`][puppetlabs-mysql-pr-1363]: "Support compression command and extension", thanks to [`dploeger`][dploeger]
+- [`pdk#941`][pdk-pr-941]: "Allow Facter4 to be co-installed with PDK", thanks to [`GabrielNagy`][GabrielNagy]
+- [`pdk#927`][pdk-pr-927]: "Adds AIX support when creating a new module", thanks to [`logicminds`][logicminds]
+- [`pdk-templates#400`][pdk-templates-pr-400]: "gitlab-ci: unbreak litmus acceptance tests", thanks to [`cdenneen`][cdenneen]
+- [`pdk-templates#399`][pdk-templates-pr-399]: "gitlab-ci: make litmus[variables] optional", thanks to [`cdenneen`][cdenneen]
 
-[MODULES-10899][MODULES-10899]: Thanks to [cdamage][cdamage] for liaising with the original reporter of this issue and getting a PR with a fix ready so promptly. 
-We'd also like to thank [beatchristen][beatchristen] for additional contributions for this PR to allow PHP 8 packages to be installed on Debian 10 when using the experimental repositories.
-Finally, thanks to [gguillotte][gguillotte] for reviewing and helping to get it over the line.
+[`MODULES-10899`][MODULES-10899]: Thanks to [`cdamage`][cdamage] for liaising with the original reporter of this issue and getting a PR with a fix ready so promptly. 
+We'd also like to thank [`beatchristen`][beatchristen] for additional contributions for this PR to allow PHP 8 packages to be installed on Debian 10 when using the experimental repositories.
+Finally, thanks to [`gguillotte`][gguillotte] for reviewing and helping to get it over the line.
 
 The IAC team would like to thank [Edwin Maldonado](https://github.com/mcka1n) from Puppets Solution Architect team, for joining our Community day this week. It was great having Edwin sit in and help out. 
 
@@ -90,3 +90,8 @@ On the multi-node testing we have begun [work](https://github.com/puppetlabs/pup
 [puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
 [puppetlabs-tagmail]: https://github.com/puppetlabs/puppetlabs-tagmail/
 [puppetlabs-wsus_client]: https://github.com/puppetlabs/puppetlabs-wsus_client
+[djschaap]: https://github.com/djschaap
+[smortex]: https://github.com/smortex
+[GabrielNagy]: https://github.com/GabrielNagy
+[logicminds]: https://github.com/logicminds
+[cdenneen]: https://github.com/cdenneen
