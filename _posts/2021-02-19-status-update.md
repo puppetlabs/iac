@@ -30,6 +30,9 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`pdk-templates#400`][pdk-templates-pr-400]: "gitlab-ci: unbreak litmus acceptance tests", thanks to [cdenneen][cdenneen]
 - [`pdk-templates#399`][pdk-templates-pr-399]: "gitlab-ci: make litmus[variables] optional", thanks to [cdenneen][cdenneen]
 
+[MODULES-10899][MODULES-10899]: Thanks to [cdamage][cdamage] for liaising with the original reporter of this issue and getting a PR with a fix ready so promptly. 
+We'd also like to thank [beatchristen][beatchristen] for additional contributions for this PR to allow PHP 8 packages to be installed on Debian 10 when using the experimental repositories.
+Finally, thanks to [gguillotte][gguillotte] for reviewing and helping to get it over the line.
 
 The IAC team would like to thank [Edwin Maldonado](https://github.com/mcka1n) from Puppets Solution Architect team, for joining our Community day this week. It was great having Edwin sit in and help out. 
 
@@ -45,11 +48,13 @@ The following modules were released this week:
 - [`puppetlabs-apache`][puppetlabs-apache] (`5.10.0`)
 - [`puppetlabs-mysql`][puppetlabs-mysql] (`10.10.0`)
 - [`puppetlabs-tagmail`][puppetlabs-tagmail] (`3.5.1`)
+- [`puppetlabs-wsus_client`][puppetlabs-wsus_client] (`3.2.0`)
 
   [puppetlabs-apt]: https://github.com/puppetlabs/puppetlabs-apt
   [puppetlabs-apache]: https://github.com/puppetlabs/puppetlabs-apache
   [puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
   [puppetlabs-tagmail]: https://github.com/puppetlabs/puppetlabs-tagmail/
+  [puppetlabs-wsus_client]: https://github.com/puppetlabs/puppetlabs-wsus_client
 
 ## Puppet Litmus and PDKSync
 
@@ -70,5 +75,8 @@ The work we are currently doing on Puppet Litmus and the PDK Templates will impr
 
 On the multi-node testing we have begun [work](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) on the puppetlabs-kubernetes module, where we are preparing an integration test setup that will use the Cloud CI provisioning mechanism to test puppetlabs-kubernetes module with the associated puppetlabs-helm and puppetlabs-rook modules. 
 
-## PDK
-
+[MODULES-10899]: https://tickets.puppetlabs.com/browse/MODULES-10899
+[beatchristen]: https://github.com/beatchristen
+[cdamage]:       https://github.com/cdamage
+[gguillotte]:       https://github.com/gguillotte
+[puppetlabs-apache-pr-2121]: https://github.com/puppetlabs/puppetlabs-apache/pull/2124
