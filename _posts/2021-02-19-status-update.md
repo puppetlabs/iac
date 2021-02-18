@@ -50,11 +50,7 @@ The following modules were released this week:
 - [`puppetlabs-tagmail`][puppetlabs-tagmail] (`3.5.1`)
 - [`puppetlabs-wsus_client`][puppetlabs-wsus_client] (`3.2.0`)
 
-  [puppetlabs-apt]: https://github.com/puppetlabs/puppetlabs-apt
-  [puppetlabs-apache]: https://github.com/puppetlabs/puppetlabs-apache
-  [puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
-  [puppetlabs-tagmail]: https://github.com/puppetlabs/puppetlabs-tagmail/
-  [puppetlabs-wsus_client]: https://github.com/puppetlabs/puppetlabs-wsus_client
+During the release process for the [puppetlabs-wsus_client][puppetlabs-wsus_client] [Disha](https://github.com/Disha-maker) discovered that tests were failing on AppVeyor due to a legacy parameter error which adapted Pester 5 to Pester 4 syntax. Thanks to [Paula](https://github.com/pmcmaw) for fixing this issue by raising a new [PR](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/150)  and taking time out with me to explain what was wrong, as well as releasing the new version on the [Puppet Forge](https://forge.puppet.com/modules/puppetlabs/wsus_client)
 
 ## Puppet Litmus and PDKSync
 
@@ -79,9 +75,18 @@ On the multi-node testing we have begun [work](https://github.com/puppetlabs/pup
 [beatchristen]: https://github.com/beatchristen
 [cdamage]:       https://github.com/cdamage
 [gguillotte]:       https://github.com/gguillotte
-[puppetlabs-apache-pr-2121]: https://github.com/puppetlabs/puppetlabs-apache/pull/2124
-
-## Module Release
-Delighted to say that the [`puppetlabs-wsus_client`][puppetlabs-wsus_client] (`3.2.0`) is released! 
-
-During the release process I discovered that tests were failing on AppVeyor due to a legacy parameter error which adapted Pester 5 to Pester 4 syntax. Thanks to [Paula](https://github.com/pmcmaw) for fixing this issue by raising a new PR and taking time out with me to explain what was wrong as well as releasing the new version on the [Puppet Forge](https://forge.puppet.com/modules/puppetlabs/wsus_client) (`3.2.0`)
+[puppetlabs-apache-pr-2121]: https://github.com/puppetlabs/puppetlabs-apache/pull/2121
+[puppetlabs-apache-pr-2122]: https://github.com/puppetlabs/puppetlabs-apache/pull/2122
+[puppetlabs-apache-pr-2120]: https://github.com/puppetlabs/puppetlabs-apache/pull/2120
+[puppetlabs-java-pr-461]: https://github.com/puppetlabs/puppetlabs-java/pull/461
+[puppetlabs-kubernetes-pr-473]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/473
+[puppetlabs-mysql-pr-1363]: https://github.com/puppetlabs/puppetlabs-mysql/pull/1363
+[pdk-pr-941]: https://github.com/puppetlabs/pdk/pull/941
+[pdk-pr-927]: https://github.com/puppetlabs/pdk/pull/927
+[pdk-templates-pr-400]: https://github.com/puppetlabs/pdk-templates/pull/400
+[pdk-templates-pr-399]: https://github.com/puppetlabs/pdk-templates/pull/399
+[puppetlabs-apt]: https://github.com/puppetlabs/puppetlabs-apt
+[puppetlabs-apache]: https://github.com/puppetlabs/puppetlabs-apache
+[puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
+[puppetlabs-tagmail]: https://github.com/puppetlabs/puppetlabs-tagmail/
+[puppetlabs-wsus_client]: https://github.com/puppetlabs/puppetlabs-wsus_client
