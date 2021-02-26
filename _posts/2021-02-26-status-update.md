@@ -50,15 +50,21 @@ This week after the release of Puppet Litmus `0.25.0` and the update of the acce
 As part of the multi-node acceptance tests we are slowly making progress in stabilizing the `puppetlabs-kubernetes` and started the investigation for the port of the `puppetlabs-websphere_application_server` module. 
 A PDKSync run with the update to the latest pdk-templates will follow soon. A lot of thanks to Daniel and Sheena for this work.
 
+## DSC 
+ For the last few weeks focus has been on triaging/debugging and fixing issues from the field. Michael has been leading this charge to provide top-notch technical support on all things DSC related. Thank you, Michael!
+
 ## IAC & Night's Watch Collaboration
 A big shout out to [gimmyxd][gimmy]for the great sync up session with [Ciaran][Ciaran] where they used [pdksync][pdksync] and the [PDK][PDK] to update a number of the core modules under the [Night's Watch][Night's Watch] remit.
 We're always keen to get feedback on the tooling we develop and maintain, and the [Night's Watch][Night's Watch] team are always great to collaborate with!
 There's always a good bit of two way traffic between our two teams and it's usually the case that the combined results are greater than the sum of its parts. Thank you Ciaran and Gimmy for your time and efforts! 
 
- 
+ ## See you next week!
+This is all for this week, have a great weekend and be ready for the next week updates!
 
   [puppetlabs-vcsrepo]: https://github.com/puppetlabs/puppetlabs-vcsrepo
   [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
+  [puppetlabs-kubernetes]: https://github.com/puppetlabs/puppetlabs-kubernetes
+  [puppetlabs-websphere_application_server]: https://github.com/puppetlabs/puppetlabs-websphere_application_server.git
   [puppet_litmus]: https://github.com/puppetlabs/puppet_litmus
   [puppetlabs-apt-pr-971]: https://github.com/puppetlabs/puppetlabs-apt/pull/971
   [Safranil]: https://github.com/Safranil
