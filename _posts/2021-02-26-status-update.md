@@ -42,7 +42,7 @@ The following modules were released this week:
 
 ## Big news and big next Monday!
 
-We are in the process of dropping Puppet 5 support from our supported modules. Puppet 5 was end of Life in January 2021. The plan is to start rolling out updated modules with deprecated Puppet 5 by the start of next week March 1st 2021. We have in plan a lot of releases, stay tuned, it's going to be a big Monday!
+We are in the process of dropping Puppet 5 support from our supported modules. Puppet 5 reached End of Life (EOL) in January 2021. The plan is to start rolling out updated modules with Puppet 5 support removed by the start of next week (March 1st 2021). We have a lot of releases planned - stay tuned, it's going to be a big Monday!
 
 ## Cloud CI Update
 
