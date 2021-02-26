@@ -29,12 +29,16 @@ We'd like to thank the following people in the Puppet Community for their contri
 
 Check [all the ways to reach us]({% link _posts/2021-01-20-reaching-out.md %}) if you want to directly contact us about anything module related.
 
-## New Module / Gem Releases
+## New Module
 
 The following modules were released this week:
 
 - [`puppetlabs-vcsrepo`][puppetlabs-vcsrepo] (`3.2.1`)
 - [`puppetlabs-postgresql`][puppetlabs-postgresql] (`6.10.2`)
+
+## Gem Releases
+
+[`puppet-litmus`][puppet-litmus] (`0.25.0`)
 
 ## Big news and big next Monday!
 
@@ -55,6 +59,7 @@ There's always a good bit of two way traffic between our two teams and it's usua
 
   [puppetlabs-vcsrepo]: https://github.com/puppetlabs/puppetlabs-vcsrepo
   [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
+  [puppet_litmus]: https://github.com/puppetlabs/puppet_litmus
   [puppetlabs-apt-pr-971]: https://github.com/puppetlabs/puppetlabs-apt/pull/971
   [Safranil]: https://github.com/Safranil
   [puppetlabs-kubernetes-pr-475]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475
