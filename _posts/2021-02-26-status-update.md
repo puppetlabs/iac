@@ -70,7 +70,7 @@ This is all for this week, have a great weekend and be ready for the next week u
   [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
   [puppetlabs-kubernetes]: https://github.com/puppetlabs/puppetlabs-kubernetes
   [puppetlabs-websphere_application_server]: https://github.com/puppetlabs/puppetlabs-websphere_application_server.git
-  [puppet_litmus]: https://github.com/puppetlabs/puppet_litmus
+  [puppet-litmus]: https://github.com/puppetlabs/puppet_litmus
   [puppetlabs-apt-pr-971]: https://github.com/puppetlabs/puppetlabs-apt/pull/971
   [Safranil]: https://github.com/Safranil
   [puppetlabs-kubernetes-pr-475]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475
