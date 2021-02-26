@@ -40,6 +40,11 @@ The following modules were released this week:
 
 [`puppet-litmus`][puppet-litmus] (`0.25.0`)
 
+## PDK 2.0.0 is now available!
+
+Special thanks to  [David Schmitt][David Schmitt] and [Jesse Scott][Jesse Scott] for their hard work and dedication in getting PDK 2.0.0 released this week.
+In the new version you can find new features and enhancements as: ability to generate new facts, the pdk new fact command to generate new custom facts in a module, ability to generate new functions, the pdk new function command to generate new functions in a module, AIX option to new module interview options, AIX to OS compatibility picker during the guided interview for pdk new module  and more surprises. Check [here](https://puppet.com/docs/pdk/2.x/release_notes_pdk.html#pdk-20) and see what we have for you!
+
 ## Big news and big next Monday!
 
 We are in the process of dropping Puppet 5 support from our supported modules. Puppet 5 reached End of Life (EOL) in January 2021. The plan is to start rolling out updated modules with Puppet 5 support removed by the start of next week (March 1st 2021). We have a lot of releases planned - stay tuned, it's going to be a big Monday!
@@ -86,11 +91,12 @@ This is all for this week, have a great weekend and be ready for the next week u
 
 
   [Adrian]:             https://github.com/adrianiurca
+  [Jessie Scott]:       https://github.com/scotje
   [Ben]:                https://github.com/binford2k
   [Ciaran]:             https://github.com/sanfrancrisko
   [Daiana]:             https://github.com/daianamezdrea
   [Danny]:              https://github.com/carabasdaniel
-  [DavidSchmitt]:       https://github.com/DavidS
+  [David Schmitt]:       https://github.com/DavidS
   [DavidSwan]:          https://github.com/david22swan
   [Disha]:              https://github.com/Disha-maker
   [Lore]:               https://github.com/lionce
