@@ -47,7 +47,7 @@ We are in the process of dropping Puppet 5 support from our supported modules. P
 ## Cloud CI Update
 
 This week after the release of Puppet Litmus 0.25.0 and the update of the acceptance test workflows (https://github.com/puppetlabs/pdk-templates/pull/398) a PDKSync across all our supported modules will ensure that all acceptance tests for PRs and nightly runs are now using both the Cloud CI resources as well as the litmusimage docker containers in their respective Github Actions workflows. 
-As part of the multi-node acceptance tests we are slowly making progress in stabilizing the puppetlabs-kubernets and started the investigations for the port of the puppetlabs-websphere_application_server module. 
+As part of the multi-node acceptance tests we are slowly making progress in stabilizing the `puppetlabs-kubernetes` and started the investigation for the port of the `puppetlabs-websphere_application_server` module. 
 A PDKSync run with the update to the latest pdk-templates will follow soon. A lot of thanks to Daniel and Sheena for this work.
 
 ## IAC & Night's Watch Collaboration
