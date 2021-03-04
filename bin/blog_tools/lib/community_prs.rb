@@ -8,6 +8,8 @@ COMMENT_AUTHOR_IGNORE_LIST = [
   'codecov-io',
   'coveralls',
   'dependabot-preview[bot]',
+  'github-actions[bot]',
+  'CLAassistant',
 ].freeze
 
 @octokit_util = OctoKitUtil.new
