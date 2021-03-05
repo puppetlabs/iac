@@ -36,7 +36,7 @@ Check [all the ways to reach us]({% link _posts/2021-01-20-reaching-out.md %}) i
 
 The whole team has been super busy this week working on prepping our modules for major releases.
 We have done **34+** major releases on our supported modules with only a few outstanding.
-The release includes the removal of Puppet 5 support.
+The release includes the removal of Puppet 5, RHEL 5 family and SLES 11 support.
 If you are running Puppet 5 please note it is no longer supported and we advise you to upgrade to Puppet 7 as soon as you can.
 
 ## New Module / Gem Releases
