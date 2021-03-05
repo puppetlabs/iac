@@ -76,6 +76,10 @@ The following modules were released this week:
 - [`puppetlabs-package`][puppetlabs-package] (`2.0.0`)
 - [`puppetlabs-ibm_installation_manager`][puppetlabs-ibm_installation_manager] (`3.0.0`)
 - [`puppetlabs-exec`][puppetlabs-exec] (`1.0.0`)
+- [`puppetlabs-satellite_pe_tools`][puppetlabs-satellite_pe_tools] (`4.0.0`)
+- [`puppetlabs-facter_task `][puppetlabs-facter_task ] (`1.0.0`)
+- [`puppetlabs-rook`][puppetlabs-rook] (`1.0.0`)
+- [`pwshlib`][pwshlib] (`0.8.0`)
 
 ## Docker bug fix
 
@@ -134,6 +138,10 @@ This is all for this week, have a great weekend and be ready for the next week u
   [puppetlabs-package]: https://github.com/puppetlabs/puppetlabs-package
   [puppetlabs-ibm_installation_manager]: https://github.com/puppetlabs/puppetlabs-ibm_installation_manager
   [puppetlabs-exec]: https://github.com/puppetlabs/puppetlabs-exec
+  [puppetlabs-satellite_pe_tools]: https://github.com/puppetlabs/puppetlabs-satellite_pe_tools
+  [puppetlabs-facter_task]: https://github.com/puppetlabs/puppetlabs-facter_task
+  [puppetlabs-rook]: https://github.com/puppetlabs/puppetlabs-rook
+  [pwshlib]: https://github.com/puppetlabs/ruby-pwsh/
   [puppetlabs-acl-pr-231]: https://github.com/puppetlabs/puppetlabs-acl/pull/231
   [luchihoratiu]: https://github.com/luchihoratiu
   [puppetlabs-docker-pr-725]: https://github.com/puppetlabs/puppetlabs-docker/pull/725
