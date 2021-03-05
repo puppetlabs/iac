@@ -19,6 +19,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 
 - [`puppetlabs-acl#231`][puppetlabs-acl-pr-231]: "(maint) Update limitations in README.md", thanks to [luchihoratiu][luchihoratiu]
 - [`puppetlabs-docker#725`][puppetlabs-docker-pr-725]: "Make it possible to use pod's network", thanks to [seriv][seriv]
+- [`puppetlabs-kubernetes#494`][puppetlabs-kubernetes-pr-494]: "Added information about Hiera YAML Lookup; installing a updated version.", thanks to [bitvijays][bitvijays]
 - [`puppetlabs-kubernetes#488`][puppetlabs-kubernetes-pr-488]: "Add note about the kubernetes version format", thanks to [danifr][danifr]
 - [`puppetlabs-postgresql#1239`][puppetlabs-postgresql-pr-1239]: "Add DNF module management", thanks to [ekohl][ekohl]
 - [`puppetlabs-reboot#280`][puppetlabs-reboot-pr-280]: "(MODULES-10955) More robust handling of reboot-task output", thanks to [fetzerms][fetzerms]
@@ -53,6 +54,7 @@ The following modules were released this week:
 - [`puppetlabs-inifile`][puppetlabs-inifile] (`5.0.0`)
 - [`puppetlabs-apache`][puppetlabs-apache] (`6.0.0`)
 - [`puppetlabs-firewall`][puppetlabs-firewall] (`3.0.0`)
+- [`puppetlabs-postgresql`][puppetlabs-postgresql] (`7.0.0`)
 - [`puppetlabs-haproxy`][puppetlabs-haproxy] (`5.0.0`)
 - [`puppetlabs-mysql`][puppetlabs-mysql] (`11.0.0`)
 - [`puppetlabs-java_ks`][puppetlabs-java_ks] (`4.0.0`)
@@ -84,8 +86,9 @@ More details available here [MODULES-10898][MODULES-10898].
 ## Cloud CI
 
 This week we had the first test use of the automated release workflow and we found a couple of issues that we are currently working on (the pdk nightly image).
-K8s module [PR](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) is in review ready state which ports the module to cloud ci.
 We are also preparing a workflow to do the tag and push to forge. Link to the [PR][pdk-templates-pr-408].
+K8s module [PR](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) is now merged which ports the module to cloud ci.
+
 
 ## Update from our intern
 
@@ -107,6 +110,7 @@ This is all for this week, have a great weekend and be ready for the next week u
   [puppetlabs-inifile]: https://github.com/puppetlabs/puppetlabs-inifile
   [puppetlabs-apache]: https://github.com/puppetlabs/puppetlabs-apache
   [puppetlabs-firewall]: http://github.com/puppetlabs/puppetlabs-firewall
+  [puppetlabs-postgresql]: https://github.com/puppetlabs/puppetlabs-postgresql
   [puppetlabs-haproxy]: https://github.com/puppetlabs/puppetlabs-haproxy
   [puppetlabs-mysql]: http://github.com/puppetlabs/puppetlabs-mysql
   [puppetlabs-java_ks]: https://github.com/puppetlabs/puppetlabs-java_ks
@@ -132,6 +136,8 @@ This is all for this week, have a great weekend and be ready for the next week u
   [luchihoratiu]: https://github.com/luchihoratiu
   [puppetlabs-docker-pr-725]: https://github.com/puppetlabs/puppetlabs-docker/pull/725
   [seriv]: https://github.com/seriv
+  [puppetlabs-kubernetes-pr-494]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/494
+  [bitvijays]: https://github.com/bitvijays
   [puppetlabs-kubernetes-pr-488]: https://github.com/puppetlabs/puppetlabs-kubernetes/pull/488
   [danifr]: https://github.com/danifr
   [puppetlabs-postgresql-pr-1239]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1239
