@@ -92,8 +92,10 @@ K8s module [PR](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) is
 
 ## Update from our intern
 
-[Disha][Disha] completed her first community reporting PR which excludes the draft PR from module report generated for the community day.
+[Disha][Disha] completed her first community reporting PR which excludes the draft PR from modules report generated for the community day.
 Link to the [PR][community_management-pr-54].
+Disha also completed the ticket [IAC-1197][IAC-1197] after finishing [IAC-1196][IAC-1196], this second ticket was looking into the same principles as the first one, except the drafts were to be excluded from the tools report on the community management tool.
+Link to the [PR][community_management-pr-62].
 
 ## See you next week!
 
@@ -159,6 +161,9 @@ This is all for this week, have a great weekend and be ready for the next week u
   [pdk-templates-pr-408]: https://github.com/puppetlabs/pdk-templates/pull/408
   [community_management-pr-54]: https://github.com/puppetlabs/community_management/pull/54
   [puppetlabs-docker-issue-518]: https://github.com/puppetlabs/puppetlabs-docker/issues/518
+  [community_management-pr-62]: https://github.com/puppetlabs/community_management/pull/62
+  [IAC-1196]: https://tickets.puppetlabs.com/browse/IAC-1196
+  [IAC-1197]: https://tickets.puppetlabs.com/browse/IAC-1197
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
