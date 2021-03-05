@@ -92,7 +92,7 @@ K8s module [PR](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/481) is
 
 ## Update from our intern
 
-[Disha] completed her first community reporting PR which excludes the draft PR from module report generated for the community day.
+[Disha][Disha] completed her first community reporting PR which excludes the draft PR from module report generated for the community day.
 Link to the [PR][community_management-pr-54].
 
 ## See you next week!
