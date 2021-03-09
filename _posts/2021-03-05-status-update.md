@@ -77,7 +77,7 @@ The following modules were released this week:
 - [`puppetlabs-ibm_installation_manager`][puppetlabs-ibm_installation_manager] (`3.0.0`)
 - [`puppetlabs-exec`][puppetlabs-exec] (`1.0.0`)
 - [`puppetlabs-satellite_pe_tools`][puppetlabs-satellite_pe_tools] (`4.0.0`)
-- [`puppetlabs-facter_task `][puppetlabs-facter_task ] (`1.0.0`)
+- [`puppetlabs-facter_task `][puppetlabs-facter_task] (`1.0.0`)
 - [`puppetlabs-rook`][puppetlabs-rook] (`1.0.0`)
 - [`pwshlib`][pwshlib] (`0.8.0`)
 
