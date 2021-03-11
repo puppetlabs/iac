@@ -101,7 +101,7 @@ When you upgrade to the new version, make sure to also upgrade/redownload your `
 
 This week we have started the work on porting the puppetlabs-websphere_application_server module to use the Cloud CI for testing.
 Thanks to [Ciaran](https://github.com/sanfrancrisko) we'll now be able to set up spec testing using Github Action workflow for all our supported modules [PR](https://github.com/puppetlabs/pdk-templates/pull/372/files).
-With the release of puppet_litmus 0.26.0, the spec tests workflows and the publishing workflow(https://github.com/puppetlabs/pdk-templates/pull/408) merged into the pdk-templates we'll follow up with a pdksync accross all our supported modules.
+With the release of puppet_litmus 0.26.0, the spec tests workflows and the [publishing workflow](https://github.com/puppetlabs/pdk-templates/pull/408) merged into the pdk-templates we'll follow up with a pdksync accross all our supported modules.
 On the multi-node testing both the puppetlabs-helm and puppetlabs-kubernetes modules now run an integration suite testing for each pull request on a multi-node environment using the Cloud CI provisioning service.
 
 ### Updating Community Reports
