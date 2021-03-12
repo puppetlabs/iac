@@ -91,9 +91,11 @@ If you currently use puppet-litmus please be prepared for an inventory.yaml file
 The new location will be spec/fixtures/litmus_inventory.yaml.
 This is to keep all our litmus configuration separate and to avoid mishaps in production.
 This will include changes in:
+
 * puppet-litmus
 * provision module
 * pdk-templates
+
 The work is still ongoing and being tested, however expect to see this in the next few weeks!
 When you upgrade to the new version, make sure to also upgrade/redownload your `puppetlabs/provision` fixture module with the updated tasks.
 
