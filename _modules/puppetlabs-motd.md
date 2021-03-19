@@ -11,4 +11,5 @@ travis_com: false
 travis_org: true
 workflow: nightly
 category: Crossplatform
+desktop: true
 ---

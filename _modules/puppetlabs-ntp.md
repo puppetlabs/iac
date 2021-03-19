@@ -10,4 +10,5 @@ travis_com: false
 travis_org: true
 workflow: nightly
 category: Linux
+desktop: true
 ---
