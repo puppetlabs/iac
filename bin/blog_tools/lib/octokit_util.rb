@@ -11,6 +11,7 @@ class OctoKitUtil
     @puppet_members = client.organization_members('puppetlabs')
     @vox_members = client.organization_members('voxpupuli')
     @iac_members = client.organization_members('puppetlabs/teams/modules')
+    @devx_members = client.organization_members('puppetlabs/teams/devx')
   end
 
   def puppet_member?(username)
@@ -33,4 +34,10 @@ class OctoKitUtil
     end
     false
   end
+
+  def devx_member?(username)
+    @devx_members.each do |devx_member|
+      return true if username == devx_member[:login]
+    end
+    false
 end
