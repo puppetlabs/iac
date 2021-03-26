@@ -1,4 +1,81 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-03-26T02:17:57+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-03-19: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update.html" rel="alternate" type="text/html" title="2021-03-19: IAC Team Status Update" /><published>2021-03-19T00:00:00+00:00</published><updated>2021-03-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update.html">&lt;h2 id=&quot;happy-st-patricks-day&quot;&gt;Happy St Patricks Day&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-03-26T10:17:44+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-03-26: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html" rel="alternate" type="text/html" title="2021-03-26: IAC Team Status Update" /><published>2021-03-26T00:00:00+00:00</published><updated>2021-03-26T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html">&lt;p&gt;Hello and welcome to another weekly update from the IAC Team.
+As mentioned last week, we were all off on Monday so we didn’t have the regularly scheduled Community Day at the start of the week so only one module released and one PR merged to report on this week.&lt;/p&gt;
+
+&lt;p&gt;Normal service resumes on Monday 29th!&lt;/p&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/ruby-pwsh/pull/118&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby-pwsh#118&lt;/code&gt;&lt;/a&gt;: “(Maint) Ensure canonicalize correctly compares sorted hashes”, thanks to &lt;a href=&quot;https://github.com/Hvid&quot;&gt;Hvid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.0.2&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h2&gt;
+
+&lt;p&gt;This week we mainly focused on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-websphere_application_server&lt;/code&gt; port and preparing the resources needed for the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-satellite_pe_tools&lt;/code&gt; module.
+We’ll soon begin the work for porting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-satellite_pe_tools&lt;/code&gt; module integration testing on a multi-node GCP environment.&lt;/p&gt;
+
+&lt;p&gt;We also managed to fix the persistent firewall issue this week that was causing a couple of issues after long sessions of debugging and added a couple of other minor bug fixes.&lt;/p&gt;
+
+&lt;p&gt;In the near future we’ll start to change our focus towards more training and education on debugging and using the new workflows with the supported Puppet modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-management-revamp&quot;&gt;Community Management Revamp&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank &lt;a href=&quot;https://github.com/daianamezdrea&quot;&gt;Daiana&lt;/a&gt; for the wonderful work she did to update the Github Actions nightly report on the &lt;a href=&quot;https://puppetlabs.github.io/community_management/&quot;&gt;community_management&lt;/a&gt; website:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-03-26-status-update/comm_mgmt_revamp.png&quot; alt=&quot;comm_mgmt_revamp&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I hope you’ll agree that this clean new look makes it easy to quickly get an overview of the state of our modules’ CI runs.&lt;/p&gt;
+
+&lt;p&gt;Here’s a few words from &lt;a href=&quot;https://github.com/daianamezdrea&quot;&gt;Daiana&lt;/a&gt; about this great work:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;As we promised last week, the Github Actions report from our tool ( CM) is finally up.
+Also, we added more surprises and we’re ready for the phase 2 of re-vamping the report.
+&lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/64&quot;&gt;Here&lt;/a&gt; you can find a big PR which contains the new changes.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;meet-the-devx-team&quot;&gt;Meet the DevX Team&lt;/h2&gt;
+
+&lt;p&gt;A full blog post outlining our remit will be coming soon, but we’re excited to announce the start of the newly reformed Developer Experience Team (DevX)!
+This is made up of &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James Pogran&lt;/a&gt;, &lt;a href=&quot;https://github.com/da-ar&quot;&gt;David Armstrong&lt;/a&gt; and &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran McCrisken&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;The DevX team is focused on improving the developer experience across Puppet Products.
+One of the first areas of focus that is going to get significant time investment is the &lt;a href=&quot;https://github.com/puppetlabs/pdk&quot;&gt;PDK&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s no secret that the PDK has not had the care and attention that it warrants over the past year and we’re looking to rectify that.&lt;/p&gt;
+
+&lt;p&gt;To discuss future feature work for the PDK, we are trying out the new Github Discussion board &lt;a href=&quot;https://github.com/puppetlabs/pdk/discussions&quot;&gt;here&lt;/a&gt;.
+This replaces the previous RFC workflow of the pdk-planning repo.
+If you see an open discussion for a feature you would like implemented, please upvote or comment on the discussion.&lt;/p&gt;
+
+&lt;p&gt;One of the first discussions we want to invite you to participate in is the future of the &lt;a href=&quot;https://github.com/puppetlabs/pdk-docker&quot;&gt;PDK Docker&lt;/a&gt; project.
+Come join the discussion here: &lt;a href=&quot;https://github.com/puppetlabs/pdk/discussions/1038&quot;&gt;&lt;strong&gt;pdk/discussions#1038&lt;/strong&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;translate-module-deprecation&quot;&gt;Translate Module Deprecation&lt;/h2&gt;
+
+&lt;p&gt;We have now officially marked the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-translate&lt;/code&gt; module as deprecated.
+&lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; has removed it as a dependency from our supported modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;jira-spring-cleaning&quot;&gt;JIRA Spring Cleaning&lt;/h2&gt;
+
+&lt;p&gt;As part of this ongoing effort, the team is spending a bit of downtime to go through and close out old, already addressed and/or now-irrelevant tickets:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-03-26-status-update/jira_burndown.png&quot; alt=&quot;jira_burndown&quot; /&gt;&lt;/p&gt;</content><author><name>sanfrancrisko</name></author><category term="team" /><category term="status" /><category term="reboot" /><category term="community_dashboard" /><category term="cloudci" /><category term="translate" /><category term="devx" /><category term="pdk" /><category term="pdk-docker" /><summary type="html">Hello and welcome to another weekly update from the IAC Team. As mentioned last week, we were all off on Monday so we didn’t have the regularly scheduled Community Day at the start of the week so only one module released and one PR merged to report on this week.</summary></entry><entry><title type="html">2021-03-19: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update.html" rel="alternate" type="text/html" title="2021-03-19: IAC Team Status Update" /><published>2021-03-19T00:00:00+00:00</published><updated>2021-03-19T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/03/19/status-update.html">&lt;h2 id=&quot;happy-st-patricks-day&quot;&gt;Happy St Patricks Day&lt;/h2&gt;
 
 &lt;p&gt;All of the team located in Belfast were off on Wednesday this week for St Patricks day. For everyone it was pretty quiet due to local restrictions in place but nice to get a break in the middle of the week! :-)&lt;/p&gt;
 
@@ -753,396 +830,4 @@ instead, we recommend using the next released stable version after those SHA’s
 &lt;p&gt;As part of our next phase we plan to flesh out and update our testing infrastructure for this module on our road to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.0.0&lt;/code&gt; release of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt;.
 In the pipeline, we still plan on getting nightly builds into place to ensure that there is never more than a 24 hour lag between published Powershell modules with DSC Resources and our Puppetized modules on the Forge.&lt;/p&gt;
 
-&lt;p&gt;As always if you have any questions don’t hesistate to reach out to us via &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;Slack&lt;/a&gt; or &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;emailing&lt;/a&gt; and we will be as accomodating as we can be!&lt;/p&gt;</content><author><name>pmcmaw</name></author><category term="dsc" /><category term="puppet" /><category term="modules" /><category term="tooling" /><category term="dsc resources" /><category term="windows" /><category term="modules" /><category term="forge" /><category term="powershell gallery" /><summary type="html">Why bother?</summary></entry><entry><title type="html">Troubleshooting Puppetized DSC Modules</title><link href="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html" rel="alternate" type="text/html" title="Troubleshooting Puppetized DSC Modules" /><published>2021-01-25T00:00:00+00:00</published><updated>2021-01-25T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules</id><content type="html" xml:base="https://puppetlabs.github.io/iac/2021/01/25/troubleshooting-puppetized-dsc-modules.html">&lt;p&gt;&lt;em&gt;[An edited version of this post was also published on the &lt;a href=&quot;https://ospassist.puppet.com/&quot;&gt;OSPAssist Portal&lt;/a&gt; as &lt;a href=&quot;https://ospassist.puppet.com/hc/en-us/articles/1500002388661-Troubleshooting-Puppetized-DSC-modules&quot;&gt;Troubleshooting Puppetized DSC modules&lt;/a&gt; and &lt;a href=&quot;https://ospassist.puppet.com/hc/en-us/articles/360061073994-Advanced-troubleshooting-dig-deeper-with-pry&quot;&gt;Advanced troubleshooting: dig deeper with pry&lt;/a&gt;]&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;Authoring Puppet manifests using the new &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;Puppetized DSC Resources&lt;/a&gt; is, like using any other Puppet modules, a few steps and a deploy away for most use cases.
-Sometimes you will run into a problem trying to apply a manifest containing one or more puppetized DSC resources.
-What could be causing the problem?&lt;/p&gt;
-
-&lt;p&gt;Is it a problem with the builder?
-The Puppet representation of the DSC Resource could not match the API surface, resulting in misgenerated types, enums or method calls.&lt;/p&gt;
-
-&lt;p&gt;Could the problem be the DSC Resource itself?
-The PowerShell DSC code could not work, which would be hidden underneath the Puppet Ruby exception stacktrace.&lt;/p&gt;
-
-&lt;p&gt;What happens if it’s Puppet?
-There could be an error in the Ruby code that translates the DSC resource back and forth between Puppet and PowerShell, in which case the issue lies in the &lt;a href=&quot;https://forge.puppet.com/modules/puppetlabs/pwshlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pwshlib&lt;/code&gt;&lt;/a&gt; module.&lt;/p&gt;
-
-&lt;p&gt;Somewhere in between?
-How do you tell which symptom is which problem?
-Where do you begin to troubleshoot this?
-This blog post will help you find your way foreward.&lt;/p&gt;
-
-&lt;h2 id=&quot;basic-troubleshooting&quot;&gt;Basic Troubleshooting&lt;/h2&gt;
-
-&lt;p&gt;The first thing to note is that there’s actually a &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc#troubleshooting&quot;&gt;basic troubleshooting guide for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt;&lt;/a&gt;.
-That guide covers finding problems like &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc#type-errors&quot;&gt;type errors&lt;/a&gt; or &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc#incorrect-enum&quot;&gt;incorrect enums&lt;/a&gt; in the module builder, &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc#error-during-invocation&quot;&gt;invocation errors&lt;/a&gt; during a Puppet run, and problems with the tanslation layer in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pwshlib&lt;/code&gt;. There is a lot of good information there, so we won’t cover those areas again here.&lt;/p&gt;
-
-&lt;p&gt;The guide also covers running Puppet in &lt;strong&gt;debug&lt;/strong&gt; mode, which you will need to know about for the next couple sections.
-In short, if you append the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--debug&lt;/code&gt; flag to the end of your Puppet invocation, you’ll get a &lt;em&gt;ton&lt;/em&gt; of additional information out of the run.
-Please make sure to read the guide to ensure you have a reference point before we proceed here.&lt;/p&gt;
-
-&lt;h2 id=&quot;advanced-troubleshooting&quot;&gt;Advanced Troubleshooting&lt;/h2&gt;
-
-&lt;p&gt;So, you have a Puppet manifest with one or more Puppetized DSC Resource declarations in it.
-Things are not working and the basic troubleshooting guide didn’t solve the problem.&lt;/p&gt;
-
-&lt;p&gt;The first place to start is to validate that what you declared in the manifest was translated correctly to the PowerShell DSC code to execute.&lt;/p&gt;
-
-&lt;h3 id=&quot;validating-manifests-and-the-powershell-hash&quot;&gt;Validating manifests and the PowerShell hash&lt;/h3&gt;
-
-&lt;p&gt;When you specify a DSC Resource in your Puppet manifest, behind the scenes Puppet converts that into PowerShell code to pass to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;.
-In debug mode, you can actually see what Puppet thinks you passed &lt;em&gt;and&lt;/em&gt; that generated code.&lt;/p&gt;
-
-&lt;p&gt;Lets walk through an example manifest:&lt;/p&gt;
-
-&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;dsc_psrepository&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'PowerShell Gallery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-  &lt;span class=&quot;py&quot;&gt;dsc_name&lt;/span&gt;               &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'psGallery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;py&quot;&gt;dsc_installationpolicy&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Trusted'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If we execute Puppet in debug mode, we’ll get the following (abbreviated) output:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Debug: dsc_psrepository[{:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;}]: Updating: Invoking Set Method for '{:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;}' with {:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;, :dsc_installationpolicy=&amp;gt;&quot;Trusted&quot;}
-... (snipped for brevity)
-dsc_psrepository[{:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;}]: Updating: Script:
-... (snipped for brevity)
-$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psGallery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}} Try {
-  $Result = Invoke-DscResource @InvokeParams
-} catch {
-  $Response.errormessage   = $_.Exception.Message
-  return ($Response | ConvertTo-Json -Compress)
-}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Breaking this apart, there are several sections of information to pull out.&lt;/p&gt;
-
-&lt;p&gt;The first line is Puppet telling us why it’s doing what it’s doing and with what information it has to execute.
-We see its the PowerShell Gallery module, using the Gallery DSC Resource and setting the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;installationpolicy&lt;/code&gt; to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Trusted&lt;/code&gt;.&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Debug: dsc_psrepository[{:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;}]: Updating: Invoking Set Method for '{:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;}' with {:name=&amp;gt;&quot;PowerShell Gallery&quot;, :dsc_name=&amp;gt;&quot;psGallery&quot;, :dsc_installationpolicy=&amp;gt;&quot;Trusted&quot;}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This can be more easily read as as Ruby hash:&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;:name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;PowerShell Gallery&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;:dsc_name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;psGallery&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-  &lt;span class=&quot;ss&quot;&gt;:dsc_installationpolicy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Trusted&quot;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next part in the log to look at is the invocation parameters.
-This is the PowerShell code generated from the section we just examined:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;$InvokeParams = @{Name = 'PSRepository'; Method = 'set'; Property = @{name = 'psGallery'; installationpolicy = 'Trusted'}; ModuleName = @{ModuleName = 'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'; RequiredVersion = '2.2.4.1'}}
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Translating that to a PowerShell hash, we can see a similar represation of the Ruby hash we just looked at.
-This is the exact code that will be passed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt; (expanded from one line for clarity; note your &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ModuleName&lt;/code&gt; path will be system-specific):&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$InvokeParams&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'PSRepository'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'get'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'psGallery'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequiredVersion&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2.2.4.1'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;In summary, the debug logs from a Puppet execution run provide us detailed information about how your Puppet manifest was translated into PowerShell code to invoke the DSC Resource.&lt;/p&gt;
-
-&lt;p&gt;This leads us neatly into trying to use this information to invoke the DSC Resource outside of Puppet to debug it.&lt;/p&gt;
-
-&lt;h3 id=&quot;invoking-without-puppet&quot;&gt;Invoking without Puppet&lt;/h3&gt;
-
-&lt;p&gt;After inspecting the debug Puppet logs, we now have the PowerShell code Puppet was executing to try out. We can take that code and move to a test machine and walk through the execution ourselves interactively.&lt;/p&gt;
-
-&lt;p&gt;In a PowerShell console with administrator permissions, you’ll copy and paste the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$InvokeParams&lt;/code&gt; line from the debug log we pulled out above. Then you’ll invoke it using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscRsource&lt;/code&gt;. For example:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;PS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$InvokeParams&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'PSRepository'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'get'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'psGallery'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;     &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;     &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequiredVersion&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2.2.4.1'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;   &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;PS&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;C:\&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Invoke-DscResource&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;err&quot;&gt;@&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;InvokeParams&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Verbose&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Now you can evaluate the success/failure of the invocation without involving Puppet at all;
-this way you can determine if the values being passed were incorrect or if the DSC Resource itself is misbehaving.&lt;/p&gt;
-
-&lt;p&gt;If the code fails after pasting in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;$InvokeParams&lt;/code&gt; block, then there is something wrong with the values or the hash statement.
-If something &lt;em&gt;has&lt;/em&gt; gone wrong converting the values in your Puppet manifest to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InvokeParams&lt;/code&gt; hash being passed to &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;, please do &lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc/issues/new?assignees=&amp;amp;labels=Bug%2C+bug&amp;amp;template=bug-report.md&amp;amp;title=&quot;&gt;file an issue&lt;/a&gt; with us and we’ll be sure to take a look.&lt;/p&gt;
-
-&lt;p&gt;If the code fails after invoking &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;, then there is likely a problem inside the DSC Resource itself.
-If it’s an issue with the DSC Resource, hopefully you’ll have enough information from the execution to put together a bug report for the upstream PowerShell module and work with that DSC resource’s authors for a resolution.&lt;/p&gt;
-
-&lt;h4 id=&quot;invoking-dsc-resources-with-pscredentials&quot;&gt;Invoking DSC Resources with PSCredentials&lt;/h4&gt;
-
-&lt;p&gt;When your manifest specifies a PSCredential, you’ll see one or more lines above the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InvokeParams&lt;/code&gt; declaration, like this (expanded for readability):&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$febabd4f_19e8_4ed6_a218_188e275ecc05&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New-PSCredential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-User&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apple&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#&amp;lt;Sensitive [value redacted]&amp;gt;'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$InvokeParams&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'PSRepository'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'set'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'psGallery'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;installationpolicy&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Trusted'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;psdscrunascredential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$febabd4f_19e8_4ed6_a218_188e275ecc05&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:/pathToPuppetModules/powershellget/lib/puppet_x/powershellget/dsc_resources/PowerShellGet/PowerShellGet.psd1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequiredVersion&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'2.2.5'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Note that it is building a credential object from plain text before passing that object to DSC;
-the debug logs will strip the password from being returned.&lt;/p&gt;
-
-&lt;p&gt;In this case, you will need some of the custom helper code that we snipped for brevity earlier, namely this function:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kr&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new-pscredential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CmdletBinding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;param&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Mandatory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ValueFromPipelineByPropertyName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;parameter&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Mandatory&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-            &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ValueFromPipelineByPropertyName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;bp&quot;&gt;$true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;string&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-        &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$secpasswd&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;ConvertTo-SecureString&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$password&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-AsPlainText&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Force&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$credentials&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New-Object&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;System.Management.Automation.PSCredential&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$user&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$secpasswd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;kr&quot;&gt;return&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$credentials&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Make sure to copy that code into your terminal &lt;em&gt;before&lt;/em&gt; you try to copy in the invocation variables and &lt;em&gt;also&lt;/em&gt; remember to replace &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;#&amp;lt;Sensitive [value redacted]&amp;gt;&lt;/code&gt; with the appropriate password string.
-Alternatively, you could use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Get-Credential&lt;/code&gt; and capture the output of that command to the same variable name from your debug log.&lt;/p&gt;
-
-&lt;h4 id=&quot;invoking-dsc-resources-with-cim-instances&quot;&gt;Invoking DSC Resources with CIM Instances&lt;/h4&gt;
-
-&lt;p&gt;Some DSC Resources use nested CIM instances to pass hashes as property values.
-In these cases, there’s one or more lines above the definition of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;InvokeParams&lt;/code&gt; variable which creates these CIM instances.&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;nv&quot;&gt;$b615d113_bb6e_49e4_9776_7e895dfe20c7&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;n&quot;&gt;New-CimInstance&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ClientOnly&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-ClassName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'MSFT_KeyValuePair'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'key'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Accept-Language'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'value'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'en-US'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$InvokeParams&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Name&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'xRemoteFile'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Method&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'set'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Property&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;destinationpath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:\dsc-xpsdesiredstateconfiguration-9.1.0-0-1.tar.gz'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;headers&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CimInstance&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[]]@(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$b615d113_bb6e_49e4_9776_7e895dfe20c7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;uri&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'https://forge.puppet.com/v3/files/dsc-xpsdesiredstateconfiguration-9.1.0-0-1.tar.gz'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;@{&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ModuleName&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:/pathToPuppetModules/xpsdesiredstateconfiguration/lib/puppet_x/xpsdc/dsc_resources/xPSDesiredStateConfiguration/xPSDesiredStateConfiguration.psd1'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-    &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RequiredVersion&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'9.1.0'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-  &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This is necessary for DSC to correctly handle the objects, &lt;em&gt;especially&lt;/em&gt; if they have a custom CIM instance class specific to the DSC Resource being called.&lt;/p&gt;
-
-&lt;h2 id=&quot;digging-deeper-with-pry&quot;&gt;Digging deeper with Pry&lt;/h2&gt;
-
-&lt;p&gt;Sometimes, reading the debug logs doesn’t give you enough information about what’s going on.
-You may need to &lt;em&gt;pry&lt;/em&gt; into the parts of Puppet that happen after the execution starts, but before the PowerShell code is executed.&lt;/p&gt;
-
-&lt;p&gt;When this is the case, the most powerful thing you can do is learn to interactively debug a Puppet run using a tool called &lt;a href=&quot;https://github.com/pry/pry&quot;&gt;pry&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/pry/pry&quot;&gt;Pry&lt;/a&gt; is a powerful tool for interactively debugging ruby.
-Using it with Puppet on Windows is a bit involved but it can be an extremely useful tool in your kit.&lt;/p&gt;
-
-&lt;p&gt;First, you’ll want to get a functional ruby environment installed &lt;em&gt;separate&lt;/em&gt; from the PDK.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Right now, the PDK does not support prying into a Puppet run due to limitations around native gems.
-If you don’t know what this means right now, don’t worry too much.
-As you get more used to how Ruby and Puppet works it will make more sense.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;You can accomplish this however you want, but make sure there is an installation of both Ruby and the associated Devkit installed when you are done.
-We suggest you do this via &lt;a href=&quot;https://www.powershellgallery.com/packages/RubyInstaller&quot;&gt;Glenn Sarti’s &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;RubyInstaller&lt;/code&gt;&lt;/a&gt; PowerShell module:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Install-Module&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;RubyInstaller&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;-Scope&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;CurrentUser&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# This will kick off an interactive installation of Ruby, including the necessary dependencies&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# It relies on Chocolatey (and will install it if needed)&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;# Strongly suggest installation option G ('2.5.1-2 (x64)') at the time of this writing.&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Install-Ruby&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The next step is to find the module files on disk.
-They’re &lt;em&gt;probably&lt;/em&gt; in a location like this one:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;C:/ProgramData/PuppetLabs/code/environments/&amp;lt;your environment name&amp;gt;/modules/
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;The actual location will depend on how you configured your Puppet Environments.&lt;/p&gt;
-
-&lt;p&gt;Next, you’re going to  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Set-Location&lt;/code&gt; to the module you want to debug, like so:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;Set-Location&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'C:/ProgramData/PuppetLabs/code/environments/production/modules/powershellget'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;We strongly suggest opening this location in VSCode to make editing a bit easier on yourself.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;In any case, you will want to &lt;em&gt;delete&lt;/em&gt; the file &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.lock&lt;/code&gt; in this directory and create a new file, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Gemfile.local&lt;/code&gt;, with the following content:&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fuubar'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pry-byebug'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pry-stack_explorer'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Next, you will run the following commands:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# This loads ruby 2.5 for use; if you don't do this, you won't be able to run other commands&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;uru&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;2.5&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# This is only necessary after you first install a ruby version; it's a tool to manage ruby dependencies&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bundler&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# This will cause bundler install all of the ruby dependencies into the folder you're currently in&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;set&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;path&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'.bundle/gems'&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# This will install all of your ruby dependencies&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;install&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# This will pull down a copy of the `pwslib` module for use and editing in the rest of your debugging&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;rake&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;spec_prep&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;At this point, you have a functioning Ruby installation and a Puppet Module setup and ready to be debugged.&lt;/p&gt;
-
-&lt;p&gt;The next step is to create a new file in the module folder at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;examples/test.pp&lt;/code&gt; and put your test manifest code in there.&lt;/p&gt;
-
-&lt;p&gt;Now, you can run your test manifest with the following command:&lt;/p&gt;
-
-&lt;div class=&quot;language-powershell highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;bundle&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exec&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;puppet&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/examples/test.pp&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--modulepath&lt;/span&gt;&lt;span class=&quot;w&quot;&gt; &lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;/spec/fixtures/modules&lt;/span&gt;&lt;span class=&quot;w&quot;&gt;
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;If you want to run in debug mode, append &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;--debug&lt;/code&gt; to the end of that command.
-The output you saw during a normal Puppet run will show, and the command runs until it stops at the error you are currently investigating.&lt;/p&gt;
-
-&lt;p&gt;Now, you’re ready to start adding &lt;em&gt;pry&lt;/em&gt; statements to the base provider and digging around.&lt;/p&gt;
-
-&lt;h3 id=&quot;prying-into-the-base-provider&quot;&gt;Prying into the base provider&lt;/h3&gt;
-
-&lt;p&gt;For the rest of this section we’ll be looking at the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsc_base_provider.rb&lt;/code&gt; file in the &lt;a href=&quot;https://forge.puppet.com/modules/puppetlabs/pwshlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-pwshlib&lt;/code&gt;&lt;/a&gt; module, which you can find at &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;./spec/fixtures/modules/pwshlib/puppet/provider/dsc_base_provider&lt;/code&gt; in the module folder.
-That file is the shared provider that &lt;em&gt;all&lt;/em&gt; Puppetized DSC Resources rely on.&lt;/p&gt;
-
-&lt;p&gt;For this brief tutorial, we’re going to pry into &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;invoke_get_method&lt;/code&gt;, but these techniques apply to all of the included methods you may want to debug.&lt;/p&gt;
-
-&lt;p&gt;First, find the method in the provider file (at the time of this writing, that’s around line 231):&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;invoke_get_method&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;name_hash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;o&quot;&gt;...&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;We’re going to add a pry binding to this method.
-For the purposes of this tutorial, we’re going to add it just before the DSC invocation (around line 241 at the time of this writing):&lt;/p&gt;
-
-&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;context&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;debug&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;Script:&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt; &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;redact_secrets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;script_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# This is the new code we're adding, which will tell ruby to enter a pry debugging session:&lt;/span&gt;
-&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'pry'&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;binding&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;pry&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ps_manager&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;execute&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;script_content&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:stdout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This will get you an interactive prompt inside the Puppet run:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/initial-pry.PNG&quot; alt=&quot;Initial execution of pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ls&lt;/code&gt; in that context to see what methods and variables are available:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/ls-pry.PNG&quot; alt=&quot;Demonstrating the `ls` command in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can type the name of one of the variables, such as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;name_hash&lt;/code&gt; and hit enter to see what it is set to:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/name-hash-pry.PNG&quot; alt=&quot;Printing the `name_hash` variable in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;You can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;whereami&lt;/code&gt; command to show where you are in the code.
-If you pass an integer to this command, it will show you that many lines around your current line.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/whereami-pry.PNG&quot; alt=&quot;Running the `whereami` command in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Next, we’ll execute the invocation script and assign it to our own variable (this will take a bit as it’s spinning up PowerShell for the first time and running &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Invoke-DscResource&lt;/code&gt;):&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/execute-pry.PNG&quot; alt=&quot;Executing independent code in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;In my case, it looks like we got some data for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;stdout&lt;/code&gt;, an exit code of zero, and no errors.&lt;/p&gt;
-
-&lt;p&gt;If we call &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt;, pry will execute the next line of code.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/next-pry.PNG&quot; alt=&quot;Calling the `next` command in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that the marker for our current line has updated to 243.
-We can keep using &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; to walk through the code execution, investigating any variables or running any methods for ourselves to see.
-I’ll keep doing that til we hit line 267, where the code manipulates the output data a little bit:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-line-pry.PNG&quot; alt=&quot;Showing the context that will modify the data variable in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Before we run these lines, lets check on some state:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-initial-pry.PNG&quot; alt=&quot;Printing the initial value of the data variable in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/valid_attributes-pry.PNG&quot; alt=&quot;Printing the value of the valid_attributes variable in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/parameters-pry.PNG&quot; alt=&quot;Printing the value of the parameters variable in pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Okay, so that shows us the current state of the data, the list of valid attributes, and the parameters respectively.
-We can then run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; and check the value of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data&lt;/code&gt; again to see what the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;data.select!&lt;/code&gt; line did:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-selected-pry.PNG&quot; alt=&quot;Printing the value of the data variable in pry after the select! method is used on it&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It looks like the list of key-value pairs has been trimmed down - we do this so only the values that Puppet cares about will be evaluated in the rest of the Puppet run.&lt;/p&gt;
-
-&lt;p&gt;If we use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt; again and look at data a final time:&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/data-rejected-pry.PNG&quot; alt=&quot;Printing the value of the data variable in pry after the reject! method is used on it&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We see that the key for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;PSDscRunAsCredential&lt;/code&gt; has been removed, which happens because it was the only key which was in the list of parameters.&lt;/p&gt;
-
-&lt;p&gt;This brings us to a loop in the code.
-If we want to see what happens &lt;em&gt;inside&lt;/em&gt; the loop, we need to use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;step&lt;/code&gt; command.
-This command also lets you shift contexts inside of any method being called.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-25-troubleshooting-puppetized-dsc-modules/step-loop-pry.PNG&quot; alt=&quot;Showing the result of stepping into a loop in Pry&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Note that we’re now &lt;em&gt;inside&lt;/em&gt; the loop - if we had called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;next&lt;/code&gt;, it would’ve evaluated the whole loop and gone to the next line after it.&lt;/p&gt;
-
-&lt;p&gt;If we want to just let Puppet run it’s course, we can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;continue&lt;/code&gt; command - this will keep us in the pry session, looking for the next &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pry.binding&lt;/code&gt; in our code.
-Right now we only have the one, but you can have any number of them.&lt;/p&gt;
-
-&lt;p&gt;If instead we want to exit the puppet run entirely, we can use the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;exit!&lt;/code&gt; command, which will bring you back to your PowerShell prompt.&lt;/p&gt;
-
-&lt;p&gt;And that’s it for basic pry debugging!
-A few commands and tools to help you look around and try stuff out to investigate where you think something has gone wrong.&lt;/p&gt;
-
-&lt;h4 id=&quot;places-to-look&quot;&gt;Places to look&lt;/h4&gt;
-
-&lt;p&gt;Here are a few methods you may want to investigate with a pry binding and reasons for that:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;canonicalize&lt;/code&gt; - this method retrieves the state of the DSC Resource on the node, if it exists, and loads it into a cache for comparing later - if something goes wrong here, chances are you’ll get idempotency issues.&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;invoke_get_method&lt;/code&gt; - this is responsible not just for querying the state of the DSC Resource but also for puppetizing the returned data&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ps_script_content&lt;/code&gt; - this method builds the PowerShell script that gets invoked to query or set the state of a DSC Resource.
-The methods included in it, particularly &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prepare_credentials&lt;/code&gt;, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;prepare_cim_instances&lt;/code&gt;, and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;invoke_params&lt;/code&gt; are where things are most likely to go wrong when turning Puppet code into PowerShell code.&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>michaeltlombardi</name></author><summary type="html">[An edited version of this post was also published on the OSPAssist Portal as Troubleshooting Puppetized DSC modules and Advanced troubleshooting: dig deeper with pry]</summary></entry></feed>
+&lt;p&gt;As always if you have any questions don’t hesistate to reach out to us via &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;Slack&lt;/a&gt; or &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;emailing&lt;/a&gt; and we will be as accomodating as we can be!&lt;/p&gt;</content><author><name>pmcmaw</name></author><category term="dsc" /><category term="puppet" /><category term="modules" /><category term="tooling" /><category term="dsc resources" /><category term="windows" /><category term="modules" /><category term="forge" /><category term="powershell gallery" /><summary type="html">Why bother?</summary></entry></feed>
