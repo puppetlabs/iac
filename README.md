@@ -26,7 +26,7 @@ This will allow you to check formatting, links, etc, as it will be presented on 
 
 ## Ops-y things
 
-On every push to master, the [deploy](./.github/workflows/deploy.yml) github action builds and deploys the current state to https://puppetlabs.github.io/iac/
+On every push to main, the [deploy](./.github/workflows/deploy.yml) github action builds and deploys the current state to https://puppetlabs.github.io/iac/
 Look at the [Jekyll Deploy action](https://github.com/puppetlabs/iac/actions?query=workflow%3A%22Jekyll+Deploy%22)
 and the ["GitHub Pages" settings](https://github.com/puppetlabs/iac/settings)
 to see if the build was successful.
