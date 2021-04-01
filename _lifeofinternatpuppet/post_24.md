@@ -25,8 +25,6 @@ Check the ticket [here](https://tickets.puppetlabs.com/browse/IAC-1482)
    - [Ruby Tutorial For Complete Beginners: Learn Ruby Now!](https://www.rubyguides.com/ruby-tutorial/ruby-if-else/)
    - [Learn Ruby the Hard Way](https://learnrubythehardway.org/book/)
 
-- I was contacted by the DIO Team regarding this [PR](https://github.com/puppetlabs/puppetlabs-modules/pull/10183) raised before the Christmas break. I paired up with Sheena, the issue was resolved and the PR was merged by the DIO Team. Thanks to Sheena and Jack for a follow up!
-
 - I worked alongside Paula to review and merge PRs called 'pdksync - (MAINT) Remove RHEL 5 family support'
 I also re-kicked tests for rhel-7, puppet-7 nightly on the puppetlabs-postgresql.
 Due to constant failures, I decided to run the tests for that machine locally to verify if the tests are running properly. I also re-kicked tests on puppetlabs-mysql as there were some failures discovered.

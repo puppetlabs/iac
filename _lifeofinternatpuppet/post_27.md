@@ -31,22 +31,6 @@ I really enjoyed releasing these modules :)
 
 - I also spent time catching up on my blog posts for the 'Life of an Intern at Puppet' blog page for Weeks 17 and 18. The [week 17 PR](https://github.com/puppetlabs/iac/pull/205) was merged by Paula, thank you!
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 That's all for this week!
 
 Have a nice weekend!
