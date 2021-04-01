@@ -19,13 +19,13 @@ Some of the key highlights from this week included:-
 
 - When doing the release prep for the puppetlabs-vcsrepo (v3.2.0), the tests were failing on Travis. I re-run the acceptance tests locally and they passed.
 
-More details in these [PRs]:-
-1.  https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/486
-2.  https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487
+More details in these PRs:-
+1.  [PR_1](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/486)
+2.  [PR_2](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487)
 
 Also, the wrong version was tagged, so was told by Paula to remove the tag so that re-tagging can be done again by her.
 
-After getting this release prep [PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487), I worked on [mergeback PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/488) test failures by running the tests locally for debian-8,9 and 10. The tests passed successfully. Also, an uncategorized PR paragraph was removed from the CHANGELOG.md file. Click on the mergeback PR link for more details.
+After getting this release prep [PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487) merged, I worked on [mergeback PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/488) test failures by running the tests locally for debian-8,9 and 10. The tests passed successfully. Also, an uncategorized PR paragraph was removed from the CHANGELOG.md file. Click on the mergeback PR link for more details.
 
 The release prep PRs for the following modules were ready for review and released, more details below:-
 - [puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec/pull/149)
