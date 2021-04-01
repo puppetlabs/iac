@@ -40,4 +40,5 @@ class OctoKitUtil
       return true if username == devx_member[:login]
     end
     false
+  end
 end
