@@ -1,0 +1,13 @@
+---
+layout: module
+title: puppetlabs-resource
+github: puppetlabs/puppetlabs-resource
+description: The provided task allows you to inspect the values of resources via the puppet resource command.
+appveyor: false
+codecov_token: ef8ebfa9632b46799eb523869ffa6cd5
+puppet_module: puppetlabs/resource
+travis_com: false
+travis_org: true
+workflow: nightly
+category: Crossplatform
+---
