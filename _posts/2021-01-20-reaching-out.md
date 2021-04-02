@@ -54,7 +54,7 @@ The values we would recommend setting are:
     2) Steps to Reproduce
     3) Expected Results
     4) Actual Results
-    5) Logs/Screenshots/Sample Manifests
+    5) Logs/Screenshots/Sample Manifests - in particular, logs generated with the --trace and --debug flags
 
   For more information on writing a good bug report check out this page on [RubyGarage](https://rubygarage.org/blog/how-to-write-a-quality-bug-report).
 
