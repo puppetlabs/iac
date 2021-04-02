@@ -1,4 +1,73 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-04-01T18:13:16+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-03-26: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html" rel="alternate" type="text/html" title="2021-03-26: IAC Team Status Update" /><published>2021-03-26T00:00:00+00:00</published><updated>2021-03-26T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html">&lt;p&gt;Hello and welcome to another weekly update from the IAC Team.
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-04-02T02:31:22+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-04-02: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/04/02/status-update.html" rel="alternate" type="text/html" title="2021-04-02: IAC Team Status Update" /><published>2021-04-02T00:00:00+00:00</published><updated>2021-04-02T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/04/02/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/04/02/status-update.html">&lt;p&gt;Hello to all from our beloved community and welcome to our weekly update from the IAC Team.
+Special greetings for your contributions, it means a lot for us and helps Puppet Open Source Community to grow and become strong day by day, contribution by contribution.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2138&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2138&lt;/code&gt;&lt;/a&gt;: “Fix HEADER* and README* wildcards in IndexIgnore”, thanks to &lt;a href=&quot;https://github.com/keto&quot;&gt;keto&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/pull/615&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ntp#615&lt;/code&gt;&lt;/a&gt;: “Allow setting user and group permissions of the NTP logfile”, thanks to &lt;a href=&quot;https://github.com/Kristijan&quot;&gt;Kristijan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1176&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1176&lt;/code&gt;&lt;/a&gt;: “Fix typo in validate_ipv6_address function”, thanks to &lt;a href=&quot;https://github.com/nbarrientos&quot;&gt;nbarrientos&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/community_management/pull/68&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;community_management#68&lt;/code&gt;&lt;/a&gt;: “Added back the ability to manage labels on multiple repos”, thanks to &lt;a href=&quot;https://github.com/yachub&quot;&gt;yachub&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;we-need-your-feedback&quot;&gt;We need your feedback!&lt;/h2&gt;
+
+&lt;p&gt;We are currently working on revamping our documentation for contributing to a module (CONTRUBUTING.md). We noticed it was out of date and referencing running tests on beaker which is no longer the case. There is a PR up to improve our wording and how you can contribute to our modules. If you have time a review or any improvements/suggestions would be fantastic. It is super important that we make the documentation functional for community members like yourself. You can find the draft PR &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/pull/617&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;extra-special-shout-out&quot;&gt;Extra special shout out&lt;/h2&gt;
+
+&lt;p&gt;We just want to take some time to acknowledge and thank our contributor &lt;a href=&quot;https://github.com/LooOOooM&quot;&gt;LooOOooM&lt;/a&gt; for remaining patient. Due to a break down of communication and a company holiday a module release did not go out as usually scheduled (on Mondays Community Day). In the future we will try our best to avoid situations like this and keep you all in the loop. We always appreciate feedback on how we can improve what we do. Sometimes this can be difficult as we are a small team supporting 50+ modules and tools and at the same time trying to keep everything moving. For specific team announcements please continue to tune into this blog, posted every Friday (unless stated the week before). This blog also contains some useful how to guides so feel free to check them out! :-)&lt;/p&gt;
+
+&lt;h2 id=&quot;operational-verification-at-puppet-camp&quot;&gt;Operational Verification at Puppet Camp&lt;/h2&gt;
+
+&lt;p&gt;At the &lt;a href=&quot;https://puppet.com/events/become-a-better-puppet-developer/&quot;&gt;Puppet Camp: Become a better Puppet developer&lt;/a&gt;, DavidS will talk about “Operational Verification”:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Sure, your Puppet ran finished successfully, but did it do what you expected?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;You can find some work in progress in the &lt;a href=&quot;https://github.com/puppetlabs/opv&quot;&gt;puppetlabs/opv&lt;/a&gt; repository. &lt;a href=&quot;https://puppet.com/events/become-a-better-puppet-developer/&quot;&gt;Register&lt;/a&gt; to see the talk live. If you want to provide input into the future of this development, please &lt;a href=&quot;https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html&quot;&gt;send us a quick message&lt;/a&gt; to volunteer.&lt;/p&gt;
+
+&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h2&gt;
+
+&lt;p&gt;The week we finally managed to merge the necessary code changes for the required dependencies into the provisioning service. With these changes we’ll finally be able to merge the port of the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/169&quot;&gt;puppetlabs-ibm_installation_manager&lt;/a&gt; and have nightly and PR integration testing.
+The work for the &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/225&quot;&gt;puppetlabs-websphere_application_server&lt;/a&gt; is still in progress but we are slowly getting that &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/actions/runs/701871477&quot;&gt;ready&lt;/a&gt;. We still have some issues with the puppet7-nightly version that we are curently investigating.
+From next week we are starting work to prepare a couple of training and educational materials while we start closing down on the multi-node support.&lt;/p&gt;
+
+&lt;h3 id=&quot;devx-team-update&quot;&gt;DevX Team Update&lt;/h3&gt;
+
+&lt;p&gt;We’re currently working towards getting the PDK 2.1 release out the door and are aiming to have it available next week.
+Speaking of PDK, we’re looking for feedback on how to build a better PDK.
+If you have any opinions, we’d greatly appreciate your feedback in &lt;a href=&quot;https://pup.pt/pdk2021&quot;&gt;this survey&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;easter-holidays&quot;&gt;Easter Holidays&lt;/h2&gt;
+
+&lt;p&gt;As we are a global company, different offices will be offline on different days to celebrate Easter. EMEA will be offline on Friday 2nd and Monday 5th April and Timisoara will be offline to celebrate on Friday 30th April and Monday 3rd May.
+Community Day on Monday will slow down due to a decreased headcount therefore please be patient with us. :-) If there are any reviews or releases we don’t get around to doing, they will be picked up the week beginning 12th April. Anything urgent, as always make sure to let us know and we will do our best to prioritize.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.0.1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ntp&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9.0.1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.0.2&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.0.1&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.0.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.0.2&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;other-work&quot;&gt;Other Work&lt;/h2&gt;
+
+&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>adrianiurca</name></author><category term="team" /><category term="status" /><category term="cloudci" /><category term="devx" /><category term="modules" /><category term="apache" /><category term="ntp" /><category term="stdlib" /><category term="community_management" /><category term="tools" /><category term="easter" /><summary type="html">Hello to all from our beloved community and welcome to our weekly update from the IAC Team. Special greetings for your contributions, it means a lot for us and helps Puppet Open Source Community to grow and become strong day by day, contribution by contribution.</summary></entry><entry><title type="html">2021-03-26: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html" rel="alternate" type="text/html" title="2021-03-26: IAC Team Status Update" /><published>2021-03-26T00:00:00+00:00</published><updated>2021-03-26T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/03/26/status-update.html">&lt;p&gt;Hello and welcome to another weekly update from the IAC Team.
 As mentioned last week, we were all off on Monday so we didn’t have the regularly scheduled Community Day at the start of the week so only one module released and one PR merged to report on this week.&lt;/p&gt;
 
 &lt;p&gt;Normal service resumes on Monday 29th!&lt;/p&gt;
@@ -671,163 +740,4 @@ A bit of work is currently undergoing on revamping the Github Actions report on 
     &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.2.0&lt;/code&gt;)&lt;/p&gt;
 
   &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>tphoney</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="cloud-ci" /><category term="modules" /><category term="iac-team" /><category term="community-day" /><summary type="html">Hey everyone, it’s my honour to write my first blogpost for Puppet. Kinda strange in I have done a number of other things for puppet, but never a blogpost. Case in point, my talk about litmus (available permanently on youtube to make me shudder at my own voice). On to business !!!</summary></entry><entry><title type="html">Converting to use Puppetized DSC Modules</title><link href="https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html" rel="alternate" type="text/html" title="Converting to use Puppetized DSC Modules" /><published>2021-01-26T00:00:00+00:00</published><updated>2021-01-26T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules</id><content type="html" xml:base="https://puppetlabs.github.io/iac/dsc/puppet/modules/2021/01/26/converting-puppetized-dsc-modules.html">&lt;h2 id=&quot;why-bother&quot;&gt;Why bother?&lt;/h2&gt;
-
-&lt;p&gt;To check out our reasons on why we think converting your module is a good idea, check out these blog posts written by &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt;:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/03/30/dsc-announcement.html&quot;&gt;DSC accouncement post&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html&quot;&gt;DSC release post&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The blog posts cover information including:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Why we are doing this&lt;/li&gt;
-  &lt;li&gt;Details about the builder&lt;/li&gt;
-  &lt;li&gt;How to Pupperize your Powershell module&lt;/li&gt;
-  &lt;li&gt;How to use your Puppetized module&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Seriously though what is there to not love?&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Minimal module maintainence costs&lt;/li&gt;
-  &lt;li&gt;Automated module building&lt;/li&gt;
-  &lt;li&gt;Property by property reporting&lt;/li&gt;
-  &lt;li&gt;VSCode Extension with intellisense&lt;/li&gt;
-  &lt;li&gt;We have 68 modules on the Forge in the &lt;a href=&quot;https://forge.puppet.com/dsc&quot;&gt;DSC namespace&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;Converting is relatively straight forward&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;so-how-can-i-do-this&quot;&gt;So how can I do this?&lt;/h2&gt;
-
-&lt;p&gt;&lt;em&gt;Old method:&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'puppetlabs-dsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.9.4'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;em&gt;New method:&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'puppetlabs-pwshlib'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.7.1'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-activedirectorycsdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'3.1.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-auditpolicydsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.4.0-0-1'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-certificatedsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'4.4.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-computermanagementdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'6.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-dfsdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'4.3.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-networkingdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'7.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-officeonlineserverdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-securitypolicydsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.7.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-sharepointdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'3.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-sqlserverdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'12.3.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-storagedsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'4.5.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-systemlocaledsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xactivedirectory'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.24.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xazure'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xazurepack'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.4.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xbitlocker'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.4.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xcredssp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.3.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdatabase'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.9.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdefender'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdhcpserver'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdisk'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdismfeature'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.3.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xdnsserver'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.11.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xexchange'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.27.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xfailovercluster'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.12.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'ddsc-xhyper_v'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'3.16.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xinternetexplorerhomepage'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xjea'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.2.16-6-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xmysql'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.1.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xpendingreboot'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.4.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xphp'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xpowershellexecutionpolicy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'3.1.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xpsdesiredstateconfiguration'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'8.5.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xremotedesktopadmin'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.1.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xremotedesktopsessionhost'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xrobocopy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscdpm'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.3.3-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscsma'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscspf'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.3.1-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscsr'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.3.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xscvmm'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.4-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xsmbshare'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.1.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xsqlps'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.4.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xtimezone'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.8.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwebadministration'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.5.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwebdeploy'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwindowseventforwarding'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwindowsrestore'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwindowsupdate'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.7.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwineventlog'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.2.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-xwordpress'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'1.1.0-0-0'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;I know this &lt;em&gt;looks&lt;/em&gt; like a lot of work, but really the work has been done for you!
-Just copy and paste the above code snippet.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;The modules above are as alike to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-dsc&lt;/code&gt; module as we could possibly get.
-It is strongly recommended to migrate to these versions and when everything is up and running, upgrading to the latest versions.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h2 id=&quot;a-few-caveats&quot;&gt;A few caveats&lt;/h2&gt;
-
-&lt;p&gt;The following modules cannot be automatically puppetized at the same version because they referenced commit SHAs instead of versions discoverable on the &lt;a href=&quot;https://www.powershellgallery.com&quot;&gt;gallery;&lt;/a&gt;
-instead, we recommend using the next released stable version after those SHA’s, as listed below:&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; These are close but not precise replacements:&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-fsrmdsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.5.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-iscsidsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.0.0-0-0'&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-wsmandsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'2.4.0-0-0'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Here are links to the specific commit SHAs that have been referenced:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/dsccommunity/FSRMDsc/commit/8945f610fa9a6f7f920260abf4e50d91db25bac0&quot;&gt;FSRMDsc&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/dsccommunity/iSCSIDsc/commit/2208ad24a0cc0a85ce19fb377e72fbc21d366587&quot;&gt;iSCSIDsc&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/dsccommunity/wsmandsc/commit/1aa6400e7ffa1932505bf9904a7ce9e147af9c45&quot;&gt;WSManDsc&lt;/a&gt;&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;&lt;em&gt;&lt;strong&gt;Note:&lt;/strong&gt; puppetized as &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dsc/wminamespacesecurity&lt;/code&gt; due to the name of the module changing when pushed to the &lt;a href=&quot;https://www.powershellgallery.com&quot;&gt;PowerShell Gallery&lt;/a&gt; vs the old code repository.&lt;/em&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;language-puppet highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;n&quot;&gt;mod&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'dsc-wminamespacesecuritydsc'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'0.3.0-0-0'&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;Again here is a link to the specific commit SHA that has been referenced:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/PowerShell/WmiNamespaceSecurityDsc/commit/d49daa4c18f12aabf32fd60631d927c6d276a453&quot;&gt;WmiNamespaceSecurityDsc&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;guidance-on-troubleshooting&quot;&gt;Guidance on troubleshooting&lt;/h2&gt;
-
-&lt;p&gt;Coincidently &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael&lt;/a&gt; has just published a blog post on how to troubleshoot for DSC.&lt;/p&gt;
-
-&lt;p&gt;Check it out on our &lt;a href=&quot;https://puppetlabs.github.io/iac/&quot;&gt;blog page&lt;/a&gt;!&lt;/p&gt;
-
-&lt;h2 id=&quot;some-things-come-for-free&quot;&gt;Some things come for free!&lt;/h2&gt;
-
-&lt;p&gt;We suggest using the Puppet VSCode extension as it comes built in with an auto-completer. This will help you keep your pins up to date with the puppetfile resolver.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-01-26-converting-dsc-modules/puppetfile-resolver.gif&quot; alt=&quot;Showing validation errors in your Puppetfile&quot; /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;what-else-is-coming&quot;&gt;What else is coming&lt;/h2&gt;
-
-&lt;p&gt;As part of our next phase we plan to flesh out and update our testing infrastructure for this module on our road to the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.0.0&lt;/code&gt; release of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt;.
-In the pipeline, we still plan on getting nightly builds into place to ensure that there is never more than a 24 hour lag between published Powershell modules with DSC Resources and our Puppetized modules on the Forge.&lt;/p&gt;
-
-&lt;p&gt;As always if you have any questions don’t hesistate to reach out to us via &lt;a href=&quot;https://slack.puppet.com/&quot;&gt;Slack&lt;/a&gt; or &lt;a href=&quot;mailto:dsc@puppet.com&quot;&gt;emailing&lt;/a&gt; and we will be as accomodating as we can be!&lt;/p&gt;</content><author><name>pmcmaw</name></author><category term="dsc" /><category term="puppet" /><category term="modules" /><category term="tooling" /><category term="dsc resources" /><category term="windows" /><category term="modules" /><category term="forge" /><category term="powershell gallery" /><summary type="html">Why bother?</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>tphoney</name></author><category term="team" /><category term="status" /><category term="litmus" /><category term="cloud-ci" /><category term="modules" /><category term="iac-team" /><category term="community-day" /><summary type="html">Hey everyone, it’s my honour to write my first blogpost for Puppet. Kinda strange in I have done a number of other things for puppet, but never a blogpost. Case in point, my talk about litmus (available permanently on youtube to make me shudder at my own voice). On to business !!!</summary></entry></feed>
