@@ -16,7 +16,7 @@ Hello everyone, Not a lot of time left for Easter break now :)
    - Possibly have a list for show and tell sessions
    - Underscores for dates
    - Have embeded videos running inside a window
-
+<br/><br/>
 - I took all this feedback into consideration and decided to revamp the page completely with sections and expanded macros. I was also given a tip of tagging the presenter name, adding the duration and content of the video.
 Thanks Norman for the useful tips!
 I am currently working on this document, stay tuned for more information!
@@ -33,8 +33,7 @@ The key learnings from doing these releases were:-
    - [puppetlabs-rook](https://github.com/puppetlabs/puppetlabs-rook/pull/113)
    - [puppetlabs-puppet_conf](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/142)
    - [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/180)
-
-
+<br/><br/>
 - When raising PRs for the pending blog posts, I noticed that duplicated commits were getting pushed. I learnt another new thing, which was that always fetch and rebase from the main branch, what I was doing before was fetching and rebasing from the checkout branch instead of main branch. Thanks for the tips Paula!
 
 - I reviewed and merged the following PRs for David Swan and Adrian
