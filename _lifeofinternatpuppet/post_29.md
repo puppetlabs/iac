@@ -34,6 +34,7 @@ The key learnings from doing these releases were:-
    - [puppetlabs-puppet_conf](https://github.com/puppetlabs/puppetlabs-puppet_conf/pull/142)
    - [puppetlabs-ibm_installation_manager](https://github.com/puppetlabs/puppetlabs-ibm_installation_manager/pull/180)
 
+
 - When raising PRs for the pending blog posts, I noticed that duplicated commits were getting pushed. I learnt another new thing, which was that always fetch and rebase from the main branch, what I was doing before was fetching and rebasing from the checkout branch instead of main branch. Thanks for the tips Paula!
 
 - I reviewed and merged the following PRs for David Swan and Adrian
