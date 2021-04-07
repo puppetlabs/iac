@@ -90,8 +90,6 @@ The following modules were released this week:
   [community_management-pr-68]: https://github.com/puppetlabs/community_management/pull/68
   [yachub]: https://github.com/yachub
 
-## Other Work
-
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
 [adrian]: https://github.com/adrianiurca
