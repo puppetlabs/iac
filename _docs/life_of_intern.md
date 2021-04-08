@@ -122,3 +122,5 @@ Finally, feel free to share your thoughts and comments on my blog pages :)
 [Week 28](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_28.html)
 
 [Week 29](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_29.html)
+
+[Week 30](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_30.html)
