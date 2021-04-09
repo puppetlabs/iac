@@ -24,7 +24,7 @@ Check out the release notes for 2.1 [here](https://puppet.com/docs/pdk/2.x/relea
 
 ### Cloud CI Update
 This week we are closing a new milestone for the Cloud CI. We finally decided to close the multi-node testing milestone as we currently have a couple of modules already using this feature (puppetlabs-kubernetes, puppetlabs-ibm_installation_manager and soon puppetlabs-websphere_application_server). 
-Another good news is, that this week, the support team managed to port their first module to use the Cloud CI provisioning for their PR/Nightly tests on the [support-tasks](https://github.com/puppetlabs/support-tasks) module. We are hopeful this will make testing and releasing a lot easier in the future for them.
+More good news is that this week, the support team managed to port their first module to use the Cloud CI provisioning for their PR/Nightly tests on the [support-tasks](https://github.com/puppetlabs/support-tasks) module. We are hopeful this will make testing and releasing a lot easier in the future for them.
 We are now mainly focusing on training and educational materials so a couple of demo videos will soon follow.
 
 ### Other work
