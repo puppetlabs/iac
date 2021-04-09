@@ -16,6 +16,7 @@ I hope you all had a relaxing Easter break!
 Not a lot too say for this week, but some of the key highlights included the following:-
 
 - I started the week by continuing work on the Confluence Page - 'Accessing IAC Training Materials, The New Start Guide'
+
 - I reviewed and merged many PRs for the team this week
    - [puppetlabs-scheduled_task](https://github.com/puppetlabs/puppetlabs-scheduled_task/pull/186)
    - [puppetlabs/iac](https://github.com/puppetlabs/iac/pull/224)
@@ -55,7 +56,7 @@ Not a lot too say for this week, but some of the key highlights included the fol
    - [puppetlabs-vsphere](https://github.com/puppetlabs/puppetlabs-vsphere/pull/209)
    - [puppetlabs-websphere_application_server](https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/227)
    - [puppetlabs-wsus_client](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/162)
-
+  <br/><br/>
    That's everything for this week!
 
    Have a nice weekend everyone, see you next week!
