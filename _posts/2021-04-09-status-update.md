@@ -6,6 +6,11 @@ categories:
   - team
   - status
 tags:
+  - pdk
+  - cloudci
+  - terminology
+  - ibm
+  - kubernetes
 ---
 
 ## Community Contributions
