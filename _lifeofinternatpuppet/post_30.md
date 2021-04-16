@@ -57,6 +57,7 @@ Not a lot too say for this week, but some of the key highlights included the fol
    - [puppetlabs-websphere_application_server](https://github.com/puppetlabs/puppetlabs-websphere_application_server/pull/227)
    - [puppetlabs-wsus_client](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/162)
   <br/><br/>
-   That's everything for this week!
 
-   Have a nice weekend everyone, see you next week!
+That's everything for this week!
+<br/><br/>
+Have a nice weekend everyone, see you next week!
