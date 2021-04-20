@@ -28,7 +28,9 @@ Outside the office hours, some of us hang out in #forge-modules and #testing on 
 **Use the ![sos]({% link /assets/2021-01-20-reaching-out/sos.gif %}){:height="50px" width="50px"}
  emoji on urgent issues that require the attention of a puppet employee.**
 
-## Reaching out via Jira ![bug]({% link /assets/2021-01-20-reaching-out/bug.png %}){:height="40px" width="40px"}
+## Reaching out via [Jira](https://tickets.puppetlabs.com/browse/MODULES) ![bug]({% link /assets/2021-01-20-reaching-out/bug.png %}){:height="40px" width="40px"}
+
+A link to raising an issue using Jira can be found [here](https://tickets.puppetlabs.com/browse/MODULES).
 
 When you come across an issue with one of our supported modules and want to raise an issue, in order for to it to come directly to us there are a few things we would doing first.
 
