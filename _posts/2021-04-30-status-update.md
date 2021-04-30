@@ -60,7 +60,7 @@ After the training and education milestone we will start focusing on improving t
 
 The team is heads down on the first set of tasks to improve templates and package size identified from the PDK survey and existing tickets. As part of this work, we're working to increase documentation on how the tool works. [Ciaran][Ciaran] has done some wonderful work describing how the [validation](https://github.com/puppetlabs/pdk/blob/main/reference/validate/REFERENCE.md) system works inside the the PDK.
 
-There is an upcoming Puppet VS Code Extension release with improved Puppet code tokenization implemented by [Glenn]. This enables code folding based on the language, not just the indent level, and improved code formatting speed. Look for the status in this [PR](https://github.com/puppetlabs/puppet-editor-services/pull/302)
+There is an upcoming Puppet VS Code Extension release with improved Puppet code tokenization implemented by [Glenn][Glenn]. This enables code folding based on the language, not just the indent level, and improved code formatting speed. Look for the status in this [PR](https://github.com/puppetlabs/puppet-editor-services/pull/302)
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
