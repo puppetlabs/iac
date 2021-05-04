@@ -49,7 +49,7 @@ The following modules were released this week:
 
 ## IAC Content Support Team
 
-This week [Daiana][Daiana] has been working on CNCF certification with Kubernetes 1.2.0, alongside this she has continued to work on additional tickets that have landed on her plate. [Adrian][Adrian] has been working on auditing a new codebase that the team plan on taking ownership of. This will be a gem/module that will help us make the most of analytics and provide us with real feedback. Last but not least [David Swan][David Swan] has been working on porting the last of our modules to run acceptance testing using Github Actions and GCP. As these are the last few they are most definitely more complex to migrate, none the less this is a job well suited to [David][DavidSwan].
+This week [Daiana][Daiana] has been working on CNCF certification with Kubernetes 1.2.0, alongside this she has continued to work on additional tickets that have landed on her plate. [Adrian][Adrian] has been working on auditing a new codebase that the team plan on taking ownership of. This will be a gem/module that will help us make the most of analytics and provide us with real feedback. Last but not least [David][David Swan] has been working on porting the last of our modules to run acceptance testing using Github Actions and GCP. As these are the last few they are most definitely more complex to migrate, none the less this is a job well suited to [David][DavidSwan].
 
 ## Cloud CI
 
