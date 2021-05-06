@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Week 10"
+title: Week 10
 author: Disha-maker
 categories:
   - PTO
