@@ -51,7 +51,7 @@ Our CHANGELOGs when releasing are automated and to do this, we make use of the P
 
 - [x] the first line of my commit message includes:
 
-  - [x] an issue number (if applicable), e.g. "(MODULES-xxxx) This is the first line"
+  - [x] an issue number (only if you feel applicable, no need for small PRs to correct typos etc.), e.g. "(MODULES-xxxx) This is the first line"
 
   - [x] a short description (50 characters is the soft limit, excluding ticket number(s))
 
@@ -136,17 +136,19 @@ Our CHANGELOGs when releasing are automated and to do this, we make use of the P
       location of your branch, along with any other commentary you
       may wish to make.
 
-## Testing
+# Testing
 ## Getting Started
 
-Our Puppet modules provide [`Gemfile`](./Gemfile)s, which can tell a Ruby package manager such as [bundler](http://bundler.io/) what Ruby packages,
+Our Puppet modules provide a Gemfile in the module root directory, we can then use the pdk to install all of the Gems listed in the Gemfile.
+
+which can tell a Ruby package manager such as [bundler](http://bundler.io/) what Ruby packages,
 or Gems, are required to build, develop, and test this software.
 
-Please make sure you have [bundler installed](http://bundler.io/#getting-started) on your system, and then use it to
+Please make sure you have the [pdk](https://puppet.com/try-puppet/puppet-development-kit/) on your system, and then use it to
 install all dependencies needed for this project in the project root by running
 
 ```shell
-% bundle install --path .bundle/gems
+% pdk bundle install
 Fetching gem metadata from https://rubygems.org/........
 Fetching gem metadata from https://rubygems.org/..
 Using rake (10.1.0)
@@ -157,7 +159,7 @@ Using serverspec (0.6.3)
 Using rspec-system-serverspec (1.0.0)
 Using bundler (1.3.5)
 Your bundle is complete!
-Use `bundle show [gemname]` to see where a bundled gem is installed.
+Use `pdk bundle show [gemname]` to see where a bundled gem is installed.
 ```
 
 NOTE: some systems may require you to run this command with sudo.
@@ -165,7 +167,7 @@ NOTE: some systems may require you to run this command with sudo.
 If you already have those gems installed, make sure they are up-to-date:
 
 ```shell
-% bundle update
+% pdk bundle update
 ```
 
 ## Checking your PR automated test results
@@ -175,11 +177,14 @@ This will highlight and regressions that you change may have introduced.
 
 ### How do I know the status of the automated tests?
 
-Within your PR if you click on the commits you will one of 3 tiny icons beside the SHA of your commit.
+At the bottom of your PR a breakdown of the automated tests running will be shown:
+
+![automated_test_suite](test_run_info.png)
 
 - A green tick (Tests have passed)
 - A red cross (Tests have failed)
 - A yellow dot (Tests are still running)
+- A grey dot (The job has been cancelled)
 
 A PR will not be merged with failing tests, if you click on the small red cross icon it will give you additional information
 on what has actually failed. Once this is addressed you can commit your fix and continue working. If your fix is difficult and
@@ -193,7 +198,7 @@ With all dependencies in place and up-to-date, run the tests:
 ### Unit Tests
 
 ```shell
-% bundle exec rake spec
+% pdk bundle exec rake spec
 ```
 
 This executes all the [rspec tests](http://rspec-puppet.com/) in the directories defined [here](https://github.com/puppetlabs/puppetlabs_spec_helper/blob/699d9fbca1d2489bff1736bb254bb7b7edb32c74/lib/puppetlabs_spec_helper/rake_tasks.rb#L17) and so on.
@@ -236,6 +241,9 @@ end
 A common pattern for acceptance tests is to create a test manifest, apply it
 twice to check for idempotency or errors, then run expectations.
 
+For more examples on how to write a test using litmus, please check out the tests in all of our supported modules and for
+more information about writing tests using litmus check out the [litmus wiki test examples](https://puppetlabs.github.io/litmus/Litmus-test-examples.html).
+
 ```ruby
 it 'does an end-to-end thing' do
   pp =<<-EOF
@@ -254,20 +262,15 @@ describe file("/etc/sample") do
 end
 ```
 
-# As as Trusted Contributor
-
-Even if you have commit access to the repository, you still need to go through the process above, and have someone else review and merge
-in your changes.  The rule is that **all changes must be reviewed by a project developer that did not write the code to ensure that
-all changes go through a code review process.**
-
-The record of someone performing the merge is the record that they performed the code review. Again, this should be someone other than the author of the topic branch.
-
-# Getting your PR reviewed
+## Getting your PR reviewed
 
 If you would like information about:
+
 - How to get your PR reviewed
 - What does a review consist of?
 - Who can merge my PR?
+
+The record of someone performing the merge is the record that they performed the code review. Again, this should be someone other than the author of the topic branch.
 
 Please check out a document we have published on our [IAC Documentation Site](https://puppetlabs.github.io/iac/docs/reviewing-pull-requests.html).
 
