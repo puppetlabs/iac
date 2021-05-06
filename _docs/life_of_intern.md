@@ -83,7 +83,9 @@ Finally, feel free to share your thoughts and comments on my blog pages :)
 
 [Week 6](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_6.html)
 
-[Week 7 & 8](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_7_and_8.html)
+[Week 7](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_7.html)
+
+[Week 8](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html)
 
 [Week 10](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_10.html)
 
@@ -129,4 +131,6 @@ Finally, feel free to share your thoughts and comments on my blog pages :)
 
 [Week 32](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_32.html)
 
-[Week 33](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_33.html) 
+[Week 33](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_33.html)
+
+[Week 34](https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_34.html)
