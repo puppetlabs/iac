@@ -38,7 +38,7 @@ Lets go through each step in detail.
 ***Provision***
 
 Litmus allows the provisioning of a vm/container via a task.
-We use the following [task](https://github.com/puppetlabs/provision/blob/main/tasks/provision_service.json) to provision machine in cloud ci.
+We use the provision module's [available tasks](https://github.com/puppetlabs/provision/blob/main/tasks) to spin up the test environment.
 When run it creates an litmus_inventory.yaml file that allows both [bolt](https://github.com/puppetlabs/bolt) and [serverspec](https://serverspec.org/) to communicate with that vm/container.
 
 How do we differentiate between different vm/containers? 
