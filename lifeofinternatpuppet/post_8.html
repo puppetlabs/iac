@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Week 8 | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Week 8" />
+<meta name="author" content="Disha-maker" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Welcome to Week 8…" />
+<meta property="og:description" content="Welcome to Week 8…" />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-05-06T13:08:26+00:00" />
+<script type="application/ld+json">
+{"description":"Welcome to Week 8…","@type":"BlogPosting","headline":"Week 8","dateModified":"2021-05-06T13:08:26+00:00","datePublished":"2021-05-06T13:08:26+00:00","url":"https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_8.html"},"author":{"@type":"Person","name":"Disha-maker"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Week 8</h1>
+  </header>
+
+  <div class="post-content">
+    <p>Welcome to Week 8…</p>
+
+<p>Time is flying at placement when busy, isn’t?</p>
+
+<p>This week a lot is going on within the team, so lets get started…</p>
+
+<p>On Monday 19th October 2020, before having my litmus demo with Norman, I had a quick sync up with Ciaran before the demo at 10:30am. During the session with Ciaran he asked me to check if the provisioning of a machine is working fine, because on Saturday when I was doing my practice for the litmus demo, I noticed that the provisioning was failing once again, so that’s why the sync up was important with Ciaran prior to the demo.
+We run the process again and it worked fine.</p>
+
+<p>The 1:1 with Norman started off with the demo and session over-ran because there was lots to talk about in relation to tickets being assigned and other important questions.</p>
+
+<p>So I will say firstly that the demo was amazing, I really enjoyed the experience and got more knowledge from someone like Norman who had 20 years experience in mentoring :) Sorry Norman, I had to reveal this fact as I think anyone reading this post should be aware of this fact :)</p>
+
+<p>He also said that next time when I am using Litmus and running tests on a provisioned machine, I should select a difficult module/repository to clone down from GitHub, just to give muself a challenge and see if I can do the same process successfully!
+I will look into this later in the coming weeks so stay connected to find out more :)</p>
+
+<p>He also suggested that I should read up on the fundamentals of unix and bash commands via <a href="https://www.linkedin.com/learning/">LinkedIn Learning</a> as it will really help me in my day-to-day work.</p>
+
+<p>He also gave me a breakdown on how I should start my first ticket/task on changing the author name of the supported modules to ‘puppetlabs’
+He gave me useful advice on how I should approach the ticket, so thank you so much Norman for all your help to get me started off on my first ticket!
+Check the link to the <a href="https://tickets.puppetlabs.com/browse/IAC-1116">JIRA ticket</a></p>
+
+<p>He also told me to stop using Lattice for meetings with mentors, and he suggested that I should create a document and share it with him and my three mentors, Ciaran, Daiana and Paula respectively so that they know what I am going to ask them in the next 1:1 mentoring session. Thank you for the suggestion Norman.</p>
+
+<p>After the session with Norman was finished, I started to work on my first ticket!</p>
+
+<p>I read the ticket carefully, especially the tasks I was given to do by Paula.
+I spent the rest of the day going over the meta.json file to see which modules author name needs to be changed to ‘puppetlabs’</p>
+
+<p>I created a list of the modules which needed their author name changed and edited the files inside VIM Text Editor before submitting a PR for review and merging the new changes respectively.</p>
+
+<p>I had to repeat the process from scratch with Paula on Tuesday morning as I did it in the wrong way, so it needed to be fixed. A demo was done was Paula and I tried again all day but got lost in the process so on Wednesday I requested Ciaran to do a step-by-step demo once again so that I can understand where I was going wrong.
+After the demo with Ciaran I was able to do the rest of the five modules successfully and the ticket was finished before the standup session on Wednesday.</p>
+
+<p>Check the list of merged PRs given below for further information!</p>
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1200">puppetlabs-postgresql</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-panos/pull/122">puppetlabs-panos</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-reboot/pull/258">puppetlabs-reboot</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-resource_api/pull/39">puppetlabs-resource_api</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-kubernetes/pull/446">puppetlabs-kubernetes</a></li>
+  <li><a href="https://github.com/puppetlabs/cisco_ios/pull/423">puppetlabs/cisco_ios</a></li>
+</ul>
+
+<p>Also on Wednesday, Norman requested me to share the Google document with him and the mentors for the 1:1 meetings, and as promised I uploaded a copy to the IAC Team shared space. Norman shared with me some <a href="https://www.linkedin.com/learning/">LinkedInLearning</a> videos on <a href="https://www.linkedin.com/learning/git-essential-training-the-basics?u=2098212">Git</a> and <a href="https://www.linkedin.com/learning/learning-git-and-github?u=2098212">GitHub</a>
+I will be looking at them when I have some free time.</p>
+
+<p>Once the standup session was done, I attended the fortnight 1:1 session with David Schmitt - ‘informal chat about career, tech and general advice’ and told him how I am getting on and also asked some of the questions I had planned before the session.</p>
+
+<p>The questions I asked included:-</p>
+<ul>
+  <li>Recap on Honeycomb</li>
+  <li>IAC Guidelines Document - what does the IAC Team Role includes? Do I need a session on this as I have a fair idea of what the IAC Team does on a day-to-day basis?</li>
+</ul>
+
+<p>David Schmitt sent me some reading material links on <a href="https://docs.honeycomb.io/">Honeycomb</a> and said that he will follow up with Norman on what he means by IAC Team Role within the IAC Guidelines Document.</p>
+
+<p>I also asked him if it would be a good idea to contact Daniel again regarding some of his training sessions listed in the document. He said that it would be a good idea and ask him if he can do a training session with you some time next week, as he should have some free time.
+Based on the advice given by David Schmitt, I contacted Daniel and we got a session scheduled for Friday 30th October in the morning from 11am - 12pm for a training session on Docker and Kubernetes. Thank you Daniel for giving me your time next Friday. Looking forward to the session!</p>
+
+<p>A sync up session prior to the QUB Graduate Recruitment and Placement Fair was also done on Monday 5pm with Caoimhe and the rest of the team who volunteered to help at the virtual fair this year on Thursday 22nd October 2020. I am really excited and looking forward to the fair on Thursday :)</p>
+
+<p>On Wednesday after the sync up with Ciaran, regarding the diffculty to understand the process told my Paula on Tuesday 20th October 2020, I had a 1:1 session with Caoimhe, some of the topics we covered were - navigating confluence, spread the word for more guest speakers for the EEECS Student Sustainability Team running a range of different event series. The show and tell session this week was really interesting as we had a talk around what could be a possible naming conventions standard for github branches should the team follow from now on?
+Paula is working on this topic and we will be going back to this discussion in two to three weeks time to make a final decision on this topic. Stay tuned to know more :)</p>
+
+<p>Caoimhe told me to contact Laura Raney so that she can add me to the Puppet Insider Group and send her content that I would like to added in this month’s newsletter.
+As told, I contacted Laura via a direct message on Slack and sent her some of the information that I would like to be added in this month’s Puppet Insider.
+Keep an eye out for the upcoming events, and if interested please contact us today!</p>
+
+<p>Check out the Facebook and LinkedIn pages for more information by searching for ‘EEECS Student Sustainability Team’ and join the team today for some of the exciting events coming in the next month :)</p>
+
+<p>In the afternoon I had a session with Michael where he give me an interesting session on Windows Powershell and DSC builder via a zoom call. Check out the reading materials on Powershell <a href="https://leanpub.com/c/pwshop/c/puppet-some-guid">here</a>. Thank you Michael :)</p>
+
+<p>I attended the fair with Puppet Team from 2pm-6pm and it was lovely to chat to current students and share my experiences of being an intern at Puppet this year. An enjoyable afternoon and evening for sure :)
+Many thanks to Norman and Caoimhe for inviting me to the fair :)</p>
+
+<p>Just want to wish the students a very best of luck with their applications for placement year/graduates roles at Puppet!</p>
+
+<p>This morning will be as usual with the Friday Wrap Up session. I gave an update on the work done within the IAC Team this week and thanks for the appreciation Norman as always :)
+David Schmitt sent out useful information such as the <a href="https://puppetlabs.github.io/iac/team/status/2020/10/23/status-update.html">team blog</a> to help me give a summary to the rest of the teams at the Belfast office as well as gave a mention on Sheena’s demo and will attend the social hour (let’s hope it’s a games afternoon as decided last week)
+I’m looking forward to the social hour :)</p>
+
+<p>That’s all the updates done from this week :)</p>
+
+<p>Have a good weekend everyone!</p>
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
