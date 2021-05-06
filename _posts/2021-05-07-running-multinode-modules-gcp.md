@@ -47,7 +47,7 @@ Using the bolt variables allows users to have multiple labels associated with a 
 
 By running the provision bolt tasks manually or through a bolt plan we can label machines.
 
-![Showing role infm in litmus_inventory.yaml file]({% link /assets/2021-05-07-running-multinode-modules-gcp/inventory_role.png %}) 
+![Showing role info in litmus_inventory.yaml file]({% link /assets/2021-05-07-running-multinode-modules-gcp/inventory_role.png %}) 
 [Example_websphere_provision_plan](https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/plans/provision_machines.pp)
 
 ***Setup provisioned systems***
@@ -99,7 +99,7 @@ We use rspec labelling and rake task to identify the tests to run on integeratio
 
 ## Lets go through different scenarios where we can use multi node testing
 
-***Multilpe puppet agents***
+***Multiple puppet agents***
 
 In the setup we have many puppet agents, a module is installed and tests are run.
 
