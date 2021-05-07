@@ -16,6 +16,9 @@ This week it was a bank holiday in EMEA, therefore community day has been resche
 
 As already mentioned this week, it was been pretty quiet with most of us on holidays. However we did manage to get a [customer issue on our issue module](https://github.com/puppetlabs/puppetlabs-iis/pull/321) addressed. The team was made aware of this on Tuesday, it was picked up and triaged on Wednesday, reviewed and merged on Thursday and we aim for release on Monday during our team triage day. 
 
+We're currently overhauling our Contribution Guidelines to reflect the new processes we introduced in the last year in [this PR](https://github.com/puppetlabs/iac/pull/242).
+Have a look and tell us what you think!
+
 ## Developer Experience
 
 Work continues on reducing package size and improving templates. We presented some early concepts to a few customers in a TAB session to gain feedback on our direction and implementation. We received some great feedback from this session that will help us get the tooling available sooner for more feedback from a wider audience.
