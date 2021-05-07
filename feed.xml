@@ -1,4 +1,262 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-05-06T13:08:26+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-04-30: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update.html" rel="alternate" type="text/html" title="2021-04-30: IAC &amp;amp; DevX Team Status Update" /><published>2021-04-30T00:00:00+00:00</published><updated>2021-04-30T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update.html">&lt;h2 id=&quot;community-day-triage-stats&quot;&gt;Community Day Triage Stats&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-05-07T02:44:16+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">How to port and run multi-node modules in cloud ci / gcp</title><link href="https://puppetlabs.github.io/iac/module/development/2021/05/07/running-multinode-modules-gcp.html" rel="alternate" type="text/html" title="How to port and run multi-node modules in cloud ci / gcp" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/module/development/2021/05/07/running-multinode-modules-gcp</id><content type="html" xml:base="https://puppetlabs.github.io/iac/module/development/2021/05/07/running-multinode-modules-gcp.html">&lt;h2 id=&quot;multi-node-modules-in-gcp&quot;&gt;Multi Node Modules in GCP&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Introduction&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Integration testing in puppet terms, is where we set up a number of vms/containers and test interactions between them. For example this may be&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Install PE and set up some puppet agents to talk with it.&lt;/li&gt;
+  &lt;li&gt;Setup a NTP server, and register some ntp clients.&lt;/li&gt;
+  &lt;li&gt;Install puppet server and setup multiple puppet agents.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Ordering of the tests is important, and being able to run a test on an individual system is paramount.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Design&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We use the following workflow to run multi node modules on  Cloud CI / GCP.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Provision - We use provision task to provision a node for testing.&lt;/li&gt;
+  &lt;li&gt;Setup provisioned systems - We use bolt tasks/plans to setup the multi node environment for testing.&lt;/li&gt;
+  &lt;li&gt;Run tests - We use existing serverspec / litmus helpers to setup the dependencies and setup required for module
+testing.&lt;/li&gt;
+  &lt;li&gt;Teardown -  We use provision task to teardown the machines.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Lets go through each step in detail.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Provision&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Litmus allows the provisioning of a vm/container via a task.
+We use the provision module’s &lt;a href=&quot;https://github.com/puppetlabs/provision/blob/main/tasks&quot;&gt;available tasks&lt;/a&gt; to spin up the test environment.
+When run it creates an litmus_inventory.yaml file that allows both &lt;a href=&quot;https://github.com/puppetlabs/bolt&quot;&gt;bolt&lt;/a&gt; and &lt;a href=&quot;https://serverspec.org/&quot;&gt;serverspec&lt;/a&gt; to communicate with that vm/container.&lt;/p&gt;
+
+&lt;p&gt;How do we differentiate between different vm/containers? 
+Provisioning tasks in the provision module allow us to add arbitrary key/pair values to the bolt inventory file. 
+Using the bolt variables allows users to have multiple labels associated with a single machine.&lt;/p&gt;
+
+&lt;p&gt;By running the provision bolt tasks manually or through a bolt plan we can label machines.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-05-07-running-multinode-modules-gcp/inventory_role.png&quot; alt=&quot;Showing role info in litmus_inventory.yaml file&quot; /&gt; 
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/plans/provision_machines.pp&quot;&gt;Example_websphere_provision_plan&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Setup provisioned systems&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Setup for litmus in acceptance tests relied on 3 things.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Install agent - A bolt &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-puppet_agent/tree/main/tasks&quot;&gt;task&lt;/a&gt; that from a module which installs a puppet agent.&lt;/li&gt;
+  &lt;li&gt;Install module - A rake task that uses the pdk to build the module under test, and install that on the target vms/containers.&lt;/li&gt;
+  &lt;li&gt;spec/spec_helper_acceptance_local.rb - extra setup that may be required to test a module, Example &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/blob/main/spec/spec_helper_acceptance_local.rb&quot;&gt;puppetlabs/puppetlabs-apache&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;For integration testing we are using bolt plans and inventory variables where we can run puppet code / commands, against the specific systems, by labelling the systems.
+An example &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/plans/pe_server_setup.pp&quot;&gt;puppetlabs-websphere_application_server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Example for provision plan&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plan websphere_application_server::provision_machines(
+  Optional[String] $using = 'abs',
+  Optional[String] $image = 'centos-7-x86_64'
+) {
+  # provision machines, set roles
+  ['server', 'appserver', 'dmgr', 'ihs'].each |$role| {
+    run_task(&quot;provision::${using}&quot;, 'localhost', action =&amp;gt; 'provision', platform =&amp;gt; $image, vars =&amp;gt; &quot;role: ${role}&quot;)
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;We can use spec/spec_helper_acceptance_local.rb for extra setup that may be required to test a module.
+An example &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/spec/spec_helper_acceptance_local.rb&quot;&gt;puppetlabs-websphere_application_server&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Run tests&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We use rspec labelling and rake task to identify the tests to run on integeration environment. Lets go through the details.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Rspec labelling
+How do we differentiate acceptance tests from integration tests?
+Using rspec labeling we can label tests, e.g. the test is tagged as integration. Everything else can stay the same.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example for tagging tests&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;describe 'Install the websphere dmgr', :integration do
+  before(:all) do
+    @agent = WebSphereHelper.dmgr_host
+    WebSphereInstance.install(@agent)
+    WebSphereDmgr.install(@agent)
+  end
+
+  it 'is installed' do
+    expect(WebSphereHelper.remote_file_exists(@agent, WebSphereConstants.dmgr_status))
+    expect(WebSphereHelper.remote_file_exists(@agent, WebSphereConstants.ws_admin))
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Integration test rake task
+Adding a friendly rake task.This is added to the Rakefile of the module.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example for adding rake task&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require 'rspec/core/rake_task'
+namespace :websphere_application_server do
+  RSpec::Core::RakeTask.new(:integration) do |t|
+    t.pattern = 'spec/acceptance/**{,/*/**}/*_spec.rb'
+    t.rspec_opts = &quot;--tag integration&quot;
+  end
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Helper functions to target labeled containers/vms
+There are a number of helper methods required to allow tests to target a specific container/vm.
+This is required for serverspec/litmus as it will be carrying out the tests on that container/vm.
+Below are some examples or helper methods of filtering to get either a single vm/container or retrieving multiple vms/targets.&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/spec/spec_helper_acceptance_local.rb&quot;&gt;puppetlabs-websphere_application_server&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/blob/main/spec/spec_helper_acceptance_local.rb&quot;&gt;puppetlabs-kubernetes&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Example for identifying target nodes&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;      context 'application deployment' do
+        before(:all) { change_target_host('controller') }
+        after(:all) { reset_target_host }
+        it 'can deploy an application into a namespace and expose it' do
+          run_shell('KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f /tmp/nginx.yml') do |r|
+            expect(r.stdout).to match(/my-nginx created\nservice\/my-nginx created\n/)
+          end
+        end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Testing
+ The below command will only run tests labelled as ‘integration’&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rake websphere_application_server:integration&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Teardown&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We use existing provision task to teardown all the provisioned machines.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bundle exec rake litmus:tear_down&lt;/code&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;lets-go-through-different-scenarios-where-we-can-use-multi-node-testing&quot;&gt;Lets go through different scenarios where we can use multi node testing&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Multiple puppet agents&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the setup we have many puppet agents, a module is installed and tests are run.&lt;/p&gt;
+
+&lt;p&gt;Commands&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
+bundle exec rake litmus:install_agent
+bundle exec rake litmus:install_module
+bundle exec rake ntp::integration
+bundle exec rake 'litmus:tear_down'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Example
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/tree/multinodentp&quot;&gt;puppetlabs-ntp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Puppet server and agent&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the setup we have puppet server and puppet agents, a module is installed and tests are run.
+we can use bolt plans for provisioning number of nodes with roles tagged to each of it.
+There is a new &lt;a href=&quot;https://github.com/puppetlabs/provision/blob/main/tasks/install_puppetserver.json&quot;&gt;task&lt;/a&gt; to install open source puppet server in the provision module.&lt;/p&gt;
+
+&lt;p&gt;Commands&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run kubernetes::provision_cluster
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run kubernetes::puppetserver_setup
+bundle exec rake litmus:install_agent
+bundle exec rake litmus:install_module
+bundle exec rake kubernetes::integration
+bundle exec rake 'litmus:tear_down'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;Example
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes&quot;&gt;puppetlabs-kubernetes&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/iac/assets/2021-05-07-running-multinode-modules-gcp/github_workflow.png&quot; alt=&quot;Example github workflow run&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;PE and agents&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;In the setup we have PE server and puppet agents, a module is installed and tests are run.
+we can use bolt plans for provisioning number of nodes with roles tagged to each of it.
+There is a task to install PE in the puppet-deploy_pe module.
+&lt;a href=&quot;https://github.com/jarretlavallee/puppet-deploy_pe/tree/master/plans&quot;&gt;provision_master/agents&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Commands&lt;/p&gt;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_server
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_agent
+bundle exec rake litmus:install_module
+bundle exec rake ntp::integration
+bundle exec rake 'litmus:tear_down'
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Example
+&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/tree/multinodentp&quot;&gt;puppetlabs-ntp&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Plan to install PE server&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plan ntp::pe_server(
+  Optional[String] $version = '2019.8.5',
+  Optional[Hash] $pe_settings = {password =&amp;gt; 'puppetlabs'}
+) {
+  # identify pe server node
+  $puppet_server =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpserver' }
+
+  # install pe server
+  run_plan(
+    'deploy_pe::provision_master',
+    $puppet_server,
+    'version' =&amp;gt; $version,
+    'pe_settings' =&amp;gt; $pe_settings
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Plan to install puppet agent&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;plan ntp::pe_agent() {
+  # identify pe server and agent nodes
+  $puppet_server =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpserver' }
+  $puppet_agent =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpclient' }
+
+  # install agent
+  run_plan(
+    'deploy_pe::provision_agent',
+    $puppet_agent,
+    'master' =&amp;gt; $puppet_server,
+  )
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;exampes-for-github-action-workflows-for-multi-node-modules&quot;&gt;Exampes for GitHub Action Workflows for multi node modules&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-websphere_application_server/tree/main/.github/workflows&quot;&gt;puppetlabs-websphere_application_server&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/tree/main/.github/workflows&quot;&gt;puppetlabs-kubernetes&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;thank-you&quot;&gt;Thank you&lt;/h2&gt;
+
+&lt;p&gt;Thanks &lt;a href=&quot;https://github.com/tphoney&quot;&gt;TP&lt;/a&gt; for the valuable work on integration testing.
+Thanks &lt;a href=&quot;https://github.com/MartyEwings&quot;&gt;Marty&lt;/a&gt; for the work on installing PE on cloud CI.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="module" /><category term="development" /><category term="modules" /><category term="cloud ci" /><category term="multi node" /><summary type="html">Multi Node Modules in GCP</summary></entry><entry><title type="html">2021-04-30: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update.html" rel="alternate" type="text/html" title="2021-04-30: IAC &amp;amp; DevX Team Status Update" /><published>2021-04-30T00:00:00+00:00</published><updated>2021-04-30T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/04/30/status-update.html">&lt;h2 id=&quot;community-day-triage-stats&quot;&gt;Community Day Triage Stats&lt;/h2&gt;
 
 &lt;p&gt;New this week is the Developer Experience team joining Community Day to triage new and existing tickets in the tooling repositories.&lt;/p&gt;
 
@@ -639,59 +897,4 @@ Link to the &lt;a href=&quot;https://github.com/puppetlabs/community_management/
 
 &lt;h2 id=&quot;see-you-next-week&quot;&gt;See you next week!&lt;/h2&gt;
 
-&lt;p&gt;This is all for this week, have a great weekend and be ready for the next week updates!&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="team" /><category term="status" /><category term="community" /><category term="releases" /><category term="cloud-ci" /><category term="puppet5-support-drop" /><category term="major-releases" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-02-26: IAC Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/02/26/status-update.html" rel="alternate" type="text/html" title="2021-02-26: IAC Team Status Update" /><published>2021-02-26T00:00:00+00:00</published><updated>2021-02-26T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/02/26/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/02/26/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/971&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#971&lt;/code&gt;&lt;/a&gt;: “Fix typo in weak_ssl documentation”, thanks to &lt;a href=&quot;https://github.com/Safranil&quot;&gt;Safranil&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/475&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#475&lt;/code&gt;&lt;/a&gt;: “Update criSocket to avoid deprecation warnings”, thanks to &lt;a href=&quot;https://github.com/treydock&quot;&gt;treydock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package/pull/237&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package#237&lt;/code&gt;&lt;/a&gt;: “Fix package task for yum when passing version”, thanks to &lt;a href=&quot;https://github.com/cliveweir&quot;&gt;cliveweir&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/948&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#948&lt;/code&gt;&lt;/a&gt;: “(MAINT) Release prep for 2.0.0”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/947&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#947&lt;/code&gt;&lt;/a&gt;: “(MAINT) Drop gemspec requirement to Ruby &amp;gt;= 2.4.0”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/946&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk#946&lt;/code&gt;&lt;/a&gt;: “(MAINT) Require Ruby &amp;gt;= 2.5.0 in gemspec and simplify Gemfile”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-docker/pull/21&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-docker#21&lt;/code&gt;&lt;/a&gt;: “(PF-2183) Updates to reflect new default branch of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;main&lt;/code&gt;”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-docker/pull/20&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-docker#20&lt;/code&gt;&lt;/a&gt;: “(FIXUP) Add additional error handling for Anubis v2 evaluations”, thanks to &lt;a href=&quot;https://github.com/nkanderson&quot;&gt;nkanderson&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-vanagon/pull/275&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-vanagon#275&lt;/code&gt;&lt;/a&gt;: “(MAINT) Add latest puppets”, thanks to &lt;a href=&quot;https://github.com/scotje&quot;&gt;scotje&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module&quot;&gt;New Module&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vcsrepo&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-vcsrepo&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.10.2&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;gem-releases&quot;&gt;Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-litmus&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.25.0&lt;/code&gt;)&lt;/p&gt;
-
-&lt;h2 id=&quot;pdk-200-is-now-available&quot;&gt;PDK 2.0.0 is now available!&lt;/h2&gt;
-
-&lt;p&gt;Special thanks to  &lt;a href=&quot;https://github.com/DavidS&quot;&gt;David Schmitt&lt;/a&gt; and [Jesse Scott][Jesse Scott] for their hard work and dedication in getting PDK 2.0.0 released this week.
-In the new version you can find new features and enhancements as: ability to generate new facts, the pdk new fact command to generate new custom facts in a module, ability to generate new functions, the pdk new function command to generate new functions in a module, AIX option to new module interview options, AIX to OS compatibility picker during the guided interview for pdk new module  and more surprises. Check &lt;a href=&quot;https://puppet.com/docs/pdk/2.x/release_notes_pdk.html#pdk-20&quot;&gt;here&lt;/a&gt; and see what we have for you!&lt;/p&gt;
-
-&lt;h2 id=&quot;big-news-and-big-next-monday&quot;&gt;Big news and big next Monday!&lt;/h2&gt;
-
-&lt;p&gt;We are in the process of dropping Puppet 5 support from our supported modules. Puppet 5 reached End of Life (EOL) in January 2021. The plan is to start rolling out updated modules with Puppet 5 support removed by the start of next week (March 1st 2021). We have a lot of releases planned - stay tuned, it’s going to be a big Monday!&lt;/p&gt;
-
-&lt;h2 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h2&gt;
-
-&lt;p&gt;This week after the release of Puppet Litmus &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.25.0&lt;/code&gt; and the update of the acceptance test workflows (https://github.com/puppetlabs/pdk-templates/pull/398), a PDKSync across all our supported modules will ensure that all acceptance tests for PRs and nightly runs are now using both the Cloud CI resources as well as the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;litmusimage&lt;/code&gt; docker containers in their respective Github Actions workflows. 
-As part of the multi-node acceptance tests we are slowly making progress in stabilizing the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes&lt;/code&gt; and started the investigation for the port of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-websphere_application_server&lt;/code&gt; module. 
-A PDKSync run with the update to the latest pdk-templates will follow soon. A lot of thanks to Daniel and Sheena for this work.&lt;/p&gt;
-
-&lt;h2 id=&quot;dsc&quot;&gt;DSC&lt;/h2&gt;
-&lt;p&gt;For the last few weeks focus has been on triaging/debugging and fixing issues from the field. Michael has been leading this charge to provide top-notch technical support on all things DSC related. Thank you, Michael!&lt;/p&gt;
-
-&lt;h2 id=&quot;iac--nights-watch-collaboration&quot;&gt;IAC &amp;amp; Night’s Watch Collaboration&lt;/h2&gt;
-&lt;p&gt;A big shout out to &lt;a href=&quot;https://github.com/gimmyxd&quot;&gt;gimmyxd&lt;/a&gt;for the great sync up session with &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; where they used &lt;a href=&quot;https://github.com/puppetlabs/pdksync&quot;&gt;pdksync&lt;/a&gt; and the &lt;a href=&quot;https://github.com/puppetlabs/pdk&quot;&gt;PDK&lt;/a&gt; to update a number of the core modules under the &lt;a href=&quot;https://github.com/orgs/puppetlabs/teams/night-s-watch&quot;&gt;Night’s Watch&lt;/a&gt; remit.
-We’re always keen to get feedback on the tooling we develop and maintain, and the &lt;a href=&quot;https://github.com/orgs/puppetlabs/teams/night-s-watch&quot;&gt;Night’s Watch&lt;/a&gt; team are always great to collaborate with!
-There’s always a good bit of two way traffic between our two teams and it’s usually the case that the combined results are greater than the sum of its parts. Thank you Ciaran and Gimmy for your time and efforts!&lt;/p&gt;
-
-&lt;p&gt;## See you next week!
-This is all for this week, have a great weekend and be ready for the next week updates!&lt;/p&gt;</content><author><name>daianamezdrea</name></author><category term="team" /><category term="status" /><category term="community" /><category term="releases" /><category term="cloud-ci" /><category term="pdk" /><category term="big-monday" /><summary type="html">Community Contributions</summary></entry></feed>
+&lt;p&gt;This is all for this week, have a great weekend and be ready for the next week updates!&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="team" /><category term="status" /><category term="community" /><category term="releases" /><category term="cloud-ci" /><category term="puppet5-support-drop" /><category term="major-releases" /><summary type="html">Community Contributions</summary></entry></feed>
