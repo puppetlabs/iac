@@ -6,6 +6,11 @@ categories:
   - team
   - status
 tags:
+  - puppetlabs-iis
+  - devx
+  - pdk
+  - cloudci
+  - multi-node
 ---
 
 ## Community Day
