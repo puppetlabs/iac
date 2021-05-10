@@ -19,7 +19,7 @@ This week it was a bank holiday in EMEA, therefore community day has been resche
 
 ## Content Support team
 
-As already mentioned this week, it was been pretty quiet with most of us on holidays. However we did manage to get a [customer issue on our issue module](https://github.com/puppetlabs/puppetlabs-iis/pull/321) addressed. The team was made aware of this on Tuesday, it was picked up and triaged on Wednesday, reviewed and merged on Thursday and we aim for release on Monday during our team triage day. 
+As already mentioned this week, it was been pretty quiet with most of us on holidays. However we did manage to get a [customer issue on our puppetlabs-iis module](https://github.com/puppetlabs/puppetlabs-iis/pull/321) addressed. The team was made aware of this on Tuesday, it was picked up and triaged on Wednesday, reviewed and merged on Thursday and we aim for release on Monday during our team triage day. 
 
 We're currently overhauling our Contribution Guidelines to reflect the new processes we introduced in the last year in [this PR](https://github.com/puppetlabs/iac/pull/242).
 Have a look and tell us what you think!
