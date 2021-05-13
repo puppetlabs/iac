@@ -16,7 +16,7 @@ The key highlight included
 - Shadowing my mentor Daiana on solving some debugging issues around manifest failures etc.
 - Enjoyed GitPod Presentation, thank you David Schmitt
 - Debugging issues on concat module and run litmus acceptance tests
-- Draft of 2-3 Months at Puppet Presentation Done (stay tuned for more information!)
+- Draft of 2-3 Months at Puppet Presentation Done (stay tuned for more information)
 
 That’s all for this week :)
 

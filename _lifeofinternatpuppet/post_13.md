@@ -15,7 +15,7 @@ I had a very busy week with lots going on....
 
 Some of the key highlights were:-
 
-- concat module testing was done (review written and shared with the team later in the week.)
+- concat module testing was done (review written and shared with the team later in the week)
 The testing for this module has been parked for now
 - backlog work assigned - fix layout of hyperlinks on the on the Life of an Intern Blog Page during the free time.
 - Christmas Holidays applied! Looking forward to them!

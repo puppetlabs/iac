@@ -65,7 +65,7 @@ David Schmitt sent me some reading material links on [Honeycomb](https://docs.ho
 I also asked him if it would be a good idea to contact Daniel again regarding some of his training sessions listed in the document. He said that it would be a good idea and ask him if he can do a training session with you some time next week, as he should have some free time.
 Based on the advice given by David Schmitt, I contacted Daniel and we got a session scheduled for Friday 30th October in the morning from 11am - 12pm for a training session on Docker and Kubernetes. Thank you Daniel for giving me your time next Friday. Looking forward to the session!
 
-A sync up session prior to the QUB Graduate Recruitment and Placement Fair was also done on Monday 5pm with Caoimhe and the rest of the team who volunteered to help at the virtual fair this year on Thursday 22nd October 2020. I am really excited and looking forward to the fair on Thursday :)
+A sync up session prior to the QUB Graduate Recruitment and Placement Fair was also done on Monday 5pm with Caoimhe and the rest of the team who volunteered to help at the virtual fair this year on Thursday 22nd October 2020. I am really excited and looking forward to the fair on Thursday!
 
 On Wednesday after the sync up with Ciaran, regarding the diffculty to understand the process told my Paula on Tuesday 20th October 2020, I had a 1:1 session with Caoimhe, some of the topics we covered were - navigating confluence, spread the word for more guest speakers for the EEECS Student Sustainability Team running a range of different event series. The show and tell session this week was really interesting as we had a talk around what could be a possible naming conventions standard for github branches should the team follow from now on?
 Paula is working on this topic and we will be going back to this discussion in two to three weeks time to make a final decision on this topic. Stay tuned to know more :)
@@ -74,7 +74,7 @@ Caoimhe told me to contact Laura Raney so that she can add me to the Puppet Insi
 As told, I contacted Laura via a direct message on Slack and sent her some of the information that I would like to be added in this month's Puppet Insider.
 Keep an eye out for the upcoming events, and if interested please contact us today!
 
-Check out the Facebook and LinkedIn pages for more information by searching for 'EEECS Student Sustainability Team' and join the team today for some of the exciting events coming in the next month :)
+Check out the Facebook and LinkedIn pages for more information by searching for 'EEECS Student Sustainability Team' and join the team today for some of the exciting events coming in the next month!
 
 In the afternoon I had a session with Michael where he give me an interesting session on Windows Powershell and DSC builder via a zoom call. Check out the reading materials on Powershell [here](https://leanpub.com/c/pwshop/c/puppet-some-guid). Thank you Michael :)
 
