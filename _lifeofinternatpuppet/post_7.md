@@ -13,7 +13,7 @@ Hi, everyone
 
 How are you all doing this week?
 
-Well, these two weeks has been the busiest so far in my placement journey with Puppet in their Belfast office.
+Well, this week has been the busiest so far in my placement journey with Puppet in their Belfast office.
 
 I am sure you must be wondering what has kept me so busy?
 
