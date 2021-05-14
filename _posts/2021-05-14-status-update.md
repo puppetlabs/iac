@@ -43,7 +43,7 @@ Puppet VS Code extension work is coming along nicely, with all open PRs merged. 
 
 ## Content Support Team
 
-A massive shout out to [Ben Ford](https://github.com/binford2k) for holding a group session this week and giving the team an overview of this tool. We were given plenty of opportunities to ask questions and further preparation for the handover of [dropsonde](https://github.com/puppetlabs/dropsonde). This is now on [Adrian][Adrian] radar and initial scoping of work continues. For more information on exactly how this can be used check out [Bens blog post](https://dev.to/binford2k/telemetry-that-doesn-t-suck-na2).
+A massive shout out to [Ben Ford](https://github.com/binford2k) for holding a group session this week and giving the team an overview of the [dropsonde](https://github.com/puppetlabs/dropsonde) tool. We were given plenty of opportunities to ask questions and further preparation for the handover of it to the IAC Team. This is now on [Adrian][Adrian]'s radar and initial scoping of work continues. For more information on exactly how this can be used check out [Bens blog post](https://dev.to/binford2k/telemetry-that-doesn-t-suck-na2).
 The team is also working on finishing up a few complex tickets therefore this week has been a great opportunity to spend time pairing with other team members to get new ideas and unblock progress.
 
 ## EveryoneCanContribute Café
