@@ -47,7 +47,7 @@ A massive shout out to [Ben Ford](https://github.com/binford2k) for holding a gr
 The team is also working on finishing up a few complex tickets therefore this week has been a great opportunity to spend time pairing with other team members to get new ideas and unblock progress.
 
 ## EveryoneCanContribute Café
-Many thanks to [David Schmitt][[DavidSchmitt] for his talk on [OPV](https://github.com/puppetlabs/opv) at the [#EveryoneCanContribute café](https://twitter.com/dnsmichi/status/1392511069030060033). Also we want to thank [Michael Friedrich](https://twitter.com/dnsmichi) and gitlab for hosting, if you curious about it, [here](https://twitter.com/dnsmichi/status/1392511069030060033) you can find an intersting conversation about OPV and its purpose. 
+Many thanks to [David Schmitt][DavidSchmitt] for his talk on [OPV](https://github.com/puppetlabs/opv) at the [#EveryoneCanContribute café](https://twitter.com/dnsmichi/status/1392511069030060033). Also we want to thank [Michael Friedrich](https://twitter.com/dnsmichi) and gitlab for hosting, if you curious about it, [here](https://twitter.com/dnsmichi/status/1392511069030060033) you can find an intersting conversation about OPV and its purpose. 
 
 ## See you next week
 Thank you guys for all the hard work, enjoy the weekend and the free time!
