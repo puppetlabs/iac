@@ -95,7 +95,7 @@ We have some exciting news for you about Puppet's support for the PowerShell DSC
 In short, content from the PowerShell Gallery will simply appear on the Puppet Forge and can be added to your Puppetfile and used just like any other Puppet module.
 This makes it by far the most flexible and maintainable iteration of DSC integration we've ever had.
 Pick and choose whatever DSC Resources you want and get all the VSCode IntelliSense magic you've come to expect.
-Read more on [the puppet blog][https://puppet.com/blog/powershell-dsc-the-next-generation/]
+Read more on [the puppet blog](https://puppet.com/blog/powershell-dsc-the-next-generation/)
 
 ## Long Paths in Ruby
 
