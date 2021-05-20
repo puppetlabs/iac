@@ -136,6 +136,10 @@ Our CHANGELOGs when releasing are automated and to do this, we make use of the P
       location of your branch, along with any other commentary you
       may wish to make.
 
+## More indepth information on Contributing
+
+Thanks to [Ceora](https://twitter.com/ceeoreo_/status/1390342216485425155), she has put together a great article on ['How to Make Your First Open Source Contribution'](https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim). The information she has included is fanstatic and if you want more indepth information it is definitely the perfect place to start.
+
 # Testing
 ## Getting Started
 
@@ -203,7 +207,10 @@ With all dependencies in place and up-to-date, run the tests:
 
 This executes all the [rspec tests](http://rspec-puppet.com/) in the directories defined [here](https://github.com/puppetlabs/puppetlabs_spec_helper/blob/699d9fbca1d2489bff1736bb254bb7b7edb32c74/lib/puppetlabs_spec_helper/rake_tasks.rb#L17) and so on.
 rspec tests may have the same kind of dependencies as the module they are testing. Although the module defines these dependencies in its [metadata.json](./metadata.json),
-rspec tests define them in [.fixtures.yml](./fixtures.yml).
+rspec tests define them in [.fixtures.yml](./fixtures.yml). We use this over `pdk test unit` as it provides live feedback as the tests are running. See below: 
+
+![pdk_test_unit](pdkunit.png)
+![pdk_bundle_exec_rake_spec](rakespec.png)
 
 ### Acceptance Tests
 
