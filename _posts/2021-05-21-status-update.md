@@ -12,6 +12,8 @@ tags:
   - kubernetes
   - dropsonde
   - Long Paths in Ruby
+  - cleaning up puppet code
+  - puppet_intern
 ---
 
 ## Community Support Day
@@ -40,9 +42,9 @@ The following modules were released this week:
 
 - [`puppetlabs-stdlib`][puppetlabs-stdlib] (`7.1.0`)
 - [`puppetlabs-apache`][puppetlabs-apache] (`6.1.0`)
-- [`puppetlabs-dsc`][puppetlabs-dsc] (`1.9.4`)
 
 The following gems were released this week:
+
 - [`puppet-strings`][puppet-strings] (`2.7.0`)
 - [`puppet-modulebuilder`][puppet-modulebuilder] (`0.3.0`)
 - [`rspec-puppet`][rspec-puppet] (`2.9.0`)
@@ -71,9 +73,14 @@ The following gems were released this week:
   [puppet-strings]: https://rubygems.org/gems/puppet-strings
   [rspec-puppet]: https://rubygems.org/gems/rspec-puppet
 
+## Life of an intern at Puppet
+
+ [Disha][disha-maker] continues her journey at Puppet and [here](https://puppetlabs.github.io/iac/docs/life_of_intern) you can find the last updates of ** Life of an intern at Puppet ** .
+
 ## Spring Cleaning Guide
 
-[Raphaël Pinson](https://dev.to/raphink) of [Camptocamp](https://www.camptocamp.com) fame has published a guide to [Cleaning up Puppet Code](https://dev.to/camptocamp-ops/cleaning-up-puppet-code-4da2) using puppet-lint, the PDK and unused code detection using their puppet-ghostbuster project. Check it out for a breath of fresh air in your control repo.
+[Raphaël Pinson](https://dev.to/raphink) of [Camptocamp](https://www.camptocamp.com) fame has published a guide to [Cleaning up Puppet Code](https://dev.to/camptocamp-ops/cleaning-up-puppet-code-4da2) using puppet-lint, the PDK and unused code detection using their puppet-ghostbuster project.
+Check it out for a breath of fresh air in your control repo.
 
 ## Developer Experience
 
@@ -87,7 +94,12 @@ Many thanks to [David Schmitt][DavidSchmitt] for his help in getting this over t
 We are very close to finish the certification for our kubernetes module with 1.20 version.
 First we added support for the new version and now we're working with AWS for Sonobuoy k8s conformance testing, if you're interested in how we're doing it just let us know!
 
-## New module maintainenace by IAC team - `dropsonde` 
+## Dropsonde transition to the IAC Team
+
+This week was really interesting.
+We have just finished the Level of Effort and have broken down the work into small tasks to enable a successful transition.
+We have now started a deep dive and 2 PRs have been submitted to the [dropsonde](https://github.com/puppetlabs/dropsonde) repo.
+Will will continue to provide weekly updates on the hottest tool currently on our plate!
 
 ## DSC Update
 
