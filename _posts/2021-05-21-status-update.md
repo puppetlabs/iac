@@ -11,8 +11,9 @@ tags:
   - tools
   - kubernetes
   - dropsonde
-  - Long Paths in Ruby
-  - cleaning up puppet code
+  - windows
+  - rspec-puppet
+  - releases
   - puppet_intern
 ---
 
@@ -82,26 +83,27 @@ The following gems were released this week:
 [Raphaël Pinson](https://dev.to/raphink) of [Camptocamp](https://www.camptocamp.com) fame has published a guide to [Cleaning up Puppet Code](https://dev.to/camptocamp-ops/cleaning-up-puppet-code-4da2) using puppet-lint, the PDK and unused code detection using their puppet-ghostbuster project.
 Check it out for a breath of fresh air in your control repo.
 
-## Developer Experience
+## DevX: Templates and rspec-puppet
 
 We're making good progress on the limited availability release of the new templating feature for PDK and are still on track to have this available at the end of the month.
 Alongside that, we released version `v2.9.0` of `rspec-puppet`.
 Many thanks to [David Schmitt][DavidSchmitt] for his help in getting this over the line!
 
+## Kubernetes 1.20 and Sonobuoy Conformance Testing
 
-## Sonobuoy Conformance Testing for the puppetlabs-kubernetes module
-
-We are very close to finish the certification for our kubernetes module with 1.20 version.
-First we added support for the new version and now we're working with AWS for Sonobuoy k8s conformance testing, if you're interested in how we're doing it just let us know!
+We are very close to finish the certification for our k8s module with 1.20 version.
+First we added support for the new version and now we're working with AWS for Sonobuoy k8s conformance testing, if you're interested in how we're doing check out [the PR](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/512)!
 
 ## Dropsonde transition to the IAC Team
 
 This week was really interesting.
-We have just finished the Level of Effort and have broken down the work into small tasks to enable a successful transition.
-We have now started a deep dive and 2 PRs have been submitted to the [dropsonde](https://github.com/puppetlabs/dropsonde) repo.
+[Dropsonde](https://dev.to/binford2k/telemetry-that-doesn-t-suck-na2) is a flexible framework for collecting metrics from puppet installations.
+Deploying this will provide insight into how modules are used for the community.
+We have just finished the Level of Effort and have broken down the work into [small tasks](https://tickets.puppetlabs.com/browse/IAC-1608) to enable a successful transition.
+We have now started a deep dive and 2 PRs have been submitted to the [dropsonde repo](https://github.com/puppetlabs/dropsonde).
 Will will continue to provide weekly updates on the hottest tool currently on our plate!
 
-## DSC Update
+## DSC: Going Live
 
 We have some exciting news for you about Puppet's support for the PowerShell DSC configuration framework for Windows.
 In short, content from the PowerShell Gallery will simply appear on the Puppet Forge and can be added to your Puppetfile and used just like any other Puppet module.
@@ -109,7 +111,7 @@ This makes it by far the most flexible and maintainable iteration of DSC integra
 Pick and choose whatever DSC Resources you want and get all the VSCode IntelliSense magic you've come to expect.
 Read more on [the puppet blog](https://puppet.com/blog/powershell-dsc-the-next-generation/)
 
-## Long Paths in Ruby
+## Windows Long Paths in Ruby
 
 During our ongoing work for integrating with DSC, we stubbed our toes hard against an old, familiar frenemy in ruby: long path support on Windows.
 Windows has supported paths longer than 260 characters for _years_ now, but Ruby couldn't ever take advantage of that.
@@ -119,9 +121,8 @@ As long as your modern Windows systems are configured for long path support, Rub
 This is _huge_ for Windows users and developers on Ruby, which also means Windows users and developers of Puppet!
 We really can't overstate what a thorn in our foot this has been how grateful we are to Gabi for resolving it.
 
-[gabi]: https://github.com/GabrielNagy
-[ruby-lfn-patch]: https://github.com/ruby/ruby/pull/4505
-
+  [gabi]: https://github.com/GabrielNagy
+  [ruby-lfn-patch]: https://github.com/ruby/ruby/pull/4505
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
   [Ciaran]:             https://github.com/sanfrancrisko
