@@ -76,7 +76,7 @@ The following gems were released this week:
 
 ## Life of an intern at Puppet
 
- [Disha][disha-maker] continues her journey at Puppet and [here](https://puppetlabs.github.io/iac/docs/life_of_intern) you can find the last updates of ** Life of an intern at Puppet ** .
+[Disha][Disha] continues her journey at Puppet and [here](https://puppetlabs.github.io/iac/docs/life_of_intern) you can find the last updates of ** Life of an intern at Puppet ** .
 
 ## Spring Cleaning Guide
 
