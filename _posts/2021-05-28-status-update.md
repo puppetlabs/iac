@@ -42,9 +42,24 @@ The following modules were released this week:
   [iac-pr-252]: https://github.com/puppetlabs/iac/pull/252
   [dependabot]: https://github.com/apps/dependabot
 
+
+### Puppet Content Templates LA Release
+
+You may have seen the PDK user experience survey that went around some weeks ago. We wanted to gain your feedback to validate some assumptions we had about creating content for Puppet products.  One of the hypothesis that we started with was a prediction that the monolithic [pdk-templates][pdk-templates] repository was too complex and inflexible for end users.
+
+The [results][pdk-results] of the survey bore this out, and so we started work on a new approach to content templating.
+
+Instead of a single repository which you'd need to fork and maintain to keep up to date, we built out a modular system that would allow you pick and choose the components you'd like to include.
+
+We're happy to report that we are making great progress and will have a limited availability release out very soon for you to experiment with, so watch this space for updates!
+
+[pdk-templates]: https://github.com/puppetlabs/pdk-templates
+[pdk-results]: https://docs.google.com/document/d/19LzpixC694nOklW6-IqwcGBzlwR6v56M-sMsdSS14Ss/edit#
+
+
 ### DSC And the PDK Go Prototype
 
-The DevX team is [hard at work on a new approach to PDK templating][pdkgo-templating] and their LA release is imminent), so this week felt like a good time to see what it will be like to use the new templating in a real project.
+The [new PDK approach][pdkgo-templating] that the DevX team is working on is implamented in Go and screamingly fast. Since their LA release is imminent, this week felt like a good time to see what it will be like to use the new templating in a real project.
 
 We put up a [prototype PR][puppet-dsc-pdkgo-template] for switching to the new templating (when it becomes available) in our [`Puppet.Dsc`][puppet-dsc-intro-blog] module.
 
@@ -72,20 +87,6 @@ The real time to rebuild and publish is, of course, shorter because we will be r
 [puppet-dsc-intro-blog]: https://puppetlabs.github.io/iac/news/roadmap/2020/09/21/dsc-release.html
 [puppet-dsc-pdkgo-template]: https://github.com/puppetlabs/Puppet.Dsc/pull/154
 [puppet-dsc-stable]: https://github.com/puppetlabs/Puppet.Dsc/milestone/1
-
-
-### Puppet Content Templates LA Release
-
-You may have seen the PDK user experience survey that went around some weeks ago. We wanted to gain your feedback to validate some assumptions we had about creating content for Puppet products.  One of the hypothesis that we started with was a prediction that the monolithic [pdk-templates][pdk-templates] repository was too complex and inflexible for end users.
-
-The [results][pdk-results] of the survey bore this out, and so we started work on a new approach to content templating.
-
-Instead of a single repository which you'd need to fork and maintain to keep up to date, we built out a modular system that would allow you pick and choose the components you'd like to include.
-
-We're happy to report that we are making great progress and will have a limited availability release out very soon for you to experiment with, so watch this space for updates!
-
-[pdk-templates]: https://github.com/puppetlabs/pdk-templates
-[pdk-results]: https://docs.google.com/document/d/19LzpixC694nOklW6-IqwcGBzlwR6v56M-sMsdSS14Ss/edit#
 
 
 ### Kubernetes certification updates
