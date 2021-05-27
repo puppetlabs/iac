@@ -16,7 +16,7 @@ As always the week started off with a 1:1 session with Norman. I continued to wo
 
 I also started to look into doing some recap sessions on the traning received so far. Some of the topics I was looking at were Litmus and Running Tests.
 
-I did another session on the tag and release process with [Daiana](https://github.com/daianamezdrea)
+I did another session on the tag and release process with [Daiana](https://github.com/daianamezdrea) on the [puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec) module.
 
 I have been approached by Caoimhe for helping out on the Queen's University Graduate Recruitment and Placement Fair this year, starting from 22nd October 2020. I am really looking forward to the event. Thank you Norman for recommending my name.
 

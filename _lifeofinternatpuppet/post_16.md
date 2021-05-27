@@ -24,9 +24,6 @@ Some of the key highlights included:-
 
 **Module Releases**
 - [puppetlabs-accounts](https://forge.puppet.com/puppetlabs/accounts) (v6.4.0)
-- [puppetlabs-concat](https://forge.puppet.com/modules/puppetlabs/concat) (v6.4.0)
-- [puppetlabs-service](https://forge.puppet.com/modules/puppetlabs/service) (v1.4.0)
-- [puppetlabs-docker](https://forge.puppet.com/modules/puppetlabs/docker) (v3.13.0)
 
 I have also merged lots of PR's on the Triage Day on Monday.
 
