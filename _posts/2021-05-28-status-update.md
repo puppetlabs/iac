@@ -43,7 +43,7 @@ The following modules were released this week:
   [dependabot]: https://github.com/apps/dependabot
 
 
-### Puppet Content Templates LA Release
+### Puppet Content Templates LA Release Immenient
 
 You may have seen the PDK user experience survey that went around some weeks ago. We wanted to gain your feedback to validate some assumptions we had about creating content for Puppet products.  One of the hypothesis that we started with was a prediction that the monolithic [pdk-templates][pdk-templates] repository was too complex and inflexible for end users.
 
