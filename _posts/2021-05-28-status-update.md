@@ -44,8 +44,9 @@ The following modules were released this week:
 
 ### DSC And the PDK Go Prototype
 
-With the DevX team [hard at work on a new approach to PDK templating][pdkgo-templating] (and the release of their work imminent), this felt like a good week to see what it will be like to use the new templating for a real project.
-We put up a [prototype PR][puppet-dsc-pdkgo-template] for moving from switching to the new templating (if available) in our [`Puppet.Dsc`][puppet-dsc-intro-blog] module.
+The DevX team is [hard at work on a new approach to PDK templating][pdkgo-templating] and their LA release is imminent), so this week felt like a good time to see what it will be like to use the new templating in a real project.
+
+We put up a [prototype PR][puppet-dsc-pdkgo-template] for switching to the new templating (when it becomes available) in our [`Puppet.Dsc`][puppet-dsc-intro-blog] module.
 
 How well did it work?
 
@@ -102,4 +103,3 @@ This allows a module developer to request an instance representative of the team
 
 This is kind of a big deal, because many developer environments used for validatiting Puppet modules can be pretty complex--think of a Splunk architecture with forwarders, indexers, search heads, etc.
 We will continue the work in close cooperation with our security team to make this a secure and useful solution for Puppet module developers. 
-
