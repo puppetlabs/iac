@@ -59,7 +59,7 @@ We're happy to report that we are making great progress and will have a limited 
 
 ### DSC And the PDK Go Prototype
 
-The [new PDK approach][pdkgo-templating] that the DevX team is working on is implamented in Go and screamingly fast. Since their LA release is imminent, this week felt like a good time to see what it will be like to use the new templating in a real project.
+The [new PDK approach][pdkgo-templating] that the DevX team is working on is implemented in Go and screamingly fast. Since their LA release is imminent, this week felt like a good time to see what it will be like to use the new templating in a real project.
 
 We put up a [prototype PR][puppet-dsc-pdkgo-template] for switching to the new templating (when it becomes available) in our [`Puppet.Dsc`][puppet-dsc-intro-blog] module.
 
