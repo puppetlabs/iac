@@ -119,7 +119,8 @@ There are over <code class="language-plaintext highlighter-rouge">350</code> Pow
 Even if we only rebuilt the latest version of those modules, we would be saving almost <em>three hours</em> of build time.</li>
 </ol>
 
-<p>But when we make updates to the core builder or pwshlib library, we’re actually rebuilding older module versions, which means even if we are extremely conservative with our estimations and pretend the PowerShell modules only average 5 releases each, we’re going to shave a <em>frankly astounding</em> <strong>875 hours</strong> from our build time!</p>
+<p>But when we make updates to the <code class="language-plaintext highlighter-rouge">Puppet.Dsc</code> (as it is the core builder, which means we made changes to how PowerShell modules with DSC Resources are puppetized), we’re actually rebuilding older module versions!
+That means even if we are extremely conservative with our estimations and pretend the PowerShell modules only average 5 releases each, we’re going to shave a <em>frankly astounding</em> <strong>875 hours</strong> from our build time!</p>
 
 <p>The real time to rebuild and publish is, of course, shorter because we will be running this all in parallel; but saving more than a literal month’s worth of build time on every release of <code class="language-plaintext highlighter-rouge">Puppet.Dsc</code> is an overwhelming win for us (and for the folks who maintain the Github Actions infrastructure)!</p>
 
