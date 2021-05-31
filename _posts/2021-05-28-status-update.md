@@ -76,7 +76,8 @@ It's that second use case, the rebuilding, that makes this change in templating 
 There are over `350` PowerShell modules with DSC Resources on the Gallery right now.
 Even if we only rebuilt the latest version of those modules, we would be saving almost _three hours_ of build time.
 
-But when we make updates to the core builder or pwshlib library, we're actually rebuilding older module versions, which means even if we are extremely conservative with our estimations and pretend the PowerShell modules only average 5 releases each, we're going to shave a _frankly astounding_ **875 hours** from our build time!
+But when we make updates to the `Puppet.Dsc` (as it is the core builder, which means we made changes to how PowerShell modules with DSC Resources are puppetized), we're actually rebuilding older module versions!
+That means even if we are extremely conservative with our estimations and pretend the PowerShell modules only average 5 releases each, we're going to shave a _frankly astounding_ **875 hours** from our build time!
 
 The real time to rebuild and publish is, of course, shorter because we will be running this all in parallel; but saving more than a literal month's worth of build time on every release of `Puppet.Dsc` is an overwhelming win for us (and for the folks who maintain the Github Actions infrastructure)!
 
