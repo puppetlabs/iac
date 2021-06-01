@@ -16,6 +16,7 @@ Hello all,
 - I reviewed PRs for Ciaran on puppet_litmus and pdk-templates
    - [puppet_litmus](https://github.com/puppetlabs/puppet_litmus/pull/395)
    - [pdk-templates](https://github.com/puppetlabs/pdk-templates/pull/372)
+<br/><br/>
 
 - During the weekly 1:1 with Paula, I learnt about the best way of doing rebasing and how it works. I was also introduced by new commands; git stash apply and grep.
 

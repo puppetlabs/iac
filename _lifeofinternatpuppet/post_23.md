@@ -21,7 +21,7 @@ Hi everyone, Another busy week is over!
 
 **Module Release Prep**
     [puppetlabs-tagmail](https://github.com/puppetlabs/puppetlabs-tagmail/pull/202) (v3.5.1)
-    [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt/pull/968) (v7.7.1)
+    [puppetlabs-apt](https://github.com/puppetlabs/puppetlabs-apt/pull/968)      (v7.7.1)
     [puppetlabs-vcsrepo](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/493) (v3.2.1)
     [puppetlabs-apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2126) (v5.10.0)
     [puppetlabs-wsus_client](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/151) (v3.2.0)
@@ -46,5 +46,9 @@ Hi everyone, Another busy week is over!
 A JIRA ticket was raised for the vcsrepo mergeback PR test failure, check the ticket [here](https://tickets.puppetlabs.com/browse/IAC-1474)
 
 A github repository called 'IAC Intern Repo' was also created to practice the github commands in a safe environment. Check the link [here](https://github.com/puppetlabs/IAC_Intern_Repo)
+
+The PRs created to practice the Github skills were:-
+- [Github Training PR_1](https://github.com/puppetlabs/IAC_Intern_Repo/pull/7)
+- [Github Training PR_2](https://github.com/puppetlabs/IAC_Intern_Repo/pull/8)
 
 That's all for this week!

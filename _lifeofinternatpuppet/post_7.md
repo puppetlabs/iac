@@ -41,9 +41,35 @@ On Tuesday 13th October, after finishing the session with Sheena and Ciaran, I w
 
 Why not check this [link out](https://puppet.com/blog/litmus-new-module-acceptance-testing-tool/) to find out more information about Litmus.
 
-The second part of the session with Daiana was on testing a pull request (pr) from the community, my first ticket was assigned to me (changing author name of supported modules to puppetlabs). A to-do-list was given by Daiana on what I learnt in part 2 of the meeting. She also suggested to keep a word document on all the necessary commands used on a day-to-day basis when doing work, She felt having that document really reduces the stress to search for commands within the MAC OS terminal when working on a ticket/issue.
+The second part of the session with Daiana was on testing a pull request (pr) from the community, my first ticket was assigned to me (changing author name of supported modules to puppetlabs). A to-do-list was given by Daiana on what I learnt in part 2 of the meeting. Check out what I was working on in the to do list given below:-
 
-I still have to put together a document which will include all the necessary... stay tuned for it!
+Part 1:
+1. Choose a PR from PR reviews report by accessing the Community Management Tool.
+2. Clone the repo of the module locally using git clone command with the https address for example <git clone https address> taken from the repository by clicking on the green 'Code' button to copy the address into the terminal.
+3. Change the branch in order to test the changes from the PR, using git checkout with the branch name, to go where the changes can be accessed
+4. provision (choose what you want from provision list)
+5. see if inventory file was created
+6. cat inventory file
+7. install agent using bundle exec rake 'litmus:install_agent (by default it will install puppet6 agent as I haven't specified what agent I want installed, so it will pick the latest version of puppet agent)
+8. install module using bundle exec rake 'litmus:install_module'
+9. run tests using bundle exec rake 'litmus:acceptance:parallel'
+10. tear down using bundle exec rake litmus:tear_down
+Part 2:
+1. Choose one vm and provision only that vm
+2. install agent using bundle exec rake 'litmus:install_agent
+3. install module using bundle exec rake 'litmus:install_module'
+4. run tests using bundle exec rake 'litmus:acceptance:parallel'
+5. tear down using bundle exec rake litmus:tear_down
+Part 3:
+1. Use target host to run a specific test
+Part 4: on the same PR from previous points
+1. provision with release checks 5 using bundle exec rake 'litmus:provision_list[release_checks_5]'
+2. install puppet 5 agent using bundle exec rake 'litmus:install_agent[puppet5]'
+3. install module using this command:- bundle exec rake 'litmus:install_module'
+4. run tests using bundle exec rake 'litmus:acceptance:parallel'
+5. tear down using bundle exec rake litmus:tear_down
+
+She also suggested to keep a word document on all the necessary commands used on a day-to-day basis when doing work, She felt having that document really reduces the stress to search for commands within the MAC OS terminal when working on a ticket/issue. I still have to put together a document which will include all the necessary... stay tuned for it!
 
 On the same day I did a sync up session with Ciaran where we set up an agenda for the demo, the pry testing environment was done, a link to the litmus testing tool was given to help with the steps of how to do the provisioning of a machine with litmus and to run acceptance tests on the provisioned machine. He also suggested to create a video on litmus demo and share it on the YouTube Demos page, but this didn't happened during the litmus demo because when I asked Norman, he was like the demo on Litmus is quite informal, you don't really need to prepare anything very formal such as a presentation or a video. It is all about testing your understanding on Litmus, what it is, how does it work and how you can run acceptamce tests using this tool for a provisioned machine.
 
@@ -51,7 +77,7 @@ A link to the Puppet's PowerPoint Presentation was also sent by Daniel and David
 
 Now you must be thinking how did I found the litmus demo myself, well the answer is that I was fully prepared for it, did lots and lots of practice, I was asked lots of questions by Norman during the demo session and I learnt some new commands during the session like script command, history command etc...
 
-There be more information hopefully shared by Norman on the script command in the coming weeks, so keep your eye out for useful links etc...
+There be more information hopefully shared by Norman on the script command in the coming weeks, so keep your eye out for useful links etc!
 
 On Wednesday 14th October 2020, I continued to work on the to do list given by Daina on Tuesday within the slack channel, I really enjoyed doing as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
 
@@ -94,13 +120,6 @@ I couldn't write the blog update that week as I wasn't well that day, so sorry f
 
 I attended the Friday Wrap Up as usual, had a 1:1 with Caoimhe as I had some questions, don't remember exactly what they were, sorry again :)
 
-I was invited to a zoom call by Ciaran and David Schmitt, where they were trying to debug issues on Crontab and its configuration set up.
-
-The error/issue with a solution in Ciaran's own words :-
-
-"Error/Issue: cron is not executing the configured scripts as expected. Permission errors on crontab file being reported to syslog. Additional issue of “can’t fork” errors manifesting this morning
-solution suggested was wrap the command in bash -c to ensure it’s correctly invoked, but the problem still persisted"
-
-During that demo session with Ciaran and David Schmitt, I also asked Ciaran if he had a sync up with Paula or Daiana from yesterday's 1:1 to see if he knows what I did with Paula and Diana/what are the plans for the upcoming week. Ciaran said 'due to other commitments he hasn't had a chance I think, don't remember exactly what he said during the session.
+I was invited to a zoom call by Ciaran and David Schmitt where they were trying to debug issues on Crontab and its configuration set up.
 
 Thats all for now for the week 7 update, happy reading :)

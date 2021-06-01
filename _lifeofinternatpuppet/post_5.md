@@ -18,6 +18,13 @@ Check out the link to the feedback received [here](https://github.com/puppetlabs
 
 Once the feedback was fixed, I created a pull request for review and merge for Micheal's final sign off.
 
+I also had a session with Ciaran and Daiana on Travis and AppVeyor training. A to do list was given by Daiana after the session. I got the opportunity to review the following content covered during the session as well as got access to some useful reading material!
+- What is CI ? Why is used?
+- What is Travis? --> find a module (no preferences, the one you like) --> go to tests and re-run a test or the entire suite
+- Same for AppVeyor ( Choose a windows module)
+- clone a module ---> find .travis.yml file
+- [Reading Material](https://docs.travis-ci.com/)
+
 On Tuesday, I had a sync up with Paula where I was discussing my meeting with Norman from Monday. The training session has been arranged with Paula on Thursday.
 The purpose of these training sessions would be to prepare for the upcoming challenges by the end of the month such as giving a demo on Litmus to Norman. I continued to work on the [Learning VM Quest Guide](https://github.com/puppetlabs/puppet-quest-guide)
 I attended the standup sessions this week, but on Tuesday's stand up I mentioned to Michael that the changes to the new blog page were fixed and I am waiting for his final approval.

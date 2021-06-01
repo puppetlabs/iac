@@ -27,7 +27,9 @@ Hi everyone,
 
 - The community reporting tickets were finished by the end of week. The links are given below!
    - [PR_1](https://github.com/puppetlabs/community_management/pull/54)
-   - [PR_2](https://tickets.puppetlabs.com/browse/IAC-1197)
+   - [PR_2](https://github.com/puppetlabs/community_management/pull/62)
+   - [JIRA_TICKET_1](https://tickets.puppetlabs.com/browse/IAC-1196)
+   - [JIRA_TICKET_2]((https://tickets.puppetlabs.com/browse/IAC-1197)
 
 That's all for this week!
 
