@@ -9,7 +9,7 @@ tags:
   - week 8
 ---
 
-Welcome to Week 8...
+Welcome to Week 8
 
 Time is flying at placement when busy, isn't?
 
@@ -40,7 +40,7 @@ I spent the rest of the day going over the meta.json file to see which modules a
 
 I created a list of the modules which needed their author name changed and edited the files inside VIM Text Editor before submitting a PR for review and merging the new changes respectively.
 
-I had to repeat the process from scratch with Paula on Tuesday morning as I did it in the wrong way, so it needed to be fixed. A demo was done was Paula and I tried again all day but got lost in the process so on Wednesday I requested Ciaran to do a step-by-step demo once again so that I can understand where I was going wrong.
+I had to repeat the process from scratch with Paula on Tuesday morning as I did it in the wrong way, so it needed to be fixed. A demo was done by Paula and I tried again all day but got lost in the process so on Wednesday I requested Ciaran to do a step-by-step demo once again so that I can understand where I was going wrong.
 After the demo with Ciaran I was able to do the rest of the five modules successfully and the ticket was finished before the standup session on Wednesday.
 
 Check the list of merged PRs given below for further information!

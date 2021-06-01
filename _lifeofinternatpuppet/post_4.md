@@ -78,7 +78,7 @@ In this session, I learnt about release branch on GitHub, two key types of relea
 In addition to this, I also learnt about merge back and pull request method to release the version 6.3.0 for the [puppetlabs-accounts](https://forge.puppet.com/modules/puppetlabs/accounts/6.3.0) module.
 
 The issue was raised during the release and tag process, Daiana contacted Paula and Ciaran to solve the issue of missing version 6.3.0 on the tags branch of the puppetlabs-accounts module on Github.
-This was fixed by using the tag command. Then, Daiana continued the session with me and the new verison 6.3.0 for the puppetlabs-accounts was released successfully...
+This was fixed by using the tag command. Then, Daiana continued the session with me and the new verison 6.3.0 for the puppetlabs-accounts was released successfully.
 Great work team, happy days :)
 
 I then meet with Joanne Best, who is another HR manager at Puppet and we both had a great introductory session. Lovely to meet you Joanne :)
