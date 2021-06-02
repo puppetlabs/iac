@@ -99,7 +99,7 @@ some time during this year!
 
 Yayyyyy..... it's Friday..... Friday was pretty relaxing!
 I started off my day by working on my new blog page where I wrote an update on Week 4, attended the Friday Wrap Up session on Zoom, had a meeting with Ciaran on running my blog page live and see how it looks!
-Stay tuned for more information on this and when it will released etc!
+Stay tuned for more information on this and when it will be released etc!
 
 I also had a session with Daiana on a To-do-List which was sent to me yesterday after the tag and release session.
 This was covered during the quick session on Friday noon time.

@@ -47,8 +47,7 @@ I attended the show and tell session where I was given a demo on Honeycomb by Da
 As part of the Learning VM traning I was struggling to complete the section on Conditionals Statements, this was because I was having issues on editing files within VIM text editor. This training will be kept on hold until I do some initial training on how to use VIM before continuing my Learning VM Quest Guide.
 Check out the link to VIM tutorial [here](https://vim-adventures.com/)
 
-On Thursday morning, I wrote this blog update, did a tutorial on [Pry](https://learn.co/lessons/debugging-with-pry),attended standup as well as a session on Litmus, Pry and How to Work with Modules later in the afternoon.
-I am looking forward to this session with Paula!
+On Thursday morning, I wrote this blog update, did a tutorial on [Pry](https://learn.co/lessons/debugging-with-pry), attended standup as well as a session on Litmus, Pry and How to Work with Modules later in the afternoon. I am looking forward to this session with Paula!
 
 Finally, Friday will include the usual wrap up session for the Belfast Office to highlight the key achievements for this week. I will also continue my training on Introduction to Pry with Ciaran. A social hour for the IAC Team in the afternoon will be attended.
 
