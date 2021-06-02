@@ -1,0 +1,54 @@
+name: Blog Prep
+
+on:
+  schedule:
+    - cron: '0 7 * * 3' 
+  workflow_dispatch:
+
+jobs:
+  blog_prep:
+    runs-on: ubuntu-latest
+
+    steps:
+     - name: Checkout Source
+       uses: actions/checkout@v2
+
+     - name: Activate Ruby 2.7
+       uses: ruby/setup-ruby@v1
+       with:
+         ruby-version: "2.7"
+         bundler-cache: true
+
+     - name: Run blog prep
+       env: 
+         GITHUB_TOKEN: ${{ secrets.TOKEN }}
+       run: |
+         cd bin/blog_tools/
+         bundle install
+         ruby bootstrap_blog.rb
+
+     - name: Get next blog date
+       id: dt
+       run: |
+         echo "::set-output name=date::$(date -d 'Fri' --iso-8601)"
+
+     - name: Commit changes
+       run: |
+         git config --local user.email "${{ github.repository_owner }}@users.noreply.github.com"
+         git config --local user.name "GitHub Action"
+         git add .
+         git commit -m "Status update ${{ steps.dt.outputs.date }}"
+
+
+     - name: Create Pull Request
+       uses: puppetlabs/peter-evans-create-pull-request@v3
+       with:
+         token: ${{ secrets.GITHUB_TOKEN }}
+         commit-message: "Status update ${{ steps.dt.outputs.date }}"
+         branch: "blog-prep"
+         delete-branch: true
+         title: "Status update ${{ steps.dt.outputs.date }}" 
+         body: |
+           Automated status update prep
+         labels: "blog"
+         draft: true
