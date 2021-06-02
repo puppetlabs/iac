@@ -6,3 +6,4 @@ _site
 .idea/
 .DS_Store
 bin/blog_tools/Gemfile.lock
+vendor/
