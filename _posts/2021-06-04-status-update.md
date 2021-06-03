@@ -32,9 +32,17 @@ The following modules were released this week:
   [puppet-strings-pr-276]: https://github.com/puppetlabs/puppet-strings/pull/276
   [kenyon]: https://github.com/kenyon
 
-## Other Work
+### Cloud CI Update
+The work on our P.o.C for developer box provisioning is making progress. We have managed to reduce a couple vulnerabilities with the help of the security team and we have started work on the configuration improvements needed to limit developer box provisioning.
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+### PCT 0.1.0 Experimental Release
+The DevX team are pleased to announce the availability of our new prototype for Puppet Content Templates (PCT)!
+Version `0.1.0` is a pre-release and still very much experimental, however, we'd love to hear feedback on how the new experience is in creating Puppet content.
+Check out [James's][James] [blog post]({% link  _posts/2021-06-04-pct-early-release.md %}) for all the details, including how to download and install it and provide feedback.
+
+### Trusted Contributors is now live!
+Not to brag too much, we have some pretty good Puppet developers within our team. But maintaining high quality modules is more than just knowing how to write code to manage the right configuration files. Often knowing the idiomatic usage patterns is even more important.
+The domain experts are those who use our modules and the technology stacks those modules manage. They know what kind of functionality the module might need, or why it should work one way and not the other. The new [Trusted Contributors](https://puppet.com/ecosystem/trusted-contributors/) program empowers these experts to help make a difference with partial ownership and the ability to participate in roadmap direction. Read more about it and apply [here](https://puppet.com/ecosystem/trusted-contributors/).
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
