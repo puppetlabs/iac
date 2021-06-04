@@ -22,7 +22,7 @@ Check [all the ways to reach us]({% link _posts/2021-01-20-reaching-out.md %}) i
 
 The following modules were released this week:
 
-- [`puppetlabs-vcsrepo`][puppetlabs-vcsrepo] (`5.0.0`)
+- [`puppetlabs-vcsrepo`][puppetlabs-vcsrepo] (`5.0.0`) - this is a re-release of the 4.0.1 code unchanged to signify that this version contains a breaking change. Apologies for the confusion.
 
   [puppetlabs-vcsrepo]: https://github.com/puppetlabs/puppetlabs-vcsrepo
   [puppetlabs-java_ks-pr-370]: https://github.com/puppetlabs/puppetlabs-java_ks/pull/370
