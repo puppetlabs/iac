@@ -38,7 +38,7 @@ The work on our P.o.C for developer box provisioning is making progress. We have
 ### PCT 0.1.0 Experimental Release
 The DevX team are pleased to announce the availability of our new prototype for Puppet Content Templates (PCT)!
 Version `0.1.0` is a pre-release and still very much experimental, however, we'd love to hear feedback on how the new experience is in creating Puppet content.
-Check out [James's][James] [blog post]({% link  _posts/2021-06-04-pct-early-release.md %}) for all the details, including how to download and install it and provide feedback.
+Check out [James's][James] [blog post]({% link _posts/2021-06-04-pct-early-release.md %}) for all the details, including how to download and install it and provide feedback.
 
 ### Trusted Contributors is now live!
 Not to brag too much, we have some pretty good Puppet developers within our team. But maintaining high quality modules is more than just knowing how to write code to manage the right configuration files. Often knowing the idiomatic usage patterns is even more important.
