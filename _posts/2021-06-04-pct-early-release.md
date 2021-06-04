@@ -26,7 +26,7 @@ A **PCT** can create any type of a Puppet Product project. You can create Puppet
 
 A **PCT** can also create one or more independent files to be used inside a project. You can create Puppet [classes](https://puppet.com/docs/puppet/7/lang_classes.html), [facts](https://puppet.com/docs/puppet/7/fact_overview.html), [functions](https://puppet.com/docs/puppet/7/functions_ruby_overview.html), or other tooling configuration files such as CI files, gitignores, or rubocop.yml.
 
-Since a PCT is external to the PDK code base, Puppet Product teams, Partners and the wider OSS Community can publish their own content without input or effort from the PDE team. This enables a single tool to support many products.
+Since a PCT is external to the PDK code base, Puppet Product teams, Partners and the wider OSS Community can publish their own content without input or effort from the DevX team. This enables a single tool to support many products.
 
 
 ## Building blocks 🧱
