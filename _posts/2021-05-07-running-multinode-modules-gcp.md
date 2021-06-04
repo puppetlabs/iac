@@ -63,7 +63,7 @@ An example [puppetlabs-websphere_application_server](https://github.com/puppetla
 Example for provision plan
 
 ```
-plan websphere_application_server::provision_machines(
+plan websphere_application_server::acceptance::provision_machines(
   Optional[String] $using = 'abs',
   Optional[String] $image = 'centos-7-x86_64'
 ) {
@@ -160,10 +160,10 @@ Commands
 ```
 bundle install --path .bundle/gems/ --jobs 4
 bundle exec rake spec_prep
-bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::acceptance::provision_integration
 bundle exec rake litmus:install_agent
 bundle exec rake litmus:install_module
-bundle exec rake ntp::integration
+bundle exec rake ntp:integration
 bundle exec rake 'litmus:tear_down'
 ```
 Example
@@ -179,11 +179,11 @@ Commands
 ```
 bundle install --path .bundle/gems/ --jobs 4
 bundle exec rake spec_prep
-bundle exec bolt --modulepath spec/fixtures/modules plan run kubernetes::provision_cluster
-bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run kubernetes::puppetserver_setup
+bundle exec bolt --modulepath spec/fixtures/modules plan run kubernetes::acceptance::provision_cluster
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run kubernetes::acceptance::puppetserver_setup
 bundle exec rake litmus:install_agent
 bundle exec rake litmus:install_module
-bundle exec rake kubernetes::integration
+bundle exec rake kubernetes:integration
 bundle exec rake 'litmus:tear_down'
 ```
 Example
@@ -202,11 +202,11 @@ Commands
 ```
 bundle install --path .bundle/gems/ --jobs 4
 bundle exec rake spec_prep
-bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
-bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_server
-bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_agent
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::acceptance::provision_gcp
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::acceptance::pe_server
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::acceptance::pe_agent
 bundle exec rake litmus:install_module
-bundle exec rake ntp::integration
+bundle exec rake ntp:integration
 bundle exec rake 'litmus:tear_down'
 ```
 
@@ -216,7 +216,7 @@ Example
 Plan to install PE server
 
 ```
-plan ntp::pe_server(
+plan ntp::acceptance::pe_server(
   Optional[String] $version = '2019.8.5',
   Optional[Hash] $pe_settings = {password => 'puppetlabs'}
 ) {
@@ -236,7 +236,7 @@ plan ntp::pe_server(
 Plan to install puppet agent
 
 ```
-plan ntp::pe_agent() {
+plan ntp::acceptance::pe_agent() {
   # identify pe server and agent nodes
   $puppet_server =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpserver' }
   $puppet_agent =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpclient' }
