@@ -16,6 +16,8 @@ We are proud to announce the first release for the new PDK templating system: **
 
 **Puppet Content Templates** codify a structure to produce content for any Puppet Product that can be authored without direct oversight of the Puppet PDK team.
 
+To get started download the release from the [pdkgo repo](https://github.com/puppetlabs/pdkgo/). A step by step guide is included in the README.
+
 > ⚠️ PCT is currently in an EXPERIMENTAL phase and feedback is encouraged via [pdkgo/discussions](https://github.com/puppetlabs/pdkgo/discussions). ⚠️
 
 ## Create all types of content 🎨
@@ -42,4 +44,3 @@ Each **PCT** comes with parts that can be controlled via configuration. These pa
 This user can customize how PCTs operate by using YAML files and never need to know how to make a template.
 
 If you want a more drastic change, you can copy the **PCT** and add your own files and changes, then use that **PCT** without having to get a pull request approved.
-
