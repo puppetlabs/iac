@@ -53,9 +53,7 @@ You can now provide custom `insync?` logic to the Resource API, making adding ne
 All spec unit tests are now running using the latest Facter code!
 
 ## Trusted Contributors Assemble!
-We're thrilled to have several Trusted Contributors onboarded into the TC program (find out more in our previous blog post, or on the [Puppet website](https://puppet.com/ecosystem/trusted-contributors/)), big shout out to [ekohl][ekohl] on their first PR review.
-
-##
+We're thrilled to have several Trusted Contributors onboarded into the TC program (find out more in our previous blog post, or on the [Puppet website](https://puppet.com/ecosystem/trusted-contributors/)), with five sign ups in one week! The team wanted to give a big shout out to [ekohl][ekohl] on their first PR review.
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
