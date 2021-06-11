@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-06-11T02:25:43+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">🚀 Puppet Content Templates 0.1.0 🚀</title><link href="https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release.html" rel="alternate" type="text/html" title="🚀 Puppet Content Templates 0.1.0 🚀" /><published>2021-06-04T00:00:00+00:00</published><updated>2021-06-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release</id><content type="html" xml:base="https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release.html">&lt;h1 id=&quot;-pdk-puppet-content-templates-010-released-&quot;&gt;✨ PDK Puppet Content Templates 0.1.0 released ✨&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-06-11T17:06:26+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-06-11: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/06/11/status-update.html" rel="alternate" type="text/html" title="2021-06-11: IAC &amp;amp; DevX Team Status Update" /><published>2021-06-11T00:00:00+00:00</published><updated>2021-06-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/06/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/06/11/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2142&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2142&lt;/code&gt;&lt;/a&gt;: “The default disk_cache.conf.erb caches everything. “, thanks to &lt;a href=&quot;https://github.com/Pawa2NR&quot;&gt;Pawa2NR&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/708&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat#708&lt;/code&gt;&lt;/a&gt;: “fix merge nil hashes”, thanks to &lt;a href=&quot;https://github.com/thde&quot;&gt;thde&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/705&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat#705&lt;/code&gt;&lt;/a&gt;: “Do not modify metaparams in place”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/752&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#752&lt;/code&gt;&lt;/a&gt;: “Allow force update non-latest tagged image”, thanks to &lt;a href=&quot;https://github.com/yanjunding&quot;&gt;yanjunding&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1396&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1396&lt;/code&gt;&lt;/a&gt;: “(bugfix) - Pull python3-mysqldb in Debian Bullseye”, thanks to &lt;a href=&quot;https://github.com/thomasgoirand&quot;&gt;thomasgoirand&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;11.0.2&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;devx-team&quot;&gt;DevX Team&lt;/h2&gt;
+&lt;p&gt;With version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.1.0&lt;/code&gt; of the experimental PCT release out for a week, we’ve been delighted by the positive and constructive feedback coming our way.
+If you’re wondering what all this is about, check out &lt;a href=&quot;((/iac/pdk/development/2021/06/04/pct-early-release.html))&quot;&gt;this blog post&lt;/a&gt; from last week - the more feedback we can garner, the better!
+On that topic, &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; took part in the most recent episode of &lt;a href=&quot;https://www.twitch.tv/videos/1050922724&quot;&gt;Pulling the Strings - LIVE&lt;/a&gt; on the &lt;a href=&quot;https://www.twitch.tv/puppetize&quot;&gt;Puppetize Twitch Channel&lt;/a&gt; with &lt;a href=&quot;https://twitter.com/LoLoCoding&quot;&gt;Lauren&lt;/a&gt;, Puppet’s Community Director.
+Braving the ire of the demo gods is always a risky venture, but, &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; showcased the speed, flexibility, speed, potential and speed of the PCT tool, excellently! You can &lt;a href=&quot;https://www.twitch.tv/videos/1050922724&quot;&gt;watch the video at your own leisure&lt;/a&gt; if you missed the live stream - well worth checking out!
+We’re now working on the next release &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.2.0&lt;/code&gt;, with some enhancements shaped by the feedback we’ve been getting from the early adopters.
+Also on our radar is some fixes and enhancements to PDK, which should be landing in a release soon&lt;/p&gt;
+
+&lt;h2 id=&quot;resource-api-custom_insync-now-available&quot;&gt;Resource API custom_insync now available&lt;/h2&gt;
+&lt;p&gt;You can now provide custom &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;insync?&lt;/code&gt; logic to the Resource API, making adding new native Puppet resources much more flexible. Changes are now available in both the Puppet 6 and Puppet 7 nightly builds, and you can find a documentation preview &lt;a href=&quot;https://github.com/puppetlabs/puppet-specifications/pull/153&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;pdk-updates&quot;&gt;PDK updates&lt;/h2&gt;
+&lt;p&gt;All spec unit tests across the supported modules workflows are now running using the latest Facter code!
+This will allow us to catch any potential compatibility problems earlier with Facter / Puppet / Modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;trusted-contributors-assemble&quot;&gt;Trusted Contributors Assemble!&lt;/h2&gt;
+&lt;p&gt;We’re thrilled to have several Trusted Contributors onboarded into the TC program (find out more in our previous blog post, or on the &lt;a href=&quot;https://puppet.com/ecosystem/trusted-contributors/&quot;&gt;Puppet website&lt;/a&gt;), with five sign ups in one week! The team wanted to give a big shout out to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; on their first PR review.&lt;/p&gt;
+
+&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>bethglenfield</name></author><category term="team" /><category term="status" /><category term="pct" /><category term="rsapi" /><category term="trusted_contributors" /><category term="facter" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">🚀 Puppet Content Templates 0.1.0 🚀</title><link href="https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release.html" rel="alternate" type="text/html" title="🚀 Puppet Content Templates 0.1.0 🚀" /><published>2021-06-04T00:00:00+00:00</published><updated>2021-06-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release</id><content type="html" xml:base="https://puppetlabs.github.io/iac/pdk/development/2021/06/04/pct-early-release.html">&lt;h1 id=&quot;-pdk-puppet-content-templates-010-released-&quot;&gt;✨ PDK Puppet Content Templates 0.1.0 released ✨&lt;/h1&gt;
 
 &lt;p&gt;We are proud to announce the first release for the new PDK templating system: &lt;strong&gt;Puppet Content Templates (PCT)&lt;/strong&gt;.&lt;/p&gt;
 
@@ -706,44 +749,4 @@ The team has reviewed the existing PDK validate tickets and identified which one
 
 &lt;p&gt;In case you missed it, last month we started publishing the Puppet Extension to the OpenVSX marketplace, which means you can get official releases inside VSCodium or with Gitpod.&lt;/p&gt;
 
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>da-ar</name></author><category term="team" /><category term="status" /><category term="puppet-camp" /><category term="litmus" /><category term="bolt" /><category term="facter" /><category term="cloud-ci" /><category term="rsapi" /><category term="devx" /><category term="dsc" /><summary type="html">Now in technicolor</summary></entry><entry><title type="html">2021-04-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/04/16/status-update.html" rel="alternate" type="text/html" title="2021-04-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-04-16T00:00:00+00:00</published><updated>2021-04-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/04/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/04/16/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/985&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#985&lt;/code&gt;&lt;/a&gt;: “apt::mark: fix docs”, thanks to &lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/477&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#477&lt;/code&gt;&lt;/a&gt;: “Fix ‘option’ entry name in option_order hash”, thanks to &lt;a href=&quot;https://github.com/antaflos&quot;&gt;antaflos&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1378&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1378&lt;/code&gt;&lt;/a&gt;: “Fix: Puppet Unknown variable: ‘mysql::params::exec_path’”, thanks to &lt;a href=&quot;https://github.com/JvGinkel&quot;&gt;JvGinkel&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-strings/pull/272&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-strings#272&lt;/code&gt;&lt;/a&gt;: “Update CODEOWNERS”, thanks to &lt;a href=&quot;https://github.com/binford2k&quot;&gt;binford2k&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/407&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#407&lt;/code&gt;&lt;/a&gt;: “(maint) Update bolt requirement to include 3.x”, thanks to &lt;a href=&quot;https://github.com/beechtom&quot;&gt;beechtom&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.0.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ibm_installation_manager&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ibm_installation_manager&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.0.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-litmus&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-litmus&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.26.3&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;developer-experience&quot;&gt;Developer Experience&lt;/h2&gt;
-
-&lt;p&gt;The DevX team is starting to build steam! &lt;a href=&quot;https://github.com/sanfrancrisko&quot;&gt;Ciaran&lt;/a&gt; spent the week reviewing existing tickets for what bugs and features to tackle next, with a focus on pkd validate as the next likely candidate. &lt;a href=&quot;https://github.com/da-ar&quot;&gt;David Armstrong&lt;/a&gt; spent some time in researching our packaging process to plan improvements in reducing the size of the PDK package. This week &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; delivered a presentation on VS Code :fire: tips and tricks at the April Puppet Camp. Recordings will be available soon. A lot of people responded to the PDK Survey, so we will be closing that this week and will report the results next week&lt;/p&gt;
-
-&lt;h2 id=&quot;terminology-changes&quot;&gt;Terminology Changes&lt;/h2&gt;
-
-&lt;p&gt;I am happy to announce the end of our terminology work, as of yesterday all &lt;em&gt;master&lt;/em&gt; branches have been removed from our supported modules and tools, and with the previous work done to remove any mentions I am happy to declare this piece of work closed.&lt;/p&gt;
-
-&lt;p&gt;A big shout out to &lt;a href=&quot;https://github.com/david22swan&quot;&gt;David Swan&lt;/a&gt; (i.e. Me!) for heading up this work.&lt;/p&gt;
-
-&lt;h2 id=&quot;intern-update&quot;&gt;Intern Update&lt;/h2&gt;
-
-&lt;p&gt;Disha’s attended her 1st Puppet Camp this week! Check out her blog of what she is up to this week &lt;a href=&quot;https://puppetlabs.github.io/iac/lifeofinternatpuppet/post_31.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content><author><name>david22swan</name></author><category term="team" /><category term="status" /><category term="terminology" /><category term="intern" /><category term="releases" /><category term="devx" /><summary type="html">Community Contributions</summary></entry></feed>
+&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>da-ar</name></author><category term="team" /><category term="status" /><category term="puppet-camp" /><category term="litmus" /><category term="bolt" /><category term="facter" /><category term="cloud-ci" /><category term="rsapi" /><category term="devx" /><category term="dsc" /><summary type="html">Now in technicolor</summary></entry></feed>
