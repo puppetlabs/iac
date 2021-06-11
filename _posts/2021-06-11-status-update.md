@@ -38,7 +38,19 @@ The following modules were released this week:
   [puppetlabs-mysql-pr-1396]: https://github.com/puppetlabs/puppetlabs-mysql/pull/1396
   [thomasgoirand]: https://github.com/thomasgoirand
 
-## Other Work
+## DevX Team
+With version `0.1.0` of the experimental PCT release out for a week, we've been delighted by the positive and constructive feedback coming our way.
+If you're wondering what all this is about, check out [this blog post]((({% link _posts/2021-06-04-pct-early-release.md %}))) from last week - the more feedback we can garner, the better!
+On that topic, [James][James] took part in the most recent episode of [Pulling the Strings](https://www.twitch.tv/videos/1050922724) live on the [Puppetize Twitch Channel](https://www.twitch.tv/puppetize) with [Lauren](https://twitter.com/LoLoCoding), Puppet's Community Director.
+Braving the ire of the demo gods is always a risky venture, but, [James][James] showcased the speed, flexibility, speed, potential and speed of the PCT tool, excellently! You can [watch the video at your own leisure](https://www.twitch.tv/videos/1050922724) if you missed the live stream - well worth checking out!
+We're now working on the next release `0.2.0`, with some enhancements shaped by the feedback we've been getting from the early adopters.
+Also on our radar is some fixes and enhancements to PDK, which should be landing in a release soon
+
+## Resource API custom_insync now available!
+You can now provide custom `insync?` logic to the Resource API, making adding new native Puppet resources much more flexible. Changes are now available in both the Puppet 6 and Puppet 7 nightly builds, and you can find a documentation preview [here](https://github.com/puppetlabs/puppet-specifications/pull/153).
+
+## PDK
+All spec unit tests are now running using the latest Facter code!
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
