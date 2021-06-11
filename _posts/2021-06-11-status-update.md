@@ -46,11 +46,16 @@ Braving the ire of the demo gods is always a risky venture, but, [James][James] 
 We're now working on the next release `0.2.0`, with some enhancements shaped by the feedback we've been getting from the early adopters.
 Also on our radar is some fixes and enhancements to PDK, which should be landing in a release soon
 
-## Resource API custom_insync now available!
+## Resource API custom_insync now available
 You can now provide custom `insync?` logic to the Resource API, making adding new native Puppet resources much more flexible. Changes are now available in both the Puppet 6 and Puppet 7 nightly builds, and you can find a documentation preview [here](https://github.com/puppetlabs/puppet-specifications/pull/153).
 
-## PDK
+## PDK updates
 All spec unit tests are now running using the latest Facter code!
+
+## Trusted Contributors Assemble!
+We're thrilled to have several Trusted Contributors onboarded into the TC program (find out more in our previous blog post, or on the [Puppet website](https://puppet.com/ecosystem/trusted-contributors/)), big shout out to [ekohl][ekohl] on their first PR review.
+
+##
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
