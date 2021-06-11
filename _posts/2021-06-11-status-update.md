@@ -6,6 +6,10 @@ categories:
   - team
   - status
 tags:
+  - pct
+  - rsapi
+  - trusted_contributors
+  - facter
 ---
 
 ## Community Contributions
@@ -50,7 +54,8 @@ Also on our radar is some fixes and enhancements to PDK, which should be landing
 You can now provide custom `insync?` logic to the Resource API, making adding new native Puppet resources much more flexible. Changes are now available in both the Puppet 6 and Puppet 7 nightly builds, and you can find a documentation preview [here](https://github.com/puppetlabs/puppet-specifications/pull/153).
 
 ## PDK updates
-All spec unit tests are now running using the latest Facter code!
+All spec unit tests across the supported modules workflows are now running using the latest Facter code!
+This will allow us to catch any potential compatibility problems earlier with Facter / Puppet / Modules.
 
 ## Trusted Contributors Assemble!
 We're thrilled to have several Trusted Contributors onboarded into the TC program (find out more in our previous blog post, or on the [Puppet website](https://puppet.com/ecosystem/trusted-contributors/)), with five sign ups in one week! The team wanted to give a big shout out to [ekohl][ekohl] on their first PR review.
