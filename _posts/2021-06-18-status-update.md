@@ -44,7 +44,9 @@ The following modules were released this week:
   [bastelfreak]: https://github.com/bastelfreak
   [puppetlabs_spec_helper-pr-338]: https://github.com/puppetlabs/puppetlabs_spec_helper/pull/338
 
-## Other Work
+## Community Day
+
+We had a very busy community day this week with the team processing **45** tickets across our supported modules and tooling. It was also great to see our Trusted Contributor helping support the community alongside the IAC team.
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
