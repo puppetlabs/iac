@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "2021-06-18: IAC & DevX Team Status Update"
-author: carabasdaniel
+author: @peculiarism
 categories:
   - team
   - status
