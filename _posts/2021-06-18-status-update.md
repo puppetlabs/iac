@@ -43,10 +43,24 @@ The following modules were released this week:
   [puppet-modulebuilder-pr-44]: https://github.com/puppetlabs/puppet-modulebuilder/pull/44
   [bastelfreak]: https://github.com/bastelfreak
   [puppetlabs_spec_helper-pr-338]: https://github.com/puppetlabs/puppetlabs_spec_helper/pull/338
+  
+## DevX Team Update
+This week, we've been busy preparing for the release of version `2.1.1` of PDK.
+We're hoping to have this delivered early next week - full details will follow, but, there's a number of fixes so we're moving as fast as we can to get this landed soon.
+One fix to call out is [GH-1083](https://github.com/puppetlabs/pdk/issues/1083), which was originally brought to our attention by [Michael][Michael] and [David][DavidSwan].
+There's a number of other folks awaiting this fix, so thanks to you both for diagnosing and testing the fix!
+Also, thanks to [Glenn](https://github.com/glennsarti) for his help in the early stages of RCA'ing it too.
+In other news, we've been planning and discussing some of the next big pieces of functionality we want to get in to next release of the PCT EA programme (`0.2.0`).
+The sort of things you can expect is template installation and formalized template structure.
+Another area is addition of telemetry data that will help us determine how the app is being used and provide us with another feedback vector on top of the great [Github Discussions](https://github.com/puppetlabs/pdkgo/discussions) we've had so far.
+If you want to get involved in the PCT Early Access programme, check [this blog post out]( {% link _posts/2021-06-04-pct-early-release.md %})
 
 ## Community Day
 
 We had a very busy community day this week with the team processing **45** tickets across our supported modules and tooling. It was also great to see our Trusted Contributor helping support the community alongside the IAC team.
+
+## Catch some of our team members live, now on Twitch!
+Looking to deepen your knowledge of the PDK or how Puppet builds and deploys Windows DSC modules? Look no further! Our Director of Community, [Lauren Lee](https://twitter.com/LoLoCoding), is now live streaming on Twitch with some of our team members, and you can keep up to date on the [Puppetize Twitch Channel](https://www.twitch.tv/puppetize). 
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
