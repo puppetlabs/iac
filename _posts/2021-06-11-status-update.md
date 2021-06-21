@@ -44,7 +44,7 @@ The following modules were released this week:
 
 ## DevX Team
 With version `0.1.0` of the experimental PCT release out for a week, we've been delighted by the positive and constructive feedback coming our way.
-If you're wondering what all this is about, check out [this blog post]((({% link _posts/2021-06-04-pct-early-release.md %}))) from last week - the more feedback we can garner, the better!
+If you're wondering what all this is about, check out [this blog post]({% link _posts/2021-06-04-pct-early-release.md %}) from last week - the more feedback we can garner, the better!
 On that topic, [James][James] took part in the most recent episode of [Pulling the Strings - LIVE](https://www.twitch.tv/videos/1050922724) on the [Puppetize Twitch Channel](https://www.twitch.tv/puppetize) with [Lauren](https://twitter.com/LoLoCoding), Puppet's Community Director.
 Braving the ire of the demo gods is always a risky venture, but, [James][James] showcased the speed, flexibility, speed, potential and speed of the PCT tool, excellently! You can [watch the video at your own leisure](https://www.twitch.tv/videos/1050922724) if you missed the live stream - well worth checking out!
 We're now working on the next release `0.2.0`, with some enhancements shaped by the feedback we've been getting from the early adopters.
