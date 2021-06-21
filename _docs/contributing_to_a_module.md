@@ -136,17 +136,16 @@ Our CHANGELOGs when releasing are automated and to do this, we make use of the P
       location of your branch, along with any other commentary you
       may wish to make.
 
-## More indepth information on Contributing
+## More in-depth information on Contributing
 
-Thanks to [Ceora](https://twitter.com/ceeoreo_/status/1390342216485425155), she has put together a great article on ['How to Make Your First Open Source Contribution'](https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim). The information she has included is fanstatic and if you want more indepth information it is definitely the perfect place to start.
+Thanks to [Ceora](https://twitter.com/ceeoreo_/status/1390342216485425155), she has put together a great article on ['How to Make Your First Open Source Contribution'](https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim). The information she has included is fantastic and if you want more in-depth information it is definitely the perfect place to start.
 
 # Testing
 ## Getting Started
 
 Our Puppet modules provide a Gemfile in the module root directory, we can then use the pdk to install all of the Gems listed in the Gemfile.
 
-which can tell a Ruby package manager such as [bundler](http://bundler.io/) what Ruby packages,
-or Gems, are required to build, develop, and test this software.
+`which` can tell a Ruby package manager such as [bundler](http://bundler.io/) what Ruby packages or gems, are required to build, develop, and test this software.
 
 Please make sure you have the [pdk](https://puppet.com/try-puppet/puppet-development-kit/) on your system, and then use it to
 install all dependencies needed for this project in the project root by running
@@ -192,8 +191,7 @@ At the bottom of your PR a breakdown of the automated tests running will be show
 
 A PR will not be merged with failing tests, if you click on the small red cross icon it will give you additional information
 on what has actually failed. Once this is addressed you can commit your fix and continue working. If your fix is difficult and
-you need to do additional debugging check out the section in this document called **Running tests on your local machine** as this
-will allow you to run interactive debugging sessions using pry.
+you need to do additional debugging check out the section in this document called [**Running tests on your local machine**]((#running-tests-on-your-local-machine) as this will allow you to run interactive debugging sessions using pry.
 
 ## Running Tests on your local machine
 
@@ -206,8 +204,8 @@ With all dependencies in place and up-to-date, run the tests:
 ```
 
 This executes all the [rspec tests](http://rspec-puppet.com/) in the directories defined [here](https://github.com/puppetlabs/puppetlabs_spec_helper/blob/699d9fbca1d2489bff1736bb254bb7b7edb32c74/lib/puppetlabs_spec_helper/rake_tasks.rb#L17) and so on.
-rspec tests may have the same kind of dependencies as the module they are testing. Although the module defines these dependencies in its [metadata.json](./metadata.json),
-rspec tests define them in [.fixtures.yml](./fixtures.yml). We use this over `pdk test unit` as it provides live feedback as the tests are running. See below: 
+rspec tests may have the same kind of dependencies as the module they are testing. Although the module defines these dependencies in its metadata.json,
+rspec tests define them in fixtures.yml. We use this over `pdk test unit` as it provides live feedback as the tests are running. See below:
 
 ![pdk_test_unit](pdkunit.png)
 ![pdk_bundle_exec_rake_spec](rakespec.png)
