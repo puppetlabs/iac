@@ -17,7 +17,7 @@ Really looking forward to the getting some time off!
 
 The following tickets were closed and many pages were made live on Confluence :)
 - [Ticket 1](https://tickets.puppetlabs.com/browse/IAC-1583)
-- [Ticket 2](https://tickets.puppetlabs.com/browse/IAC-1590) - A [new ticket](https://tickets.puppetlabs.com/browse/IAC-1656) was raised and is currently under review to add actions items for some of the missing pages.
+- [Ticket 2](https://tickets.puppetlabs.com/browse/IAC-1590) - A [new ticket](https://tickets.puppetlabs.com/browse/IAC-1656) was raised to add actions items for some of the missing pages and is currently under review
 - [Ticket 3](https://tickets.puppetlabs.com/browse/IAC-1621)
 - [Ticket 4](https://tickets.puppetlabs.com/browse/IAC-1626)
 - [Ticket 5](https://tickets.puppetlabs.com/browse/IAC-1584)
@@ -31,6 +31,10 @@ The following tickets were closed and many pages were made live on Confluence :)
     - [Ticket 7_ii](https://tickets.puppetlabs.com/browse/IAC-1654)
     - [Ticket 7_iii](https://tickets.puppetlabs.com/browse/IAC-1655)
 <br/><br/>
+
+The following tickets are currently under review.... so stay tuned for more updates in the next week!
+- [Ticket 8](https://tickets.puppetlabs.com/browse/IAC-1634)
+- [Ticket 9](https://tickets.puppetlabs.com/browse/IAC-1640)
 
 I also created some backlog tickets which I will pick up once back from PTO.
 
