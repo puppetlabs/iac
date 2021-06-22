@@ -11,7 +11,7 @@ tags:
   - multi node
 ---
 
-Multi-node modules are modules use multiple nodes to run integration tests. Integration testing is where you set up multiple Virtual Machines (VM) or containers, and test interactions between them. For example, this could be:
+Multi-node modules are modules which use multiple nodes to run integration tests. Integration testing is where you set up multiple Virtual Machines (VM) or containers, and test interactions between them. For example, this could be:
 
 * Installing Puppet Enterprise (PE) and multiple Puppet agents.
 * Setting up an NTP server and registering NTP clients.
