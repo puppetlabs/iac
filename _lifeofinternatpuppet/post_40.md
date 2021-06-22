@@ -16,25 +16,25 @@ This week has been quite short for me as I wrap up some tickets on the IAC Confl
 Really looking forward to the getting some time off!
 
 The following tickets were closed and many pages were made live on Confluence :)
-- [Ticket 1](https://tickets.puppetlabs.com/browse/IAC-1583)
-- [Ticket 2](https://tickets.puppetlabs.com/browse/IAC-1590) - A [new ticket](https://tickets.puppetlabs.com/browse/IAC-1656) was raised to add actions items for some of the missing pages and is currently under review
-- [Ticket 3](https://tickets.puppetlabs.com/browse/IAC-1621)
-- [Ticket 4](https://tickets.puppetlabs.com/browse/IAC-1626)
-- [Ticket 5](https://tickets.puppetlabs.com/browse/IAC-1584)
-    - [Ticket 5_i](https://tickets.puppetlabs.com/browse/IAC-1631)
-    - [Ticket 5_ii](https://tickets.puppetlabs.com/browse/IAC-1632)
-    - [Ticket 5_iii](https://tickets.puppetlabs.com/browse/IAC-1633)
+- [IAC-1583](https://tickets.puppetlabs.com/browse/IAC-1583)
+- [IAC-1590](https://tickets.puppetlabs.com/browse/IAC-1590) - A [new ticket](https://tickets.puppetlabs.com/browse/IAC-1656) was raised to add actions items for some of the missing pages and is currently under review
+- [IAC-1621](https://tickets.puppetlabs.com/browse/IAC-1621)
+- [IAC-1626](https://tickets.puppetlabs.com/browse/IAC-1626)
+- [IAC-1584](https://tickets.puppetlabs.com/browse/IAC-1584)
+    - [IAC-1631](https://tickets.puppetlabs.com/browse/IAC-1631)
+    - [IAC-1632](https://tickets.puppetlabs.com/browse/IAC-1632)
+    - [IAC-1633](https://tickets.puppetlabs.com/browse/IAC-1633)
     <br/><br/>
-- [Ticket 6](https://tickets.puppetlabs.com/browse/IAC-1650)
-- [Ticket 7](https://tickets.puppetlabs.com/browse/IAC-1652)
-    - [Ticket 7_i](https://tickets.puppetlabs.com/browse/IAC-1653)
-    - [Ticket 7_ii](https://tickets.puppetlabs.com/browse/IAC-1654)
-    - [Ticket 7_iii](https://tickets.puppetlabs.com/browse/IAC-1655)
+- [IAC-1650](https://tickets.puppetlabs.com/browse/IAC-1650)
+- [IAC-1652](https://tickets.puppetlabs.com/browse/IAC-1652)
+    - [IAC-1653](https://tickets.puppetlabs.com/browse/IAC-1653)
+    - [IAC-1654](https://tickets.puppetlabs.com/browse/IAC-1654)
+    - [IAC-1655](https://tickets.puppetlabs.com/browse/IAC-1655)
 <br/><br/>
 
 The following tickets are currently under review.... so stay tuned for more updates in the next week!
-- [Ticket 8](https://tickets.puppetlabs.com/browse/IAC-1634)
-- [Ticket 9](https://tickets.puppetlabs.com/browse/IAC-1640)
+- [IAC-1634](https://tickets.puppetlabs.com/browse/IAC-1634)
+- [IAC-1640](https://tickets.puppetlabs.com/browse/IAC-1640)
 
 I also created some backlog tickets which I will pick up once back from PTO.
 
