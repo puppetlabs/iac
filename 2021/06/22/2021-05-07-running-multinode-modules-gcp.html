@@ -1,0 +1,224 @@
+<p>Multi-node modules are modules which use multiple nodes to run integration tests. Integration testing is where you set up multiple Virtual Machines (VM) or containers, and test interactions between them. For example, this could be:</p>
+
+<ul>
+  <li>Installing Puppet Enterprise (PE) and multiple Puppet agents.</li>
+  <li>Setting up an NTP server and registering NTP clients.</li>
+  <li>Installing open source Puppet Server and multiple Puppet agents.</li>
+</ul>
+
+<p>The order you perform integration tests is important, and you need to be able to run a test on an individual system.</p>
+
+<p>Running multi-node modules in GCP involves the following steps:</p>
+
+<ul>
+  <li>Provision a node using a Bolt task.</li>
+  <li>Set up a multi-node environment for testing using a Bolt task or plan.</li>
+  <li>Run a test - you can use existing serverspec or Litmus helpers to set up any dependencies required by the module.</li>
+  <li>Teardown the machine using a provision task.</li>
+</ul>
+
+<p>This guide walks you through each step, and then provides examples of how your code would look in different environments.</p>
+
+<h2 id="provision-a-node">Provision a node</h2>
+
+<p>You can use Litmus and a Bolt task to provision a VM or a container. The provision module’s <a href="https://github.com/puppetlabs/provision/blob/main/tasks">available tasks</a> spin up the test environment. When run, it creates a <code class="language-plaintext highlighter-rouge">litmus_inventory.yaml</code> file that allows <a href="https://github.com/puppetlabs/bolt">Bolt</a> and <a href="https://serverspec.org/">serverspec</a> to communicate with that VM.</p>
+
+<p>Running tasks in the provision module allows you to add arbitrary key/pair values to the Bolt inventory file.  The Bolt variables allows you to have multiple labels associated with a single machine. For example:</p>
+
+<p><img src="/iac/assets/2021-05-07-running-multinode-modules-gcp/inventory_role.png" alt="Showing role info in litmus_inventory.yaml file" /> 
+<a href="https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/plans/provision_machines.pp">Example_websphere_provision_plan</a></p>
+
+<h2 id="set-up-a-multi-node-environment-for-testing">Set up a multi-node environment for testing</h2>
+
+<p>To step up Litmus for your acceptance tests, you need to:</p>
+
+<ul>
+  <li>Install a Puppet agent — you can do this using a Bolt <a href="https://github.com/puppetlabs/puppetlabs-puppet_agent/tree/main/tasks">task</a>.</li>
+  <li>Install a module — use a rake task that uses Puppet Development Kit (PDK) to build the module for testing, and install it on the target VM.</li>
+  <li>Install <code class="language-plaintext highlighter-rouge">spec/spec_helper_acceptance_local.rb</code> — this may require extra setup to test a module. You can use <a href="https://github.com/puppetlabs/puppetlabs-apache/blob/main/spec/spec_helper_acceptance_local.rb">puppetlabs/puppetlabs-apache</a>.</li>
+</ul>
+
+<p>To set up integration testing, use a Bolt plan and inventory variable to add labels. You can then run Puppet code against a specific system. You can use <a href="https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/plans/pe_server_setup.pp">puppetlabs-websphere_application_server</a></p>
+
+<p>An example provision plan looks like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plan websphere_application_server::provision_machines(
+  Optional[String] $using = 'abs',
+  Optional[String] $image = 'centos-7-x86_64'
+) {
+  # provision machines, set roles
+  ['server', 'appserver', 'dmgr', 'ihs'].each |$role| {
+    run_task("provision::${using}", 'localhost', action =&gt; 'provision', platform =&gt; $image, vars =&gt; "role: ${role}")
+  }
+}
+</code></pre></div></div>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">spec/spec_helper_acceptance_local.rb</code> if you need to test a module — <a href="https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/spec/spec_helper_acceptance_local.rb">puppetlabs-websphere_application_server</a></p>
+
+<h2 id="run-a-test">Run a test</h2>
+
+<p>To identify which tests to run in an integeration environment, you can use rspec labelling and rake tasks.</p>
+
+<p>You can label tests using rspec labeling — tag the test as an integration and keep everything else can stay the same. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>describe 'Install the websphere dmgr', :integration do
+  before(:all) do
+    @agent = WebSphereHelper.dmgr_host
+    WebSphereInstance.install(@agent)
+    WebSphereDmgr.install(@agent)
+  end
+
+  it 'is installed' do
+    expect(WebSphereHelper.remote_file_exists(@agent, WebSphereConstants.dmgr_status))
+    expect(WebSphereHelper.remote_file_exists(@agent, WebSphereConstants.ws_admin))
+  end
+end
+</code></pre></div></div>
+
+<p>To run a rake task, add to the Rakefile of the module. For example:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require 'rspec/core/rake_task'
+namespace :websphere_application_server do
+  RSpec::Core::RakeTask.new(:integration) do |t|
+    t.pattern = 'spec/acceptance/**{,/*/**}/*_spec.rb'
+    t.rspec_opts = "--tag integration"
+  end
+end
+</code></pre></div></div>
+
+<p>To target a test at a specific VM or container, you can use helper methods. You need to do this if you are using serverspec or Litmus.</p>
+
+<p>The examples below show how to filter to get either a single VM or container, or how to retrieve multiple targets. 
+  <a href="https://github.com/puppetlabs/puppetlabs-websphere_application_server/blob/main/spec/spec_helper_acceptance_local.rb">puppetlabs-websphere_application_server</a></p>
+
+<p><a href="https://github.com/puppetlabs/puppetlabs-kubernetes/blob/main/spec/spec_helper_acceptance_local.rb">puppetlabs-kubernetes</a></p>
+
+<p>To identify a target node, the code would look like:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>      context 'application deployment' do
+        before(:all) { change_target_host('controller') }
+        after(:all) { reset_target_host }
+        it 'can deploy an application into a namespace and expose it' do
+          run_shell('KUBECONFIG=/etc/kubernetes/admin.conf kubectl create -f /tmp/nginx.yml') do |r|
+            expect(r.stdout).to match(/my-nginx created\nservice\/my-nginx created\n/)
+          end
+        end
+</code></pre></div></div>
+
+<p>To only run on tests labelled as ‘integration’, use the following command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bundle exec rake websphere_application_server:integration</code></p>
+
+<h2 id="teardown-the-machine">Teardown the machine</h2>
+
+<p>To teardown all the provisioned machines, use the following provision task:</p>
+
+<p><code class="language-plaintext highlighter-rouge">bundle exec rake litmus:tear_down</code></p>
+
+<h3 id="multi-node-testing-examples">Multi-node testing examples</h3>
+
+<p><strong><em>Multiple Puppet agents</em></strong></p>
+
+<p>A setup where you have multiple Puppet agents, with a module installed and tests run.</p>
+
+<p>Commands</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
+bundle exec rake litmus:install_agent
+bundle exec rake litmus:install_module
+bundle exec rake ntp:integration
+bundle exec rake 'litmus:tear_down'
+</code></pre></div></div>
+<p>Example
+<a href="https://github.com/puppetlabs/puppetlabs-ntp/tree/multinodentp">puppetlabs-ntp</a></p>
+
+<p><strong><em>Puppet server and multiple agents</em></strong></p>
+
+<p>A setup where you have Puppet Server and multiple Puppet agents.</p>
+
+<p>You can use Bolt plans for provisioning multiple nodes, with roles tagged to each of it.</p>
+
+<p>Puppet has a new <a href="https://github.com/puppetlabs/provision/blob/main/tasks/install_puppetserver.json">task</a> that installs an open source Puppet server in the provision module.</p>
+
+<p>Commands</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run kubernetes::provision_cluster
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run kubernetes::puppetserver_setup
+bundle exec rake litmus:install_agent
+bundle exec rake litmus:install_module
+bundle exec rake kubernetes:integration
+bundle exec rake 'litmus:tear_down'
+</code></pre></div></div>
+<p>Example
+<a href="https://github.com/puppetlabs/puppetlabs-kubernetes">puppetlabs-kubernetes</a></p>
+
+<p><img src="/iac/assets/2021-05-07-running-multinode-modules-gcp/github_workflow.png" alt="Example github workflow run" /></p>
+
+<p><strong><em>PE and agents</em></strong></p>
+
+<p>A setup where you have a PE server and multiple Puppet agents.</p>
+
+<p>You can use Bolt plans for provisioning multiple nodes with roles tagged to each of it.</p>
+
+<p>There is a task to install PE in the <code class="language-plaintext highlighter-rouge">puppet-deploy_pe module</code>.
+<a href="https://github.com/jarretlavallee/puppet-deploy_pe/tree/master/plans">provision_master/agents</a></p>
+
+<p>Commands</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bundle install --path .bundle/gems/ --jobs 4
+bundle exec rake spec_prep
+bundle exec bolt --modulepath spec/fixtures/modules plan run ntp::provision_gcp
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_server
+bundle exec bolt --modulepath spec/fixtures/modules -i ./spec/fixtures/litmus_inventory.yaml plan run ntp::pe_agent
+bundle exec rake litmus:install_module
+bundle exec rake ntp:integration
+bundle exec rake 'litmus:tear_down'
+</code></pre></div></div>
+
+<p>Example
+<a href="https://github.com/puppetlabs/puppetlabs-ntp/tree/multinodentp">puppetlabs-ntp</a></p>
+
+<p>An example plan that installs a PE server:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plan ntp::pe_server(
+  Optional[String] $version = '2019.8.5',
+  Optional[Hash] $pe_settings = {password =&gt; 'puppetlabs'}
+) {
+  # identify pe server node
+  $puppet_server =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpserver' }
+
+  # install pe server
+  run_plan(
+    'deploy_pe::provision_master',
+    $puppet_server,
+    'version' =&gt; $version,
+    'pe_settings' =&gt; $pe_settings
+  )
+}
+</code></pre></div></div>
+
+<p>An example plan that installs a Puppet agent:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>plan ntp::pe_agent() {
+  # identify pe server and agent nodes
+  $puppet_server =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpserver' }
+  $puppet_agent =  get_targets('*').filter |$n| { $n.vars['role'] == 'ntpclient' }
+
+  # install agent
+  run_plan(
+    'deploy_pe::provision_agent',
+    $puppet_agent,
+    'master' =&gt; $puppet_server,
+  )
+}
+</code></pre></div></div>
+
+<p>For more GitHub Action workflow examples, see the following:</p>
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-websphere_application_server/tree/main/.github/workflows">puppetlabs-websphere_application_server</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-kubernetes/tree/main/.github/workflows">puppetlabs-kubernetes</a></li>
+</ul>
+
+<p>Thanks <a href="https://github.com/tphoney">TP</a> for the valuable work on integration testing.
+Thanks <a href="https://github.com/MartyEwings">Marty</a> for the work on installing PE on cloud CI.</p>
