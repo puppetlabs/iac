@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Run multi-node module tests with cloud continuous integration (CI) in Google Cloud Platform (GCP)
+title: "Run multi-node module tests with cloud continuous integration (CI) in Google Cloud Platform (GCP)"
 author: sheenaajay
 categories:
   - module
