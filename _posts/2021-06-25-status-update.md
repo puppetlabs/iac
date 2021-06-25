@@ -1,11 +1,18 @@
 ---
 layout: post
 title: "2021-06-25: IAC & DevX Team Status Update"
-author: @peculiarism
+author: "@peculiarism"
 categories:
   - team
   - status
 tags:
+  - pct
+  - pdk
+  - concat
+  - apache
+  - firewall
+  - haproxy
+  - mysql
 ---
 
 ## Community Contributions
@@ -64,6 +71,7 @@ The following modules were released this week:
 The team has been very focused this week on supporting some of Puppet's internal teams with IAC tooling, big shout out to [Danny][Danny] for jumping in to help the support team, and [Sheena][Sheena] stepping in to onboard the PIE team with Litmus capabilities. Inclusive of this work the team managed to process **36** issues/tickets/PRs across both tooling and supported modules, go team!
 
 ## DevX Team Update
+
 It's been a busy week on the DevX team!
 We're delighted to announce the release of PDK version `2.1.1`.
 This release resolves an issue in which [child processes were unable to spawn](https://puppet.com/docs/pdk/2.x/release_notes_pdk.html#resolved-issue-with-access-denied-error-on-win-github-actions) on some Windows systems.
@@ -72,6 +80,7 @@ We also have a new release of the [PCT tool]( {% link _posts/2021-06-04-pct-earl
 Check out the [the `0.2.0` release page](https://github.com/puppetlabs/pdkgo/releases/tag/0.2.0) for full details of what's included.
 
 ## Community shout out
+
 The team wanted to give a big shoutout to [cocker-cc][cocker-cc] and their work on implementing the Puppet `Sensitive Datatype` across some of our supported modules like [puppetlabs-haproxy](https://github.com/puppetlabs/puppetlabs-haproxy/pull/487), [puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql/pull/1400) and [puppetlabs-postgresql](https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279).
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
