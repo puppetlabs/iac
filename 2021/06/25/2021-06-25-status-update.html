@@ -1,0 +1,49 @@
+<h2 id="community-contributions">Community Contributions</h2>
+
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2158"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2158</code></a>: “Update the default version of Apache for Amazon Linux 2”, thanks to <a href="https://github.com/turnopil">turnopil</a> and the following people who helped get it over the line (<a href="https://github.com/NapoSky">NapoSky</a>, <a href="https://github.com/ekohl">ekohl</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2154"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2154</code></a>: “Only warn about servername logging if relevant”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/755"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#755</code></a>: “Add syslog_facility parameter to docker::run”, thanks to <a href="https://github.com/waipeng">waipeng</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy/pull/486"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy#486</code></a>: “Fix haproxy_version fact for versions &gt;= 2.4.0”, thanks to <a href="https://github.com/bp85">bp85</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1403"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1403</code></a>: “Fix broken link and style in documentation”, thanks to <a href="https://github.com/ghoneycutt">ghoneycutt</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1400"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1400</code></a>: “Use Puppet-Datatype Sensitive”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/172"><code class="language-plaintext highlighter-rouge">facterdb#172</code></a>: “cleanup documentation + migrate CI+release process from travis to github actions”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/170"><code class="language-plaintext highlighter-rouge">facterdb#170</code></a>: “Add Facter 4 facts for Debian 10/CentOS 7”, thanks to <a href="https://github.com/genebean">genebean</a> and the following people who helped get it over the line (<a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/169"><code class="language-plaintext highlighter-rouge">facterdb#169</code></a>: “Add Sparc Solaris 11 Facter 4 facts”, thanks to <a href="https://github.com/genebean">genebean</a></li>
+  <li><a href="https://github.com/puppetlabs/puppet-resource_api/pull/289"><code class="language-plaintext highlighter-rouge">puppet-resource_api#289</code></a>: “Only ship needed files”, thanks to <a href="https://github.com/ekohl">ekohl</a> and the following people who helped get it over the line (<a href="https://github.com/puppetlabs-jenkins">puppetlabs-jenkins</a>)</li>
+</ul>
+
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
+
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
+
+<p>The following modules were released this week:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-concat"><code class="language-plaintext highlighter-rouge">puppetlabs-concat</code></a> (<code class="language-plaintext highlighter-rouge">7.0.2</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache"><code class="language-plaintext highlighter-rouge">puppetlabs-apache</code></a> (<code class="language-plaintext highlighter-rouge">6.3.0</code>)</li>
+  <li><a href="http://github.com/puppetlabs/puppetlabs-firewall"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall</code></a> (<code class="language-plaintext highlighter-rouge">3.0.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy</code></a> (<code class="language-plaintext highlighter-rouge">6.0.2</code>)</li>
+  <li>
+    <p><a href="http://github.com/puppetlabs/puppetlabs-mysql"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql</code></a> (<code class="language-plaintext highlighter-rouge">11.0.3</code>)</p>
+
+  </li>
+</ul>
+
+<p>The team has been very focused this week on supporting some of Puppet’s internal teams with IAC tooling, big shout out to <a href="https://github.com/carabasdaniel">Danny</a> for jumping in to help the support team, and <a href="https://github.com/sheenaajay">Sheena</a> stepping in to onboard the PIE team with Litmus capabilities. Inclusive of this work the team managed to process <strong>36</strong> issues/tickets/PRs across both tooling and supported modules, go team!</p>
+
+<h2 id="devx-team-update">DevX Team Update</h2>
+<p>It’s been a busy week on the DevX team!
+We’re delighted to announce the release of PDK version <code class="language-plaintext highlighter-rouge">2.1.1</code>.
+This release resolves an issue in which <a href="https://puppet.com/docs/pdk/2.x/release_notes_pdk.html#resolved-issue-with-access-denied-error-on-win-github-actions">child processes were unable to spawn</a> on some Windows systems.
+Check out the <a href="https://puppet.com/docs/pdk/2.x/release_notes_pdk.html">release notes</a> for a full list of enhancements and fixes that have gone in to <code class="language-plaintext highlighter-rouge">2.1.1</code>.
+We also have a new release of the <a href="/iac/pdk/development/2021/06/04/pct-early-release.html">PCT tool</a>. Version <code class="language-plaintext highlighter-rouge">0.2.0</code> can be installed over the top of <code class="language-plaintext highlighter-rouge">0.1.0</code> using these <a href="https://github.com/puppetlabs/pdkgo#installing">installation instructions</a>.
+Check out the <a href="https://github.com/puppetlabs/pdkgo/releases/tag/0.2.0">the <code class="language-plaintext highlighter-rouge">0.2.0</code> release page</a> for full details of what’s included.</p>
+
+<h2 id="community-shout-out">Community shout out</h2>
+<p>The team wanted to give a big shoutout to <a href="https://github.com/cocker-cc">cocker-cc</a> and their work on implementing the Puppet <code class="language-plaintext highlighter-rouge">Sensitive Datatype</code> across some of our supported modules like <a href="https://github.com/puppetlabs/puppetlabs-haproxy/pull/487">puppetlabs-haproxy</a>, <a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1400">puppetlabs-mysql</a> and <a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279">puppetlabs-postgresql</a>.</p>
+
+<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+
