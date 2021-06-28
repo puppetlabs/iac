@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>Contributing to Supported Modules | Puppet IAC Team</title>
+<meta name="generator" content="Jekyll v4.2.0" />
+<meta property="og:title" content="Contributing to Supported Modules" />
+<meta name="author" content="pmcmaw" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="So you want to contribute to a Puppet module: Great! Below are some instructions to get you started doing that very thing while setting expectations around code quality as well as a few tips for making the process as easy as possible." />
+<meta property="og:description" content="So you want to contribute to a Puppet module: Great! Below are some instructions to get you started doing that very thing while setting expectations around code quality as well as a few tips for making the process as easy as possible." />
+<link rel="canonical" href="https://puppetlabs.github.io/iac/docs/contributing_to_a_module.html" />
+<meta property="og:url" content="https://puppetlabs.github.io/iac/docs/contributing_to_a_module.html" />
+<meta property="og:site_name" content="Puppet IAC Team" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2021-06-28T17:07:13+00:00" />
+<script type="application/ld+json">
+{"description":"So you want to contribute to a Puppet module: Great! Below are some instructions to get you started doing that very thing while setting expectations around code quality as well as a few tips for making the process as easy as possible.","@type":"BlogPosting","headline":"Contributing to Supported Modules","url":"https://puppetlabs.github.io/iac/docs/contributing_to_a_module.html","dateModified":"2021-06-28T17:07:13+00:00","datePublished":"2021-06-28T17:07:13+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://puppetlabs.github.io/iac/docs/contributing_to_a_module.html"},"author":{"@type":"Person","name":"pmcmaw"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/iac/assets/main.css"><link type="application/atom+xml" rel="alternate" href="https://puppetlabs.github.io/iac/feed.xml" title="Puppet IAC Team" /></head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/iac/">Puppet IAC Team</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/iac/docs/">Docs</a><a class="page-link" href="/iac/modules/">Modules</a><a class="page-link" href="/iac/tools/">Tools</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Contributing to Supported Modules</h1>
+  </header>
+
+  <div class="post-content">
+    <p>So you want to contribute to a Puppet module: Great! Below are some instructions to get you started doing
+that very thing while setting expectations around code quality as well as a few tips for making the
+process as easy as possible.</p>
+
+<p>Although our reviews don’t catch everything, this is final defense line for anything our automated tests cannot catch.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<ul>
+  <li>
+    <p>Fork the module repository on GitHub and clone to your workspace</p>
+  </li>
+  <li>
+    <p>Make your changes!</p>
+  </li>
+</ul>
+
+<h2 id="commit-checklist">Commit Checklist</h2>
+
+<h3 id="the-pr-title">The PR Title</h3>
+
+<p>Our CHANGELOGs when releasing are automated and to do this, we make use of the PR title. This means that it is super important that your PR title always reflects the changes contained within the PR. Anything you think would be useful for an end user to know should be included.</p>
+
+<h3 id="the-basics">The Basics</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />my commit is a single logical unit of work</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />I have checked for unnecessary whitespace with “git diff –check”</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />my commit does not include commented out code or unneeded files</p>
+  </li>
+</ul>
+
+<h3 id="the-content">The Content</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />my commit includes tests for the bug I fixed or feature I added</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />my commit includes appropriate documentation changes if it is introducing a new feature or changing existing functionality</p>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />my code passes existing test suites</p>
+  </li>
+</ul>
+
+<h3 id="the-commit-message">The Commit Message</h3>
+
+<ul class="task-list">
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />the first line of my commit message includes:</p>
+
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />an issue number (only if you feel applicable, no need for small PRs to correct typos etc.), e.g. “(MODULES-xxxx) This is the first line”</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />a short description (50 characters is the soft limit, excluding ticket number(s))</p>
+      </li>
+    </ul>
+  </li>
+  <li class="task-list-item">
+    <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />the body of my commit message:</p>
+
+    <ul class="task-list">
+      <li class="task-list-item">
+        <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />is meaningful</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />uses the imperative, present tense: “change”, not “changed” or “changes”</p>
+      </li>
+      <li class="task-list-item">
+        <p><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />includes motivation for the change, and contrasts its implementation with the previous behavior</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="submission">Submission</h2>
+
+<h3 id="pre-requisites">Pre-requisites</h3>
+
+<ul>
+  <li>Make sure you have a <a href="https://github.com/join">GitHub account</a></li>
+</ul>
+
+<h3 id="push-and-pr">Push and PR</h3>
+
+<ul>
+  <li>
+    <p>Push your changes to your fork</p>
+  </li>
+  <li>
+    <p><a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">Open a Pull Request</a> against the repository in the puppetlabs organization</p>
+  </li>
+</ul>
+
+<h2 id="more-about-commits">More about commits</h2>
+
+<ol>
+  <li>
+    <p>Make separate commits for logically separate changes.</p>
+
+    <p>Please break your commits down into logically consistent units
+which include new or changed tests relevant to the rest of the
+change.  The goal of doing this is to make the diff easier to
+read for whoever is reviewing your code.  In general, the easier
+your diff is to read, the more likely someone will be happy to
+review it and get it into the code base.</p>
+
+    <p>If you are going to refactor a piece of code, please do so as a
+separate commit from your feature or bug fix changes.</p>
+
+    <p>We also really appreciate changes that include tests to make
+sure the bug is not re-introduced, and that the feature is not
+accidentally broken.</p>
+
+    <p>Describe the technical detail of the change(s).  If your
+description starts to get too long, that is a good sign that you
+probably need to split up your commit into more finely grained
+pieces.</p>
+
+    <p>Commits which plainly describe the things which help
+reviewers check the patch and future developers understand the
+code are much more likely to be merged in with a minimum of
+bike-shedding or requested changes.  Ideally, the commit message
+would include information, and be in a form suitable for
+inclusion in the release notes for the version of Puppet that
+includes them.</p>
+
+    <p>Please also check that you are not introducing any trailing
+whitespace or other “whitespace errors”.  You can do this by
+running “git diff –check” on your changes before you commit.</p>
+  </li>
+  <li>
+    <p>Sending your patches</p>
+
+    <p>To submit your changes via a GitHub pull request, we <em>highly</em>
+recommend that you have them on a topic branch, instead of
+directly on “main”.
+It makes things much easier to keep track of, especially if
+you decide to work on another thing before your first change
+is merged in.</p>
+
+    <p>GitHub has some pretty good
+<a href="http://help.github.com/">general documentation</a> on using
+their site.  They also have documentation on
+<a href="https://help.github.com/articles/creating-a-pull-request-from-a-fork/">creating pull requests</a>.</p>
+
+    <p>In general, after pushing your topic branch up to your
+repository on GitHub, you can switch to the branch in the
+GitHub UI and click “Pull Request” towards the top of the page
+in order to open a pull request.</p>
+  </li>
+  <li>
+    <p>Update the related JIRA issue.</p>
+
+    <p>If there is a JIRA issue associated with the change you
+submitted, then you should update the ticket to include the
+location of your branch, along with any other commentary you
+may wish to make.</p>
+  </li>
+</ol>
+
+<h2 id="more-in-depth-information-on-contributing">More in-depth information on Contributing</h2>
+
+<p>Thanks to <a href="https://twitter.com/ceeoreo_/status/1390342216485425155">Ceora</a>, she has put together a great article on <a href="https://dev.to/codesandboxio/how-to-make-your-first-open-source-contribution-2oim">‘How to Make Your First Open Source Contribution’</a>. The information she has included is fantastic and if you want more in-depth information it is definitely the perfect place to start.</p>
+
+<h1 id="testing">Testing</h1>
+<h2 id="getting-started-1">Getting Started</h2>
+
+<p>Our Puppet modules provide a Gemfile in the module root directory, we can then use the pdk to install all of the Gems listed in the Gemfile.</p>
+
+<p><code class="language-plaintext highlighter-rouge">which</code> can tell a Ruby package manager such as <a href="http://bundler.io/">bundler</a> what Ruby packages or gems, are required to build, develop, and test this software.</p>
+
+<p>Please make sure you have the <a href="https://puppet.com/try-puppet/puppet-development-kit/">pdk</a> on your system, and then use it to
+install all dependencies needed for this project in the project root by running</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% pdk bundle <span class="nb">install
+</span>Fetching gem metadata from https://rubygems.org/........
+Fetching gem metadata from https://rubygems.org/..
+Using rake <span class="o">(</span>10.1.0<span class="o">)</span>
+Using builder <span class="o">(</span>3.2.2<span class="o">)</span>
+<span class="nt">--</span> 8&gt;&lt;<span class="nt">--</span> many more <span class="nt">--</span><span class="o">&gt;</span>&lt;8 <span class="nt">--</span>
+Using rspec-system-puppet <span class="o">(</span>2.2.0<span class="o">)</span>
+Using serverspec <span class="o">(</span>0.6.3<span class="o">)</span>
+Using rspec-system-serverspec <span class="o">(</span>1.0.0<span class="o">)</span>
+Using bundler <span class="o">(</span>1.3.5<span class="o">)</span>
+Your bundle is <span class="nb">complete</span><span class="o">!</span>
+Use <span class="sb">`</span>pdk bundle show <span class="o">[</span>gemname]<span class="sb">`</span> to see where a bundled gem is installed.
+</code></pre></div></div>
+
+<p>NOTE: some systems may require you to run this command with sudo.</p>
+
+<p>If you already have those gems installed, make sure they are up-to-date:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% pdk bundle update
+</code></pre></div></div>
+
+<h2 id="checking-your-pr-automated-test-results">Checking your PR automated test results</h2>
+
+<p>When you create a PR, our automated test suite will automatically pick up your changes and run tests against them.
+This will highlight and regressions that you change may have introduced.</p>
+
+<h3 id="how-do-i-know-the-status-of-the-automated-tests">How do I know the status of the automated tests?</h3>
+
+<p>At the bottom of your PR a breakdown of the automated tests running will be shown:</p>
+
+<p><img src="test_run_info.png" alt="automated_test_suite" /></p>
+
+<ul>
+  <li>A green tick (Tests have passed)</li>
+  <li>A red cross (Tests have failed)</li>
+  <li>A yellow dot (Tests are still running)</li>
+  <li>A grey dot (The job has been cancelled)</li>
+</ul>
+
+<p>A PR will not be merged with failing tests, if you click on the small red cross icon it will give you additional information
+on what has actually failed. Once this is addressed you can commit your fix and continue working. If your fix is difficult and
+you need to do additional debugging check out the section in this document called [<strong>Running tests on your local machine</strong>]((#running-tests-on-your-local-machine) as this will allow you to run interactive debugging sessions using pry.</p>
+
+<h2 id="running-tests-on-your-local-machine">Running Tests on your local machine</h2>
+
+<p>With all dependencies in place and up-to-date, run the tests:</p>
+
+<h3 id="unit-tests">Unit Tests</h3>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>% pdk bundle <span class="nb">exec </span>rake spec
+</code></pre></div></div>
+
+<p>This executes all the <a href="http://rspec-puppet.com/">rspec tests</a> in the directories defined <a href="https://github.com/puppetlabs/puppetlabs_spec_helper/blob/699d9fbca1d2489bff1736bb254bb7b7edb32c74/lib/puppetlabs_spec_helper/rake_tasks.rb#L17">here</a> and so on.
+rspec tests may have the same kind of dependencies as the module they are testing. Although the module defines these dependencies in its metadata.json,
+rspec tests define them in fixtures.yml. We use this over <code class="language-plaintext highlighter-rouge">pdk test unit</code> as it provides live feedback as the tests are running. See below:</p>
+
+<p><img src="pdkunit.png" alt="pdk_test_unit" />
+<img src="rakespec.png" alt="pdk_bundle_exec_rake_spec" /></p>
+
+<h3 id="acceptance-tests">Acceptance Tests</h3>
+
+<p>All Puppet Supported modules come with acceptance tests, which use <a href="https://puppet.com/blog/litmus-new-module-acceptance-testing-tool/">puppet litmus</a>.
+Litmus supports multiple provisioners, that exist in the <a href="https://github.com/puppetlabs/provision">provision module</a>.
+For information on how you can run your tests using litmus please check out the <a href="https://puppetlabs.github.io/litmus/Running-acceptance-tests.html">litmus docs section</a></p>
+
+<h2 id="writing-tests">Writing Tests</h2>
+
+<h3 id="unit-tests-1">Unit Tests</h3>
+
+<p>When writing unit tests for Puppet, <a href="http://rspec-puppet.com/">rspec-puppet</a> is your best friend. It provides tons of helper methods for testing your manifests against a
+catalog (e.g. contain_file, contain_package, with_params, etc). It would be ridiculous to try and top rspec-puppet’s <a href="http://rspec-puppet.com/documentation/">documentation</a>
+but here’s a tiny sample:</p>
+
+<p>Sample manifest:</p>
+
+<div class="language-puppet highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">file</span> <span class="p">{</span> <span class="s2">"a test file"</span><span class="p">:</span>
+  <span class="py">ensure</span> <span class="p">=&gt;</span> <span class="n">present</span><span class="p">,</span>
+  <span class="py">path</span>   <span class="p">=&gt;</span> <span class="s2">"/etc/sample"</span><span class="p">,</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Sample test:</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">it</span> <span class="s1">'does a thing'</span> <span class="k">do</span>
+  <span class="n">expect</span><span class="p">(</span><span class="n">subject</span><span class="p">).</span><span class="nf">to</span> <span class="n">contain_file</span><span class="p">(</span><span class="s2">"a test file"</span><span class="p">).</span><span class="nf">with</span><span class="p">({</span><span class="ss">:path</span> <span class="o">=&gt;</span> <span class="s2">"/etc/sample"</span><span class="p">})</span>
+<span class="k">end</span>
+</code></pre></div></div>
+
+<h3 id="acceptance-tests-1">Acceptance Tests</h3>
+
+<p>A common pattern for acceptance tests is to create a test manifest, apply it
+twice to check for idempotency or errors, then run expectations.</p>
+
+<p>For more examples on how to write a test using litmus, please check out the tests in all of our supported modules and for
+more information about writing tests using litmus check out the <a href="https://puppetlabs.github.io/litmus/Litmus-test-examples.html">litmus wiki test examples</a>.</p>
+
+<div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">it</span> <span class="s1">'does an end-to-end thing'</span> <span class="k">do</span>
+  <span class="n">pp</span> <span class="o">=&lt;&lt;-</span><span class="no">EOF</span><span class="sh">
+    file { "a test file":
+      ensure  =&gt; present,
+      path    =&gt; "/etc/sample",
+      content =&gt; "test string",
+    }
+  pp=&lt;&lt;-EOF
+
+  idempotent_apply(pp)
+end
+
+describe file("/etc/sample") do
+  it { is_expected.to contain "test string" }
+end
+</span></code></pre></div></div>
+
+<h2 id="getting-your-pr-reviewed">Getting your PR reviewed</h2>
+
+<p>If you would like information about:</p>
+
+<ul>
+  <li>How to get your PR reviewed</li>
+  <li>What does a review consist of?</li>
+  <li>Who can merge my PR?</li>
+</ul>
+
+<p>The record of someone performing the merge is the record that they performed the code review. Again, this should be someone other than the author of the topic branch.</p>
+
+<p>Please check out a document we have published on our <a href="https://puppetlabs.github.io/iac/docs/reviewing-pull-requests.html">IAC Documentation Site</a>.</p>
+
+<h1 id="get-help">Get Help</h1>
+
+<p>Check out our <a href="https://puppetlabs.github.io/iac/team/2021/01/20/reaching-out.html">blog post</a> on how to reach the team if your having issues.</p>
+
+
+  </div>
+
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/iac/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Puppet IAC Team</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Puppet IAC Team</li><li><a class="u-email" href="mailto:ia_content@puppet.com">ia_content@puppet.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/puppetlabs"><svg class="svg-icon"><use xlink:href="/iac/assets/minima-social-icons.svg#github"></use></svg> <span class="username">puppetlabs</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
