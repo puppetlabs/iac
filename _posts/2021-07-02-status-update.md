@@ -1,11 +1,16 @@
 ---
 layout: post
 title: "2021-07-02: IAC & DevX Team Status Update"
-author: "carabasdaniel"
+author: "binford2k"
 categories:
   - team
   - status
 tags:
+  - devx
+  - community
+  - dsc
+  - k8s
+  - cloudci
 ---
 
 ## Community Contributions
@@ -46,9 +51,34 @@ The following modules were released this week:
   [kdehairy]: https://github.com/kdehairy
   [creativefre]: https://github.com/creativefre
 
-## Other Work
+## Community Day
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+We had a great community day this week and processed 28 issues and PRs across our supported modules and tooling.
+And a shout out again to [cocker-cc][cocker-cc] for their continued engagement in adding `Sensitive` Datatype support to more modules.
+
+
+## Kubernetes Conformance
+
+We're very happy to announce that we finished running the conformance tests for v1.20 on our kubernetes module and we're just one step a way of the official news.
+It was a long journey with a lot of lessons, first about k8s components and workflow, but also about how to approach each situation and invest the time.
+If you're curious about the process, you can find [our PR on the `cncf` repository](https://github.com/cncf/k8s-conformance/pull/1514).
+
+
+## DevX Team
+[James][James] is currently working on a much requested feature for `pdk validate` that will allow exclusions to be specified for files / file paths.
+If this is something you've been interested in, jump over to [pdk#1114](https://github.com/puppetlabs/pdk/pull/1114) and share your thoughts / suggestions.
+
+
+## Porting modules to Cloud CI
+Puppet's Partner Integrations (PIE) Team have successfully [ported](https://github.com/puppetlabs/puppetlabs-splunk_hec/pull/124) the tests to run on Cloud CI and configured the repository to use our Automated Release Workflow.
+Thanks to [Bill Hurt][Bill] and [Sharon Nam][Sharon] for the collaboration opportunity.
+
+
+## DSC Builder
+The new DSC module builder is inching ever closer to the finish line and the 1.0 release with an automated publishing pipeline is in sight.
+This required coordinated efforts all across our teams, involving everything from [Michael's][Michael] relentless persistence to [Josh's][Josh] assistance with some core Puppet updates to support imprecise DSC Resources, all the way to [Gabi's][gabi] journey to [add Windows long path support to upstream Ruby][ruby_paths] itself.
+This has been a marathon, with all sorts of new challenges discovered along the way, but thanks to everyone's hard work we're nearly there.
+
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
@@ -66,3 +96,9 @@ The following modules were released this week:
   [Sheena]:             https://github.com/sheenaajay
   [Supported Modules]:  https://puppetlabs.github.io/iac/modules/
   [Tools]:              https://puppetlabs.github.io/iac/tools/
+  [Bill]:               https://github.com/RandomNoun7 
+  [Sharon]:             https://github.com/nam054
+  [Josh]:               https://github.com/joshcooper
+  [Gabi]:               https://github.com/GabrielNagy
+  [ruby_paths]:         https://dev.to/puppet/windows-ruby-and-long-paths-3jag
+  
