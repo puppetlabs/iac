@@ -34,12 +34,16 @@ The following modules were released this week:
 - [`puppetlabs-java_ks`][puppetlabs-java_ks] (`4.1.0`)
 - [`puppetlabs-iis`][puppetlabs-iis] (`8.0.3`)
 - [`puppetlabs-helm`][puppetlabs-helm] (`4.0.0`)
+- [`ruby-pwsh`][ruby-pwsh] (`0.9.0`)
+- [`Puppet.Dsc`][Puppet.Dsc] (`0.6.0`)
 
   [puppetlabs-docker]: https://github.com/puppetlabs/puppetlabs-docker
   [puppetlabs-inifile]: https://github.com/puppetlabs/puppetlabs-inifile
   [puppetlabs-java_ks]: https://github.com/puppetlabs/puppetlabs-java_ks
   [puppetlabs-iis]: https://github.com/puppetlabs/puppetlabs-iis
   [puppetlabs-helm]: https://github.com/puppetlabs/puppetlabs-helm
+  [ruby-pwsh]: https://github.com/puppetlabs/ruby-pwsh
+  [Puppet.Dsc]: https://github.com/puppetlabs/Puppet.Dsc
   [puppetlabs-docker-pr-740]: https://github.com/puppetlabs/puppetlabs-docker/pull/740
   [kenyon]: https://github.com/kenyon
   [puppetlabs-iis-pr-325]: https://github.com/puppetlabs/puppetlabs-iis/pull/325
