@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-07-06T02:15:56+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-06-25: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update.html" rel="alternate" type="text/html" title="2021-06-25: IAC &amp;amp; DevX Team Status Update" /><published>2021-06-25T00:00:00+00:00</published><updated>2021-06-25T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-07-06T07:18:02+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-07-02: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/07/02/status-update.html" rel="alternate" type="text/html" title="2021-07-02: IAC &amp;amp; DevX Team Status Update" /><published>2021-07-02T00:00:00+00:00</published><updated>2021-07-02T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/07/02/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/07/02/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/740&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#740&lt;/code&gt;&lt;/a&gt;: “Allow management of the docker-ce-cli package”, thanks to &lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis/pull/325&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis#325&lt;/code&gt;&lt;/a&gt;: “Correct error handling in require ruby-pwsh”, thanks to &lt;a href=&quot;https://github.com/benningm&quot;&gt;benningm&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile/pull/454&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile#454&lt;/code&gt;&lt;/a&gt;: “Accept Datatype Sensitive”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/373&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#373&lt;/code&gt;&lt;/a&gt;: “Accept Datatype Sensitive for Secrets”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/372&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#372&lt;/code&gt;&lt;/a&gt;: “Fix fingerprint comparison”, thanks to &lt;a href=&quot;https://github.com/kdehairy&quot;&gt;kdehairy&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/creativefre&quot;&gt;creativefre&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-iis&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.0.3&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-helm&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-helm&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.0.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/ruby-pwsh&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ruby-pwsh&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.9.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/Puppet.Dsc&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Puppet.Dsc&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.6.0&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
+
+&lt;p&gt;We had a great community day this week and processed 28 issues and PRs across our supported modules and tooling.
+And a shout out again to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt; for their continued engagement in adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Sensitive&lt;/code&gt; Datatype support to more modules.&lt;/p&gt;
+
+&lt;h2 id=&quot;kubernetes-conformance&quot;&gt;Kubernetes Conformance&lt;/h2&gt;
+
+&lt;p&gt;We’re very happy to announce that we finished running the conformance tests for v1.20 on our kubernetes module. Its official, our supported Kubernetes Puppet module is a certified installer for Kubernetes v1.20.
+It was a long journey with a lot of lessons, first about k8s components and workflow, but also about how to approach each situation and invest the time.
+If you’re curious about the process, you can find &lt;a href=&quot;https://github.com/cncf/k8s-conformance/pull/1514&quot;&gt;our PR on the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;cncf&lt;/code&gt; repository&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;devx-team&quot;&gt;DevX Team&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; is currently working on a much requested feature for &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk validate&lt;/code&gt; that will allow exclusions to be specified for files / file paths.
+If this is something you’ve been interested in, jump over to &lt;a href=&quot;https://github.com/puppetlabs/pdk/pull/1114&quot;&gt;pdk#1114&lt;/a&gt; and share your thoughts / suggestions.&lt;/p&gt;
+
+&lt;h2 id=&quot;porting-modules-to-cloud-ci&quot;&gt;Porting modules to Cloud CI&lt;/h2&gt;
+&lt;p&gt;Puppet’s Partner Integrations (PIE) Team have successfully &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-splunk_hec/pull/124&quot;&gt;ported&lt;/a&gt; the tests to run on Cloud CI and configured the repository to use our Automated Release Workflow.
+Thanks to &lt;a href=&quot;https://github.com/RandomNoun7&quot;&gt;Bill Hurt&lt;/a&gt; and &lt;a href=&quot;https://github.com/nam054&quot;&gt;Sharon Nam&lt;/a&gt; for the collaboration opportunity.&lt;/p&gt;
+
+&lt;h2 id=&quot;dsc-builder&quot;&gt;DSC Builder&lt;/h2&gt;
+&lt;p&gt;The new DSC module builder is inching ever closer to the finish line and the 1.0 release with an automated publishing pipeline is in sight.
+This required coordinated efforts all across our teams, involving everything from &lt;a href=&quot;https://github.com/michaeltlombardi&quot;&gt;Michael’s&lt;/a&gt; relentless persistence to &lt;a href=&quot;https://github.com/joshcooper&quot;&gt;Josh’s&lt;/a&gt; assistance with some core Puppet updates to support imprecise DSC Resources, all the way to &lt;a href=&quot;https://github.com/GabrielNagy&quot;&gt;Gabi’s&lt;/a&gt; journey to &lt;a href=&quot;https://dev.to/puppet/windows-ruby-and-long-paths-3jag&quot;&gt;add Windows long path support to upstream Ruby&lt;/a&gt; itself.
+This has been a marathon, with all sorts of new challenges discovered along the way, but thanks to everyone’s hard work we’re nearly there.&lt;/p&gt;</content><author><name>binford2k</name></author><category term="team" /><category term="status" /><category term="devx" /><category term="community" /><category term="dsc" /><category term="k8s" /><category term="cloudci" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-06-25: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update.html" rel="alternate" type="text/html" title="2021-06-25: IAC &amp;amp; DevX Team Status Update" /><published>2021-06-25T00:00:00+00:00</published><updated>2021-06-25T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/06/25/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 
 &lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
 
@@ -633,25 +686,4 @@ bundle exec rake 'litmus:tear_down'
 &lt;/ul&gt;
 
 &lt;p&gt;Thanks &lt;a href=&quot;https://github.com/tphoney&quot;&gt;TP&lt;/a&gt; for the valuable work on integration testing.
-Thanks &lt;a href=&quot;https://github.com/MartyEwings&quot;&gt;Marty&lt;/a&gt; for the work on installing PE on cloud CI.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="module" /><category term="development" /><category term="modules" /><category term="cloud ci" /><category term="multi node" /><summary type="html">Multi-node modules are modules which use multiple nodes to run integration tests. Integration testing is where you set up multiple Virtual Machines (VM) or containers, and test interactions between them. For example, this could be:</summary></entry><entry><title type="html">2021-05-07: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/05/07/status-update.html" rel="alternate" type="text/html" title="2021-05-07: IAC &amp;amp; DevX Team Status Update" /><published>2021-05-07T00:00:00+00:00</published><updated>2021-05-07T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/05/07/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/05/07/status-update.html">&lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
-
-&lt;p&gt;This week it was a bank holiday in EMEA, therefore community day has been rescheduled for next Monday.&lt;/p&gt;
-
-&lt;h2 id=&quot;content-support-team&quot;&gt;Content Support team&lt;/h2&gt;
-
-&lt;p&gt;As already mentioned this week, it was been pretty quiet with most of us on holidays. However we did manage to get a &lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-iis/pull/321&quot;&gt;customer issue on our puppetlabs-iis module&lt;/a&gt; addressed. The team was made aware of this on Tuesday, it was picked up and triaged on Wednesday, reviewed and merged on Thursday and we aim for release on Monday during our team triage day.&lt;/p&gt;
-
-&lt;p&gt;We’re currently overhauling our Contribution Guidelines to reflect the new processes we introduced in the last year in &lt;a href=&quot;https://github.com/puppetlabs/iac/pull/242&quot;&gt;this PR&lt;/a&gt;.
-Have a look and tell us what you think!&lt;/p&gt;
-
-&lt;h2 id=&quot;developer-experience&quot;&gt;Developer Experience&lt;/h2&gt;
-
-&lt;p&gt;Work continues on reducing package size and improving templates. We presented some early concepts to a few customers in a TAB session to gain feedback on our direction and implementation. We received some great feedback from this session that will help us get the tooling available sooner for more feedback from a wider audience.&lt;/p&gt;
-
-&lt;h2 id=&quot;cloud-ci&quot;&gt;Cloud CI&lt;/h2&gt;
-
-&lt;p&gt;This week we have put together the multi-node walkthrough blog post available &lt;a href=&quot;https://github.com/puppetlabs/iac/pull/237/files&quot;&gt;here&lt;/a&gt; and finished the demo for porting modules to Cloud CI. This work will be very useful in the near future as other teams are starting to look into the possibilities offered by the Cloud CI.&lt;/p&gt;
-
-&lt;p&gt;We have also started work on the investigations needed to support the possibility of provisioning developer environments.&lt;/p&gt;
-
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><category term="puppetlabs-iis" /><category term="devx" /><category term="pdk" /><category term="cloudci" /><category term="multi-node" /><summary type="html">Community Day</summary></entry></feed>
+Thanks &lt;a href=&quot;https://github.com/MartyEwings&quot;&gt;Marty&lt;/a&gt; for the work on installing PE on cloud CI.&lt;/p&gt;</content><author><name>sheenaajay</name></author><category term="module" /><category term="development" /><category term="modules" /><category term="cloud ci" /><category term="multi node" /><summary type="html">Multi-node modules are modules which use multiple nodes to run integration tests. Integration testing is where you set up multiple Virtual Machines (VM) or containers, and test interactions between them. For example, this could be:</summary></entry></feed>
