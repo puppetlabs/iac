@@ -63,7 +63,7 @@ And a shout out again to [cocker-cc][cocker-cc] for their continued engagement i
 
 ## Kubernetes Conformance
 
-We're very happy to announce that we finished running the conformance tests for v1.20 on our kubernetes module and we're just one step a way of the official news.
+We're very happy to announce that we finished running the conformance tests for v1.20 on our kubernetes module. Its official, our supported Kubernetes Puppet module is a certified installer for Kubernetes v1.20.
 It was a long journey with a lot of lessons, first about k8s components and workflow, but also about how to approach each situation and invest the time.
 If you're curious about the process, you can find [our PR on the `cncf` repository](https://github.com/cncf/k8s-conformance/pull/1514).
 
