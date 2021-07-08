@@ -12,7 +12,6 @@ tags:
 Hey everyone,
 
 A reply was sent to the IT Support in the ticket raised last week after chatting to my mentor Paula in my weekly 1:1 session of what to do with the 'unapproved process page' archived in the Puppet Forge Space on Confluence.
-Check the ticket [here](https://tickets.puppetlabs.com/servicedesk/customer/portal/2/HELP-27502)
 
 I had many follow-up meetings with my manager this week on the Confluence Wiki Revamp Project. I tried to learn how to break down the bigger task into smaller sub tasks in JIRA so that the are easy to manage. Currently, I am struggling to write good, simple and easy to understand JIRA tickets with relevant sub tasks due to which my work is not progressing too well. I am thinking of how to overcome this new hurdle!
 
