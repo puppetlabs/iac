@@ -25,6 +25,12 @@ Still waiting for review on the following 3 tickets
 
 Stay tuned more information!
 
+I got permissions from the IT support around the end of the week to move the page back from the archived space to its original space.
+
+I spent some time on Friday grooming the following sub tickets and they were resolved as I got the permission to bring the archived "Un-Approved Process" back to its original space.
+- [IAC-1699](https://tickets.puppetlabs.com/browse/IAC-1699)
+- [IAC-1700](https://tickets.puppetlabs.com/browse/IAC-1700)
+
 That's everything for this week!
 
 See you next week!
