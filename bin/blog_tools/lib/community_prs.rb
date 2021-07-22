@@ -51,17 +51,21 @@ prs_to_credit = []
 puts 'Checking supported IAC repos for contributions to credit:'
 max_length = iac_repos.map(&:length).max
 iac_repos.each do |repo_name|
-  padding = max_length - repo_name.size
-  puts "- #{repo_name}" + ' ' * padding + "(TOTAL: #{prs_to_credit.size})"
-  back_off_api_if_required
+  begin
+    padding = max_length - repo_name.size
+    puts "- #{repo_name}" + ' ' * padding + "(TOTAL: #{prs_to_credit.size})"
+    back_off_api_if_required
 
-  pr_res = @client.get("repos/#{repo_name}/pulls", state: 'all')
-  pr_res.each do |pr|
-    next if ignore_author?(pr['user']['login'])
-    next if pr['merged_at'].nil?
-    next if pr['merged_at'].to_i < last_blog_post_utc_time
+    pr_res = @client.get("repos/#{repo_name}/pulls", state: 'all')
+    pr_res.each do |pr|
+      next if ignore_author?(pr['user']['login'])
+      next if pr['merged_at'].nil?
+      next if pr['merged_at'].to_i < last_blog_post_utc_time
 
-    prs_to_credit << pr
+      prs_to_credit << pr
+    end
+  rescue StandardError => e
+    puts "Error #{e} for #{repo_name}"
   end
 end
 
