@@ -27,16 +27,20 @@ end
 @module_releases = []
 
 forge_modules.each do |forge_module|
-  name = forge_module['current_release']['metadata']['name']
-  ver = forge_module['current_release']['version']
-  proj_url = forge_module['current_release']['metadata']['project_page']
-  module_link_url = "[#{name}]: #{proj_url}"
-  @links << module_link_url unless @links.include? module_link_url
+  begin
+    name = forge_module['current_release']['metadata']['name']
+    ver = forge_module['current_release']['version']
+    proj_url = forge_module['current_release']['metadata']['project_page']
+    module_link_url = "[#{name}]: #{proj_url}"
+    @links << module_link_url unless @links.include? module_link_url
 
-  @module_releases << {
-    version: "`#{ver}`",
-    module_link_ref: "[`#{name}`][#{name}]"
-  }
+    @module_releases << {
+      version: "`#{ver}`",
+      module_link_ref: "[`#{name}`][#{name}]"
+    }
 
-  puts "- #{name} (#{ver})"
+    puts "- #{name} (#{ver})"
+  rescue StandardError => e
+    puts "Error #{e} for #{forge_module}"
+  end
 end
