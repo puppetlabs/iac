@@ -9,5 +9,5 @@ puppet_module: puppetlabs/dropsonde
 travis_com: false
 travis_org: false
 workflow: nightly
-category: Crossplatform
+category: Linux
 ---
