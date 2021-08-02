@@ -13,7 +13,7 @@ Hi all,
 
 This week wasn't too busy... but there are some key highlights to note...
 
-The week started off as normal when I had a sync up with Norman on Monday morning, followed on from that I worked on the feedback received from Michael regarding my new blog page 'Life of an Intern at Puppet'
+The week started off as normal when I had a sync up with Norman on Monday morning, followed on from that I worked on the feedback received from Michael regarding my new blog page 'Life of an Intern at Puppet'.
 Check out the link to the feedback received [here](https://github.com/puppetlabs/iac/pull/117)
 
 Once the feedback was fixed, I created a pull request for review and merge for Micheal's final sign off.

@@ -25,7 +25,7 @@ More details in these PRs:-
 
 Also, the wrong version was tagged, so was told by Paula to remove the tag so that re-tagging can be done again by her.
 
-After getting this release prep [PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487) merged, I worked on [mergeback PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/488) test failures by running the tests locally for debian-8,9 and 10. The tests passed successfully. Also, an uncategorized PR paragraph was removed from the CHANGELOG.md file. Click on the mergeback PR link for more details.
+After getting this release prep [PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/487) merged, I worked on [mergeback PR](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/488) test failures by running the tests locally for debian-8, 9 and 10. The tests passed successfully. Also, an uncategorized PR paragraph was removed from the CHANGELOG.md file. Click on the mergeback PR link for more details.
 
 The release prep PRs for the following modules were ready for review and the mergeback PRs were merged, more details below:-
 - [puppetlabs-exec](https://github.com/puppetlabs/puppetlabs-exec/pull/149)

@@ -30,7 +30,7 @@ The modules covered during the session were:-
   - [PDK update for GA workflow](https://github.com/puppetlabs/puppetlabs-kubernetes/pull/457)
   - [Delete i18n header](https://github.com/puppetlabs/iac/pull/153)
 
-- Thank you [Ciaran](https://github.com/sanfrancrisko) for giving me the opportunity to do my 1st module release on the [puppetlabs-chocolately](https://github.com/puppetlabs/puppetlabs-chocolatey) module (v5.2.0)                    Check the link to the [Puppet Forge](https://forge.puppet.com/modules/puppetlabs/chocolatey/5.2.0)
+- Thank you [Ciaran](https://github.com/sanfrancrisko) for giving me the opportunity to do my 1st module release on the [puppetlabs-chocolately](https://github.com/puppetlabs/puppetlabs-chocolatey) module (v5.2.0). Check the link to the [Puppet Forge](https://forge.puppet.com/modules/puppetlabs/chocolatey/5.2.0).
 
 Have a great weekend everyone!
 See you next week with more exciting updates!

@@ -24,14 +24,14 @@ The action points for the page 'Modules Team Triage Process' were updated in the
 - [IAC-1634](https://tickets.puppetlabs.com/browse/IAC-1634)
 
 - [IAC-1639](https://tickets.puppetlabs.com/browse/IAC-1639)
-When the above ticket IAC-1639 was under review, I got feedback from my mentor Paula and the new changes were made before closing the ticket.
+When this ticket was under review, I got feedback from my mentor Paula and the new changes were made before closing the ticket.
 
-I also added another page link called 'Show and Tell Schedule' within the New Start Guide under the section called 'Useful Reading Materials'
-Check the new comments in this [ticket](https://tickets.puppetlabs.com/browse/IAC-1626) This ticket will be reopened again in the future to add some more links in the 'Useful Reading Materials' section.
+I also added another page link called 'Show and Tell Schedule' within the New Start Guide under the section called 'Useful Reading Materials'.
+Check the new comments in this [ticket](https://tickets.puppetlabs.com/browse/IAC-1626). This ticket will be reopened again in the future to add some more links in the 'Useful Reading Materials' section.
 
 I have also raised a ticket with IT support to unarchive a page called 'un-approved process page' as my team didn't have sufficient permissions to do this action. The Google doc was also updated with the latest comments. The content of the [existing ticket](https://tickets.puppetlabs.com/browse/IAC-1644) was updated to reflect the new changes for example the title, acceptance criteria and description were updated. I will work on this ticket once the page is unarchived.
 
-I also worked on creating a new page in the IAC Confluence Wiki called 'IAC Community Day'
+I also worked on creating a new page in the IAC Confluence Wiki called 'IAC Community Day'.
 I enjoyed writing content for this page and this [ticket](https://tickets.puppetlabs.com/browse/IAC-1643) is currently under review so that the team can provide any feedback for further improvements.
 
 The another ticket which is currently under review:-

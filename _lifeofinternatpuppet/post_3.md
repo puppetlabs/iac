@@ -11,7 +11,7 @@ tags:
 
 I had a very busy and productive third week at [Puppet](https://puppet.com/).
 I started off my week 3 with the IDEA Working Group, where we discussed what to do with the upcoming events such as [Women Who Code](https://www.womenwhocode.com/), taking opinions of existing interns of how they applied to Puppet for their placement year and if there was anything that can be improved.
-On the same day, I started to work on [Learn Ruby The Hard Way](https://learnrubythehardway.org/book/)
+On the same day, I started to work on [Learn Ruby The Hard Way](https://learnrubythehardway.org/book/).
 During the week, I continued to work on this tutorial when I was free and so far made great progress. Later on in the week, I had some very interesting and enjoyable sessions of training.
 I had two sessions on [GitHub](https://github.com/) training which was a high-level introduction, covering things like:-
 
@@ -21,7 +21,7 @@ I had two sessions on [GitHub](https://github.com/) training which was a high-le
 -   Creating a branch
 -   Adding, Commit and Removing etc
 -   How to create good commits (tagging with JIRA IDs, atomic commits, etc)
--   Resolving conflicts (quick overview: working on a code repo with multiple collaborators / contributors)
+-   Resolving conflicts (quick overview: working on a code repo with multiple collaborators/contributors)
 -   Pushing branches
 
 **Part II:**

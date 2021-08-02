@@ -22,7 +22,7 @@ The 1:1 with Norman started off with the demo and session over-ran because there
 
 So I will say firstly that the demo was amazing, I really enjoyed the experience and got more knowledge from someone like Norman who had 20 years experience in mentoring :) Sorry Norman, I had to reveal this fact as I think anyone reading this post should be aware of this fact :)
 
-He also said that next time when I am using Litmus and running tests on a provisioned machine, I should select a difficult module/repository to clone down from GitHub, just to give muself a challenge and see if I can do the same process successfully!
+He also said that next time when I am using Litmus and running tests on a provisioned machine, I should select a difficult module/repository to clone down from GitHub, just to give myself a challenge and see if I can do the same process successfully!
 I will look into this later in the coming weeks so stay connected to find out more :)
 
 He also suggested that I should read up on the fundamentals of unix and bash commands via [LinkedIn Learning](https://www.linkedin.com/learning/) as it will really help me in my day-to-day work.
@@ -67,10 +67,10 @@ Based on the advice given by David Schmitt, I contacted Daniel and we got a sess
 
 A sync up session prior to the QUB Graduate Recruitment and Placement Fair was also done on Monday 5pm with Caoimhe and the rest of the team who volunteered to help at the virtual fair this year on Thursday 22nd October 2020. I am really excited and looking forward to the fair on Thursday!
 
-On Wednesday after the sync up with Ciaran, regarding the diffculty to understand the process told my Paula on Tuesday 20th October 2020, I had a 1:1 session with Caoimhe, some of the topics we covered were - navigating confluence, spread the word for more guest speakers for the EEECS Student Sustainability Team running a range of different event series. The show and tell session this week was really interesting as we had a talk around what could be a possible naming conventions standard for github branches should the team follow from now on?
+On Wednesday after the sync up with Ciaran, regarding the diffculty to understand the process told by Paula on Tuesday 20th October 2020, I had a 1:1 session with Caoimhe, some of the topics we covered were - navigating confluence, spread the word for more guest speakers for the EEECS Student Sustainability Team running a range of different event series. The show and tell session this week was really interesting as we had a talk around what could be a possible naming conventions standard for github branches should the team follow from now on?
 Paula is working on this topic and we will be going back to this discussion in two to three weeks time to make a final decision on this topic. Stay tuned to know more :)
 
-Caoimhe told me to contact Laura Raney so that she can add me to the Puppet Insider Group and send her content that I would like to added in this month's newsletter.
+Caoimhe told me to contact Laura Raney so that she can add me to the Puppet Insider Group and send her content that I would like to get added in this month's newsletter.
 As told, I contacted Laura via a direct message on Slack and sent her some of the information that I would like to be added in this month's Puppet Insider.
 Keep an eye out for the upcoming events, and if interested please contact us today!
 
