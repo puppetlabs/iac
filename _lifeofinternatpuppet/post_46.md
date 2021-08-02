@@ -11,7 +11,7 @@ tags:
 
 Not a lot to say this week!
 
-- I continued to work on my linked in learning tutorials which I had saved in order to prep for my final year. Check out my [linked in profile](https://www.linkedin.com/in/disha-kareer/) to see what courses I have been working on.
+- I continued to work on my linked in learning tutorials which I had saved in order to prep for my final year. Check out my [linkedin profile](https://www.linkedin.com/in/disha-kareer/) to see what courses I have been working on.
 
 - I informed my manager when I will be returning equipment.
 
