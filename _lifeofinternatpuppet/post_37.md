@@ -15,7 +15,7 @@ I am back from PTO!!! I had a great time off :)
 
 The key highlights from this week included:-
 - Thanks to Paula for merging this PR on [updating content of blog posts](https://github.com/puppetlabs/iac/pull/255)
-- Working on my placement report for university deadline on Monday, glad to have it ready for submission. A special thanks to Paula and Norman for your their useful feedback!
+- Working on my placement report for university deadline on Monday, glad to have it ready for submission. A special thanks to Paula and Norman for their useful feedback!
 - I had a follow up meeting scheduled on Wednesday afternoon with Norman on reviewing the documentation for the IAC Confluence Wiki Revamp Project, thank you Norman for all the useful tips!
 - I updated the content for the following blog posts so that I can add updated screenshots when giving evidence for my university placement report.
     - [20/11/2020_Team_Status_Update](https://github.com/puppetlabs/iac/pull/259)

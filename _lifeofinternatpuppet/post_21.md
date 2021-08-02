@@ -25,6 +25,6 @@ Some of the key highlights from this week included:-
     - [Git Essential Training: The Basics](https://www.linkedin.com/learning/git-essential-training-the-basics/the-head-pointer?u=2098212)
     - [Learning Github](https://www.linkedin.com/learning/learning-github/version-control-and-collaboration-with-github?u=2098212)
     - [Github Essential Training](https://www.linkedin.com/learning/github-essential-training/introduction-to-a-widely-used-workflow?u=2098212)
-    -[Programming Foundations: Version Control with Git](https://www.linkedin.com/learning/programming-foundations-version-control-with-git/next-steps?u=2098212)
+    - [Programming Foundations: Version Control with Git](https://www.linkedin.com/learning/programming-foundations-version-control-with-git/next-steps?u=2098212)
 
 That's all for this week!

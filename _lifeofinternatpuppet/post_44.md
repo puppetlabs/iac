@@ -28,7 +28,7 @@ In the last few weeks of my internship, I will do the following tasks:-
 
 That's everything for this week!
 
-Only 1 or 2 more blog posts to go before I finish on the 12th August to use up my pending holidays :)
+Only 2 or 3 more blog posts to go before I finish on the 12th August to use up my pending holidays :)
 
 Have a nice weekend everyone!
 

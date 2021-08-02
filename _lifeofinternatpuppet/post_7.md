@@ -21,7 +21,7 @@ So without wasting time, let's dig into the work I had done this week and also l
 
 The week 7 started off with one to one with Norman on seeing how I got in the previous week 6 work. We have now started to use Lattice to set up agenda, action points for our 1:1s for every Monday :)
 
-Check out lattice [here](https://lattice.com/)
+Check out lattice [here](https://lattice.com/).
 A very good people management platform for companies 1:1 meetings.
 
 I was told by Norman in the 1:1 sync up session that I will have to give a litmus demo next week.
@@ -33,7 +33,7 @@ Use this [link](https://www.tutorialspoint.com/unix_commands/script.htm) to find
 
 I was also told to start organising my 1:1 meetings with mentors and other team members to continue training as well as ask questions to mentors about anything.
 During the 1:1 meeting with Norman on Monday 12th October 2020, I shared my September's monthly log and got that approved from him by using the Doc Sign App which was set up during the 1:1 session with him.
-A quick session with Ciaran was done to get the pry set up done when practicing how to provision a machine and running tests for the litmus demo taking place next Momnday 19th October 2020.
+A quick session with Ciaran was done to get the pry set up done when practicing how to provision a machine and running tests for the litmus demo taking place next Monday 19th October 2020.
 
 During the practice I noticed that some machines were failing to provision due to the incorrect token specified in the .fog file - this was why the token was failing to provision a machine with the abs. This issue was resolved with the help from Sheena and Ciaran, so many thanks to both of them for giving me their precious time.
 
@@ -54,24 +54,31 @@ Part 1:
 8. install module using bundle exec rake 'litmus:install_module'
 9. run tests using bundle exec rake 'litmus:acceptance:parallel'
 10. tear down using bundle exec rake litmus:tear_down
+<br></br>
+
 Part 2:
 1. Choose one vm and provision only that vm
 2. install agent using bundle exec rake 'litmus:install_agent
 3. install module using bundle exec rake 'litmus:install_module'
 4. run tests using bundle exec rake 'litmus:acceptance:parallel'
 5. tear down using bundle exec rake litmus:tear_down
+<br></br>
+
 Part 3:
 1. Use target host to run a specific test
+<br></br>
+
 Part 4: on the same PR from previous points
 1. provision with release checks 5 using bundle exec rake 'litmus:provision_list[release_checks_5]'
 2. install puppet 5 agent using bundle exec rake 'litmus:install_agent[puppet5]'
 3. install module using this command:- bundle exec rake 'litmus:install_module'
 4. run tests using bundle exec rake 'litmus:acceptance:parallel'
 5. tear down using bundle exec rake litmus:tear_down
+<br></br>
 
-She also suggested to keep a word document on all the necessary commands used on a day-to-day basis when doing work, She felt having that document really reduces the stress to search for commands within the MAC OS terminal when working on a ticket/issue. I still have to put together a document which will include all the necessary... stay tuned for it!
+She also suggested to keep a word document on all the necessary commands used on a day-to-day basis when doing work, She felt having that document really reduces the stress to search for commands within the MAC OS terminal when working on a ticket/issue. I still have to put together a document which will include all the necessary commands... stay tuned for it!
 
-On the same day I did a sync up session with Ciaran where we set up an agenda for the demo, the pry testing environment was done, a link to the litmus testing tool was given to help with the steps of how to do the provisioning of a machine with litmus and to run acceptance tests on the provisioned machine. He also suggested to create a video on litmus demo and share it on the YouTube Demos page, but this didn't happened during the litmus demo because when I asked Norman, he was like the demo on Litmus is quite informal, you don't really need to prepare anything very formal such as a presentation or a video. It is all about testing your understanding on Litmus, what it is, how does it work and how you can run acceptamce tests using this tool for a provisioned machine.
+On the same day I did a sync up session with Ciaran where we set up an agenda for the demo, the pry testing environment was done, a link to the litmus testing tool was given to help with the steps of how to do the provisioning of a machine with litmus and to run acceptance tests on the provisioned machine. He also suggested to create a video on litmus demo and share it on the YouTube Demos page, but this didn't happened during the litmus demo because when I asked Norman, he was like the demo on Litmus is quite informal, you don't really need to prepare anything very formal such as a presentation or a video. It is all about testing your understanding on Litmus, what it is, how does it work and how you can run acceptance tests using this tool for a provisioned machine.
 
 A link to the Puppet's PowerPoint Presentation was also sent by Daniel and David Swan but it wasn't used for creating a presentation on Litmus demo as the demo itself was quite informal, as said by Norman previously.
 
@@ -79,7 +86,7 @@ Now you must be thinking how did I found the litmus demo myself, well the answer
 
 There be more information hopefully shared by Norman on the script command in the coming weeks, so keep your eye out for useful links etc!
 
-On Wednesday 14th October 2020, I continued to work on the to do list given by Daina on Tuesday within the slack channel, I really enjoyed doing as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
+On Wednesday 14th October 2020, I continued to work on the to do list given by Daina on Tuesday within the slack channel, I really enjoyed doing it as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
 
 Later on that morning, I also attended the EMEA Food/Chat Session where the following topics were covered by the team :-
 
@@ -104,9 +111,9 @@ I shared the training and show and tell session recordings on the shared Google 
 
 During the second part of releasing a module with Daiana, I become familiar with some new git commands like 'git branch -a', 'git diff' and 'git log' to name a few!
 
-I attended the stand-up session at 2pm that day as normal. This was where Norman strongly suggested that I should step back from the training and get real work done by looking at the Community PR's. Next month, I could be possible that I will be giving another demo to Norman on the Community Management Tool, so look out for the details in the upcoming blog updates!!
+I attended the stand-up session at 2pm that day as normal. This was where Norman strongly suggested that I should step back from the training and get real work done by looking at the Community PR's. Next month, It could be possible that I will be giving another demo to Norman on the Community Management Tool, so look out for the details in the upcoming blog updates!!
 
-Once the standup was done, I did a sync up with Paula and Daiana on the Litmus demo, this was a very useful session prior to Monday 19th October 2020, as I was given the oppotunity to show my mentors what I know and don't know, Paula and Daina were a great help as always, so thank you very much, it made me quite confident for the upcoming demo on Monday.
+Once the standup was done, I did a sync up with Paula and Daiana on the Litmus demo, this was a very useful session prior to Monday 19th October 2020, as I was given the opportunity to show my mentors what I know and don't know, Paula and Daiana were a great help as always, so thank you very much, it made me quite confident for the upcoming demo on Monday.
 
 I also attended the Big Picture Session and contacted Beth Glenfield about Events on the EEECS Student Sustainability Team Projects, the purpose of contacting her was to see if she would be interested to do a session on Gender and Equality, she volunteered to do it.
 

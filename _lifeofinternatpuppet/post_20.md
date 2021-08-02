@@ -15,7 +15,7 @@ Not a lot to say for this week...
 
 - I worked with Sheena on puppetlabs-satellite_pe_tools failures and a JIRA ticket was raised on integration test failures as a sub-ticket.
 
-- I continued to work on my first community ticket - Exclude Drafts from Module Report
+- I continued to work on my first community ticket - Exclude Drafts from Module Report.
 
 - Started to revisit some of the departmental training videos on Github.
 

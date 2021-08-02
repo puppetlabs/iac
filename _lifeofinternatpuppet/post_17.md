@@ -17,7 +17,7 @@ I don't have a lot to say for this week, but some of the key highlights included
 - I also completed my first backlog [ticket](https://github.com/puppetlabs/iac/pull/165) on putting the blog posts hyperlinks in an ascending order on the homepage of Life of an Intern Blog.
 - I created a ticket and did a release prep for the [puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql) (v10.9.1)
 
-I will be working on Community Reporting PRs from next week once I have understood the problem definition in detail.Thank you Daiana for our sessions!
+I will be working on Community Reporting PRs from next week once I have understood the problem definition in detail. Thank you Daiana for our sessions!
 
 Thank you to Paula for giving me so many useful pointers during our 1:1 sessions this week!
 

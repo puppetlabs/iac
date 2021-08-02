@@ -11,7 +11,7 @@ tags:
 
 Hi all,
 
-- I continued to work on the writing my SMART Objectives and Linked In Learning Training Videos
+- I continued to work on the writing my SMART Objectives and Linked In Learning Training Videos.
 The training videos for this week were :-
   - [Git: Branches, Merges and Remotes](https://www.linkedin.com/learning/git-branches-merges-and-remotes/unlock-powerful-code-management-and-collaboration-tools-in-git?u=2098212)
   - [Git Intermediate Techniques](https://www.linkedin.com/learning/git-intermediate-techniques/delete-local-and-remote-branches?u=2098212)
@@ -34,7 +34,7 @@ The following modules were released during the week:-
 
 I used the wrong SHA in the JIRA ticket when doing the puppetlabs-firewall module release. I was informed of my mistake and the correct SHA was added in the ticket by the team.
 
-- I decided to work on the puppetlabs-inifile module release but that didn't took place as the module didn't had any new features or bug fixes after its last release. I picked a different module [puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql) and started to prepare for its release I added a feature label to this [PR](https://github.com/puppetlabs/puppetlabs-mysql/pull/1360) before doing the release for the puppetlabs-mysql module.
+- I decided to work on the puppetlabs-inifile module release but that didn't took place as the module didn't had any new features or bug fixes after its last release. I picked a different module [puppetlabs-mysql](https://github.com/puppetlabs/puppetlabs-mysql) and started to prepare for its release. I added a feature label to this [PR](https://github.com/puppetlabs/puppetlabs-mysql/pull/1360) before doing the release for the puppetlabs-mysql module.
 
 - I also learnt how to decide when the module is ready for its next release. Thanks for the information Paula!
 

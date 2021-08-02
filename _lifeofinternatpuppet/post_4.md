@@ -15,7 +15,7 @@ Well, this week was extremely very busy with lots going on!
 
 So let's get started!
 
-The week started off my having a sync-up meeting with Norman where he was finding out about how my previous week was, as he was on holidays. In addition to this, he also informed me that in the coming weeks, I will have to deliver a presentation around Week 5 or Week 6. Stay tuned for this :)
+The week started off by having a sync-up meeting with Norman where he was finding out about how my previous week was, as he was on holidays. In addition to this, he also informed me that in the coming weeks, I will have to deliver a presentation around Week 5 or Week 6. Stay tuned for this :)
 
 We also decided how we are going to set up the system for verifying monthly logs for my university placement year report. Lastly, Norman was telling me to have a dedicated page called 'Life of an Intern at Puppet' as he thinks that this will really help the new interns joining the company next year and most importantly he enjoyed reading sections of my weekly updates each week.
 
@@ -28,7 +28,7 @@ I also had my first triage session with Daiana where she was giving me a demo of
 
 After finishing the session with Daiana, I had a session with [Paula](https://github.com/pmcmaw) on how to release a module, this week it was the [puppetlabs-accounts module](https://github.com/pmcmaw/puppetlabs-accounts) which was released. Many thanks to Paula on such an interactive and informative session!
 
-The weekly stand-ups for this week took place on Monday, Tuesday and Thursday as usual:)
+The weekly stand-ups for this week took place on Monday, Tuesday and Thursday as usual :)
 I informed my team during these sessions of what I was doing each day and how much progress have be made in the training sessions etc.
 
 I continued my [PDK Sync and Gem Testing Training Session Part 2](https://puppetlabs.github.io/iac/pdksync/testing/2020/02/12/gem-testing-with-pdksync.html) with [Sheena](https://github.com/sheenaajay).
@@ -45,7 +45,7 @@ In my free time during work, I started to compile the introduction for my new bl
 
 Was it a busy start to the week? Well... there is more to come!
 
-On Tuesday, I had a quick sync up with Norman where I told him about the university project I will be a part of called [Sustainability Technology](https://www.facebook.com/eeecsSST)
+On Tuesday, I had a quick sync up with Norman where I told him about the university project I will be a part of called [Sustainability Technology](https://www.facebook.com/eeecsSST).
 Check out the Facebook page or contact me directly for more information about the project!
 
 I met Ciaran and Daiana with regards to doing the setup for the new blog page 'Life of an Intern at Puppet'
@@ -55,7 +55,7 @@ This is not yet finished and I plan to finish it off by early next week hopefull
 
 I also meet Ciaran and Daiana on Wednesday morning to continue the debugging session on [Ruby Exercise 48](https://learnrubythehardway.org/book/ex48.html)
 
-I also continued the Ruby Tutorials by installing Sinatra for Exercise 50 where I will be developing 'My First Website'(https://learnrubythehardway.org/book/ex50.html)
+I also continued the Ruby Tutorials by installing Sinatra for Exercise 50 where I will be developing ['My First Website'](https://learnrubythehardway.org/book/ex50.html)
 
 If you have any suggestions on this project, please feel free to contact me :)
 
@@ -94,8 +94,7 @@ The links I used for independent learning and for debugging the functionality of
 
 Thank you to Daniel for helping me add the hyperlinks to the individual blog posts under the introduction page of the new blog 'Life of an Intern at Puppet' and modified the puppetlabs/iac application by adding a new document Life of an Intern at Puppet in the docs folder that will pick up all the future blog posts related to this document from the root directory.
 
-Finally, on Thursday I had a last meeting later in the afternoon with Claire Cadman, the technical writer working for Puppet in the London Office. It was lovely to meet you too Claire and I hope to meet you in Belfast office
-some time during this year!
+Finally, on Thursday I had a last meeting later in the afternoon with Claire Cadman, the technical writer working for Puppet in the London Office. It was lovely to meet you too Claire and I hope to meet you in Belfast office some time during this year!
 
 Yayyyyy..... it's Friday..... Friday was pretty relaxing!
 I started off my day by working on my new blog page where I wrote an update on Week 4, attended the Friday Wrap Up session on Zoom, had a meeting with Ciaran on running my blog page live and see how it looks!

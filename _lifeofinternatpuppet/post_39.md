@@ -20,8 +20,6 @@ Last week I submitted these two tickets for review and had a follow up meeting w
 
 After the meeting, I made the neccessary changes to the Google Document and the proposed new design of the IAC home page. I reached out to [Michael](https://github.com/michaeltlombardi) and [Ciaran](https://github.com/sanfrancrisko) regarding making some decisions on DSC Builder Revamp Project Scaffold and PDK resources.
 
-I also had a sync up with Paula on Thursday morning and a few more decisions were made on the existing confluence pages. The action points/comments in the Google Doc were fixed.
-
 - [Ticket 3](https://tickets.puppetlabs.com/browse/IAC-1586)
 I closed my first ticket on 'Updating User Stories Section in the Google Doc' on this project this week! Delighted to have it done!
 

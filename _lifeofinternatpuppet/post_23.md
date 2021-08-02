@@ -25,7 +25,7 @@ Hi everyone, Another busy week is over!
     [puppetlabs-vcsrepo](https://github.com/puppetlabs/puppetlabs-vcsrepo/pull/493) (v3.2.1)
     [puppetlabs-apache](https://github.com/puppetlabs/puppetlabs-apache/pull/2126) (v5.10.0)
     [puppetlabs-wsus_client](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/151) (v3.2.0)
-       The first release prep [PR](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/149) was closed. This was because the tests were failing on AppVeyor due to 'legacy parameter error that adapts Pester 5 to Pester 4 syntax'
+       The first release prep [PR](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/149) was closed. This was because the tests were failing on AppVeyor due to 'legacy parameter error that adapts Pester 5 to Pester 4 syntax'.
   - A new pr was created, check [here](https://github.com/puppetlabs/puppetlabs-wsus_client/pull/150) to fix the error and the release prep was done again. Check the #151 PR for more details!
 
 **Module Releases**
