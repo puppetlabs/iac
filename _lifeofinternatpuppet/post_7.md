@@ -86,7 +86,7 @@ Now you must be thinking how did I found the litmus demo myself, well the answer
 
 There be more information hopefully shared by Norman on the script command in the coming weeks, so keep your eye out for useful links etc!
 
-On Wednesday 14th October 2020, I continued to work on the to do list given by Daina on Tuesday within the slack channel, I really enjoyed doing it as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
+On Wednesday 14th October 2020, I continued to work on the to do list given by Daiana on Tuesday within the slack channel, I really enjoyed doing it as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
 
 Later on that morning, I also attended the EMEA Food/Chat Session where the following topics were covered by the team :-
 
