@@ -54,7 +54,7 @@ Part 1:
 8. install module using bundle exec rake 'litmus:install_module'
 9. run tests using bundle exec rake 'litmus:acceptance:parallel'
 10. tear down using bundle exec rake litmus:tear_down
-<br></br>
+
 
 Part 2:
 1. Choose one vm and provision only that vm
@@ -62,11 +62,11 @@ Part 2:
 3. install module using bundle exec rake 'litmus:install_module'
 4. run tests using bundle exec rake 'litmus:acceptance:parallel'
 5. tear down using bundle exec rake litmus:tear_down
-<br></br>
+
 
 Part 3:
 1. Use target host to run a specific test
-<br></br>
+
 
 Part 4: on the same PR from previous points
 1. provision with release checks 5 using bundle exec rake 'litmus:provision_list[release_checks_5]'
@@ -74,7 +74,7 @@ Part 4: on the same PR from previous points
 3. install module using this command:- bundle exec rake 'litmus:install_module'
 4. run tests using bundle exec rake 'litmus:acceptance:parallel'
 5. tear down using bundle exec rake litmus:tear_down
-<br></br>
+
 
 She also suggested to keep a word document on all the necessary commands used on a day-to-day basis when doing work, She felt having that document really reduces the stress to search for commands within the MAC OS terminal when working on a ticket/issue. I still have to put together a document which will include all the necessary commands... stay tuned for it!
 
@@ -86,7 +86,7 @@ Now you must be thinking how did I found the litmus demo myself, well the answer
 
 There be more information hopefully shared by Norman on the script command in the coming weeks, so keep your eye out for useful links etc!
 
-On Wednesday 14th October 2020, I continued to work on the to do list given by Daina on Tuesday within the slack channel, I really enjoyed doing it as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
+On Wednesday 14th October 2020, I continued to work on the to do list given by Daiana on Tuesday within the slack channel, I really enjoyed doing it as it helped me debug errors by myself so thank you to Daiana for always helping me out when needed!
 
 Later on that morning, I also attended the EMEA Food/Chat Session where the following topics were covered by the team :-
 
