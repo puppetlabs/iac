@@ -22,7 +22,7 @@ I also found some useful resources and saved them for my final year projects.
 - [Using CSS Counters](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Lists_and_Counters/Using_CSS_counters)
 - [CSS Essential Training](https://www.linkedin.com/learning/css-essential-training-3?u=2098212)
 
-I also went to the office for the first time as an intern on Thursday 29th August 2021 ever since joining Puppet for my internship in September 2020.
+I also went to the office for the first time as an intern on Thursday 29th July 2021 ever since joining Puppet for my internship in September 2020.
 It was great to see everyone in person!
 
 I was also given some useful tips by my manager on how to become a better developer when we went out for a coffee.
