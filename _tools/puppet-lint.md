@@ -1,7 +1,7 @@
 ---
 layout: tool
 title: puppet-lint
-github: rodjek/puppet-lint
+github: puppetlabs/puppet-lint
 description: "Check that your Puppet manifests conform to the style guide."
 appveyor: true
 codecov_token: false
