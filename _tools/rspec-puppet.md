@@ -1,7 +1,7 @@
 ---
 layout: tool
 title: rspec-puppet
-github: rodjek/rspec-puppet
+github: puppetlabs/rspec-puppet
 description: "RSpec tests for your Puppet manifests."
 appveyor: true
 codecov_token: false
