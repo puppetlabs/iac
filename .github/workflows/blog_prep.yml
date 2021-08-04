@@ -2,7 +2,7 @@ name: Blog Prep
 
 on:
   schedule:
-    - cron: '0 12 * * 4' 
+    - cron: '0 6 * * mon' 
   workflow_dispatch:
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
      - name: Get next blog date
        id: dt
        run: |
-         echo "::set-output name=date::$(date -d 'Fri' --iso-8601)"
+         echo "::set-output name=date::$(date -d 'Mon' --iso-8601)"
 
      - name: Commit changes
        run: |

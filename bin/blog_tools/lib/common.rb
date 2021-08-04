@@ -10,15 +10,15 @@ MANAGED_TOOLS_URI = URI.parse('https://puppetlabs.github.io/iac/tools.json')
 def last_blog_post_utc_time
   return @last_blog_post_utc_time if defined?(@last_blog_post_utc_time)
 
-  dates = Dir['../../_posts/*status-update.md'].map{|f| f.match(/(?<DATE>\d+-\d+-\d+)-status-update\.md/)['DATE'] } - [ date_of_next_friday ]
+  dates = Dir['../../_posts/*status-update.md'].map{|f| f.match(/(?<DATE>\d+-\d+-\d+)-status-update\.md/)['DATE'] } - [ date_of_next_monday ]
 
   last_blog_post_date = Date.parse(dates.max)
   puts "Last blog date: #{last_blog_post_date.iso8601}"
   @last_blog_post_utc_time = last_blog_post_date.strftime('%s').to_i
 end
 
-def date_of_next_friday
-  date  = Date.parse('Friday')
+def date_of_next_monday
+  date  = Date.parse('Monday')
   delta = date >= Date.today ? 0 : 7
   (date + delta).iso8601
 end
