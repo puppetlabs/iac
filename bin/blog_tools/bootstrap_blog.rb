@@ -6,7 +6,7 @@ require 'erb'
 require_relative 'lib/modules_released'
 require_relative 'lib/community_prs'
 
-blog_post_date = date_of_next_friday
+blog_post_date = date_of_next_monday
 blog_post_filename = "#{blog_post_date}-status-update.md"
 
 workflow = ERB.new(File.read('blog_template/status-update-template.md.erb'), nil, '-').result(binding)
