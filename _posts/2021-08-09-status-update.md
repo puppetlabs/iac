@@ -6,6 +6,9 @@ categories:
   - team
   - status
 tags:
+  - pdk
+  - vscode
+  - james
 ---
 
 ## Community Contributions
