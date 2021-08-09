@@ -76,7 +76,9 @@ No doubt, many of you will be aware of the huge amount of contributions [James][
 We'd like to thank [James][James] for his contributions, support and leadership and wish him the very best of luck in the next chapter of his career!
 ## Other Work
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+We have forked `github-changelog-generator` to  `puppetlabs` namespace .
+
+This will give more control on adding features and bug fixes which will help us with the supported module release process in the future.
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
