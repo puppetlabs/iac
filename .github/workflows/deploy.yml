@@ -15,14 +15,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Cache gems
-        uses: actions/cache@v1
-        with:
-          path: vendor/gems
-          key: ${{ runner.os }}-build-${{ hashFiles('**/Gemfile.lock') }}
-          restore-keys: |
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+      # - name: Cache gems
+      #   uses: actions/cache@v1
+      #   with:
+      #     path: vendor/gems
+      #     key: ${{ runner.os }}-build-${{ hashFiles('**/Gemfile.lock') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-build-
+      #       ${{ runner.os }}-
 
       - name: Build & Deploy to GitHub Pages
         uses: DavidS/jekyll-deploy@1.1.1
