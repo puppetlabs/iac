@@ -6,6 +6,8 @@ categories:
   - team
   - status
 tags:
+  - pct
+  - debian11
 ---
 
 ## Community Contributions
@@ -53,12 +55,19 @@ The following modules were released this week:
 
 ## DevX Updates
 
-We released [verion `0.3.0` of the PCT tool](https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0) last Friday.
+We released [version `0.3.0` of the PCT tool](https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0) last Friday.
 This introduces the ability to package up and [share content templates](https://github.com/puppetlabs/pdkgo#sharing-templates).
 
 Instructions on how to install the PCT tool can be [found here](https://github.com/puppetlabs/pdkgo#installing).
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+## Community Day
+
+As no summer can end without a holiday, some of our our team members are on a short PTO .
+Next Monday is a bank holiday in EMEA, therefore community day will be quieter.
+
+## Debian 11 Support
+
+We added support for Debian 11 across all our supported modules and started releasing the modules with Debian 11 support.
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
