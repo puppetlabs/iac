@@ -31,6 +31,9 @@ The following modules were released this week:
 
 - [`puppetlabs-accounts`][puppetlabs-accounts] (`7.1.0`)
 - [`puppetlabs-package`][puppetlabs-package] (`2.1.0`)
+- [`puppetlabs-reboot`][puppetlabs-reboot] (`4.1.0`)
+- [`puppetlabs-haproxy`][puppetlabs-haproxy] (`6.2.0`)
+- [`puppetlabs-concat`][puppetlabs-concat] (`7.1.0`)
 
   [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
   [puppetlabs-package]: https://github.com/puppetlabs/puppetlabs-package
