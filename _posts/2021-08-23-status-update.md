@@ -37,6 +37,9 @@ The following modules were released this week:
 
   [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
   [puppetlabs-package]: https://github.com/puppetlabs/puppetlabs-package
+  [puppetlabs-reboot]: https://github.com/puppetlabs/puppetlabs-reboot
+  [puppetlabs-haproxy]: https://github.com/puppetlabs/puppetlabs-haproxy
+  [puppetlabs-concat]: https://github.com/puppetlabs/puppetlabs-concat
   [puppetlabs-postgresql-pr-1291]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291
   [ekohl]: https://github.com/ekohl
   [smortex]: https://github.com/smortex
