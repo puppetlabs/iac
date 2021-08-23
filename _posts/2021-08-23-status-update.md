@@ -31,7 +31,7 @@ The following modules were released this week:
 - [`puppetlabs-package`][puppetlabs-package] (`2.1.0`)
 
   [puppetlabs-accounts]: https://github.com/puppetlabs/puppetlabs-accounts
-  [puppetlabs-package]: 
+  [puppetlabs-package]: https://github.com/puppetlabs/puppetlabs-package
   [puppetlabs-postgresql-pr-1291]: https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291
   [ekohl]: https://github.com/ekohl
   [smortex]: https://github.com/smortex
@@ -51,7 +51,12 @@ The following modules were released this week:
   [puppet_litmus-pr-425]: https://github.com/puppetlabs/puppet_litmus/pull/425
   [ZloeSabo]: https://github.com/ZloeSabo
 
-## Other Work
+## DevX Updates
+
+We released [verion `0.3.0` of the PCT tool](https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0) last Friday.
+This introduces the ability to package up and [share content templates](https://github.com/puppetlabs/pdkgo#sharing-templates).
+
+Instructions on how to install the PCT tool can be [found here](https://github.com/puppetlabs/pdkgo#installing).
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
