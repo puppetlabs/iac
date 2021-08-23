@@ -1,4 +1,50 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-08-23T15:48:06+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-08-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html" rel="alternate" type="text/html" title="2021-08-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-16T00:00:00+00:00</published><updated>2021-08-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-08-23T21:00:27+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-08-23: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html" rel="alternate" type="text/html" title="2021-08-23: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-23T00:00:00+00:00</published><updated>2021-08-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+
+&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1291&lt;/code&gt;&lt;/a&gt;: “[IAC-1735] Fix test suite”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;, &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot/pull/305&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot#305&lt;/code&gt;&lt;/a&gt;: “(MODULES-11149) Modify result of ‘last’ to remove current time”, thanks to &lt;a href=&quot;https://github.com/nmburgan&quot;&gt;nmburgan&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/185&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#185&lt;/code&gt;&lt;/a&gt;: “Add Debian 11 facts”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/184&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#184&lt;/code&gt;&lt;/a&gt;: “Add more FreeBSD facts”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/183&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#183&lt;/code&gt;&lt;/a&gt;: “Add Oracle Linux 8 facts”, thanks to &lt;a href=&quot;https://github.com/as0bu&quot;&gt;as0bu&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/181&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#181&lt;/code&gt;&lt;/a&gt;: “Adding puppet7 facter4.2 facts for centos7/8 and debian9/10”, thanks to &lt;a href=&quot;https://github.com/jacobmw&quot;&gt;jacobmw&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/176&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#176&lt;/code&gt;&lt;/a&gt;: “Adds Rocky Linux vagrant image, facts and get_facts.sh support”, thanks to &lt;a href=&quot;https://github.com/fuero&quot;&gt;fuero&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;, &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/425&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#425&lt;/code&gt;&lt;/a&gt;: “Added options to idempotent_apply”, thanks to &lt;a href=&quot;https://github.com/ZloeSabo&quot;&gt;ZloeSabo&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+
+&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+
+&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.2.0&lt;/code&gt;)&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/p&gt;
+
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;devx-updates&quot;&gt;DevX Updates&lt;/h2&gt;
+
+&lt;p&gt;We released &lt;a href=&quot;https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0&quot;&gt;version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.3.0&lt;/code&gt; of the PCT tool&lt;/a&gt; last Friday.
+This introduces the ability to package up and &lt;a href=&quot;https://github.com/puppetlabs/pdkgo#sharing-templates&quot;&gt;share content templates&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Instructions on how to install the PCT tool can be &lt;a href=&quot;https://github.com/puppetlabs/pdkgo#installing&quot;&gt;found here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
+
+&lt;p&gt;As no summer can end without a holiday, some of our our team members are on a short PTO .
+Next Monday is a bank holiday in EMEA, therefore community day will be quieter.&lt;/p&gt;
+
+&lt;h2 id=&quot;debian-11-support&quot;&gt;Debian 11 Support&lt;/h2&gt;
+
+&lt;p&gt;We added support for Debian 11 across all our supported modules and started releasing the modules with Debian 11 support.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="pct" /><category term="debian11" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-08-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html" rel="alternate" type="text/html" title="2021-08-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-16T00:00:00+00:00</published><updated>2021-08-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 
 &lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
 
@@ -435,37 +481,4 @@ This will allow us to catch any potential compatibility problems earlier with Fa
 
 &lt;p&gt;This user can customize how PCTs operate by using YAML files and never need to know how to make a template.&lt;/p&gt;
 
-&lt;p&gt;If you want a more drastic change, you can copy the &lt;strong&gt;PCT&lt;/strong&gt; and add your own files and changes, then use that &lt;strong&gt;PCT&lt;/strong&gt; without having to get a pull request approved.&lt;/p&gt;</content><author><name>jpogran</name></author><category term="pdk" /><category term="development" /><category term="pdk" /><category term="pct" /><summary type="html">✨ PDK Puppet Content Templates 0.1.0 released ✨</summary></entry><entry><title type="html">2021-06-04: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/06/04/status-update.html" rel="alternate" type="text/html" title="2021-06-04: IAC &amp;amp; DevX Team Status Update" /><published>2021-06-04T00:00:00+00:00</published><updated>2021-06-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/06/04/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/06/04/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/370&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#370&lt;/code&gt;&lt;/a&gt;: “(MODULES-11067) Fix keytool output parsing”, thanks to &lt;a href=&quot;https://github.com/durist&quot;&gt;durist&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/519&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#519&lt;/code&gt;&lt;/a&gt;: “Allow configuring of waiting times during sa creation”, thanks to &lt;a href=&quot;https://github.com/ZloeSabo&quot;&gt;ZloeSabo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-strings/pull/276&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-strings#276&lt;/code&gt;&lt;/a&gt;: “README.md: update link to docs”, thanks to &lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-vcsrepo&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-vcsrepo&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.0.0&lt;/code&gt;) - this is a re-release of the 4.0.1 code unchanged to signify that this version contains a breaking change. Apologies for the confusion.&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;cloud-ci-update&quot;&gt;Cloud CI Update&lt;/h3&gt;
-&lt;p&gt;The work on our P.o.C for developer box provisioning is making progress. We have managed to reduce a couple vulnerabilities with the help of the security team and we have started work on the configuration improvements needed to limit developer box provisioning.&lt;/p&gt;
-
-&lt;h3 id=&quot;pct-010-experimental-release&quot;&gt;PCT 0.1.0 Experimental Release&lt;/h3&gt;
-&lt;p&gt;The DevX team are pleased to announce the availability of our new prototype for Puppet Content Templates (PCT)!
-Version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.1.0&lt;/code&gt; is a pre-release and still very much experimental, however, we’d love to hear feedback on how the new experience is in creating Puppet content.
-Check out &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James’s&lt;/a&gt; &lt;a href=&quot;/iac/pdk/development/2021/06/04/pct-early-release.html&quot;&gt;blog post&lt;/a&gt; for all the details, including how to download and install it and provide feedback.&lt;/p&gt;
-
-&lt;h3 id=&quot;trusted-contributors-is-now-live&quot;&gt;Trusted Contributors is now live!&lt;/h3&gt;
-&lt;p&gt;Not to brag too much, we have some pretty good Puppet developers within our team. But maintaining high quality modules is more than just knowing how to write code to manage the right configuration files. Often knowing the idiomatic usage patterns is even more important.
-The domain experts are those who use our modules and the technology stacks those modules manage. They know what kind of functionality the module might need, or why it should work one way and not the other. The new &lt;a href=&quot;https://puppet.com/ecosystem/trusted-contributors/&quot;&gt;Trusted Contributors&lt;/a&gt; program empowers these experts to help make a difference with partial ownership and the ability to participate in roadmap direction. Read more about it and apply &lt;a href=&quot;https://puppet.com/ecosystem/trusted-contributors/&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><summary type="html">Community Contributions</summary></entry></feed>
+&lt;p&gt;If you want a more drastic change, you can copy the &lt;strong&gt;PCT&lt;/strong&gt; and add your own files and changes, then use that &lt;strong&gt;PCT&lt;/strong&gt; without having to get a pull request approved.&lt;/p&gt;</content><author><name>jpogran</name></author><category term="pdk" /><category term="development" /><category term="pdk" /><category term="pct" /><summary type="html">✨ PDK Puppet Content Templates 0.1.0 released ✨</summary></entry></feed>
