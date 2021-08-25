@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-08-25T02:15:12+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-08-23: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html" rel="alternate" type="text/html" title="2021-08-23: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-23T00:00:00+00:00</published><updated>2021-08-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-08-25T13:27:41+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-08-23: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html" rel="alternate" type="text/html" title="2021-08-23: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-23T00:00:00+00:00</published><updated>2021-08-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 
 &lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
 
@@ -90,8 +90,7 @@ Next Monday is a bank holiday in EMEA, therefore community day will be quieter.&
   &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/180&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#180&lt;/code&gt;&lt;/a&gt;: “release 1.8.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-docker/pull/34&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-docker#34&lt;/code&gt;&lt;/a&gt;: “(MAINT) Update bionic image tag to use date-based tag”, thanks to &lt;a href=&quot;https://github.com/nkanderson&quot;&gt;nkanderson&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/rspec-puppet/pull/11&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#11&lt;/code&gt;&lt;/a&gt;: “Add Ruby 3 support”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/metadata-json-lint/pull/117&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#117&lt;/code&gt;&lt;/a&gt;: “Update rubocop requirement from ~&amp;gt; 0.50.0 to ~&amp;gt; 0.57.2”, thanks to [dependabot[bot]][dependabot[bot]]&lt;/li&gt;
-  &lt;li&gt;[&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#116&lt;/code&gt;][metadata-json-lint-pr-116]: “Add GitHub actions + badges”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/metadata-json-lint/pull/116&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#116&lt;/code&gt;&lt;/a&gt;: “Add GitHub actions + badges”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
@@ -105,11 +104,10 @@ Next Monday is a bank holiday in EMEA, therefore community day will be quieter.&
   &lt;li&gt;
     &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.3.0&lt;/code&gt;)&lt;/p&gt;
 
-    &lt;p&gt;[dependabot[bot]]: https://github.com/apps/dependabot
-[metadata-json-lint-pr-116]: https://github.com/voxpupuli/metadata-json-lint/pull/116&lt;/p&gt;
-    &lt;h2 id=&quot;devx-team-update&quot;&gt;DevX Team Update&lt;/h2&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;h2 id=&quot;devx-team-update&quot;&gt;DevX Team Update&lt;/h2&gt;
 
 &lt;h3 id=&quot;pdk-220&quot;&gt;PDK 2.2.0&lt;/h3&gt;
 
