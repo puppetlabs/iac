@@ -22,7 +22,6 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`facterdb#180`][facterdb-pr-180]: "release 1.8.0", thanks to [bastelfreak][bastelfreak]
 - [`pdk-docker#34`][pdk-docker-pr-34]: "(MAINT) Update bionic image tag to use date-based tag", thanks to [nkanderson][nkanderson]
 - [`rspec-puppet#11`][rspec-puppet-pr-11]: "Add Ruby 3 support", thanks to [bastelfreak][bastelfreak]
-- [`metadata-json-lint#117`][metadata-json-lint-pr-117]: "Update rubocop requirement from ~> 0.50.0 to ~> 0.57.2", thanks to [dependabot[bot]][dependabot[bot]]
 - [`metadata-json-lint#116`][metadata-json-lint-pr-116]: "Add GitHub actions + badges", thanks to [bastelfreak][bastelfreak]
 
 Check [all the ways to reach us]({% link _posts/2021-01-20-reaching-out.md %}) if you want to directly contact us about anything module related.
@@ -50,8 +49,8 @@ The following modules were released this week:
   [nkanderson]: https://github.com/nkanderson
   [rspec-puppet-pr-11]: https://github.com/puppetlabs/rspec-puppet/pull/11
   [metadata-json-lint-pr-117]: https://github.com/voxpupuli/metadata-json-lint/pull/117
-  [dependabot[bot]]: https://github.com/apps/dependabot
   [metadata-json-lint-pr-116]: https://github.com/voxpupuli/metadata-json-lint/pull/116
+
 ## DevX Team Update
 
 ### PDK 2.2.0
