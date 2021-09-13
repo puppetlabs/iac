@@ -5,6 +5,7 @@ author: "ia-content"
 categories:
   - team
   - status
+  - apache
 tags:
 ---
 
@@ -61,9 +62,14 @@ The following modules were released this week:
   [pdksync-pr-156]: https://github.com/puppetlabs/pdksync/pull/156
   [attachmentgenie]: https://github.com/attachmentgenie
 
-## Other Work
+## puppetlabs-apache module droppped code for Debian < 8 and Ubuntu < 14.04
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+Removed the Debian < 8 and Ubuntu < 14.04 code from the apache module with the following PRs. Thanks to [ekohl][ekohl]
+
+- [`puppetlabs-apache#2189`][puppetlabs-apache-pr-2189]: "Drop Debian < 8 and Ubuntu < 14.04 code".
+- [`puppetlabs-apache#2193`][puppetlabs-apache-pr-2193]: "Restore Ubuntu 14.04 support in suphp".
+
+This will be a backward incompatible changes and the next release will be major version bump `v7.0.0`.
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
