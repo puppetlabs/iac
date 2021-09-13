@@ -17,7 +17,7 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`puppetlabs-apache#2189`][puppetlabs-apache-pr-2189]: "Drop Debian < 8 and Ubuntu < 14.04 code", thanks to [ekohl][ekohl]
 - [`puppetlabs-apt#999`][puppetlabs-apt-pr-999]: "(maint) Set DEBIAN_FRONTEND=noninteractive on upgrade", thanks to [smortex][smortex]
 - [`puppetlabs-docker#773`][puppetlabs-docker-pr-773]: "Fix facts gathering", thanks to [smortex][smortex]
-- [`puppetlabs-firewall#1010`][puppetlabs-firewall-pr-1010]: "Fix "undefined method `gsub' for nil:NilClass" when changing existing rule UID from absent to any present", thanks to [onyxmaster][onyxmaster]
+- [`puppetlabs-firewall#1010`][puppetlabs-firewall-pr-1010]: "Fix "undefined method `gsub` for nil:NilClass" when changing existing rule UID from absent to any present", thanks to [onyxmaster][onyxmaster]
 - [`puppetlabs-firewall#1006`][puppetlabs-firewall-pr-1006]: "Replace travis link in README.md with GHA", thanks to [bastelfreak][bastelfreak]
 - [`puppetlabs-haproxy#498`][puppetlabs-haproxy-pr-498]: "Adding chroot_dir_manage parameter.", thanks to [Tamerz][Tamerz]
 - [`puppetlabs-java#493`][puppetlabs-java-pr-493]: "Allow archive 6.x", thanks to [smortex][smortex]
