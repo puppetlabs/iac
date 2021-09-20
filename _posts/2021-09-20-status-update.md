@@ -6,6 +6,9 @@ categories:
   - team
   - status
 tags:
+  - java
+  - puppet-lint
+  - pct
 ---
 
 ## Community Contributions
@@ -32,6 +35,7 @@ Check [all the ways to reach us]({% link _posts/2021-01-20-reaching-out.md %}) i
 The following modules were released this week:
 
 - [`puppetlabs-java`][puppetlabs-java] (`7.2.0`)
+- [`puppet-lint`][puppet-lint] (`2.5.2`)
 
   [puppetlabs-java]: https://github.com/puppetlabs/puppetlabs-java
   [puppetlabs-apache-pr-2193]: https://github.com/puppetlabs/puppetlabs-apache/pull/2193
@@ -54,13 +58,35 @@ The following modules were released this week:
   [cocker-cc]: https://github.com/cocker-cc
   [puppetlabs-stdlib-pr-1209]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209
   [nmaludy]: https://github.com/nmaludy
-## Other Work
+  [puppet-lint]: https://github.com/puppetlabs/puppet-lint
 
 ### The dropping of support
 
 Due to the large amount of major releases that where made during the last time we removed support for an OS from our supported modules and following discussion within the team, it has been decided that going forward metadata changes, i.e. a drop in support, will no longer result in a major release.
-In case's where code necesary for said OS to function is removed, i.e. a drop in compatibility, this will still result in a major release, however we will attempt to pair this type of change with other similar major changes in order to keep the amount of major releases down.
+In cases where code necesary for said OS to function is removed, i.e. a drop in compatibility, this will still result in a major release, however we will attempt to pair this type of change with other similar major changes in order to keep the amount of major releases down.
 This may be subject to change however so please keep in touch and come forward with any questions that you may have.
+
+## DevX Team Updates
+
+As some of you are probably aware of, the PCT tool has been the main focus of the DevX team for the past few months.
+It is the first part of a suite of tools that will replace the PDK.
+To help clarify our strategy and vision, [Dave][DavidArmstrong] wrote a blog post that was published to [puppet.com](https://puppet.com), last week - [check it out here](https://puppet.com/blog/the-future-of-the-puppet-developer-kit-pdk/).
+
+### PCT 0.4.0
+
+We released version `0.4.0` of the PCT tool on Friday, which brings a number of significant new features:
+
+- `pct install` can now install remote `tar.gz` templates via HTTP/S
+- `pct new` now handles templates in the new `0.4.0` format
+
+As highlighted, PCT templates are now in a new format that is **not backwards compatible** with earlier formats.
+
+Check out the [`0.4.0` README entry](https://github.com/puppetlabs/pdkgo/blob/main/CHANGELOG.md#040) for full details.
+
+### `puppet-lint 2.5.2`
+
+There is also a new release of the `puppet-lint` gem which resolves [an issue](https://github.com/puppetlabs/puppet-lint/issues/16) with a F+ in the `double_quoted_strings` check when the string literal `\s` was used in a manfest.
+Thanks to [optiz0r][https://github.com/optiz0r] for highlighting.
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
