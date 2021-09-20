@@ -54,8 +54,13 @@ The following modules were released this week:
   [cocker-cc]: https://github.com/cocker-cc
   [puppetlabs-stdlib-pr-1209]: https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209
   [nmaludy]: https://github.com/nmaludy
-
 ## Other Work
+
+### The dropping of support
+
+Due to the large amount of major releases that where made during the last time we removed support for an OS from our supported modules and following discussion within the team, it has been decided that going forward metadata changes, i.e. a drop in support, will no longer result in a major release.
+In case's where code necesary for said OS to function is removed, i.e. a drop in compatibility, this will still result in a major release, however we will attempt to pair this type of change with other similar major changes in order to keep the amount of major releases down.
+This may be subject to change however so please keep in touch and come forward with any questions that you may have.
 
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
