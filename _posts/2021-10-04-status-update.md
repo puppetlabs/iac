@@ -6,6 +6,8 @@ categories:
   - team
   - status
 tags:
+  - apache
+  - danny
 ---
 
 ## Community Contributions
@@ -31,7 +33,6 @@ We'd like to thank the following people in the Puppet Community for their contri
 - [`facterdb#188`][facterdb-pr-188]: "Ubuntu 18.04/20.04, RedHat 8: Update factsets", thanks to [bastelfreak][bastelfreak]
 - [`rspec-puppet-facts#134`][rspec-puppet-facts-pr-134]: "Release 2.0.3", thanks to [bastelfreak][bastelfreak]
 - [`rspec-puppet-facts#133`][rspec-puppet-facts-pr-133]: "regenerate puppet_agent_components.json", thanks to [bastelfreak][bastelfreak]
-- [`iac#316`][iac-pr-316]: "Bump nokogiri from 1.11.5 to 1.12.5", thanks to [dependabot[bot]][dependabot[bot]]
 - [`iac#315`][iac-pr-315]: "Bump jekyll from 4.2.0 to 4.2.1", thanks to [dependabot[bot]][dependabot[bot]]
 - [`puppet-module-gems#167`][puppet-module-gems-pr-167]: "(maint) Fix pry dependency issue.", thanks to [BobosilaVictor][BobosilaVictor]
 - [`puppet_litmus#427`][puppet_litmus-pr-427]: "Allow Litmus Functions to accept a target", thanks to [RandomNoun7][RandomNoun7]
@@ -88,16 +89,31 @@ The following modules were released this week:
   [rspec-puppet-facts-pr-134]: https://github.com/voxpupuli/rspec-puppet-facts/pull/134
   [rspec-puppet-facts-pr-133]: https://github.com/voxpupuli/rspec-puppet-facts/pull/133
   [iac-pr-316]: https://github.com/puppetlabs/iac/pull/316
-  [dependabot[bot]]: https://github.com/apps/dependabot
+
   [iac-pr-315]: https://github.com/puppetlabs/iac/pull/315
   [puppet-module-gems-pr-167]: https://github.com/puppetlabs/puppet-module-gems/pull/167
   [BobosilaVictor]: https://github.com/BobosilaVictor
   [puppet_litmus-pr-427]: https://github.com/puppetlabs/puppet_litmus/pull/427
   [RandomNoun7]: https://github.com/RandomNoun7
 
-## Other Work
+## Puppet Module Major Releases
 
-<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
+Looking into the future, we only have a single major release planned, this being Apache v7.0.0. So if you use this module you should get ready for this to come on our next community day.
+
+## Farewell Danny
+
+Finally, we have to end on a sad note :cry:
+
+This will be [Danny's][Danny] last week on the IAC Team.
+Daniel was a founding member of the IAC team and has shown great professionalism, focus and drive, to help deliver true value to our customers and community.
+
+Some of the major stand outs from Danny's time on the IAC Team (and in Puppet), are the Cloud CI and Automated Release Tooling, which are invaluable, integral parts of the IAC Team's process.
+Danny also lent his expertise to the Forge team, helping to design and implement functionality to facilitate the introduction of premium content.
+
+We were very fortunate to have Danny's considerable breadth of knowledge in Cloud technologies - he's been instrumental in maintaining and enhancing the Docker and Kubernetes modules.
+
+He has been a fantastic colleague, mentor and friend to us all.
+From all of us on the IAC team - the very best of luck for the future, and thanks for all you've done for us. :beer: :rocket:
 
   [Adrian]:             https://github.com/adrianiurca
   [Ben]:                https://github.com/binford2k
