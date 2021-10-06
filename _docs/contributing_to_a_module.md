@@ -210,6 +210,18 @@ rspec tests define them in fixtures.yml. We use this over `pdk test unit` as it 
 ![pdk_test_unit](pdkunit.png)
 ![pdk_bundle_exec_rake_spec](rakespec.png)
 
+To run a single test file, you can use the `SPEC=<path>` option
+
+```shell
+% pdk bundle exec rake spec SPEC=<path to rb file>
+```
+
+For example
+
+```shell
+% pdk bundle exec rake spec SPEC=spec/functions/loadjson_spec.rb
+```
+
 ### Acceptance Tests
 
 All Puppet Supported modules come with acceptance tests, which use [puppet litmus][puppet-litmus].
