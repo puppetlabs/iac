@@ -8,6 +8,7 @@ COMMENT_AUTHOR_IGNORE_LIST = [
   'codecov-io',
   'coveralls',
   'dependabot',
+  'dependabot[bot]',
   'dependabot-preview[bot]',
   'github-actions[bot]',
   'CLAassistant',
