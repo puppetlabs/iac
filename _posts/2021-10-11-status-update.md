@@ -6,6 +6,10 @@ categories:
   - team
   - status
 tags:
+  - apache
+  - java
+  - stdlib
+  - apt
 ---
 
 ## Community Contributions
