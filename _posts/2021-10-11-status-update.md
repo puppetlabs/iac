@@ -71,8 +71,6 @@ The following modules were released this week:
   [puppet_litmus-pr-427]: https://github.com/puppetlabs/puppet_litmus/pull/427
   [RandomNoun7]: https://github.com/RandomNoun7
 
-## Other Work
-
 <!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->
 
   [Adrian]:             https://github.com/adrianiurca
