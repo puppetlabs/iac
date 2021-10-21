@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "2021-07-16: A Fond Farewell For Now to Community Day & Norman"
-author: "carabasdaniel"
+title: "2021-10-21: A Fond Farewell For Now to Community Day & Norman"
+author: "michaeltlombardi"
 categories:
   - team
   - status
