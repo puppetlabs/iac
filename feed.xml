@@ -1,4 +1,114 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-10-21T02:22:21+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-10-11: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html" rel="alternate" type="text/html" title="2021-10-11: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-11T00:00:00+00:00</published><updated>2021-10-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2021-10-21T08:47:59+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-07-16: A Fond Farewell For Now to Community Day &amp;amp; Norman</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html" rel="alternate" type="text/html" title="2021-07-16: A Fond Farewell For Now to Community Day &amp;amp; Norman" /><published>2021-10-20T00:00:00+00:00</published><updated>2021-10-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html">&lt;h2 id=&quot;iac-community-day&quot;&gt;IAC Community Day&lt;/h2&gt;
+
+&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+
+&lt;p&gt;The Infrastructure Automation Content (IAC) team formed from the merger of 4 core content-focused teams (Modules, Windows, Cloud &amp;amp; Containers, and Networking),
+maintaining forty-five open-source supported Puppet modules and over a dozen tools that help reduce the content maintenance and support costs.&lt;/p&gt;
+
+&lt;p&gt;A crucial part of Puppet’s success has always been the support of the community.
+The IAC team, like with all module teams before, would have had a dedicated engineer or engineers assigned to community triage, usually on a rotational basis.&lt;/p&gt;
+
+&lt;p&gt;The triage rota consumed 20% of the team’s engineering resources. It was challenging due to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Lack of domain knowledge&lt;/li&gt;
+  &lt;li&gt;Work spilling over either into or out of triage during rotation&lt;/li&gt;
+  &lt;li&gt;Impact to other team members not on rotation&lt;/li&gt;
+  &lt;li&gt;Engineers left feeling drained, low self-esteem&lt;/li&gt;
+  &lt;li&gt;Engineers dreading rotating onto triage.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;community-day-introduced-in-november-2020&quot;&gt;Community Day (Introduced in November 2020)&lt;/h3&gt;
+
+&lt;p&gt;Community day came about as part of reviewing of our triaging commitments and chatting with the team listening to their concerns.&lt;/p&gt;
+
+&lt;p&gt;As mentioned, 20% of the team’s engineering resourcing and effort was already going into the triage rotation. So we asked ourselves the question:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;What if we focused this 20% effort and had the whole team take part in a full day community triage?&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Benefits:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Upskilling&lt;/li&gt;
+  &lt;li&gt;Teamwork&lt;/li&gt;
+  &lt;li&gt;Reduced distractions&lt;/li&gt;
+  &lt;li&gt;Greater community focus&lt;/li&gt;
+  &lt;li&gt;Starting the week off with a win&lt;/li&gt;
+  &lt;li&gt;Productivity within the team increased (hard to believe even for us, at first)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Not only have we been able to address the backlog of community requests across forty-five supported open source modules (plus over a dozen tooling repos), the team have been able to focus on feature delivery.&lt;/p&gt;
+
+&lt;p&gt;Since switching to the new community day, over the last eleven months, the team have:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Handled† 1536 issues&lt;/li&gt;
+  &lt;li&gt;Performed 205 module releases&lt;/li&gt;
+  &lt;li&gt;Released 30 tooling updates&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;†  Handled meaning a team member has either:&lt;/p&gt;
+
+  &lt;ul&gt;
+    &lt;li&gt;Closed a PR or Jira&lt;/li&gt;
+    &lt;li&gt;Merged community a PR&lt;/li&gt;
+    &lt;li&gt;or provided feedback on a community PR&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;By committing to community day and limiting distractions to 1 day, the team have also delivered:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;A new Cloud CI
+    &lt;ol&gt;
+      &lt;li&gt;With multi-node testing support&lt;/li&gt;
+      &lt;li&gt;New automated workflow&lt;/li&gt;
+      &lt;li&gt;Internal developer environment support&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Cisco Network device enhancement&lt;/li&gt;
+  &lt;li&gt;New DSC builder generating &amp;gt;300 DSC PowerShell modules uploaded on the forge&lt;/li&gt;
+  &lt;li&gt;3 OS certifications&lt;/li&gt;
+  &lt;li&gt;Certified all the supported modules again Puppet 7, including:
+    &lt;ol&gt;
+      &lt;li&gt;Raising and testing fixes for numerous issues in Puppet 7 nightly agent builds prior to release&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Rolled out the Trusted Contributor program&lt;/li&gt;
+  &lt;li&gt;Improved our community communication with a weekly blog post, enhancing our community reporting&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;All in all, the IAC community day has not only enabled the team to reconnect with the community, address the content backlog, and upskill across the team;
+it has also improved team productivity by reducing distraction and increasing team morale.
+Mondays are, at the best of times, a tough day.
+Starting a week off with a win? Priceless.&lt;/p&gt;
+
+&lt;p&gt;Sadly, Community Day is coming to an end.
+Due to a significant reduction in resourcing, it is no longer possible to provide the technical support needed to run a dedicated community support day.&lt;/p&gt;
+
+&lt;p&gt;The content maintained by the IAC team is still of high importance to Puppet.
+Puppet would like to encourage our community to reach out via our public slack channels for assistance.
+Our PM team will help prioritize issues raised.&lt;/p&gt;
+
+&lt;h2 id=&quot;farewell-norman-&quot;&gt;Farewell, Norman 💜&lt;/h2&gt;
+
+&lt;p&gt;This week we have to say farewell to Norman, the Engineering Manager of the IAC and DevX Teams.
+This is a particularly sad goodbye as many of us, past and present, consider Norman one of the best leaders we have had the privilege of working with.&lt;/p&gt;
+
+&lt;p&gt;In just under three years, Norman led us to some fantastic achievements and kept us motivated and moving forward through turbulent times.
+Norman has shown unparalleled dedication to his team’s wellbeing, motivation, and personal development whilst still acting as a clarifying arbiter between the high-level vision and plans of the organisation.
+It was a tough balancing act that he seemed to be able to do, with his usual 110% dedication he never falters from.&lt;/p&gt;
+
+&lt;p&gt;Norman motivated and enabled us to become far better engineers and people than we were prior to being taken under his wing.
+The remit of the IAC team is a tough one, and one that can often be underappreciated, but Norman always fought our corner and sung our praises to anyone who stood still long enough to listen.
+Norman was great at suggesting and soliciting us to suggest new processes / ideas (Community Day being a prime example), that would make us more efficient and motivated, as a team.
+We benefited from his wealth of knowledge, experience (both technical and managerial) and genuine care for his colleagues and team.&lt;/p&gt;
+
+&lt;p&gt;We’d like to thank Norman for his hard work and support over these nearly three years.
+The IAC and DevX teams owe him a huge gratitude and we’ll miss him, as we bid farewell and good luck in your next venture!&lt;/p&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><summary type="html">IAC Community Day</summary></entry><entry><title type="html">2021-10-11: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html" rel="alternate" type="text/html" title="2021-10-11: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-11T00:00:00+00:00</published><updated>2021-10-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
 
 &lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
 
@@ -482,52 +592,4 @@ This will help facilitate more frequent releases of these gems in the future.&lt
 &lt;h2 id=&quot;dropsonde-update&quot;&gt;Dropsonde update&lt;/h2&gt;
 
 &lt;p&gt;The IAC team have completed all development tasks on both the Dropsonde module and Gem. 
-Next, the team will be working on getting both module and gem package up as part of Puppet server.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="rspec-puppet" /><category term="puppet-lint" /><category term="dsc" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-07-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/07/16/status-update.html" rel="alternate" type="text/html" title="2021-07-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-07-16T00:00:00+00:00</published><updated>2021-07-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/07/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/07/16/status-update.html">&lt;h2 id=&quot;new-blog-schedule&quot;&gt;New Blog Schedule&lt;/h2&gt;
-
-&lt;p&gt;Hey, folks! Just a very quick news item to let you know that from today forward we’ll be moving our blog posts from Friday to Monday, bringing them into line with the rest of our work on Community Days.&lt;/p&gt;
-
-&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/provision/pull/169&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;provision#169&lt;/code&gt;&lt;/a&gt;: “Add Vagrant provisioner compatibility for additional distros”, thanks to &lt;a href=&quot;https://github.com/seanmil&quot;&gt;seanmil&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/provision/pull/168&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;provision#168&lt;/code&gt;&lt;/a&gt;: “Add vagrant options”, thanks to &lt;a href=&quot;https://github.com/seanmil&quot;&gt;seanmil&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/996&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#996&lt;/code&gt;&lt;/a&gt;: “fix: parsing random_fully in ip6tables”, thanks to &lt;a href=&quot;https://github.com/scoiatael&quot;&gt;scoiatael&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/489&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#489&lt;/code&gt;&lt;/a&gt;: “allow type ‘default-server’ for balancermember”, thanks to &lt;a href=&quot;https://github.com/trefzer&quot;&gt;trefzer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/487&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#487&lt;/code&gt;&lt;/a&gt;: “Use Puppet-Datatype Sensitive”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/527&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#527&lt;/code&gt;&lt;/a&gt;: “Add ttl_duration to README”, thanks to &lt;a href=&quot;https://github.com/danifr&quot;&gt;danifr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/526&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#526&lt;/code&gt;&lt;/a&gt;: “Change default runc version to 1.0.0”, thanks to &lt;a href=&quot;https://github.com/danifr&quot;&gt;danifr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/511&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#511&lt;/code&gt;&lt;/a&gt;: “Support both standard Calico and Calico Tigera”, thanks to &lt;a href=&quot;https://github.com/treydock&quot;&gt;treydock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1415&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1415&lt;/code&gt;&lt;/a&gt;: “Fix mysql_user parameters update on modern MySQL”, thanks to &lt;a href=&quot;https://github.com/weastur&quot;&gt;weastur&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1414&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1414&lt;/code&gt;&lt;/a&gt;: “(IAC-1677) Fix issue with deprecated rspec”, thanks to &lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1409&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1409&lt;/code&gt;&lt;/a&gt;: “Deprecate mysql::server::mysqltuner and show it as an example”, thanks to &lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1408&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1408&lt;/code&gt;&lt;/a&gt;: “Deprecate mysql::server::monitor and show as an example”, thanks to &lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1406&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1406&lt;/code&gt;&lt;/a&gt;: “Remove EOL platforms Debian 8 and Ubuntu 14.04”, thanks to &lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/alexjfisher&quot;&gt;alexjfisher&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1405&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1405&lt;/code&gt;&lt;/a&gt;: “(MODULES-11115) add Rocky Linux 8 compatibility”, thanks to &lt;a href=&quot;https://github.com/vchepkov&quot;&gt;vchepkov&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1193&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1193&lt;/code&gt;&lt;/a&gt;: “(MAINT) Remove testing logic for Puppet 4.5”, thanks to &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1192&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1192&lt;/code&gt;&lt;/a&gt;: “Stdlib::Http::Method: Add new type for http methods”, thanks to &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/442&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#442&lt;/code&gt;&lt;/a&gt;: “Set &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;skip_branch_with_pr&lt;/code&gt; to true by default in appveyor.yml template”, thanks to &lt;a href=&quot;https://github.com/TraGicCode&quot;&gt;TraGicCode&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;11.1.0&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;other-work&quot;&gt;Other Work&lt;/h2&gt;
-
-&lt;h2 id=&quot;tomcats-week&quot;&gt;Tomcat’s week&lt;/h2&gt;
-
-&lt;p&gt;This week we focused on the Tomcat module; as tomcat7 is EOL, we’ve made the necessary changes to solve the issues coming with the removal of it. Also, we worked at a feature which allows you to remove webapps and a PR for tomcat7 removal was opened.&lt;/p&gt;
-
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>carabasdaniel</name></author><category term="team" /><category term="status" /><summary type="html">New Blog Schedule</summary></entry></feed>
+Next, the team will be working on getting both module and gem package up as part of Puppet server.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="rspec-puppet" /><category term="puppet-lint" /><category term="dsc" /><summary type="html">Community Contributions</summary></entry></feed>
