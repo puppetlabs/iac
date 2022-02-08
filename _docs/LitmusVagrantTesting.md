@@ -4,19 +4,19 @@ title: Testing Puppet Modules with Litmus and Vagrant
 ---
 
 ## Testing Puppet Modules with Litmus and Vagrant
- 
-### The Setup 
+
+### The Setup
 
 For this demo I'm gonna run through the entire process from start to finish - I hope that you find it useful.
 To start, the first thing that you need to do is clone down the module that you want to test; in this case we'll be using `puppetlabs-scheduled_task`. This can easily be accomplished with a simple command:
 
-```
-git clone https://github.com/user-name/puppetlabs-scheduled_task.git
+```bash
+git clone https://github.com/puppetlabs/puppetlabs-scheduled_task.git
 ```
 
 Now that you have the module cloned down, simply run the below command to set up the environment:
 
-```
+```bash
 bundle install --path .bundle/gems/
 ```
 
@@ -24,11 +24,29 @@ bundle install --path .bundle/gems/
 
 With the environment setup it is time to provision the machine. Rather than spin up the vagrant machine directly, we can use Litmus as an intermediary to do it for us.
 
+```bash
+bundle exec rake 'litmus:provision[vagrant, gusztavvargadr/windows-server]'
+```
+
+After running the command above, the output should look similar to this:
+
 ![Litmus Vagrant Testing - provisioning the machine](Vagrant%20Provision.png)
+
+The example above uses the [gusztavvargadr/windows-server](https://app.vagrantup.com/gusztavvargadr/boxes/windows-server) vagrant box.
 
 If you are testing against multiple different OSs then you can also utilise the `provision_list` command, which alows you to provision an entire suite of machines from pre-set lists found within the `provision.yml` file.
 
 With the machine provisioned, first doublecheck that you have root/administrator privileges for the box and then it's a simple matter of running the `install_agent` and `install_module` commands and you will be setup and ready to go. With `install_agent` you can run the command as it is to install a default version of the agent or you can specify puppet 5 or 6 specificilly.
+
+```bash
+# Install the puppet agent
+bundle exec rake 'litmus:install_agent[puppet6]'
+
+# Installl the module
+bundle exec rake 'litmus:install_module'
+```
+
+After running the commands above, the output should look similar to this:
 
 ![Litmus Vagrant Testing - installing the agent and the module](Agent%20Module%20Install.png)
 
@@ -64,7 +82,7 @@ Finaly there is also a collection of parameters that can be set only against a W
 
 Certain Vagrant boxes do not allow ssh root logins, that is why the _vagrant_ user as part of the sudoers group is used to execute privileged commands. As the Puppet agent installation requires sudo privileges, there are some cases where the secure_path configuration for the puppet binary path is not set correctly, leading to errors when attempting to execute puppet commands on the system. If you encounter these errors, a quick fix is to use the `provision::fix_secure_path` Bolt Task. This will update the secure_path configuration and solve any related errors you may be seeing.
 
-```
+```bash
 bundle exec bolt --modulepath /Users/{Your Name}/workspace/git/ task run provision::fix_secure_path path=/opt/puppetlabs/bin -i inventory.yaml -t ssh_nodes
 ```
 
