@@ -5,6 +5,10 @@ module IAC
         [document.data['github'], document.data]
       end].to_json
     end
+
+    def jsonify_repo_list_as_array(input)
+      input.map(&:data).to_json
+    end
   end
 end
 
