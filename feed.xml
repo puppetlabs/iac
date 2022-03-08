@@ -1,563 +1,563 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2022-03-08T09:16:22+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-11-08: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update.html" rel="alternate" type="text/html" title="2021-11-08: IAC &amp;amp; DevX Team Status Update" /><published>2021-11-08T00:00:00+00:00</published><updated>2021-11-08T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://puppetlabs.github.io/iac/feed.xml" rel="self" type="application/atom+xml" /><link href="https://puppetlabs.github.io/iac/" rel="alternate" type="text/html" /><updated>2022-03-08T09:16:46+00:00</updated><id>https://puppetlabs.github.io/iac/feed.xml</id><title type="html">Puppet IAC Team</title><subtitle>Team blog and list of maintained tools by and for the Puppet Infrastructure Automation Content Team.</subtitle><entry><title type="html">2021-11-08: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update.html" rel="alternate" type="text/html" title="2021-11-08: IAC &amp;amp; DevX Team Status Update" /><published>2021-11-08T00:00:00+00:00</published><updated>2021-11-08T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/11/08/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/1010&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#1010&lt;/code&gt;&lt;/a&gt;: “(MODULES-10763) Remove frequency collector”, thanks to &lt;a href=&quot;https://github.com/LTangaF&quot;&gt;LTangaF&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/383&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#383&lt;/code&gt;&lt;/a&gt;: “move honeycomb key”, thanks to &lt;a href=&quot;https://github.com/LivingInSyn&quot;&gt;LivingInSyn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/382&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#382&lt;/code&gt;&lt;/a&gt;: “change the honeycomb writekey to a github secret”, thanks to &lt;a href=&quot;https://github.com/LivingInSyn&quot;&gt;LivingInSyn&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1298&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1298&lt;/code&gt;&lt;/a&gt;: “Support setting default_privileges on all schemas”, thanks to &lt;a href=&quot;https://github.com/fish-face&quot;&gt;fish-face&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1297&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1297&lt;/code&gt;&lt;/a&gt;: “Support target_role in default_privileges”, thanks to &lt;a href=&quot;https://github.com/fish-face&quot;&gt;fish-face&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/209&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#209&lt;/code&gt;&lt;/a&gt;: “Add support for ubuntu 21.10 and 21.04 “, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/207&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#207&lt;/code&gt;&lt;/a&gt;: “Add Almalinux facts”, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/206&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#206&lt;/code&gt;&lt;/a&gt;: “Add sys-filesystem so that mountpoints fact resolves”, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/205&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#205&lt;/code&gt;&lt;/a&gt;: “Add facter 4.x facts for RockyLinux 8”, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/204&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#204&lt;/code&gt;&lt;/a&gt;: “Release 1.11.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/203&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#203&lt;/code&gt;&lt;/a&gt;: “Generate OL/RHEL/SL facts”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/202&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#202&lt;/code&gt;&lt;/a&gt;: “(#200) Updated get_facts.sh and several os facts missing mountpoints”, thanks to &lt;a href=&quot;https://github.com/michael-riddle&quot;&gt;michael-riddle&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/201&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#201&lt;/code&gt;&lt;/a&gt;: “Add Facts for Ubuntu 21.04 x86-64, facter 3.14”, thanks to &lt;a href=&quot;https://github.com/towo&quot;&gt;towo&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/199&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#199&lt;/code&gt;&lt;/a&gt;: “Add Fedora 33 and 34 factsets”, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/198&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#198&lt;/code&gt;&lt;/a&gt;: “Add Fedora 32 facts”, thanks to &lt;a href=&quot;https://github.com/hbrown-uiowa&quot;&gt;hbrown-uiowa&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/dropsonde/pull/14&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dropsonde#14&lt;/code&gt;&lt;/a&gt;: “(SERVER-3079) Allow overriding Puppet’s base settings”, thanks to &lt;a href=&quot;https://github.com/Magisus&quot;&gt;Magisus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/dropsonde/pull/13&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dropsonde#13&lt;/code&gt;&lt;/a&gt;: “Load Ruby’s CA certificates instead of using httpclient defaults”, thanks to &lt;a href=&quot;https://github.com/Magisus&quot;&gt;Magisus&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/1010"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#1010</code></a>: “(MODULES-10763) Remove frequency collector”, thanks to <a href="https://github.com/LTangaF">LTangaF</a> and the following people who helped get it over the line (<a href="https://github.com/kenyon">kenyon</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java_ks/pull/383"><code class="language-plaintext highlighter-rouge">puppetlabs-java_ks#383</code></a>: “move honeycomb key”, thanks to <a href="https://github.com/LivingInSyn">LivingInSyn</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java_ks/pull/382"><code class="language-plaintext highlighter-rouge">puppetlabs-java_ks#382</code></a>: “change the honeycomb writekey to a github secret”, thanks to <a href="https://github.com/LivingInSyn">LivingInSyn</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1298"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1298</code></a>: “Support setting default_privileges on all schemas”, thanks to <a href="https://github.com/fish-face">fish-face</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1297"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1297</code></a>: “Support target_role in default_privileges”, thanks to <a href="https://github.com/fish-face">fish-face</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/209"><code class="language-plaintext highlighter-rouge">facterdb#209</code></a>: “Add support for ubuntu 21.10 and 21.04 “, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/207"><code class="language-plaintext highlighter-rouge">facterdb#207</code></a>: “Add Almalinux facts”, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/206"><code class="language-plaintext highlighter-rouge">facterdb#206</code></a>: “Add sys-filesystem so that mountpoints fact resolves”, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a> and the following people who helped get it over the line (<a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/205"><code class="language-plaintext highlighter-rouge">facterdb#205</code></a>: “Add facter 4.x facts for RockyLinux 8”, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/204"><code class="language-plaintext highlighter-rouge">facterdb#204</code></a>: “Release 1.11.0”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/203"><code class="language-plaintext highlighter-rouge">facterdb#203</code></a>: “Generate OL/RHEL/SL facts”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/202"><code class="language-plaintext highlighter-rouge">facterdb#202</code></a>: “(#200) Updated get_facts.sh and several os facts missing mountpoints”, thanks to <a href="https://github.com/michael-riddle">michael-riddle</a> and the following people who helped get it over the line (<a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/201"><code class="language-plaintext highlighter-rouge">facterdb#201</code></a>: “Add Facts for Ubuntu 21.04 x86-64, facter 3.14”, thanks to <a href="https://github.com/towo">towo</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/199"><code class="language-plaintext highlighter-rouge">facterdb#199</code></a>: “Add Fedora 33 and 34 factsets”, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/198"><code class="language-plaintext highlighter-rouge">facterdb#198</code></a>: “Add Fedora 32 facts”, thanks to <a href="https://github.com/hbrown-uiowa">hbrown-uiowa</a></li>
+  <li><a href="https://github.com/puppetlabs/dropsonde/pull/14"><code class="language-plaintext highlighter-rouge">dropsonde#14</code></a>: “(SERVER-3079) Allow overriding Puppet’s base settings”, thanks to <a href="https://github.com/Magisus">Magisus</a></li>
+  <li><a href="https://github.com/puppetlabs/dropsonde/pull/13"><code class="language-plaintext highlighter-rouge">dropsonde#13</code></a>: “Load Ruby’s CA certificates instead of using httpclient defaults”, thanks to <a href="https://github.com/Magisus">Magisus</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.3.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.0.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.3.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-apache"><code class="language-plaintext highlighter-rouge">puppetlabs-apache</code></a> (<code class="language-plaintext highlighter-rouge">7.0.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h2 id=&quot;other-work&quot;&gt;Other Work&lt;/h2&gt;
+<h2 id="other-work">Other Work</h2>
 
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>daianamezdrea</name></author><category term="team" /><category term="status" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-10-21: A Fond Farewell For Now to Community Day &amp;amp; Norman</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html" rel="alternate" type="text/html" title="2021-10-21: A Fond Farewell For Now to Community Day &amp;amp; Norman" /><published>2021-10-20T00:00:00+00:00</published><updated>2021-10-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html">&lt;h2 id=&quot;iac-community-day&quot;&gt;IAC Community Day&lt;/h2&gt;
+<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->]]></content><author><name>daianamezdrea</name></author><category term="team" /><category term="status" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-10-21: A Fond Farewell For Now to Community Day &amp;amp; Norman</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html" rel="alternate" type="text/html" title="2021-10-21: A Fond Farewell For Now to Community Day &amp;amp; Norman" /><published>2021-10-20T00:00:00+00:00</published><updated>2021-10-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/20/fond-farewell.html"><![CDATA[<h2 id="iac-community-day">IAC Community Day</h2>
 
-&lt;h3 id=&quot;background&quot;&gt;Background&lt;/h3&gt;
+<h3 id="background">Background</h3>
 
-&lt;p&gt;The Infrastructure Automation Content (IAC) team formed from the merger of 4 core content-focused teams (Modules, Windows, Cloud &amp;amp; Containers, and Networking),
-maintaining forty-five open-source supported Puppet modules and over a dozen tools that help reduce the content maintenance and support costs.&lt;/p&gt;
+<p>The Infrastructure Automation Content (IAC) team formed from the merger of 4 core content-focused teams (Modules, Windows, Cloud &amp; Containers, and Networking),
+maintaining forty-five open-source supported Puppet modules and over a dozen tools that help reduce the content maintenance and support costs.</p>
 
-&lt;p&gt;A crucial part of Puppet’s success has always been the support of the community.
-The IAC team, like with all module teams before, would have had a dedicated engineer or engineers assigned to community triage, usually on a rotational basis.&lt;/p&gt;
+<p>A crucial part of Puppet’s success has always been the support of the community.
+The IAC team, like with all module teams before, would have had a dedicated engineer or engineers assigned to community triage, usually on a rotational basis.</p>
 
-&lt;p&gt;The triage rota consumed 20% of the team’s engineering resources. It was challenging due to:&lt;/p&gt;
+<p>The triage rota consumed 20% of the team’s engineering resources. It was challenging due to:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Lack of domain knowledge&lt;/li&gt;
-  &lt;li&gt;Work spilling over either into or out of triage during rotation&lt;/li&gt;
-  &lt;li&gt;Impact to other team members not on rotation&lt;/li&gt;
-  &lt;li&gt;Engineers left feeling drained, low self-esteem&lt;/li&gt;
-  &lt;li&gt;Engineers dreading rotating onto triage.&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Lack of domain knowledge</li>
+  <li>Work spilling over either into or out of triage during rotation</li>
+  <li>Impact to other team members not on rotation</li>
+  <li>Engineers left feeling drained, low self-esteem</li>
+  <li>Engineers dreading rotating onto triage.</li>
+</ul>
 
-&lt;h3 id=&quot;community-day-introduced-in-november-2020&quot;&gt;Community Day (Introduced in November 2020)&lt;/h3&gt;
+<h3 id="community-day-introduced-in-november-2020">Community Day (Introduced in November 2020)</h3>
 
-&lt;p&gt;Community day came about as part of reviewing of our triaging commitments and chatting with the team listening to their concerns.&lt;/p&gt;
+<p>Community day came about as part of reviewing of our triaging commitments and chatting with the team listening to their concerns.</p>
 
-&lt;p&gt;As mentioned, 20% of the team’s engineering resourcing and effort was already going into the triage rotation. So we asked ourselves the question:&lt;/p&gt;
+<p>As mentioned, 20% of the team’s engineering resourcing and effort was already going into the triage rotation. So we asked ourselves the question:</p>
 
-&lt;blockquote&gt;
-  &lt;p&gt;What if we focused this 20% effort and had the whole team take part in a full day community triage?&lt;/p&gt;
-&lt;/blockquote&gt;
+<blockquote>
+  <p>What if we focused this 20% effort and had the whole team take part in a full day community triage?</p>
+</blockquote>
 
-&lt;p&gt;Benefits:&lt;/p&gt;
+<p>Benefits:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Upskilling&lt;/li&gt;
-  &lt;li&gt;Teamwork&lt;/li&gt;
-  &lt;li&gt;Reduced distractions&lt;/li&gt;
-  &lt;li&gt;Greater community focus&lt;/li&gt;
-  &lt;li&gt;Starting the week off with a win&lt;/li&gt;
-  &lt;li&gt;Productivity within the team increased (hard to believe even for us, at first)&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Upskilling</li>
+  <li>Teamwork</li>
+  <li>Reduced distractions</li>
+  <li>Greater community focus</li>
+  <li>Starting the week off with a win</li>
+  <li>Productivity within the team increased (hard to believe even for us, at first)</li>
+</ul>
 
-&lt;p&gt;Not only have we been able to address the backlog of community requests across forty-five supported open source modules (plus over a dozen tooling repos), the team have been able to focus on feature delivery.&lt;/p&gt;
+<p>Not only have we been able to address the backlog of community requests across forty-five supported open source modules (plus over a dozen tooling repos), the team have been able to focus on feature delivery.</p>
 
-&lt;p&gt;Since switching to the new community day, over the last eleven months, the team have:&lt;/p&gt;
+<p>Since switching to the new community day, over the last eleven months, the team have:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Handled† 1536 issues&lt;/li&gt;
-  &lt;li&gt;Performed 205 module releases&lt;/li&gt;
-  &lt;li&gt;Released 30 tooling updates&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Handled† 1536 issues</li>
+  <li>Performed 205 module releases</li>
+  <li>Released 30 tooling updates</li>
+</ul>
 
-&lt;blockquote&gt;
-  &lt;p&gt;†  Handled meaning a team member has either:&lt;/p&gt;
+<blockquote>
+  <p>†  Handled meaning a team member has either:</p>
 
-  &lt;ul&gt;
-    &lt;li&gt;Closed a PR or Jira&lt;/li&gt;
-    &lt;li&gt;Merged community a PR&lt;/li&gt;
-    &lt;li&gt;or provided feedback on a community PR&lt;/li&gt;
-  &lt;/ul&gt;
-&lt;/blockquote&gt;
+  <ul>
+    <li>Closed a PR or Jira</li>
+    <li>Merged community a PR</li>
+    <li>or provided feedback on a community PR</li>
+  </ul>
+</blockquote>
 
-&lt;p&gt;By committing to community day and limiting distractions to 1 day, the team have also delivered:&lt;/p&gt;
+<p>By committing to community day and limiting distractions to 1 day, the team have also delivered:</p>
 
-&lt;ol&gt;
-  &lt;li&gt;A new Cloud CI
-    &lt;ol&gt;
-      &lt;li&gt;With multi-node testing support&lt;/li&gt;
-      &lt;li&gt;New automated workflow&lt;/li&gt;
-      &lt;li&gt;Internal developer environment support&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Cisco Network device enhancement&lt;/li&gt;
-  &lt;li&gt;New DSC builder generating &amp;gt;300 DSC PowerShell modules uploaded on the forge&lt;/li&gt;
-  &lt;li&gt;3 OS certifications&lt;/li&gt;
-  &lt;li&gt;Certified all the supported modules again Puppet 7, including:
-    &lt;ol&gt;
-      &lt;li&gt;Raising and testing fixes for numerous issues in Puppet 7 nightly agent builds prior to release&lt;/li&gt;
-    &lt;/ol&gt;
-  &lt;/li&gt;
-  &lt;li&gt;Rolled out the Trusted Contributor program&lt;/li&gt;
-  &lt;li&gt;Improved our community communication with a weekly blog post, enhancing our community reporting&lt;/li&gt;
-&lt;/ol&gt;
+<ol>
+  <li>A new Cloud CI
+    <ol>
+      <li>With multi-node testing support</li>
+      <li>New automated workflow</li>
+      <li>Internal developer environment support</li>
+    </ol>
+  </li>
+  <li>Cisco Network device enhancement</li>
+  <li>New DSC builder generating &gt;300 DSC PowerShell modules uploaded on the forge</li>
+  <li>3 OS certifications</li>
+  <li>Certified all the supported modules again Puppet 7, including:
+    <ol>
+      <li>Raising and testing fixes for numerous issues in Puppet 7 nightly agent builds prior to release</li>
+    </ol>
+  </li>
+  <li>Rolled out the Trusted Contributor program</li>
+  <li>Improved our community communication with a weekly blog post, enhancing our community reporting</li>
+</ol>
 
-&lt;p&gt;All in all, the IAC community day has not only enabled the team to reconnect with the community, address the content backlog, and upskill across the team;
+<p>All in all, the IAC community day has not only enabled the team to reconnect with the community, address the content backlog, and upskill across the team;
 it has also improved team productivity by reducing distraction and increasing team morale.
 Mondays are, at the best of times, a tough day.
-Starting a week off with a win? Priceless.&lt;/p&gt;
+Starting a week off with a win? Priceless.</p>
 
-&lt;p&gt;Sadly, Community Day is coming to an end.
-Due to a significant reduction in resourcing, it is no longer possible to provide the technical support needed to run a dedicated community support day.&lt;/p&gt;
+<p>Sadly, Community Day is coming to an end.
+Due to a significant reduction in resourcing, it is no longer possible to provide the technical support needed to run a dedicated community support day.</p>
 
-&lt;p&gt;The content maintained by the IAC team is still of high importance to Puppet.
+<p>The content maintained by the IAC team is still of high importance to Puppet.
 Puppet would like to encourage our community to reach out via our public slack channels for assistance.
-Our PM team will help prioritize issues raised.&lt;/p&gt;
+Our PM team will help prioritize issues raised.</p>
 
-&lt;h2 id=&quot;farewell-norman-&quot;&gt;Farewell, Norman 💜&lt;/h2&gt;
+<h2 id="farewell-norman-">Farewell, Norman 💜</h2>
 
-&lt;p&gt;This week we have to say farewell to Norman, the Engineering Manager of the IAC and DevX Teams.
-This is a particularly sad goodbye as many of us, past and present, consider Norman one of the best leaders we have had the privilege of working with.&lt;/p&gt;
+<p>This week we have to say farewell to Norman, the Engineering Manager of the IAC and DevX Teams.
+This is a particularly sad goodbye as many of us, past and present, consider Norman one of the best leaders we have had the privilege of working with.</p>
 
-&lt;p&gt;In just under three years, Norman led us to some fantastic achievements and kept us motivated and moving forward through turbulent times.
+<p>In just under three years, Norman led us to some fantastic achievements and kept us motivated and moving forward through turbulent times.
 Norman has shown unparalleled dedication to his team’s wellbeing, motivation, and personal development whilst still acting as a clarifying arbiter between the high-level vision and plans of the organisation.
-It was a tough balancing act that he seemed to be able to do, with his usual 110% dedication he never falters from.&lt;/p&gt;
+It was a tough balancing act that he seemed to be able to do, with his usual 110% dedication he never falters from.</p>
 
-&lt;p&gt;Norman motivated and enabled us to become far better engineers and people than we were prior to being taken under his wing.
+<p>Norman motivated and enabled us to become far better engineers and people than we were prior to being taken under his wing.
 The remit of the IAC team is a tough one, and one that can often be underappreciated, but Norman always fought our corner and sung our praises to anyone who stood still long enough to listen.
 Norman was great at suggesting and soliciting us to suggest new processes / ideas (Community Day being a prime example), that would make us more efficient and motivated, as a team.
-We benefited from his wealth of knowledge, experience (both technical and managerial) and genuine care for his colleagues and team.&lt;/p&gt;
+We benefited from his wealth of knowledge, experience (both technical and managerial) and genuine care for his colleagues and team.</p>
 
-&lt;p&gt;We’d like to thank Norman for his hard work and support over these nearly three years.
-The IAC and DevX teams owe him a huge gratitude and we’ll miss him, as we bid farewell and good luck in your next venture!&lt;/p&gt;</content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html">IAC Community Day</summary></entry><entry><title type="html">2021-10-11: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html" rel="alternate" type="text/html" title="2021-10-11: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-11T00:00:00+00:00</published><updated>2021-10-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<p>We’d like to thank Norman for his hard work and support over these nearly three years.
+The IAC and DevX teams owe him a huge gratitude and we’ll miss him, as we bid farewell and good luck in your next venture!</p>]]></content><author><name>michaeltlombardi</name></author><category term="team" /><category term="status" /><summary type="html"><![CDATA[IAC Community Day]]></summary></entry><entry><title type="html">2021-10-11: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html" rel="alternate" type="text/html" title="2021-10-11: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-11T00:00:00+00:00</published><updated>2021-10-11T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/11/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1019&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1019&lt;/code&gt;&lt;/a&gt;: “Bugfix MODULES-11203: error on second apply when uid or gid is specified as a range”, thanks to &lt;a href=&quot;https://github.com/cmd-ntrf&quot;&gt;cmd-ntrf&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1018&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1018&lt;/code&gt;&lt;/a&gt;: “Fedora 34 and iptables-compat fix; properly utilising iptables param.”, thanks to &lt;a href=&quot;https://github.com/adamboutcher&quot;&gt;adamboutcher&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1307&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1307&lt;/code&gt;&lt;/a&gt;: “Drop further code for Debian 6 and Ubuntu 10”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1306&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1306&lt;/code&gt;&lt;/a&gt;: “MODULES-11201: add service_name for Ubuntu 18.04 and later”, thanks to &lt;a href=&quot;https://github.com/moritz-makandra&quot;&gt;moritz-makandra&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1297&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1297&lt;/code&gt;&lt;/a&gt;: “Support target_role in default_privileges”, thanks to &lt;a href=&quot;https://github.com/fish-face&quot;&gt;fish-face&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/197&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#197&lt;/code&gt;&lt;/a&gt;: “Release 1.10.1”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/196&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#196&lt;/code&gt;&lt;/a&gt;: “CI: Test if the gem builds”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/195&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#195&lt;/code&gt;&lt;/a&gt;: “facter 4.0: Regenerate factsets with legacy facts”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/194&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#194&lt;/code&gt;&lt;/a&gt;: “facter 4.1: Regenerate factsets with legacy facts”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/193&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#193&lt;/code&gt;&lt;/a&gt;: “facter 4.2: Regenerate factsets with legacy facts”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/192&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#192&lt;/code&gt;&lt;/a&gt;: “Remove EoL OSes from Vagrantfile”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/191&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#191&lt;/code&gt;&lt;/a&gt;: “get_facts.sh: Collect legacy facts as well”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/190&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#190&lt;/code&gt;&lt;/a&gt;: “get_facts.sh: Ignore facter 1.X/2.x”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/dropsonde/pull/13&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;dropsonde#13&lt;/code&gt;&lt;/a&gt;: “Load Ruby’s CA certificates instead of using httpclient defaults”, thanks to &lt;a href=&quot;https://github.com/Magisus&quot;&gt;Magisus&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/427&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#427&lt;/code&gt;&lt;/a&gt;: “Allow Litmus Functions to accept a target”, thanks to &lt;a href=&quot;https://github.com/RandomNoun7&quot;&gt;RandomNoun7&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1019"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1019</code></a>: “Bugfix MODULES-11203: error on second apply when uid or gid is specified as a range”, thanks to <a href="https://github.com/cmd-ntrf">cmd-ntrf</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1018"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1018</code></a>: “Fedora 34 and iptables-compat fix; properly utilising iptables param.”, thanks to <a href="https://github.com/adamboutcher">adamboutcher</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1307"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1307</code></a>: “Drop further code for Debian 6 and Ubuntu 10”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1306"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1306</code></a>: “MODULES-11201: add service_name for Ubuntu 18.04 and later”, thanks to <a href="https://github.com/moritz-makandra">moritz-makandra</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1297"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1297</code></a>: “Support target_role in default_privileges”, thanks to <a href="https://github.com/fish-face">fish-face</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/197"><code class="language-plaintext highlighter-rouge">facterdb#197</code></a>: “Release 1.10.1”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/196"><code class="language-plaintext highlighter-rouge">facterdb#196</code></a>: “CI: Test if the gem builds”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/195"><code class="language-plaintext highlighter-rouge">facterdb#195</code></a>: “facter 4.0: Regenerate factsets with legacy facts”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/194"><code class="language-plaintext highlighter-rouge">facterdb#194</code></a>: “facter 4.1: Regenerate factsets with legacy facts”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/193"><code class="language-plaintext highlighter-rouge">facterdb#193</code></a>: “facter 4.2: Regenerate factsets with legacy facts”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/192"><code class="language-plaintext highlighter-rouge">facterdb#192</code></a>: “Remove EoL OSes from Vagrantfile”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/191"><code class="language-plaintext highlighter-rouge">facterdb#191</code></a>: “get_facts.sh: Collect legacy facts as well”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/190"><code class="language-plaintext highlighter-rouge">facterdb#190</code></a>: “get_facts.sh: Ignore facter 1.X/2.x”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/dropsonde/pull/13"><code class="language-plaintext highlighter-rouge">dropsonde#13</code></a>: “Load Ruby’s CA certificates instead of using httpclient defaults”, thanks to <a href="https://github.com/Magisus">Magisus</a></li>
+  <li><a href="https://github.com/puppetlabs/puppet_litmus/pull/427"><code class="language-plaintext highlighter-rouge">puppet_litmus#427</code></a>: “Allow Litmus Functions to accept a target”, thanks to <a href="https://github.com/RandomNoun7">RandomNoun7</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.3.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.3.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.0.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib</code></a> (<code class="language-plaintext highlighter-rouge">8.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt"><code class="language-plaintext highlighter-rouge">puppetlabs-apt</code></a> (<code class="language-plaintext highlighter-rouge">8.3.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.3.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-apache"><code class="language-plaintext highlighter-rouge">puppetlabs-apache</code></a> (<code class="language-plaintext highlighter-rouge">7.0.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><category term="java" /><category term="stdlib" /><category term="apt" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-10-04: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update.html" rel="alternate" type="text/html" title="2021-10-04: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><category term="java" /><category term="stdlib" /><category term="apt" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-10-04: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update.html" rel="alternate" type="text/html" title="2021-10-04: IAC &amp;amp; DevX Team Status Update" /><published>2021-10-04T00:00:00+00:00</published><updated>2021-10-04T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/10/04/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2195&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2195&lt;/code&gt;&lt;/a&gt;: “Allow &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;docroot&lt;/code&gt; with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;mod_vhost_alias&lt;/code&gt; &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;virtual_docroot&lt;/code&gt;”, thanks to &lt;a href=&quot;https://github.com/yakatz&quot;&gt;yakatz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2191&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2191&lt;/code&gt;&lt;/a&gt;: “add double quote on scope parameter”, thanks to &lt;a href=&quot;https://github.com/aba-rechsteiner&quot;&gt;aba-rechsteiner&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/1007&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#1007&lt;/code&gt;&lt;/a&gt;: “(MODULES-11173) Add per-host overrides for apt::proxy”, thanks to &lt;a href=&quot;https://github.com/maturnbull&quot;&gt;maturnbull&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-chocolatey/pull/269&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-chocolatey#269&lt;/code&gt;&lt;/a&gt;: “add support for version range”, thanks to &lt;a href=&quot;https://github.com/rico89&quot;&gt;rico89&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/774&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#774&lt;/code&gt;&lt;/a&gt;: “Prefer timeout to time_limit for Facter::Core::Execution”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1019&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1019&lt;/code&gt;&lt;/a&gt;: “Bugfix MODULES-11203: error on second apply when uid or gid is specified as a range”, thanks to &lt;a href=&quot;https://github.com/cmd-ntrf&quot;&gt;cmd-ntrf&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/488&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java#488&lt;/code&gt;&lt;/a&gt;: “Enabling Rocky Linux for Install”, thanks to &lt;a href=&quot;https://github.com/pmjensen&quot;&gt;pmjensen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks/pull/378&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks#378&lt;/code&gt;&lt;/a&gt;: “Fix “password” as Property”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1307&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1307&lt;/code&gt;&lt;/a&gt;: “Drop further code for Debian 6 and Ubuntu 10”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1306&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1306&lt;/code&gt;&lt;/a&gt;: “MODULES-11201: add service_name for Ubuntu 18.04 and later”, thanks to &lt;a href=&quot;https://github.com/moritz-makandra&quot;&gt;moritz-makandra&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1299&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1299&lt;/code&gt;&lt;/a&gt;: “Inline file contents in the catalog”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1296&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1296&lt;/code&gt;&lt;/a&gt;: “Fix changing default encoding”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1279&lt;/code&gt;&lt;/a&gt;: “Use Puppet-Datatype Sensitive for Passwords”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1213&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1213&lt;/code&gt;&lt;/a&gt;: “stdlib::ensure: Add support for package resource”, thanks to &lt;a href=&quot;https://github.com/david-caro&quot;&gt;david-caro&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1195&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1195&lt;/code&gt;&lt;/a&gt;: “(MODULES-11126) Replacing URI.escape with URI::DEFAULT_PARSER”, thanks to &lt;a href=&quot;https://github.com/valleedelisle&quot;&gt;valleedelisle&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/karelyatin&quot;&gt;karelyatin&lt;/a&gt;, &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/189&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#189&lt;/code&gt;&lt;/a&gt;: “Release 1.10.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/188&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#188&lt;/code&gt;&lt;/a&gt;: “Ubuntu 18.04/20.04, RedHat 8: Update factsets”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/rspec-puppet-facts/pull/134&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet-facts#134&lt;/code&gt;&lt;/a&gt;: “Release 2.0.3”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/rspec-puppet-facts/pull/133&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet-facts#133&lt;/code&gt;&lt;/a&gt;: “regenerate puppet_agent_components.json”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/iac/pull/315&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iac#315&lt;/code&gt;&lt;/a&gt;: “Bump jekyll from 4.2.0 to 4.2.1”, thanks to [dependabot[bot]][dependabot[bot]]&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-module-gems/pull/167&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-module-gems#167&lt;/code&gt;&lt;/a&gt;: “(maint) Fix pry dependency issue.”, thanks to &lt;a href=&quot;https://github.com/BobosilaVictor&quot;&gt;BobosilaVictor&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/427&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#427&lt;/code&gt;&lt;/a&gt;: “Allow Litmus Functions to accept a target”, thanks to &lt;a href=&quot;https://github.com/RandomNoun7&quot;&gt;RandomNoun7&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2195"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2195</code></a>: “Allow <code class="language-plaintext highlighter-rouge">docroot</code> with <code class="language-plaintext highlighter-rouge">mod_vhost_alias</code> <code class="language-plaintext highlighter-rouge">virtual_docroot</code>”, thanks to <a href="https://github.com/yakatz">yakatz</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2191"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2191</code></a>: “add double quote on scope parameter”, thanks to <a href="https://github.com/aba-rechsteiner">aba-rechsteiner</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/1007"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#1007</code></a>: “(MODULES-11173) Add per-host overrides for apt::proxy”, thanks to <a href="https://github.com/maturnbull">maturnbull</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-chocolatey/pull/269"><code class="language-plaintext highlighter-rouge">puppetlabs-chocolatey#269</code></a>: “add support for version range”, thanks to <a href="https://github.com/rico89">rico89</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/774"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#774</code></a>: “Prefer timeout to time_limit for Facter::Core::Execution”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1019"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1019</code></a>: “Bugfix MODULES-11203: error on second apply when uid or gid is specified as a range”, thanks to <a href="https://github.com/cmd-ntrf">cmd-ntrf</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java/pull/488"><code class="language-plaintext highlighter-rouge">puppetlabs-java#488</code></a>: “Enabling Rocky Linux for Install”, thanks to <a href="https://github.com/pmjensen">pmjensen</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java_ks/pull/378"><code class="language-plaintext highlighter-rouge">puppetlabs-java_ks#378</code></a>: “Fix “password” as Property”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1307"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1307</code></a>: “Drop further code for Debian 6 and Ubuntu 10”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1306"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1306</code></a>: “MODULES-11201: add service_name for Ubuntu 18.04 and later”, thanks to <a href="https://github.com/moritz-makandra">moritz-makandra</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1299"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1299</code></a>: “Inline file contents in the catalog”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1296"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1296</code></a>: “Fix changing default encoding”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1279</code></a>: “Use Puppet-Datatype Sensitive for Passwords”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1213"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1213</code></a>: “stdlib::ensure: Add support for package resource”, thanks to <a href="https://github.com/david-caro">david-caro</a> and the following people who helped get it over the line (<a href="https://github.com/b4ldr">b4ldr</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1195"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1195</code></a>: “(MODULES-11126) Replacing URI.escape with URI::DEFAULT_PARSER”, thanks to <a href="https://github.com/valleedelisle">valleedelisle</a> and the following people who helped get it over the line (<a href="https://github.com/karelyatin">karelyatin</a>, <a href="https://github.com/b4ldr">b4ldr</a>)</li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/189"><code class="language-plaintext highlighter-rouge">facterdb#189</code></a>: “Release 1.10.0”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/188"><code class="language-plaintext highlighter-rouge">facterdb#188</code></a>: “Ubuntu 18.04/20.04, RedHat 8: Update factsets”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/rspec-puppet-facts/pull/134"><code class="language-plaintext highlighter-rouge">rspec-puppet-facts#134</code></a>: “Release 2.0.3”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/rspec-puppet-facts/pull/133"><code class="language-plaintext highlighter-rouge">rspec-puppet-facts#133</code></a>: “regenerate puppet_agent_components.json”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/iac/pull/315"><code class="language-plaintext highlighter-rouge">iac#315</code></a>: “Bump jekyll from 4.2.0 to 4.2.1”, thanks to [dependabot[bot]][dependabot[bot]]</li>
+  <li><a href="https://github.com/puppetlabs/puppet-module-gems/pull/167"><code class="language-plaintext highlighter-rouge">puppet-module-gems#167</code></a>: “(maint) Fix pry dependency issue.”, thanks to <a href="https://github.com/BobosilaVictor">BobosilaVictor</a></li>
+  <li><a href="https://github.com/puppetlabs/puppet_litmus/pull/427"><code class="language-plaintext highlighter-rouge">puppet_litmus#427</code></a>: “Allow Litmus Functions to accept a target”, thanks to <a href="https://github.com/RandomNoun7">RandomNoun7</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.3.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.2&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.5.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib</code></a> (<code class="language-plaintext highlighter-rouge">8.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt"><code class="language-plaintext highlighter-rouge">puppetlabs-apt</code></a> (<code class="language-plaintext highlighter-rouge">8.3.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker"><code class="language-plaintext highlighter-rouge">puppetlabs-docker</code></a> (<code class="language-plaintext highlighter-rouge">4.1.2</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.2.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-postgresql"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql</code></a> (<code class="language-plaintext highlighter-rouge">7.5.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h2 id=&quot;puppet-module-major-releases&quot;&gt;Puppet Module Major Releases&lt;/h2&gt;
+<h2 id="puppet-module-major-releases">Puppet Module Major Releases</h2>
 
-&lt;p&gt;Looking into the future, we only have a single major release planned, this being Apache v7.0.0. So if you use this module you should get ready for this to come on our next community day.&lt;/p&gt;
+<p>Looking into the future, we only have a single major release planned, this being Apache v7.0.0. So if you use this module you should get ready for this to come on our next community day.</p>
 
-&lt;h2 id=&quot;farewell-danny&quot;&gt;Farewell Danny&lt;/h2&gt;
+<h2 id="farewell-danny">Farewell Danny</h2>
 
-&lt;p&gt;Finally, we have to end on a sad note :cry:&lt;/p&gt;
+<p>Finally, we have to end on a sad note :cry:</p>
 
-&lt;p&gt;This will be &lt;a href=&quot;https://github.com/carabasdaniel&quot;&gt;Danny’s&lt;/a&gt; last week on the IAC Team.
-Daniel was a founding member of the IAC team and has shown great professionalism, focus and drive, to help deliver true value to our customers and community.&lt;/p&gt;
+<p>This will be <a href="https://github.com/carabasdaniel">Danny’s</a> last week on the IAC Team.
+Daniel was a founding member of the IAC team and has shown great professionalism, focus and drive, to help deliver true value to our customers and community.</p>
 
-&lt;p&gt;Some of the major stand outs from Danny’s time on the IAC Team (and in Puppet), are the Cloud CI and Automated Release Tooling, which are invaluable, integral parts of the IAC Team’s process.
-Danny also lent his expertise to the Forge team, helping to design and implement functionality to facilitate the introduction of premium content.&lt;/p&gt;
+<p>Some of the major stand outs from Danny’s time on the IAC Team (and in Puppet), are the Cloud CI and Automated Release Tooling, which are invaluable, integral parts of the IAC Team’s process.
+Danny also lent his expertise to the Forge team, helping to design and implement functionality to facilitate the introduction of premium content.</p>
 
-&lt;p&gt;We were very fortunate to have Danny’s considerable breadth of knowledge in Cloud technologies - he’s been instrumental in maintaining and enhancing the Docker and Kubernetes modules.&lt;/p&gt;
+<p>We were very fortunate to have Danny’s considerable breadth of knowledge in Cloud technologies - he’s been instrumental in maintaining and enhancing the Docker and Kubernetes modules.</p>
 
-&lt;p&gt;He has been a fantastic colleague, mentor and friend to us all.
-From all of us on the IAC team - the very best of luck for the future, and thanks for all you’ve done for us. :beer: :rocket:&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><category term="danny" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-09-20: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update.html" rel="alternate" type="text/html" title="2021-09-20: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-20T00:00:00+00:00</published><updated>2021-09-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<p>He has been a fantastic colleague, mentor and friend to us all.
+From all of us on the IAC team - the very best of luck for the future, and thanks for all you’ve done for us. :beer: :rocket:</p>]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><category term="danny" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-09-20: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update.html" rel="alternate" type="text/html" title="2021-09-20: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-20T00:00:00+00:00</published><updated>2021-09-20T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/09/20/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2193&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2193&lt;/code&gt;&lt;/a&gt;: “Restore Ubuntu 14.04 support in suphp”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2191&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2191&lt;/code&gt;&lt;/a&gt;: “add double quote on scope parameter”, thanks to &lt;a href=&quot;https://github.com/aba-rechsteiner&quot;&gt;aba-rechsteiner&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2189&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2189&lt;/code&gt;&lt;/a&gt;: “Drop Debian &amp;lt; 8 and Ubuntu &amp;lt; 14.04 code”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/1007&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#1007&lt;/code&gt;&lt;/a&gt;: “(MODULES-11173) Add per-host overrides for apt::proxy”, thanks to &lt;a href=&quot;https://github.com/maturnbull&quot;&gt;maturnbull&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/999&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#999&lt;/code&gt;&lt;/a&gt;: “(maint) Set DEBIAN_FRONTEND=noninteractive on upgrade”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/774&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#774&lt;/code&gt;&lt;/a&gt;: “Prefer timeout to time_limit for Facter::Core::Execution”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/498&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#498&lt;/code&gt;&lt;/a&gt;: “Adding chroot_dir_manage parameter.”, thanks to &lt;a href=&quot;https://github.com/Tamerz&quot;&gt;Tamerz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/488&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java#488&lt;/code&gt;&lt;/a&gt;: “Enabling Rocky Linux for Install”, thanks to &lt;a href=&quot;https://github.com/pmjensen&quot;&gt;pmjensen&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1299&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1299&lt;/code&gt;&lt;/a&gt;: “Inline file contents in the catalog”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1296&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1296&lt;/code&gt;&lt;/a&gt;: “Fix changing default encoding”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1279&lt;/code&gt;&lt;/a&gt;: “Use Puppet-Datatype Sensitive for Passwords”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1209&lt;/code&gt;&lt;/a&gt;: “Added to_toml function”, thanks to &lt;a href=&quot;https://github.com/nmaludy&quot;&gt;nmaludy&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2193"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2193</code></a>: “Restore Ubuntu 14.04 support in suphp”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2191"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2191</code></a>: “add double quote on scope parameter”, thanks to <a href="https://github.com/aba-rechsteiner">aba-rechsteiner</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2189"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2189</code></a>: “Drop Debian &lt; 8 and Ubuntu &lt; 14.04 code”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/1007"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#1007</code></a>: “(MODULES-11173) Add per-host overrides for apt::proxy”, thanks to <a href="https://github.com/maturnbull">maturnbull</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/999"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#999</code></a>: “(maint) Set DEBIAN_FRONTEND=noninteractive on upgrade”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/774"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#774</code></a>: “Prefer timeout to time_limit for Facter::Core::Execution”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy/pull/498"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy#498</code></a>: “Adding chroot_dir_manage parameter.”, thanks to <a href="https://github.com/Tamerz">Tamerz</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java/pull/488"><code class="language-plaintext highlighter-rouge">puppetlabs-java#488</code></a>: “Enabling Rocky Linux for Install”, thanks to <a href="https://github.com/pmjensen">pmjensen</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1299"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1299</code></a>: “Inline file contents in the catalog”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1296"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1296</code></a>: “Fix changing default encoding”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1279"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1279</code></a>: “Use Puppet-Datatype Sensitive for Passwords”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1209</code></a>: “Added to_toml function”, thanks to <a href="https://github.com/nmaludy">nmaludy</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet-lint&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.5.2&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.2.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppet-lint"><code class="language-plaintext highlighter-rouge">puppet-lint</code></a> (<code class="language-plaintext highlighter-rouge">2.5.2</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h3 id=&quot;the-dropping-of-support&quot;&gt;The dropping of support&lt;/h3&gt;
+<h3 id="the-dropping-of-support">The dropping of support</h3>
 
-&lt;p&gt;Due to the large amount of major releases that where made during the last time we removed support for an OS from our supported modules and following discussion within the team, it has been decided that going forward metadata changes, i.e. a drop in support, will no longer result in a major release.
+<p>Due to the large amount of major releases that where made during the last time we removed support for an OS from our supported modules and following discussion within the team, it has been decided that going forward metadata changes, i.e. a drop in support, will no longer result in a major release.
 In cases where code necesary for said OS to function is removed, i.e. a drop in compatibility, this will still result in a major release, however we will attempt to pair this type of change with other similar major changes in order to keep the amount of major releases down.
-This may be subject to change however so please keep in touch and come forward with any questions that you may have.&lt;/p&gt;
+This may be subject to change however so please keep in touch and come forward with any questions that you may have.</p>
 
-&lt;h2 id=&quot;devx-team-updates&quot;&gt;DevX Team Updates&lt;/h2&gt;
+<h2 id="devx-team-updates">DevX Team Updates</h2>
 
-&lt;p&gt;As some of you are probably aware of, the PCT tool has been the main focus of the DevX team for the past few months.
+<p>As some of you are probably aware of, the PCT tool has been the main focus of the DevX team for the past few months.
 It is the first part of a suite of tools that will replace the PDK.
-To help clarify our strategy and vision, &lt;a href=&quot;https://github.com/da-ar&quot;&gt;Dave&lt;/a&gt; wrote a blog post that was published to &lt;a href=&quot;https://puppet.com&quot;&gt;puppet.com&lt;/a&gt;, last week - &lt;a href=&quot;https://puppet.com/blog/the-future-of-the-puppet-developer-kit-pdk/&quot;&gt;check it out here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;h3 id=&quot;pct-040&quot;&gt;PCT 0.4.0&lt;/h3&gt;
-
-&lt;p&gt;We released version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.4.0&lt;/code&gt; of the PCT tool on Friday, which brings a number of significant new features:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pct install&lt;/code&gt; can now install remote &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;tar.gz&lt;/code&gt; templates via HTTP/S&lt;/li&gt;
-  &lt;li&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pct new&lt;/code&gt; now handles templates in the new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.4.0&lt;/code&gt; format&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;As highlighted, PCT templates are now in a new format that is &lt;strong&gt;not backwards compatible&lt;/strong&gt; with earlier formats.&lt;/p&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://github.com/puppetlabs/pdkgo/blob/main/CHANGELOG.md#040&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.4.0&lt;/code&gt; README entry&lt;/a&gt; for full details.&lt;/p&gt;
-
-&lt;h3 id=&quot;puppet-lint-252&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint 2.5.2&lt;/code&gt;&lt;/h3&gt;
-
-&lt;p&gt;There is also a new release of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet-lint&lt;/code&gt; gem which resolves &lt;a href=&quot;https://github.com/puppetlabs/puppet-lint/issues/16&quot;&gt;an issue&lt;/a&gt; with a F+ in the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;double_quoted_strings&lt;/code&gt; check when the string literal &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;\s&lt;/code&gt; was used in a manfest.
-Thanks to [optiz0r][https://github.com/optiz0r] for highlighting.&lt;/p&gt;
-
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="java" /><category term="puppet-lint" /><category term="pct" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-09-13: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update.html" rel="alternate" type="text/html" title="2021-09-13: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-13T00:00:00+00:00</published><updated>2021-09-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2193&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2193&lt;/code&gt;&lt;/a&gt;: “Restore Ubuntu 14.04 support in suphp”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2189&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2189&lt;/code&gt;&lt;/a&gt;: “Drop Debian &amp;lt; 8 and Ubuntu &amp;lt; 14.04 code”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/999&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#999&lt;/code&gt;&lt;/a&gt;: “(maint) Set DEBIAN_FRONTEND=noninteractive on upgrade”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/773&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#773&lt;/code&gt;&lt;/a&gt;: “Fix facts gathering”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1010&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1010&lt;/code&gt;&lt;/a&gt;: “Fix “undefined method &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;gsub&lt;/code&gt; for nil:NilClass” when changing existing rule UID from absent to any present”, thanks to &lt;a href=&quot;https://github.com/onyxmaster&quot;&gt;onyxmaster&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1006&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1006&lt;/code&gt;&lt;/a&gt;: “Replace travis link in README.md with GHA”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy/pull/498&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy#498&lt;/code&gt;&lt;/a&gt;: “Adding chroot_dir_manage parameter.”, thanks to &lt;a href=&quot;https://github.com/Tamerz&quot;&gt;Tamerz&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/493&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java#493&lt;/code&gt;&lt;/a&gt;: “Allow archive 6.x”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package/pull/265&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package#265&lt;/code&gt;&lt;/a&gt;: “Expose package manager options to task”, thanks to &lt;a href=&quot;https://github.com/MartyEwings&quot;&gt;MartyEwings&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1209&lt;/code&gt;&lt;/a&gt;: “Added to_toml function”, thanks to &lt;a href=&quot;https://github.com/nmaludy&quot;&gt;nmaludy&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/451&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#451&lt;/code&gt;&lt;/a&gt;: “Remove env from GitHub template if all sub-keys are unset”, thanks to &lt;a href=&quot;https://github.com/thebeanogamer&quot;&gt;thebeanogamer&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/446&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#446&lt;/code&gt;&lt;/a&gt;: “Don’t append a tag to image name if one already exists”, thanks to &lt;a href=&quot;https://github.com/silug&quot;&gt;silug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdksync/pull/156&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdksync#156&lt;/code&gt;&lt;/a&gt;: “Remove reference to non existent branch”, thanks to &lt;a href=&quot;https://github.com/attachmentgenie&quot;&gt;attachmentgenie&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-firewall&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.3.0&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;puppetlabs-apache-module-droppped-code-for-debian--8-and-ubuntu--1404&quot;&gt;puppetlabs-apache module droppped code for Debian &amp;lt; 8 and Ubuntu &amp;lt; 14.04&lt;/h2&gt;
-
-&lt;p&gt;Removed the Debian &amp;lt; 8 and Ubuntu &amp;lt; 14.04 code from the apache module with the following PRs. Thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2189&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2189&lt;/code&gt;&lt;/a&gt;: “Drop Debian &amp;lt; 8 and Ubuntu &amp;lt; 14.04 code”.&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2193&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2193&lt;/code&gt;&lt;/a&gt;: “Restore Ubuntu 14.04 support in suphp”.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;This will be a backward incompatible changes and the next release will be major version bump &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;v7.0.0&lt;/code&gt;.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-09-06: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update.html" rel="alternate" type="text/html" title="2021-09-06: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-06T00:00:00+00:00</published><updated>2021-09-06T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
-
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past 2 weeks:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2188&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2188&lt;/code&gt;&lt;/a&gt;: “Various spec cleanups”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2186&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2186&lt;/code&gt;&lt;/a&gt;: “Debian 11: fix typo in &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;versioncmp()&lt;/code&gt; / set default php to 7.4”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache/pull/2184&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache#2184&lt;/code&gt;&lt;/a&gt;: “(maint) Allow stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/1001&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#1001&lt;/code&gt;&lt;/a&gt;: “(maint) Add support for Debian 11”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt/pull/1000&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt#1000&lt;/code&gt;&lt;/a&gt;: “(main) Allow stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat/pull/716&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat#716&lt;/code&gt;&lt;/a&gt;: “(maint) Allow stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1010&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1010&lt;/code&gt;&lt;/a&gt;: “Fix “undefined method `gsub’ for nil:NilClass” when changing existing rule UID from absent to any present”, thanks to &lt;a href=&quot;https://github.com/onyxmaster&quot;&gt;onyxmaster&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-firewall/pull/1009&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall#1009&lt;/code&gt;&lt;/a&gt;: “(IAC-1739) Fix CI with stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java/pull/493&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java#493&lt;/code&gt;&lt;/a&gt;: “Allow archive 6.x”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/531&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#531&lt;/code&gt;&lt;/a&gt;: “Support Kubernetes 1.22 and kubeadm v1beta3 configurations”, thanks to &lt;a href=&quot;https://github.com/treydock&quot;&gt;treydock&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp/pull/633&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ntp#633&lt;/code&gt;&lt;/a&gt;: “(maint) Allow stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package/pull/265&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package#265&lt;/code&gt;&lt;/a&gt;: “Expose package manager options to task”, thanks to &lt;a href=&quot;https://github.com/MartyEwings&quot;&gt;MartyEwings&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1293&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1293&lt;/code&gt;&lt;/a&gt;: “(maint) Allow stdlib 8.0.0”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1290&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1290&lt;/code&gt;&lt;/a&gt;: “drop code for Debian 6/7 and Ubuntu 10.04/12.04”, thanks to &lt;a href=&quot;https://github.com/evgeni&quot;&gt;evgeni&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry/pull/254&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-registry#254&lt;/code&gt;&lt;/a&gt;: “Add possibility to produce a detailed error message “, thanks to &lt;a href=&quot;https://github.com/reidmv&quot;&gt;reidmv&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1207&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1207&lt;/code&gt;&lt;/a&gt;: “os_version_gte: fix version comparison logic”, thanks to &lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1204&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1204&lt;/code&gt;&lt;/a&gt;: “max, lstrip: fix deprecated message”, thanks to &lt;a href=&quot;https://github.com/b4ldr&quot;&gt;b4ldr&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1200&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1200&lt;/code&gt;&lt;/a&gt;: “New function to_python() / to_ruby()”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/186&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#186&lt;/code&gt;&lt;/a&gt;: “Release 1.9.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/453&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#453&lt;/code&gt;&lt;/a&gt;: “(GH-327) Fix rubocop “off” &amp;amp; “hardcore” profiles”, thanks to &lt;a href=&quot;https://github.com/russellshackleford&quot;&gt;russellshackleford&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/446&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#446&lt;/code&gt;&lt;/a&gt;: “Don’t append a tag to image name if one already exists”, thanks to &lt;a href=&quot;https://github.com/silug&quot;&gt;silug&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdksync/pull/156&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdksync#156&lt;/code&gt;&lt;/a&gt;: “Remove reference to non existent branch”, thanks to &lt;a href=&quot;https://github.com/attachmentgenie&quot;&gt;attachmentgenie&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
-
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
-
-&lt;p&gt;The following modules were released over the past 2 weeks:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.0.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-ntp&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-ntp&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;9.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apt&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apt&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;8.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-inifile&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-inifile&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.5.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-firewall&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-firewall&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.4.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.2.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;http://github.com/puppetlabs/puppetlabs-mysql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;12.0.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java_ks&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java_ks&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-motd&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-motd&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-tomcat&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-tomcat&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-registry&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-registry&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.0.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.1&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.3.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-service&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-service&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-puppet_conf&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-puppet_conf&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;1.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-tagmail/&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-tagmail&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-exec&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-exec&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.0.0&lt;/code&gt;)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The following gem was released this week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.29.0&lt;/code&gt;)&lt;/p&gt;
-
-  &lt;/li&gt;
-&lt;/ul&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="debian11" /><category term="litmus" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-08-23: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html" rel="alternate" type="text/html" title="2021-08-23: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-23T00:00:00+00:00</published><updated>2021-08-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+To help clarify our strategy and vision, <a href="https://github.com/da-ar">Dave</a> wrote a blog post that was published to <a href="https://puppet.com">puppet.com</a>, last week - <a href="https://puppet.com/blog/the-future-of-the-puppet-developer-kit-pdk/">check it out here</a>.</p>
+
+<h3 id="pct-040">PCT 0.4.0</h3>
+
+<p>We released version <code class="language-plaintext highlighter-rouge">0.4.0</code> of the PCT tool on Friday, which brings a number of significant new features:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">pct install</code> can now install remote <code class="language-plaintext highlighter-rouge">tar.gz</code> templates via HTTP/S</li>
+  <li><code class="language-plaintext highlighter-rouge">pct new</code> now handles templates in the new <code class="language-plaintext highlighter-rouge">0.4.0</code> format</li>
+</ul>
+
+<p>As highlighted, PCT templates are now in a new format that is <strong>not backwards compatible</strong> with earlier formats.</p>
+
+<p>Check out the <a href="https://github.com/puppetlabs/pdkgo/blob/main/CHANGELOG.md#040"><code class="language-plaintext highlighter-rouge">0.4.0</code> README entry</a> for full details.</p>
+
+<h3 id="puppet-lint-252"><code class="language-plaintext highlighter-rouge">puppet-lint 2.5.2</code></h3>
+
+<p>There is also a new release of the <code class="language-plaintext highlighter-rouge">puppet-lint</code> gem which resolves <a href="https://github.com/puppetlabs/puppet-lint/issues/16">an issue</a> with a F+ in the <code class="language-plaintext highlighter-rouge">double_quoted_strings</code> check when the string literal <code class="language-plaintext highlighter-rouge">\s</code> was used in a manfest.
+Thanks to [optiz0r][https://github.com/optiz0r] for highlighting.</p>
+
+<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="java" /><category term="puppet-lint" /><category term="pct" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-09-13: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update.html" rel="alternate" type="text/html" title="2021-09-13: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-13T00:00:00+00:00</published><updated>2021-09-13T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/apache/2021/09/13/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
+
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2193"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2193</code></a>: “Restore Ubuntu 14.04 support in suphp”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2189"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2189</code></a>: “Drop Debian &lt; 8 and Ubuntu &lt; 14.04 code”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/999"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#999</code></a>: “(maint) Set DEBIAN_FRONTEND=noninteractive on upgrade”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/773"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#773</code></a>: “Fix facts gathering”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1010"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1010</code></a>: “Fix “undefined method <code class="language-plaintext highlighter-rouge">gsub</code> for nil:NilClass” when changing existing rule UID from absent to any present”, thanks to <a href="https://github.com/onyxmaster">onyxmaster</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1006"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1006</code></a>: “Replace travis link in README.md with GHA”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy/pull/498"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy#498</code></a>: “Adding chroot_dir_manage parameter.”, thanks to <a href="https://github.com/Tamerz">Tamerz</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java/pull/493"><code class="language-plaintext highlighter-rouge">puppetlabs-java#493</code></a>: “Allow archive 6.x”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-package/pull/265"><code class="language-plaintext highlighter-rouge">puppetlabs-package#265</code></a>: “Expose package manager options to task”, thanks to <a href="https://github.com/MartyEwings">MartyEwings</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1209"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1209</code></a>: “Added to_toml function”, thanks to <a href="https://github.com/nmaludy">nmaludy</a></li>
+  <li><a href="https://github.com/puppetlabs/pdk-templates/pull/451"><code class="language-plaintext highlighter-rouge">pdk-templates#451</code></a>: “Remove env from GitHub template if all sub-keys are unset”, thanks to <a href="https://github.com/thebeanogamer">thebeanogamer</a></li>
+  <li><a href="https://github.com/puppetlabs/pdk-templates/pull/446"><code class="language-plaintext highlighter-rouge">pdk-templates#446</code></a>: “Don’t append a tag to image name if one already exists”, thanks to <a href="https://github.com/silug">silug</a></li>
+  <li><a href="https://github.com/puppetlabs/pdksync/pull/156"><code class="language-plaintext highlighter-rouge">pdksync#156</code></a>: “Remove reference to non existent branch”, thanks to <a href="https://github.com/attachmentgenie">attachmentgenie</a></li>
+</ul>
+
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
+
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
+
+<p>The following modules were released this week:</p>
+
+<ul>
+  <li><a href="http://github.com/puppetlabs/puppetlabs-firewall"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall</code></a> (<code class="language-plaintext highlighter-rouge">3.2.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-kubernetes"><code class="language-plaintext highlighter-rouge">puppetlabs-kubernetes</code></a> (<code class="language-plaintext highlighter-rouge">6.3.0</code>)</p>
+
+  </li>
+</ul>
+
+<h2 id="puppetlabs-apache-module-droppped-code-for-debian--8-and-ubuntu--1404">puppetlabs-apache module droppped code for Debian &lt; 8 and Ubuntu &lt; 14.04</h2>
+
+<p>Removed the Debian &lt; 8 and Ubuntu &lt; 14.04 code from the apache module with the following PRs. Thanks to <a href="https://github.com/ekohl">ekohl</a></p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2189"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2189</code></a>: “Drop Debian &lt; 8 and Ubuntu &lt; 14.04 code”.</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2193"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2193</code></a>: “Restore Ubuntu 14.04 support in suphp”.</li>
+</ul>
+
+<p>This will be a backward incompatible changes and the next release will be major version bump <code class="language-plaintext highlighter-rouge">v7.0.0</code>.</p>]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="apache" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-09-06: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update.html" rel="alternate" type="text/html" title="2021-09-06: IAC &amp;amp; DevX Team Status Update" /><published>2021-09-06T00:00:00+00:00</published><updated>2021-09-06T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/09/06/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
+
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past 2 weeks:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2188"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2188</code></a>: “Various spec cleanups”, thanks to <a href="https://github.com/ekohl">ekohl</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2186"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2186</code></a>: “Debian 11: fix typo in <code class="language-plaintext highlighter-rouge">versioncmp()</code> / set default php to 7.4”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache/pull/2184"><code class="language-plaintext highlighter-rouge">puppetlabs-apache#2184</code></a>: “(maint) Allow stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/1001"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#1001</code></a>: “(maint) Add support for Debian 11”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt/pull/1000"><code class="language-plaintext highlighter-rouge">puppetlabs-apt#1000</code></a>: “(main) Allow stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-concat/pull/716"><code class="language-plaintext highlighter-rouge">puppetlabs-concat#716</code></a>: “(maint) Allow stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a> and the following people who helped get it over the line (<a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1010"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1010</code></a>: “Fix “undefined method `gsub’ for nil:NilClass” when changing existing rule UID from absent to any present”, thanks to <a href="https://github.com/onyxmaster">onyxmaster</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-firewall/pull/1009"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall#1009</code></a>: “(IAC-1739) Fix CI with stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java/pull/493"><code class="language-plaintext highlighter-rouge">puppetlabs-java#493</code></a>: “Allow archive 6.x”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-kubernetes/pull/531"><code class="language-plaintext highlighter-rouge">puppetlabs-kubernetes#531</code></a>: “Support Kubernetes 1.22 and kubeadm v1beta3 configurations”, thanks to <a href="https://github.com/treydock">treydock</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-ntp/pull/633"><code class="language-plaintext highlighter-rouge">puppetlabs-ntp#633</code></a>: “(maint) Allow stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-package/pull/265"><code class="language-plaintext highlighter-rouge">puppetlabs-package#265</code></a>: “Expose package manager options to task”, thanks to <a href="https://github.com/MartyEwings">MartyEwings</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1293"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1293</code></a>: “(maint) Allow stdlib 8.0.0”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1290"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1290</code></a>: “drop code for Debian 6/7 and Ubuntu 10.04/12.04”, thanks to <a href="https://github.com/evgeni">evgeni</a> and the following people who helped get it over the line (<a href="https://github.com/ekohl">ekohl</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-registry/pull/254"><code class="language-plaintext highlighter-rouge">puppetlabs-registry#254</code></a>: “Add possibility to produce a detailed error message “, thanks to <a href="https://github.com/reidmv">reidmv</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1207"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1207</code></a>: “os_version_gte: fix version comparison logic”, thanks to <a href="https://github.com/kenyon">kenyon</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1204"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1204</code></a>: “max, lstrip: fix deprecated message”, thanks to <a href="https://github.com/b4ldr">b4ldr</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1200"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1200</code></a>: “New function to_python() / to_ruby()”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/186"><code class="language-plaintext highlighter-rouge">facterdb#186</code></a>: “Release 1.9.0”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/pdk-templates/pull/453"><code class="language-plaintext highlighter-rouge">pdk-templates#453</code></a>: “(GH-327) Fix rubocop “off” &amp; “hardcore” profiles”, thanks to <a href="https://github.com/russellshackleford">russellshackleford</a></li>
+  <li><a href="https://github.com/puppetlabs/pdk-templates/pull/446"><code class="language-plaintext highlighter-rouge">pdk-templates#446</code></a>: “Don’t append a tag to image name if one already exists”, thanks to <a href="https://github.com/silug">silug</a></li>
+  <li><a href="https://github.com/puppetlabs/pdksync/pull/156"><code class="language-plaintext highlighter-rouge">pdksync#156</code></a>: “Remove reference to non existent branch”, thanks to <a href="https://github.com/attachmentgenie">attachmentgenie</a></li>
+</ul>
+
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
+
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
+
+<p>The following modules were released over the past 2 weeks:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib</code></a> (<code class="language-plaintext highlighter-rouge">8.0.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-concat"><code class="language-plaintext highlighter-rouge">puppetlabs-concat</code></a> (<code class="language-plaintext highlighter-rouge">7.1.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-ntp"><code class="language-plaintext highlighter-rouge">puppetlabs-ntp</code></a> (<code class="language-plaintext highlighter-rouge">9.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apt"><code class="language-plaintext highlighter-rouge">puppetlabs-apt</code></a> (<code class="language-plaintext highlighter-rouge">8.2.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker"><code class="language-plaintext highlighter-rouge">puppetlabs-docker</code></a> (<code class="language-plaintext highlighter-rouge">4.1.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.1.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-inifile"><code class="language-plaintext highlighter-rouge">puppetlabs-inifile</code></a> (<code class="language-plaintext highlighter-rouge">5.2.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache"><code class="language-plaintext highlighter-rouge">puppetlabs-apache</code></a> (<code class="language-plaintext highlighter-rouge">6.5.1</code>)</li>
+  <li><a href="http://github.com/puppetlabs/puppetlabs-firewall"><code class="language-plaintext highlighter-rouge">puppetlabs-firewall</code></a> (<code class="language-plaintext highlighter-rouge">3.2.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql</code></a> (<code class="language-plaintext highlighter-rouge">7.4.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy</code></a> (<code class="language-plaintext highlighter-rouge">6.2.1</code>)</li>
+  <li><a href="http://github.com/puppetlabs/puppetlabs-mysql"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql</code></a> (<code class="language-plaintext highlighter-rouge">12.0.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java_ks"><code class="language-plaintext highlighter-rouge">puppetlabs-java_ks</code></a> (<code class="language-plaintext highlighter-rouge">4.2.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-motd"><code class="language-plaintext highlighter-rouge">puppetlabs-motd</code></a> (<code class="language-plaintext highlighter-rouge">6.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-tomcat"><code class="language-plaintext highlighter-rouge">puppetlabs-tomcat</code></a> (<code class="language-plaintext highlighter-rouge">6.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-reboot"><code class="language-plaintext highlighter-rouge">puppetlabs-reboot</code></a> (<code class="language-plaintext highlighter-rouge">4.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-registry"><code class="language-plaintext highlighter-rouge">puppetlabs-registry</code></a> (<code class="language-plaintext highlighter-rouge">4.0.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-accounts"><code class="language-plaintext highlighter-rouge">puppetlabs-accounts</code></a> (<code class="language-plaintext highlighter-rouge">7.1.1</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-kubernetes"><code class="language-plaintext highlighter-rouge">puppetlabs-kubernetes</code></a> (<code class="language-plaintext highlighter-rouge">6.3.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-service"><code class="language-plaintext highlighter-rouge">puppetlabs-service</code></a> (<code class="language-plaintext highlighter-rouge">2.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-puppet_conf"><code class="language-plaintext highlighter-rouge">puppetlabs-puppet_conf</code></a> (<code class="language-plaintext highlighter-rouge">1.2.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-tagmail/"><code class="language-plaintext highlighter-rouge">puppetlabs-tagmail</code></a> (<code class="language-plaintext highlighter-rouge">4.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-exec"><code class="language-plaintext highlighter-rouge">puppetlabs-exec</code></a> (<code class="language-plaintext highlighter-rouge">2.0.0</code>)</li>
+</ul>
+
+<p>The following gem was released this week:</p>
+
+<ul>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppet_litmus"><code class="language-plaintext highlighter-rouge">puppet_litmus</code></a> (<code class="language-plaintext highlighter-rouge">0.29.0</code>)</p>
+
+  </li>
+</ul>]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="debian11" /><category term="litmus" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-08-23: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html" rel="alternate" type="text/html" title="2021-08-23: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-23T00:00:00+00:00</published><updated>2021-08-23T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/23/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1291&lt;/code&gt;&lt;/a&gt;: “[IAC-1735] Fix test suite”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;, &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot/pull/305&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot#305&lt;/code&gt;&lt;/a&gt;: “(MODULES-11149) Modify result of ‘last’ to remove current time”, thanks to &lt;a href=&quot;https://github.com/nmburgan&quot;&gt;nmburgan&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/185&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#185&lt;/code&gt;&lt;/a&gt;: “Add Debian 11 facts”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/184&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#184&lt;/code&gt;&lt;/a&gt;: “Add more FreeBSD facts”, thanks to &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/183&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#183&lt;/code&gt;&lt;/a&gt;: “Add Oracle Linux 8 facts”, thanks to &lt;a href=&quot;https://github.com/as0bu&quot;&gt;as0bu&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/181&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#181&lt;/code&gt;&lt;/a&gt;: “Adding puppet7 facter4.2 facts for centos7/8 and debian9/10”, thanks to &lt;a href=&quot;https://github.com/jacobmw&quot;&gt;jacobmw&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/kenyon&quot;&gt;kenyon&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/176&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#176&lt;/code&gt;&lt;/a&gt;: “Adds Rocky Linux vagrant image, facts and get_facts.sh support”, thanks to &lt;a href=&quot;https://github.com/fuero&quot;&gt;fuero&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;, &lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppet_litmus/pull/425&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppet_litmus#425&lt;/code&gt;&lt;/a&gt;: “Added options to idempotent_apply”, thanks to &lt;a href=&quot;https://github.com/ZloeSabo&quot;&gt;ZloeSabo&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
+
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1291</code></a>: “[IAC-1735] Fix test suite”, thanks to <a href="https://github.com/ekohl">ekohl</a> and the following people who helped get it over the line (<a href="https://github.com/smortex">smortex</a>, <a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-reboot/pull/305"><code class="language-plaintext highlighter-rouge">puppetlabs-reboot#305</code></a>: “(MODULES-11149) Modify result of ‘last’ to remove current time”, thanks to <a href="https://github.com/nmburgan">nmburgan</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/185"><code class="language-plaintext highlighter-rouge">facterdb#185</code></a>: “Add Debian 11 facts”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/184"><code class="language-plaintext highlighter-rouge">facterdb#184</code></a>: “Add more FreeBSD facts”, thanks to <a href="https://github.com/smortex">smortex</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/183"><code class="language-plaintext highlighter-rouge">facterdb#183</code></a>: “Add Oracle Linux 8 facts”, thanks to <a href="https://github.com/as0bu">as0bu</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/181"><code class="language-plaintext highlighter-rouge">facterdb#181</code></a>: “Adding puppet7 facter4.2 facts for centos7/8 and debian9/10”, thanks to <a href="https://github.com/jacobmw">jacobmw</a> and the following people who helped get it over the line (<a href="https://github.com/kenyon">kenyon</a>)</li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/176"><code class="language-plaintext highlighter-rouge">facterdb#176</code></a>: “Adds Rocky Linux vagrant image, facts and get_facts.sh support”, thanks to <a href="https://github.com/fuero">fuero</a> and the following people who helped get it over the line (<a href="https://github.com/ghoneycutt">ghoneycutt</a>, <a href="https://github.com/smortex">smortex</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppet_litmus/pull/425"><code class="language-plaintext highlighter-rouge">puppet_litmus#425</code></a>: “Added options to idempotent_apply”, thanks to <a href="https://github.com/ZloeSabo">ZloeSabo</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-reboot&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-reboot&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;4.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-haproxy&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-haproxy&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.2.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-concat&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-concat&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-accounts"><code class="language-plaintext highlighter-rouge">puppetlabs-accounts</code></a> (<code class="language-plaintext highlighter-rouge">7.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-package"><code class="language-plaintext highlighter-rouge">puppetlabs-package</code></a> (<code class="language-plaintext highlighter-rouge">2.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-reboot"><code class="language-plaintext highlighter-rouge">puppetlabs-reboot</code></a> (<code class="language-plaintext highlighter-rouge">4.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-haproxy"><code class="language-plaintext highlighter-rouge">puppetlabs-haproxy</code></a> (<code class="language-plaintext highlighter-rouge">6.2.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-concat"><code class="language-plaintext highlighter-rouge">puppetlabs-concat</code></a> (<code class="language-plaintext highlighter-rouge">7.1.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h2 id=&quot;devx-updates&quot;&gt;DevX Updates&lt;/h2&gt;
+<h2 id="devx-updates">DevX Updates</h2>
 
-&lt;p&gt;We released &lt;a href=&quot;https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0&quot;&gt;version &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.3.0&lt;/code&gt; of the PCT tool&lt;/a&gt; last Friday.
-This introduces the ability to package up and &lt;a href=&quot;https://github.com/puppetlabs/pdkgo#sharing-templates&quot;&gt;share content templates&lt;/a&gt;.&lt;/p&gt;
+<p>We released <a href="https://github.com/puppetlabs/pdkgo/releases/tag/0.3.0">version <code class="language-plaintext highlighter-rouge">0.3.0</code> of the PCT tool</a> last Friday.
+This introduces the ability to package up and <a href="https://github.com/puppetlabs/pdkgo#sharing-templates">share content templates</a>.</p>
 
-&lt;p&gt;Instructions on how to install the PCT tool can be &lt;a href=&quot;https://github.com/puppetlabs/pdkgo#installing&quot;&gt;found here&lt;/a&gt;.&lt;/p&gt;
+<p>Instructions on how to install the PCT tool can be <a href="https://github.com/puppetlabs/pdkgo#installing">found here</a>.</p>
 
-&lt;h2 id=&quot;community-day&quot;&gt;Community Day&lt;/h2&gt;
+<h2 id="community-day">Community Day</h2>
 
-&lt;p&gt;As no summer can end without a holiday, some of our our team members are on a short PTO .
-Next Monday is a bank holiday in EMEA, therefore community day will be quieter.&lt;/p&gt;
+<p>As no summer can end without a holiday, some of our our team members are on a short PTO .
+Next Monday is a bank holiday in EMEA, therefore community day will be quieter.</p>
 
-&lt;h2 id=&quot;debian-11-support&quot;&gt;Debian 11 Support&lt;/h2&gt;
+<h2 id="debian-11-support">Debian 11 Support</h2>
 
-&lt;p&gt;We added support for Debian 11 across all our supported modules and started releasing the modules with Debian 11 support.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="pct" /><category term="debian11" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-08-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html" rel="alternate" type="text/html" title="2021-08-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-16T00:00:00+00:00</published><updated>2021-08-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<p>We added support for Debian 11 across all our supported modules and started releasing the modules with Debian 11 support.</p>]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="pct" /><category term="debian11" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-08-16: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html" rel="alternate" type="text/html" title="2021-08-16: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-16T00:00:00+00:00</published><updated>2021-08-16T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/16/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts/pull/388&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts#388&lt;/code&gt;&lt;/a&gt;: “MODULES-11100 - Add sk-ecdsa public key support, and implement tests for sk-ecdsa and ecdsa keys”, thanks to &lt;a href=&quot;https://github.com/vollmerk&quot;&gt;vollmerk&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-kubernetes/pull/530&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-kubernetes#530&lt;/code&gt;&lt;/a&gt;: “Enable live-restore for Docker daemon.”, thanks to &lt;a href=&quot;https://github.com/peteroruba&quot;&gt;peteroruba&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1427&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1427&lt;/code&gt;&lt;/a&gt;: “MODULES-8373 Fix mysql_grant resource to be idempodent on MySQL 8+”, thanks to &lt;a href=&quot;https://github.com/theq86&quot;&gt;theq86&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql#1291&lt;/code&gt;&lt;/a&gt;: “[IAC-1735] Fix test suite”, thanks to &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/smortex&quot;&gt;smortex&lt;/a&gt;, &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1196&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1196&lt;/code&gt;&lt;/a&gt;: “Flip installed and present in Function ensure_packages”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;, &lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-templates/pull/443&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-templates#443&lt;/code&gt;&lt;/a&gt;: “Only auto release if the changelog is updated”, thanks to &lt;a href=&quot;https://github.com/jarretlavallee&quot;&gt;jarretlavallee&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/metadata-json-lint/pull/118&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#118&lt;/code&gt;&lt;/a&gt;: “release 3.0.1”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt; and the following people who helped get it over the line (&lt;a href=&quot;https://github.com/ekohl&quot;&gt;ekohl&lt;/a&gt;)&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-accounts/pull/388"><code class="language-plaintext highlighter-rouge">puppetlabs-accounts#388</code></a>: “MODULES-11100 - Add sk-ecdsa public key support, and implement tests for sk-ecdsa and ecdsa keys”, thanks to <a href="https://github.com/vollmerk">vollmerk</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-kubernetes/pull/530"><code class="language-plaintext highlighter-rouge">puppetlabs-kubernetes#530</code></a>: “Enable live-restore for Docker daemon.”, thanks to <a href="https://github.com/peteroruba">peteroruba</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1427"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1427</code></a>: “MODULES-8373 Fix mysql_grant resource to be idempodent on MySQL 8+”, thanks to <a href="https://github.com/theq86">theq86</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-postgresql/pull/1291"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql#1291</code></a>: “[IAC-1735] Fix test suite”, thanks to <a href="https://github.com/ekohl">ekohl</a> and the following people who helped get it over the line (<a href="https://github.com/smortex">smortex</a>, <a href="https://github.com/bastelfreak">bastelfreak</a>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1196"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1196</code></a>: “Flip installed and present in Function ensure_packages”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a> and the following people who helped get it over the line (<a href="https://github.com/bastelfreak">bastelfreak</a>, <a href="https://github.com/ekohl">ekohl</a>)</li>
+  <li><a href="https://github.com/puppetlabs/pdk-templates/pull/443"><code class="language-plaintext highlighter-rouge">pdk-templates#443</code></a>: “Only auto release if the changelog is updated”, thanks to <a href="https://github.com/jarretlavallee">jarretlavallee</a></li>
+  <li><a href="https://github.com/voxpupuli/metadata-json-lint/pull/118"><code class="language-plaintext highlighter-rouge">metadata-json-lint#118</code></a>: “release 3.0.1”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a> and the following people who helped get it over the line (<a href="https://github.com/ekohl">ekohl</a>)</li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-java&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-java&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-accounts&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-accounts&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-package&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-package&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2.1.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/pdksync&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdksync&lt;/code&gt;&lt;/a&gt;  (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;0.6.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-java"><code class="language-plaintext highlighter-rouge">puppetlabs-java</code></a> (<code class="language-plaintext highlighter-rouge">7.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-accounts"><code class="language-plaintext highlighter-rouge">puppetlabs-accounts</code></a> (<code class="language-plaintext highlighter-rouge">7.1.0</code>)</li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-package"><code class="language-plaintext highlighter-rouge">puppetlabs-package</code></a> (<code class="language-plaintext highlighter-rouge">2.1.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/pdksync"><code class="language-plaintext highlighter-rouge">pdksync</code></a>  (<code class="language-plaintext highlighter-rouge">0.6.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h2 id=&quot;debian-11-support&quot;&gt;Debian 11 Support&lt;/h2&gt;
+<h2 id="debian-11-support">Debian 11 Support</h2>
 
-&lt;p&gt;We are currently adding support for Debian 11 across our modules and will release them over the next few weeks.&lt;/p&gt;
+<p>We are currently adding support for Debian 11 across our modules and will release them over the next few weeks.</p>
 
-&lt;!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&amp;quickFilter=8745 for other tickets closed out this week that should be mentioned here --&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="java" /><category term="pdksync" /><category term="accounts" /><category term="package" /><category term="debian11" /><summary type="html">Community Contributions</summary></entry><entry><title type="html">2021-08-09: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update.html" rel="alternate" type="text/html" title="2021-08-09: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-09T00:00:00+00:00</published><updated>2021-08-09T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update.html">&lt;h2 id=&quot;community-contributions&quot;&gt;Community Contributions&lt;/h2&gt;
+<!-- check https://tickets.puppetlabs.com/secure/RapidBoard.jspa?rapidView=1176&quickFilter=8745 for other tickets closed out this week that should be mentioned here -->]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="java" /><category term="pdksync" /><category term="accounts" /><category term="package" /><category term="debian11" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry><entry><title type="html">2021-08-09: IAC &amp;amp; DevX Team Status Update</title><link href="https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update.html" rel="alternate" type="text/html" title="2021-08-09: IAC &amp;amp; DevX Team Status Update" /><published>2021-08-09T00:00:00+00:00</published><updated>2021-08-09T00:00:00+00:00</updated><id>https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update</id><content type="html" xml:base="https://puppetlabs.github.io/iac/team/status/2021/08/09/status-update.html"><![CDATA[<h2 id="community-contributions">Community Contributions</h2>
 
-&lt;p&gt;We’d like to thank the following people in the Puppet Community for their contributions over this past week:&lt;/p&gt;
+<p>We’d like to thank the following people in the Puppet Community for their contributions over this past week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/764&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#764&lt;/code&gt;&lt;/a&gt;: “Remove stderr empty check to avoid docker_params_changed failures when warnings appear”, thanks to &lt;a href=&quot;https://github.com/cedws&quot;&gt;cedws&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-docker/pull/763&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-docker#763&lt;/code&gt;&lt;/a&gt;: “Duplicate declaration statement: docker_params_changed is already declared”, thanks to &lt;a href=&quot;https://github.com/basti-nis&quot;&gt;basti-nis&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-mysql/pull/1420&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-mysql#1420&lt;/code&gt;&lt;/a&gt;: “Set ordering of acceptance tests”, thanks to &lt;a href=&quot;https://github.com/ghoneycutt&quot;&gt;ghoneycutt&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-stdlib/pull/1196&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-stdlib#1196&lt;/code&gt;&lt;/a&gt;: “Fix ensure_packages”, thanks to &lt;a href=&quot;https://github.com/cocker-cc&quot;&gt;cocker-cc&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/facterdb/pull/180&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;facterdb#180&lt;/code&gt;&lt;/a&gt;: “release 1.8.0”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/pdk-docker/pull/34&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;pdk-docker#34&lt;/code&gt;&lt;/a&gt;: “(MAINT) Update bionic image tag to use date-based tag”, thanks to &lt;a href=&quot;https://github.com/nkanderson&quot;&gt;nkanderson&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/rspec-puppet/pull/11&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec-puppet#11&lt;/code&gt;&lt;/a&gt;: “Add Ruby 3 support”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/voxpupuli/metadata-json-lint/pull/116&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;metadata-json-lint#116&lt;/code&gt;&lt;/a&gt;: “Add GitHub actions + badges”, thanks to &lt;a href=&quot;https://github.com/bastelfreak&quot;&gt;bastelfreak&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/764"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#764</code></a>: “Remove stderr empty check to avoid docker_params_changed failures when warnings appear”, thanks to <a href="https://github.com/cedws">cedws</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-docker/pull/763"><code class="language-plaintext highlighter-rouge">puppetlabs-docker#763</code></a>: “Duplicate declaration statement: docker_params_changed is already declared”, thanks to <a href="https://github.com/basti-nis">basti-nis</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-mysql/pull/1420"><code class="language-plaintext highlighter-rouge">puppetlabs-mysql#1420</code></a>: “Set ordering of acceptance tests”, thanks to <a href="https://github.com/ghoneycutt">ghoneycutt</a></li>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-stdlib/pull/1196"><code class="language-plaintext highlighter-rouge">puppetlabs-stdlib#1196</code></a>: “Fix ensure_packages”, thanks to <a href="https://github.com/cocker-cc">cocker-cc</a></li>
+  <li><a href="https://github.com/voxpupuli/facterdb/pull/180"><code class="language-plaintext highlighter-rouge">facterdb#180</code></a>: “release 1.8.0”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/puppetlabs/pdk-docker/pull/34"><code class="language-plaintext highlighter-rouge">pdk-docker#34</code></a>: “(MAINT) Update bionic image tag to use date-based tag”, thanks to <a href="https://github.com/nkanderson">nkanderson</a></li>
+  <li><a href="https://github.com/puppetlabs/rspec-puppet/pull/11"><code class="language-plaintext highlighter-rouge">rspec-puppet#11</code></a>: “Add Ruby 3 support”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+  <li><a href="https://github.com/voxpupuli/metadata-json-lint/pull/116"><code class="language-plaintext highlighter-rouge">metadata-json-lint#116</code></a>: “Add GitHub actions + badges”, thanks to <a href="https://github.com/bastelfreak">bastelfreak</a></li>
+</ul>
 
-&lt;p&gt;Check &lt;a href=&quot;/iac/team/2021/01/20/reaching-out.html&quot;&gt;all the ways to reach us&lt;/a&gt; if you want to directly contact us about anything module related.&lt;/p&gt;
+<p>Check <a href="/iac/team/2021/01/20/reaching-out.html">all the ways to reach us</a> if you want to directly contact us about anything module related.</p>
 
-&lt;h2 id=&quot;new-module--gem-releases&quot;&gt;New Module / Gem Releases&lt;/h2&gt;
+<h2 id="new-module--gem-releases">New Module / Gem Releases</h2>
 
-&lt;p&gt;The following modules were released this week:&lt;/p&gt;
+<p>The following modules were released this week:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-apache&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-apache&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;6.4.0&lt;/code&gt;)&lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;&lt;a href=&quot;https://github.com/puppetlabs/puppetlabs-postgresql&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs-postgresql&lt;/code&gt;&lt;/a&gt; (&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;7.3.0&lt;/code&gt;)&lt;/p&gt;
+<ul>
+  <li><a href="https://github.com/puppetlabs/puppetlabs-apache"><code class="language-plaintext highlighter-rouge">puppetlabs-apache</code></a> (<code class="language-plaintext highlighter-rouge">6.4.0</code>)</li>
+  <li>
+    <p><a href="https://github.com/puppetlabs/puppetlabs-postgresql"><code class="language-plaintext highlighter-rouge">puppetlabs-postgresql</code></a> (<code class="language-plaintext highlighter-rouge">7.3.0</code>)</p>
 
-  &lt;/li&gt;
-&lt;/ul&gt;
+  </li>
+</ul>
 
-&lt;h2 id=&quot;devx-team-update&quot;&gt;DevX Team Update&lt;/h2&gt;
+<h2 id="devx-team-update">DevX Team Update</h2>
 
-&lt;h3 id=&quot;pdk-220&quot;&gt;PDK 2.2.0&lt;/h3&gt;
+<h3 id="pdk-220">PDK 2.2.0</h3>
 
-&lt;p&gt;PDK 2.2.0 was released earlier in the week.
-This update brings two significant new features:&lt;/p&gt;
+<p>PDK 2.2.0 was released earlier in the week.
+This update brings two significant new features:</p>
 
-&lt;ul&gt;
-  &lt;li&gt;Support for OSX 11, Debian 11, Fedora 32 &amp;amp; 34&lt;/li&gt;
-  &lt;li&gt;Ability to configure skipping validation on certain files within a project&lt;/li&gt;
-&lt;/ul&gt;
+<ul>
+  <li>Support for OSX 11, Debian 11, Fedora 32 &amp; 34</li>
+  <li>Ability to configure skipping validation on certain files within a project</li>
+</ul>
 
-&lt;p&gt;We have also bumped the version of Ruby the PDK is running on from 2.4 -&amp;gt; 2.5.
-Please note, Ruby 2.4 is still available for testing against Puppet 5 environments.&lt;/p&gt;
+<p>We have also bumped the version of Ruby the PDK is running on from 2.4 -&gt; 2.5.
+Please note, Ruby 2.4 is still available for testing against Puppet 5 environments.</p>
 
-&lt;p&gt;There are also a number of bug fixes and improvements.
-Full details can be found &lt;a href=&quot;https://puppet.com/docs/pdk/2.x/pdk.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+<p>There are also a number of bug fixes and improvements.
+Full details can be found <a href="https://puppet.com/docs/pdk/2.x/pdk.html">here</a>.</p>
 
-&lt;h3 id=&quot;goodbye-james&quot;&gt;Goodbye James&lt;/h3&gt;
+<h3 id="goodbye-james">Goodbye James</h3>
 
-&lt;p&gt;Unfortunately we have to say goodbye to &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; who is leaving Puppet next Tuesday.
-No doubt, many of you will be aware of the huge amount of contributions &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; has made to the Puppet ecosystem: James was the architect behind our IIS and DSC modules as well as the new autogenerated DSC modules; he touched nearly every part of Puppet that interacted with Windows across modules, Bolt, Puppet, and tooling; he co-designed and implemented the VSCode extension and language server, vastly improving the lives of everyone writing Puppet code; for the last four months he’s led this team, providing guidance and unifying our vision around what developing and maintaining Puppet content can be. Whether it be Windows content, improving the functionality and experience of Puppet’s products on Windows, the &lt;a href=&quot;https://github.com/puppetlabs/puppet-vscode&quot;&gt;Puppet VSCode Plugin&lt;/a&gt;, - it’s no exaggeration to say that his contributions have been many and significant.&lt;/p&gt;
+<p>Unfortunately we have to say goodbye to <a href="https://github.com/jpogran">James</a> who is leaving Puppet next Tuesday.
+No doubt, many of you will be aware of the huge amount of contributions <a href="https://github.com/jpogran">James</a> has made to the Puppet ecosystem: James was the architect behind our IIS and DSC modules as well as the new autogenerated DSC modules; he touched nearly every part of Puppet that interacted with Windows across modules, Bolt, Puppet, and tooling; he co-designed and implemented the VSCode extension and language server, vastly improving the lives of everyone writing Puppet code; for the last four months he’s led this team, providing guidance and unifying our vision around what developing and maintaining Puppet content can be. Whether it be Windows content, improving the functionality and experience of Puppet’s products on Windows, the <a href="https://github.com/puppetlabs/puppet-vscode">Puppet VSCode Plugin</a>, - it’s no exaggeration to say that his contributions have been many and significant.</p>
 
-&lt;p&gt;We’d like to thank &lt;a href=&quot;https://github.com/jpogran&quot;&gt;James&lt;/a&gt; for his contributions, support and leadership and wish him the very best of luck in the next chapter of his career!&lt;/p&gt;
-&lt;h2 id=&quot;github-changelog-generator-moved-to-puppetlabs-namespace&quot;&gt;github-changelog-generator moved to puppetlabs namespace&lt;/h2&gt;
+<p>We’d like to thank <a href="https://github.com/jpogran">James</a> for his contributions, support and leadership and wish him the very best of luck in the next chapter of his career!</p>
+<h2 id="github-changelog-generator-moved-to-puppetlabs-namespace">github-changelog-generator moved to puppetlabs namespace</h2>
 
-&lt;p&gt;We have forked &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;github-changelog-generator&lt;/code&gt; to  &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;puppetlabs&lt;/code&gt; namespace .&lt;/p&gt;
+<p>We have forked <code class="language-plaintext highlighter-rouge">github-changelog-generator</code> to  <code class="language-plaintext highlighter-rouge">puppetlabs</code> namespace .</p>
 
-&lt;p&gt;This will give more control on adding features and bug fixes which will help us with the supported module release process in the future.&lt;/p&gt;</content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="pdk" /><category term="vscode" /><category term="james" /><summary type="html">Community Contributions</summary></entry></feed>
+<p>This will give more control on adding features and bug fixes which will help us with the supported module release process in the future.</p>]]></content><author><name>ia-content</name></author><category term="team" /><category term="status" /><category term="pdk" /><category term="vscode" /><category term="james" /><summary type="html"><![CDATA[Community Contributions]]></summary></entry></feed>
