@@ -1,3 +1,5 @@
+> 🏠 We've moved! Keep up with the latest developments on our new [micro-site](http://pup.pt/cat)!
+
 # the public Infrastructure Automation Content Team page
 
 This repo hosts the source for the [Infrastructure Automation Content Team's page](https://puppetlabs.github.io/iac/).
