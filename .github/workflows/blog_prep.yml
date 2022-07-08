@@ -1,8 +1,6 @@
 name: Blog Prep
 
 on:
-  schedule:
-    - cron: '0 1 * * mon' 
   workflow_dispatch:
 
 jobs:
