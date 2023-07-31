@@ -15,7 +15,7 @@ gem "minima", "~> 2.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.16"
+  gem "jekyll-feed", "~> 0.17"
   gem "jekyll-sitemap", "~> 1.4"
   gem 'jekyll-analytics', github: 'hendrikschneider/jekyll-analytics', branch: 'master'
 end
